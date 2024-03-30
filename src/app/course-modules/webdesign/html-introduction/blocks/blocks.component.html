@@ -1,0 +1,81 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Block And Inline Elements</h3>
+    <div id="accordion">
+        <div style="padding-left: 25px;">Every HTML element has a default display value, depending on what type of
+            element it is.</div>
+        <div style="padding-left: 25px;">There are two display values: block and inline.</div>
+        <div style="padding-left: 25px;">The <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>,
+            <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;pre&gt;</code>,
+            <code>&lt;hr/&gt;</code>, <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> elements are all
+            <b>block level</b> elements
+        </div>
+        <div style="padding-left: 25px;padding-bottom: 15px;">The <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>,
+            <code>&lt;u&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;sup&gt;</code>,
+            <code>&lt;sub&gt;</code>, <code>&lt;big&gt;</code>, <code>&lt;small&gt;</code>, <code>&lt;li&gt;</code>,
+            <code>&lt;ins&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;cite&gt;</code>,
+            <code>&lt;dfn&gt;</code>, <code>&lt;kbd&gt;</code>, and <code>&lt;var&gt;</code> elements are all <b>inline
+                elements</b>.
+        </div>
+
+        <div class="global-tab-title global-tab-slide-effect">
+            <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+                data-hover="Block Elements">Block Elements</span>
+            <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+                data-hover="Inline Elements">Inline Elements</span>
+
+        </div>
+        <div *ngIf="elementId=='one'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <ul>
+                    <li>A block-level element always starts on a new line, and the browsers automatically add some
+                        space (a margin) before and after the element.</li>
+                    <li>A block-level element always takes up the full width available (stretches out to the left
+                        and right as far as it can).</li>
+                    <li>Two commonly used block elements are: <code>&lt;p&gt;</code> and <code>&lt;div&gt;</code>
+                    </li>
+                    <li>The <code>&lt;p&gt;</code> element defines a paragraph in an HTML document.</li>
+                    <li>The <code>&lt;div&gt;</code> element defines a division or a section in an HTML document.
+                    </li>
+                    <li>below is the example</li>
+                </ul>
+                <div
+                    style="border: 1px solid rgb(243, 179, 141);padding: 25px;width: 56%;margin-left: 6%;border-radius: 5px;">
+                    <code>&lt;p&gt;</code>p tag Hello World<code>&lt;/p&gt;</code>
+                    <code>&lt;div&gt;</code>div tag Hello World<code>&lt;/div&gt;</code>
+                </div><br>
+                <ul>
+                    <li>and it looks in browser as below</li>
+                </ul>
+                <div
+                    style="border: 1px solid rgb(243, 179, 141);padding: 25px;width:45%;margin-left: 6%;border-radius: 5px;">
+                    <p>p tag Hello World</p>
+                    <div>div tag Hello World</div>
+                </div><br>
+            </div>
+        </div>
+
+        <div *ngIf="elementId=='two'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <ul>
+                    <li>An inline element does not start on a new line.</li>
+                    <li>An inline element only takes up as much width as necessary.</li>
+                    <li>for example</li>
+                </ul>
+                <div
+                    style="border: 1px solid rgb(243, 179, 141);padding: 25px;width: 56%;margin-left: 6%;border-radius: 5px;">
+                    <code>&lt;p&gt;</code>inside p tag <code>&lt;span&gt;</code>inside span
+                    tag<code>&lt;/span&gt;</code> <code>&lt;/p&gt;</code>
+                </div><br>
+                <ul>
+                    <li>and it looks in browser as below</li>
+                </ul>
+                <div
+                    style="border: 1px solid rgb(243, 179, 141);padding: 25px;width:45%;margin-left: 6%;border-radius: 5px;">
+                    <p>inside p tag <span>inside span tag</span> </p>
+                </div><br>
+            </div>
+        </div>
+    </div>
+
+
+</div>

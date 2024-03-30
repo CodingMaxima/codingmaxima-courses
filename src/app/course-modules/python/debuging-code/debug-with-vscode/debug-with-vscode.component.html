@@ -1,0 +1,61 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Debug with VsCode</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation Video">Animation Video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body border border-warning">
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Install the Python extension: If you haven't already,
+                 install the "Python" extension in Visual Studio Code. 
+                 You can do this by going to the Extensions view (Ctrl+Shift+X or View > Extensions)
+                  and searching for "Python". Install the extension offered by Microsoft.
+            </li>
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Open your Python file: Open the Python file you want to debug in Visual Studio Code.
+            </li>
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Set breakpoints: Place breakpoints in your code by clicking in the gutter area
+                 (left-hand side) of the code editor, next to the line where you want to pause execution.
+                  A red dot will appear to indicate the breakpoint.
+            </li>
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Launch the debugger: Press F5 or go to the Debug view (Ctrl+Shift+D or View > Run and Debug)
+                 and click on the green play button to start the debugger.
+                  Alternatively, you can use the Debug menu at the top of the window.
+            </li>
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Configure the debugger: If it's your first time running the debugger,
+                you'll be prompted to choose the environment. Select "Python" to continue.
+                By default, VS Code uses the Python interpreter from your current environment.
+            </li>
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Debug your code: Run your Python code in debug mode. 
+                When a breakpoint is encountered, the debugger will pause execution,
+                 and you can inspect variables, step through the code, and execute commands in the debug console.
+                  Use the buttons in the debug toolbar or the corresponding keyboard shortcuts to control the debugger.
+            </li>
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                View variables and explore: In the Debug sidebar,
+                 you can see the list of variables and their values.
+                  You can hover over variables in your code editor to see their values or add them to the Watch view for continuous monitoring.
+            </li>
+            
+            <li style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Continue debugging: To continue executing the code after a breakpoint, 
+                press F5 or use the "Continue" button in the debug toolbar.
+                 The execution will proceed until the next breakpoint or until the program finishes.
+            </li>
+        </div>
+
+        <div class="card-body border border-warning">
+            <img class="program-img-fit" src="assets/img/python/debuging-code/debug_with_vscode.jpg" alt="program">
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <h1>Animation Video Coming soon</h1>
+    </div>
+</div>

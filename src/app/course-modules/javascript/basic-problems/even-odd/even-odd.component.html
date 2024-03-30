@@ -1,0 +1,191 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Even or Odd</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-text">
+        <p>
+          The program is to find whether the given number is an even number or
+          odd number
+        </p>
+        <p>
+          A number which is divisible by 2 and generates a remainder of 0 is
+          called an even number.
+        </p>
+        <p>
+          A number which is not divisible by 2 and generates a remainder of 1 is
+          called an odd number.
+        </p>
+      </div>
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/evenodddata.jpg"
+        alt="program"
+      />
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/module.jpg"
+        alt="program"
+      />
+
+      <!-- Starting of examples-->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div class="card-header text-center"><b>Example - 1</b></div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">22</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">22 is even number.</p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div class="card-header text-center"><b>Example - 2</b></div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">11</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">11 is odd number.</p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div class="card-header text-center"><b>Example - 3</b></div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">85</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">85 is odd number.</p>
+          </div>
+        </div>
+        <!-- Ending of examples-->
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+  <!-- Ending of problem statement card body-->
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border border-warning mt-4">
+      <img
+        class="program-img-fit"
+        src="assets/img/javascript/basic-problems/even_odd.jpg"
+        alt="program"
+      />
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp [url]="'py_even_odd.m4v'"></app-video-cmp>
+>>>>>>> d01283dd038f633e1116384f56c951af51da0e81
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div class="card-header text-center font-weight-bold">
+            TestCase - 1
+          </div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">22</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Even</p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div class="card-header text-center font-weight-bold">
+            TestCase - 2
+          </div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">11</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Odd</p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div class="card-header text-center font-weight-bold">
+            TestCase - 3
+          </div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">85</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Odd</p>
+          </div>
+        </div>
+      </div>
+      <!-- Ending of test cases -->
+    </div>
+  </div>
+</div>

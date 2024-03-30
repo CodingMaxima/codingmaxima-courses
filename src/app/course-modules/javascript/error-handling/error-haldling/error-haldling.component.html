@@ -1,0 +1,237 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Error handlings</h3>
+
+  <div class="card border-warning mt-4" style="border: 3px solid">
+    <p class="content-text">
+      Error handling in JavaScript is an essential part of writing robust and
+      reliable code. Errors can occur for various reasons, such as incorrect
+      input, network issues, or unexpected behavior, and it's important to
+      handle these errors gracefully to prevent crashes and provide a better
+      user experience.
+    </p>
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Try...Catch Statements</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            <b> try...catch</b> statements are the most common way to handle
+            errors in JavaScript. They allow you to wrap a block of code that
+            might throw an exception (an error) in a <b>'try'</b> block and then
+            catch and handle that exception in a <b>'catch'</b> block.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">try {{ "{" }}</p>
+
+          <p>// Code that might throw an error</p>
+          <p style="font-weight: bold">{{ "}" }} catch (error) {{ "{" }}</p>
+
+          <p>// Handle the error</p>
+          <p style="font-weight: bold">{{ "{" }}</p>
+          <br />
+          <li>
+            If an error occurs in the <b>'try'</b> block, it will jump to the
+            <b>'catch'</b> block, and you can access the error object (typically
+            named <b>error</b> but can be any valid variable name) to get
+            information about the error, such as its message.
+          </li>
+          <li>
+            You can also use multiple <b>'catch'</b> blocks to handle different
+            types of errors.
+          </li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Throwing Custom Errors</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can throw your custom errors using the
+            <b>'throw'</b> statement. This allows you to create meaningful error
+            messages and handle specific situations in your code.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">function divide(a, b) {{ "{" }}</p>
+          <pre style="font-weight: bold">  if (b === 0) {{ "{" }}</pre>
+          <pre style="font-weight: bold">
+    throw new Error("Division by zero is not allowed");</pre
+          >
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <pre style="font-weight: bold">  return a / b;</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <br />
+          <li>
+            You can also create custom error types by extending the
+            <b>'Error'</b> class or other built-in error types like
+            <b>'TypeError'</b> or <b>'SyntaxError'</b>.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            class CustomError extends Error {{ "{" }}
+          </p>
+          <pre style="font-weight: bold">  constructor(message) {{ "{" }}</pre>
+          <pre style="font-weight: bold">    super(message);</pre>
+          <pre style="font-weight: bold">    this.name = "CustomError";</pre>
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Finally Block</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can use a <b>'finally'</b> block after the
+            <b>'try...catch'</b> block to execute code that should run
+            regardless of whether an error occurred or not. This is useful for
+            cleanup operations, like closing a file or a network connection.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">try {{ "{" }}</p>
+          <p>// Code that might throw an error</p>
+          <p style="font-weight: bold">{{ "}" }} catch (error) {{ "{" }}</p>
+          <p>// Handle the error</p>
+          <p style="font-weight: bold">{{ "}" }} finally {{ "{" }}</p>
+          <p>// Code that runs regardless of errors</p>
+          <p style="font-weight: bold">{{ "}" }}</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b> Promises</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            When working with asynchronous code, Promises provide a way to
+            handle errors using <b>.catch()</b> method.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">someAsyncFunction()</p>
+          <pre style="font-weight: bold">  .then(result => {{ "{" }}</pre>
+          <pre>  // Handle success</pre>
+          <pre style="font-weight: bold">  {{ "}" }})</pre>
+          <pre style="font-weight: bold">  .catch(error => {{ "{" }}</pre>
+          <pre>  // Handle error</pre>
+          <p style="font-weight: bold">{{ "}" }});</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Async/Await</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            With the <b>async/await</b> syntax, you can handle errors in
+            asynchronous code more cleanly by using <b>'try...catch'</b> blocks.
+          </li>
+          <br />
+
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">async function fetchData() {{ "{" }}</p>
+          <pre style="font-weight: bold">  try {{ "{" }}</pre>
+          <pre style="font-weight: bold">
+    const response = await fetch("https://example.com/data");</pre
+          >
+          <pre style="font-weight: bold">
+    const data = await response.json();</pre
+          >
+          <pre>    // Handle data</pre>
+          <pre style="font-weight: bold">
+  {{ "}" }} catch (error) {{ "{" }}</pre
+          >
+          <pre>     // Handle network or JSON parsing errors</pre>
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Global Error Handling</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can set up a global error handler using the
+            <b>window.onerror</b> event or the
+            <b>process.on('uncaughtException')</b> event in Node.js to catch
+            unhandled errors at the application level.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            window.onerror = function(message, source, lineno, colno, error)
+            {{ "{" }}
+          </p>
+          <p>// Handle the error</p>
+          <p style="font-weight: bold">{{ "}" }};</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

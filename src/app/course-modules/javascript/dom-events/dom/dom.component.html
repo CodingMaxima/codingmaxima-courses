@@ -1,0 +1,629 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">DOM</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Problems"
+      >Problems</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-text">
+        the Document Object Model (DOM) is a programming interface that
+        represents the structure of an HTML or XML document as a tree-like
+        structure, with each element in the document being a node in the tree.
+        The DOM allows JavaScript to interact with the elements and modify their
+        content, attributes, and styles dynamically.
+      </div>
+      <div class="content-heading">Dom Functions and methods</div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>getElementById</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              Retrieves an element from the document based on its unique
+              identifier.
+            </p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              // HTML: &lt; div id="myDiv"&gt; Hello, World!&lt;/div &gt;
+            </li>
+            <li class="card-text">
+              var element = document.getElementById("myDiv");
+            </li>
+            <li class="card-text">console.log(element.innerHTML);</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">Hello, World!</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b> getElementsByClassName</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>
+              Returns a collection of elements that have a specific class name.
+              // Output:
+            </p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+
+            <li class="card-text">
+              // HTML: &lt; p class="highlight"&gt;This is a
+              paragraph.&lt;/p&gt;
+            </li>
+            <li class="card-text">
+              var elements = document.getElementsByClassName("highlight");
+            </li>
+            <li class="card-text">console.log(elements[0].innerHTML);</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">This is a paragraph.</li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>getElementsByTagName</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Returns a collection of elements with the specified tag name.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              // HTML: &lt; p&gt; This is the first paragraph.&lt;/p&gt;
+              &lt;p&gt;This is the second paragraph.&lt;/p&gt;
+            </li>
+            <li class="card-text">
+              var paragraphs = document.getElementsByTagName("p");
+            </li>
+            <li class="card-text">console.log(paragraphs[0].innerHTML);</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">This is the first paragraph.</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>querySelector</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              Returns the first element that matches a specific CSS selector.
+            </p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              // HTML:&lt;pclass="highlight"&gt;This is a paragraph.&lt;/p&gt;
+            </li>
+            <li class="card-text">
+              var element = document.querySelector(".highlight");
+            </li>
+            <li class="card-text">console.log(element.innerHTML);</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">This is a paragraph.</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>querySelectorAll</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Returns all elements that match a specific CSS selector.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              // HTML: &lt; p class="highlight"&gt; This is a paragraph.&lt;/p
+              &gt; &lt;p &gt;This is another paragraph.&lt;/p &gt;
+            </li>
+            <li class="card-text">
+              var elements = document.querySelectorAll("p");
+            </li>
+            <li class="card-text">console.log(elements[1].innerHTML)</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">This is another paragraph.</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>createElement</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Creates a new HTML element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var newElement = document.createElement("div");
+            </li>
+            <li class="card-text">newElement.innerHTML = "New element";</li>
+            <li class="card-text">document.body.appendChild(newElement);</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">
+              Adds the new element to the document body.
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>appendChild</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Appends a child element to a parent element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var parentElement = document.getElementById("parent");
+            </li>
+            <li class="card-text">
+              var childElement = document.createElement("div");
+            </li>
+            <li class="card-text">parentElement.appendChild(childElement);</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>removeChild</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Removes a child element from its parent element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var parentElement = document.getElementById("parent");
+            </li>
+            <li class="card-text">
+              var childElement = document.getElementById("child");
+            </li>
+            <li class="card-text">parentElement.removeChild(childElement);</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>addEventListener</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Attaches an event handler function to an element.</p>
+
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var button = document.getElementById("myButton");
+            </li>
+            <li class="card-text">
+              button.addEventListener("click", function() {{ "{" }}
+            </li>
+            <pre>    console.log("Button clicked!"); </pre>
+            <li class="card-text">{{ "}" }});</li>
+            <br />
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>setAttribute</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Sets the value of an attribute on an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">
+              element.setAttribute("class", "highlight");
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>getAttribute</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Retrieves the value of an attribute from an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">
+              var className = element.getAttribute("class");
+            </li>
+            <li class="card-text">console.log(className);</li>
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">highlight</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>classList</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Provides methods to manipulate the classes of an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">element.classList.add("highlight");</li>
+            <li class="card-text">element.classList.remove("highlight");</li>
+            <li class="card-text">element.classList.toggle("highlight");</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>innerHTML</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Gets or sets the HTML content of an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">console.log(element.innerHTML);</li>
+            <li class="card-text">
+              element.innerHTML = "&lt;p&gt;New content&lt;/p&gt;";
+            </li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">
+              "&lt;p&gt;This is some content.&lt;/p&gt;"
+            </li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>textContent</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Gets or sets the text content of an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">console.log(element.textContent);</li>
+            <li class="card-text">element.textContent = "New content";</li>
+            <br />
+            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+            <li class="card-text">This is some content.</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>style</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Provides access to the inline styles of an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">element.style.color = "red";</li>
+            <li class="card-text">element.style.fontSize = "20px";</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>parentNode</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Retrieves the parent node of an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">var parent = element.parentNode;</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>children</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>Retrieves the child elements of an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var element = document.getElementById("myElement");
+            </li>
+            <li class="card-text">var children = element.children;</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>querySelector</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>
+              Returns the first element that matches a specific CSS selector
+              within a given context.
+            </p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var container = document.getElementById("container");
+            </li>
+            <li class="card-text">
+              var element = container.querySelector(".highlight");
+            </li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>addEventListener</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>Attaches an event handler function to an element.</p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var button = document.getElementById("myButton");
+            </li>
+            <li class="card-text">
+              button.addEventListener("click", function() {{ "{" }}
+            </li>
+            <pre>    console.log("Button clicked!");</pre>
+            <li class="card-text">{{ "}" }});</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>querySelectorAll</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              Returns all elements that match a specific CSS selector within a
+              given context.
+            </p>
+            <p><b> Example</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              var container = document.getElementById("container");
+            </li>
+            <li class="card-text">
+              var elements = container.querySelectorAll("p");
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

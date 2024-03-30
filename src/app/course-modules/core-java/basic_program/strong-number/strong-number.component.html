@@ -1,0 +1,173 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Strong Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+           A strong number is a concept in mathematics that is related to the properties of its digits and their
+              factorials.
+</button>        <button type="button" class="btn btn-lg btn-block">
+
+            <p><b>Factorial Function</b></p>
+            <p>The factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less
+              than or equal to n.</p>
+            <p>For example, 5! = 5 x 4 x 3 x 2 x 1 = 120.</p>
+</button>
+<button type="button" class="btn btn-lg btn-block">
+
+            <p><b>Strong Number</b></p>
+            <p>A positive integer is said to be a strong number if the sum of the factorials of its digits is equal to
+              the number itself.</p>
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+
+            <p><b>Example1:</b><br>
+              consider a number 145:</p>
+            <p>1! + 4! + 5! = 1 + 24 + 120 = 145</p>
+            <p>Since the sum of the factorials of its digits (1, 4, and 5) is equal to the original number (145), it is
+              a strong number.</p>
+</button>
+<button type="button" class="btn btn-lg btn-block">
+
+            <p><b>Example2:</b><br>
+              consider a number 23:</p>
+            <p>2! + 3! = 2 + 6 = 8</p>
+            <p>Since the sum of the factorials of its digits (2 and 3) is not equal to the original number (23), it is
+              a not strong number.</p></button>
+              <button type="button" class="btn btn-lg btn-block">
+
+            Strong numbers are a special case of a more general concept known as "special numbers" or "perfect
+              digit-to-factorial digit sums."</button>
+          
+        </div>
+
+  <!--starting of example-->
+  <div class="card-group">
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px; font-size: large"
+    >
+      <div class="card-header text-center"><b>Example-1</b></div>
+      <div class="card-body" style="background-color: rgb(255, 239, 209)">
+        <p class="card-subtitle mb-2 text-muted">Input</p>
+        <p class="card-text">Enter n value</p>
+        <p style="margin-top: -20px" class="card-text">145</p>
+        <p class="card-subtitle mb-2 text-muted">Output</p>
+        <p class="card-text">145 is a strong number</p>
+      </div>
+    </div>
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px;font-size: large"
+    >
+      <div class="card-header text-center"><b>Example-2</b></div>
+      <div
+        class="card-body"
+        style="background-color: rgb(229, 253, 253)"
+      >
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">Enter n value</p>
+      <p style="margin-top: -20px" class="card-text">23</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">23 is not a strong number</p></div>
+    </div>
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px;font-size: large"
+    >
+      <div class="card-header text-center"><b>Example-3</b></div>
+      <div
+        class="card-body"
+        style="background-color: rgb(252, 227, 231)"
+      >
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">Enter n value</p>
+      <p style="margin-top: -20px" class="card-text">22</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">22 is not a strong number</p></div>
+    </div>
+  </div><!--Ending of example-->
+    </div><!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img class="program-img-fit" src="assets/img/corejava/basic/strong.JPG" alt="program">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+     <!--starting of the test cases-->
+	 <div class="card-body card-group">
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px; font-size: large"
+    >
+      <div class="card-header text-center"><b>Test Case-1</b></div>
+      <div class="card-body" style="background-color: rgb(255, 239, 209)">
+        <p class="card-subtitle mb-2 text-muted">Input</p>
+        <p class="card-text">145</p>
+        <p class="card-subtitle mb-2 text-muted">Output</p>
+        <p class="card-text">Strong Number</p>
+      </div>
+    </div>
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px;font-size: large"
+    >
+      <div class="card-header text-center"><b>Test Case-2</b></div>
+      <div
+        class="card-body"
+        style="background-color: rgb(229, 253, 253)"
+      >
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">22</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">Not an Strong Number</p></div>
+    </div>
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px;font-size: large"
+    >
+      <div class="card-header text-center"><b>Test Case-3</b></div>
+      <div
+        class="card-body"
+        style="background-color: rgb(252, 227, 231)"
+      >
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">23</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">Not an Strong Number</p></div>
+    </div>
+  </div>  
+<!--ending of the test cases-->
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+    </div>
+  </div>
+</div>

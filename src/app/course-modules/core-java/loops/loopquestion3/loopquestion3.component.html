@@ -1,0 +1,166 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Question-3</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <p class="block">
+          Here the problem is to print the 0 to -10 numbers using the "for" loop
+          and "while" loop.
+        </p>
+        <p class="block">
+          <li>
+            From the above given problem we have to print the numbers starting
+            from 10 to 1 numbers using the loops.
+          </li>
+          <br />
+          <li>
+            Here is the problems explanation using for loop
+            <br />
+            Step-1: Mainly we need initializer, condition, increment/ decrement
+            for running the for loop.<br />
+            first initializer from the problem itself states that have to print
+            from 0 so take initial point as 0.<br />
+            second the condition 0 is larger than -10 so we can take either &gt;
+            / &gt;= symbol.<br />
+            third the numbers will comes in an descending order because 0 is the
+            highest number compared to other negative numbers present in the sum
+            so the values have to be decreased.
+          </li>
+          <li>
+            Step-2: we got all the parts required for the interating the loop
+            i.e., initializer n = 0, condition n >= -10, and n--.
+          </li>
+          <li>
+            Step-3: Now the iteration will be start with initial value 0 . it
+            will check for the condition 0 >= -10. it is true. so the number
+            will be decreased -1.
+          </li>
+          <li>
+            Step-4: Now the iteration will be start with initial value -1 . it
+            will check for the condition -1 >= -10. it is true. so the number
+            will be decreased -2.
+          </li>
+          <li>
+            Step-5: Now the iteration will be start with initial value -2 . it
+            will check for the condition -2 >= -10. it is true. so the number
+            will be decreased -3.
+          </li>
+          <li>
+            Step-6: Now the iteration will be start with initial value -3 . it
+            will check for the condition -3 >= -10. it is true. so the number
+            will be decreased -4.
+          </li>
+          <li>
+            Step-7: Now the iteration will be start with initial value -4 . it
+            will check for the condition -4 >= -10. it is true. so the number
+            will be decreased -5.
+          </li>
+          <li>
+            Step-8: Now the iteration will be start with initial value -5. it
+            will check for the condition -5 >= -10. it is true. so the number
+            will be decreased -6.
+          </li>
+          <li>
+            Step-9: Now the iteration will be start with initial value -6 . it
+            will check for the condition -6 >= -10. it is true. so the number
+            will be decreased -7.
+          </li>
+          <li>
+            Step-10: Now the iteration will be start with initial value -7 . it
+            will check for the condition -7 >= -10. it is true. so the number
+            will be decreased -8.
+          </li>
+          <li>
+            Step-11: Now the iteration will be start with initial value -8 . it
+            will check for the condition -8 >= -10. it is true. so the number
+            will be decreased -9.
+          </li>
+          <li>
+            Step-12: Now the iteration will be start with initial value -9 . it
+            will check for the condition -9 >= -10. it is true. so the number
+            will be decreased -10.
+          </li>
+          <li>
+            Step-13: Now the iteration will be start with initial value -10 . it
+            will check for the condition -10 >= -10. it is true. so the number
+            will be decreased -11.
+          </li>
+          <li>
+            Step-14: Now the iteration will starts with initial value -11 . It
+            will check for the condition -11 >= -10. The condition is false so
+            the loop will stop iterating.
+          </li>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <div class="card-group">
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que3_using_for.jpg"
+            alt="program"
+          />
+        </div>
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que3_using_while.jpg"
+            alt="program"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp [audioData]="audioData" [url]="''"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

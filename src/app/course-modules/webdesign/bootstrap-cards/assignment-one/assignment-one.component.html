@@ -1,0 +1,47 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Bootstrap Cards Assignment one</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Code">Code</span>
+        <span class="global-tab-pill" id="two-a" [ngClass]="(elementId=='two-a')?'active':''" (click)="tabChange($event)"
+        data-hover="Output">Output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="ANimation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+                <li>Assignment one</li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+
+        <div class="card-group">
+            <img src="assets/img/bootstrap/programming_languages_code.png" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                alt="programming_languages_code.png">
+        </div>
+        
+    </div>
+    <div *ngIf="elementId=='two-a'">
+        <div class="card-group">
+            <img src="assets/img/bootstrap/programming_languages.png" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                alt="programming_languages.png">
+
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body">
+            <app-video-cmp [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,164 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Exception Handling Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problems">Problems</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-block"><b>Exception:</b> An unwanted and unexpected
+                        event that disturbs the flow of the program.</button>
+                    <button type="button" class="btn btn-lg btn-block"><b>Exception Handling: </b>Setting an
+                        alternative way to continue the rest of program.</button>
+                    <button type="button" class="btn btn-lg btn-block">The main objective of exception handling is
+                        normal termination means we should not block the resources and not miss anything.</button>
+                    <button type="button" class="btn btn-lg btn-block">Two types of errors will occurs <b>(syntax
+                            errors,
+                            runtime errors) </b></button>
+
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Syntax Errors</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <li style='font-size: medium; font-style: oblique;'>These errors occurs because of some
+                                miskes done in syntax and occurs at compile time. </li>
+                            <li style='font-size: medium; font-style: oblique;'>These errors was the programmers
+                                responsibility to correct them. Once the errors are corrected then the program will
+                                execute.</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Run time errors</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+                            <li style='font-size: medium; font-style: oblique;'>These errors will occurs at the
+                                execution time of the program becauseof end user input, memory problems, programming
+                                logic etc..</li>
+                            <li style='font-size: medium; font-style: oblique;'>The exception handling concept was
+                                appicable only for the run time errors and not for the syntax errors.</li>
+                        </div>
+                    </div>
+                </div><!--End of card-->
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header, text-center"><b>Default Exception Handling</b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                            <li style='font-size: medium; font-style: oblique;'>Every exception in python is an object.
+                                For every exception type the corresponding class will be available.</li>
+                            <li style='font-size: medium; font-style: oblique;'>Whenever an exception occurs the
+                                PVM(Python Virtual Machine) will create the related exception object & will check for
+                                the handling that exception code.</li>
+                            <li style='font-size: medium; font-style: oblique;'>If the handling code is available then
+                                it will be executed an the rest of the code will be executed normally.</li>
+                            <li style='font-size: medium; font-style: oblique;'>If the code is not available then PVM
+                                will terminates the program abnormally and prints the related exception info at
+                                console.then the remaining program after the exception won't be executed.</li>
+                            <li style='font-size: medium; font-style: oblique;'>To prevent this abnormal termination
+                                exceptions can be handled explicitly.By using try-except blocks. </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-block">There are few key words which are used for
+                        handling the exceptions</button>
+                    <button type="button" class="btn btn-lg btn-block">
+                        <li><b>TRY:-</b> It is the block where the risky code will be present. It is not used alone
+                            should be used along with <b>except</b> or along with <b>except and else</b></li>
+                        <li><b>EXCEPT:-</b> It is the block where we can handle the exception. It is not used along it
+                            should be used preceeded with the <b>Try block</b></li>
+                        <li><b>ELSE:-</b> It will be executed only when there is no exception occurs at the try block.
+                            Without writting the except block there is no else block it will gives the syntax error. but
+                            there is no chance of executing the both except and else simultaneously.
+                        </li>
+                        <li><b>FINALLY:-</b>It is used for clean up code.It will be executed whether exception raised or
+                            not raised and handled or not handled.</li>
+                    </button>
+                    <button type="button" class="btn btn-lg btn-block">Inorder to stop executing the finally block there
+                        is an keyword <b>os.exist(0)</b>. Whenever we are using this keyword the PVM itself will be
+                        shutdown. So finally block wont be executed in this case. This os._exit(0) have to be mentioned
+                        in the try block. Here <b>0</b> present in the brackets represents the status code means normal
+                        termination. if it is non-zero it indicates the abnormal termination. This status code
+                        internally used by the PVM</button>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header, text-center"><b>customized exceptions</b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                            <li style='font-size: medium; font-style: oblique;'>These are also known as user defined
+                                exceptions. We can create our own exceptions</li>
+                            <li style='font-size: medium; font-style: oblique;'>In user defined exceptions we have to
+                                use <b>raise </b> Keyword for handling the exception .</li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-block">
+                        <li>These are some of the methods how to find the exceptions.</li>
+                        <li>For finding which type of exception it is in console <b>type( variable name) or variable
+                                name.__class__ </b></li>
+                        <li>For finding the exception class name <b>variable name.__class__.__name__</b></li>
+                        <li> For finding the description of that exception <b> variable name</b></li>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="example1" [ngClass]="(elementId2=='example1')?'active':''"
+                (click)="subTabChange($event)" data-hover="example 1">example 1</span>
+            <span class="tab-pill" id="example2" [ngClass]="(elementId2=='example2')?'active':''"
+                (click)="subTabChange($event)" data-hover="example 2">example 2</span>
+            <span class="tab-pill" id="example3" [ngClass]="(elementId2=='example3')?'active':''"
+                (click)="subTabChange($event)" data-hover="example 3">example 3</span>
+            <span class="tab-pill" id="example4" [ngClass]="(elementId2=='example4')?'active':''"
+                (click)="subTabChange($event)" data-hover="example 4">example 4</span>
+        </div>
+        <div *ngIf="elementId2=='example1'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception_out.jpg" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='example2'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception_detailed.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception_detailed_out.jpg" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='example3'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception_value_error.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" style="width: 70%;" src="assets/img/python/exceptions/division_exception_value_error_out.jpg" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='example4'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception_with_else_finally.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/exceptions/division_exception_with_else_finally_out.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div>
+            Animation video coming soon ...
+        </div>
+    </div>
+</div>

@@ -1,0 +1,191 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Multimedia</h3>
+        <div class="global-tab-title global-tab-slide-effect">
+            <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+                data-hover="Video Tag">Video Tag</span>
+            <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+                data-hover="Image Tag">Image Tag</span>
+            <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+                data-hover="Audio Tag">Audio Tag</span>
+            <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="mainTab($event)"
+                data-hover="Animation Video">Animation Video</span>
+        </div>
+        <div *ngIf="elementId=='one'">
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                        <p>
+                            The <code>&lt;video&gt;</code> tag in HTML is used to embed video content directly into a web page.
+                        </p>
+                        <p>
+                            It allows you to specify various attributes and settings to control the appearance and behavior of the video.
+                        </p>
+                        <p>
+                            A basic example of how the <code>&lt;video&gt;</code> tag is used:
+                        </p>
+                        <div class="card-group">
+                            <div
+                                class="card border-primary"
+                                style="border: 2px solid; margin: 10px 100px"
+                            >
+                                <div
+                                class="card-header text-center"
+                                style="font-size: large; padding: 15px"
+                                >
+                                <b>Example</b>
+                                </div>
+                                <div
+                                class="card-body"
+                                style="background-color: rgb(216, 240, 246)"
+                                >
+                                <p>
+                                    &lt;video width="640" height="360" controls&gt;
+                                </p>
+                                <ul>
+                                        &lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                                </ul>
+                                <p>
+                                    &lt;/video&gt;  
+                                </p>
+            
+                                </div>
+                            </div>  
+                      </div>
+                      <p>
+                        <u><b>Explanation of the attributes used:</b></u>
+                    </p>
+                    <ul>
+                        <li><b>width:</b> Specifies the width of the video player in pixels.</li>
+                        <li><b>height:</b> Specifies the height of the video player in pixels.</li>
+                        <li><b>controls:</b> Adds default video controls (such as play, pause, volume control, etc.) to the video player.</li>
+                        <li><code>&lt;source&gt;:</code> This is a child element of the <code>&lt;video&gt;</code> tag used to specify the video file to be displayed.<br>It allows multiple <code>&lt;source&gt;</code> elements to provide different file formats to ensure compatibility across various browsers.<br> In the example above, <b>video.mp4</b> is the video file in MP4 format, and <b>type="video/mp4"</b> indicates the MIME type of the video file.</li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId=='two'">
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        The <code>&lt;img&gt;</code> tag in HTML is used to display an image on a web page.
+                    </p>
+                    <p>
+                        It is a self-closing tag and does not have a closing tag. 
+                    </p>
+                    <p>
+                        A basic example of how the <code>&lt;img&gt;</code> tag is used:
+                    </p>
+                    <div class="card-group">
+                        <div
+                            class="card border-primary"
+                            style="border: 2px solid; margin: 10px 5px"
+                        >
+                            <div
+                            class="card-header text-center"
+                            style="font-size: large; padding: 15px"
+                            >
+                            <b>Structure</b>
+                            </div>
+                            <div
+                            class="card-body"
+                            style="background-color: rgb(216, 240, 246)"
+                            >
+                            <p>
+                                &lt;img src="image-url" alt="alternate-text" width="width-value" height="height-value"&gt;
+                            </p>
+                        </div>
+                    </div>  
+                  </div>
+                  <p>
+                    <u><b>Explanation of the attributes used in the <code>&lt;img&gt;</code> tag:</b></u>
+                </p>
+                <ul>
+                    <li><b>src:</b> Specifies the URL or path to the image file.</li>
+                    <li><b>alt:</b> Provides alternative text for the image, which is displayed if the image cannot be loaded or for accessibility purposes (screen readers for visually impaired users).</li>
+                    <li><b>width:</b> Specifies the width of the image in pixels (optional attribute).</li>
+                    <li><b>height:</b> Specifies the height of the image in pixels (optional attribute).</li>
+                    <li><code>&lt;source&gt;:</code> This is a child element of the <code>&lt;video&gt;</code> tag used to specify the video file to be displayed.<br>It allows multiple <code>&lt;source&gt;</code> elements to provide different file formats to ensure compatibility across various browsers.<br> In the example above, <b>video.mp4</b> is the video file in MP4 format, and <b>type="video/mp4"</b> indicates the MIME type of the video file.</li>
+                </ul>
+                <div class="card-group">
+                    <div
+                        class="card border-primary"
+                        style="border: 2px solid; margin: 10px 10px"
+                    >
+                        <div
+                        class="card-header text-center"
+                        style="font-size: large; padding: 15px"
+                        >
+                        <b>Example</b>
+                        </div>
+                        <div
+                        class="card-body"
+                        style="background-color: rgb(216, 240, 246)"
+                        >
+                        <p>
+                            &lt;img src="example.jpg" alt="Example Image" width="300" height="200"&gt;
+                        </p>
+                    </div>
+                </div>  
+              </div>  
+            </div>
+            </div>
+        </div>
+        <div *ngIf="elementId=='three'">
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        The <code>&lt;audio&gt;</code> tag in HTML is used to embed sound content in a web page.
+                    </p>
+                    <p>
+                        A basic example of how the <code>&lt;audio&gt;</code> tag is used:
+                    </p>
+                    <div class="card-group">
+                        <div
+                            class="card border-primary"
+                            style="border: 2px solid; margin: 10px 100px"
+                        >
+                            <div
+                            class="card-header text-center"
+                            style="font-size: large; padding: 15px"
+                            >
+                            <b>Example</b>
+                            </div>
+                            <div
+                            class="card-body"
+                            style="background-color: rgb(216, 240, 246)"
+                            >
+                            <p>
+                                &lt;audio controls&gt;
+                            </p>
+                            <ul>
+                                    &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;<br>
+                            </ul>
+                            <p>
+                                &lt;/audio&gt;  
+                            </p>
+        
+                            </div>
+                        </div>  
+                  </div>
+                  <p>
+                    <u><b>Explanation of the attributes used:</b></u>
+                </p>
+                <ul>
+                    <li><b>controls:</b> This attribute displays the audio player controls (such as play, pause, volume control, etc.).</li>
+                    <li><b>&lt;source&gt;:</b> This tag specifies the audio file to be played. It allows you to specify multiple sources using different formats to ensure compatibility with various browsers.<br> In the example above, <b>src</b> points to the audio file <b>(audiofile.mp3)</b> and <b>type</b> specifies the MIME type of the audio file.</li>
+                </ul>     
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='four'">
+        <div class="tab-title tab-slide-effect">
+            <div class="card-body">
+                <app-video-cmp [url]=""
+                >
+            </app-video-cmp>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Data Types</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problems"
+      >Problems</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <p class="content-text">
+        In JavaScript there are two types of datatypes
+        <b>Primitive, Non-primitive(Reference) data types.</b>
+      </p>
+      <p class="content-text">
+        JavaScript is an dynamic language(no need to mention the type it will
+        automatically takes the type dynamically by using the JavaScript
+        engine).
+      </p>
+      <div class="content-heading">
+        <b>Primitive Data Types</b>
+      </div>
+      <p class="content-text">
+        Primitive data types are basic data types that represent single values.
+        They are immutable, means their values cannot be changed once they are
+        assigned.
+      </p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center">Data Types</th>
+              <th class="text-center">Description</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>String</td>
+            <td>
+              It will represents the sequence of characters. Strings are
+              enclosed in single or double quotes.
+            </td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td>
+              It will represents the numeric values,including integers and
+              floating-point numbers
+            </td>
+          </tr>
+          <tr>
+            <td>Boolean</td>
+            <td>
+              It will represents the values either true or false. Used for
+              logical operations and conditional statements.
+            </td>
+          </tr>
+          <tr>
+            <td>Undefined</td>
+            <td>
+              It will gives the undefined values that means represents a
+              variable that has been declared but hasn't been assigned a value.
+            </td>
+          </tr>
+          <tr>
+            <td>Null</td>
+            <td>It will gives the null values(no values) or objects.</td>
+          </tr>
+          <tr>
+            <td>Symbol (ES6 and later)</td>
+            <td>
+              It will represents a unique and immutable value, primarily used as
+              object property keys. Symbols are created using the
+              <b>Symbol</b> function.
+            </td>
+          </tr>
+        </table>
+  
+      <div class="content-heading">
+        <b>Non-Primitive(Reference) Data Types</b>
+      </div>
+      <p class="content-text">
+        Reference / non-primitive data types are more complex and can hold
+        multiple values. They are stored as references to memory locations.
+      </p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="text-center" style="width: 15%">Data Types</th>
+            <th class="text-center">Description</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Object</td>
+          <td>
+            It will represents a collection of key-value pairs, where keys are
+            strings (or Symbols) and values can be of any data type, including
+            other objects.
+          </td>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>
+            It will represents the ordered collection of values, which can be of
+            mixed data types. Arrays are indexed starting from 0.
+          </td>
+        </tr>
+        <tr>
+          <td>Function</td>
+          <td>
+            functions are considered first-class citizens, which means they can
+            be assigned to variables, passed as arguments to other functions,
+            and returned from functions. Functions are reference data types
+            because they reference executable code.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border border-warning">
+      <img
+        class="program-img-fit"
+        src="assets/img/javascript/intro/datatype-1.jpg"
+        alt="program"
+      /><br />
+      <img
+        class="program-img-fit"
+        src="assets/img/javascript/intro/datatype-2.jpg"
+        alt="program"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Form Two</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="signup form">signup form</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="code and output">code and output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+                <li>Create an html sign up from step by step by using the following instructions:-</li>
+                <li>Keep the title - form two</li>
+                <li>In body keep the heading - "sign up" & with the largest size among all those headings</li>
+                <li>Form with action and id</li>
+                <li>Give the input type- "text", id-"fname,email", name-"fname,email", placeholder-"Name, Email</li>
+                <li>In label for-"gender,male,female"</li>
+                <li>input type- "radio" id- "male,female", name-"male,female, value-"Male,female"</li>
+                <li>Keep label for-"Courses, java, python, DotNet"</li>
+                <li>In input type-"checkbox", id - "Java, Python, DotNet", name - "Java, Python, DotNet", value- "Java,
+                    Python, DotNet"</li>
+                <li>In input type-"passward", id-"passward,confirmPassward", name-"passward,confirmPassward",
+                    placeholder-"passward, confirm passward"</li>
+                <li>Now in input give type,value- "submit"</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-group">
+            <img src="assets/img/web-designing/html/forms/signup-code.jpg" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="signup-code.jpg">
+        </div>
+        <h1>before submit</h1>
+        <div class="card-group">
+            <img src="assets/img/web-designing/html/forms/signup-output1.jpg" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="signup-output1.jpg">
+        </div>
+        <h1>after submit</h1>
+        <div class="card-group">
+            <img src="assets/img/web-designing/html/forms/signup-output2.jpg" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="signup-output2.jpg">
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+
+</div>

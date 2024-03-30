@@ -1,0 +1,101 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">District-City(One to Many Relation)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>District Class</b></div>
+          <div class="card-body">
+            <p>Create District class with following properties <br>
+              Create a tester class and create & print atleast 5 district objects in the tester class main method.
+            </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+            <p>Here we are going to use city class object in the district class as a parameter.</p>
+            <p>Each district belongs to different cities so one city can have multiple cities. </p>
+            <ol>
+              <li>id - This property is to give unique id for the district like districtcode(string type)</li>
+              <li>name - The name of the districtcode.(string type)</li>
+              <li><b>cities - The cities present in the district.(List&lt;City&gt; cities - list object with City
+                  type)</b></li>
+              <li>state - The state of the district.(string type)</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>City Class</b></div>
+          <div class="card-body">
+            <p>Create City class with following properties <br>
+              Create a tester class and create & print atleast 5 city objects in the tester class main method.
+            </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+
+            <ol>
+              <li>id - City unique id.(int type)</li>
+              <li>name - Name of the city.(string type)</li>
+            </ol>
+          </div>
+        </div>
+      </div> <!-- Ending of examples-->
+
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="card-group">
+        <div class="card">
+          <h5 class="text-center card-title">District POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/classrelation/" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title">City POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/classrelation/" alt="">
+          </div>
+        </div>
+      </div>
+      <img class="card-img-top" src="assets/img/corejava/classrelation/" alt="">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

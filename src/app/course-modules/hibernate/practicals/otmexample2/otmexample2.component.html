@@ -1,0 +1,498 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Employee- Designation(one-Many relation)- Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of employee by using below data
+                        </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>emp_id -</b> make sure it should not be duplicate and should not be empty (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>emp_name - </b> It should not be empty (hint: use "NOT NULL CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>gender - </b> It should not be empty (hint: use "NOT NULL CONSTRAINT")
+                                    </li>
+                                <li class="card-text"><b>salary - </b>It should be not less than 10000 and not more than 120000(hint: use "CHECK CONSTRAINT")</li>
+                                <li class="card-text"><b>experience - </b> It should be minimum zero
+                                </li>
+                                <li class="card-text"><b>des_id -</b>  It is connection to the designation table des_id. (hint: use "FOREIGN KEY")
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center "><b>Designation Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of designation by using below data </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>des_id - </b>make sure it should not be duplicate and should not be empty (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>des_name - </b>It should not be empty (hint: use "NOT NULL ,UNIQUE CONSTRAINTs")</li>
+                                <li class="card-text"><b>department -  </b> They should be either 'Technical','Non Technical', 'Finance', 'Support' any one of those(hint: use "CHECK CONSTRAINT")
+                                </li>
+                               
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+            </div> <!-- Ending of examples-->
+
+        </div>
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">INSERT following Employee Data into Table</button>
+        </div>
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 1</li>
+                    <li class="card-text">emp_name = Edward Russell</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 100000</li>
+                    <li class="card-text">experience = 6</li>
+                    <li class="card-text">des_id = M111</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 2</li>
+                    <li class="card-text">emp_name = Neelima Chowdary</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 25000</li>
+                    <li class="card-text">experience = 1.5</li>
+                    <li class="card-text">des_id = P9900</li>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 3</li>
+                    <li class="card-text">emp_name = Shiva Kumar</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 40000</li>
+                    <li class="card-text">experience = 3</li>
+                    <li class="card-text">des_id = SE5555</li>
+                </div>
+            </div>
+        </div><!--end of group-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 4</li>
+                    <li class="card-text">emp_name = Priya Soodh</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 60000</li>
+                    <li class="card-text">experience = 4.2</li>
+                    <li class="card-text">des_id = F1122</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 5</li>
+                    <li class="card-text">emp_name = Sai Ruchitha</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 42000</li>
+                    <li class="card-text">experience = 3.7</li>
+                    <li class="card-text">des_id = SE5599</li>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 6</li>
+                    <li class="card-text">emp_name = John Robert</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 34000</li>
+                    <li class="card-text">experience = 2</li>
+                    <li class="card-text">des_id = P9900</li>
+                </div>
+            </div>
+        </div><!--end of group-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 7</li>
+                    <li class="card-text">emp_name = Sri Divya</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 75000</li>
+                    <li class="card-text">experience = 5</li>
+                    <li class="card-text">des_id = SL1234</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 8</li>
+                    <li class="card-text">emp_name = Swetha Kumari</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 55000</li>
+                    <li class="card-text">experience = 3</li>
+                    <li class="card-text">des_id = SE5599</li>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 9</li>
+                    <li class="card-text">emp_name = Sri Latha</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 90000</li>
+                    <li class="card-text">experience = 7</li>
+                    <li class="card-text">des_id = M111</li>
+                </div>
+            </div>
+        </div><!--end of group-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 10</li>
+                    <li class="card-text">emp_name = Sandeep Dull</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 30000</li>
+                    <li class="card-text">experience = 1</li>
+                    <li class="card-text">des_id = SU9999</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 11</li>
+                    <li class="card-text">emp_name =Anup Kumar </li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 45000</li>
+                    <li class="card-text">experience = 2</li>
+                    <li class="card-text">des_id = SE5599</li>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 12</li>
+                    <li class="card-text">emp_name = Prasanth Roy</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 87000</li>
+                    <li class="card-text">experience = 6</li>
+                    <li class="card-text">des_id = SL1234</li>
+                </div>
+            </div>
+        </div><!--end of group-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 13</li>
+                    <li class="card-text">emp_name = Tony Edward</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 49000</li>
+                    <li class="card-text">experience = 4</li>
+                    <li class="card-text">des_id = SE5555</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 14</li>
+                    <li class="card-text">emp_name = Brinda Kapoor</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 25000</li>
+                    <li class="card-text">experience = 1</li>
+                    <li class="card-text">des_id = SU9999</li>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 15</li>
+                    <li class="card-text">emp_name = Prachi Mehta</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 84000</li>
+                    <li class="card-text">experience = 5</li>
+                    <li class="card-text">des_id = F1122</li>
+                </div>
+            </div>
+        </div><!--end of group-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 16</li>
+                    <li class="card-text">emp_name = Pardeep Narwal</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 98000</li>
+                    <li class="card-text">experience = 7.5 </li>
+                    <li class="card-text">des_id = M111</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 17</li>
+                    <li class="card-text">emp_name = Rajendra Kumar</li>
+                    <li class="card-text">gender = male</li>
+                    <li class="card-text">salary = 87000</li>
+                    <li class="card-text">experience = 6</li>
+                    <li class="card-text">des_id = F1122</li>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Employee Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">emp_id = 18</li>
+                    <li class="card-text">emp_name = Smrithi Kour</li>
+                    <li class="card-text">gender = female</li>
+                    <li class="card-text">salary = 40000</li>
+                    <li class="card-text">experience = 2.10 </li>
+                    <li class="card-text">des_id = P9900</li>
+                </div>
+            </div>
+        </div><!--end of group-->
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">INSERT following Designation Data into Table</button>
+        </div>
+        <!--starting of data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = M111</li>
+                    <li class="card-text">des_name = Manager</li>
+                    <li class="card-text">department = Non Technical</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = SE5599</li>
+                    <li class="card-text">des_name = Software Engineer</li>
+                    <li class="card-text">department = Technical</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = F1122</li>
+                    <li class="card-text">des_name = Cloud sales Finance Lead</li>
+                    <li class="card-text">department = Finance</li>
+                </div>
+            </div>
+
+        </div><!--end of group-->
+
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = SE5555</li>
+                    <li class="card-text">des_name = Technical Support</li>
+                    <li class="card-text">department = Technical</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = SU9999</li>
+                    <li class="card-text">des_name = Voice Process</li>
+                    <li class="card-text">department = support</li>
+                </div>
+            </div>
+        </div><!--end of data-->
+
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = SL1234</li>
+                    <li class="card-text">des_name = Team Lead</li>
+                    <li class="card-text">department = Technical</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Designation Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">des_id = P9900</li>
+                    <li class="card-text">des_name = Payrole Analyst</li>
+                    <li class="card-text">department = Finance</li>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p>
+
+                        </p>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary"> Question - 1</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            Print all the Employee details along with Designation  details whose Salary is lessthan 100000
+
+                            <br>
+
+                        </button>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-primary"> Configuration Data</button>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                        <p>
+                            <b> Configuration config = new
+                                Configuration().configure().addAnnotatedClass(Pojo1.class).addAnnotatedClass(Pojo2.class);</b>
+                            <br>
+                            <b> StandardServiceRegistryBuilder reg = new
+                                StandardServiceRegistryBuilder().applySettings(config.getProperties());</b>
+                            <br>
+                            <b> SessionFactory sf = config.buildSessionFactory(reg.build());</b>
+                            <br>
+                            <b>Session session = sf.openSession();</b>
+                            <br>
+                            <b>Transaction tx = session.beginTransaction();</b>
+                            <br>
+                            <b>session.save(Objects);</b>
+                            <br>
+                            <b>tx.commit();</b>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- first group-->
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''"
+                    (click)="subTabChange($event)" data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+                <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Main(Testing)"> Main(Testing) Class</span>
+                <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Configuration file ">Configuration file</span>
+                <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Pom.Xml file">Pom.Xml file</span>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='pojo'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Employee POJO Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/OnetoMany.example2.employee.pojo.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Designation POJO Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/OnetoMany.example2.designation.pojo.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='main'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Main Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/OnetoMany.example2.main.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='configuration'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/example1.cfg.file.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='pom.xml'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="'student_branch_relation.m4v'"></app-video-cmp>
+        </div>
+    </div>
+
+
+</div>

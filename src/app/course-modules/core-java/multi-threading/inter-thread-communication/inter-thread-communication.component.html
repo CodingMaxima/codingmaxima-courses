@@ -1,0 +1,123 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Inter Thread Communication</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Example-1">Example-1</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Example-2">Example-2</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Example-3">Example-3</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="text-center">
+        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+          <button type="button" class="btn btn-lg btn-block">In inter thread communication two threads can communicate
+            each other by using the wait(), notify(), notifyAll() methods</button>
+          <button type="button" class="btn btn-lg btn-block">These methods present in object class but not in thread
+            class because thread can call these methods on any java objects.</button>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>wait()</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>The thread which is expecting is
+              responsibe to call wait() then immediately enters into waiting state.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>If a thread calls wait() on an object it
+              immediately releases the lock of particular object and enters into waiting state</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>The thread will wake up from the waiting
+              state only after notify(), notifyall() methods is called.</li>
+            <p class='card-text' style='font-size: medium;font-style: oblique'> <li><b>syntax: public void wait()</b></li>          
+            <li><b>syntax: public void wait(long ms, int ns)</b></li>
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>notify()</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>The thread which is responsible to
+              perform updation. After performing the updation it is responsible to call notify() then waiting thread
+              will get the notification and continue its execution with those updated items.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>If a thread calls notify() on any object
+              then it releases the lock of the object may not immediately</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>By using the notify() can gives the
+              notification for only one waiting thread. If multiple threads are waiting only one thread will be notified
+              and the remaining threads have to wait for further notification</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>Which thread will be notified we can
+              expect it depends on thread schedular</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'><b>syntax: public void notify()</b></li>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>notifyall()</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>We can use notifyall() to give the
+              notification for all waiting threads of a particular object. Even though multiple threads notify but the
+              execution will be performed one by one because threads required lock and only one lock is available.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'><b>syntax: public void wait()</b></li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>suspend()</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>Whenever we are suspending the thread by
+              using the suspend() of the thread class then immediately the thread will enter into the suspend state.
+            </li>
+            <li class='card-text' style='font-size: large;font-style: oblique'><b>Syntax: </b>public void suspend()</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>one can suspend the thread for a
+              particular period of time like milli sec and also in nano sec</li>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>resume()</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>For getting out the thread from the
+              suspend state to the runnable state have to use the resume() so that the thread will execute as usual.
+            </li>
+            <li class='card-text' style='font-size: large;font-style: oblique'><b>Syntax: </b>public void resume()</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>These suspend(), resume() is not
+              recommended for the use because these methods are deprecated(disapproval).</li>
+          </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>stop()</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>We can use this method for stopping a
+              thread to execute.But this method is also deprecated so not recommanded for use.</li>
+            <li class='card-text' style='font-size: large;font-style: oblique'><b>Syntax: </b>public void stop()</li>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+
+
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+
+  </div>
+
+  <div *ngIf="elementId=='four'">
+
+  </div>
+
+</div>

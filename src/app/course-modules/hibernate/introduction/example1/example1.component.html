@@ -1,0 +1,254 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">City - Example</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div
+            style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">Design a  City management system, using the
+              following description. </button>
+
+            <br>
+            <button type="button" class="btn btn-lg btn-block">Write a City class which is expected to be plain
+              old Java objects (POJO classes) with getters and setters
+              for each field. The class is also expected to have a toString method which will display
+              all the fields of the object and their values in a human readable form.</button>
+            <button type="button" class="btn btn-lg btn-block">Set up a Database to create Tables in your
+              Database.</button>
+            <button type="button" class="btn btn-lg btn-block">Design a Hibernate Configuration File Which is an XML
+              File.
+              This file contains the information regarding the database system you intend to use.
+            </button>
+            <button type="button" class="btn btn-lg btn-block">Create a Mapping file that instructs Hibernate how to map
+              the defined class or classes to the database tables.
+            </button>
+            <button type="button" class="btn btn-lg btn-block">Create an Test/Application class with the main() method
+              to run the application. We will use this application
+              to save few City records and then we will apply CRUD operations on those records.
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+      <div class="card-header text-center "><b>City - Class</b></div>
+      <div class="card-body">
+        <li class="card-text">Integer - city ID</li>
+        <li class="card-text">String - city name,</li>
+        <li class="card-text">String - country name,</li>
+        <li class="card-text">Long - city Population,</li>
+        <li class="card-text">With constructors, all getters and setters and toString methods </li>
+      </div>
+      <div style="padding: 10px;" class="text-center">
+        <button class="btn btn-info">INSERT follwing Data into Table</button>
+      </div>
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data</b></div>
+          <div class="card-body">
+            <li class="card-text">id = 1</li>
+            <li class="card-text">city_name = Mumbai </li>
+            <li class="card-text">city_population = 101356</li>
+            <li class="card-text">country_name = India</li>
+
+          </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data </b></div>
+          <div class="card-body">
+            <li class="card-text">id = 2</li>
+            <li class="card-text">city_name = London</li>
+            <li class="card-text">city_population = 546789</li>
+            <li class="card-text">country_name = UK</li>
+
+          </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data</b></div>
+          <div class="card-body">
+            <li class="card-text">id = 3</li>
+            <li class="card-text">city_name = Paris</li>
+            <li class="card-text">city_population = 168878</li>
+            <li class="card-text">country_name = France</li>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data</b></div>
+          <div class="card-body">
+            <li class="card-text">id = 4</li>
+            <li class="card-text">city_name = Delhi</li>
+            <li class="card-text">city_population = 102500</li>
+            <li class="card-text">country_name = India</li>
+
+          </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data</b></div>
+          <div class="card-body">
+            <li class="card-text">id = 5</li>
+            <li class="card-text">city_name = Bristol</li>
+            <li class="card-text">city_population = 244356</li>
+            <li class="card-text">country_name = UK</li>
+
+          </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data</b></div>
+          <div class="card-body">
+            <li class="card-text">id = 6</li>
+            <li class="card-text">city_name = Hyderabad</li>
+            <li class="card-text">city_population = 95356</li>
+            <li class="card-text">country_name = India</li>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>City Data</b></div>
+          <div class="card-body">
+            <li class="card-text">id = 7</li>
+            <li class="card-text">city_name = Tokyo</li>
+            <li class="card-text">city_population = 845356</li>
+            <li class="card-text">country_name = Japan</li>
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <p>
+
+            </p>
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-primary"> Select Query by Id</button>
+            </div>
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              In this we need to retrive the data of Single row by Id from the table. <br>
+
+            </button>
+
+
+
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-primary">Simple Select Query</button>
+            </div>
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              In Simple Select Query we just need to retrive the entire data of the table.
+            </button>
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-info">Select City data with Where conditon</button>
+            </div>
+
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              Select the Cities data Where population is less than 300000
+            </button>
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-info">Select City Data with both where condition and AND
+                condition</button>
+            </div>
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              Select the Cities data Where population is less than 300000 and Country name = India.
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="elementId=='two'">
+  <div class="card-body border border-warning">
+    <div class="tab-title tab-slide-effect">
+      <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="subTabChange($event)"
+      data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+    <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="subTabChange($event)"
+      data-hover="Main(Testing)"> Main(Testing) Class</span>
+    <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+      (click)="subTabChange($event)" data-hover="Configuration file ">Configuration file</span>
+    <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''" (click)="subTabChange($event)"
+      data-hover="Pom.Xml file">Pom.Xml file</span>
+
+    </div>
+    <div class="card-group" *ngIf="elementId2=='pojo'">
+      <div class="card">
+        <h5 class="text-center card-title animate-charcter">Pojo Class</h5>
+        <div class="card-body">
+          <img class="card-img-top" src="assets/img/hibernate/example1.pojo.png" alt="">
+        </div>
+      </div>
+     
+    </div>
+    <div class="card-group" *ngIf="elementId2=='main'">
+      <div class="card">
+        <h5 class="text-center card-title animate-charcter">Main Class</h5>
+        <div class="card-body">
+          <img class="card-img-top" src="assets/img/hibernate/example1.main.png" alt="">
+        </div>
+      </div>
+      
+    </div>
+    <div class="card-group" *ngIf="elementId2=='configuration'">
+      <div class="card">
+        <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+        <div class="card-body">
+          <img class="card-img-top" src="assets/img/hibernate/example1.cfg.file.png" alt="">
+        </div>
+      </div>
+      
+    </div>
+    <div class="card-group" *ngIf="elementId2=='pom.xml'">
+      <div class="card">
+        <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+        <div class="card-body">
+          <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+        </div>
+      </div>
+      
+    </div>
+
+
+  </div>
+</div>
+
+<div *ngIf="elementId=='three'">
+  <div class="card-body">
+    <app-video-cmp [url]="videoData"
+    [audioData]="audioData"
+    ></app-video-cmp>
+  </div>
+</div>
+
+

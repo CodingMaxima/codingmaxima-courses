@@ -1,0 +1,2464 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Lists, Tuples, Sets Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Lists">Lists</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Tuples">Tuples</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+            data-hover="Sets">Sets</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="mainTab($event)"
+            data-hover="Dictionaries">Dictionaries</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <div class="text-center">
+                        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">Lists are used to store the multiple
+                                values/elements in the single variable.</button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <li>Since elements in the list are preserved along with their order,changable & allows
+                                    duplicates. one can access any element using their index value.</li>
+                                <li> <b>Note: Similar to Java, collections in Python also follow Zero based indexing</b>
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block"> One can create a lists by placing the
+                                items
+                                in square brackets '[]'.</button>
+                        </div>
+                        <div style="padding-top: 15px;">
+                            <button class="btn btn-primary btn-lg">List Example</button>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header"><b>Creating the list by using colours such as "red", "black",
+                                    "blue", "green"</b></div>
+                            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours=["red", "black", "blue", "green"]</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div>
+                                <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>['red', 'black', 'blue', 'green']</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>For
+                                    finding the length of the list</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p style='font-size: medium; font-style: oblique;'>Use len() funtion to find out how
+                                    many elements/values are present in the list</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours=["red", "black", "blue", "green"]</li>
+                                    <li class="card-text">print(len(colours))</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>4</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Data types</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <div class="list-dots">
+                                    <li class='card-text' style='font-size: medium;font-style: oblique'>The data types
+                                        are
+                                        string, int,
+                                        boolean</li>
+                                    <li class='card-text' style='font-size: medium; font-style: oblique'>we can place
+                                        the
+                                        data types
+                                        induvidually or all in combination</li><br>
+                                </div>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">x =["red", 1, True, "black", 20, False, "blue", "green"]</li>
+                                    <li class="card-text">print(x)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>['red', 1, True, 'black', 20, False, 'blue', 'green']</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+                </div>
+                <div style=" font-size: medium; padding: 10px;">
+                    <button type="button" class="btn btn-lg btn-block">
+                        <div class="list-dots">
+                            <ul>
+                                <li>We can get the values from the lists in different ways.</li>
+                                <li>Some of them are through index, through negative index, by setting the ranges</li>
+                                <li>Below are some of the examples how the values are obtains in different ways</li>
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Index</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                read(obtain) by using index numbers </p>
+                            <p><b>For Example:- </b> For getting the second value from the list such as colours =
+                                ["red", "black", "blue", "green", "yellow", "orange", "white"]the code was given
+                                below</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">print(colours[1])</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                            <p>black</p>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b> Negative Index</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                read(obtain) by using negative index numbers by have to mention the index as
+                                <b>negative numbers like[-1], [-2] etc..</b> it will read from the last number as
+                                the satrting index
+                            </p>
+                            <p><b>For Example:- </b> For getting the last second value from the list such as colours
+                                = ["red", "black", "blue", "green", "yellow", "orange", "white"]the code was given
+                                below</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">print(colours[-2])</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                            <p>orange</p>
+                        </div>
+                    </div>
+                </div><!--end of card group index-->
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Setting Range for Index</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: medium;">
+                            <div class="list-dots">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                    read(obtain) by setting their range values from the where it has to be started and
+                                    where
+                                    it has to be ended </li>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'> The range values
+                                    should have to be mention with the <b>index numbers only</b> </li>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>Whenever we are
+                                    mentioning the starting range it will iterate from the index which
+                                    we
+                                    have mentioned in the start </li>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>The ending range
+                                    will iterate upto the before index which we have mentioned</li>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>Can give the
+                                    negative value range also.</li>
+                            </div><br>
+                            <p><b>For Example:- </b> For getting the third value, fourth value from the list such as
+                                colours =
+                                ["red", "black", "blue", "green", "yellow", "orange", "white"]the code was given
+                                below</p><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">print(colours[2:4])</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                            <p>['blue', 'green']</p>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Leave any one of the range value</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                read(obtain) by leaiving any one of the range values either staring one or the ending
+                                one </p>
+                            <p><b>For Example:- </b> For getting the values from third value from the list such as
+                                colours
+                                = ["red", "black", "blue", "green", "yellow", "orange", "white"]the code was given
+                                below</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">print(colours[2:])</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                            <p>['blue', 'green', 'yellow', 'orange', 'white']</p>
+                        </div>
+                    </div>
+                </div><!--end of range card-->
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Adding & Changing the elements</button>
+                </div>
+                <div style=" font-size: medium; padding: 10px;">
+                    <button type="button" class="btn btn-lg btn-block">
+                        <div class="list-dots">
+                            <ul>
+                                <li>For Adding the elements to the lists use <b>append() method</b> ,<b>insert()
+                                        method</b>
+                                </li>
+                                <li><b>append() method -</b> the values will be added at the end of the list</li>
+                                <li><b>insert() method -</b> the values can be added any where throughout the list
+                                </li>
+                            </ul>
+                        </div>
+                    </button>
+                    <button type="button" class="btn btn-lg btn-block">changing the elements in the list use through
+                        index numbers
+                    </button>
+
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>append() method</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p><b>For Example:-</b> Add an value "violet" colour to the list</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.append("violet")</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white',
+                                'violet']</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>insert method</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <div class="list-dots">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>If you want to add
+                                    values in
+                                    anywhere of the list without changing the values in the list use this method </li>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>For inserting the
+                                    values
+                                    in list anywhere have to specify the index number where you have
+                                    to keep that value in particular position</li>
+                            </div>
+                            <p><b>For Example:-</b> Add an value "violet" colour to the list in second position</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.insert(2, "violet")</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'violet', 'blue', 'green', 'yellow', 'orange',
+                                'white']</li>
+                        </div>
+                    </div>
+                </div><!--end of the add card-->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>changing the values through index</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p><b>For Example:-</b>change the second value <b>"black"</b> to <b>"brown" </b>from the
+                                list </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours[1] = "brown"</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'brown', 'blue', 'green', 'yellow', 'orange', 'white',
+                                'violet']</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>changing the vlaues by setting the range</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <div class="list-dots">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>By setting the range
+                                    we can add
+                                    multiple values without writting the extra line of code </li>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>Here by setting the
+                                    range depends on the last index value which we are placing the output
+                                    will obtain according to it</li>
+                            </div><br>
+                            <p><b>For Example:-</b> Add an value <b>"violet"</b> colour, <b>"brown"</b> colour to the
+                                list in third
+                                position</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours[2:5]</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'violet', 'brown', 'orange', 'white']</li>
+                        </div>
+                    </div>
+                </div><!--end of change card-->
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Removing And Copying the elements</button>
+                    <div style=" font-size: medium; padding: 10px;">
+                        <button type="button" class="btn btn-lg btn-block">
+                            <div class="list-dots">
+                                <ul>
+                                    <li>For removing the values from the list use remove()
+                                        method, pop() method, del()method,clear() method.</li>
+                                    <li><b>remove() method- </b> used for removing the particular value from the list
+                                    </li>
+                                    <li><b>pop() mehotd- </b> gives same results as remove method but the difference for
+                                        removing the values through index we can use this method</li>
+                                    <li><b>del method- </b> can also be use for removing the values directly or thorugh
+                                        the
+                                        index. This methd has some disadvantage i.e, if we delete the entire list it
+                                        will give
+                                        the error for avoiding that error new method was implemented(<b>clear()</b></li>
+                                    <li><b>clear() method-</b> used for deleting the entire list same as ike delete but
+                                        it wont
+                                        gives error because it only deletes the values present in the list not the
+                                        entire list
+                                    </li>
+                                </ul>
+                            </div>
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">For copying the list to another list there
+                            are 2 ways <b>[copy(), list()]</b>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>remove()</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p><b>For Example:-</b>remove the colour <b>"green"</b> from the list</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.remove("green")</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'yellow', 'orange', 'white']</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>pop()</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p><b>For Example:-</b>remove the colour <b>"black"</b> from the list by using the index</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.pop(1)</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'blue', 'green', 'yellow', 'orange', 'white']</li>
+                        </div>
+                    </div>
+
+                </div><!--end of  card group1-->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>del()</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <div class="list-dots">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>In this you can
+                                    delete the single value / entire values but the problem was by
+                                    deleting
+                                    the
+                                    entire values gives the error because there will be no list for iterationg</li>
+                            </div><br>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'><b>For Example:-</b>del
+                                the colour <b>"green"</b> from the list</li>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">del colours[3]</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'yellow', 'orange', 'white']</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>clear()</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p><b>For Example:-</b>delete the entire colours list </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.clear()</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">[]</li>
+                        </div>
+                    </div>
+
+                </div><!--end of  card group2-->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>copy()</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p><b>For Example:-</b>copy the colours list to newcolours list</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">newcolours = colours.copy()</li>
+                                <li class="card-text">print(newcolours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white']</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>list()</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p><b>For Example:-</b>copy the colours list to newcolours list by using the list() method
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">newcolours = list(colours)</li>
+                                <li class="card-text">print(newcolours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white']</li>
+                        </div>
+                    </div>
+                </div><!--end of  card group3-->
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">sorting & joining the elements</button>
+                    <div style=" font-size: medium; padding: 10px;">
+                        <button type="button" class="btn btn-lg btn-block">
+                            <div class="list-dots">
+                                <ul>
+                                    <li>For sorting the values in the list use <b>sort() method, reverse()method </b>
+                                    </li>
+                                    <li><b>sort()- </b> used for sorting the values in the list as either ascending
+                                        order or as
+                                        descending order it may be numeric or an alphabet</li>
+                                    <li>ascending order is an default , for obaining the result in descending order use
+                                        keyword(<b>reverse = true</b>)</li>
+                                    <li><b>reverse()- </b>used to sort the values in the reverse order in the list</li>
+                                </ul>
+                            </div>
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            <div class="list-dots">
+                                <ul>
+                                    <li>for joining the 2 or more lists at a time use <b>+ operator</b>, <b>
+                                            extend()method</b>,<b>append()</b></li>
+                                    <li><b>+ operator</b>- used to join the two/ more lists by using <b>+ </b>symbol in
+                                        betwwen
+                                        the two lists</li>
+                                    <li><b>extend() method- </b>used to join the two lists </li>
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>sort()</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p><b>For Example:-</b>sort the values in the list in descending order</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.sort(reverse = true)</li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['yellow', 'white', 'red', 'orange', 'green', 'blue', 'black']</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>reverse()</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p><b>For Example:-</b>reverse the list colours
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">colours.reverse()</li>
+                                <li class="card-text">print(newcolours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['white', 'orange', 'yellow', 'green', 'blue', 'black', 'red']</li>
+                        </div>
+                    </div>
+                </div><!--end of  card group1-->
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>+ operator</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p><b>For Example:-</b>add the two lists </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">numbers = [1, 2, 5, 4, 6]</li>
+                                <li class="card-text">combination = colours + numbers </li>
+                                <li class="card-text"> print(combination)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1, 2,
+                                5, 4, 6]</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>append()</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p><b>For Example:-</b>add the two lists by using append() method </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">numbers = [1, 2, 5, 4, 6]</li>
+                                <li class="card-text">for x in numbers: </li>
+                                <li class="card-text">
+                                    <pre>   colours.append(x)</pre>
+                                </li>
+                                <li class="card-text">print(colours)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1, 2,
+                                5, 4, 6]</li>
+                        </div>
+                    </div>
+                </div><!--end of group2-->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>extend()</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p><b>For Example:-</b>join the 2 lists by extending one list into other list
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">numbers = [1, 2, 5, 4, 6]</li>
+                                <li class="card-text">colours.extend(numbers)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1, 2,
+                                5, 4,
+                                6]</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>extend() </b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p class='card-text' style='font-size: medium;font-style: oblique'>Not only we can list to
+                                list can add any iterables<b>(tuple, set, dictionaries)</b></p>
+                            <p><b>For Example:-</b>join the 2 lists by extending one list with one tuple
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">numbers = (1, 2, 5, 4, 6)</li>
+                                <li class="card-text">colours.extend(numbers)</li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">['red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1, 2,
+                                5, 4,
+                                6]</li>
+                        </div>
+                    </div>
+                </div><!--end of  card group3-->
+
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Check elements and Loops </button>
+                    <div style=" font-size: medium; padding: 10px;">
+                        <button type="button" class="btn btn-lg btn-block">For checking the element is present in the
+                            list or not use<b> if </b></button>
+                        <button type="button" class="btn btn-lg btn-block">For checking the loops in list use <b>for,
+                                while</b></button>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>if </b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                            <p><b>For Example:-</b>Check if "blue" colour is present in list or not
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">if "pink" in colours: </li>
+                                <li class="card-text">
+                                    <pre>   print("present")</pre>
+                                </li>
+                                <li class="card-text">else:</li>
+                                <li class="card-text">
+                                    <pre>   print("not present")</pre>
+                                </li>
+                            </div>
+                            <br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">not present</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>for loop</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p class='card-text' style='font-size: medium;font-style: oblique'> For printing all the
+                                elements one by one we can use these loops</p>
+                            <p><b>For Example:-</b>for printing all the elements one by one present in the list
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">for x in colours:</li>
+                                <li class="card-text">
+                                    <pre>   print(x)</pre>
+                                </li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">red</li>
+                            <li class="card-text">black</li>
+                            <li class="card-text">blue</li>
+                            <li class="card-text">green</li>
+                            <li class="card-text">yellow</li>
+                            <li class="card-text">orange</li>
+                            <li class="card-text">white</li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>while loop </b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p class='card-text' style='font-size: medium;font-style: oblique'>In while loop len()
+                                function will be used for determining the entire list length</p>
+                            <p><b>For Example:-</b>for printing all the elements one by one present in the list
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <div class="code-dark-block">
+                                <li class="card-text">colours = ["red", "black", "blue", "green", "yellow", "orange",
+                                    "white"]</li>
+                                <li class="card-text">i = 0</li>
+                                <li class="card-text">while i &lt; len(colours):</li>
+                                <li class="card-text">
+                                    <pre>      print(colours[i])</pre>
+                                </li>
+                                <li class="card-text">
+                                    <pre>      i = i + 1</pre>
+                                </li>
+                            </div><br>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <li class="card-text">red</li>
+                            <li class="card-text">black</li>
+                            <li class="card-text">blue</li>
+                            <li class="card-text">green</li>
+                            <li class="card-text">yellow</li>
+                            <li class="card-text">orange</li>
+                            <li class="card-text">white</li>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/lists_tuples/lists.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <div class="text-center">
+                        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">Tuples are used to store the multiple
+                                values/elements in the single variable.</button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <li>Since elements in the list are preserved along with their order,unchangable & allows
+                                    duplicates. one can access any element using their index value.</li>
+                                <li> <b>Note: Similar to Java, collections in Python also follow Zero based indexing</b>
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block"> One can create a tuples by placing the
+                                items
+                                in paranthesis '()'.</button>
+                            <button type="button" class="btn btn-lg btn-block">Since tuples are unchangable we can't
+                                modify them so for modifying the values present in the tuple first convert the tuple
+                                into list & modify the values & again covert them back to tuple</button>
+                        </div>
+                        <div style="padding-top: 15px;">
+                            <button class="btn btn-primary btn-lg">tuple Example</button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Tuple Example-1</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p style='font-size: medium; font-style: oblique;'>Creating the tuple by using
+                                    colours such as "red", "black",
+                                    "blue", "green","yellow", "orange", "white" </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange", "white")</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white')</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Tuple Example-2</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>For creating the
+                                    tuple with one item should compulsorly have to place <b>comma"(,)"</b> so that
+                                    it will take it as tuple class otherwise it will consider it as string class
+                                </li><br>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'><b>For
+                                        example:-</b> create a tuple class with one value "python"</li>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">lang = ("python",)</li>
+                                    <li class="card-text">print(type(lang)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>&lt;class 'tuple'&gt;
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--end of the tuple example group-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>For
+                                    finding the length of the tuple</b></div>
+                            <div class="card-body" style="background-color:rgb(229, 253, 253); ">
+                                <p style='font-size: medium; font-style: oblique;'>Use len() funtion to find out how
+                                    many elements/values are present in the list</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange", "white")</li>
+                                    <li class="card-text">print(len(colours))</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>7</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Data types</b></div>
+                            <div class="card-body" style="background-color:rgb(252, 227, 231); ">
+                                <div class="list-dots">
+                                    <li class='card-text' style='font-size: medium;font-style: oblique'>The data types
+                                        are
+                                        string, int,
+                                        boolean</li>
+                                    <li class='card-text' style='font-size: medium; font-style: oblique'>we can place
+                                        the
+                                        data types
+                                        induvidually or all in combination</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">x =("red", 1, True, "black", 20, False, "blue", "green")</li>
+                                    <li class="card-text">print(x)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>('red', 1, True, 'black', 20, False, 'blue', 'green')</p>
+                            </div>
+                        </div>
+                    </div><!--end of example card2-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>We can get the values from the tuples in different ways.</li>
+                                        <li>Some of them are through index, through negative index, by setting the
+                                            ranges
+                                        </li>
+                                        <li>Below are some of the examples how the values are obtains in different ways
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Index</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                    read(obtain) by using index numbers </p>
+                                <p><b>For Example:- </b> For getting the second value from the tuple such as colours
+                                    =
+                                    ("red", "black", "blue", "green", "yellow", "orange", "white")the code was given
+                                    below</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">print(colours[1])</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>black</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b> Negative Index</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                    read(obtain) by using negative index numbers by have to mention the index as
+                                    <b>negative numbers like[-1], [-2] etc..</b> it will read from the last number
+                                    as
+                                    the satrting index
+                                </p>
+                                <p><b>For Example:- </b> For getting the last second value from the tuple such as
+                                    colours
+                                    = ("red", "black", "blue", "green", "yellow", "orange", "white")the code was
+                                    given
+                                    below</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">print(colours[-2])</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>orange</p>
+                            </div>
+                        </div>
+                    </div><!--end of card group index-->
+
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Setting Range for Index</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>The values
+                                            can be
+                                            read(obtain) by setting their range values from the where it has to be
+                                            started
+                                            and where
+                                            it has to be ended </li>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>The range
+                                            values should have to be mention with the <b>index numbers only</b>
+                                        </li>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>Whenever
+                                            we are mentioning the starting range it will iterate from the index
+                                            which we
+                                            have mentioned in the start </li>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>The ending
+                                            range will iterate upto the before index which we have mentioned</li>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>Can give
+                                            the negative value range also.</li>
+                                    </ul>
+                                </div>
+                                <p><b>For Example:- </b> For getting the third value, fourth value from the tuple
+                                    such as
+                                    colours =
+                                    ("red", "black", "blue", "green", "yellow", "orange", "white")the code was given
+                                    below</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">print(colours[2:4])</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>('blue', 'green')</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Leave any one of the range value</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>The values can be
+                                    read(obtain) by leaiving any one of the range values either staring one or the
+                                    ending
+                                    one </p>
+                                <p><b>For Example:- </b> For getting the values from third value from the tuple such
+                                    as
+                                    colours
+                                    = ("red", "black", "blue", "green", "yellow", "orange", "white")the code was
+                                    given
+                                    below</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">print(colours[2:])</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>('blue', 'green', 'yellow', 'orange', 'white')</p>
+                            </div>
+                        </div>
+                    </div><!--end of range card-->
+
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Adding & Changing the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">As earlier we discussed in the starting
+                                that tuples are unchangable so first convert the data into list after that do add/change
+                                the data in that list next again convert them to the tuple</button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>For Adding the elements to the tuple use <b>append() method</b> ,<b>insert()
+                                                method</b>
+                                        </li>
+                                        <li><b>append() method -</b> the values will be added at the end of the tuple
+                                        </li>
+                                        <li><b>insert() method -</b> the values can be added any where throughout the
+                                            tuple</li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">changing the elements in the tuple use
+                                through
+                                index numbers
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>append() method</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b> Add an value "violet" colour to the tuple</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text"> y.append("violet")</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white',
+                                    'violet')</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>insert method</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>If you want
+                                            to add
+                                            values in
+                                            anywhere of the tuple without changing the values in the tuple use this
+                                            method </li>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'> For
+                                            inserting the
+                                            values in tuple anywhere have to specify the index number where you
+                                            have
+                                            to keep that value in particular position</li>
+                                    </ul>
+                                </div>
+                                <p><b>For Example:-</b> Add an value "violet" colour to the tuple in second position</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">y.insert(2, "violet")</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'violet', 'blue', 'green', 'yellow', 'orange',
+                                    'white')</li>
+                            </div>
+                        </div>
+                    </div><!--end of the add card-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>changing the values through index</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>change the second value <b>"black"</b> to <b>"brown" </b>from the
+                                    tuple </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text"> y[1] = "brown"</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'brown', 'blue', 'green', 'yellow', 'orange', 'white',
+                                    'violet')</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>changing the vlaues by setting the range</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>By setting
+                                            the range we can
+                                            add
+                                            multiple values without writting the extra line of code </li>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>Here by
+                                            setting the range depends on the last index value which we are placing the
+                                            output
+                                            will obtain according to it</li>
+                                    </ul>
+                                </div>
+                                <li class='card-text' style='font-size: medium;font-style: oblique'><b>For Example:-</b>
+                                    Add an value <b>"violet"</b> colour, <b>"brown"</b> colour to
+                                    the
+                                    tuple in third
+                                    position</li>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">y[2:5] = ("violet", "brown")</li>
+                                    <li class="card-text"> colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'violet', 'brown', 'orange', 'white')</li>
+                            </div>
+                        </div>
+                    </div><!--end of change card-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Removing And Copying the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>For removing the values from the tuple use remove()
+                                            method, pop() method, del()method,clear() method.</li>
+                                        <li><b>remove() method- </b> used for removing the particular value from the
+                                            tuple
+                                        </li>
+                                        <li><b>pop() mehotd- </b> gives same results as remove method but the difference
+                                            for
+                                            removing the values through index we can use this method</li>
+                                        <li><b>del method- </b> can also be use for removing the values directly or
+                                            thorugh
+                                            the
+                                            index. This methd has some disadvantage i.e, if we delete the entire tuple
+                                            it
+                                            will
+                                            give
+                                            the error for avoiding that error new method was implemented(<b>clear()</b>
+                                        </li>
+                                        <li><b>clear() method-</b> used for deleting the entire tuple same as ike delete
+                                            but
+                                            it
+                                            wont
+                                            gives error because it only deletes the values present in the tuple not the
+                                            entire
+                                            tuple
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">For copying the tuple to another tuple
+                                there
+                                are 2 ways <b> tuple()</b>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>remove()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>remove the colour <b>"green"</b> from the tuple</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">y.remove("green")</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">['red', 'black', 'blue', 'yellow', 'orange', 'white']</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>pop()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>remove the colour <b>"black"</b> from the tuple by using the
+                                    index</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">y.pop(1)</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">['red', 'blue', 'green', 'yellow', 'orange', 'white']</li>
+                            </div>
+                        </div>
+
+                    </div><!--end of  card group1-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>del()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <div class="list-dots">
+                                    <p class='card-text' style='font-size: medium;font-style: oblique'>In this you can
+                                        delete the single value / entire values but the problem was by
+                                        deleting
+                                        the
+                                        entire values gives the error because there will be no tuple for iterationg</p>
+                                </div>
+                                <p><b>For Example:-</b>del the colour <b>"green"</b> from the tuple</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">del y[3]</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">['red', 'black', 'blue', 'yellow', 'orange', 'white']</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>clear()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>delete the entire colours tuple </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">y.clear()</li>
+                                    <li class="card-text">colours = tuple(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">()</li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group2-->
+                    <div class="col d-flex justify-content-center">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>tuple()</b></div>
+                            <div class="card-body" style="background-color:  rgb(255, 239, 209);">
+                                <p><b>For Example:-</b>copy the colours tuple to newcolours tuple by using the tuple()
+                                    method
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">newcolours = tuple(colours)</li>
+                                    <li class="card-text">print(newcolours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white')
+                                </li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group3-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">sorting & joining the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>For sorting the values in the tuple use <b>sort() method, reverse()method
+                                            </b>
+                                        </li>
+                                        <li><b>sort()- </b> used for sorting the values in the tuple as either ascending
+                                            order
+                                            or as
+                                            descending order it may be numeric or an alphabet</li>
+                                        <li>ascending order is an default , for obaining the result in descending order
+                                            use
+                                            keyword(<b>reverse = true</b>)</li>
+                                        <li><b>reverse()- </b>used to sort the values in the reverse order in the tuple
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>for joining the 2 or more tuples at a time use <b>+ operator</b>, <b>
+                                                extend() method</b>,<b>sum() method</b></li>
+                                        <li><b>+ operator</b>- used to join the two/ more tuples by using <b>+
+                                            </b>symbol in
+                                            betwwen
+                                            the two tuples</li>
+                                        <li><b>extend() method- </b>used to join the two tuples </li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>sort()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>sort the values in the tuple in descending order</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">colours.sort(reverse = true)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('yellow', 'white', 'red', 'orange', 'green', 'blue', 'black')
+                                </li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>reverse()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>reverse the tuple colours
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">colours.reverse()</li>
+                                    <li class="card-text">print(newcolours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('white', 'orange', 'yellow', 'green', 'blue', 'black', 'red')
+                                </li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group1-->
+
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>+ operator</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>add the two tuples </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">numbers = (1, 2, 5, 4, 6)</li>
+                                    <li class="card-text">combination = colours + numbers </li>
+                                    <li class="card-text"> print(combination)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1,
+                                    2,
+                                    5, 4, 6)</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>sum()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>add the two tuples by using sum() method </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">numbers = (1, 2, 5, 4, 6)</li>
+                                    <li class="card-text"> result = sum((colours, numbers), ())</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1,
+                                    2,
+                                    5, 4, 6)</li>
+                            </div>
+                        </div>
+                    </div><!--end of group2-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>extend() example-1</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>join the 2 tuples by extending one tuple into other tuple
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">numbers = (1, 2, 5, 4, 6)</li>
+                                    <li class="card-text">x = list(colours)</li>
+                                    <li class="card-text"> y = list(numbers)</li>
+                                    <li class="card-text"> x.extend(y)</li>
+                                    <li class="card-text"> result = tuple(x)</li>
+                                    <li class="card-text">print(result)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1,
+                                    2,
+                                    5, 4,
+                                    6)</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>extend() example-2</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>Not only we can tuple
+                                    to
+                                    tuple can add any iterables<b>(list, set, dictionaries)</b>
+                                </p>
+                                <p><b>For Example:-</b>join the 2 tuples by extending one tuple with one list
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">numbers = [1, 2, 5, 4, 6]</li>
+                                    <li class="card-text">x = list(colours)</li>
+                                    <li class="card-text"> x.extend(numbers)</li>
+                                    <li class="card-text">result = tuple(x)</li>
+                                    <li class="card-text"> print(result)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">('red', 'black', 'blue', 'green', 'yellow', 'orange', 'white', 1,
+                                    2,
+                                    5, 4,
+                                    6)</li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group3-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Check elements and Loops </button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">For checking the element is present in
+                                the
+                                tuple or not use<b> if </b></button>
+                            <button type="button" class="btn btn-lg btn-block">For checking the loops in tuple use
+                                <b>for,
+                                    while</b></button>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>if </b></div>
+                            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                                <p><b>For Example:-</b>Check if "blue" colour is present in tuple or not
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">if "pink" in colours: </li>
+                                    <li class="card-text">
+                                        <pre>     print("present")</pre>
+                                    </li>
+                                    <li class="card-text">else:</li>
+                                    <li class="card-text">
+                                        <pre>     print("not present")</pre>
+                                    </li>
+                                </div>
+                                <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">not present</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>for loop</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'> For printing all the
+                                    elements one by one we can use these loops</p>
+                                <p><b>For Example:-</b>for printing all the elements one by one present in the tuple
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">for x in colours:</li>
+                                    <li class="card-text">
+                                        <pre>     print(x)</pre>
+                                    </li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">red</li>
+                                <li class="card-text">black</li>
+                                <li class="card-text">blue</li>
+                                <li class="card-text">green</li>
+                                <li class="card-text">yellow</li>
+                                <li class="card-text">orange</li>
+                                <li class="card-text">white</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>while loop </b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>In while loop len()
+                                    function will be used for determining the entire tuple length</p>
+                                <p><b>For Example:-</b>for printing all the elements one by one present in the tuple
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "black", "blue", "green", "yellow",
+                                        "orange",
+                                        "white")</li>
+                                    <li class="card-text">i = 0</li>
+                                    <li class="card-text">while i &lt; len(colours):</li>
+                                    <li class="card-text">
+                                        <pre>     print(colours[i])</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>     i = i + 1</pre>
+                                    </li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">red</li>
+                                <li class="card-text">black</li>
+                                <li class="card-text">blue</li>
+                                <li class="card-text">green</li>
+                                <li class="card-text">yellow</li>
+                                <li class="card-text">orange</li>
+                                <li class="card-text">white</li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Unpack Tuples</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">Tuples are generally of two types
+                                <b>packing & unpacking</b></button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <li><b>packing -</b>
+                                    means
+                                    for tuple creation assigning the values to it.</li>
+                                <li>The example for the tuple is genreal example of tuples(refer to Tuple Example-1 in
+                                    this page)</li>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block"><b>unpacking -</b> means for tuple
+                                creation assigning the values to it & we can extract that values back to the
+                                variables</button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>unpacking example</b></div>
+                            <div class="card-body" style="background-color:rgb(229, 253, 253); ">
+                                <p style='font-size: medium; font-style: inherit;'></p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "green", "yellow", "orange", "pink")</li>
+                                    <li class="card-text">(apple, guava, banana, lemon, dragon) = colours</li>
+                                    <li class="card-text">print(guava)</li>
+                                    <li class="card-text">print(lemon)</li>
+                                </div> <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <li class="card-text">green</li>
+                                <li class="card-text">orange</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>unpacking example by using asterisk</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <div class="list-dots">
+                                    <li class='card-text' style='font-size: medium;font-style: oblique'>
+                                        <b>Asterisk(symbol
+                                            "*") </b>is used when the
+                                        assigned variables are less than the given variables .we can <b>"*"</b> symbol
+                                        to the variable names
+                                        and the value which is assigned to the value will be appear as an list
+                                    </li>
+                                    <li class='card-text' style='font-size: medium; font-style: oblique'>we can place
+                                        the
+                                        data types
+                                        induvidually or all in combination</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = ("red", "green", "yellow", "orange", "pink")</li>
+                                    <li class="card-text">(apple, *guava, banana) = colours</li>
+                                    <li class="card-text">print(apple) </li>
+                                    <li class="card-text">print(guava)</li>
+                                    <li class="card-text"> print(banana)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <li class="card-text">red </li>
+                                <li class="card-text">['green', 'yellow', 'orange']</li>
+                                <li class="card-text">pink</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--end of introduction in tuple-->
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/lists_tuples/tuples.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <div class="text-center">
+                        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">Sets are used to store the
+                                multiple
+                                values/elements in the single variable.</button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <li>Since elements in the set are preserved along with their unorder,unchangable
+                                    & not
+                                    allows
+                                    duplicates.</li>
+                                <li> <b>Note: Similar to Java, sets are unindexed</b>
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block"> One can create a sets by placing
+                                the
+                                items
+                                in curly/flower brackets '{{ '{' }} {{ '}' }}'.</button>
+                        </div>
+
+                        <div style="padding-top: 15px;">
+                            <button class="btn btn-primary btn-lg">set Example</button>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header"><b>Creating the set by using colours such as "red",
+                                    "black",
+                                    "blue", "green","red", "black"</b></div>
+                            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green",
+                                        "red",
+                                        "black "{{ '}' }}
+                                    </li>
+                                    <li class="card-text">print(colours)</li>
+                                </div>
+                                <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p> {{ '{' }}'blue', 'black', 'red', 'green'{{ '}' }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>For
+                                    finding the length of the set</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p style='font-size: medium; font-style: inherit;'>Use len() funtion to find out
+                                    how
+                                    many elements/values are present in the set</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green",
+                                        "red",
+                                        "black
+                                        "{{ '}' }}</li>
+                                    <li class="card-text">print(len(colours))</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>4</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Data types</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>The data
+                                    types are
+                                    string, int,
+                                    boolean</li>
+                                <li class='card-text' style='font-size: medium; font-style: oblique'>we can
+                                    place the
+                                    data types
+                                    induvidually or all in combination</li><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">x = {{ '{' }}"red", 1, True, "black", 20, False,
+                                        "blue", 1,
+                                        True,
+                                        "green "{{ '}' }}
+                                    </li>
+                                    <li class="card-text">print(x)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p> {{ '{' }}False, 1, 'black', 20, 'red', 'blue', 'green'{{ '}' }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <li>We can get the values from the sets in by using the loops / if condition</li>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>example by using if </b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">if "blue" in colours:</li>
+                                    <li class="card-text">
+                                        <pre>     print("blue, colour was present in ", colours)</pre>
+                                    </li>
+                                    <li class="card-text">else:</li>
+                                    <li class="card-text">
+                                        <pre>     print("blue, colour was not present in ", colours)</pre>
+                                    </li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>blue, colour was present in {{ '{' }}'blue', 'red', 'black', 'green'{{ '}' }}</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>by using for loop</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p class='card-text;font-size: medium;font-style: oblique'></p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">for x in colours:</li>
+                                    <li class="card-text">
+                                        <pre>     print(x)</pre>
+                                    </li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <li class="card-text">blue</li>
+                                <li class="card-text">green</li>
+                                <li class="card-text">black</li>
+                                <li class="card-text">red</li>
+                            </div>
+                        </div>
+                    </div><!--end of range card-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Adding & Changing the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>For Adding the elements to the sets use <b>append() method , add()
+                                                method</b>
+                                        </li>
+                                        <li><b>append() method -</b> the values will be added at the end of the set</li>
+                                        <li><b>add() method -</b> same as the append method but the difference is in
+                                            append
+                                            method
+                                            the
+                                            set will be converted into list after modifying the list then have to
+                                            convert it
+                                            into
+                                            the
+                                            set. In add method we can directly access the method</li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">changing the elements in the set is
+                                not
+                                possible
+                                because they do not follow indexing
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>append() method</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b> Add an value "pink" colour to the set</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">y = list(colours)</li>
+                                    <li class="card-text">y.append("Pink")</li>
+                                    <li class="card-text">colours = set(y)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'blue', 'black', 'green', 'Pink', 'red'{{ '}' }}
+                                </li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>add() method</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b> Add an value "pink" colour to the set</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">colours.add("pink")</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'red', 'pink', 'green', 'blue', 'black'{{ '}' }}
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Removing And Copying the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>For removing the values from the set use remove()
+                                            method, discard() method, pop() method, del()method,clear() method.</li>
+                                        <li><b>remove() method - </b> used for removing the particular value from the
+                                            set
+                                            but it
+                                            gives
+                                            an error if the value is not present in the set</li>
+                                        <li><b>discard() method - </b>used for removing the values in the set it doesnt
+                                            gives an
+                                            error
+                                            if the values was not present in the set.</li>
+                                        <li><b>pop() mehotd- </b> gives same results as remove method but the difference
+                                            is
+                                            we can't
+                                            say
+                                            which value will be deleted from the set</li>
+                                        <li><b>del method- </b> used to delete the entire set but it gives an error for
+                                            avoiding the
+                                            error use <b>clear() method</b></li>
+                                        <li><b>clear() method-</b> used for deleting the entire set same as like delete
+                                            but
+                                            it wont
+                                            gives error because it only deletes the values present in the set not the
+                                            entire
+                                            set
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">For copying the set to another set
+                                there
+                                are 2 ways <b>[copy(), set()]</b>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>remove()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>remove the colour <b>"red"</b> from the set</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">colours.remove("red")</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'black', 'green', 'blue'{{ '}' }}</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>pop()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>remove the one colour from the set </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text"> x = colours.pop()</li>
+                                    <li class="card-text"> print(x)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">red</li>
+                                <li class="card-text"> {{ '{' }}'blue', 'green', 'black'{{ '}' }}</li>
+                            </div>
+                        </div>
+
+                    </div><!--end of  card group1-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>del()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>In this you can
+                                    delete the entire values but the problem was by deleting
+                                    the
+                                    entire values gives the error because there will be no set for iterationg</p>
+                                <p><b>For Example:-</b>del the entire colours from the set</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">del colours</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">error: name 'colours' is not defined</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>clear()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>delete the entire colours set </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">colours.clear()</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">set()</li>
+                            </div>
+                        </div>
+
+                    </div><!--end of  card group2-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>discard()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>This method is used
+                                    because if the value is not present in the set it gives an
+                                    error as
+                                    we
+                                    discussed previously for avoiding the error this method will be used</p>
+                                <p><b>For Example:-</b> remove the colour "pink" from the list which is not present
+                                    in the
+                                    set
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">colours.discard("pink")</li>
+                                    <li class="card-text">print(newcolours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'green', 'black', 'red', 'blue'{{ '}' }}</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>set()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>copy the colours set to newcolours set by using the set()
+                                    method
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}
+                                    </li>
+                                    <li class="card-text">newcolours = set(colours)</li>
+                                    <li class="card-text">print(newcolours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'green', 'blue', 'red', 'black'{{ '}' }}</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>copy()</b></div>
+                            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                                <p><b>For Example:-</b>copy the colours set to newcolours set by using the copy()
+                                    method
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "green", "red",
+                                        "black
+                                        "{{
+                                        '}' }}</li>
+                                    <li class="card-text">newcolours = colours.copy()</li>
+                                    <li class="card-text">print(newcolours)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'green', 'blue', 'red', 'black'{{ '}' }}</li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group3-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">sorting & joining the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+
+                                <li>For sorting the values in the set wont be posible because set are unordered
+                                </li>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>for joining the 2 or more sets at a time use <b>union() method, update()
+                                                method,
+                                                intersection_update() method, intersection() method,
+                                                symmetric_difference_update()
+                                                method, symmetric_difference() method </b></li>
+                                        <li><b>union() method -</b> used to combine all the values from both sets </li>
+                                        <li><b>update() method -</b> same as union it updates the one set values to
+                                            another
+                                            set</li>
+                                        <li><b>intersection_update() method -</b> it will keep only values that are
+                                            present(duplicates)
+                                            in the both sets</li>
+                                        <li><b>intersection() method -</b>same as intersection_update method but it will
+                                            gives the
+                                            new
+                                            set in return</li>
+                                        <li><b>symmetric_difference_update() method -</b> it will gives only values
+                                            which
+                                            are not
+                                            duplicate </li>
+                                        <li><b>symmetric_difference() method -</b> it will gives only values which are
+                                            not
+                                            duplicate
+                                            but
+                                            returns the new set as result</li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>intersection_update()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>join the 2 sets which allows only duplicates from both the
+                                    sets</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "orange",
+                                        "green "{{
+                                        '}' }}
+                                    </li>
+                                    <li class="card-text">fruits = {{ '{' }}"apple", "guava", "orange "{{ '}' }}
+                                    </li>
+                                    <li class="card-text">colours.intersection_update(fruits)</li>
+                                    <li class="card-text">print(colours)</li>
+                                </div>
+                                <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'orange'{{ '}' }}</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>symmetric_difference() </b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = {{ '{' }}"red", "black", "blue", "orange",
+                                        "green "{{
+                                        '}' }}
+                                    </li>
+                                    <li class="card-text">fruits = {{ '{' }}"apple", "guava", "orange "{{ '}' }}
+                                    </li>
+                                    <li class="card-text">combination = colours.symmetric_difference(fruits)</li>
+                                    <li class="card-text">print(combination)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'red', 'apple', 'black', 'blue', 'green', 'guava'{{
+                                    '}' }}
+                                </li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group-->
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/lists_tuples/sets.jpg" alt="program">
+            </div>
+        </div>
+
+    </div><!--end of sets-->
+    <div *ngIf="elementId=='four'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <div class="text-center">
+                        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">Dictionaries are used to store
+                                the
+                                multiple
+                                values/elements in the single variable.</button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                Since elements in the dictionaries are preserved along with their
+                                order,changable &
+                                not
+                                allows
+                                duplicates.
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block"> One can create a dictionariess
+                                by
+                                placing
+                                the
+                                items
+                                in curly/flower brackets '{{ '{' }} {{ '}' }}' along with keys and value pairs
+                                in
+                                it.</button>
+                        </div>
+
+                        <div style="padding-top: 15px;">
+                            <button class="btn btn-primary btn-lg">Dictionaries Example</button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header"><b>Creating the dictionaries by using colours keys and
+                                    values
+                                    as
+                                    keys(language, founder,year) & values(python, Guido van Rossum, 1989)</b>
+                            </div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li>
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li>
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li>{{ '}' }} </li>
+                                    <li class="card-text">print(details)</li>
+                                </div>
+                                <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p> {{ '{' }}'language': 'python', 'founder': 'Guido van Rossum', 'year': 1989{{
+                                    '}'
+                                    }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>For
+                                    finding the length of the dictionaries</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p style='font-size: medium; font-style: oblique;'>Use len() funtion to find out
+                                    how
+                                    many elements/values are present in the dictionaries</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li>
+                                        <pre>          "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li>
+                                        <pre>          "year": 1989</pre>
+                                    </li>
+                                    <li>{{ '}' }} </li>
+                                    <li class="card-text">print(len(details))</li>
+                                </div>
+                                <br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <li>We can get the values from the dictionaries by using keys and values/ by
+                                    using
+                                    get
+                                    method</li>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>example by using get method </b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>For finding the
+                                    values we can use this kind of method</li>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text">x = details.get("founder")</li>
+                                    <li class="card-text">print(x)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <p>Guido van Rossum</p>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>For getting the keys</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p class='card-text' style='font-size: medium;font-style: oblique'>for getting the keys
+                                    and
+                                    values
+                                    same method but the little bit variation in the syntax in between them. </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text">x = details.keys()</li>
+                                    <li class="card-text">print(x)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+                                <li class="card-text">dict_keys(['language', 'founder', 'year'])</li>
+                            </div>
+                        </div>
+                    </div><!--end of range card-->
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Adding & Changing the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">Adding the elements in the
+                                dictionaries
+                                can
+                                be through keys and values
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">Changing the elements in the
+                                dictionaries
+                                by
+                                using update()
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Add the new key</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b> Add an key:value("released": 1991) to the dictionaries</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text">details["released"] = 1991</li>
+                                    <li class="card-text">print(details)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'language': 'python', 'founder': 'Guido van
+                                    Rossum',
+                                    'year':
+                                    1989, 'released': 1991{{ '}' }}
+                                </li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>for changing the value</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b> change the value "year = 1991" in the dictionaries</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li class="card-text">
+                                        <pre>          "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>          "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text">details.update({{ '{' }}"year":1991{{ '}' }})</li>
+                                    <li class="card-text">print(details)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}nguage': 'python', 'founder': 'Guido van Rossum',
+                                    'year': 1991{{ '}' }}
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 15px;" class="text-center">
+                        <button class="btn btn-primary btn-lg">Removing And Copying the elements</button>
+                        <div style=" font-size: medium; padding: 10px;">
+                            <button type="button" class="btn btn-lg btn-block">
+                                <div class="list-dots">
+                                    <ul>
+                                        <li>For removing the values from the dictionaries use popitem()
+                                            method, pop() method, del()method,clear() method.</li>
+                                        <li><b>popitem() method - </b> used for removing the last value from the
+                                            dictionaries
+                                        </li>
+                                        <li><b>pop() mehotd- </b> gives same results as remove method but the difference
+                                            is
+                                            we
+                                            can't
+                                            say
+                                            which value will be deleted from the dictionaries</li>
+                                        <li><b>del method- </b> used to delete the entire dictionaries but it gives an
+                                            error
+                                            for
+                                            avoiding the
+                                            error use <b>clear() method</b></li>
+                                        <li><b>clear() method-</b> used for deleting the entire dictionaries same as
+                                            like
+                                            delete
+                                            but
+                                            it
+                                            wont
+                                            gives error because it only deletes the values present in the dictionaries
+                                            not
+                                            the
+                                            entire
+                                            dictionaries
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-lg btn-block">For copying the dictionaries to
+                                another
+                                dictionaries there
+                                are 2 ways <b>[copy(), dict()]</b>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>pop()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>remove the founder value from the dictionaries</p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">colours = details = {{ '{' }}"language": "python",
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text"> details.pop("year")</li>
+                                    <li class="card-text">print(details)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'language': 'python', 'founder': 'Guido van
+                                    Rossum'{{
+                                    '}' }}
+                                </li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>clear()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p><b>For Example:-</b>remove the one colour from the dictionaries </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python",</li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{'}' }}</li>
+                                    <li class="card-text">details.clear() </li>
+                                    <li class="card-text">print(details)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text">red</li>
+                                <li class="card-text"> {{ '{' }}{{ '}' }}</li>
+                            </div>
+                        </div>
+                    </div><!--end of  card group1-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>copy()</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python", </li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text">newdetails = details.copy()</li>
+                                    <li class="card-text"> print(newdetails)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'language': 'python', 'founder': 'Guido van
+                                    Rossum',
+                                    'year':
+                                    1989{{ '}' }}</li>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>dict()</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p><b>For Example:-</b>copy the colours dictionaries to newcolours dictionaries
+                                    by
+                                    using
+                                    the
+                                    dict() method
+                                </p>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                                <div class="code-dark-block">
+                                    <li class="card-text">details = {{ '{' }}"language": "python", </li>
+                                    <li class="card-text">
+                                        <pre>         "founder": "Guido van Rossum",</pre>
+                                    </li>
+                                    <li class="card-text">
+                                        <pre>         "year": 1989</pre>
+                                    </li>
+                                    <li class="card-text">{{ '}' }}</li>
+                                    <li class="card-text">newdetails = dict(details)</li>
+                                    <li class="card-text"> print(newdetails)</li>
+                                </div><br>
+                                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                                <li class="card-text"> {{ '{' }}'language': 'python', 'founder': 'Guido van
+                                    Rossum',
+                                    'year':
+                                    1989{{ '}' }}</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/lists_tuples/dictionaries.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+</div>

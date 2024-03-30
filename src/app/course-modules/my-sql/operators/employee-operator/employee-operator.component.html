@@ -1,0 +1,542 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Operators(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId2=='one'">
+                    <div class="card-body">
+                        <div class="card border-warning" style="border: 2px solid;">
+                            <div class="card" style="margin: 5px;">
+                                <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                                    <div id="accordion">
+                                        <div class="tab-title tab-slide-effect">
+                                            <span class="tab-pill" id="question1"
+                                                [ngClass]="(elementId=='question1')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                            <span class="tab-pill" id="question2"
+                                                [ngClass]="(elementId=='question2')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                            <span class="tab-pill" id="question3"
+                                                [ngClass]="(elementId=='question3')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+                                            <span class="tab-pill" id="question4"
+                                                [ngClass]="(elementId=='question4')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+                                            <span class="tab-pill" id="question5"
+                                                [ngClass]="(elementId=='question5')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-5">Question-5</span>
+                                            <span class="tab-pill" id="question6"
+                                                [ngClass]="(elementId=='question6')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-6">Question-6</span>
+                                            <span class="tab-pill" id="question7"
+                                                [ngClass]="(elementId=='question7')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-7">Question-7</span>
+                                            <span class="tab-pill" id="question8"
+                                                [ngClass]="(elementId=='question8')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-8">Question-8</span>
+                                            <span class="tab-pill" id="question9"
+                                                [ngClass]="(elementId=='question9')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-9">Question-9</span>
+                                            <span class="tab-pill" id="question10"
+                                                [ngClass]="(elementId=='question10')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-10">Question-10</span>
+                                                <span class="tab-pill" id="question11"
+                                                [ngClass]="(elementId=='question11')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-11">Question-11</span>
+                                            <span class="tab-pill" id="question12"
+                                                [ngClass]="(elementId=='question12')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-12">Question-12</span>
+                                            <span class="tab-pill" id="question13"
+                                                [ngClass]="(elementId=='question13')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-13">Question-13</span>
+
+                                        </div>
+
+                                        <div *ngIf="elementId=='question1'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-1</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details who's first_name starts with letter 'S' from the entire table</p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find the employees who's first_name is starting with letter 'S'
+                                                        </p>
+
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerOne[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerOne">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerOne)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE first_name like 'S%';
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of first question1-->
+
+                                        <div *ngIf="elementId=='question2'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-2</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details who's last_name ends with letter 'a' from the entire table</p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find the employees who's last_name is ending with letter 'a'
+                                                        </p>
+
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerTwo[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerTwo">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerTwo)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE last_name like '%a';
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of second question-->
+
+                                        <div *ngIf="elementId=='question3'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-3</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details who's last_name has the letter 'sh' from the entire table</p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find the employees who's last_name contains letter 'sh' in any position
+                                                        </p>
+
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerThree[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerThree">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerThree)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE last_name like '%sh%';
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of third question-->
+
+                                        
+                                        <div *ngIf="elementId=='question4'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-4</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print the employees id,first_name,designation,salary,company_name who's 2nd position of first_name with letter "o" from the entire table</p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find the employees id,first_name,designation,salary,company_name who's first_name 2nd position contains  letter 'o' 
+
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerFour[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerFour">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerFour)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT id,first_name,designation,salary,company_name FROM EMPLOYEE WHERE first_name like '_o%';
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of fourth question-->
+
+                                        <div *ngIf="elementId=='question5'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-5</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print the employees details such as id,first_name,last_name,designation,salary,company_name from table who's first_name starts with letter "S" with length of 2 characters only </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find the employees id,first_name,last_name,designation,salary,company_name who's first_name starts with letter "S" with length of 2 characters 
+
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerFive[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerFive">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerFive)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT id,first_name,last_name,designation,salary,company_name FROM EMPLOYEE WHERE first_name like 'S__';
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of fifth question-->
+
+                                        <div *ngIf="elementId=='question6'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-6</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details from table who's last_name starts with letter "K" and ends with letter "r" </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find all the employees who's last_name starts with letter "K" and ends with letter "r"
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerSix[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerSix">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerSix)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE last_name like 'K%r';
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of sixth question-->
+
+                                        
+                                        <div *ngIf="elementId=='question7'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-7</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details from table who's last_name does'nt starts with letter "K"  with length of 5 characters only </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the employee table have to find all the employees who's last_name does'nt starts with letter "K"  with length of 5 characters only
+                                                
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerSeven[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerSeven">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerSeven)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE last_name NOT like 'K_____';
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of seventh question-->
+
+                                        <div *ngIf="elementId=='question8'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-8</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details from table who's salary is in between 60000 to 95000
+                                                         </p>
+                                                            <p><strong><u>Descirption:-</u></strong> From the employee table have to find all the employees who's salary was in between 60000 to 95000
+                                                            </p>
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerEight[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerEight">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerEight)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE salary BETWEEN 60000 AND 95000;
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of eightth question-->
+
+                                        <div *ngIf="elementId=='question9'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-9</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details from table who's age was not in between 27 to 35
+                                                         </p>
+                                                            <p><strong><u>Descirption:-</u></strong> From the employee table have to find all the employees who's age was not in between 27 to 35
+                                                            </p>
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerNine[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerNine">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerNine)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE age NOT BETWEEN 27 AND 35;
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of nineth question-->
+
+                                        
+                                        <div *ngIf="elementId=='question10'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-10</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print the employees details such as id,first_name,last_name,salary,designation from table who's salary was in between 30000 to 50000 with an order of id
+                                                         </p>
+                                                            <p><strong><u>Descirption:-</u></strong> From the employee table have to find  the employees id,first_name,last_name,salary,designation who's salary was in between  was in between 30000 to 50000 with an order of id
+                                                            </p>
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerTen[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerTen">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerTen)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT id,first_name,last_name,salary,designation FROM EMPLOYEE WHERE salary BETWEEN 30000 AND 50000 order by id;
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of tenth question-->
+
+                                        
+                                        <div *ngIf="elementId=='question11'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-11</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details  from table who's are working in the "Wipro","Tcs","Intel Technologies" companies
+                                                         </p>
+                                                            <p><strong><u>Descirption:-</u></strong> From the employee table have to find  the employees working in the "Wipro","Tcs","Intel Technologies" companies
+                                                            </p>
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerEleven[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerEleven">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerEleven)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE company_name in ('Wipro', 'Tcs', 'Intel Technologies');
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of eleventh question-->
+
+                                        <div *ngIf="elementId=='question12'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-12</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print all the employees details  from table who's salaries was not 30000,40000,50000,60000
+                                                         </p>
+                                                            <p><strong><u>Descirption:-</u></strong> From the employee table have to find  the employees salaries was not 30000,40000,50000,60000
+                                                            </p>
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerTwelve[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerTwelve">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerTwelve)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT * FROM EMPLOYEE WHERE salary NOT IN (30000,40000,50000,60000);
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of twelveth question-->
+
+
+                                        <div *ngIf="elementId=='question13'">
+                                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                                <div class="card-header text-center"><b>Question-13</b></div>
+                                                <div class="card-body text-center">
+                                                    <p style="padding: 10px;" class="btn-block"> Print the employees details such as first_name,designation,age,gender,salary  from table who's salaries was  30000,40000,50000,60000 and  they are of in joining_date order
+                                                         </p>
+                                                            <p><strong><u>Descirption:-</u></strong> From the employee table have to find  the employees first_name,designation,age,gender,salary was 30000,40000,50000,60000 according their joining order
+                                                            </p>
+                                                    <div style="overflow-x:auto;">
+                                                        <table>
+                                                            <tr>
+                                                                <th
+                                                                    *ngFor="let col of getSplitDataHeader(answerThirteen[0])">
+                                                                    {{col}}
+                                                                </th>
+                                                            </tr>
+                                                            <tr *ngFor="let row of answerThirteen">
+                                                                <td
+                                                                    *ngFor="let col of getSplitDataRows(row, answerThirteen)">
+                                                                    {{col}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> <br>
+                                                    <button style="padding: 10px;" class="btn btn-primary"
+                                                        (click)="answerChange()">{{buttonValue}}</button>
+                                                    <div style="padding: 10px;" *ngIf="toggleOn">
+                                                        <p style="padding: 10px;" class="btn-block">SELECT first_name,designation,age,gender,salary FROM EMPLOYEE WHERE salary in (30000,40000,50000,60000) order by joining_date;
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end of thirteenth question-->
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- problem statment end-->
+                <div *ngIf="elementId2=='two'">
+                    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                        <app-video-cmp 
+                        [url]="videoData"
+                        [audioData]="audioData"
+                        ></app-video-cmp>
+                    </div>
+            
+                </div>
+            </div>
+      

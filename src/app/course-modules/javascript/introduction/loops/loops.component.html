@@ -1,0 +1,207 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Control Statements(loops)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="for loop"
+      >for loop</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="while loop"
+      >while loop</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="while loop"
+      >do-while loop</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="for...in Loop"
+      >for...in Loop</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="for...of Loop"
+      >for...of Loop</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          The for loop has 3 parts first one is initialization, second is
+          condition, third is increment/decrement.
+        </p>
+        <img
+          class="img-thumbnail mx-5 my-4"
+          src="assets/img/javascript/loops/for.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          The while loop only has condition. This loop will repeats until
+          condition is false
+        </p>
+        <img
+          class="img-thumbnail mx-5 my-4"
+          src="assets/img/javascript/loops/while.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          The do-while execute the block then it checks the condition.
+        </p>
+        <img
+          class="img-thumbnail mx-5 my-4"
+          src="assets/img/javascript/loops/dowhile.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          It will iterates over the properties of an object.
+        </p>
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+
+  <div *ngIf="elementId == 'five'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          It will iterates over the values of an iterable object (e.g., arrays,
+          strings).
+        </p>
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Exclude Number while reading Array</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+      <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <pre>
+we need to read the inputs (mention the size of the inputs). 
+when we read the input as 22 then we cannot take the number 22 and again need to read the input whenever the number 22 will come.
+
+INPUT:
+1
+23
+45
+22 --- here ask the input again. 
+45
+22 --- here ask the input again. 
+56
+78
+
+OUTPUT:
+1
+23
+45
+45
+56
+78
+              </pre>
+
+          </div>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Array = {{ '{' }}1, 6, 14, 22, 22, 85, 22, 17{{ '}' }}</p>
+              <p class="card-text">exclude : 22</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The elements in the array is 1 6 14 85 17</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Array = {{ '{' }}15, 22, 45, 29, 22, 43{{ '}' }}</p>
+              <p class="card-text">exclude : 45</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The elements in the array is 15 22 29 22 43</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Array = {{ '{' }}71, 73, 22, 85, 54, 73, 34{{ '}' }}</p>
+              <p class="card-text">exclude : 73</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The elements in the array is 71 22 85 54 34</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+    </div><!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/corejava/arrays/exclude.JPG" alt="program">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">8</p>
+            <p class="card-text">1 6 14 22 22 85 22 17</p>
+            <p class="card-text">22</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">1 6 14 85 17</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">6</p>
+            <p class="card-text">15 22 45 29 22 43</p>
+            <p class="card-text">45</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">15 22 29 22 43</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">7</p>
+            <p class="card-text">71 73 22 85 54 73 34</p>
+            <p class="card-text">73</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">71 22 85 54 34</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+    </div>
+  </div>
+</div>

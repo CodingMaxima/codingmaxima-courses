@@ -1,0 +1,156 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Pandas Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''"
+            (click)="tabChange($event)" data-hover="Pros and Cons">Pros and Cons</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style="font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            Pandas is a powerful data manipulation and analysis library for Python.
+                            It provides efficient data structures and functions to work with structured data.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            Key Features of Pandas:
+                            - Data Manipulation
+                            - Handling Missing Data
+                            - Data Visualization
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Data Manipulation</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Pandas offers a wide range of functions and methods for data manipulation. 
+                                You can perform tasks like filtering, sorting, aggregating, and transforming data easily,
+                                enabling efficient data analysis and preprocessing.
+                            </p>
+
+                            <p>Example:</p>
+                            <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;">
+import pandas as pd
+
+# Create a DataFrame
+data = {{ '{' }}'Name': ['John', 'Emily', 'Michael'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'London', 'Paris']}
+df = pd.DataFrame(data)
+
+# Filter rows based on condition
+filtered_df = df[df['Age'] > 25]
+
+# Sort DataFrame by column
+sorted_df = df.sort_values('Name')
+
+# Perform aggregation
+average_age = df['Age'].mean()
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Handling Missing Data</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Pandas provides functions to handle missing data effectively.
+                                It allows you to detect, remove, or fill missing values,
+                                ensuring cleaner and more reliable data analysis.
+                            </p>
+
+                            <p>Example:</p>
+                            <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;">
+import pandas as pd
+
+# Read data from CSV file
+df = pd.read_csv('data.csv')
+
+# Check for missing values
+missing_values = df.isnull().sum()
+
+# Drop rows with missing values
+cleaned_df = df.dropna()
+
+# Fill missing values with a specific value
+df_filled = df.fillna(0)
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Data Visualization</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Pandas integrates well with other Python libraries, such as Matplotlib and Seaborn,
+                                to create visualizations directly from data frames.
+                                It enables you to generate informative plots, charts, and graphs for data exploration and presentation.
+                            </p>
+
+                            <p>Example:</p>
+                            <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read data from CSV file
+df = pd.read_csv('data.csv')
+
+# Plot a bar chart
+df['Category'].value_counts().plot(kind='bar')
+
+# Plot a scatter plot
+plt.scatter(df['Age'], df['Income'])
+plt.xlabel('Age')
+plt.ylabel('Income')
+plt.title('Age vs. Income')
+plt.show()
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <h3 class="global-component-heading">Pros and Cons of Pandas</h3>
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Pros</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <ul>
+                        <li style="font-size: medium; font-weight: 700;">Data Manipulation: Powerful tools for filtering, sorting, aggregating, and transforming data.</li>
+                        <li style="font-size: medium; font-weight: 700;">Data Analysis: Perform statistical analysis, data exploration, and profiling.</li>
+                        <li style="font-size: medium; font-weight: 700;">Data Cleaning: Handle missing data, duplicates, and perform data cleaning tasks.</li>
+                        <li style="font-size: medium; font-weight: 700;">Integration with Other Libraries: Seamless integration with NumPy, Matplotlib, and Scikit-learn.</li>
+                        <li style="font-size: medium; font-weight: 700;">Time-Series Analysis: Built-in support for handling temporal data.</li>
+                        <li style="font-size: medium; font-weight: 700;">Easy Data Import/Export: Read and write data from various file formats.</li>
+                        <li style="font-size: medium; font-weight: 700;">Flexibility in Data Structures: Handle both one-dimensional and two-dimensional data with Series and DataFrame.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Cons</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <ul>
+                        <li style="font-size: medium; font-weight: 700;">Memory Usage: Consumes significant memory, especially for large datasets.</li>
+                        <li style="font-size: medium; font-weight: 700;">Steep Learning Curve: Requires time and practice to grasp the library's concepts and syntax.</li>
+                        <li style="font-size: medium; font-weight: 700;">Performance Considerations: Some operations may be slower compared to low-level languages or specialized libraries.</li>
+                        <li style="font-size: medium; font-weight: 700;">Limited Support for Big Data: Not ideal for handling extremely large datasets or distributed computing.</li>
+                        <li style="font-size: medium; font-weight: 700;">Lack of Multi-threading: Primarily operates in a single-threaded manner.</li>
+                        <li style="font-size: medium; font-weight: 700;">Dependency on Python: Performance and capabilities depend on the underlying Python interpreter.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

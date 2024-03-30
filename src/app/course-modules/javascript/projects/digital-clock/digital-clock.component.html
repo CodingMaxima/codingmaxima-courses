@@ -1,0 +1,145 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">digital clock</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">          
+        Project
+   </div>
+            <img style="margin: 0 auto; padding-top: 10px; height: auto; width: 100%;" src="assets/img/javascript/projects/digitalclock.gif">
+          <div class="content-heading mt-4">Project Description        
+          </div>
+          <div class="content-text">
+              The "Digital Clock" project is a web-based application that
+              displays the current time in both 24-hour and 12-hour formats.
+              Created using HTML, CSS, and JavaScript, this clock provides users
+              with an accurate and visually appealing way to keep track of time.
+          </div>
+          <div class="content-heading">
+            Features          
+        </div>
+        <div class="content-text">
+            <li>
+              <b> Clock Display Modes:</b> The application offers two display
+              modes: 24-hour and 12-hour formats. Users can toggle between these
+              modes using buttons.
+            </li>
+
+            <li>
+              <b>Dynamic Time Updates:</b> The clock constantly updates to show
+              the current time accurately, down to the seconds.
+            </li>
+
+            <li>
+              <b>Responsive Design:</b> The clock is designed to be responsive
+              and adaptable, ensuring a consistent user experience across
+              different devices and screen sizes.
+            </li>
+
+            <li>
+              <b>Interactive Buttons:</b> The buttons labeled "24 Hours" and "12
+              Hours" allow users to switch between the two display formats
+              effortlessly.
+            </li>
+
+            <li>
+              <b>Active State Indicator:</b> When a format button is selected,
+              it becomes visually distinct (highlighted) to indicate the
+              currently active format.
+            </li>
+
+            <li>
+              <b>Stylish Clock Appearance:</b> The clock is styled using CSS to
+              enhance its appearance. The clock's digits, along with the AM/PM
+              indicator, are displayed in an eye-catching manner.
+            </li>
+
+            <li>
+              <b> Custom Header:</b> The app features a custom header with a
+              title and logo, adding a professional touch to the interface.
+            </li>
+          </div>
+          <div class="content-heading">
+            Implementation
+        </div>
+
+          <div class="content-text">
+            <li>
+              <b> HTML Structure:</b> The HTML structure outlines the layout of
+              the app. It includes the header, format selection buttons, and the
+              clock display area.
+            </li>
+
+            <li>
+              <b>CSS Styling:</b> CSS styles are applied to various elements,
+              including buttons, clock display, and the custom header. The
+              styles enhance the visual appeal of the app.
+            </li>
+
+            <li>
+              <b>JavaScript Logic:</b> JavaScript is responsible for updating
+              the clock's time, handling the format toggling, and maintaining
+              the active state of buttons.
+            </li>
+
+            <li>
+              <b>Clock Updating:</b> The updateTime function is used to obtain
+              the current time, format it according to the selected mode, and
+              update the clock display accordingly.
+            </li>
+
+            <li>
+              <b>Time Format Conversion:</b> When switching to the 12-hour
+              format, the script adjusts the hours and adds the AM/PM indicator
+              as appropriate.
+            </li>
+
+            <li>
+              <b>Format Toggling:</b> The show24HourFormat and show12HourFormat
+              functions are used to switch between the two display modes. These
+              functions also manage the active state of the format buttons.
+            </li>
+
+            <li>
+              <b>Clock Initialization:</b> The setInterval function calls the
+              updateTime function every second to ensure the clock's accuracy.
+            </li>
+
+            <li>
+              <b>Default Format:</b> The show12HourFormat function is invoked
+              initially to set the clock to the 12-hour format when the page
+              loads.
+            </li>
+        </div>
+     </div>  
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,236 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Forms Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+         <div class="content-text">
+            <ul>
+                <li>An HTML form is used to collect user input. The user input is most often sent to a server for
+                    processing.</li>
+                <li>The <code>&lt;form&gt;</code> element is a container for different types of input elements, such
+                    as: text fields, checkboxes, radio buttons, submit buttons, etc.</li>
+                <li>The forms elements may contain one or more of following elements
+                    <ul>
+                        <li><code>&lt;button&gt;</code></li>
+                        <li><code>&lt;label&gt;</code></li>
+                        <li><code>&lt;select&gt;</code></li>
+                        <li><code>&lt;textarea&gt;</code></li>
+                        <li><code>&lt;input&gt;</code></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+          <div class="text-center">
+                <div style="padding-top: 15px;">
+                    <button class="btn btn-primary btn-lg">Button</button>
+                </div>
+            </div>
+          <div class="content-text">
+            <p>In HTML, a button is a user interface element that allows users to perform actions or submit forms on a web page.</p>
+            <p>The <code>&lt;button&gt;</code> element is used to create a clickable button.</p>
+            <p>Buttons can trigger JavaScript functions, submit forms, or navigate to different parts of a web application or website when clicked by a user.</p>
+            <p><b>Here's an example of how you can create a button in HTML:</b></p>
+            <div class="text-center"> 
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:50%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;button type="button"&gt;Click me&lt;/button&gt;</code>
+                </div><br>
+            </div> 
+            <p>
+                <u><b>Explanation of the attributes used:</b></u>
+            </p>
+            <ul>
+                <li><b>type="button":</b> Specifies the type of the button. In this case, it's a standard button that doesn't have any specific behavior by default.</li>
+                <li><b>&lt;Click Me: &gt;:</b> The text displayed on the button.</li>
+                <li>and it looks in browser as below:</li>
+            </ul>      
+            <div
+                 style="border: 1px solid rgb(243, 179, 141);padding: 25px;width:45%;margin-left: 6%;border-radius: 5px;background-color: rgb(240, 239, 246)">
+                <button style="position: relative; left: 40%;">button</button><br>
+            </div>
+          </div>
+          <div class="text-center">
+            <div style="padding-top: 15px;">
+                <button class="btn btn-primary btn-lg">Label & Select</button>
+            </div>
+        </div>
+      <div class="content-text">
+        <p>In HTML, <code>&lt;label&gt;</code> and <code>&lt;select&gt;</code> are two separate elements that serve different purposes in creating user interfaces and forms.</p>
+        <p><b><u>&lt;label&gt; Element:</u></b></p>
+        <ul>
+            <li>The<b>&lt;lable&gt;</b> element is used to define a label for an <b>&lt;input&gt;</b> element.</li>
+            <li>It helps users understand what kind of information or input is expected in an associated input field.</li>
+            <li>It's beneficial for accessibility purposes as well, as it improves screen reader support and enables users to click on the label text to focus on the associated input field.</li>
+        </ul>
+        <div class="card-group">
+            <div
+                class="card border-primary"
+                style="border: 2px solid; margin: 10px 100px"
+            >
+                <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+                >
+                <b>Example</b>
+                </div>
+                <div
+                class="card-body"
+                style="background-color: rgb(216, 240, 246)"
+                >
+                <code>&lt;label for="username"&gt;Username&lt;/lable&gt;</code><br>
+                <code>&lt;input type="text" id="username" name="username"&gt;</code>
+                </div>
+            </div>  
+        </div> 
+        <p><b><u>&lt;select&gt; Element:</u></b></p>
+        <ul>
+            <li>The<b>&lt;select&gt;</b> element is used to create a dropdown list of options, allowing users to select one or more items from the list.</li>
+        </ul>
+        <div class="card-group">
+            <div
+                class="card border-primary"
+                style="border: 2px solid; margin: 10px 100px"
+            >
+                <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+                >
+                <b>Example</b>
+                </div>
+                <div
+                class="card-body"
+                style="background-color: rgb(216, 240, 246)"
+                >
+                <code>&lt;label for="cars"&gt;Choose a car:&lt;/lable&gt;</code><br>
+                    <code>&lt;select id="cars" name="cars&gt;</code>
+                    <ul>
+                        <code>&lt;option value="volvo"&gt;Volvo&lt;/option&gt;</code><br>
+                        <code>&lt;option value="audi"&gt;Audi&lt;/option&gt;</code><br>
+                        <code>&lt;option value="bmw"&gt;BMW&lt;/option&gt;</code><br>
+                        <code>&lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;</code><br>
+                    </ul>
+                    <code>&lt;/select&gt;</code>
+                </div>
+            </div>  
+        </div> 
+      </div>
+        <div class="text-center">
+            <div style="padding-top: 15px;">
+                <button class="btn btn-primary btn-lg">Text Area</button>
+            </div>
+        </div>
+        <div class="content-text">
+            <p>
+                In HTML, the <code>&lt;textarea&gt;</code> element is used to create a multi-line text input field within a form.
+            </p>
+            <p>
+                It allows users to enter multiple lines of text, making it suitable for larger inputs like comments, messages, or any form of free-form text.
+            </p>
+            <p>
+                Example of how the <code>&lt;textarea&gt;</code> element is structured in HTML:
+            </p>
+            <div class="card-group">
+                <div
+                    class="card border-primary"
+                    style="border: 2px solid; margin: 10px 70px"
+                >
+                    <div
+                    class="card-header text-center"
+                    style="font-size: large; padding: 15px"
+                    >
+                    <b>Example</b>
+                    </div>
+                    <div
+                    class="card-body"
+                    style="background-color: rgb(216, 240, 246)"
+                    >
+                    
+                    <code>&lt;form&gt;</code>
+                    <ul>
+                        <code>&lt;label for="message"&gt;Enter your message:&lt;/lable&gt;</code><br>
+                        <code>&lt;textarea id="message" name="message" rows="4" cols="50"&gt;</code><br>
+                        <ul>
+                            Default text inside the textarea
+                        </ul>
+                        <code>&lt;textarea&gt;</code><br>
+                    </ul>
+                    <code>&lt;/formt&gt;</code>
+                    </div>
+                </div>  
+          </div>
+          <p>
+            <u><b>Explanation of attributes:</b></u>
+        </p>
+        <ul>
+            <li><b>&lt;id&gt;:</b> Specifies a unique identifier for the <b>&lt;textarea&gt;</b> element. This is used to associate the <b>&lt;lable&gt;</b> with the <b>&lt;textarea&gt;</b> through the <b>for</b> attribute in the <b>&lt;lable&gt;</b> tag.</li>
+            <li><b>name:</b> Provides the name of the <b>&lt;textarea&gt;</b> element. When the form is submitted, this name-value pair will be sent to the server.</li>
+            <li><b>rows:</b> Defines the visible number of rows of the textarea. It determines how many lines of text will be visible by default.</li>
+            <li><b>cols:</b> Specifies the visible width of the textarea, measured in the number of characters across.</li>
+        </ul>     
+    </div>
+    <div class="text-center">
+        <div style="padding-top: 15px;">
+            <button class="btn btn-primary btn-lg">Input Types</button>
+        </div>
+    </div>
+  <div class="content-text">
+    <p>In HTML (Hypertext Markup Language), input types are attributes used within the <code>&lt;input&gt;</code> element to specify the type of data that a user can input through a form on a web page.</p>
+    <p>Different input types serve various purposes and allow users to enter specific kinds of information. Here are some common input types in HTML:</p>
+    <ol type="1">
+        <li><b>Text: &lt;input type="text"&gt;</b></li>
+            <ul>
+                <li>Allows users to input a single line of plain text. This is commonly used for names, addresses, search bars, etc.</li>
+            </ul>
+        <li><b>Password: &lt;input type="password"&gt;</b></li>
+            <ul>
+                <li>Similar to the text input, but the entered characters are masked for security reasons (displayed as asterisks or dots). This is used for sensitive information like passwords.</li>
+            </ul>
+        <li><b>Number: &lt;input type="number"&gt;</b></li>
+            <ul>
+                <li>Accepts numerical input. You can set min, max, and step attributes to define the range and increments.</li>
+            </ul>
+        <li><b>Email: &lt;input type="Email"&gt;</b></li>
+            <ul>
+                <li>Validates input as an email address. It typically includes basic email validation and may show an error if the input doesn’t match the email format.</li>
+            </ul> 
+        <li><b>URL: &lt;input type="url"&gt;</b></li>
+            <ul>
+                <li>Validates input as a URL (web address). Similar to email input, it checks if the entered text is in a proper URL format.</li>
+            </ul>
+        <li><b>Checkbox: &lt;input type="checkbox"&gt;</b></li>
+            <ul>
+                <li>Allows users to select one or more options from a list of choices. Each checkbox operates independently.</li>
+            </ul> 
+        <li><b>Radio: &lt;input type="radio"&gt;</b></li>
+            <ul>
+                <li>Allows users to select a single option from a list. All radio buttons within the same group are mutually exclusive (i.e., selecting one deselects the others in the group).</li>
+            </ul> 
+        <li><b>File: &lt;input type="file"&gt;</b></li>
+            <ul>
+                <li>Enables users to upload files from their device to the web server. This creates a file input field along with a "Browse" button.</li>
+            </ul>
+        <li><b>Date: &lt;input type="date"&gt;</b></li>
+            <ul>
+                <li>Provides a date picker to choose a date. The appearance and behavior of this picker can vary among different browsers.</li>
+            </ul>
+        <li><b>Time: &lt;input type="time"&gt;</b></li>
+            <ul>
+                <li>Allows users to input a time. Similar to the date input, the appearance can vary across browsers.</li>
+            </ul>
+        <li><b>Color: &lt;input type="color"&gt;</b></li>
+            <ul>
+                <li>Presents a color picker interface for selecting a color.</li>
+            </ul>
+        <li><b>Range: &lt;input type="range"&gt;</b></li>
+            <ul>
+                <li>Creates a slider control allowing users to choose a value within a specified range.</li>
+            </ul>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

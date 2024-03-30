@@ -1,0 +1,77 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">IoC Container</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Intro">Intro</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Features">Features</span>
+    </div>
+
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <p>
+                    An Inversion of Control (IoC) container is a software component that manages the lifecycle of objects
+                    and their dependencies in an application. The IoC container is a key concept in the broader context 
+                    of Inversion of Control, which is a design principle in software development.
+                </p>
+
+                <p>
+                    In traditional programming, the flow of control is determined by the program logic, 
+                    and the application is responsible for creating and managing the objects it needs. 
+                </p>
+
+                <p>
+                    In contrast, with Inversion of Control, the control flow is inverted, 
+                    and the framework or container takes control of the flow. 
+                    The IoC container is responsible for creating, managing, and 
+                    injecting dependencies into the components of an application.
+                </p>
+
+                <p>
+                    Using an IoC container can lead to more modular, testable, and maintainable code by 
+                    promoting best practices such as dependency injection and loose coupling.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <p>
+                    Key features of an IoC container include:
+                </p>
+                <p>
+                    <b>1.Dependency Injection (DI):</b>
+                </p>
+                <ul>
+                    <li>The IoC container uses DI to inject dependencies into the components rather than the 
+                        components creating or managing their own dependencies. </li>
+                    <li>This promotes loose coupling between components and makes the code more modular and maintainable.</li>
+                </ul>
+
+                <p>
+                    <b>2.Object Lifecycle Management:</b>
+                </p>
+                <ul>
+                    <li>IoC containers often manage the lifecycle of objects, 
+                        including their creation, initialization, and disposal.</li>
+                    <li>This helps ensure that resources are used efficiently and consistently.</li>
+                </ul>
+ 
+                <p>
+                    <b>3.Configuration:</b>
+                </p>
+                
+                <ul>
+                    <li>IoC containers typically allow developers to configure the 
+                        dependencies and other settings of the application. </li>
+                    <li>This configuration is often done using XML files, annotations, or code.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

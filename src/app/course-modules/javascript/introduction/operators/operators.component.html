@@ -1,0 +1,250 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Operators</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Arithmetic"
+      >Arithmetic</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Assignment"
+      >Assignment</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Comparision"
+      >Comparision</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Logical"
+      >Logical</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          Arithmetic operators are used to perform arithmetic operations like
+          addition, subtraction, multiplication, division, module,exponential
+          etc.. on variables and data.
+        </p>
+        <!--  <img class="program-img-fit" src="assets/img/javascript/intro/arithmetic.jpg" alt="program" /><br>-->
+        <img
+          class="img-thumbnail mx-5 my-3"
+          src="assets/img/javascript/intro/arithmetic.jpg"
+        />
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning mt-4">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/intro/arithmetic_prblm1.jpg"
+          alt="program"
+        /><br />
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/intro/arithmetic_prblm2.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+          Assignment operators are used to assign data to the variables.
+        </p>
+        <img
+          class="img-thumbnail mx-5 my-3"
+          src="assets/img/javascript/intro/assignment.JPG"
+        />
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning mt-4">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/intro/assignment_prblm.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning" style="border: 2px solid">
+        <p class="content-text">
+          comparision operators are used to perform operations like equals,
+          greater than, less than and not equals on variables and data.
+        </p>
+
+        <img
+          class="img-thumbnail mx-5 my-3"
+          src="assets/img/javascript/intro/comparision.JPG"
+        />
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning mt-4">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/intro/comparision_prblm1.jpg"
+          alt="program"
+        /><br />
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/intro/comparision_prblm2.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning" style="border: 2px solid">
+        <p class="content-text">
+          Logical operators are used to perform comparison between two
+          conditions.
+        </p>
+        <img
+          class="img-thumbnail mx-5 my-3"
+          src="assets/img/javascript/intro/logical.jpg"
+        />
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning mt-4">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/intro/logical_prblm.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+</div>

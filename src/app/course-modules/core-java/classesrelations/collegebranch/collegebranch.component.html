@@ -1,0 +1,103 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">College-Branch (Many to Many Relation)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>College Class</b></div>
+          <div class="card-body">
+            <p>Create College class with following properties <br>
+              Create a tester class and create & print atleast 5 college objects in the tester class main method.
+            </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+            <p>Here we are going to use branch class object in the college class as a parameter.</p>
+            <p>Each college belongs to different branches so one college can have multiple branches. </p>
+            <ol>
+              <li>id - The code of the college(string type)</li>
+              <li>name - The name of the college.(string type)</li>
+              <li>isGround - The college has ground or not(boolean type)</li>
+              <li>isLibrary - The college has library or not(boolean type)</li>
+              <li>isCanteen - The college has canteen or not(boolean type)</li>
+              <li><b>branches - The list of branches in the college(List&lt;Branch&gt; branches - list object with
+                  Branch type)</b></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>Branch Class</b></div>
+          <div class="card-body">
+            <p>Create Branch class with following properties <br>
+              Create a tester class and create & print atleast 5 Branch objects in the tester class main method.
+            </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+
+            <ol>
+              <li>id - Branch unique id.(int type)</li>
+              <li>name - Name of the branch(cse,it, mpc, bsc and etc).(string type)</li>
+              <li>maxCapacity - Maximum number of students for the branch.(int type)</li>
+            </ol>
+          </div>
+        </div>
+      </div> <!-- Ending of examples-->
+
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="card-group">
+        <div class="card">
+          <h5 class="text-center card-title">College POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/classrelation/" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title">Branch POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/classrelation/" alt="">
+          </div>
+        </div>
+      </div>
+      <img class="card-img-top" src="assets/img/corejava/classrelation/" alt="">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

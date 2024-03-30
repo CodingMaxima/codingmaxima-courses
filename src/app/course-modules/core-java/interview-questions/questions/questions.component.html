@@ -1,0 +1,1070 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Interview Questions</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Theory Questions">Theory Questions</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Programming Questions">Programming Questions</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-1</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Static keyword ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Memory allocation for static data happens along
+                        with
+                        the class.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Non-static data cannot be accessed from static
+                        methods</li>
+                    <li style='font-size: medium; font-style: oblique;'>Static data can be accessed with the help of
+                        class
+                        name outside the class</li>
+                    <li style='font-size:medium ; font-style: oblique;'>Non-Static data can be accessed with the help of
+                        object</li>
+                    <li style='font-size: medium; font-style: oblique;'>Static block will be executed even before the
+                        execution of constructor</li>
+                </div>
+            </div><!--end of question1-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-2</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b> What is Immutability?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Immutability means once an object is created it
+                        cannot be modified further</li>
+                    <li style='font-size: medium; font-style: oblique;'>String literal is an example for immutability
+                    </li>
+                    <li style='font-size: medium; font-style: oblique;'>We can achieve immutability with a Final class,
+                        private data and without setter methods</li>
+                </div>
+            </div><!--end of question2-->
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-3</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Can we Override Static or not?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>No we can't override static methods but we can
+                        write
+                        same method with same signature in different classes and those are remain as independent methods
+                        as
+                        we are not using any run time polymorphism.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Run-time Polymorphism means when an object is
+                        called
+                        a particular method, depending on the object it will decide which class method is need to be
+                        called
+
+                    <li style='font-size: medium; font-style: oblique;'>As static data can be called with class name
+                        only,
+                        there
+                        is no point of creating object and calling through object</li>
+
+                </div>
+            </div><!--end of question3-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-4</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>Where we use private static final?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>When a class has a common property for every
+                        object
+                    </li>
+                    <li style='font-size: medium; font-style: oblique;'>A human has only one heart and it cannot be
+                        changed,
+                        so
+                        it can be declared as a private static final.</li>
+                    <p style='font-size: medium; font-style: inherit;'>Ex : </p>
+                    <p style='font-size: medium; font-style: inherit;'>Class Human{{'{'}}</p>
+                    <pre style='font-size: medium; font-style: inherit;'>   Int height;</pre>
+                    <pre
+                        style='font-size: medium; font-style: inherit;'>   Private static final String heart = 1; </pre>
+                    <p>{{'}'}}</p>
+                    <p style='font-size: medium; font-style: inherit;'> Human h1 = new Human();</p>
+                    <p style='font-size: medium; font-style: inherit;'>Human h2 = new Human();</p>
+                    <p style='font-size: medium; font-style: inherit;'>Human h3 = new Human();</p>
+                </div>
+            </div><!--end of question4-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-5</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are Strings in Java?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>A string can be created in three way in java i.e
+                        <pre style='font-size: medium; font-style: oblique;'><b>    String literal</b></pre>
+                        <pre style='font-size: medium; font-style: oblique;'><b>    String Buffer </b></pre>
+                        <pre style='font-size: medium; font-style: oblique;'><b>    String Builder</b></pre>
+                    <li style='font-size: medium; font-style: oblique;'>When string literal is used to create a string,
+                        the
+                        data
+                        is stored in a string pool memory</li>
+                    <li style='font-size: medium; font-style: oblique;'>When we modify the string literal it will create
+                        a
+                        new
+                        reference in string pool memory and assign that reference to the modified variable</li>
+                    <li style='font-size: medium; font-style: oblique;'>This makes String as immutable</li>
+                    <li style='font-size: medium; font-style: oblique;'>When a String is created using string buffer or
+                        String
+                        builder, the object can be modified any number of time</li>
+                    <li style='font-size: medium; font-style: oblique;'>The main difference between String Buffer and
+                        String
+                        builder is String buffer is “Thread safe” and String builder is “Non Thread Safe”</li>
+                    <li style='font-size: medium; font-style: oblique;'>If constant modifications are needed it is
+                        suggested
+                        to
+                        either string buffer or string builder because string literal wastes lots of string pool memory
+                        (
+                        Answer
+                        this point when asked which is best method to use)</li>
+                </div>
+            </div><!--end of question5-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-6</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are Final, Finally and Finalize ?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>
+                        <b>Final :</b> Once a data is declared as final it cannot be modified further
+                        <li style='font-size: medium; font-style: oblique;'> When used before a variable the value
+                            cannot be
+                            changed</li>
+                        <li style='font-size: medium; font-style: oblique;'> When used before a method the method cannot
+                            be
+                            overrided</li>
+                        <li style='font-size: medium; font-style: oblique;'> When used before a class the class cannot
+                            be
+                            extended further</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'><b> Finally : </b>Finally is block used in
+                        exception
+                        handling which helps to execute critical operations
+                        even any exceptions occurred.</p>
+                    <p style='font-size: medium; font-style: oblique;'><b> Finalize: </b>Finalize is a method used to
+                        perform cleanup operations on unmanaged.
+                        <li style='font-size: medium; font-style: oblique;'>Garbage collector implicitly performs the
+                            cleanup operation at the end of a program</li>
+                        <li style='font-size: medium; font-style: oblique;'>If we need it in the middle of a program
+                            execution to free the memory we can use finalize method
+                        </li>
+                    </p>
+
+                </div>
+            </div><!--end of question6-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-7</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are Collections Framework?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Collections is a framework which have a
+                        collection
+                        of class objects on which various types of operations can be performed.</li>
+                    <li style='font-size: medium; font-style: oblique;'>There are lot of implementations i.e ArrayList,
+                        LinkedList, HashSet etc.</li>
+                </div>
+            </div><!--end of question7-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-8</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are OOPs?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'> Object Oriented Programming is a computer
+                        programming model which organize the software design
+                        around data and objects rather than function and logic</p>
+                    <p style='font-size: medium; font-style: oblique;'>Benefits are: Reusability, Efficiency,
+                        Maintainability, Scalability</p>
+                    <p style='font-size: medium; font-style: oblique;'>Main principles are:
+                        <li style='font-size: medium; font-style: oblique;'>Encapsulation</li>
+                        <li style='font-size: medium; font-style: oblique;'>Abstraction</li>
+                        <li style='font-size: medium; font-style: oblique;'>Polymorphism</li>
+                        <li style='font-size: medium; font-style: oblique;'>Inheritance</li>
+                    </p>
+                </div>
+            </div><!--end of question8-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-9</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Encapsulation?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Encapsulation is a mechanism of combining data
+                        and
+                        methods into a single unit is known as encapsulation
+                        <li style='font-size: medium; font-style: oblique;'>We can achieve encapsulation with private
+                            data
+                            and
+                            public methods.</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'>Ex: Java Pojo classes</p>
+                </div>
+            </div><!--end of question9-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-10</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Abstraction?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Abstraction is a mechanism of hiding the
+                        implementation and exposing only necessary information to the user is known as Abstraction.
+                        <li style='font-size: medium; font-style: oblique;'>We can achieve abstraction with the help of
+                            Abstract
+                            classes and Interfaces</li>
+                    </p>
+                </div>
+            </div><!--end of question10-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-11</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Polymorphism?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Polymorphism is a mechanism which allows to
+                        perform a
+                        single task in different ways.</p>
+                    <p style='font-size: medium; font-style: oblique;'>There are two types of polymorphism
+                        <li style='font-size: medium; font-style: oblique;'> Compile time polymorphism</li>
+                        <li style='font-size: medium; font-style: oblique;'> Runtime polymorphism</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Compile-time polymorphism (Overloading):</b>
+                        Compile time polymorphism is also known as Overloading, it states that a class can have multiple
+                        methods with same but with different signature i.e no of parameters and types of parameters.
+                        Each method stays as independed</p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Run-time Polymorphism (Overriding):</b>
+                        Run-time polymorphism is also known as Overriding, it states that a class and sub class can have
+                        exactly same methods. When the method is called it is decided at the run time to execute which
+                        class
+                        method based on the object.</p>
+                </div>
+            </div><!--end of question11-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-12</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Inheritance?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>The mechanism of getting properties from the
+                        parent
+                        is known as Inheritance.</p>
+                    <p style='font-size: medium; font-style: oblique;'>Inheritance can be achieved by extending a class
+                        or by implementing an interface.</p>
+                    <p style='font-size: medium; font-style: oblique;'>Types of Inheritance
+                        <li style='font-size: medium; font-style: oblique;'>Single Inheritance</li>
+                        <li style='font-size: medium; font-style: oblique;'>Multilevel Inheritance</li>
+                        <li style='font-size: medium; font-style: oblique;'>Hierarchical Inheritance</li>
+                    </p>
+                </div>
+            </div><!--end of question12-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-13</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Exception?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>An exception is an abnormal situation which
+                        obstructs
+                        the actual flow of a program.</p>
+                    <p style='font-size: medium; font-style: oblique;'>Exceptions are classified of two types
+                        <li style='font-size: medium; font-style: oblique;'>Checked Exceptions</li>
+                        <li style='font-size: medium; font-style: oblique;'>Unchecked Exceptions</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Checked Exceptions:</b>
+                        Checked exceptions are also known as Compile time exceptions.
+                        <li style='font-size: medium; font-style: oblique;'>For compile time exceptions the compiler
+                            will
+                            warn to
+                            handle the exceptions as there is a high possibility of getting it.</li>
+                        <li style='font-size: medium; font-style: oblique;'>Ex : SQL Exception,IO Exception</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Unchecked Exceptions:</b>
+                        Unchecked exceptions are also known as Run-time exceptions.
+                        <li style='font-size: medium; font-style: oblique;'>For Run-time exceptions the compiler will
+                            not
+                            warn
+                            because the possibility of getting exception is very low.</li>
+                        <li style='font-size: medium; font-style: oblique;'>Ex : Arithmetic Exception, Nullpointer
+                            Exception,
+                            Number
+                            format exception, IndexOutOfBoundException.</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'>Exceptions can be handled by using :</p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Try-Catch block:</b>
+                        <li style='font-size: medium; font-style: oblique;'>The code that tends to throw exception will
+                            be
+                            written in
+                            the Try block</li>
+                        <li style='font-size: medium; font-style: oblique;'>Catch block will catch the exception</li>
+                        <li style='font-size: medium; font-style: oblique;'>A try block can have multiple catch blocks
+                            with
+                            child
+                            to
+                            parent hierarchy</li>
+                        <li style='font-size: medium; font-style: oblique;'>Rest of the program will continue to work
+                        </li>
+                    <p style='font-size: medium; font-style: oblique;'><b> Using Throws Keyword :</b>
+                        <li style='font-size: medium; font-style: oblique;'>Throws keyword can be used at method level
+                            to
+                            throw
+                            the
+                            exception</li>
+                        <li style='font-size: medium; font-style: oblique;'>If throws keyword is used the program will
+                            stop
+                            from
+                            execution after throwing exception</li>
+                    </p>
+                </div>
+            </div><!--end of question13-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-14</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Wat is HashMap?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>A HashMap stores data in the form of Key, Value
+                        pairs.</li>
+                    <li style='font-size: medium; font-style: oblique;'>The key in the hashmap are unique and values can
+                        be
+                        duplicate.</li>
+                    <li style='font-size: medium; font-style: oblique;'> HashMap contains only one null key.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Values can be fetched with the help of Key.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Storing and Retrival of the data will be done
+                        using
+                        hash code of the key.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Two or more Keys having same hashcode will form
+                        a
+                        LinkedList.</li>
+                </div>
+            </div><!--end of question14-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-15</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Concurrent HashMap?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Concurrent HashMap is HashMap with thread-safe
+                    </p>
+                </div>
+            </div><!--end of question15-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-16</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b> What is a constructor? </b></p>
+                    <p style='font-size: medium; font-style: oblique;'>A Constructor is unique method which is used to
+                        initialize an object, which is called when an instance of the class is created. The memory for
+                        an
+                        object is allocated when we call the constructor.</p>
+                </div>
+            </div><!--end of question16-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-17</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is the difference between Abstract class
+                            and
+                            Interface?</b></p>
+                    <P style='font-size: medium; font-style: oblique;'><b>Abstract Class:</b>
+                        <li style='font-size: medium; font-style: oblique;'>Abstract class will provide the abstract
+                            methods
+                            and implementation for the child class which can implemented or overrided</li>
+                        <li style='font-size: medium; font-style: oblique;'>A class can extend only one abstract class
+                        </li>
+                        <li style='font-size: medium; font-style: oblique;'>Abstraction can be achieved with Abstract
+                            classes and interfaces</li>
+                    </P>
+                    <P style='font-size: medium; font-style: oblique;'><b>Interface:</b>
+                        <li style='font-size: medium; font-style: oblique;'>Interface will provide only Abstract
+                            methods,
+                            not implementations</li>
+                        <li style='font-size: medium; font-style: oblique;'>A class can implement any number of
+                            interfaces
+                        </li>
+                        <li style='font-size: medium; font-style: oblique;'>If you are sure that your class will not
+                            extend
+                            more than 1 class, you can go with Abstract class. If not Interface is the best to use</li>
+                    </P>
+                </div>
+            </div><!--end of question17-->
+
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-18</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Predicate?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>The symbole ( -> ) used in Lambda expressions is
+                        known as Predicate</p>
+                </div>
+            </div><!--end of question18-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-19</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b> How can you make an custom class as
+                            Immutable</b>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'>A custom class can be made immutable by
+                        <li style='font-size: medium; font-style: oblique;'>Making the class as Final</li>
+                        <li style='font-size: medium; font-style: oblique;'>Private data and</li>
+                        <li style='font-size: medium; font-style: oblique;'>Without setter methods</li>
+                    </p>
+                </div>
+            </div><!--end of question19-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-20</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Why a Immutable class should be a Final
+                            class?</b>
+                    </p>
+                    <li style='font-size: medium; font-style: oblique;'>If not some other class can extend and create
+                        same
+                        variables and can modify the data</li>
+                    <li style='font-size: medium; font-style: oblique;'>Then the class is no longer a immutable class
+                    </li>
+                </div>
+            </div><!--end of question20-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-21</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Functional Interface?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>A functional interface is an interface with only
+                        one
+                        abstract method. This means that the interface implementation will only represent one behavior.
+                    </li>
+                    <li style='font-size: medium; font-style: oblique;'>We can define a Functional Interface with the
+                        help
+                        of <b> @FuncionalInterface annotation</b></li>
+                    <li style='font-size: medium; font-style: oblique;'>Lambda expressions are used primarily to define
+                        the
+                        <b>inline implementation</b> of a functional interface.
+                    </li>
+                </div>
+            </div><!--end of question21-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-22</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Lambda Expression?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Lambda expressions are used primarily to define
+                        inline implementation of a functional interface</li>
+                    <li style='font-size: medium; font-style: oblique;'>Lambda expressions implement only abstract
+                        method
+                        and therefore implement functional interfaces</li>
+                    <li style='font-size: medium; font-style: oblique;'>Lambda expression facilitates functional
+                        programming
+                    </li>
+                </div>
+            </div><!--end of question22-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-23</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are Java8 Features?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Lambda Expressions</li>
+                    <li style='font-size: medium; font-style: oblique;'>Stream API</li>
+                    <li style='font-size: medium; font-style: oblique;'>For Each method</li>
+                    <li style='font-size: medium; font-style: oblique;'>Functional Interface</li>
+                    <li style='font-size: medium; font-style: oblique;'>Static method in interface</li>
+                    <li style='font-size: medium; font-style: oblique;'>Optional class</li>
+                    <li style='font-size: medium; font-style: oblique;'>Collector class</li>
+                    <li style='font-size: medium; font-style: oblique;'>Method references</li>
+                </div>
+            </div><!--end of question23-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-24</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Super keyword?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Super keyword is used to represent the parent
+                        class
+                        object</p>
+                    <p style='font-size: medium; font-style: oblique;'> It can be used to call the
+                        <li style='font-size: medium; font-style: oblique;'>Parent class constructor</li>
+                        <li style='font-size: medium; font-style: oblique;'>Access the parent class public and protected
+                            data</li>
+                    </p>
+                </div>
+            </div><!--end of question24-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-25</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b> What is This keyword?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>This keyword is used to represent the current
+                        class
+                        object.
+                    <li style='font-size: medium; font-style: oblique;'>It can be used to differentiate between class
+                        variables an method variables when their names are same.</li>
+                </div>
+            </div><!--end of question25-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-26</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Can we call a Parent class constructor from a
+                            child
+                            class normal method?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>No we cannot call a parent class constructor from
+                        a
+                        child class method.</p>
+                </div>
+            </div><!--end of question26-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-27</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Can we call a Constructor from another
+                            Constructor
+                            in same class.</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Yes, with the help of <b>This</b> keyword.</li>
+                </div>
+            </div><!--end of question27-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-28</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are streams?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>A stream is a sequence of objects that supports
+                        various methods which can be pipelined to produce
+                        the desired result.</p>
+                </div>
+            </div><!--end of question28-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-29</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Multithreading?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Multithreading is a model of program execution
+                        that
+                        allows multiple threads to be created within a process, executing independently but concurrently
+                        sharing process resources</p>
+                </div>
+            </div><!--end of question29-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-30</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between Wait() and Seep()?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'> <b>Wait():</b>
+                        <li style='font-size: medium; font-style: oblique;'>Wait() is used to make a thread go to
+                            waiting state. The thread will not go to running state until notify() or notifAll() method
+                            is called.</li>
+                        <li style='font-size: medium; font-style: oblique;'>notify() is used to invoke one thread from
+                            waiting state. Ex: thread.notify()</li>
+                        <li style='font-size: medium; font-style: oblique;'>notifyAll() is used to make all threads from
+                            waiting state. Ex : thread.notifyAll()</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Sleep():</b>
+                        <li style='font-size: medium; font-style: oblique;'>Sleep() method is used to make a thread go
+                            to
+                            waiting state for a particular period of time</li>
+                        <li style='font-size: medium; font-style: oblique;'>After that period of time the thread will
+                            automatically goes to running state</li>
+                        <li style='font-size: medium; font-style: oblique;'>Ex : thread.sleep(1000) - 1000 is milli
+                            seconds
+                        </li>
+                    </p>
+                </div>
+            </div><!--end of question30-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-31</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b> What is Segment locking in Concurrent
+                            HashMap?</b>
+                    </p>
+                    <li style='font-size: medium; font-style: oblique;'> In concurrent HashMap while adding or updating
+                        data
+                        that particular block or segment is locked.</li>
+                    <li style='font-size: medium; font-style: oblique;'>For reading data multiple threads are allowed
+                        concurrently without locking the segments.</li>
+                </div>
+            </div><!--end of question31-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-32</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is a Thread?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>The flow of execution is called Thread. Every
+                        java
+                        program has atleast one thread xalled main thread. The main thread is created by JVM. the user
+                        can
+                        define their own thread by extending the thread class (or) by implementing runable interface.
+                        They
+                        are executed concurrently</p>
+                </div>
+            </div><!--end of question32-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-33</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is Java?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Java was created by <b> James Gesling</b> by sun
+                        microsystems in 1991.</li>
+                    <li style='font-size: medium; font-style: oblique;'>It is an high level programming language and it
+                        is
+                        an platform independent and runs on different platforms.</li>
+                    <li style='font-size: medium; font-style: oblique;'>It is also called as <b>WORA - </b>Write Once
+                        Run
+                        Anywhere.</li>
+                    <li style='font-size: medium; font-style: oblique;'>It was an open source technology and freely
+                        available in market.</li>
+                    <li style='font-size: medium; font-style: oblique;'>There are lot of applications, websites and
+                        games
+                        were developed by using java & supports standalone application, web application.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Set of features of <b>C++, C</b> combines gives
+                        the
+                        java</li>
+                    <li style='font-size: medium; font-style: oblique;'>Most of basic syntaxes are derived from <b>C</b>
+                        &
+                        most of syntaxes and OOPs features are dervied from <b>C++ </b>.So <b>C++</b> is parent to java
+                        and
+                        <b>C</b> is grand parent to java.
+                    </li>
+                </div>
+            </div><!--end of question33-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-34</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>Is java an pure OOPs or not?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>No, because it supports <b>primitive data
+                            types</b>
+                    </li>
+                    <li style='font-size: medium; font-style: oblique;'>Pure OOPs means that should be compulsory have
+                        <b>object access, object declaration, object representation.</b>
+                    </li>
+                    <li style='font-size: medium; font-style: oblique;'>Without creating an object we can't access
+                        anything
+                        in that language .</li>
+                    <li style='font-size: medium; font-style: oblique;'>Whenever we represents a data and functions
+                        based on
+                        only object then it is as pure OOPs.</li>
+                    <li style='font-size: medium; font-style: oblique;'>In Java we an access the data and methods with
+                        and
+                        without the objects.</li>
+                </div>
+            </div><!--end of question34-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-35</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Features of java ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'><b>OOPs Concepts: </b> object oriented,
+                        abstraction, inheritance, polymorphism, encapsulation.</li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Platform Independent: </b>We can perform
+                        single program in one system can be easily moved to other system without any modification.</li>
+                    <li style='font-size: medium; font-style: oblique;'><b>High performance: </b>JIT(Just In Time
+                        compiler) enables high performance in java. It converts byte code into the machine code machine
+                        language and then JVM(Java Virtual Machine) starts execution.The execution speed is more
+                        comparitively to other languages.</li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Multi Threaded: </b> A flow of execution is
+                        known as thread. JVM creates thread which is called main thread. User can create multiple
+                        threads by extending the thread class by implementing the runable interface. More than one task
+                        perform simultaneously. </li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Comiler and Interpreter: </b>Gives java code
+                        Write it in notepad or editor called as source code by using the compiler converts byte code and
+                        by using the inerpreter converts into executable code(machine code) </li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Robust and secure </b></li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Distributed: </b>It has the facility to share
+                        single unit to different users</li>
+                    <li style='font-size: medium; font-style: oblique;'><b>simple, small and familiar: </b>some features
+                        were not used in this</li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Dynamic and extensable: </b>During run time
+                        the program is in executable postion by link up with some class libraries and methods </li>
+                </div>
+            </div><!--end of question35-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-36</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between hashmap and hashset?</b></p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Hashmap</th>
+                            <th class="text text-center">Hashset</th>
+                        </tr>
+                        <tr>
+                            <td>Stores the elements in the form of key, value pairs</td>
+                            <td>Stores the elements in the form of objects</td>
+                        </tr>
+                        <tr>
+                            <td>allow only null key and any number of null values</td>
+                            <td> allows only one null value</td>
+                        </tr>
+                        <tr>
+                            <td>allows duplicate values but not the duplicate keys</td>
+                            <td>doesn't allows duplicate values</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div><!--end of question36-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-37</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is the difference between constructor and
+                            setter ? </b></p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Constructor</th>
+                            <th class="text text-center">setters</th>
+                        </tr>
+                        <tr>
+                            <td> constructor can set the values of all the properties at the time of object creation
+                            </td>
+                            <td>Used to set the values of the individual properties</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 37-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-38</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between immutable and mutable ?</b>
+                    </p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Immutable</th>
+                            <th class="text text-center">Mutable</th>
+                        </tr>
+                        <tr>
+                            <td>If any changes are made in the object the string pool constant will create a new string
+                                with those changes. so will take huge memory to store all string object.</td>
+                            <td>If any changes made in the objects then it will not create any new object and it will
+                                ass to the previous string object.</td>
+                        </tr>
+                        <tr>
+                            <td>String objects are immutable(non changable).</td>
+                            <td>String buffers, string builders are mutable(changable).</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 38-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-39</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Does the java supports multiple inheritance or
+                            not?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>No. Because in java every class is a child of
+                        the object class when it inherits from more than one super class subclass gets the confusion to
+                        acquire the properties of object class.</li>
+                    <p>class A {{'{''}}</p>
+                    <p> public void method1()</p>
+                    <p>{{'}'}}</p>
+                    <p>class B {{'{''}}</p>
+                    <p> public void method1()</p>
+                    <p>{{'}'}}</p>
+                    <p>class C extends A,B {{'{''}}
+                    <pre>  public static void main(string[] args){{'{''}}</pre>
+                    <pre>    class c = new class();</pre>
+                    <pre>    c.m1();</pre>
+                    <p> {{'}'}}</p>
+                    <p>{{'}'}}</p>
+                    <p style='font-size: medium; font-style: oblique;'> From the above example class A contains m1
+                        method and class B contains m1 method while creating the object for class c and calling m1
+                        method won't execute any A or B. so, it showa an error while calling m1 method so java doesn't
+                        support it.</p>
+                    <p style='font-size: medium; font-style: oblique;'>It can be achieve this problem by using the
+                        interface.</p>
+                </div>
+            </div><!--end of question 39-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-40</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>Why synchronization need ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>We need to synchronize the shared resources that
+                        at a time only one thread is able to accesss the shared resources. If an object is shared by
+                        multiple threads then there is need of synchronization inorder to avoid the object's state to be
+                        getitng corrupted.It can be achieved through synchronized keyword.</li>
+                </div>
+            </div><!--end of question 40-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-41</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b> What is local variable Vs instance variable
+                            ?</b></p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Local Variable</th>
+                            <th class="text text-center">Instance Variable(global variable)</th>
+                        </tr>
+                        <tr>
+                            <td>It is defined as the method and scope of variables exits only inside of the method
+                                itself. </td>
+                            <td>It is defined as present inside the class and outside of the method & scope of the
+                                variables exists throughout the class.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 41-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-42</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between Arrays and Arraylist ?</b>
+                    </p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Array</th>
+                            <th class="text text-center">ArrayList</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>The size should be given at the time of array declaration</p>
+                                <p>String[] name = new String[5]</p>
+                            </td>
+                            <td>
+                                <p>Size may not be required . It changes the size dynamically.</p>
+                                <p>ArrayList name = new ArrayList;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>For putting the object into the array have to specify the index.<b> name[0] = "sri"</b>
+                            </td>
+                            <td>No index is required. <b>name.add("sri")</b></td>
+                        </tr>
+                        <tr>
+                            <td>Array is not type parameterized.</td>
+                            <td>ArrayList in java 5.0 are parameterized.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 42-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-43</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between Hashmap and Hashtable ?</b>
+                    </p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Hashmap</th>
+                            <th class="text text-center">Hashtable</th>
+                        </tr>
+                        <tr>
+                            <td>The methods are not synchronized.</td>
+                            <td>Methods are synchronized</td>
+                        </tr>
+                        <tr>
+                            <td>These are not thread safe.</td>
+                            <td>These are thread safe.</td>
+                        </tr>
+                        <tr>
+                            <td>Iterator is used to iterate the values.</td>
+                            <td>Enumerator is used to iterate the values.</td>
+                        </tr>
+                        <tr>
+                            <td>It allows only one null key and multiple null values.</td>
+                            <td>It doesn't allow anything that is null.</td>
+                        </tr>
+                        <tr>
+                            <td>Performance is higher than hashtable.</td>
+                            <td>Preformance is small.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 43-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-44</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between Hashset and Treeset ?</b>
+                    </p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">Hashset</th>
+                            <th class="text text-center">Treeset</th>
+                        </tr>
+                        <tr>
+                            <td>Inserted elements are in random order.</td>
+                            <td>Maintains the elements in the stored order.</td>
+                        </tr>
+                        <tr>
+                            <td>It can be abloe to store null objects.</td>
+                            <td>It couldn't store the null objects.</td>
+                        </tr>
+                        <tr>
+                            <td>Performance is fast.</td>
+                            <td>Performance is slow.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 44-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-45</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>Difference between inner class and subclass
+                            ?</b></p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="text text-center">inner class</th>
+                            <th class="text text-center">subclass</th>
+                        </tr>
+                        <tr>
+                            <td>Inner class is nested within the another class. An inner class has access rights from
+                                the class which is nesting it & can access all variables and methods defined in outer
+                                class.</td>
+                            <td>It is a class which inherits from another class And access all public and protected
+                                methods & fields of its super class.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!--end of question 45-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-46</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What is singleton class ? give practical
+                            example of its usage?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>It can have only one instance and hence all its
+                        methods and variables belongs to just one instance.This concept is useful for the situations
+                        when there is a need to limit the number of objects for a class.</li>
+                    <li style='font-size: medium; font-style: oblique;'><b>Ex: </b> When there is a limit of having only
+                        one connection to the database due to some driver limitations or because of any licensing
+                        issues.</li>
+                </div>
+            </div><!--end of question 46-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-47</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Can a variable be local and static at a time
+                            ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>No, A variable can't be local and static at a
+                        same time defining a local variable as static gives complie time error.</li>
+                </div>
+            </div><!--end of question 47-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-48</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>How the objects are stored in java?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'> Each object when created gets a memory space
+                        from the heap. When the object is destroyed by garbage collecotr the space is allocated to it
+                        from the heap is reallocated to the heap and becomes available for any new objects.</li>
+                </div>
+            </div><!--end of question 48-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-49</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>Can we call a non static methods from inside
+                            the static methods ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Non static methods are owned by objec of a class
+                        and have object level scope & inorder to call the non static methods from a static block an
+                        object of the class needs to be created first. Then using the object reference, these methods
+                        can be invoked.</li>
+                </div>
+            </div><!--end of question 49-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-50</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>Can we call the constructor of a class more
+                            than once for an object ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>No, constructor automatically creats when an
+                        object is created using the new keyword. Its called once for an object at the same time of
+                        object creation so we can't invoke constructor again after it's creation.</li>
+                </div>
+            </div><!--end of question 50-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-51</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 51-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-52</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 52-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-53</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 53-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-54</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 54-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-55</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 55-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-56</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 56-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-57</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 57-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-58</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 58-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-59</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 59-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-60</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question 60-->
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body">
+                    <p>Write a program to reverse a string ?</p>
+                    <p>Write a program to reverse a number ?</p>
+                    <p>Write a program to print without duplicates ?</p>
+                    <P>Write a program to print the number is an prime or not ?</P>
+                    <P>Write a program to get the number of characters in a string ?</P>
+                    <p>Write a program to swap 2 numbers without using the third variable ?</p>
+                    <p>Write a program to print an array without duplicates?</p>
+                    <p>Write a program to print the count of maximum occured characters in string ? </p>
+                    <p>Write a program to check If an vowel is present in a string or not ?</p>
+                    <p>Write a program to check whether a string is a palindrome or not ?</p>
+                    <p>Write a program to sort an element in an array ?</p>
+                    <p>Write a program to print the second max number in an array ?</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

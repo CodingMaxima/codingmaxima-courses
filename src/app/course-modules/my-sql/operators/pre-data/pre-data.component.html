@@ -1,0 +1,88 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Pre-requisites data for Operators</h3>
+    <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="employee" [ngClass]="(elementId=='employee')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Employee Table">Employee Table
+                                </span>
+
+                                <span class="tab-pill" id="student" [ngClass]="(elementId=='student')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Student Table">Student Table
+                                </span>
+
+                            </div>
+                            <div *ngIf="elementId=='employee'">
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p>CREATE TABLE employee (</p>
+                                            <p style="margin-top: -20px;"> id int PRIMARY KEY,</p>
+                                            <p style="margin-top: -20px;"> first_name varchar(255) NOT NULL,</p>
+                                            <p style="margin-top: -20px;"> last_name varchar(255) NOT NULL,</p>
+                                            <p style="margin-top: -20px;"> gender varchar(20) CHECK(gender in ('male','female','unknown')),</p>
+                                            <p style="margin-top: -20px;"> designation varchar(100) default 'bench',</p>
+                                            <p style="margin-top: -20px;"> company_name varchar(255) NOT NULL,</p>
+                                            <p style="margin-top: -20px;"> salary decimal(10,2) CHECK(salary >=5000 AND salary &lt;=100000), </p>
+                                            <p style="margin-top: -20px;"> age int CHECK(age >=18 AND age &lt;= 58),</p>
+                                            <p style="margin-top: -20px;"> bankaccountnumber varchar(255) UNIQUE,</p>
+                                            <p style="margin-top: -20px;"> primaryphonenumber bigint DEFAULT 0,</p>
+                                            <p style="margin-top: -20px;"> employee_type varchar(100) DEFAULT 'full time',</p>
+                                            <p style="margin-top: -20px;"> joining_date date DEFAULT(current_date)</p>
+                                            <p style="margin-top: -20px;"> );</p>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of create -->
+
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p *ngFor="let query of employeeQueries">
+                                                {{query}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!--end of insert queries-->
+                            </div><!--end of employee-->
+
+                            <div *ngIf="elementId=='student'">
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p>CREATE TABLE student (</p>
+                                            <p style="margin-top: -20px;"> roll_number int primary key,</p>
+                                            <p style="margin-top: -20px;"> first_name varchar(100) not null,</p>
+                                            <p style="margin-top: -20px;"> last_name varchar(100) not null,</p>
+                                            <p style="margin-top: -20px;"> gender varchar(20) CHECK(gender in ('male','female')),</p>
+                                            <p style="margin-top: -20px;"> age int CHECK(age >=15 AND age &lt;=50),</p>
+                                            <p style="margin-top: -20px;"> total_marks int default(0),</p>
+                                            <p style="margin-top: -20px;"> college_name varchar(100) not null,</p>
+                                            <p style="margin-top: -20px;"> grade varchar(20) not null,</p>
+                                            <p style="margin-top: -20px;"> branch varchar(20) not null,</p>
+                                            <p style="margin-top: -20px;"> current_semister int default(1)</p>
+                                            <p style="margin-top: -20px;"> );</p>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of create -->
+
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p *ngFor="let query of studentQueries">
+                                                {{query}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!--end of insert queries-->
+                            </div><!--end of student-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

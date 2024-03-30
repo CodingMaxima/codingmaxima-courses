@@ -1,0 +1,30 @@
+<div class="container cmpbody">
+    <div class="row">
+        <div class="col col-lg-11 col-md-11 col-sm-11 nopadding">
+            <div oncontextmenu="return false;" style="padding-top: 20px; padding-left: 20px;">
+                <video id="play" controlsList="nodownload" width="100%" controls>
+                    <source src="{{totalUrl}}" />
+                    <audio id="myaudio">
+                        <source src="{{audioUrl}}" />
+                    </audio>
+                </video>
+
+                <div class="text-center">
+                    <button (click)="changeAudio('Mute')" [ngClass]="(audio=='Mute')?'lanbtn confirm':'lanbtn cancel'">Mute <img src="assets/mute.jpeg"></button>
+                    <button *ngFor="let audioName of audioLanguages" [ngClass]="(audio==audioName)?'lanbtn confirm':'lanbtn cancel'"
+                        (click)="changeAudio(audioName)">{{audioName}}</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col col-lg-1 col-md-1 col-sm-1 nopadding">
+            <div class="verticalalign text-center" style="margin-top: 10rem;">
+                <button [ngClass]="(actButton==0.5)?'spdbtn activespeed':'spdbtn inactivespeed'" (click)="setVideoSpeed(0.5)"> 0.5x </button>
+                <button [ngClass]="(actButton==1.0)?'spdbtn activespeed':'spdbtn inactivespeed'" (click)="setVideoSpeed(1.0)"> 1.0x </button>
+                <button [ngClass]="(actButton==1.5)?'spdbtn activespeed':'spdbtn inactivespeed'" (click)="setVideoSpeed(1.5)"> 1.5x </button>
+                <button [ngClass]="(actButton==2.0)?'spdbtn activespeed':'spdbtn inactivespeed'" (click)="setVideoSpeed(2.0)"> 2.0x </button>
+            </div>
+        </div>
+    </div>
+</div>
+

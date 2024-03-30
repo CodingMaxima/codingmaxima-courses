@@ -1,0 +1,97 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Drop Table(EMPLOYEE & STUDENT)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#ProblemStatement"
+                            aria-expanded="false" aria-controls="ProblemStatement">
+                            <p>
+                                Deleting employee_details table
+                            </p>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+
+                        <p>
+                            For Deleting the employee_details table from the database
+                        </p>
+                        <p>
+                            Before Deleting the table it was like as shown in the below image
+                        </p>
+                        <img src="assets/img/dbms/Alter&drop/employee/drop-emp-table-bef.jpg" />
+                        <p>
+                            after Deleting the table it will be as shown in the below image
+                        </p>
+                        <p>
+                            <img src="assets/img/dbms/Alter&drop/employee/drop-emp-table-aft.jpg" />
+
+                        </p>
+                        <p>
+                            The syntax : drop table employee_details;
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#ProblemStatement"
+                            aria-expanded="false" aria-controls="ProblemStatement">
+                            <p>
+                                Deleting student_details table
+                            </p>
+
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                    <div class="card-body">
+
+                        <p>
+                            For Deleting the student_details table from the database
+                        </p>
+                        <p>
+                            Before Deleting the table it was like as shown in the below image
+                        </p>
+                        <img src="assets/img/dbms/Alter&drop/student/drop-std-table-bef.jpg" />
+                        <p>
+                            after Deleting the table it will be as shown in the below image
+                        </p>
+                        <p>
+                            <img src="assets/img/dbms/Alter&drop/student/drop-std-table-aft.jpg" />
+
+                        </p>
+                        <p>
+                            The syntax : drop table student_details;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>              
+          </div>
+
+    </div>
+
+</div>

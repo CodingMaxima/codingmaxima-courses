@@ -1,0 +1,185 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Headings And Paragraphs</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Headings">Headings</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Paragraphs">Paragraphs</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation Video">Animation Video</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="code" [ngClass]="(elementId2=='code')?'active':''" (click)="tabChange($event)"
+                data-hover="code">code</span>
+            <span class="tab-pill" id="output" [ngClass]="(elementId2=='output')?'active':''"
+                (click)="tabChange($event)" data-hover="output">output</span>
+            
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning mt-4" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        lets create a <b>html page</b> with <b>headings</b> and <b>head</b> and <b>body</b> tags
+                    </p>
+                    <p>
+                        HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
+                    </p>
+                    <p>
+                        <code>&lt;h1&gt;</code> is used for the main heading. (Biggest in size)
+                    </p>
+                    <p>
+                        <code>&lt;h2&gt;</code> is used for subheadings, if there are further sections under the subheadings then the <code>&lt;h3&gt;</code> elements are used.
+                    </p>
+                    <p>
+                        <code>&lt;h6&gt;</code> for the small heading (smallest one).
+                    </p>
+                  </div>
+                <div class="card-group">
+                <div
+                    class="card border-primary"
+                    style="border: 2px solid; margin: 10px 150px"
+                >
+                    <div
+                    class="card-header text-center"
+                    style="font-size: large; padding: 15px"
+                    >
+                    <b>Syntax</b>
+                    </div>
+                    <div
+                    class="card-body text-center"
+                    style="background-color: rgb(216, 240, 246)"
+                    >
+                    <p>
+                        &lt;h1&gt; Heading1 &lt;/h1&gt;<br>
+                        &lt;h2&gt; Heading2 &lt;/h2&gt;<br>
+                        .<br>
+                        .<br>
+                        .<br>
+                        &lt;h6&gt; Heading6 &lt;/h6&gt;
+                    </p>
+
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+        
+         
+        <div *ngIf="elementId2=='code'">
+            <div class="card-body">
+                <ul>
+                    <img src="assets/img/web-designing/html/headings/html-headingscode.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                        alt="html-headingscode.jpg">
+                </ul>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='output'">
+            <div class="card-body">
+                <ul>
+                    <img src="assets/img/web-designing/html/headings/html-headingsoutput.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 50%;"
+                        alt="html-headingsoutput.jpg">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="code" [ngClass]="(elementId2=='code')?'active':''" (click)="tabChange($event)"
+                data-hover="code">code</span>
+            <span class="tab-pill" id="output" [ngClass]="(elementId2=='output')?'active':''"
+                (click)="tabChange($event)" data-hover="output">output</span>
+
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        In <b>HTML (Hypertext Markup Language)</b>, a <b>paragraph</b> is a structural element used to define and display text content as a separate block.
+                    </p>
+                    <p>
+                        It is represented by the <code>&lt;p&gt;</code> tag. 
+                    </p>
+                    <p>
+                        The <code>&lt;p&gt;</code> tag is an opening tag that precedes the text content and a closing tag <code>&lt;/p&gt;</code> that follows the text content.
+                    </p>
+                    <p>
+                        You can have multiple <code>&lt;p&gt;</code> tags in a single HTML document to create several paragraphs of text, each encapsulated within its own <code>&lt;p&gt;</code> opening and closing tags.
+                    </p>
+                  </div>
+                  <div class="card-group">
+                    <div
+                        class="card border-primary" 
+                        style="border: 2px solid; margin: 10px 300px"
+                    >
+                        <div
+                        class="card-header text-center"
+                        style="font-size: large; padding: 15px"
+                        >
+                        <b>Example</b>
+                        </div>
+                        <div
+                        class="card-body text-center"
+                        style="background-color: rgb(216, 240, 246)"
+                        >
+                        <p>
+                            &lt;p&gt;This is the first paragraph.&lt;/p&gt;<br>
+                            <br>
+                            &lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+                        </p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div *ngIf="elementId2=='code'">
+            <div class="card-body">
+                <ul>
+                    <img src="assets/img/web-designing/html/headings/html-paragraphscode.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                        alt="html-paragraphscode.jpg">
+                </ul>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='output'">
+            <div class="card-body">
+                <ul>
+                    <img src="assets/img/web-designing/html/headings/html-paragraphsoutput.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 50%;"
+                        alt="html-paragraphsoutput.jpg">
+                </ul>
+            </div>
+        </div>    
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="tab-title tab-slide-effect">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp 
+                [url]="videoData"
+                [audioData]="audioData"
+                >
+            </app-video-cmp>
+            </div>
+        </div>
+           
+    </div>
+
+</div>

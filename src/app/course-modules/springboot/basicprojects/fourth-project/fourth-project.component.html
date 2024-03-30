@@ -1,0 +1,326 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Apartment-Flat(one-Many relation)- Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of Apartment by using below data
+                        </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>apartment_id - </b>make sure it should not be duplicate and
+                                    should not be empty
+                                    (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>apartment_name - </b> It should not be empty (hint: use "NOT
+                                    NULL CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>no_flats - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")</li>
+                                <li class="card-text"><b>facing - </b>It should be either
+                                    'east','west','north','south'(hint: use "CHECK
+                                    CONSTRAINT")</li>
+                                <li class="card-text"><b>no_floors - </b> It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>isLift - </b> It should be either present or not present & It
+                                    should not be
+                                    empty (hint: use "NOT NULL CONSTRAINT")
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center "><b>Flat Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of Flat by using below data </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>flat_id - </b>make sure it should not be duplicate and should
+                                    not be empty
+                                    (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>owner_name - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")</li>
+                                <li class="card-text"><b>no_bedrooms - </b> It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>facing - </b>It should be either
+                                    'east','west','north','south'(hint: use "CHECK
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>floor - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>isAvailable - </b> It should be either present or not present &
+                                    It should not
+                                    be empty (hint: use "NOT NULL CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>apartment_id - </b>It is connection to the Apartment table
+                                    apartment_id. (hint:
+                                    use "FOREIGN KEY")
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+            </div> <!-- Ending of examples-->
+
+        </div>
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">REST API Requests for Apartment Class</button>
+        </div>
+        
+        <!-- first group -->
+        <div class="card-group">
+        
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value="/apartment/add", method=RequestMethod.POST)</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <p><b>Signature : </b>public boolean addApartment(@RequestBody Apartment aptmnt)</p>
+                <li>The addLaptop is a method which accepts an Apartment object "aptmnt" as request body.</li>
+                <li>Returns "true" if the Laptop object does not exist.</li>
+                <li>Returns "false" if the Laptop object already exists.</li>
+              </div>
+            </div>
+            
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@RequestMapping(value="/apartment/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            
+                <p><b>Signature : </b>public Apartment getApartmentById(@PathVariable int id)</p>
+                <li>The getApartmentById is a method which accepts an integer "id" as path variable.</li>
+                <li>Returns Apartment object if exists.</li>
+                <li>Returns "null" if the Apartment object does not exist.</li>
+              </div>
+            </div>
+        </div>
+        <!-- first group-->
+
+        <!-- Second group -->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@GetMapping("/apartment/getAll")</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <p><b>Signature : </b>public List&lt;Apartment&gt; getAllApartments()</p>
+                <li>The getAllApartments is a method which does not accept anything as parameter.</li>
+                <li>Returns List of all the existing Apartment objects.</li>
+              </div>
+            </div>
+          
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@PutMapping("/apartment/updateName/&lbrace;id&rbrace;")</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+          
+                <p><b>Signature : </b>public Apartment updateNameById(@PathVariable int id,@RequestBody String name)</p>
+                <li>The updateNameById is a method which accepts "id" as path variable and "name" as request body.</li>
+                <li>Returns updated Apartment object if it exists.</li>
+                <li>Returns "null" if the Apartment object does not exist.</li>
+              </div>
+            </div>
+      
+        </div> 
+        <!-- Second group-->
+
+        <!-- Third group -->
+        <div class="card-group">
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value = "/apartment/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+                <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                  <p><b>Signature : </b>public boolean deleteApartmentById(@PathVariable int id)</p>
+                  <li>The deleteApartmentById is a method which accepts integer "id" as path variable.</li>
+                  <li>Returns "true" and deletes if the Apartment object with "id" already exists.</li>
+                  <li>Returns "false" if the Apartment object does not exist.</li>
+              </div>
+            </div>
+        </div>
+        <!--Third group-->
+
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">REST API Requests for Flat Class</button>
+        </div>
+        
+        <!-- first group -->
+        <div class="card-group">
+        
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value="/flat/add", method=RequestMethod.POST)</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <p><b>Signature : </b>public boolean addFlat(@RequestBody Flat flat)</p>
+                <li>The addFlat is a method which accepts an Flat object "flat" as request body.</li>
+                <li>Returns "true" if the Flat object does not exist.</li>
+                <li>Returns "false" if the Flat object already exists.</li>
+              </div>
+            </div>
+            
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@RequestMapping(value="/flat/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            
+                <p><b>Signature : </b>public Flat getFlatById(@PathVariable int id)</p>
+                <li>The getFlatById is a method which accepts an integer "id" as path variable.</li>
+                <li>Returns Flat object if exists.</li>
+                <li>Returns "null" if the Flat object does not exist.</li>
+              </div>
+            </div>
+        </div>
+        <!-- first group-->
+    
+        <!-- Second group -->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@GetMapping("/flat/getAll")</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <p><b>Signature : </b>public List&lt;Flat&gt; getAllFlats()</p>
+                <li>The getAllFlats is a method which does not accept anything as parameter.</li>
+                <li>Returns List of all the existing Flat objects.</li>
+              </div>
+            </div>
+          
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@PutMapping("/flat/updateName/&lbrace;id&rbrace;")</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+          
+                <p><b>Signature : </b>public Flat updateNameById(@PathVariable int id,@RequestBody String name)</p>
+                <li>The updateNameById is a method which accepts "id" as path variable and "name" as request body.</li>
+                <li>Returns updated Flat object if it exists.</li>
+                <li>Returns "null" if the Flat object does not exist.</li>
+              </div>
+            </div>
+      
+        </div> 
+        <!-- Second group-->
+    
+        <!-- Third group -->
+        <div class="card-group">
+    
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value = "/flat/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+                <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                  <p><b>Signature : </b>public boolean deleteFlat(@PathVariable int id)</p>
+                  <li>The deleteFlat is a method which accepts integer "id" as path variable.</li>
+                  <li>Returns "true" if the Flat object with "id" already exists.</li>
+                  <li>Returns "false" if the Flat object does not exist.</li>
+              </div>
+            </div>
+    
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center "><b>@RequestMapping(value="/flat/getByApartment/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              
+                  <p><b>Signature : </b>public List&lt;Flat&gt; getFlatByApartmentId(@PathVariable int id)</p>
+                  <li>The getFlatByApartmentId is a method which accepts an integer "id" as path variable.</li>
+                  <li>Returns List of Flat objects with apartment_id equal to "id".</li>
+                </div>
+            </div>
+        
+        </div>
+        <!--Third group-->
+    </div>
+    
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''"
+                    (click)="subTabChange($event)" data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+                <span class="tab-pill" id="controller" [ngClass]="(elementId2=='controller')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Controller"> Controller</span>
+                <span class="tab-pill" id="service" [ngClass]="(elementId2=='service')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Service">Service</span>
+                <span class="tab-pill" id="repository" [ngClass]="(elementId2=='repository')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Repository">Repository</span>
+                <span class="tab-pill" id="properties" [ngClass]="(elementId2=='properties')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Properties">Properties</span>
+                <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Pom.Xml file">Pom.Xml file</span>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='pojo'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Apartment POJO Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/OnetoMany.example1.apartment.pojo.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Flat POJO Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/OnetoMany.example1.flat.pojo.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='controller'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Controller</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='service'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Service</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card-group" *ngIf="elementId2=='repository'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Repository</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card-group" *ngIf="elementId2=='properties'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Properties</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card-group" *ngIf="elementId2=='pom.xml'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

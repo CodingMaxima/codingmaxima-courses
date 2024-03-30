@@ -1,0 +1,425 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Asynchronous Javascript</h3>
+
+  <div class="card border-warning mt-4" style="border: 3px solid">
+   <p class="content-text">
+          Asynchronous JavaScript is a programming model that allows you to
+          execute tasks in a non-blocking manner, that means your code can
+          continue to run without waiting for a particular task to complete.
+          This is particularly important in web development, where many
+          operations, such as fetching data from a server or handling user
+          input, can take time to complete. By using asynchronous JavaScript,
+          you can improve the overall responsiveness and user experience of your
+          web applications.</p>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Callback functions</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <li>
+              Callback functions are a fundamental part of asynchronous
+              JavaScript. They are functions that are passed as arguments to
+              other functions and are executed at a later time, often when an
+              asynchronous operation completes. Callbacks allow you to specify
+              what should happen once the operation is finished.
+            </li>
+            <br />
+            <li>
+              In JavaScript, functions are treated as variables, passed as
+              arguments to other functions, and returned from other functions.
+              This feature allows us to use functions as callback functions.
+            </li>
+            <br />
+
+            <li>
+              Callback functions are used when you want to specify what should
+              happen after a certain task is completed. They are commonly used
+              in scenarios such as handling user interactions, making HTTP
+              requests, or working with timers.
+            </li>
+            <br />
+            <p>
+              <b><u>Example</u></b>
+            </p>
+            <p class="text-muted">
+              // Function that takes two numbers and a callback function to
+              perform an operation
+            </p>
+            <P style="font-weight: bold"
+              >function performOperation(x, y, calculation) {{ "{" }}</P
+            >
+            <pre style="font-weight: bold; font-size: large">
+  const result = calculation(x, y);</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+  console.log("The result is:", result);</pre
+            >
+            <p style="font-weight: bold">{{ "}" }}</p>
+
+            <p class="text-muted">// Callback function to add two numbers</p>
+            <p style="font-weight: bold">function add(x, y) {{ "{" }}</p>
+            <pre style="font-weight: bold; font-size: large">
+  return x + y;</pre
+            >
+            <p style="font-weight: bold">{{ "}" }}</p>
+
+            <p class="text-muted">
+              // Callback function to subtract two numbers
+            </p>
+            <p style="font-weight: bold">function subtract(x, y) {{ "{" }}</p>
+            <pre style="font-weight: bold; font-size: large">
+  return x - y;</pre
+            >
+            <p style="font-weight: bold">{{ "}" }}</p>
+
+            <p class="text-muted">
+              // Using the performOperation function with different callback
+              functions
+            </p>
+            <p style="font-weight: bold">performOperation(5, 3, add);</p>
+            <p class="text-muted">// Output: The result is: 8</p>
+            <p style="font-weight: bold">performOperation(10, 4, subtract);</p>
+            <p class="text-muted">// Output: The result is: 6</p>
+            <br />
+            <li>
+              From the above example We have a <b>performOperation</b> function
+              that takes two numbers (<b>x</b> and <b>y</b>) and a callback
+              function (<b>calculation</b>) as arguments.
+            </li>
+            <br />
+
+            <li>
+              Inside <b>performOperation</b>, we call the
+              <b>calculation</b> function with <b>x</b> and <b>y</b>, and then
+              we log the result to the console.
+            </li>
+            <br />
+
+            <li>
+              We define two callback functions: <b>add</b> and <b>subtract</b>,
+              which perform addition and subtraction operations, respectively.
+            </li>
+            <br />
+
+            <li>
+              We use the performOperation function with different callback
+              functions to demonstrate its flexibility. When we pass
+              <b>add</b> as the callback, it performs addition, and when we pass
+              <b>subtract</b>, it performs subtraction.
+            </li>
+            <br />
+            <li>
+              The above example shows that how we can use callback functions to
+              pass behavior as an argument to another function. Depending on the
+              callback function you provide, the performOperation function can
+              perform different operations.
+            </li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Promises</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <li>
+              Promises provide a more structured and readable way to work with
+              asynchronous operations compared to callback functions. A promise
+              represents a value that may not be available yet but will be
+              resolved in the future, either successfully (fulfilled) or with an
+              error (rejected).
+            </li>
+            <br />
+            <li>
+              A Promise in JavaScript represents a proxy for a value that may
+              not be available when the promise is created but will be resolved
+              at some point in the future. Promises provide a way to handle
+              asynchronous operations, such as reading a file, making an HTTP
+              request, or waiting for a timer to complete. Promises are
+              especially useful when dealing with code that relies on the result
+              of an asynchronous operation.
+            </li>
+            <br />
+            <p>
+              A promise has three states:
+
+              <li>
+                <b>Pending:</b> The initial state, neither fulfilled nor
+                rejected.
+              </li>
+              <li>
+                <b>Fulfilled (Resolved):</b> The operation completed
+                successfully, and a result is available.
+              </li>
+              <li>
+                <b>Rejected:</b> The operation encountered an error, and an
+                error reason is available.
+              </li>
+            </p>
+            <p>
+              <b><u>Example</u></b>
+            </p>
+            <p class="text-muted">
+              // Simulate fetching data from a server asynchronously
+            </p>
+            <p style="font-weight: bold">function fetchData() {{ "{" }}</p>
+            <pre style="font-weight: bold; font-size: large">
+  return new Promise((resolve, reject) => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    setTimeout(() => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+      const data = {{ "{" }} message: "Data fetched successfully"
+              {{ "}" }};
+            </pre>
+            <pre style="font-weight: bold; font-size: large">
+      const error = null; // No error in this case</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+      if (error) {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+        reject(error); // Simulate an error</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+      {{ "}" }} else {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    resolve(data); // Resolve the promise with the data</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+      {{ "}" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    {{ "}" }}, 2000); // Simulate a 2-second delay</pre
+            >
+            <pre style="font-weight: bold; font-size: large">  {{ "}" }});</pre>
+            <p style="font-weight: bold">{{ "}" }}</p>
+
+            <p class="text-muted">
+              // Using the fetchData function with promises
+            </p>
+            <p style="font-weight: bold">console.log("Fetching data...");</p>
+
+            <p style="font-weight: bold">fetchData()</p>
+            <pre style="font-weight: bold; font-size: large">
+  .then((data) => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    console.log("Data:", data.message);</pre
+            >
+            <pre style="font-weight: bold; font-size: large">  {{ "}" }})</pre>
+            <pre style="font-weight: bold; font-size: large">
+  .catch((error) => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    console.error("Error:", error);</pre
+            >
+            <pre style="font-weight: bold; font-size: large">  {{ "}" }})</pre>
+            <pre style="font-weight: bold; font-size: large">
+  .finally(() => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    console.log("Data fetching completed.");</pre
+            >
+            <pre style="font-weight: bold; font-size: large">  {{ "}" }});</pre>
+            <br />
+            <li>
+              We define a <b>fetchData</b> function that returns a promise.
+              Inside the promise constructor, we use <b>setTimeout</b> to
+              simulate a 2-second delay before resolving the promise with some
+              data.
+            </li>
+            <br />
+
+            <li>
+              We also simulate the possibility of an <b>error</b> by including
+              an error variable. In this case, we set it to <b>null</b> to
+              simulate a successful fetch.
+            </li>
+            <br />
+
+            <li>
+              We use the <b>fetchData</b> function by calling it and then
+              chaining <b>.then()</b> to handle the successful resolution of the
+              promise and <b>.catch()</b> to handle any errors.
+            </li>
+            <br />
+
+            <li>
+              In the <b>.then()</b> block, we log the fetched data if the
+              promise was resolved successfully.
+            </li>
+            <br />
+
+            <li>
+              In the <b>.catch()</b> block, we log the error if the promise was
+              rejected.
+            </li>
+            <br />
+
+            <li>
+              We also use <b>.finally()</b> to specify code that should be
+              executed regardless of whether the promise was resolved or
+              rejected. In this case, it simply logs that data fetching has
+              completed.
+            </li>
+            <br />
+            <p class="text-muted">OUTPUT</p>
+            <p style="font-weight: bold">Fetching data...</p>
+            <p style="font-weight: bold">Data: Data fetched successfully</p>
+            <p style="font-weight: bold">Data fetching completed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px 100px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>async and await</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(255, 239, 209); font-size: large"
+          >
+            <li>
+              In JavaScript, async and await are used to work with asynchronous
+              code in a more synchronous and readable manner. They are part of
+              the ECMAScript 2017 (ES8) specification and provide a way to write
+              asynchronous code that looks similar to synchronous code, making
+              it easier to understand and maintain.
+            </li>
+            <br />
+            <li>
+              <b>async Function:</b> The async keyword is used to declare a
+              function as asynchronous. When a function is marked as async, it
+              means it will always return a promise, and you can use the await
+              keyword inside the function to pause the execution and wait for
+              promises to resolve.
+            </li>
+            <br />
+            <li>
+              <b>await Keyword:</b> The await keyword is used inside an async
+              function to pause the execution of the function until a promise is
+              resolved. It can only be used inside an async function, and it
+              provides a more synchronous way to work with asynchronous code.
+            </li>
+            <br />
+            <p>
+              <b><u>Example</u></b>
+            </p>
+            <p class="text-muted">
+              // Simulate an asynchronous function that returns a promise
+            </p>
+            <p style="font-weight: bold">function fetchData() {{ "{" }}</p>
+            <pre style="font-weight: bold; font-size: large">
+  return new Promise((resolve) => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    setTimeout(() => {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+      resolve("Data fetched successfully");</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    {{ "}" }}, 2000); // Simulate a 2-second delay</pre
+            >
+            <pre style="font-weight: bold; font-size: large">  {{ "}" }});</pre>
+            <p style="font-weight: bold">{{ "}" }}</p>
+
+            <p class="text-muted">
+              // An async function that uses the await keyword
+            </p>
+            <p style="font-weight: bold">
+              async function fetchDataAsync() {{ "{" }}
+            </p>
+            <pre style="font-weight: bold; font-size: large">
+  console.log("Fetching data...");</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+  try {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    const result = await fetchData(); </pre
+            >
+            <p class="text-muted">// Wait for the promise to resolve</p>
+            <pre style="font-weight: bold; font-size: large">
+    console.log(result);</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+  {{ "}" }} catch (error) {{ "{" }}</pre
+            >
+            <pre style="font-weight: bold; font-size: large">
+    console.error("Error:", error);</pre
+            >
+            <pre style="font-weight: bold; font-size: large">  {{ "}" }}</pre>
+            <pre style="font-weight: bold; font-size: large">
+  console.log("Data fetching completed.");</pre
+            >
+            <p style="font-weight: bold">{{ "}" }}</p>
+
+            <p class="text-muted">// Call the async function</p>
+            <p style="font-weight: bold">fetchDataAsync();</p>
+            <li>
+              We define a <b>fetchData</b> function that returns a promise and
+              simulates a 2-second delay before resolving the promise with a
+              success message.
+            </li>
+            <br />
+
+            <li>
+              We declare an <b>async</b> function called <b>fetchDataAsync</b>.
+              Inside this function, we use the <b>await</b> keyword to pause the
+              execution of the function until the <b>fetchData</b> promise is
+              resolved.
+            </li>
+            <br />
+
+            <li>
+              We use a <b>try...catch</b> block to handle potential errors that
+              might occur during the promise resolution. If an error occurs, it
+              will be caught and logged in the <b>catch</b> block.
+            </li>
+            <br />
+
+            <li>
+              Finally, we call the <b>fetchDataAsync</b> function to start the
+              asynchronous operation.
+            </li>
+            <br />
+            <p class="text-muted">OUTPUT</p>
+            <p style="font-weight: bold">Fetching data...</p>
+            <p style="font-weight: bold">Data: Data fetched successfully</p>
+            <p style="font-weight: bold">Data fetching completed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

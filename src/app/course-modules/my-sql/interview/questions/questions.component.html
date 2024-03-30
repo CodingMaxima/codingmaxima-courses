@@ -1,0 +1,165 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Interview Questions</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Theory Questions">Theory Questions</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Example Queries">Example Queries</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-1</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are my-sql Languages?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>
+                        <li><b>DDL - </b>Data Definition Language</li>
+                        <li><b>DML -</b> Data Manipulation Language</li>
+                        <li><b>DQL -</b> Data Query Language</li>
+                        <li><b>DCL -</b> Data Control Language</li>
+                    </p>
+                </div>
+            </div><!--end of Question1-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-2</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b> what are DDL, DML, DQL, DCL?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>
+                        <li>
+                            <b>DDL : </b>Used for creating or modifying database objects such as Tables, Indexes and
+                            users.
+                            <b>Ex:</b> Create, Modify, Delete
+                        </li>
+                        <li><b>DML:</b> Used for manipulating the existing data in the database.
+                            <b> Ex:</b> Insert, Update
+                        </li>
+                        <li><b>DQL:</b> Used for querying the data from the database
+                            <b> Ex: </b>Select
+                        </li>
+                        <li><b>DCL:</b> Used to control the access to the data stored in database.
+                            <b> Ex:</b>Grant, Revoke
+                        </li>
+                    </p>
+                </div>
+            </div><!--end of question2-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-3</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>SQL Relations ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>One-One</li>
+                    <li style='font-size: medium; font-style: oblique;'>One-Many</li>
+                    <li style='font-size: medium; font-style: oblique;'>Many-Many</li>
+                </div>
+            </div><!--end of question3-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-4</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are Triggers?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>Set of instructions which are executed when a
+                        particular event is occurred.</p>
+                </div>
+            </div><!--end of question4-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-5</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are Joins?</b></p>
+                    <p style='font-size: medium; font-style: oblique;'>A join clause is used to combine rows from two
+                        or more tables based on related column between them.
+                        <li><b>Inner join:-</b>It will returns all the records matching values from both the tables.
+                        </li>
+                        <li><b>Left Join:- </b>It will returns all the records from left table and matched records from
+                            the right table.</li>
+                        <li><b>Right Join:-</b> It will returns all the records from right table and matched records
+                            from the left table.</li>
+                    </p>
+                </div>
+            </div><!--end of question5-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-6</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b>What are stored procedures ?</b></p>
+                    <li style='font-size: medium; font-style: oblique;'>Stored procrdures are prepared SQL code that you
+                        can save. so that code can be reused over and over again.</li>
+                    <li style='font-size: medium; font-style: oblique;'>These are used when any SQL queries have to
+                        write over and over again.then nthe code can be saved as stored procedure and then just call it
+                        to execute it.</li>
+                    <li style='font-size: medium; font-style: oblique;'>Parameters can also be passed to stored
+                        procedures.so they act based on the parameter values that is passed </li><br>
+                    <p><b>Syntax: </b> CREATE PROCEDURE procedure_name AS sql_statement Go;</p>
+                    <p>For executing the stored procedures. <b>Syntax: </b> EXEC procedure_name;</p>
+                </div>
+            </div><!--end of question6-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-7</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <p style='font-size: medium; font-style: oblique;'></p>
+                </div>
+            </div><!--end of question7-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-8</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question8-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-9</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question9-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-10</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <p style='font-size: medium; font-style: oblique;'></p>
+                </div>
+            </div><!--end of question10-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-11</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question11-->
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center" style='font-size: large'><b>Question-12</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                    <li style='font-size: medium; font-style: oblique;'></li>
+                </div>
+            </div><!--end of question12-->
+
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color: rgb(235, 210, 247);">
+                    <p style='font-size: large; font-style: inherit;'><b>Write a query to create and insert the values
+                            in the table?</b></p>
+                    <p style='font-size: large; font-style: inherit;'><b>Write a query to get the manager name from a
+                            employee table which is having empid,empname and managerid as columns?</b>
+                    <p style='font-size: large; font-style: inherit;'><b>Write a query to get nth highest salary of
+                            employee?</b></p>
+                    <p style='font-size: large; font-style: inherit;'><b></b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

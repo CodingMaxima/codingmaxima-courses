@@ -1,0 +1,72 @@
+.tab-title{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    span{
+      padding: 10px 10px;
+      padding-top: 20px;
+      margin: 0px 5px;
+      cursor: pointer;
+    }
+    .tab-pill {
+      background: linear-gradient( to right, #b500d8, #f5e8fc ), 
+                linear-gradient( to right, #b500d8 -6.56%, #f5e8fc 122.43% );
+      background-size: 94% 2px, 0px 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+      padding: 15px 15px 10px 15px;
+      font-weight: 600;
+      font-size: 17px;
+      color: #282828;
+      &.active{
+        background-size: 0 2px, 100% 3px;
+        cursor: pointer;
+        color: #000000;
+      }
+    }
+}
+
+.tab-slide-effect {
+  span {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px 0;
+    background: #ffffff;
+    box-shadow: inset 0 3px #ffffff;
+    transition: background 0.9s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+  }
+  span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5e8fc;
+    color: #b500d8;
+    content: attr(data-hover);
+    transform: rotateX(270deg);
+    transition: transform 0.7s;
+    transform-origin: 0 0;
+    pointer-events: none;
+    padding-top: 13px;
+    padding-left: 13px;
+    border-radius: 15px;
+  }
+}
+
+.tab-pill.active{
+	background: #ffffff!important;
+}
+
+.tab-slide-effect .tab-pill.active::before {
+	-webkit-transform: rotateX(10deg);	
+	-moz-transform: rotateX(10deg);
+	transform: rotateX(10deg);
+}

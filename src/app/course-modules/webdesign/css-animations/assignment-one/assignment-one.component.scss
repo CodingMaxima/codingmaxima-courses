@@ -1,0 +1,31 @@
+.custom-card{
+    box-shadow: 0px -1px 10px 1px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+    width: 50%;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+.move-left-and-right-animation{
+    animation-name: leftandright;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.boxshadow-animation{
+    animation-name: boxshadow;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes leftandright {
+    from {margin-left: 40%;}
+    to {margin-left: 30px;}
+}
+@keyframes boxshadow {
+    from {box-shadow: 0px 8px 10px 2px rgb(0 0 0 / 75%);}
+    to {box-shadow: 0px 40px 10px 2px rgb(0 0 0 / 75%);}
+}

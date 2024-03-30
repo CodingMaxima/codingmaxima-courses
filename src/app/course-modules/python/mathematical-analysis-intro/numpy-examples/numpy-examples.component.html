@@ -1,0 +1,332 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">NumPy Examples</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''"
+            (click)="tabChange($event)" data-hover="Reshaping Filtering and Boolean Indexing">Reshaping Filtering and Boolean Indexing</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="More Examples">More Examples</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style="font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            NumPy (Numerical Python) is a powerful library in Python for numerical computing. It provides efficient and convenient data structures and functions for working with large arrays and matrices.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            With NumPy, you can perform mathematical operations, reshape arrays, apply filters, and perform various statistical computations easily.
+                        </button>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Creating NumPy Arrays</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                                NumPy arrays can be created from Python lists or by using built-in functions. Here are some examples:
+                            </p>
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+# From a Python list
+my_list = [1, 2, 3, 4, 5]
+arr = np.array(my_list)
+
+# Using built-in functions
+zeros_arr = np.zeros(5)
+ones_arr = np.ones((3, 4))
+random_arr = np.random.rand(2, 3)
+</pre>
+                            <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                                NumPy arrays provide attributes like shape, size, and dtype to access information about the array.
+                            </p>
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+arr = np.array([1, 2, 3, 4, 5])
+print(arr.shape)  # Prints the shape of the array
+print(arr.size)  # Prints the number of elements in the array
+print(arr.dtype)  # Prints the data type of the array
+</pre>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Array Operations</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                                NumPy provides a wide range of mathematical and logical operations that can be performed on arrays.
+                                 These operations can be performed element-wise or on the entire array.
+                            </p>
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+arr = np.array([1, 2, 3, 4, 5])
+
+# Mathematical operations
+print(np.mean(arr))  # Compute the mean
+print(np.max(arr))  # Find the maximum value
+print(np.sum(arr))  # Calculate the sum
+
+# Logical operations
+bool_arr = arr > 3  # Create a boolean array based on a condition
+print(arr[bool_arr])  # Filter the array based on the boolean array
+
+# Element-wise addition
+c = a + b
+print(c)  # Output: [5 7 9]
+
+# Element-wise multiplication
+d = a * b
+print(d)  # Output: [4 10 18]
+
+# Dot product
+e = np.dot(a, b)
+print(e)  # Output: 32
+</pre>
+                            <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                                NumPy also supports array broadcasting, which allows element-wise operations between arrays with different shapes.
+                            </p>
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+arr = np.array([1, 2, 3])
+scalar = 2
+
+result = arr + scalar
+print(result)
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Reshaping Arrays</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy provides functions to reshape arrays, allowing you to change their dimensions while maintaining the same number of elements. Reshaping can be useful when you want to convert an array from one shape to another or when you want to combine or split arrays.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Reshape the array to a single row
+b = np.reshape(a, (1, 6))
+print(b)
+# Output: [[1 2 3 4 5 6]]
+
+# Reshape the array to a single column
+c = np.reshape(a, (6, 1))
+print(c)
+# Output:
+# [[1]
+#  [2]
+#  [3]
+#  [4]
+#  [5]
+#  [6]]            
+</pre>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Filtering and Boolean Indexing</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy allows you to filter arrays based on specific conditions or boolean indexing. This enables you to extract elements from an array that satisfy certain criteria.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+# Filter the array for even numbers
+even_nums = a[a % 2 == 0]
+print(even_nums)
+# Output: [2 4]
+
+# Filter the array for numbers greater than 3
+greater_than_3 = a[a > 3]
+print(greater_than_3)
+# Output: [4 5]             
+</pre>
+                </div>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        Boolean indexing allows you to create a boolean mask based on a condition and use it to extract the corresponding elements from the array.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+# Create a boolean mask based on a condition
+mask = a > 2
+
+# Use the mask to filter the array
+filtered_array = a[mask]
+print(filtered_array)
+# Output: [3 4 5]                                  
+</pre>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        You can combine multiple conditions using logical operators such as '&' (and) and '|' (or) to create more complex filters.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+# Filter the array for even numbers
+even_nums = a[a % 2 == 0]
+print(even_nums)
+# Output: [2 4]
+
+# Filter the array for numbers greater than 3
+greater_than_3 = a[a > 3]
+print(greater_than_3)
+# Output: [4 5]             
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Array Functions</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy provides a wide range of built-in functions for various mathematical operations such as trigonometry, logarithms, exponential, statistical calculations, etc.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+# Sum of all elements
+print(np.sum(a))  # Output: 15
+
+# Mean of all elements
+print(np.mean(a))  # Output: 3.0
+
+# Standard deviation
+print(np.std(a))  # Output: 1.41421356
+
+# Element-wise sine
+print(np.sin(a))  # Output: [0.84147098 0.90929743 0.14112001 -0.7568025 -0.95892427]                                 
+</pre>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Array Slicing and Indexing</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy allows easy slicing and indexing of arrays to extract specific elements or sections of an array.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+# Accessing individual elements
+print(a[0])  # Output: 1
+print(a[-1])  # Output: 5
+
+# Slicing
+print(a[1:4])  # Output: [2 3 4]                                   
+</pre>
+                </div>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Broadcasting</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy allows for broadcasting, which is a powerful mechanism for performing operations on arrays with different shapes or dimensions.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([[4, 5, 6], [7, 8, 9]])
+
+# Add a 1-dimensional array to a 2-dimensional array
+c = a + b
+print(c)
+# Output:
+# [[ 5  7  9]
+#  [ 8 10 12]]                                          
+</pre>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Array Iteration</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy provides functions for iterating over arrays, including nditer() and ndenumerate(), which offer efficient ways to traverse arrays.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([[1, 2], [3, 4]])
+
+# Iterate over each element in the array
+for x in np.nditer(a):
+    print(x)
+# Output:
+# 1
+# 2
+# 3
+# 4
+
+# Iterate over each element with its index
+for idx, x in np.ndenumerate(a):
+    print(idx, x)
+# Output:
+# (0, 0) 1
+# (0, 1) 2
+# (1, 0) 3
+# (1, 1) 4                                                        
+</pre>
+                </div>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Linear Algebra</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style="font-size: medium; font-style: oblique;font-weight: 700;">
+                        NumPy provides a comprehensive suite of linear algebra functions, including matrix multiplication, eigenvalues and eigenvectors computation, solving linear equations, and more.
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import numpy as np
+
+a = np.array([[1, 2], [3, 4]])
+b = np.array([2, 4])
+
+# Matrix multiplication
+c = np.matmul(a, b)
+print(c)  # Output: [10 22]
+
+# Eigenvalues and eigenvectors
+eigvals, eigvecs = np.linalg.eig(a)
+print(eigvals)  # Output: [-0.37228132  5.37228132]
+print(eigvecs)
+# Output:
+# [[-0.82456484 -0.41597356]
+#  [ 0.56576746 -0.90937671]]                                 
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

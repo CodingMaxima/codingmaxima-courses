@@ -1,0 +1,17 @@
+.heading{
+    margin-left:40%;
+    margin-top: 10%;
+    font-size: 40px;
+}
+.move-left-and-right-animation{
+    animation-name: leftandright;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes leftandright {
+    from {margin-left: 40%;}
+    to {margin-left: 30px;}
+}

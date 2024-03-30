@@ -1,0 +1,94 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Create Table(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="card border-warning" style="border: 2px solid;">
+                        <div class="card" style="margin: 5px;">
+                            <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                                <p>
+                                    Tables are used to store data in the database. Tables are uniquely named within
+                                    a database and
+                                    schema. Each table contains one or more columns. And each column has an
+                                    associated data type that
+                                    defines the kind of data it can store.
+                                </p>
+
+                                <section id="services" class="services">
+                                    <div class="container">
+
+                                        <div class="row card-group">
+                                            <div class="col-md-6 col-lg-6 col-sm-6 card icon-box">
+                                                <div class="" data-aos="fade-up" data-aos-delay="100">
+                                                    <h4 class="title"><a href="">Create Table Syntax</a></h4>
+                                                    <div class="description">
+                                                        <p> CREATE TABLE table_name(</p>
+                                                        <p style="margin-top: -20px;">column1 datatype,</p>
+                                                        <p style="margin-top: -20px;">column2 datatype,</p>
+                                                        <p style="margin-top: -20px;">column3 datatype,</p>
+                                                        <p style="margin-top: -20px;">column4 datatype,</p>
+                                                        <p style="margin-top: -20px;">column5 datatype,</p>
+                                                        <p style="margin-top: -20px;">column6 datatype,</p>
+                                                        <p style="margin-top: -20px;">.....</p>
+                                                        <p style="margin-top: -20px;">columnN datatype</p>
+                                                        <p style="margin-top: -20px;">);</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-6 col-sm-6 card icon-box">
+                                                <div class="" data-aos="fade-up" data-aos-delay="100">
+                                                    <h4 class="title"><a href="">Create Table Query</a></h4>
+                                                    <div class="description">
+                                                        <p>CREATE TABLE employee (</p>
+                                                        <p style="margin-top: -20px;"> id bigint,</p>
+                                                        <p style="margin-top: -20px;"> first_name varchar(100),</p>
+                                                        <p style="margin-top: -20px;"> middle_name varchar(100),</p>
+                                                        <p style="margin-top: -20px;"> last_name varchar(100),</p>
+                                                        <p style="margin-top: -20px;"> designation varchar(100),</p>
+                                                        <p style="margin-top: -20px;"> salary decimal(10,2),</p>
+                                                        <p style="margin-top: -20px;"> gender varchar(20),</p>
+                                                        <p style="margin-top: -20px;"> age int,</p>
+                                                        <p style="margin-top: -20px;"> isactive boolean,</p>
+                                                        <p style="margin-top: -20px;"> companyname varchar(100),</p>
+                                                        <p style="margin-top: -20px;"> primaryphonenumber bigint,
+                                                        </p>
+                                                        <p style="margin-top: -20px;"> secondaryphonenumber bigint
+                                                        </p>
+                                                        <p style="margin-top: -20px;"> );</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </section><!-- End Services Section -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Ending of problem statement card body-->
+            </div>
+        </div> <!-- Ending of problem statement-->
+    </div>
+    
+    <div *ngIf="elementId=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>              
+          </div>
+          
+    </div>
+</div>

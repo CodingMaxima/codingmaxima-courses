@@ -1,0 +1,125 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Thread Life Cycle</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill">Introduction</span>
+    </div>
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+
+            <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                <div class="text-center">
+                    <img class="img-center" src="assets/img/corejava/threads/tcl.jpg">
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>NEW/BORN</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>This is the state were
+                                new thread begins.The process remains in this condition until the program starts the
+                                thread.Now the thread is not considered alive.</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>RUNNABLE</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>The thread is in running
+                                state after the new thread is started.In this stage the thread is considered to executie
+                                its functions.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>A thread can also return
+                                to this runnable state from waiting / sleeping state.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>In this state the thread
+                                is considered alive.</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>RUNNING</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>The thread is in running
+                                state after it calls the run() method. Now the thread begins the execution.</li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>WAITING / BLOCKED</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>In this state the thread
+                                is alive but it is not eligible to run.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>The thread was not in
+                                runnable state but also it will return to runnable state after sometime <b>Ex:- sleep,
+                                    block, wait</b></li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>DEAD / TERMINATE</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>If the two threads are
+                                waiting for each other forever then that type of infinite waiting is called <b> DEAD
+                                    LOCK</b></li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>In this state once the
+                                run method is completed then it will be terminated. Now the thread will not be alive
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>start()</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>It acts like an heart of
+                                multithreading . Without executing the thread class start method there is no way of
+                                starting the new thread in java.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>In the program whenever
+                                start() is called then a new thread will be created which is responsible for the
+                                execution of the run method.</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>run()</b>
+                        </div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>In this method a new thread won't be created and
+                                this method will be executed just like a normal method call by the main method.</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>yield()</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>It is used to pause the
+                                current executing thread to give the chance for the waiting threads of same priority
+                            </li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>If there is no waiting
+                                thread /all waiting threads with low priority then the same thread will continue
+                                execution.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>If multiple threads are
+                                waiting with same priority then which thread has to be executed will be depends on
+                                thread schedular.</li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>join ()</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>It is used to join one thread with the end of currently running thread / if a thread is executing until the completion of that thread the another thread will goes to waiting state after the completion of that thread this thread will be executed in continution.</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>sleep() </b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>It is the method where thread doesn't want to perform any operation for an particular period of time</li>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>

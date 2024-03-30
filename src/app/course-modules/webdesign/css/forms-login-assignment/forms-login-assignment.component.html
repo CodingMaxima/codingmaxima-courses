@@ -1,0 +1,42 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">CSS Login</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="code and output">code and output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+               <li>Create an html login form with css styles by using the follwing insructions:- </li>
+               <li>labels - email, passward</li>
+                <li>input type, id, name,value</li>
+                <li>Add css styles container as "background-colour: #e0e0e0", "padding: 15px", "width: 50%", "border-radius: 9px", "font-family: san-serif", "font-size: 24px","margin: 0 auto"</li>
+                <li>Add text style center as "text-align: center" </li>
+                <li>Add email-group-label style as "margin-left: 45px"</li>
+                <li>Add submit input margin style as "margin: 0 auto"</li>
+                <li>Add input style as "padding : 10px"</li>
+              </ul>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body">
+            <div class="card-body">
+                <div class="card-group">
+                    <img src="assets/img/web-designing/css/forms/vscodecsslogin.jpg" class="card" style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="vscodecsslogin.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="''"></app-video-cmp>
+        </div>
+    </div>
+</div>

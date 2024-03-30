@@ -1,0 +1,119 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Modules Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problems">Problems</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-lg btn-block">A Python module is a file containing Python
+                            definitions and statements & can define functions, classes variables.</button>
+                        <button type="button" class="btn btn-lg btn-block"> A module can
+                            also include runnable code &
+                            Grouping related code into a module makes the code easier to
+                            understand and use. </button>
+                        <button type="button" class="btn btn-lg btn-block">Module allows code the to origanize
+                            logically.</button>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>module creation and utilization</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <li style='font-size: medium; font-style: oblique;'>For creating the module to save the code
+                                in a file along with the filename use the extension as <b>.py</b></li><br>
+                            <p style='font-size: medium; font-style: oblique;'><b>Example:-</b></p>
+                            <p style='font-size: medium; font-style: oblique;'>file name of module is maximamodule.py
+                            </p>
+                            <p>def wishing(customername):</p>
+                            <pre>     print("welcome to the store " + name)</pre>
+                            <p style='font-size: medium; font-style: oblique;'>We can also add variables in the module
+                                and can operate that into the other module.</p>
+                            <p style='font-size: medium; font-style: oblique;'><b>By using the functions from the module
+                                    the syntax: module_name.function_name.</b></p>
+                            <p style='font-size: medium; font-style: oblique;'> The code present in the one module can
+                                be used in another module by importing the name of the module which we need.</p>
+                            <p style='font-size: medium; font-style: oblique;'><b>Example:-</b></p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p>import maximamodule</p>
+                            <p>maximamodule.wishing("Mr.pardeep")</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p>welcome to the store Mr.pardeep</p>
+                            <p>By importing the maximamodule into this module we no need to use the code again by
+                                writting the import name the compiler will automatically use that code. </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Naming the emodule</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+                            <li style=' font-size: medium; font-style: oblique;'>We can also rename the module like how
+                                we want to name.
+                            </li>
+                            <li style=' font-size: medium; font-style: oblique;'>For renamming have to use the <b>as
+                                </b> Keyword</li><br>
+                            <p style='font-size: medium; font-style: oblique;'><b>Example:-</b></p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p>import maximamodule as mm</p>
+                            <p>a = mm.wishing("Mr.pardeep")</p>
+                            <p>print(a)</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p>welcome to the store Mr.pardeep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Built-in modules </b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+                            <li style='font-size: medium; font-style: oblique;'>There are many bilt-in modules present
+                                in the python we can easily import them and can use them. so,no need to create an module
+                                for some functions</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>importing from the modules</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <li style='font-size: medium; font-style: oblique;'>Here we can use entire module or else
+                                small parts from the module can also be taken. in the same package</li>
+                            <li style='font-size: medium; font-style: oblique;'>For importing them have to use
+                                <b>from</b> keyword
+                            </li>
+                            <li style='font-size: medium; font-style: oblique;'>example syntax: from nameofmodule import
+                                specifythezfunction </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Third-Party Modules</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Third-party modules are created by external
+                                 developers and are not part of the Python
+                                  standard library. They provide additional
+                                   functionalities and features that are not available in the built-in modules.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Examples of popular third-party modules include <b>'numpy'</b> for numerical computing,
+                                 <b>'pandas'</b> for data manipulation and analysis, <b>'matplotlib'</b> for data visualization,
+                                  <b>'requests'</b> for making HTTP requests, and many more. To use third-party modules,
+                                   you typically need to install them separately using package managers like pip.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

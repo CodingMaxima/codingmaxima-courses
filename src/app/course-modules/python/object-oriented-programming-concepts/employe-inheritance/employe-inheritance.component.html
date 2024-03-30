@@ -1,0 +1,29 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Single Inheritance Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="introduction">introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+
+                <div class="article">
+                    <p></p>
+                </div>
+
+                <img class="program-img-fit" src="assets/img/python/oops/emp.jpg">
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            
+        </div>
+    </div>
+
+</div>

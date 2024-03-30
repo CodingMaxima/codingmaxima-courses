@@ -1,0 +1,86 @@
+
+<div class="card card-body">
+  <h3 class="global-component-heading"> Git Vs Load</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill">Introduction</span>
+  </div>
+
+  <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+              <div class="text-center">
+
+                  <p>
+                        In hibernate, get() and load() are two methods which is used to fetch data for
+                    the given identifier. They both belong to Hibernate session class. Get()
+                    method return null, If no row is available in the session cache or the
+                    database for the given identifier whereas load() method throws object not
+                    found exception.
+
+                  </p>
+
+                    <div style="padding: 10px;" class="text-center">
+                      <h4>Diffrence between Get and Load</h4>
+                     </div>
+
+                     <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th>Sr.No.</th>
+                              <th>Key</th>
+                              <th>Get()</th>
+                              <th>Load()</th>
+
+
+                          </tr>
+                      </thead>
+                      <tr>
+                          <td>1</td>
+                          <td>Basic</td>
+                          <td>It is used to fetch data from the database for the given identifier</td>
+                          <td>It is also used to fetch data from thedatabase for thegiven identifier</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Null Object </td>
+                          <td>It object not found for the givenidentifier then it will return null
+                              object</td>
+                          <td>It will throw object not found exception </td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>Lazy or Eager loading</td>
+                          <td>It returns fully initialized object so this method eager load the object</td>
+                          <td>It always returns proxy object so this method is lazy load the object</td>
+                          
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>Performance</td>
+                          <td>It is slower than load() because it return fully initialized object which impact the performance of
+                              the application</td>
+                          <td>It is slightly faster.</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>Use Case</td>
+                          <td>If you are not sure that object exist then use get() method</td>
+                          <td>If you are sure that object exist then use load() method</td>
+                      </tr>
+                     
+                  </table>
+
+                 
+
+                  
+                
+
+
+              
+                   
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

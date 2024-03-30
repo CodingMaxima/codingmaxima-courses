@@ -1,0 +1,130 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">typeconversion</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          Type conversions, also known as type casting, refer to the process of
+          converting a value from one data type to another data type. This is a
+          common operation in programming, especially when dealing with
+          variables or functions that expect values of a certain data type.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            In Java, there are two types of type conversions:
+            <b>implicit and explicit.</b>
+          </p>
+          <p>
+            <b><u>Implicit type conversion(widening conversion): </u></b> It
+            occurs when a value of a smaller data type is automatically promoted
+            to a larger data type. For example, if you assign an
+            <code>int</code> value to a <code>long</code> variable, Java will
+            automatically convert the <code>int</code> value to a
+            <code>long</code> value. This is because <code>long</code> is a
+            larger data type than <code>int</code>.
+          </p>
+          <pre style="font-size: large">   <b> Example:-</b>    int i = 5;</pre>
+          <pre style="font-size: large">
+                double d = i; // implicit type conversion from int to double
+                                          
+                                    </pre
+          >
+          <p>
+            In this example, the integer value i is implicitly converted to a
+            double value by assigning it to the variable d. The resulting value
+            of d is 5.0.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <b><u> Note:-</u></b> conversion happens automatically by the Java
+            compiler because a double data type can represent larger range of
+            values than an int data type. This means that no additional code is
+            needed to perform the implicit type conversion in this case.
+          </p>
+        </button>
+
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <b><u>Explicit type conversion(narrowing conversion):</u></b> It
+            occurs when you manually convert a value of one data type to another
+            using casting. This is necessary when you want to convert a value of
+            a larger data type to a smaller data type, or when you want to
+            convert a value of one data type to another data type that is not
+            automatically converted by Java. For example, if you have a
+            <code>double</code> value and you want to convert it to an
+            <code>int</code> value, you can use explicit type conversion.
+          </p>
+
+          <pre
+            style="font-size: large"
+          >   <b> Example:-</b>    double d = 3.14159;  </pre>
+          <pre style="font-size: large">
+                 int i = (int) d; // explicit type casting from double to int
+                                          </pre
+          >
+          <p>
+            From the above example double value d is explicitly casted to an int
+            value by placing (int) in front of the d variable. The resulting
+            value of i is 3. Note that the decimal portion of the double value
+            is lost in the conversion to int.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <b><u>Note:-</u></b
+          >when a value is cast to a smaller data type, information can be lost.
+          For example, if you cast a <code>double</code> value to an
+          <code>int</code> value, any decimal points in the <code>double</code>
+          value will be truncated. Therefore, you should be careful when using
+          explicit type conversions to avoid unexpected results or errors in
+          your code.
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/type_conversions.jpg"
+        alt="program"
+      />
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

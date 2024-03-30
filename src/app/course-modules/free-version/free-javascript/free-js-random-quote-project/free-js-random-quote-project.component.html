@@ -1,0 +1,145 @@
+<div class="card card-body my-3">
+    <h3 class="global-component-heading">Random quotes</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="one"
+        [ngClass]="elementId == 'one' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem Statement"
+        >Problem Statement</span
+      >
+      <span
+        class="global-tab-pill"
+        id="two"
+        [ngClass]="elementId == 'two' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation video</span
+      >
+    </div>
+    <div *ngIf="elementId == 'one'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <div class="content-heading mt-4">Project</div>
+        <img
+          style="margin: 0 auto; padding-top: 10px; height: auto; width: 100%"
+          src="assets/img/javascript/projects/randomquotes.gif"
+        />
+  
+        <div class="content-heading mt-4">Project Description</div>
+        <div class="content-text">
+          This project is a "Random Quotes" web application that generates and
+          displays a collection of inspiring and motivational quotes in a visually
+          appealing and interactive format. Developed using HTML, CSS, and
+          JavaScript, this application offers users a refreshing experience by
+          presenting them with insightful quotes accompanied by vibrant background
+          colors.
+        </div>
+        <div class="content-heading">Features</div>
+  
+        <div class="content-text">
+          <li>
+            <b>Random Quote Display:</b> The central feature of the application is
+            the dynamic display of random quotes. Users can click the "Regenerate
+            Quotes" button to refresh the content with a new set of random quotes.
+          </li>
+  
+          <li>
+            <b>Variety of Quotes: </b>The application includes a diverse
+            collection of quotes that cover themes such as success, motivation,
+            friendship, education, and more. Each time the button is clicked, a
+            fresh assortment of quotes is presented.
+          </li>
+  
+          <li>
+            <b> Colorful Visuals:</b> To enhance the user experience, each quote
+            is displayed against a background color from a predefined palette.
+            These colors create a visually pleasing and engaging interface.
+          </li>
+  
+          <li>
+            <b>Responsive Design:</b> The application's design is responsive,
+            ensuring seamless functionality across various devices and screen
+            sizes.
+          </li>
+  
+          <li>
+            <b>Easy Interaction:</b> Users can effortlessly generate new sets of
+            quotes by clicking the "Regenerate Quotes" button. This simple
+            interaction encourages users to explore different motivational
+            messages.
+          </li>
+  
+          <li>
+            <b> Quote Variety:</b> With a wide range of quotes covering various
+            topics, users can find inspiration, motivation, and wisdom from
+            different perspectives.
+          </li>
+        </div>
+        <div class="content-heading">Implementation</div>
+  
+        <div class="content-text">
+          <li>
+            <b> HTML Structure:</b> The HTML structure defines the layout of the
+            application. It includes a header with the project's title and a box
+            containing the random quotes section.
+          </li>
+  
+          <li>
+            <b>CSS Styling:</b> CSS is used to style the application, creating an
+            attractive design for the header, box, and quote elements. The
+            background colors are applied to quotes, creating a vibrant visual
+            impact.
+          </li>
+          <li>
+            <b> JavaScript Logic:</b> JavaScript is responsible for generating and
+            displaying random quotes. It also handles the color assignment and
+            manages the interaction with the "Regenerate Quotes" button.
+          </li>
+  
+          <li>
+            <b> Quote Array:</b> An array named quotes contains a diverse
+            collection of quotes that will be randomly displayed to the user.
+          </li>
+  
+          <li>
+            <b> Color Palette:</b> The colors array provides a palette of
+            background colors that are randomly assigned to each quote, creating
+            an engaging visual experience.
+          </li>
+  
+          <li>
+            <b> Random Quote Generation: </b>The displayRandomQuotes function
+            selects a random subset of quotes and associates them with random
+            colors. It then creates p elements for each quote and appends them to
+            the HTML.
+          </li>
+  
+          <li>
+            <b> Random Index Generation:</b> The getRandomIndexes function
+            generates random indexes to select quotes from the quotes array
+            without repetition.
+          </li>
+  
+          <li>
+            <b> Event Listener:</b> The "Regenerate Quotes" button has an event
+            listener attached to it, enabling users to generate new quotes by
+            clicking the button.
+          </li>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="elementId == 'two'">
+      <div
+        class="card-body w-75 mx-auto border"
+        style="background-color: #77a6d1; border-radius: 10px"
+      >
+        <app-video-cmp 
+        [url]="videoData"
+        [audioData]="audioData"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+  

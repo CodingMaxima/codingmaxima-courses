@@ -1,0 +1,40 @@
+<header>
+    <nav style="padding-top:4px;padding-bottom:4px;" 
+         class="navbar navbar-expand-sm 
+                navbar-toggleable-sm 
+                navbar-light bg-white 
+                border-bottom box-shadow">
+      <div class="container-fluid" style="margin-left: 10px;">
+        <div class="navbar-brand"><img style ="width: 160px;"src="assets/img/logo.png"> </div>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
+                aria-label="Toggle navigation"
+                [attr.aria-expanded]="isExpanded"
+                (click)="toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+             [ngClass]="{ show: isExpanded }">
+          <div class="navbar-nav">
+
+            <ng-container *ngIf="!(courseNames.length > 1)">
+              <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+            </ng-container>
+
+              <select class="courses-list-select" name="courses-list" id="courses-list" (change)="onSelectChange($event)">              
+                  <option value="Select">Select</option>
+                  <option *ngFor="let course of courseNames"
+                          [value]="course">{{course}}
+                  </option>
+              </select>
+
+          </div>
+      </div>
+      </div>
+    </nav>
+</header>

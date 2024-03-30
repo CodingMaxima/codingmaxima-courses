@@ -1,0 +1,267 @@
+<div>
+  <div class="card card-body">
+    <!--<p>   another collapse start here </p>-->
+    <h3>AbstractFactory Design Pattern</h3>
+    <div id="accordion">
+      <h4><button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#card1" aria-expanded="true"
+        aria-controls="ProblemStatement" >Payment and Receipt</button></h4>
+
+        <div id = "card1" class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#printer" aria-expanded="true"
+                aria-controls="ProblemStatement">
+                Class Diagram
+              </button>
+            </h5>
+          </div>
+  
+          <div id="printer" class="collapse show" aria-labelledby="headingOne">
+            <div class="card-body">
+              <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Class_Diagram.png" alt="Factory_DBConnection">
+            </div>
+          </div>
+  
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#dbcode" aria-expanded="true"
+                aria-controls="ProblemStatement">
+                Program
+              </button>
+            </h5>
+          </div>
+  
+          <div id="dbcode" class="collapse show" aria-labelledby="headingOne">
+            <div class="card-body">
+              <div class="card-group">
+                <div class="card">
+                  <h5 class="text-center card-title">Abstract Factory Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Abstract_Factory.png"
+                      alt="Factory_DB_Connection_Conn_Class">
+                  </div>
+                </div>
+              
+              
+                <div class="card">
+                  <h5 class="text-center card-title">Factory Creator Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Factory_Creator.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card">
+                  <h5 class="text-center card-title">Payment Factory Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Payment_Factory.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <h5 class="text-center card-title">Receipt Factory Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Receipt_Factory.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card">
+                  <h5 class="text-center card-title">Payment Interface</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Payment_Interface.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <h5 class="text-center card-title">Receipt Interface</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Receipt_Interface.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card">
+                  <h5 class="text-center card-title">Credit Card Payment Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Payment_Credit.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <h5 class="text-center card-title">PDF Receipt Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Receipt_PDF.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card">
+                  <h5 class="text-center card-title">Debit Card Payment Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Payment_Debit.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <h5 class="text-center card-title">PNG Receipt Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Receipt_PNG.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card">
+                  <h5 class="text-center card-title">UPI Payment Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Payment_UPI.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <h5 class="text-center card-title">JPG Payment Class</h5>
+                  <div class="card-body">
+                    <img src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Receipt_JPG.png"
+                      alt="Factory_DB_Connection_FactoryClass">
+                  </div>
+                </div>
+              </div>
+              <img class="card-img-top" src="assets/img/low-level-design/creational/abstractfactory/Payment_Receipt_Client.png" alt="Factory_DB_Connection_Client_Class">
+            </div>
+          </div>
+        </div> <!-- Ending of example 1-->
+
+        <h4><button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#card2" aria-expanded="true"
+          aria-controls="ProblemStatement" >Printer and Paper</button></h4>
+  
+          <div id = "card2" class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#printerdg" aria-expanded="true"
+                  aria-controls="ProblemStatement">
+                  Class Diagram
+                </button>
+              </h5>
+            </div>
+    
+            <div id="printerdg" class="collapse show" aria-labelledby="headingOne">
+              <div class="card-body">
+                <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Class_Diagram.png" alt="Factory_DBConnection">
+              </div>
+            </div>
+    
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#printercode" aria-expanded="true"
+                  aria-controls="ProblemStatement">
+                  Program
+                </button>
+              </h5>
+            </div>
+    
+            <div id="printercode" class="collapse show" aria-labelledby="headingOne">
+              <div class="card-body">
+                <div class="card-group">
+                  <div class="card">
+                    <h5 class="text-center card-title">Printer Paper Abstract Factory Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Abstract_Factory.png"
+                        alt="Factory_DB_Connection_Conn_Class">
+                    </div>
+                  </div>
+                
+                
+                  <div class="card">
+                    <h5 class="text-center card-title">Factory Creator Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Factory_Creator.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group">
+                  <div class="card">
+                    <h5 class="text-center card-title">Payment Factory Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Printer_Factory.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <h5 class="text-center card-title">Receipt Factory Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Paper_Factory.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group">
+                  <div class="card">
+                    <h5 class="text-center card-title">Payment Interface</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Printer_Interface.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <h5 class="text-center card-title">Receipt Interface</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Paper_Interface.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group">
+                  <div class="card">
+                    <h5 class="text-center card-title">Credit Card Payment Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_EPSON_Printer.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <h5 class="text-center card-title">PDF Receipt Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_A4_Paper.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group">
+                  <div class="card">
+                    <h5 class="text-center card-title">Debit Card Payment Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Cannon_Printer.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <h5 class="text-center card-title">PNG Receipt Class</h5>
+                    <div class="card-body">
+                      <img src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_A5_Paper.png"
+                        alt="Factory_DB_Connection_FactoryClass">
+                    </div>
+                  </div>
+                </div>
+                <img class="card-img-top" src="assets/img/low-level-design/creational/abstractfactory/Printer_Paper_Abstract_Factory_Client.png" alt="Factory_DB_Connection_Client_Class">
+              </div>
+            </div>
+          </div> <!-- Ending of example 2-->
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,216 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Level-1 Caching</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction &Problem Statemnet"> Introduction & Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+       
+      <div style="padding-top: 15px;" class="text-center">
+        <button class="btn btn-primary btn-lg">Level -1 Caching</button>
+    </div>
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b> Introduction</b></div>
+        <div class="text-center">
+          <div
+            style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block"> First level caching is also called as “Session Cache” and is Enabled by Default.
+               </button>
+
+            <br>
+            <button type="button" class="btn btn-lg btn-block"> The First level cache is Associated with Session object. Other session objects in the Application can not see it. </button>
+            
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <div style="padding-top: 15px;" class="text-center">
+            <button class="btn btn-primary btn-lg">Problem Statement</button>
+        </div>
+
+          <div class="text-center">
+            <div
+              style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+              <button type="button" class="btn btn-lg btn-block">Design a  Program for First-Level Caching using the
+                following description. </button>
+  
+              <br>
+              <button type="button" class="btn btn-lg btn-block">Write a Student class which is expected to be plain
+                old Java objects (POJO classes) with getters and setters
+                for each field. The class is also expected to have a toString method which will display
+                all the fields of the object and their values in a human readable form.</button>
+              <button type="button" class="btn btn-lg btn-block">Set up a Database to create Table in your
+                Database.</button>
+              <button type="button" class="btn btn-lg btn-block">Design a Hibernate Configuration File Which is an XML
+                File.
+                This file contains the information regarding the database system you intend to use.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">Create a Mapping file that instructs Hibernate how to map
+                the defined class or classes to the database tables.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">Create an Test/Application class with the main() method
+                to run the application.In this Class
+                <li>  Firstly , Create a variable then open a session(i.e., sesion1) to perform Fetching   operation on student data.</li> 
+                <li>Next do the Fetching operation on same Entity  of same Id using another session(i.e., session2).</li> 
+                <li>Later Do the fetch operation in same session again(i.e., session2) on the same Entity of same Id.</li>
+              </button>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          
+          <div class="card-header text-center "><b>Student Data - Class</b></div>
+          <div class="card-body">
+            <li class="card-text">Integer - StudentiD,</li>
+            <li class="card-text">String - studentname,</li>
+            <li class="card-text">Integer - marks,</li>
+            <li class="card-text">String - grade,</li>
+            <li class="card-text">With constructors, all getters and setters and toString methods. </li>
+          </div>
+          <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">INSERT follwing Data into Table</button>
+          </div>
+    
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Student Data</b></div>
+              <div class="card-body">
+                <li class="card-text">StudentiD = 1</li>
+                <li class="card-text">studentname = Jithendra </li>
+                <li class="card-text">marks = 89</li>
+                <li class="card-text">grade = A</li>
+    
+              </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Student Data </b></div>
+              <div class="card-body">
+                <li class="card-text">StudentiD = 2</li>
+                <li class="card-text">studentname = VedhaSri </li>
+                <li class="card-text">marks = 65</li>
+                <li class="card-text">grade = B</li>
+    
+              </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Student Data</b></div>
+              <div class="card-body">
+                <li class="card-text">StudentiD = 3</li>
+                <li class="card-text">studentname = Hari </li>
+                <li class="card-text">marks = 90</li>
+                <li class="card-text">grade = A</li>
+    
+              </div>
+            </div>
+    
+          </div>
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Student Data</b></div>
+              <div class="card-body">
+                <li class="card-text">StudentiD = 4</li>
+                <li class="card-text">studentname = Spandhana </li>
+                <li class="card-text">marks = 95</li>
+                <li class="card-text">grade = A</li>
+    
+              </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Student Data </b></div>
+              <div class="card-body">
+                <li class="card-text">StudentiD = 5</li>
+                <li class="card-text">studentname = Vishnu </li>
+                <li class="card-text">marks = 63</li>
+                <li class="card-text">grade = B</li>
+    
+              </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Student Data</b></div>
+              <div class="card-body">
+                <li class="card-text">StudentiD = 6</li>
+                <li class="card-text">studentname = Nainee </li>
+                <li class="card-text">marks = 96</li>
+                <li class="card-text">grade = A</li>
+    
+              </div>
+            </div>
+    
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
+
+  </div>
+</div>
+
+
+<div *ngIf="elementId=='two'">
+
+  <div class="tab-title tab-slide-effect">
+    <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="subTabChange($event)"
+      data-hover="POJO(Model) Classes">POJO(Model) Classes</span>
+    <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="subTabChange($event)"
+      data-hover="Main Class">Main Class</span>
+    <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+      (click)="subTabChange($event)" data-hover="Configuration File">Configuration File</span>
+    <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''" (click)="subTabChange($event)"
+      data-hover="pom.xml">pom.xml</span>
+  </div>
+
+  <div *ngIf="elementId2=='pojo'">
+    <div class="card">
+      <h5 class="text-center card-title animate-charcter">City POJO Class</h5>
+      <div class="card-body">
+        <img class="card-img-top" src="assets/img/hibernate/Levelonecache/pojo.jpg" alt="">
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="elementId2=='main'">
+    <div class="card">
+      <h5 class="text-center card-title animate-charcter">Main Class</h5>
+      <div class="card-body">
+        <img class="card-img-top" src="assets/img/hibernate/Levelonecache/main.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId2=='configuration'">
+    <div class="card">
+      <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+      <div class="card-body">
+        <img class="card-img-top" src="assets/img/hibernate/Levelonecache/configuration.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId2=='pom.xml'">
+    <div class="card">
+      <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+      <div class="card-body">
+        <img class="card-img-top" src="assets/img/hibernate/Levelonecache/xml.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="elementId=='three'">
+  <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+    <app-video-cmp [url]="''"></app-video-cmp>
+  </div>
+</div>

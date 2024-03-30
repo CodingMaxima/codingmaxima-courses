@@ -1,0 +1,15 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Introduction</h3>
+    <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="approach1" [ngClass]="(elementId=='approach1')?'active':''"
+            (click)="tabChange($event)" data-hover="Approach-1">Approach-1</span>
+        <span class="tab-pill" id="approach2" [ngClass]="(elementId=='approach2')?'active':''"
+            (click)="tabChange($event)" data-hover="Approach-2">Approach-2</span>
+        <span class="tab-pill" id="approach3" [ngClass]="(elementId=='approach3')?'active':''"
+            (click)="tabChange($event)" data-hover="Approach-3">Approach-3</span>
+        <span class="tab-pill" id="approach4" [ngClass]="(elementId=='approach4')?'active':''"
+            (click)="tabChange($event)" data-hover="Approach-4">Approach-4</span>
+        <span class="tab-pill" id="approach5" [ngClass]="(elementId=='approach5')?'active':''"
+            (click)="tabChange($event)" data-hover="Approach-5">Approach-5</span>
+    </div>
+</div>

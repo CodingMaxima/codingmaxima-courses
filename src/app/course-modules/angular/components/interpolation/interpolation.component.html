@@ -1,0 +1,120 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Interpolation</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Explanation">Explanation</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+            data-hover="Solution">Solution</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center" style="font-size: 25px;"><b>Interpolation</b></div>
+              <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Interpolation is a data binding technique in Angular that allows you to embed expressions inside the text content of HTML elements or attributes.
+                     It provides a way to dynamically display data in your Angular templates.
+                </p>
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    In Angular, interpolation is denoted by double curly braces (<b><i>`{{'{'}}{{'{'}}{{'}'}}{{'}'}}`</i></b>) and can be used in HTML elements, attributes, and event bindings.
+                    When the template is rendered, the expressions within the curly braces are evaluated, and their corresponding values are displayed in the UI.
+                </p>
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Here are a few examples to illustrate how interpolation works:
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-1: Displaying a variable value:</p>
+                <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;h1&gt;Welcome, {{'{'}}{{'{'}} username {{'}'}}{{'}'}}!&lt;/h1&gt;
+                </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    In this example, assuming you have a <b>`username`</b> property defined in your component class,
+                     the value of <b>`username`</b> will be dynamically inserted into the <b>`&lt;h1&gt;`</b> element.
+                         If <b>`username`</b> is "John", the rendered output will be: "Welcome, John!".
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-2: Performing calculations and displaying results:</p>
+               <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;p&gt;The sum of {{'{'}}{{'{'}} num1 {{'}'}}{{'}'}} and {{'{'}}{{'{'}} num2 {{'}'}}{{'}'}} is {{'{'}}{{'{'}} num1 + num2 {{'}'}}{{'}'}}.&lt;/p&gt;
+  </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    In this case, assuming you have <b>`num1`</b> and <b>`num2`</b> properties in your component,
+                     their values will be added together and the result will be displayed within the paragraph element
+                     . For example, if <b>`num1`</b> is 5 and <b>`num2`</b> is 3, the rendered output will be: "The sum of 5 and 3 is 8."</p>
+                <p style='font-size: medium; font-weight: 700;'>Example-3: Accessing object properties:</p>
+               <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;p&gt;User details: {{'{'}}{{'{'}} user.name {{'}'}}{{'}'}}, {{'{'}}{{'{'}} user.age {{'}'}}{{'}'}}&lt;/p&gt;
+  </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    If you have an object named <b>`user`</b> with properties <b>`name`</b> and <b>`age`</b>,
+                     you can directly access them using interpolation. The values will be displayed within the paragraph element.
+                </p>
+                <p style='font-size: medium; font-weight: 600;'>
+                    Interpolation is a simple and convenient way to display dynamic data in your Angular templates.
+                     It's important to note that interpolation is a one-way binding technique, meaning that changes
+                      to the component properties will update the template, but not vice versa. To achieve two-way binding,
+                       you would need to use other techniques such as property binding or two-way binding with ngModel.    
+                </p>
+                <p style='font-size: medium; font-weight: 600;'>
+                    We have to Remember to properly handle cases where the data being interpolated might be undefined or null to avoid errors.
+                     We can use the Angular's safe navigation operator ( <b>`?.`</b> ) or handle such scenarios in your component logic.
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body">
+            <div class="card-group">
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Interpolation Project</b></div>
+                <div class="card-body">
+                  <p>Create Web page which uses interpolation concept in angular<br>
+                    task is to implement the Angular component ( <b>`app.component.ts`</b> ) and its corresponding HTML template ( <b>`app.component.html`</b> ) to display following
+                  </p>
+                  <p>
+                    Two main titles:
+                  </p>
+                  <ul>
+                    <li>The first title should be "Coding Maxima."</li>
+                    <li>The second title should be "Everyone Can Code."</li>
+                  </ul>
+                  <p>A list of features:</p>
+                  <ul>
+                    <li>Learn Coding from Top Developers.</li>
+                    <li>Learn Code Debugging with animation videos.</li>
+                    <li>Learn in live hands-on classrooms.</li>
+                    <li>Structured, flexible curriculum.</li>
+                    <li>Weekly Code Reviews and live mentoring.</li>
+                    <li>Interview training and one-on-one sessions.</li>
+                  </ul>
+      
+                  <p>A paragraph:</p>
+                  <ul><li>
+                    The paragraph should welcome users to Coding Maxima and emphasize the platform's ability to help them learn coding from top developers through engaging animations.
+                  </li></ul>
+
+                  <p>
+                    All above data should be loaded to html using variables from `app.component.ts` we should not load in static way.
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+          <div oncontextmenu="return false;">
+            <video id="play" src="assets/img/angular/interpolation.mp4"  controlsList="nodownload" width = "100%" controls></video>
+            <div class="text-center">
+                <button [ngClass]="(actButton==0.3)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(0.3)"> 0.3x </button> 
+                <button [ngClass]="(actButton==0.5)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(0.5)"> 0.5x </button> 
+                <button [ngClass]="(actButton==1.0)?'btn btn-primary':'btn btn-light'"  (click)="setVideoSpeed(1.0)"> 1.0x </button> 
+                <button [ngClass]="(actButton==1.5)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(1.5)"> 1.5x </button> 
+                <button [ngClass]="(actButton==2.0)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(2.0)"> 2.0x </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

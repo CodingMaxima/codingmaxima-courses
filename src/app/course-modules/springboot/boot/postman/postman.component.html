@@ -1,0 +1,47 @@
+<div class="card card-body">
+	<h3 class="global-component-heading">Post Man</h3>
+	<div class="global-tab-title global-tab-slide-effect">
+		<span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+			data-hover="Postman Tool">Postman Tool</span>
+		<span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+			data-hover="Using Postman">Using Postman</span>
+  
+	</div>
+	<div *ngIf="elementId=='one'">
+		<div class="card border-warning" style="border: 2px solid;">
+			<div class="card-body">
+				<h1 class="font-styles heading-color text-center">Postman Tool</h1>
+				<p class="font-styles content-color">Postman is a popular tool used for API (Application Programming Interface) testing and development. It provides a user-friendly interface for sending requests to APIs and receiving responses back.</p>
+				<p class="font-styles content-color">With Postman, you can easily create and organize requests, add parameters and headers, test authentication, and view the responses in a formatted way. It also has features for handling different types of HTTP requests, including GET, POST, PUT, DELETE, and more.</p>
+				<p class="font-styles content-color">In addition to testing APIs, Postman also has collaboration features that allow multiple users to work on a project together. This can be especially useful for teams working on complex APIs.</p>
+				<p class="font-styles content-color">Postman is available as a web application, as well as a desktop application for Windows, macOS, and Linux. It also has a browser extension that can be used for quick testing and debugging.</p>
+				<p class="font-styles content-color">Overall, Postman is a powerful tool for API testing and development, with a wide range of features that make it a popular choice for developers and teams.</p>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="elementId=='two'">
+		<div class="card border-warning" style="border: 2px solid;">
+			<div class="card-body">
+				<h1 class="font-styles heading-color text-center">Using Postman</h1>
+				<p class="font-styles content-color">Here's a step-by-step guide on how to use Postman:</p>
+				<ol>
+					<li class="font-styles content-color">Download and install Postman: The first step is to download and install Postman on your computer. You can download it from the official website at <a href="https://www.postman.com/downloads/">https://www.postman.com/downloads/</a>.</li>
+					<li class="font-styles content-color">Create a new request: Once you have installed Postman, open it, and you will see a window where you can create a new request. To do this, click on the "New" button on the top left corner of the window.</li>
+					<li class="font-styles content-color">Choose the HTTP method: Next, you need to choose the HTTP method for your request. This could be GET, POST, PUT, DELETE, etc. Select the method from the dropdown menu next to the URL bar.</li>
+					<li class="font-styles content-color">Enter the API endpoint: In the URL bar, enter the API endpoint that you want to test. For example, if you want to test the GitHub API, you can enter <a href="https://api.github.com/">https://api.github.com/</a>.</li>
+					<li class="font-styles content-color">Add request parameters: If your API requires any parameters, you can add them in the "Params" tab. You can add them as key-value pairs or as a raw JSON body.</li>
+					<li class="font-styles content-color">Set headers: Headers are additional information that you can add to your request. For example, you can add an "Authorization" header to send an API key or token. You can set the headers in the "Headers" tab.</li>
+					<li class="font-styles content-color">Send the request: Once you have set up your request, click on the "Send" button to send the request to the API endpoint. You will see the response from the server in the "Response" section.</li>
+					<li class="font-styles content-color">Test different scenarios: You can test different scenarios by changing the request parameters, headers, or HTTP methods. You can also save your requests and responses for future use.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+  </div>
+
+
+
+
+<div class="container using-postman-container">
+	
+</div>

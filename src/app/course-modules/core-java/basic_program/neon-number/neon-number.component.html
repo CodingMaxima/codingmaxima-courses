@@ -1,0 +1,202 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Neon Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          A neon number is a number that, when its digits are squared and then
+          summed up, results in the original number itself. In other words, if
+          we take a number, square each of its digits, and add them together,
+          and the sum is equal to the original number, then that number is
+          considered a neon number.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <b>Example 1:</b> Number 9
+          <p>
+            Let's take the number 9. When we square the digit 9, we get 81. If
+            we add the digits of 81 (which is 8 + 1), the sum is equal to 9,
+            which is the original number. Therefore, 9 is a neon number.
+          </p>
+        </button>
+
+        <button type="button" class="btn btn-lg btn-block">
+          <b>Example 2:</b> Number 1
+          <p>
+            Now consider the number 1. Squaring the digit 1 gives us 1, and
+            since 1 is equal to the original number, it is also a neon number.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <b>Example 3:</b> Number 12
+          <p>
+            However, if we take a number like 12, squaring the digits gives us 1
+            and 4, respectively. The sum of 1 and 4 is 5, which is not equal to
+            the original number 12. Hence, 12 is not a neon number.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          In general, if a number satisfies the condition that the sum of the
+          squares of its digits is equal to the number itself, it is considered
+          a neon number.
+        </button>
+      </div>
+      <!--starting of example-->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">9</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Given number 9 is a neon number.</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-2</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">12</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Given number 12 is not a neon number.</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-3</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">1</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Given number 1 is a neon number.</p>
+          </div>
+        </div>
+      </div>
+      <!--Ending of example-->
+    </div>
+    <!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/neon.JPG"
+        alt="program"
+      />
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+    <!--starting of the test cases-->
+    <div class="card-body card-group">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-1</b></div>
+        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">9</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">Neon Number</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-2</b></div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">12</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">Not an Neon Number</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-3</b></div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">1</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">Neon Number</p>
+        </div>
+      </div>
+    </div>
+    <!--ending of the test cases-->
+  </div>
+
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

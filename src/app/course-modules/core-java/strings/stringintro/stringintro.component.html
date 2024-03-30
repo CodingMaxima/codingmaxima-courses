@@ -1,0 +1,444 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Strings Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="String">String</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="String Buffer">String Buffer</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="String Builder">String Builder</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">
+              The String is a collection of characters. In Java, the string is an object that represents a sequence of
+              characters.</button>
+            <button type="button" class="btn btn-lg btn-block"> The String class available in the java.lang.String
+              package.</button>
+            <button type="button" class="btn btn-lg btn-block">Strings can be created in 2 ways by one is by using
+              string literals and the other one is by using new keyword </button>
+          </div>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header; text-center"><b>Example-1</b></div>
+            <div class="card-body" style="background-color:rgb(229, 253, 253);">
+              <p class="card-text"><b> String s = "hello"</b></p>
+              <p class="card-text" style='font-size: medium;font-style: oblique'> Every time whenever we are creating
+                the string literal the JVM checks the String Pool Memory/constant(SPC). If the string is not present
+                it will store that data value in SPC.Only one object will be created </p>
+
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header; text-center"><b> Example-2</b></div>
+            <div class="card-body" style="background-color:rgb(252, 227, 231)">
+              <p class="card-text"><b>String s=new String("Welcome");</b></p>
+              <p class="card-text" style='font-size: medium;font-style: oblique'>
+              <p>Whenever we are creating the string by using new keyword it will store the data value at 2 places one
+                is in heap memory and another one is SPC</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-group">
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <img class="program-img-fit" src="assets/img/corejava/strings/intro.JPG" alt="program">
+                <img class="program-img-fit" src="assets/img/corejava/strings/introoutput.JPG" alt="program">
+              </div>
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <img class="program-img-fit" src="assets/img/corejava/strings/read.JPG" alt="program">
+                <img class="program-img-fit" src="assets/img/corejava/strings/readoutput.JPG" alt="program">
+              </div>
+            </div> -->
+        <div class="text-center" style="padding-top: 15px;">
+          <button type="button" class="btn btn-lg btn-block">There are some methods used in strings</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>METHODS</b></div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+              <li style='font-size: medium; font-style: oblique;'><b>concat() method - </b> It adds an string to the end
+                of another string.Its return type is <b>char</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>charAt() method - </b> It returns the character at
+                the specified position.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>contains() method - </b> It will check whether the
+                given string contains the sequence of characters or not.Its return type is <b>boolean</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>equals() method - </b>It checks the equality of
+                string objects. It is meant for content comparision.It default considers content also.Its return type is
+                <b>boolean</b>
+              </li>
+              <li style='font-size: medium; font-style: oblique;'><b>equalsIgnoreCase() method - </b>It is same as like
+                equals method. The difference is it ignores case considerations.Its return type is <b>boolean</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>isEmpty() method - </b>It is used to check whether
+                the string is empty or not.Its return type is <b>boolean</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>length() method -</b>It is used for checking the
+                length of the string.Its return type is <b>int</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>replace() method -</b>It is used when the specified
+                value in string have to to replaced with new string value.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>split() method -</b>It is used to split the string
+                into an array of substrings.Its return type is <b>string[]</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>substring() method -</b>It is used for two
+                types(one for begining, another is by settint the start and end range).Its return type is <b>string</b>
+              </li>
+              <li style='font-size: medium; font-style: oblique;'><b>indexOf() method -</b>It returns the index of
+                specified characters from the starting.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>lastIndexOf() method -</b>It returns the index of
+                specified characters from the ending position.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>tolowercase() method -</b>It converts the entire
+                string into lower case letters.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>touppercase() method -</b>It converts the entire
+                string into upper case letters.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>tostring() method -</b>It is used for returning the
+                values of string objects.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>trim() method -</b>It removes blankspace from
+                starting and ending
+                ends of a string but not he middle spaces in the program.Its return type is <b>string</b></li>
+            </div>
+          </div>
+        </div><!--end of the card-->
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg"> some examples by using methods</button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-1</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;'>by using charAt() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public char charAt(int index)</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">SYstem.out.println(s.charAt(3));</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>d</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-2</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using concat() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public string concat(string s)</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">s = s.concat("Maxima")</li>
+              <li class="card-text">SYstem.out.println(s);</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>codingMaxima</p>
+            </div>
+          </div>
+        </div><!--end of 1,2  examples card-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-3</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using equals() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public boolean equals(string s)</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">SYstem.out.println(s.equals("CODING"));</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>flase</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-4</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;'>by using isEmpty() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public boolean isEmpty()</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">SYstem.out.println(s.isEmpty());</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>false</p>
+            </div>
+          </div>
+        </div><!--end of 3,4  examples card-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-5</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;'>by using substring() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public string substring(int begin, int end)</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">SYstem.out.println(s.substring(3,6));</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>ing</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-6</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using index() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public int indexOf(char c)</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">SYstem.out.println(s.indexOf('n'));</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>4</p>
+            </div>
+          </div>
+        </div><!--end of 5,6  examples card-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-7</b></div>
+            <div class="card-body" style="background-color:rgb(229, 253, 253); ">
+              <p style='font-size: medium; font-style: oblique;'>by using toUpperCase() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public String toUpperCase()</li>
+              <li class="card-text">String s = "coding"</li>
+              <li class="card-text">SYstem.out.println(s);</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>CODING</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-8</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;'>by using trim() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">Public string trim(string s)</li>
+              <li class="card-text">String s = " coding"</li>
+              <li class="card-text">SYstem.out.println(s.trim());</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>coding</p>
+            </div>
+          </div>
+        </div><!--end of 7,8 examples card-->
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">String buffers are also like strings the differences is
+              String Buffers are changable & also thread safe(multiple threads cannot access at a time)</button>
+
+            <div style="padding-top: 15px;">
+              <button type="button" class="btn btn-lg btn-block">There are some methods used in string Buffer</button>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>METHODS</b></div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+              <li style='font-size: medium; font-style: oblique;'><b>append() method - </b> It adds an string to the end
+                of another string.</li>
+              <li style='font-size: medium; font-style: oblique;'><b>insert() method - </b> It is used to add the
+                strings at required position
+              </li>
+              <li style='font-size: medium; font-style: oblique;'><b>replace() method - </b></li>It is used to replace
+              the values specified values from the start and end in the string with new string values
+              <li style='font-size: medium; font-style: oblique;'><b>delete() method - </b>It is used to delete the
+                starting and the ending positions of the string</li>
+              <li style='font-size: medium; font-style: oblique;'><b>reverse() method - </b>It is used to reverse the
+                string</li>
+              <li style='font-size: medium; font-style: oblique;'><b>charAt() method - </b> It returns the character at
+                the specified position.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>length() method -</b>It is used for checking the
+                length of the string.Its return type is <b>int</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>substring() method -</b>It is used for two
+                types(one for begining, another is by settint the start and end range).Its return type is <b>string</b>
+              </li>
+              <li style='font-size: medium; font-style: oblique;'><b>capacity() method -</b>It is used to return the
+                current capacity </li>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg"> some examples by using methods</button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-1</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;'>by using append() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBufferEx1{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuffer sb=new StringBuffer("Coding ");</li>
+              <li class="card-text"> sb.append("Maxima");</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>Coding Maxima</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-2</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using insert() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBufferEx2{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuffer sb=new StringBuffer("Codings");</li>
+              <li class="card-text"> sb.insert(6,"maxima");</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>CodingMaxima</p>
+            </div>
+          </div>
+        </div><!--end of 1,2  examples card-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-3</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using delete() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBufferEx3{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuffer sb=new StringBuffer("codingsMaxima");</li>
+              <li class="card-text"> sb.delete(6,7,8,9,10,11,12);</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>Coding</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-4</b></div>
+            <div class="card-body" style="background-color:rgb(252, 227, 231); ">
+              <p style='font-size: medium; font-style: oblique;'>by using reverse() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBufferEx4{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuffer sb=new StringBuffer("Coding");</li>
+              <li class="card-text"> sb.reverse();</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>gnidoc</p>
+            </div>
+          </div>
+        </div><!--end of 3,4  examples card-->
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">String Builders are also like strings the differences is
+              String Buffers are changable & also not thread safe(multiple threads can access at a time)</button>
+
+            <div style="padding-top: 15px;">
+              <button type="button" class="btn btn-lg btn-block">There are some methods used in stringBuilders</button>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>METHODS</b></div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+              <li style='font-size: medium; font-style: oblique;'><b>append() method - </b> It adds an string to the end
+                of another string.</li>
+              <li style='font-size: medium; font-style: oblique;'><b>insert() method - </b> It is used to add the
+                strings at required position
+              </li>
+              <li style='font-size: medium; font-style: oblique;'><b>replace() method - </b></li>It is used to replace
+              the values specified values from the start and end in the string with new string values
+              <li style='font-size: medium; font-style: oblique;'><b>delete() method - </b>It is used to delete the
+                starting and the ending positions of the string</li>
+              <li style='font-size: medium; font-style: oblique;'><b>reverse() method - </b>It is used to reverse the
+                string</li>
+              <li style='font-size: medium; font-style: oblique;'><b>charAt() method - </b> It returns the character at
+                the specified position.Its return type is <b>string</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>length() method -</b>It is used for checking the
+                length of the string.Its return type is <b>int</b></li>
+              <li style='font-size: medium; font-style: oblique;'><b>substring() method -</b>It is used for two
+                types(one for begining, another is by settint the start and end range).Its return type is <b>string</b>
+              </li>
+              <li style='font-size: medium; font-style: oblique;'><b>capacity() method -</b>It is used to return the
+                current capacity </li>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg"> some examples by using methods</button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-1</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;'>by using append() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBuilderEx1{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuilder sb=new StringBuilder("Coding ");</li>
+              <li class="card-text"> sb.append("Maxima");</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>Coding Maxima</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-2</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using insert() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBuilderEx2{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuilder sb=new StringBuilder("Codings");</li>
+              <li class="card-text"> sb.insert(6,"maxima");</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>CodingMaxima</p>
+            </div>
+          </div>
+        </div><!--end of 1,2  examples card-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-3</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;'>by using delete() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBuilderEx3{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuffer sb=new StringBuffer("codingsMaxima");</li>
+              <li class="card-text"> sb.delete(6,7,8,9,10,11,12);</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>Coding</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example-4</b></div>
+            <div class="card-body" style="background-color:rgb(252, 227, 231); ">
+              <p style='font-size: medium; font-style: oblique;'>by using reverse() method </p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text">class StringBufferEx4{{'{'}}
+              <li class="card-text"> public static void main(String args[]){{'{'}} </li>
+              <li class="card-text"> StringBuffer sb=new StringBuffer("Coding");</li>
+              <li class="card-text"> sb.reverse();</li>
+              <li class="card-text"> System.out.println(sb);</li>
+              <li class="card-text"> {{'}'}}
+              <li class="card-text"> {{'}'}}</li> <br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>Output</b></h6>
+              <p>gnidoc</p>
+            </div>
+          </div>
+        </div><!--end of 3,4  examples card-->
+      </div>
+    </div>
+  </div>
+</div>

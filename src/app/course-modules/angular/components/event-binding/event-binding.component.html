@@ -1,0 +1,152 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Event Binding</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Explanation">Explanation</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+            data-hover="Solution">Solution</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center" style="font-size: 25px;"><b>Event binding</b></div>
+              <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Event binding is a data binding technique in Angular that allows you to respond
+                     to user interactions, such as button clicks, mouse movements, and keyboard events,
+                      by executing methods in your component class. It establishes a way to capture and handle events triggered by the user.
+                </p>
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Event binding is denoted by parentheses (<b>`( )`</b>) and can be used to bind event handlers to HTML elements or directives.    
+                </p>
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Here's a more detailed explanation of event binding in Angular:
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-1: Binding to a native HTML event:</p>
+                <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;button (click)="handleClick()"&gt;Click me&lt;/button&gt;
+                </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    In this example, the <b>`(click)`</b> event of the <b>`&lt;button&gt;`</b> element is bound to the <b>`handleClick()`</b>
+                         method in the component. When the button is clicked, the <b>`handleClick()`</b> method is executed.
+                </p><br>
+                <p style='font-size: medium; font-weight: 700;'>Example-2: Binding to a custom event:</p>
+               <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;app-custom-component (customEvent)="handleCustomEvent($event)"&gt;&lt;/app-custom-component&gt;
+  </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    Here, a custom event named <b>`customEvent`</b> emitted by the <b>`app-custom-component`</b>
+                     is bound to the <b>`handleCustomEvent()`</b> method in the parent component.
+                      The <b>`$event`</b> object passed as an argument to the method contains additional data or information emitted by the child component.    
+                </p><br>
+                <p style='font-size: medium; font-weight: 700;'>Example-3: Binding to keyboard events:</p>
+               <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;input (keydown)="handleKeyDown($event)"&gt;
+  </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    This example binds the <b>`(keydown)`</b> event of the <b>`&lt;input&gt;`</b> element to the <b>`handleKeyDown()`</b>
+                     method in the component. The <b>`$event`</b> object provides information about the keyboard event, such as the key that was pressed.    
+                </p><br>
+                <p style='font-size: medium; font-weight: 600;'>
+                    Event binding allows you to create dynamic and interactive user experiences by responding to user actions.
+                     You can use event binding to handle user input, trigger actions, update component properties, and interact with services or APIs.
+                </p>
+                <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;button (click)="counter = counter + 1"&gt;Increment&lt;/button&gt;
+&lt;p&gt;Current count: {{'{'}}{{'{'}} counter {{'}'}}{{'}'}}&lt;/p&gt;
+                </code></pre>
+                <p style='font-size: medium; font-weight: 600;'>
+                    In this case, clicking the "Increment" button triggers the <b>`(click)`</b> event,
+                     which updates the <b>`counter`</b> property in the component by incrementing its value.
+                      The updated value is then displayed within the <b>`&lt;p&gt;`</b> element using interpolation.    
+                </p>
+                <p style='font-size: medium; font-weight: 600;'>
+                    You can also use event binding in combination with other techniques like property binding and two-way binding to create more advanced functionality.
+                </p>
+                <p style='font-size: medium; font-weight: 600;'>
+                    Remember, event binding is a one-way binding technique,
+                     meaning that it allows you to handle events and update component properties,
+                      but changes in the component won't automatically update the template. For two-way binding,
+                       you can use the combination of event binding and property binding using the banana-in-a-box syntax <b>`[( )]`</b>
+                        or utilize Angular's built-in two-way binding directives like <b>`ngModel`</b>.
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body">
+            <div class="card-group">
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Event Binding Project</b></div>
+                <div class="card-body">
+                  <p>Create Web page which uses Event Binding concept in angular<br>
+                    Create a student registration form using Angular.
+                     The code provided consists of multiple components:
+                      <b>`app.component`</b>, <b>`header.component`</b>, and <b>`student-form.component`</b>, along with their respective HTML templates.  
+                  </p>
+                  <p>
+                    Here's a breakdown of the components and their HTML templates:
+                  </p>
+                  <p>
+                    <b>1.app.component:</b>
+                  </p>
+                  <ul>
+                    <li>Contains an <b>`&lt;app-student-form&gt;`</b> component, which renders the student registration form.</li>
+                  </ul>
+                  <p><b>2.header.component:</b></p>
+                  <ul>
+                    <li>Contains an <b>`&lt;h1&gt;`</b> element with the text "Student Form" as the header title.</li>
+                  </ul>
+      
+                  <p><b>3.student-form.component:</b></p>
+                  <ul>
+                    <li>
+                      Includes an <b>`&lt;app-header&gt;`</b> component.
+                    </li>
+                    <li>Contains a <b>`&lt;form&gt;`</b> element with the following fields:
+                      <ul>
+                        <li>Name: An <b>`&lt;input&gt;`</b> element with an <b>`id`</b> of "name" and
+                           a corresponding <b>`(keyup)`</b> event binding to update the name property when the user types.</li>
+                        <li>Age: An <b>`&lt;input&gt;`</b> element with an <b>`id`</b> of "age" and a corresponding <b>`(keyup)`</b>
+                           event binding to update the age property when the user types.</li>
+                          <li>Email: An <b>`&lt;input&gt;`</b> element with an <b>`id`</b> of "email" and a corresponding <b>`(keyup)`</b>
+                             event binding to update the email property when the user types.</li>
+                      </ul>
+                    </li>
+                    <li>Displays a <b>`&lt;button&gt;`</b> element with a <b>`(click)`</b> event binding to trigger the <b>`onSubmit()`</b> method when clicked.</li>
+                    <li>Includes a <b>`&lt;table&gt;`</b> element that displays the entered student data:
+                      <ul>
+                        <li>The table has a header row with three columns: "Name," "Age," and "Email."</li>
+                        <li>The table body displays a single row with the corresponding values from the <b>`name`</b>, <b>`age`</b>, and <b>`email`</b> properties.</li>
+                      </ul>
+                    </li>
+                    <li>The <b>`app.component`</b> should display the title variable as the <b>`title`</b> of the web page.</li>
+                    <li>The <b>`header.component`</b> should display the text "Student Form" as an <b>`&lt;h1&gt;`</b> header.</li>
+                    <li>The <b>`student-form.component`</b> should update the <b>`name`</b>, <b>`age`</b>, and <b>`email`</b> properties based on user input and display the entered data in the table.</li>
+                    <li>The <b>`onSubmit()`</b> method should display an alert with the submitted form data.</li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+      
+          </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+          <div oncontextmenu="return false;">
+            <video id="play" src="assets/img/angular/event-binding.mp4"  controlsList="nodownload" width = "100%" controls></video>
+            <div class="text-center">
+                <button [ngClass]="(actButton==0.3)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(0.3)"> 0.3x </button> 
+                <button [ngClass]="(actButton==0.5)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(0.5)"> 0.5x </button> 
+                <button [ngClass]="(actButton==1.0)?'btn btn-primary':'btn btn-light'"  (click)="setVideoSpeed(1.0)"> 1.0x </button> 
+                <button [ngClass]="(actButton==1.5)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(1.5)"> 1.5x </button> 
+                <button [ngClass]="(actButton==2.0)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(2.0)"> 2.0x </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

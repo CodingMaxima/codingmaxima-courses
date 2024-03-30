@@ -1,0 +1,360 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Update(STUDENT)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId2=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+                                <span class="tab-pill" id="question4" [ngClass]="(elementId=='question4')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+                                <span class="tab-pill" id="question5" [ngClass]="(elementId=='question5')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-5">Question-5</span>
+
+                            </div>
+
+                            <div *ngIf="elementId=='question1'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-1</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the students from the table current_semister as 4 in 24th roll_number
+                                        </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the student table
+                                            update the 24th roll_number of the student with a new current_semister as
+                                            4
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>current_semister</th>
+                                        </tr>
+                                        <tr>
+                                            <td>24</td>
+                                            <td>3</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>current_semister</th>
+                                        </tr>
+                                        <tr>
+                                            <td>24</td>
+                                            <td>4</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update student set
+                                                current_semister = 4 where roll_number = 24;
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question1-->
+
+                            <div *ngIf="elementId=='question2'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-2</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the students from the table as grade = C and
+                                            current_semister = 3
+                                            in 30th roll_number </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the student table
+                                            update the 30th roll_number of the student with a new grade as C and
+                                            current_semister as 3
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>current_semister</th>
+                                            <th>grade</th>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td>2</td>
+                                            <td>B</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>current_semister</th>
+                                            <th>grade</th>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td>3</td>
+                                            <td>C</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update student set grade = 'C' ,
+                                                current_semister = 3
+                                                where roll_number = 30;
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question2-->
+
+                            <div *ngIf="elementId=='question3'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-3</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the students from the table as current_semister = 2, age = 18,
+                                            total_marks = 920 in 1st roll_number </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the student table
+                                            update the 1st roll_number of the student with a new current_semister as 2,
+                                            age as 18, total_marks as 920 in 1st roll_number
+
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>current_semister</th>
+                                            <th>total_marks</th>
+                                            <th>age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>6</td>
+                                            <td>900</td>
+                                            <td>17</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>designation</th>
+                                            <th>salary</th>
+                                            <th>age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>2</td>
+                                            <td>920</td>
+                                            <td>18</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update student set
+                                                current_semister = 2,total_marks = 920, age = 18 where
+                                                roll_number = 1;
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question3-->
+
+                            <div *ngIf="elementId=='question4'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-4</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the students from the table as branch = Msc.Chemistry in 22nd roll_number
+                                        </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the student table
+                                            update the 22nd roll_number of the student with a new branch as
+                                            Msc.Chemistry
+
+
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>branch</th>
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td>Bsc.Chemistry</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+
+                                            <th>roll_number </th>
+                                            <th>branch</th>
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td>Msc.Chemistry</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update student set
+                                                branch = 'Msc.Chemistry' where roll_number = 22;
+
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question4-->
+
+                            <div *ngIf="elementId=='question5'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-5</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the students from the table as age = 19 and current_semister = 1,
+                                            college_name = "Vekateswara University"
+                                            in roll_number 2,17,18 </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the student table
+                                            update the student with a new age as 19 and current_semister as 1 and
+                                            college_name as "Vekateswara University" in roll_number
+                                            2,17,18
+
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>age</th>
+                                            <th>current_semister</th>
+                                            <th>college_name</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>16</td>
+                                            <td>3</td>
+                                            <td>St.josh college</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>1</td>
+                                            <td>Sasi College</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>16</td>
+                                            <td>1</td>
+                                            <td>St.John College</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>roll_number </th>
+                                            <th>age</th>
+                                            <th>current_semister</th>
+                                            <th>college_name</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>19</td>
+                                            <td>1</td>
+                                            <td>Vekateswara University</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>19</td>
+                                            <td>1</td>
+                                            <td>Vekateswara University</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>1</td>
+                                            <td>Vekateswara University</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update student set
+                                                college_name = 'venkatesware University',current_semister = 1,age = 19
+                                                where roll_number = 2 or roll_number = 17 or roll_number = 18;
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question5-->
+
+                        </div><!--end of the buttons card-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId2=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

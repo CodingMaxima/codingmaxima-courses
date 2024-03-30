@@ -1,0 +1,509 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Events</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Problems"
+      >Problems</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-text">
+        JavaScript is a versatile programming language used for web development,
+        and it provides several built-in events that can be triggered in
+        response to user actions or system events.
+      </div>
+      <div class="content-heading">some common events</div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Mouse Events</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              <b>click:</b> Occurs when a mouse button is pressed and released
+              on an element.
+            </p>
+            <p>
+              <b>dblclick:</b> Occurs when a mouse button is double-clicked on
+              an element.
+            </p>
+            <p>
+              <b> mouseenter:</b> Occurs when the mouse pointer enters an
+              element.
+            </p>
+            <p>
+              <b> mouseleave:</b> Occurs when the mouse pointer leaves an
+              element.
+            </p>
+            <p>
+              <b>mouseover: </b>Occurs when the mouse pointer is moved over an
+              element.
+            </p>
+            <p>
+              <b>mouseout</b>: Occurs when the mouse pointer is moved out of an
+              element.
+            </p>
+
+            <br />
+            <p><b> Example-1</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              element.addEventListener('click', function() {{ "{" }}
+            </li>
+            <pre>    console.log('Element clicked!'); </pre>
+            <li class="card-text">{{ "}" }});</li>
+            <br />
+
+            <p><b> Example-2 </b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              element.addEventListener('mouseover', function() {{ "{" }}
+            </li>
+            <pre>    console.log('Mouse over element!') ;</pre>
+            <li class="card-text">{{ "}" }});</li>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Keyboard Events</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p><b>keydown:</b> Occurs when a key is pressed down.</p>
+            <p><b>keyup:</b> Occurs when a key is released.</p>
+            <p>
+              <b>keypress:</b> Occurs after keydown and before keyup for
+              printable characters.
+            </p>
+            <br />
+            <p><b> Example-1</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              document.addEventListener('keydown', function(event) {{ "{" }}
+            </li>
+            <pre>    console.log('Key pressed: ' + event.key); </pre>
+            <li class="card-text">{{ "}" }});</li>
+            <br />
+
+            <p><b> Example-2 </b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              document.addEventListener('keyup', function(event) {{ "{" }}
+            </li>
+            <pre>    console.log('Key released: ' + event.key); </pre>
+            <li class="card-text">{{ "}" }});</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Form Events</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p><b>submit:</b> Occurs when a form is submitted.</p>
+            <p><b>reset:</b> Occurs when a form is reset.</p>
+            <p><b>focus:</b> Occurs when an element receives focus.</p>
+            <p><b>blur:</b> Occurs when an element loses focus.</p>
+            <p><b>change: </b>Occurs when the value of an element changes.</p>
+            <br />
+            <p><b> Example-1</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              document.querySelector('form').addEventListener('submit',
+              function(event) {{ "{" }}
+            </li>
+            <pre>
+   event.preventDefault(); 
+   // Prevent form submission
+                
+  console.log('Form submitted!');                
+                </pre
+            >
+            <li class="card-text">{{ "}" }});</li>
+            <br />
+
+            <p><b> Example-2 </b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              document.querySelector('input').addEventListener('change',
+              function(event) {{ "{" }}
+            </li>
+            <pre>
+    console.log('Value changed: ' 
+                + event.target.value); </pre
+            >
+            <li class="card-text">{{ "}" }});</li>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Window Events</b>
+          </div>
+
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p><b>load:</b> Occurs when a page finishes loading.</p>
+            <p><b>unload:</b> Occurs when a page is unloaded or refreshed.</p>
+            <p><b>resize:</b> Occurs when the browser window is resized.</p>
+            <p><b>scroll:</b> Occurs when the user scrolls the page.</p>
+
+            <br />
+            <p><b> Example-1</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              window.addEventListener('load', function()
+              {{ "{" }}
+            </li>
+            <pre>
+   console.log('Page loaded!');                
+                </pre
+            >
+            <li class="card-text">{{ "}" }});</li>
+            <br />
+
+            <p><b> Example-2 </b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              window.addEventListener('resize', function() {{ "{" }}
+            </li>
+            <pre>    console.log('Window resized!'); </pre>
+            <li class="card-text">{{ "}" }});</li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Touch Events (for mobile devices)</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              <b>touchstart:</b> Occurs when a touch point is placed on the
+              touch surface.
+            </p>
+            <p>
+              <b>touchend:</b> Occurs when a touch point is removed from the
+              touch surface.
+            </p>
+            <p>
+              <b>touchmove:</b> Occurs when a touch point is moved along the
+              touch surface.
+            </p>
+            <p>
+              <b>touchcancel:</b> Occurs when a touch event is interrupted or
+              cancelled.
+            </p>
+            <br />
+            <p><b> Example-1</b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              element.addEventListener('touchstart', function(event)
+              {{ "{" }}
+            </li>
+            <pre>    console.log('Touch started!'); </pre>
+            <li class="card-text">{{ "}" }});</li>
+            <br />
+
+            <p><b> Example-2 </b></p>
+            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+            <li class="card-text">
+              element.addEventListener('touchend', function(event) {{ "{" }}
+            </li>
+            <pre>    console.log('Touch ended!'); </pre>
+            <li class="card-text">{{ "}" }});</li>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Media Events</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p><b>play:</b> Occurs when media playback starts.</p>
+            <p><b>pause:</b> Occurs when media playback is paused.</p>
+            <p><b>ended:</b> Occurs when media playback reaches the end.</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-text">
+        These are few examples of events in JavaScript. There are more events
+        available, and you can also create custom events using the
+        <b>CustomEvent </b> constructor.
+      </div>
+      <div class="content-heading">Event Handling Methods</div>
+      <div class="content-text">
+        There are multiple ways to handle events depending on the specific
+        requirements and programming style.
+      </div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Inline Event Handlers</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              Event handlers can be directly specified within HTML tags using
+              inline event attributes.
+            </p>
+
+            <p>
+              <b>conclick:</b> Specifies the code to be executed when an element
+              is clicked.
+            </p>
+            <p>
+              <b>ondblclick:</b> Specifies the code to be executed when an
+              element is double-clicked.
+            </p>
+            <p>
+              <b>onmouseover: </b> Specifies the code to be executed when the
+              mouse pointer is moved over an element.
+            </p>
+            <p>
+              <b>onmouseout:</b> Specifies the code to be executed when the
+              mouse pointer is moved out of an element.
+            </p>
+            <p>
+              <b> onkeydown:</b> Specifies the code to be executed when a key is
+              pressed down.
+            </p>
+            <p>
+              <b>onkeyup: </b> Specifies the code to be executed when a key is
+              released.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>DOM Event Handlers</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>
+              Event handlers can be assigned to DOM elements using their
+              corresponding properties.
+            </p>
+            <p>
+              <b>element.onclick:</b> Assigns a function to be executed when the
+              element is clicked.
+            </p>
+            <p>
+              <b>element.ondblclick:</b> Assigns a function to be executed when
+              the element is double-clicked.
+            </p>
+            <p>
+              <b>element.onmouseover:</b> Assigns a function to be executed when
+              the mouse pointer is moved over the element.
+            </p>
+            <p>
+              <b>element.onmouseout:</b> Assigns a function to be executed when
+              the mouse pointer is moved out of the element.
+            </p>
+            <p>
+              <b>element.onkeydown:</b> Assigns a function to be executed when a
+              key is pressed down.
+            </p>
+            <p>
+              <b>element.onkeyup:</b> Assigns a function to be executed when a
+              key is released.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Event Listeners</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>
+              Event listeners provide a more flexible and recommended approach
+              to handle events. They allow multiple functions to be attached to
+              an event and support event delegation.
+            </p>
+            <p>
+              <b>element.addEventListener(event, listener):</b> Adds an event
+              listener to the specified element.
+            </p>
+            <p>
+              <b>element.removeEventListener(event, listener):</b> Removes an
+              event listener from the specified element.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Event Handlers with named functions</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              Instead of using anonymous functions, you can define named
+              functions and use them as event handlers.
+            </p>
+            <p>function myFunction() {{ "{" }} ... {{ "}" }}</p>
+            <p>element.addEventListener(event, myFunction)</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Event Object</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-size: large"
+          >
+            <p>
+              Event handlers receive an event object as an argument, which
+              contains information about the event and the element it occurred
+              on. The event object has properties like target, type, keyCode,
+              etc.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 20px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b>Event Delegation</b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-size: large"
+          >
+            <p>
+              By attaching event listeners to a parent element, you can handle
+              events for multiple child elements efficiently. This is useful for
+              dynamically created or large sets of elements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

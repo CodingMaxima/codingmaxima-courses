@@ -1,0 +1,47 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">LIKE - BETWEEN - IN</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>LIKE</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The LIKE operator is used with WHERE clause to search for a specified pattern string in a column.</li>
+              <li>There are two wildcars are used with the LIKE operator:</li>
+              <li> The % (percentage) represents zero, one, or multiple characters string</li>
+              <li>The _ (underscore) represents single character</li><br>
+              <img  src="assets/img/dbms/operators/like.jpg" style="width: 90%">
+            </div>
+          </div>
+        </div> <!-- first group-->
+       <!-- second group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>BETWEEN</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The BETWEEN operator selects the values within a given range(start and end).</li>
+              <li> The values are numbers, text, or dates.</li>
+              <li>The both begin range and end range values are included.</li><br>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>IN</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The IN operator allows you to specify multiple values in a WHERE clause.</li> <br>
+            </div>
+          </div>
+        </div> <!--second group-->
+
+      </div>
+    </div>
+  </div>
+</div>

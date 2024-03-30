@@ -1,0 +1,107 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Comparator-Comparable</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Comparator">Comparator</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Comparable">Comparable</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <article>
+                        <h2>Comparable Interface</h2>
+                        <p>The <code>Comparable</code> interface is used to define the natural ordering of objects in Java. It allows objects of a class to be compared and sorted based on a predefined ordering.</p>
+                        <p>By implementing the <code>Comparable</code> interface, a class specifies its natural ordering and provides the implementation for comparing its objects. Objects of the class can then be sorted using sorting algorithms such as <code>Collections.sort()</code> or <code>Arrays.sort()</code>.</p>
+                        
+                        <h2>Comparator Interface</h2>
+                        <p>The <code>Comparator</code> interface provides an alternative way to compare objects, separate from their natural ordering defined by the <code>Comparable</code> interface. It allows you to define custom comparison logic for objects that may not have a natural ordering or when you want to use multiple sorting criteria.</p>
+                        <p>The <code>Comparator</code> interface contains a <code>compare()</code> method that compares two objects and returns an integer value that indicates their relative ordering. By implementing the <code>Comparator</code> interface, you can define your own comparison logic for sorting objects based on specific criteria.</p>
+                        
+                        <h2>When to Use Each Interface</h2>
+                        <p>Use the <code>Comparable</code> interface when you want to define the natural ordering of objects within the class itself. It is useful when you have a clear and consistent way to compare objects.</p>
+                        <p>Use the <code>Comparator</code> interface when you want to define custom comparison logic externally or when you want to sort objects based on multiple criteria. It allows you to create separate comparison logic that can be used with different classes.</p>
+                    </article>
+                    
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='two'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/corejava/" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='three'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp [url]="''"></app-video-cmp>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='four'">
+            <div class="card-body">
+                <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <li>Comparable is an interface which is used to compare the one object with other object which are
+                        of same type & follows the single sorting sequence/ we can sort the collection based on the
+                        single element(property).</li>
+                    <li>This method is present in <b>java.lang.Comparable</b></li>
+                    <li>Comparable method has one method <b>compareTo()</b> for sorting the elements </li>
+                    <li>Some build-in classes like String,wrapper classes, integer,double implement Comparable
+                        interface.</li>
+                    <li>By using this can also sort the list of elements(collections) <b>collections.sort(list)
+                            method</b></li>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='two'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/corejava/" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='three'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp [url]="''"></app-video-cmp>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='four'">
+            <div class="card-body">
+                <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+            </div>
+        </div>
+    </div>
+</div>

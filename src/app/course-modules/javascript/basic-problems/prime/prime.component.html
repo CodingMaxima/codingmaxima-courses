@@ -1,0 +1,144 @@
+<div class="card card-body my-3">
+    <h3 class="global-component-heading">Prime Number</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Problem Statement">Problem Statement</span>
+      <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+        data-hover="Program">Program</span>
+      <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+        data-hover="Animation Video">Animation Video</span>
+      <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+        data-hover="Test Cases">Test Cases</span>
+      <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+        data-hover="Practice">Practice</span>
+    </div>
+  
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning mt-4" style="border: 2px solid;">
+         
+              <p class="content-text">
+                The program is to print whether the given number is a prime umber or not .
+              </p>
+              <p class="content-text">
+               <b>Definition:-</b> A prime number is a number greater than 1 with only two factors i.e 1 and itself.<br>
+                A prime number cannot be divided by any other numbers without leaving a remainder.<br>
+                0,1 are not prime numbers.</p>
+                <p class="content-text">
+                For example:<br>
+                Let us Consider a number 13 ------- need to check whether 13 is a prime or not.<br>
+                Step 1: find the factors of 13<br>
+                Step 2: In table 1 and table 13 the number 13 will be divisible<br>
+                Like, 1 * 13 = 13 and 13 * 1 = 13<br>
+                Step 3: The factors of 13 is 1 and the number 13 itself.<br>
+                So, prime number should have the factors like 1 and itself then 13 is a prime number.<br>
+              </p>
+              <p class="content-text">
+                Let us Consider a number 10 ------- need to check whether 10 is a prime or not.<br>
+                Step 1: find the factors of 10<br>
+                Step 2: In table 1, 2, 5, 10 the number 10 will be divisible<br>
+                Like, 1*10 = 10<br>
+                10* 1 = 10<br>
+                2 * 5 = 10<br>
+                5 * 2 = 10<br>
+                Step 3: The factors of 10 is 1,2,5,10 itself.<br>
+                So, prime number should have the factors like 1 and itself but in this given example we have more factors
+                other than 1, 10 so it is not a prime number.<br>
+  
+              </p>
+         
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 20px;">
+              <div class="card-header text-center"><b>Example - 1</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">Enter n value</p>
+                <p style="margin-top: -20px;" class="card-text">5</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">5 is a prime number</p>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 20px;">
+              <div class="card-header text-center "><b>Example - 2</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">Enter n value</p>
+                <p style="margin-top: -20px;" class="card-text">10</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">10 is not a prime number</p>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 20px;">
+              <div class="card-header text-center"><b>Example - 3</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">Enter n value</p>
+                <p style="margin-top: -20px;" class="card-text">19</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">19 is a prime number</p>
+              </div>
+            
+          </div> <!-- Ending of examples-->
+        </div>
+      </div><!-- Ending of problem statement card body-->
+    </div>
+  
+    <div *ngIf="elementId=='two'">
+      <div class="card-body border border-warning mt-4">
+        <img class="program-img-fit" src="assets/img/javascript/basic-problems/prime.jpg" alt="program">
+      </div>
+    </div>
+  
+    <div *ngIf="elementId=='three'">
+      <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+        <app-video-cmp 
+        [url]="videoData"
+        [audioData]="audioData"
+        ></app-video-cmp>
+      </div>
+    </div>
+  
+    <div *ngIf="elementId=='four'">
+      <div class="card-body">
+        <!-- Starting of test cases -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 20px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">5</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Prime Number</p>
+            </div>
+          </div>
+  
+          <div class="card border-primary" style="border: 2px solid; margin: 20px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">10</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text"> Not an Prime Number</p>
+            </div>
+          </div>
+  
+          <div class="card border-primary" style="border: 2px solid; margin: 20px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">19</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Prime Number</p>
+            </div>
+          </div>
+        </div> <!-- Ending of test cases -->
+      </div>
+    </div>
+  
+    <div *ngIf="elementId=='five'">
+      <div class="card-body">
+        <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,122 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Armstrong Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="text-center">
+      <button type="button" class="btn btn-lg btn-block">
+          <p>An Armstrong number is a number that is equal to the sum of its own digits raised to the power of the number of digits. In other words, <br>
+            An Armstrong number is a number that can be written as the sum of its own digits each raised to the power of the number of digits.</p>
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+          <p>For example,</p> 
+          <p>153 is an Armstrong number because 1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup> = 153. Similarly, 370 is an Armstrong number because 3<sup>3</sup> + 7<sup>3</sup> + 0<sup>3</sup> = 370.</p>
+          <p>However, not all numbers are Armstrong numbers. For example,</p>
+          <p>123 is not an Armstrong number because 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> is not equal to 123.</p>
+      </button>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">153</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Given number 153 is a amstrong number</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">371</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Given number 371 is a amstrong number</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">25</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Given number 25 is not a amstrong number </p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit-python" src="assets/img/python/basic/armstrong.jpg" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Startinf of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">153</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Armstrong Number</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">371</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Armstrong Number</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">25</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Not An armstrong Number</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+    </div>
+  </div>
+
+</div>

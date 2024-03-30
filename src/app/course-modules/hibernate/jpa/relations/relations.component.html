@@ -1,0 +1,310 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Entity Mapping Relations</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div
+                        style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block"> Java Persistence API (JPA) allows us to map
+                            our domain model directly to the
+                            database structure and then gives us the flexibility of manipulating objects
+                            in the code.</button>
+
+                        <br>
+                        <button type="button" class="btn btn-lg btn-block">Hibernate mappings are one of the key
+                            features of hibernate.
+                            They establish the relationship between two database tables as attributes in your model.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">There are three most important mapping topics
+                            in Hibernate.
+
+                            <p>they are..</p>
+                            <li>• Mapping of collections.</li>
+                            
+                            <li>• Mapping of Associations between Entity classes.</li>
+                            <li>• Component Mappings.</li>
+                        </button>
+
+                    </div>
+                </div>
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Collection Mapping</button>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Introduction</b></div>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                                    <button type="button" class="btn btn-lg btn-block">
+                                        If an Entity or class has collection of values for a particular variable,
+                                        then we can map those values using any one of the collection interfaces
+                                        available in java.</button>
+                                    <button type="button" class="btn btn-lg btn-block">
+                                        Hibernate can persist instances of
+                                        <b>
+                                            <li>1.java.util.Map,</li>
+
+                                            <li>2.java.util.Set,</li>
+
+                                            <li>3.java.util.SortedMap,</li>
+                                            <li>4.java.util.SortedSet,</li>
+                                            <li>5.java.util.List.</li>
+                                        </b>
+                                    </button>
+
+                                    <div style="padding: 10px;" class="text-center">
+                                        <button class="btn btn-info">Collection Types & Description</button>
+
+                                    </div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Collection Types</th>
+                                                <th>Description</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>java.util.List</td>
+                                            <td> This is mapped with a <b>list</b> element and initialized with
+                                                    java.util.ArrayList.
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                java.util.Map</td>
+                                            <td>This is mapped with a <b>map</b> element and initialized with
+                                                    java.util.HashMap.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>java.util.Set</td>
+                                            <td>This is mapped with a <b>set</b> element and initialized with
+                                                    java.util.HashSet.
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>java.util.SortedSet</td>
+                                            <td>This is mapped with a <b>set</b> element and initialized with
+                                                    java.util.TreeSet.
+                                                    The sort attribute can be set to either a comparator or natural
+                                                    ordering.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>java.util.SortedMap</td>
+                                            <td>This is mapped with a <b>map</b> element and initialized with
+                                                    java.util.TreeMap.
+                                                    The sort attribute can be set to either a comparator or natural
+                                                    ordering.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>java.util.Collection</td>
+                                            <td>This is mapped with a <b>bag</b> or <b>ibag</b> element and
+                                                        initialized with java.util.ArrayList.
+                                            </td>
+                                        </tr>
+
+
+
+
+
+                                    </table>
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Association Mappings</button>
+                </div>
+
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Introduction</b></div>
+                        <div class="text-center">
+                            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                                <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                                    <button type="button" class="btn btn-lg btn-block">
+                                        An association mapping can be unidirectional as well as bidirectional i.e,
+                                        It defines in which direction you can use the relationship in
+                                        your model and criteria queries.
+                                    </button>
+                                    <button type="button" class="btn btn-lg btn-block">
+                                         It helps to  navigate the associations easily in your model and criteria queries.
+                                    </button>
+                                    <button type="button" class="btn btn-lg btn-block">
+                                        There are Mainly Four Types of Mapping.
+                                        <li> 1.One-To-One</li>
+                                        <li> 2.One-To-Many</li>
+                                        <li> 3.Many-To-One</li>
+                                        <li> 4.Many-To-Many</li>
+                                   </button>
+
+                                    <div style="padding: 10px;" class="text-center">
+                                        <button class="btn btn-info">Types of Relational Mappings</button>
+
+                                    </div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Mapping Type/Name</th>
+                                                <th>Description</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>@OneToOne</td>
+                                            <td> <p>@OneToOne</p>
+                                                represents that a single entity is associated with a single
+                                                 instance of the other entity.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                @OneToMany</td>
+                                            <td><P> @OneToMany</P>
+                                                 represents that a single entity is associated with a Many
+                                                instance of the other entity.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>@ManyToOne</td>
+                                            <td> <P> @ManyToOne</P>
+                                                 represents that  Many
+                                                instance of the other entities are associated with a single entity.
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>@ManyToMany</td>
+                                            <td><P> @ManyToMany</P>
+                                                 represents that  Many
+                                                instance of the single entity are associated with Many
+                                                instance of the other entity.
+                                            </td>
+                                        </tr>
+
+
+
+
+
+                                    </table>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">@JoinColumn</button>
+
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                     
+                      <div class="card-body">
+                        <div class="text-center">
+                          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">
+                                The @JoinColumn annotation helps us specify the column
+                                 we'll use for joining an entity association or element collection.</button>
+                           
+                          
+          
+          
+          
+          
+                          </div>
+                        </div>
+          
+                      </div>
+                    </div>
+          
+          
+                  </div>
+                  <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">@JoinTable</button>
+
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                     
+                      <div class="card-body">
+                        <div class="text-center">
+                          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">
+                                The @JoinTable  Specifies the mapping of associations.
+                                 It is applied to the owning side of an association.</button>
+                                 <button type="button" class="btn btn-lg btn-block">
+                                    A join table is typically used in the mapping of many-to-many and unidirectional one-to-many associations.</button>
+                               
+                          
+          
+          
+          
+          
+                          </div>
+                        </div>
+          
+                      </div>
+                    </div>
+          
+          
+                  </div>
+
+
+
+
+
+
+
+
+
+               
+
+                
+
+                
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>

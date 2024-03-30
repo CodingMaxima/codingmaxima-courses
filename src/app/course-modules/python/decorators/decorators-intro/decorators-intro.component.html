@@ -1,0 +1,110 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Decorators Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <!-- <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span> -->
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">Decorators are the functions which takes
+                            input as a function and returns the output as new function.</button>
+                        <button type="button" class="btn btn-lg btn-block"><b>NOTE: </b>In decorators Functions are
+                            passed as an arguments into another funciton & then they called inside the wrapper function
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Inner function</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>Inner Functions means a function inside
+                                the another function</p>
+                            <img src="assets/img/python/decorators/inner-ex1.jpg" style="width: 100%;"><br>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>From the above example <b>Maxima() </b>
+                                is
+                                the main funcion, <b>maxima1(), maxima2(), maxima3()</b> are the inner functions.
+                                whenever we are calling the main function the inner functions will also execute.We can
+                                write <b>n</b> number of inner functions.</p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>By passing an one function and returning
+                                the function as output</p>
+                            <img src="assets/img/python/decorators/inner-ex2.jpg" style="width: 70%;"><br>
+
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Simple decorators with argument</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+
+                            <img src="assets/img/python/decorators/arg-ex1.jpg" style="width: 100%;"><br>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                <li>From the above example <b>describe()</b> function is an decorator.</li>
+                                <li>We are now passing the <b>casual()</b> function as the argument to the
+                                    <b>describe()</b> function.
+                                <li>First The <b>describe()</b> function returns the inner function, and it is assigned
+                                    to the decorate_func variable.</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Simple decorators with arguments by using @ symbol</b>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>Instead of assigning the function to call
+                                the variable. can use <b>@</b> symbol</p>
+                            <img src="assets/img/python/decorators/arg-ex2.jpg" style="width: 100%;"><br>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Simple decorators with parameters</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);;">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>Decorators by taking the parameters in
+                                the function </p>
+                            <img src="assets/img/python/decorators/parameter-ex.jpg" style="width: 100%;"><br>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                <li>In the above example divide() function was taken and and assigned a, b parameters
+                                    for performing the division operation.</li>
+                                <li>Here, when we call the divide() function along with arguments, the inner() function
+                                    present in division() decorator is called instead.</li>
+                                <li>Then this inner() function calls the original divide() function with the arguments &
+                                    returns the results.</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Combining Decorators</b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>Multiple decorators can be linked
+                                together.For combining the decorators in Python, we can apply multiple decorators to a
+                                single function by
+                                placing them one after the other, with the most inner decorator being applied first.</p>
+                            <img src="assets/img/python/decorators/chain-ex.jpg" style="width: 60%;"><br>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <h1>Animation video coming soon...</h1>
+    </div>
+</div>

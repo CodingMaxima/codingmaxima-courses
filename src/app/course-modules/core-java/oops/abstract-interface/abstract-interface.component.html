@@ -1,0 +1,110 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Abstract Class (vs) Interface</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="introduction">introduction</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Abstract Class</th>
+                        <th>Interface</th>
+                    </tr>
+                    <tr>
+                        <td>Definition</td>
+                        <td>A class that cannot be instantiated and can contain both abstract and non-abstract
+                            methods.
+                        </td>
+                        <td>A blueprint of a class that defines a set of methods that a class must implement.</td>
+                    </tr>
+                    <tr>
+                        <td>Instantiation</td>
+                        <td>Cannot be directly instantiated.</td>
+                        <td>Cannot be directly instantiated.</td>
+                    </tr>
+                    <tr>
+                        <td>Inheritance</td>
+                        <td>Can provide implementation details and can be extended by a subclass using the "extends"
+                            keyword.</td>
+                        <td>Can be implemented by multiple classes using the "implements" keyword.</td>
+                    </tr>
+                    <tr>
+                        <td>Method implementation</td>
+                        <td>Can have both abstract and non-abstract methods.</td>
+                        <td>Can only have abstract methods by default, but in Java 8 and later, it can also have
+                            default
+                            and static methods.</td>
+                    </tr>
+                    <tr>
+                        <td>Fields</td>
+                        <td>Can have instance variables, static variables, and constants.</td>
+                        <td>Can have only constants (static final variables).</td>
+                    </tr>
+                    <tr>
+                        <td>Multiple inheritance</td>
+                        <td>Does not support multiple inheritance.</td>
+                        <td>Supports multiple inheritance by implementing multiple interfaces.</td>
+                    </tr>
+                    <tr>
+                        <td>Relationship</td>
+                        <td>Represents an "is-a" relationship.</td>
+                        <td>Represents a "has-a" or "can-do" relationship.</td>
+                    </tr>
+                    <tr>
+                        <td>Usage</td>
+                        <td>Used when there is a common functionality among closely related classes.</td>
+                        <td>Used when unrelated classes need to implement common behavior.</td>
+                    </tr>
+                    <tr>
+                        <td>Extension</td>
+                        <td>Can extend only one abstract class at a time.</td>
+                        <td>Can implement multiple interfaces simultaneously.</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility</td>
+                        <td>Can have different access modifiers for methods and fields.</td>
+                        <td>Methods and fields areimplicitly public.</td>
+                    </tr>
+                </table>
+
+                <h1>When to Use Abstract Class and Interface</h1>
+
+                <div class="article">
+                    <h2>Use Abstract Class When:</h2>
+                    <p>An abstract class should be used when:</p>
+                    <ul>
+                        <li>You want to provide a common base implementation for a group of closely related classes.
+                        </li>
+                        <li>You need to define instance variables or non-static fields that are shared among subclasses.
+                        </li>
+                        <li>You want to enforce an "is-a" relationship, where the subclasses are specialized versions of
+                            the abstract class.</li>
+                        <li>You anticipate evolving the abstract class over time, adding new methods or modifying
+                            existing ones, without breaking the existing subclasses.</li>
+                        <li>You don't need to implement multiple inheritance, as Java does not allow a class to extend
+                            multiple abstract classes.</li>
+                    </ul>
+                </div>
+
+                <div class="article">
+                    <h2>Use Interface When:</h2>
+                    <p>An interface should be used when:</p>
+                    <ul>
+                        <li>You want to define a contract that multiple unrelated classes can implement to provide a
+                            common set of methods.</li>
+                        <li>You need to achieve multiple inheritance by allowing a class to implement multiple
+                            interfaces.</li>
+                        <li>You want to decouple implementation details from the interface definition.</li>
+                        <li>You are working with a framework or library that expects objects to adhere to a specific
+                            interface.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

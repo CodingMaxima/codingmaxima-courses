@@ -1,0 +1,431 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Control Flow Statments</h3>
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <section class="controlstatement">
+            <ul>
+                <b>Control Flow Statements</b> in Python are programming constructs that determine the sequence in which the code is executed. <br>
+                They allow the programmer to control the flow of the program based on conditions, loops, and decision-making structures.
+            </ul>
+            </section>
+        </div>
+    </div>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Conditional Statements">Conditional Statements</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Looping Statements">Looping Statements</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+            data-hover="Control Statements">Control Statements</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="ifstatement" [ngClass]="(elementId2=='ifstatement')?'active':''"
+                    (click)="tabChange($event)" data-hover="if condition">if condition</span>
+                <span class="tab-pill" id="ifelsecondition" [ngClass]="(elementId2=='ifelsecondition')?'active':''"
+                    (click)="tabChange($event)" data-hover="if-else condition">if-else condition</span>
+                <span class="tab-pill" id="ifelifelsecondition" [ngClass]="(elementId2=='ifelifelsecondition')?'active':''"
+                    (click)="tabChange($event)" data-hover="if-elif-else condition">if-elif-else condition</span>
+                <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                    (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            </div>
+            <div *ngIf="elementId2=='ifstatement'">
+                <section>
+                    <div class="if">
+                        <p>
+                            <li>The <b>if</b> statement in Python is used to perform a certain action or execute a block of code 
+                            if a specified condition is evaluated as <b>True</b>.</li>
+                            <li>It provides a way to make decisions within the code based on the result of the condition.</li>
+                        </p>
+                    </div>
+                </section>
+                <section class="ifcondition">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Syntax of the if Statement:</h3>
+                            <ul>
+                                if condition:
+                                    <ul>
+                                        # Code block to be executed if the condition is True <br>
+                                        # This code is indented and runs when the condition is met <br>  
+                                    </ul>                       
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example:</h3>
+                            <ul>
+                                x = 10 <br>
+                                if x > 0:
+                                    <ul>
+                                        print("x is positive")
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                    <img class="img-thumbnail" src="assets/img/python/control_statments/if.jpg" alt="program"><br>
+                    <p>From the above example Since the value of x is not greater than 10, therefore the line 'y=25' and
+                        'print("greater than 10")' don't get executed.
+                        But the line 'print(f"End of the program with {{'{' }}y={{ '}'}}")' is executed, since it is out
+                        of the indent and is no longer based on the condition</p>
+               
+            </div>
+            <div *ngIf="elementId2=='ifelsecondition'">
+                <section>
+                    <div class="if">
+                        <p>
+                            <li>The <b>if-else</b> statement in Python is used to create a decision-making structure where one block of code is executed if a specified condition is <b>True</b>, and another block of code is executed if the condition is <b>False</b>.</li>
+                            <li>This statement provides an alternative execution path based on whether the condition evaluates to <b>True</b> or <b>False</b>.</li>
+                        </p>
+                    </div>
+                </section>
+                <section class="ifcondition">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Syntax of the if-else Statement:</h3>
+                            <ul>
+                                if condition:
+                                    <ul>
+                                        # Code block to be executed if the condition is True <br>
+                                        # This code is indented and runs when the condition is met <br>  
+                                    </ul>                       
+                            </ul>
+                            <ul>
+                                else:
+                                    <ul>
+                                        # Code block to execute if the condition is False<br>
+                                        # This code is executed when the condition is not met<br>  
+                                    </ul>                       
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example:</h3>
+                            <ul>
+                                x = 10 <br>
+                                if x % 2 == 0:
+                                    <ul>
+                                        print("x is even")
+                                    </ul>
+                            </ul>
+                            <ul>
+                                else:
+                                    <ul>
+                                        print("x is odd")
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <img class="img-thumbnail" src="assets/img/python/control_statments/if-else.jpg"alt="program"><br>
+                <p> From the above example since the value of x is not greater than 10, therefore the line 'y=25' and 'print("greater than
+                    10")' don't get executed, but since we have an 'else' statement, the lines 'y=30' and
+                    'print("less than 10")' are executed instead.
+                    Followed by the line 'print(f"End of the program with {{'{' }}y={{ '}'}}")' is executed, since
+                    it is out of the indent</p>
+            </div>
+            <div *ngIf="elementId2=='ifelifelsecondition'">
+
+                <section>
+                    <div class="if">
+                        <p>
+                            <li>The <b>if-elif-else</b> statement in Python allows you to evaluate multiple conditions sequentially.</li>
+                            <li>It provides a way to check several conditions one by one and execute specific blocks of code based on the first condition that evaluates to <b>True</b>.</li>
+                            <li>If none of the conditions are <b>True</b>, the code block under the <b>else</b> statement (if provided) will be executed.</li>
+                        </p>
+                    </div>
+                </section>
+                <section class="ifcondition">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Syntax of the if-elif-else Statement:</h3>
+                            <ul>
+                                if condition:
+                                    <ul>
+                                        # Code block to be executed if the condition is True <br>
+                                        # This code is indented and runs when the condition is met <br>  
+                                    </ul>                       
+                            </ul>
+                            <ul>
+                                elif condition2:
+                                    <ul>
+                                        # Code block to execute if condition1 is False and condition2 is True <br>
+                                        # This code runs when condition2 is met<br>  
+                                    </ul>                       
+                            </ul>
+                            <ul>
+                                elif condition3:
+                                    <ul>
+                                        # Code block to execute if conditions 1 and 2 are False, and condition3 is True<br>
+                                        # This code runs when condition3 is met<br>  
+                                    </ul>
+                                # ... (additional elif blocks if needed)                       
+                            </ul>
+                            <ul>
+                                else:
+                                    <ul>
+                                        # Code block to execute if none of the above conditions are True<br>
+                                        # This code runs when no previous condition is met<br>  
+                                    </ul>                      
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example:</h3>
+                            <ul>
+                                score = 75<br>
+                                if score >= 90:
+                                    <ul>
+                                        print("Grade: A")
+                                    </ul>
+                            </ul>
+                            <ul>
+                                elif score >= 80:
+                                    <ul>
+                                        print("Grade: B")
+                                    </ul>
+                            </ul>
+                            <ul>
+                                elif score >= 70:
+                                    <ul>
+                                        print("Grade: C")
+                                    </ul>
+                            </ul>
+                            <ul>
+                                elif score >= 60:
+                                    <ul>
+                                        print("Grade: D")
+                                    </ul>
+                            </ul>
+                            <ul>
+                                else
+                                    <ul>
+                                        print("Grade: F")
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <img class="img-thumbnail" src="assets/img/python/control_statments/if-elif-else.jpg"alt="program"><br>
+                <p> from the above example Since the value of x is not greater than 10, therefore the line 'y=25'
+                    and 'print("greater than 10")' don't get executed, but since x is greater than 5 and we have an
+                    'elif' statement that says x>5, the lines `y=125` and 'print("greater than 5 but less than 10")'
+                    are executed instead.
+                    Followed by the line 'print(f"End of the program with {{'{'}}y={{'}'}}")' is executed, since it
+                    is out of the indent
+                    Note: There can be any number of elifs in an if-elif-else conditional structure</p>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='animation'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp 
+                [url]="''"
+                ></app-video-cmp>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="Forloop" [ngClass]="(elementId2=='Forloop')?'active':''"
+                    (click)="tabChange($event)" data-hover="For Loop">For Loop</span>
+                <span class="tab-pill" id="Whileloop" [ngClass]="(elementId2=='Whileloop')?'active':''"
+                    (click)="tabChange($event)" data-hover="While Loop">While Loop</span>
+                <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                    (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            </div>
+            <div *ngIf="elementId2=='Forloop'">
+                <section>
+                    <div class="if">
+                        <p>
+                            <li><b>For</b> loop is used to iterate over a sequence of elements, such as lists, tuples, strings, dictionaries, or ranges.</li> 
+                            <li>It executes a block of code for each element in the sequence.</li>
+                        </p>
+                    </div>
+                </section>
+                <section class="ifcondition">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Syntax of the For Loop:</h3>
+                            <ul>
+                                for item in sequence:
+                                    <ul>
+                                        # Code block to be executed for each iteration 
+                                    </ul>                       
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example 1: Iterating Through a List</h3>
+                            <ul>
+                                fruits = ["apple", "banana", "orange"] <br>
+                                for fruit in fruits:
+                                    <ul>
+                                        print(fruit)
+                                    </ul>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example 2: Using range() Function</h3>
+                            <ul>
+                                for i in range(5):
+                                    <ul>
+                                        print(i)
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <img class="img-thumbnail" src="assets/img/python/loops/forloop.jpg" alt="program"><br>
+            </div>
+            <div *ngIf="elementId2=='Whileloop'">
+                <section>
+                    <div class="if">
+                        <p>
+                            <li>While loop is used to repeatedly execute a block of code as long as a specified condition remains <b>True</b>. </li>
+                            <li>It keeps iterating until the condition becomes <b>False</b>.</li>
+                        </p>
+                    </div>
+                </section>
+                <section class="ifcondition">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Syntax of the While Loop:</h3>
+                            <ul>
+                                while condition:
+                                    <ul>
+                                        # Code block to be executed as long as the condition is True
+                                    </ul>                       
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example</h3>
+                            <ul>
+                                count = 0<br>
+                                while count < 5:
+                                    <ul>
+                                        print(count) <br>
+                                        count += 1
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <img class="img-thumbnail" src="assets/img/python/loops/whileloop.jpg" alt="program"><br>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='animation'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp 
+                [url]="''"
+                ></app-video-cmp>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="break"
+                    [ngClass]="(elementId2=='break')?'active':''" (click)="tabChange($event)"
+                    data-hover="Break">Break</span>
+                <span class="tab-pill" id="continue"
+                    [ngClass]="(elementId2=='continue')?'active':''" (click)="tabChange($event)"
+                    data-hover="Continue">Continue</span>
+                <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                    (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            </div>
+            <div *ngIf="elementId2=='break'">
+                <section>
+                    <div class="if">
+                        <p>
+                            <li><b>Break</b> statement is used to terminate or exit a loop prematurely based on a certain condition.</li> 
+                            <li>When encountered within a loop, it immediately stops the execution of the loop and transfers control to the next statement after the loop.</li>
+                        </p>
+                    </div>
+                </section>
+                <section class="ifcondition">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>Syntax of the break Statement:</h3>
+                            <ul>
+                                for item in sequence:
+                                 <ul>
+                                    if condition:
+                                    <ul>
+                                         <b>break</b>
+                                    </ul>
+                                    # Code block  
+                                </ul>                       
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>Example:</h3>
+                            <ul>
+                                for i in range(5):
+                                 <ul>
+                                    if i == 3:
+                                    <ul>
+                                         <b>break</b>
+                                    </ul>
+                                    print(i)
+                                </ul>                       
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='continue'">
+            <section>
+                <div class="if">
+                    <p>
+                        <li><b>Continue</b> statement is used within loops to skip the remaining code inside the loop for the current iteration and move to the next iteration.</li>
+                        <li>When encountered, it immediately causes the loop to go to the next iteration, skipping any code that follows the <b>continue</b> statement within that iteration.</li>
+                    </p>
+                </div>
+            </section>
+            <section class="ifcondition">
+                <div class="row">
+                    <div class="course-col">
+                        <h3>Syntax of the break Statement:</h3>
+                        <ul>
+                            for item in sequence:
+                             <ul>
+                                if condition:
+                                <ul>
+                                     <b>continue</b>
+                                </ul>
+                                # Code block  
+                            </ul>                       
+                        </ul>
+                    </div>
+                    <div class="course-col">
+                        <h3>Example:</h3>
+                        <ul>
+                            for i in range(5):
+                             <ul>
+                                if i == 2:
+                                <ul>
+                                     <b>continue</b>
+                                </ul>
+                                print(i)
+                            </ul>                       
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+        <div *ngIf="elementId2=='animation'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp 
+                [url]="''"
+                ></app-video-cmp>
+              </div>
+        </div>
+    </div>

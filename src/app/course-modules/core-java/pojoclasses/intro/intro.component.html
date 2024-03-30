@@ -1,0 +1,70 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Pojo Classes Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Constructor">Constructor</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Getters & Setters">Getters & Setters</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="toString()">toString()</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card">
+      <h5 class="card-header">Constructor</h5>
+      <div class="card-body">
+        <ul>
+          <li>Constructor is a special king of methods which name same as class name and doesn't have any return
+            type.</li>
+          <li>The constructor is called when an object of a class is created with help of new keyword.</li>
+          <li>The defalut constructor automatically provided by the Java Object class(defalut parent of all
+            classes of java).</li>
+          <li>Constructor is also used to set the class properties through parameter constructor.</li>
+          <li>If we write parameter constructor in the class you have to provide defalut constructor as well other
+            wise we not able to create defalut(empty) object.</li>
+        </ul>
+        <div class="card-group">
+          <div class="card">
+            <h5 class="text-center card-title">Defalut Constructor</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/pojo/const.JPG" alt="">
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="text-center card-title">Parameterized Constructor</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/pojo/const1.JPG" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="elementId=='two'">
+    <div class="card">
+      <h5 class="card-header">Getters & Setters</h5>
+      <div class="card-body">
+        <li>Getters and Setters are the public methods with used to bind the private data of the class.</li>
+        <li>Getter and Setter are methods used to secure your data by making your class data as private(only
+          access in the class).</li>
+        <li>Getters are used to access the data. Setter are used to set the data.</li>
+        <li>For each class variable we will write seprare getter and setter methods.</li>
+        <li>The advantage of binding private variables using public methods, we can add some validation operations
+          for the data.</li>
+        <img class="card-img-top" src="assets/img/corejava/pojo/gettersetter.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card">
+      <h5 class="card-header">toString()</h5>
+      <div class="card-body">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</div>

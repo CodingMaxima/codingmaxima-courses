@@ -1,0 +1,497 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Constraints(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>create an constraints table of
+                                        employee by using below
+                                        data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text"><b>id - </b>make sure it should not be duplicate and should
+                                        not be empty (hint:
+                                        use "PRIMARY KEY CONSTRAINT")</li>
+                                    <li class="card-text"><b>first_name - </b> it should not be empty (hint: use "NOT
+                                        NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>last_name - </b>it should not be empty (hint: use "NOT
+                                        NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>gender - </b>it should be either male or female or
+                                        unknown(hint: use "CHECK
+                                        CONSTRAINT")</li>
+                                    <li class="card-text"><b>designation - </b>keep a fixed value for it. If you
+                                        doesn't want to give an
+                                        value for this particular column/for auto generating of the value
+                                        without giving any
+                                        manual values(hint: use "DEFAULT CONSTRAINT") </li>
+                                    <li class="card-text"><b>company_name - </b>it should not be empty (hint: use
+                                        "NOT NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>salary - </b>it should be in between greater than or
+                                        equal to 5000 and less
+                                        than or equal to 100000(hint: use "CHECK CONSTRAINT") </li>
+                                    <li class="card-text"><b>age - </b>it should be in between greater than or equal
+                                        to 18 and less than
+                                        or equal to 58(hint: use "CHECK CONSTRAINT")</li>
+                                    <li class="card-text"><b>bankaccountnumber - </b>it should not be duplicate(hint:
+                                        use "UNIQUE
+                                        CONSTRAINT")</li>
+                                    <li class="card-text"><b>primaryphonenumber - </b>keep a fixed value for it. If
+                                        you doesn't want to
+                                        give an value for this particular column/for auto generating of the
+                                        value without giving
+                                        any manual values(hint: use "DEFAULT CONSTRAINT")</li>
+                                    <li class="card-text"><b>employee_type - </b>it should not be empty (hint: use
+                                        "NOT NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>joining_date - </b>keep a fixed value for it. If you
+                                        doesn't want to give an
+                                        value for this particular column/for auto generating of the value
+                                        without giving any
+                                        manual values(hint: use "DEFAULT CONSTRAINT")</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button style="padding: 10px;" class="btn btn-primary"
+                                (click)="answer()">{{buttonValue}}</button>
+                            <div style="padding: 10px;" *ngIf="toggleOn">
+
+                                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="description">
+                                        <p>CREATE TABLE employee (</p>
+                                        <p style="margin-top: -20px;">id int PRIMARY KEY,</p>
+                                        <p style="margin-top: -20px;"> first_name varchar(255) NOT NULL,</p>
+                                        <p style="margin-top: -20px;"> last_name varchar(255) NOT NULL,</p>
+                                        <p style="margin-top: -20px;"> gender varchar(20) CHECK(gender
+                                            in('male','female','unknown')),</p>
+                                        <p style="margin-top: -20px;"> designation varchar(100) default
+                                            'bench',</p>
+                                        <p style="margin-top: -20px;"> company_name varchar(255) NOT NULL,
+                                        </p>
+                                        <p style="margin-top: -20px;"> salary decimal(10,2) CHECK(salary
+                                            &gt;=5000 AND
+                                            salary
+                                            &lt;=100000), </p>
+                                        <p style="margin-top: -20px;"> age int CHECK(age &gt;=18 AND age
+                                            &lt;=58),
+                                        </p>
+                                        <p style="margin-top: -20px;"> bankaccountnumber
+                                            varchar(255) UNIQUE,</p>
+                                        <p style="margin-top: -20px;"> primaryphonenumber bigint
+                                            DEFAULT 0,</p>
+                                        <p style="margin-top: -20px;"> employee_type varchar(100)
+                                            DEFAULT 'full
+                                            time',</p>
+                                        <p style="margin-top: -20px;"> joining_date date
+                                            DEFAULT(current_date)</p>
+                                        <p style="margin-top: -20px;"> );</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="padding: 10px;" class="text-center">
+                        <button class="btn btn-info">INSERT follwing Data into Table</button>
+                    </div>
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 1</li>
+                                <li class="card-text"> first_name = Pardeep</li>
+                                <li class="card-text">last_name =Narwal</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">designation = Software Engineer</li>
+                                <li class="card-text">company_name = Intel Technologies</li>
+                                <li class="card-text">salary = 20000</li>
+                                <li class="card-text">age = 24</li>
+                                <li class="card-text">bankaccountnumber = 1230999884</li>
+                                <li class="card-text">primaryphonenumber = 99887766</li>
+                                <li class="card-text">employee_type = full time </li>
+                                <li class="card-text">joining_date = 2019-05-02</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 2</li>
+                                <li class="card-text">first_name = Sandeep</li>
+                                <li class="card-text">last_name = Dull</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">designation = Web Developer</li>
+                                <li class="card-text">company_name = Synoric Technologies</li>
+                                <li class="card-text">salary = 50000</li>
+                                <li class="card-text">age = 29</li>
+                                <li class="card-text">bankaccountnumber = 1230999894</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2016-03-19</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 3</li>
+                                <li class="card-text">first_name = Neelima</li>
+                                <li class="card-text">last_name = Chowdary</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = Sr.manager</li>
+                                <li class="card-text">company_name = Maxima Encode</li>
+                                <li class="card-text">salary = 90000</li>
+                                <li class="card-text">age = 40</li>
+                                <li class="card-text">bankaccountnumber = 1230999877/li>
+                                <li class="card-text">primaryphonenumber = 99886666</li>
+                                <li class="card-text">employee_type = part time</li>
+                                <li class="card-text">joining_date = 2001-10-27</li>
+                            </div>
+                        </div>
+                    </div> <!-- Ending of Data-->
+
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 4</li>
+                                <li class="card-text">first_name = Shiv</li>
+                                <li class="card-text">last_name = Kumar</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">company_name = wipro</li>
+                                <li class="card-text">salary = 30000 </li>
+                                <li class="card-text">age = 22</li>
+                                <li class="card-text">bankaccountnumber = 1230987654</li>
+                                <li class="card-text">primaryphonenumber = 99223456</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 5</li>
+                                <li class="card-text">first_name = Priya</li>
+                                <li class="card-text">last_name = Soodh</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = Team Lead</li>
+                                <li class="card-text">company_name = Tcs</li>
+                                <li class="card-text">salary = 55000</li>
+                                <li class="card-text">age = 30</li>
+                                <li class="card-text">bankaccountnumber = 1234565432</li>
+                                <li class="card-text">employee_type = part time</li>
+                                <li class="card-text">joining_date = 2013-09-20</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 6</li>
+                                <li class="card-text">first_name = Sai</li>
+                                <li class="card-text">last_name = Ruchitha</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = Sr.Manager</li>
+                                <li class="card-text">company_name =Vsoft Technologies</li>
+                                <li class="card-text">salary = 80000</li>
+                                <li class="card-text">age = 35</li>
+                                <li class="card-text">bankaccountnumber = 1231231234</li>
+                                <li class="card-text">primaryphonenumber = 99876598</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2007-11-11</li>
+                            </div>
+                        </div>
+                    </div> <!-- Ending of Data-->
+
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 7</li>
+                                <li class="card-text">first_name = John</li>
+                                <li class="card-text">last_name = Robert</li>
+                                <li class="card-text">gender = unknown</li>
+                                <li class="card-text">designation = trainee</li>
+                                <li class="card-text">company_name = wipro</li>
+                                <li class="card-text">salary = 15000</li>
+                                <li class="card-text">age = 22</li>
+                                <li class="card-text">bankaccountnumber = 1234123412</li>
+                                <li class="card-text">primaryphonenumber = 99997777</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 8</li>
+                                <li class="card-text">first_name = Sri</li>
+                                <li class="card-text">last_name = Divya</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = H.R</li>
+                                <li class="card-text">company_name = Argano technologies</li>
+                                <li class="card-text">salary = 45000</li>
+                                <li class="card-text">age = 28</li>
+                                <li class="card-text">bankaccountnumber = 1234567890</li>
+                                <li class="card-text">primaryphonenumber = 98765432</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2018-02-01</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 9</li>
+                                <li class="card-text">first_name = Rishank</li>
+                                <li class="card-text">last_name = Devadiga</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">designation = Associate Manager</li>
+                                <li class="card-text">company_name = Infosys</li>
+                                <li class="card-text">salary = 75000</li>
+                                <li class="card-text">age = 32</li>
+                                <li class="card-text">bankaccountnumber = 1234554321</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2010-06-05</li>
+                            </div>
+                        </div>
+
+                    </div> <!-- Ending of Data-->
+
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 10</li>
+                                <li class="card-text">first_name = Ram</li>
+                                <li class="card-text">last_name = Kapoor</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">designation = Software Engineer</li>
+                                <li class="card-text">company_name = Intense Technologies</li>
+                                <li class="card-text">salary = 88000</li>
+                                <li class="card-text">age = 38</li>
+                                <li class="card-text">bankaccountnumber = 1234567231</li>
+                                <li class="card-text">primaryphonenumber = 98765478</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2008-10-10</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 11</li>
+                                <li class="card-text">first_name = Sai</li>
+                                <li class="card-text">last_name = Latha</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = Associate Engineer</li>
+                                <li class="card-text">company_name = Tech Manhindra </li>
+                                <li class="card-text">salary = 35000</li>
+                                <li class="card-text">age = 27</li>
+                                <li class="card-text">bankaccountnumber = 1234567895</li>
+                                <li class="card-text">primaryphonenumber = 99887722</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2018-05-10</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 12</li>
+                                <li class="card-text">first_name = Thomas</li>
+                                <li class="card-text">last_name =Edward</li>
+                                <li class="card-text">gender = unknown</li>
+                                <li class="card-text">designation = Jr.Engineer</li>
+                                <li class="card-text">company_name = Synoric Technologies</li>
+                                <li class="card-text">salary = 40000</li>
+                                <li class="card-text">age = 29</li>
+                                <li class="card-text">bankaccountnumber = 1230981231</li>
+                                <li class="card-text">employee_type = full time</li>
+                            </div>
+                        </div>
+                    </div> <!-- Ending of Data-->
+
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 13</li>
+                                <li class="card-text">first_name = Smrithi</li>
+                                <li class="card-text">last_name = Kour</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = Web Developer</li>
+                                <li class="card-text">company_name = Tesla Technologies</li>
+                                <li class="card-text">salary = 75000</li>
+                                <li class="card-text">age = 37</li>
+                                <li class="card-text">bankaccountnumber = 1230099880</li>
+                                <li class="card-text">primaryphonenumber = 99995559</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2005-10-02</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 14</li>
+                                <li class="card-text">first_name = Mohan</li>
+                                <li class="card-text">last_name = Krishna</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">company_name = Intel Technologies</li>
+                                <li class="card-text">salary = 30000</li>
+                                <li class="card-text">age = 23</li>
+                                <li class="card-text">bankaccountnumber = 1234998874</li>
+                                <li class="card-text">primaryphonenumber = 99442647</li>
+                                <li class="card-text">employee_type = full time</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 15</li>
+                                <li class="card-text">first_name =Tony</li>
+                                <li class="card-text">last_name = Edward</li>
+                                <li class="card-text">gender = unknown</li>
+                                <li class="card-text">designation = Manager</li>
+                                <li class="card-text">company_name = Tcs</li>
+                                <li class="card-text">salary = 95000</li>
+                                <li class="card-text">age = 40</li>
+                                <li class="card-text">bankaccountnumber = 1234509876</li>
+                                <li class="card-text">primaryphonenumber = 98723456</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2005-01-27</li>
+                            </div>
+                        </div>
+                    </div> <!-- Ending of Data-->
+
+
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 16</li>
+                                <li class="card-text">first_name = Swetha</li>
+                                <li class="card-text">last_name = Kapoor</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">designation = Web Developer</li>
+                                <li class="card-text">company_name = Wipro </li>
+                                <li class="card-text">salary = 65000</li>
+                                <li class="card-text">age = 32</li>
+                                <li class="card-text">bankaccountnumber = 1230987653</li>
+                                <li class="card-text">primaryphonenumber = 98732187</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2011-02-28</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 17</li>
+                                <li class="card-text">first_name = Usha</li>
+                                <li class="card-text">last_name = Sri</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">company_name = Express Pvt ltd</li>
+                                <li class="card-text">salary = 18000</li>
+                                <li class="card-text">age = 22</li>
+                                <li class="card-text">bankaccountnumber =1289787435</li>
+                                <li class="card-text">primaryphonenumber = 99552891</li>
+                                <li class="card-text">employee_type = full time</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 18</li>
+                                <li class="card-text">first_name = Narender</li>
+                                <li class="card-text">last_name = Hoshiyar</li>
+                                <li class="card-text">gender = male</li>
+                                <li class="card-text">designation = Application Developer</li>
+                                <li class="card-text">company_name = Ey technologies</li>
+                                <li class="card-text">salary = 65000</li>
+                                <li class="card-text">age = 33</li>
+                                <li class="card-text">bankaccountnumber = 1230099007</li>
+                                <li class="card-text">primaryphonenumber = 99123999</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2009-02-10</li>
+                            </div>
+                        </div>
+                    </div> <!-- Ending of Data-->
+
+
+                    <!-- Starting of Data-->
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 19</li>
+                                <li class="card-text">first_name = Clistofer</li>
+                                <li class="card-text">last_name = butt</li>
+                                <li class="card-text">gender = unknown</li>
+                                <li class="card-text">designation = Sr.Developer</li>
+                                <li class="card-text">company_name = West Agile</li>
+                                <li class="card-text">salary = 65000</li>
+                                <li class="card-text">age = 25</li>
+                                <li class="card-text">bankaccountnumber =1234098726</li>
+                                <li class="card-text">employee_type = part time</li>
+                                <li class="card-text">joining_date = 2017-02-18</li>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Employee Data</b></div>
+                            <div class="card-body">
+                                <li class="card-text">id = 20</li>
+                                <li class="card-text">first_name = Brinda</li>
+                                <li class="card-text">last_name = Mehta</li>
+                                <li class="card-text">gender = female</li>
+                                <li class="card-text">designation = Web Designer</li>
+                                <li class="card-text">company_name = Walking Tree Technologies</li>
+                                <li class="card-text">salary = 80000</li>
+                                <li class="card-text">age = 36</li>
+                                <li class="card-text">bankaccountnumber =1230034567</li>
+                                <li class="card-text">primaryphonenumber = 98217289</li>
+                                <li class="card-text">employee_type = full time</li>
+                                <li class="card-text">joining_date = 2006-03-19</li>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Ending of Data-->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+
+</div>

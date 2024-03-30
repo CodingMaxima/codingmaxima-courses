@@ -1,0 +1,279 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Employee-Designation(one-one relation)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+      data-hover="Program">Program</span>
+    
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div
+            style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">More often than not, we come across a situation where we
+              need an application that involves
+              multiple real life entities as classes that interact with each other to form a object-relationship
+              management system. One such system is this Employee Designation Management system. </button>
+
+            <br>
+            <button type="button" class="btn btn-lg btn-block">Employee designation management system can be designed
+              using the following description.</button>
+            <button type="button" class="btn btn-lg btn-block">Write Employee and Designation classes are expected to be
+              plain old
+              Java objects (POJO classes) with parameterized constructors, getters and setters
+              for each field. Each class is also expected to have a toString method which will display
+              all the fields of the object and their values in a human readable form.</button>
+            <button type="button" class="btn btn-lg btn-block">Design one helper class for Employee namely
+              EmployeeHelper and
+              other helper class for Designation namely DesignationHelper respectively.
+              These helper classes are expected to contain a collection object such as an arrayList
+              of type Employee or Designation. </button>
+            <button type="button" class="btn btn-lg btn-block">The helper classes are also expected to contain other
+              methods
+              which can perform the following operations on the sepecified arrayList.</button>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">POJO/MODEL CLASSES</button>
+        </div>
+        <!-- Starting of Pojo Classes-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Employee - Class</b></div>
+            <div class="card-body">
+              <li class="card-text">Integer - id</li>
+              <li class="card-text">String - name</li>
+              <li class="card-text">Double - salary</li>
+              <li class="card-text">Designation - object</li>
+              <li class="card-text">Including constructors, toString method, getters and setters
+              </li>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Designation - Class</b></div>
+            <div class="card-body">
+              <li class="card-text">Integer - designation id</li>
+              <li class="card-text">String - designation name,</li>
+              <li class="card-text">Including constructors, toString method, getters and setters.</li>
+            </div>
+          </div>
+
+        </div> <!-- Ending of PojoClasses-->
+
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Employee Helper Class Operations</button>
+        </div>
+
+        <!-- Student Helper class methods-->
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Employee getEmployeeById(int id)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The getEmployeeById is a method which accepts an id of type integer as a parameter.</li>
+              <li>This method returns Employee object if there exists a matching id in the employees ArrayList.</li>
+              <li>This method returns “null” if there is no Employee object with the given id in the employees
+                ArrayList.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>public boolean addEmployee(Employee employee)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The addEmployee is a method which will let us add new employee into the employees list.</li>
+              <li>This method accepts an Employee object and adds it to the employees list if there is no object with
+                same id.</li>
+              <li>This method returns either true or false which is of type boolean based on the situation
+                i.e., whether the Emloyee object is added to the employees list or not.</li>
+              <li>For example, if we are trying to add an Employee object with id = 105 but the employee list already
+                consist an
+                Employee object with the same id, then the method will not add the object to the employees list instead
+                it returns false.</li>
+            </div>
+          </div>
+        </div> <!-- first group-->
+
+        <!-- second group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;Employee&gt; getEmployeesByDesignation(int
+                designationId)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>getEmployeesByDesignation is a method which accepts designationId of type integer as a parameter</li>
+              <li>A temporary list named desigList is created and the object in the employees list which contains the
+                designation id equal to designationid will be added to the temporary list.</li>
+              <li>This method returns a all the employees addes to the temporary list i.e.,desigList.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Employee updateEmployeeSalary(int id, double newSalary)</b>
+            </div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The updateEmployeeSalary is a method which accepts an id of type integer and newSalary of type double
+                as parameters.</li>
+              <li>This method will update the current salary of the particular employee containing matching id with new
+                salary.</li>
+              <li>This method will return the Employee object if the salary of the employee with particular id is
+                updated otherwise it will return “null”.</li>
+            </div>
+          </div>
+        </div> <!-- second group-->
+
+        <!-- third group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Employee updateEmployeeDesignation(int id, Designation
+                newDesignation)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The updateEmployeeDesignation is a method which accepts an id and Designation object as parameters.
+              </li>
+              <li>This method will search for the the employee object with matching id and updates the current
+                designation with newDesignation.</li>
+              <li>This method will return the Employee object if the designation is updated otherwise it will return
+                “null”.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;Employee&gt; getAllEmployees()</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The getAllEmployees is a method which does not have any parameters.</li>
+              <li>This method returns the list of all the employees present in the employees ArrayList.</li>
+            </div>
+          </div>
+        </div>
+        <!-- third group-->
+        <!-- End Student Helper class methods-->
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Designation Helper Class Methods</button>
+        </div>
+
+        <!-- Student Helper class methods-->
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public boolean addDesignation(Designation designation) </b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The addDesignation is a method which will let us to add new designation into the designations list.
+              </li>
+              <li>This method accepts a Designation object and adds it to the designations list if there is no object
+                with same id.</li>
+              <li>This method returns either true or false which is of type boolean based on the situation i.e., whether
+                the
+                Designation object is added to the designations list or not.</li>
+              <li>For example, if we are trying to add a designation object with id = 3 but the designations list
+                already consists an
+                Employee object with the same id, then the method will not add the object to the employees list instead
+                it returnss false.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>public boolean removeDesignation(Designation designation)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The removeDesignation is a method which will let us to delete the existing designation in the
+                designations list.</li>
+              <li>This method accepts a Designation object and find whether the object is present in
+                the designations list or not. If the designation exists then it will be deleted.</li>
+              <li>This method returns either true or false which is of type boolean based on the
+                situation i.e., whether the Designation object is deleted from the designations list or not.</li>
+              <li>For example, if we are trying to delete a designation object with id = 5 but the designations list
+                does not consists
+                the object with the same id, then the method will not be able to delete and it returns false.</li>
+            </div>
+          </div>
+        </div> <!-- first group-->
+
+        <!--second group
+            <div class="card-group">
+          
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;" >
+                <div class="card-header text-center"><b>pubic boolean deleteBranch(int id)</b></div>
+                <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                  <li>A deleteBranch method deletes a branch from the list based on a given ID and returns true upon a successful deletion.</li>
+                  <li>This method returns false if there exists no branch with the given ID in the list. </li>
+                </div>
+              </div>
+
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;" >
+                <div class="card-header text-center"><b>pubic void increaseCapacity(int capacity, Branch branch)</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                  <li>Another void method in the BranchHelper class is increase capacity which has two parametes the new capacity and branch.</li>
+                  <li>This method will increase the capacity of the given branch.</li>
+                </div>
+              </div>
+            </div> second group-->
+
+        <!-- third group-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Designation getDesignationById(int id)</b></div>
+            <div style="background-color: rgb(255, 239, 209);" class="card-body">
+              <li>The getDesignationById is a method which accepts an id of type integer as a parameter.</li>
+              <li>This method returns Designation object if there exists a matching id in the designations ArrayList.
+              </li>
+              <li>This method returns “null” if there is no Designation object with the given id in the designations
+                ArrayList.</li>
+            </div>
+          </div>
+        </div>
+        <!-- third group-->
+        <!-- End Branch Helper class methods-->
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="tabChange($event)"
+          data-hover="POJO(Model) Classes">POJO(Model) Classes</span>
+        <span class="tab-pill" id="helper" [ngClass]="(elementId2=='helper')?'active':''" (click)="tabChange($event)"
+          data-hover="Helper Classes">Helper Classes</span>
+        <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="tabChange($event)"
+          data-hover="Main(Testing) Class">Main(Testing) Class</span>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pojo'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Employee POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/employeedesignation/emp.jpg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Designation POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/employeedesignation/desig.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='helper'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Employee Helper Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/employeedesignation/emphelper.jpg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Designation Helper Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/employeedesignation/desighelper.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div *ngIf="elementId2=='main'">
+        <img class="card-img-top" src="assets/img/corejava/managment/employeedesignation/tester.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>

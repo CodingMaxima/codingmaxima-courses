@@ -1,0 +1,162 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">ArrayList Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="ArrayList Introduction">ArrayList Introduction</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">Array List is a resizable array or dynamic
+              array.</button>
+            <button type="button" class="btn btn-lg btn-block">As we know that the size of an array is fixed.
+              if we declare an array of size 10 then we cannot store more than 10 elements in the array.</button>
+            <button type="button" class="btn btn-lg btn-block">In arraylist size was not fixed. It is dynamic. The size
+              of an array list can be changed according to the elements inside it.</button>
+            <button type="button" class="btn btn-lg btn-block">We cannot change or modify an array means if we want to
+              add elements to an array or want to delete elements
+              from an array you need to create a new array.
+              But in the case of an array list we can add or remove elements from an array list whenever we
+              want.</button>
+          </div>
+          <div style="padding-top: 15px;">
+            <button class="btn btn-primary btn-lg">List Example</button>
+          </div>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header"><b>For creating an Array List:</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p>ArrayList&lt;Integer&gt; integers = new ArrayList&lt;&gt; ();</p>
+              <p>Here, integers are the object which can store integer values.</p>
+              <p>ArrayList&lt;String&gt; strings = new ArrayList&lt;&gt; ();</p>
+              <p>Here, strings are the object which can store Strings.</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header"><b>For finding the length(size) of an Array List:</b></div>
+            <div class="card-body" style="background-color:  rgb(229, 253, 253);">
+              <h6 class="card-subtitle mb-2 text-muted">code</h6>
+              <li>ArrayList &lt;String&gt; cars = new ArrayList&lt;String&gt;();</li>
+              <li> fruits.add("apple");</li>
+              <li>fruits.add("mango");</li>
+              <li>fruits.add("guava");</li>
+              <li>System.out.println(fruits.size());</li><br>
+              <h6 class="card-subtitle mb-2 text-muted">output</h6>
+              <li>3</li>
+            </div>
+          </div>
+        </div><!--end of card group-->
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(255, 239, 209);">
+            <li class="text-center">For obtaining the value from the arraylist use get() method. In this method we
+              access them by using
+              index
+            </li>
+            <li class="text-center"><b>.get()</b></li>
+          </div>
+        </div>
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Adding & Changing the elements</button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For adding the elements in the
+                arraylist use add() method</p>
+              <p class="card-text"><b>.add()</b></p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For changing the elements in the
+                arraylist use set() method.By changing the
+                elements use index along with the element</p>
+              <p class="card-text"><b>.set(indexnumber, "element");</b></p>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Removing And Sorting the elements</button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For removing the elements in the
+                arraylist use remove() method, clear() method</p>
+              <p class="card-text"><b>remove()- </b>is used for the removing the selected elements from the arraylist by
+                using index</p>
+              <p class="card-text"><b>clear()- </b>is used for removing the entire elements from the arraylist</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For sorting the elements in the
+                arraylist use sort() method.</p>
+              <p class="card-text"><b>.sort();</b></p>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Loops</button>
+        </div>
+        <div style=" font-size: medium; padding: 10px;">
+          <button type="button" class="btn btn-lg btn-block">For iterating the arraylist 2ways are their one way is by
+            using
+            <b>for loop</b> and another way is by using <b>for-each loop</b></button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text"> ArrayList&lt;String&gt; fruits = new ArrayList&lt;String&gt;();</li>
+              <li class="card-text">fruits.add("apple");</li>
+              <li class="card-text">fruits.add("banana");</li>
+              <li class="card-text"> fruits.add("guava");</li>
+              <li class="card-text">fruits.add("Mango");</li>
+              <li class="card-text">for (int i = 0; i &lt; fruits.size(); i++) {{'{'}}</li>
+              <pre>   System.out.println(fruits.get(i));</pre>
+              <li class="card-text">{{'}'}}</li><br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text">apple</li>
+              <li class="card-text">banana</li>
+              <li class="card-text">guava</li>
+              <li class="card-text">mango</li>
+
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text"> ArrayList&lt;String&gt; fruits = new ArrayList&lt;String&gt;();</li>
+              <li class="card-text">fruits.add("apple");</li>
+              <li class="card-text">fruits.add("banana");</li>
+              <li class="card-text"> fruits.add("guava");</li>
+              <li class="card-text">fruits.add("Mango");</li>
+              <li class="card-text">for (String i : fruits) {{'{'}}</li>
+              <pre>   System.out.println(i);</pre>
+              <li class="card-text">{{'}'}}</li><br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text">apple</li>
+              <li class="card-text">banana</li>
+              <li class="card-text">guava</li>
+              <li class="card-text">mango</li>
+            </div>
+          </div>
+        </div>
+
+        <img class="program-img-fit" src="assets\img\corejava\collections\arraylist.JPG">
+        <img class="program-img-fit" src="assets\img\corejava\collections\output.JPG">
+
+
+      </div><!-- Ending of problem statement card body-->
+    </div>
+  </div>
+</div>

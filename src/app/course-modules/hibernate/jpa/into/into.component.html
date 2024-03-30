@@ -1,0 +1,231 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">JPA</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div
+            style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">Java Persistence API(JPA) is a Specification of Java and
+              is Used to Persist data between object and
+              database. </button>
+
+            <br>
+            <button type="button" class="btn btn-lg btn-block">It acts as a bridge between Obeject oriented models and
+              RDBMS.</button>
+            <button type="button" class="btn btn-lg btn-block">JPA doesn't perform any Operations by Itself.It requires
+              an Implementation.</button>
+            <button type="button" class="btn btn-lg btn-block">SO, The ORM tools like Hibernate,Toplink and etc.,
+              implements JPA Specification for Data Persistence. </button>
+            <button type="button" class="btn btn-lg btn-block">The core advantage of using hibernate annotation is that
+              you don't need to create mapping (hbm) file. </button>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">@Table Annotation</button>
+        </div>
+
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Introduction</b></div>
+            <div class="card-body">
+              <div class="text-center">
+                <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                  <button type="button" class="btn btn-lg btn-block">
+                    @Table Annotation Specifies the table name where data of this Entity is to be
+                    persisted.</button>
+                  <button type="button" class="btn btn-lg btn-block">
+                    The @Table annotation provides four attributes, allowing you to override the name of the
+                    table, its catalogue, and its schema, and enforce unique constraints on columns in the
+                    table.
+                  </button>
+                  <button type="button" class="btn btn-lg btn-block">
+                    Hibernate will use the Class Name as a Table Name by Default, if you don't use @Table
+                    Annotation
+                  </button>
+                  <button type="button" class="btn btn-lg btn-block">
+                    we have to Import @Table Annotation from
+                    <P><b> import javax.persistence.Table</b></P>
+                  </button>
+
+
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">@Column Annotation</button>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Introduction</b></div>
+            <div class="text-center">
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                  <button type="button" class="btn btn-lg btn-block">
+                    The @Column annotation is used to specify the details of the column to which a field or
+                    property will be mapped.</button>
+                  <button type="button" class="btn btn-lg btn-block">
+                    The following are the most commonly used attributes.
+                  </button>
+                  <div style="padding: 10px;" class="text-center">
+                    <button class="btn btn-info">@Column attributes</button>
+
+                  </div>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td>Name</td>
+                      <td> This Attribute Permits the name of the column to be explicitly Specified.
+                        <li class='card-text' style='font-size: medium;font-style: oblique'> By default it
+                          takes Property or field name.</li>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Length</td>
+                      <td>This Attribute permits the size of the column used to map a value particularly for a
+                        String value.
+                        <li class='card-text' style='font-size: medium;font-style: oblique'> Applies only if
+                          a string-valued column is used and <b>by defalut the value is 255.</b></li>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nullable</td>
+                      <td>This Attribute permits the column to be marked as NOT NULL when the Schema is
+                        generated.
+                        <p> here we have two options to mark the column as Not Null</p>
+
+                        <li class='card-text' style='font-size: medium;font-style: oblique'><b> 1. BY Doing "Nullable =
+                            false".</b> By defalut
+                          the value is true. </li>
+                        <p> OR</p>
+                        <li class='card-text' style='font-size: medium;font-style: oblique'><b> 2. By using @Not Null
+                            Annotation.</b> </li>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>Unique</td>
+                      <td>This Attribute permits the column to be marked as Containing Onlu Unique values.
+                        <li class='card-text' style='font-size: medium;font-style: oblique'><b>By defalut
+                            the value is false.</b> </li>
+                      </td>
+                    </tr>
+
+
+
+
+
+                  </table>
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">@Id and @Check Annotations</button>
+        </div>
+
+
+        <div class="card-group">
+
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>@Id Annotation</b></div>
+            <div class="text-center">
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <button type="button" class="btn btn-lg btn-block">
+                  This annotation specifies the primary key of the entity.</button>
+                <button type="button" class="btn btn-lg btn-block">
+                  The primary key can be a single field or a combination of multiple fields depending on the table
+                  structure.
+
+
+                </button>
+                <button type="button" class="btn btn-lg btn-block">
+                  If we want to automatically generate the primary key value, we can add the @GeneratedValue annotation.
+                </button>
+                <button type="button" class="btn btn-lg btn-block">
+                  This can use four generation types: AUTO, IDENTITY, SEQUENCE and TABLE.
+                </button>
+                <button type="button" class="btn btn-lg btn-block">
+                  If we don't explicitly specify a value, the generation type defaults to AUTO.
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- second group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>@Check Annotation</b></div>
+            <div class="text-center">
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <button type="button" class="btn btn-lg btn-block">
+                  @Check annotation is used to specify an arbitrary SQL CHECK constraint which can be defined at the
+                  class
+                  level.
+                </button>
+                <button type="button" class="btn btn-lg btn-block">
+                  @Check annotation needs to refer to the name attribute of @Column (it must be pure SQL).
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>

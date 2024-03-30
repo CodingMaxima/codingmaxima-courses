@@ -1,0 +1,55 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Student Pojo class</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+            data-hover="Practice">Practice</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <p>Create Student class with following properties <br>
+                Create a tester class and create & print atleast 5 student objects in the tester class main method.</p>
+            <ul>
+                <li>All class variables as private.</li>
+                <li>Write  parameterized constructor to initilize the object.</li>
+                <li>Write Setters and Getters for each private variable.</li>
+                <li>Write __str__(self) method for the class.</li>
+            </ul>
+            <ol>
+                <li>id - This property is to give unique id for student like rollnumber(int type)</li>
+                <li>name - The name of the student.(string type)</li>
+                <li>branch - The branch or course of the student like(cse, eee, bse, mpc and etc)(String type)</li>
+                <li>marks - The total marks of the student obtainded.(double type)</li>
+                <li>gender - The Gender of student(Male or Female)</li>
+            </ol>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='four'">
+        <div class="card-body">
+            <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+        </div>
+    </div>
+</div>

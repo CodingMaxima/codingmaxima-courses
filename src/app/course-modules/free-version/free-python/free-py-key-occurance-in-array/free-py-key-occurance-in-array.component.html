@@ -1,0 +1,134 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Key Count in List</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Problem Statement">Problem Statement</span>
+      <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+        data-hover="Program">Program</span>
+      <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+        data-hover="Animation Video">Animation Video</span>
+      <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+        data-hover="Test Cases">Test Cases</span>
+      <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+        data-hover="Practice">Practice</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+      <div class="card-body">
+        <div class="card border-warning" style="border: 2px solid;">
+          <div class="card" style="margin: 5px;">
+            <div class="card-body" style="font-family: 'Inter', sans-serif;">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>The program is to print how many times
+                the value which we are given as an input is present in the list of values</p>
+              <p class='card-text' style='font-size: medium;font-style: oblique'>Suppose if we are giving the input list
+                as list = [1, 2, 34, 55, 34, 12, 22]</p>
+              <p class='card-text' style='font-size: medium;font-style: oblique'>from the list we are taken one value(key
+                value) i.e., 34 .so from the list we have to find how many times the key value present in the array that
+                means it will check the value 34 in the list it is present so the output will be 2 times found in the list
+                .
+              <p class='card-text' style='font-size: medium;font-style: oblique'>If we giving 5 as key value it should
+                have to print 0 times the key value present in the list because there is no such value in the list.</p>
+            </div>
+          </div>
+  
+          <!-- Starting of examples-->
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Example - 1</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">list = [12, 64, 64, 17, 82, 82, 91, 72, 17, 82]</p>
+                <p style="margin-top: -20px;" class="card-text">Key = 82</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">The 82 occured in the array is 3 times</p>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>Example - 2</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">list = [11, 13, 85, 22, 60, 66, 34]</p>
+                <p style="margin-top: -20px;" class="card-text">Key = 55</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">The 55 occured in the array is 0 times</p>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Example - 3</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">list = [24, 22, 85, 22, 22]</p>
+                <p style="margin-top: -20px;" class="card-text">Key = 22</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">The 22 occured in the array is 3 times</p>
+              </div>
+            </div>
+          </div> <!-- Ending of examples-->
+        </div>
+      </div><!-- Ending of problem statement card body-->
+    </div>
+    <div *ngIf="elementId=='two'">
+      <div class="card-body border border-warning">
+        <img class="program-img-fit" src="assets/img/python/lists_tuples/keycount1.jpg" alt="program">
+      </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData"
+        [audioData]="audioData"
+        ></app-video-cmp>
+      </div>
+    </div>
+  
+    <div *ngIf="elementId=='four'">
+      <div class="card-body">
+        <!-- Starting of test cases -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">5</p>
+              <p class="card-text">1 3 5 5 7</p>
+              <p class="card-text">5</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Found 2 times</p>
+            </div>
+          </div>
+  
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">7</p>
+              <p class="card-text">11 13 85 22 60 66 34</p>
+              <p class="card-text">55</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Found 0 times</p>
+            </div>
+          </div>
+  
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">5</p>
+              <p class="card-text">24 22 85 22 22 </p>
+              <p class="card-text">22</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Found 3 times</p>
+            </div>
+          </div>
+        </div> <!-- Ending of test cases -->
+      </div>
+    </div>
+  
+    <div *ngIf="elementId=='five'">
+      <div class="card-body">
+        <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+  
+      </div>
+    </div>
+  </div>

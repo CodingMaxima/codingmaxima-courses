@@ -1,0 +1,94 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Data Types</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover=" DataTypes Introduction"
+    >
+      DataTypes Introduction</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card-body">
+        <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          Data types are describes the type of data with sizes and values that
+          can be stored in the variable.
+        </button>
+        <table class="table table-striped" style="font-size: large;" >
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Data Type</th>
+              <th scope="col">Default Value</th>
+              <th scope="col">Size</th>
+              <th scope="col">Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">boolean</th>
+              <td>false</td>
+              <td>1 bit</td>
+              <td>true (or) false</td>
+            </tr>
+            <tr>
+              <th scope="row">byte</th>
+              <td>0</td>
+              <td>8 bits (1 Byte)</td>
+              <td>-128 to 127</td>
+            </tr>
+            <tr>
+              <th scope="row">int</th>
+              <td>0</td>
+              <td>32 bits (4 Bytes)</td>
+              <td>-2,147,483,648 to 2,147,483,647</td>
+            </tr>
+            <tr>
+              <th scope="row">long</th>
+              <td>0</td>
+              <td>64 bits (8 Bytes)</td>
+              <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+            </tr>
+            <tr>
+              <th scope="row">double</th>
+              <td>0.0</td>
+              <td>64 bits (8 Bytes)</td>
+              <td>Sufficient for storing 15 decimal digits</td>
+            </tr>
+            <tr>
+              <th scope="row">float</th>
+              <td>0.0</td>
+              <td>32 bits (4 Bytes)</td>
+              <td>Sufficient for storing 6 to 7 decimal digits</td>
+            </tr>
+            <tr>
+              <th scope="row">char</th>
+              <td>space is the default value of char</td>
+              <td>16 bits (2 Bytes)</td>
+              <td>Stores a single character/letter or ASCII values</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid">
+        <img src="assets/img/corejava/intro/data.JPG" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Threads Methods</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+            data-hover="Practice">Practice</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Daemon Thread</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>It is a thread is
+                                executing at the background.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'><b>Ex: </b> Garbage
+                                collector, signal dispatcher, attach listner etc..</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>The main objective
+                                of this thread is provide support to main thread. It the main thread runs with low
+                                memory then JVM runs the Garbage collecotr to destroy the useless memory. So that it
+                                will free the memory and provides the space.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>For checking the
+                                nature of the thread by using <b>isDeamon()</b>.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'><b>syntax: public
+                                    boolean isDeamon()</b></li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>For changing the
+                                nature of a thread by using <b>setDaemon()</b></li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'><b>syntax: public
+                                    void setDaemon(boolean b)</b></li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>But changing the
+                                nature deamon is possible before starting the thread only. After the thread was
+                                started if we try to change it will gives the run time exception.
+                            </li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b></b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'></li>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b></b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

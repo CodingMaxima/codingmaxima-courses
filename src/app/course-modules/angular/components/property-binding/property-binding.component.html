@@ -1,0 +1,148 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Property Binding</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Explanation">Explanation</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+            data-hover="Solution">Solution</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center" style="font-size: 25px;"><b>Property Binding</b></div>
+              <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Property binding is a data binding technique in Angular that allows you to set the value of an HTML
+                    element's property or attribute based on the value of a component property.
+                    It establishes a unidirectional flow of data from the component to the template.  
+                </p>
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Property binding is denoted by square brackets (<b>`[ ]`</b>)
+                    and can be used to bind a component property to an HTML
+                    element's property, attribute, or a directive's input property.    
+                </p>
+                <p style='font-size: medium; font-style: oblique;font-weight: 600;'>
+                    Here's a more detailed explanation of property binding in Angular:
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-1: Binding to an element's property:</p>
+                <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;button [disabled]="isDisabled"&gt;Click me&lt;/button&gt;
+                </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    In this example, the <b>`disabled`</b> property of the <b>`&lt;button&gt;`</b> element
+                    is bound to the <b>`isDisabled`</b> property in the component. 
+                    If <b>`isDisabled`</b> is true, the button will be disabled; otherwise, it will be enabled.
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-2: Binding to an attribute:</p>
+               <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;img [src]="imageUrl" alt="Product Image"&gt;
+  </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    Here, the <b>`src`</b> attribute of the <b>`&lt;img&gt;`</b> element
+                    is bound to the <b>`imageUrl`</b> property in the component.
+                     The value of <b>`imageUrl`</b> will be dynamically inserted as the source of the image.
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-3: Binding to a directive's input property:</p>
+                <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;input [ngModel]="username"&gt;
+                </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    This example demonstrates property binding with the <b>`ngModel`</b> directive,
+                    which is used for two-way data binding in Angular forms.
+                    The <b>`ngModel`</b> directive's input property is bound to the <b>`username`</b> property of the component.
+                    Any changes made to the <b>`username`</b> property will be reflected in the input field, and vice versa.
+                </p>
+                <p style='font-size: medium; font-weight: 700;'>Example-4:</p>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    Property binding supports not only string values but also
+                    other types such as numbers, booleans, arrays, and objects.
+                    It can also handle complex expressions and method calls.
+                </p>
+                <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;padding-right: 25px;width: fit-content;"><code>
+&lt;p [style.color]="isActive ? 'green' : 'red'"&gt;{{'{'}}{{'{'}} statusMessage() {{'}'}}{{'}'}}&lt;/p&gt;
+                </code></pre>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    In this case, the <b>`style.color`</b> property of the <b>`&lt;p&gt;`</b> element
+                     is bound to an expression that determines the color based on the
+                      value of the isActive property. The <b>`statusMessage()`</b> method
+                       is also invoked to display a dynamic message within the paragraph element.
+                </p>
+                <p style='font-size: medium; font-weight: 600;margin: 10px;'>
+                    Remember, property binding is a one-way binding technique,
+                     meaning that changes to the component property will update the template,
+                    but changes in the template will not affect the component property.
+                    For two-way binding, you can use the combination of property binding
+                    and event binding using the banana-in-a-box syntax <b>`[( )]`</b> or utilize Angular's built-in two-way binding directives like <b>`ngModel`</b>.
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body">
+            <div class="card-group">
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center" style="font-size: 25px;"><b>Property Binding</b></div>
+                <div class="card-body">
+                  <p>
+                    create a web page using Angular that displays a person table with a custom header.
+                     The code provided consists of three components:
+                      <b>`app.component`</b>, <b>`table.component`</b>, and <b>`header.component`</b>, along with their respective HTML
+                  </p>
+                  <p>
+                    1.app.component:
+                  </p>
+                  <ul>
+                    <li>Contains an <b>`&lt;h2&gt;`</b> element with the <b>`title`</b> variable <b>`{{'{'}}{{'{'}}title{{'}'}}{{'}'}}`</b> displayed in the center.</li>
+                    <li>Includes the <b>`&lt;app-header&gt;`</b> and <b>`&lt;app-table&gt;`</b> components.</li>
+                  </ul>
+                  <p>2.header.component:</p>
+                  <ul>
+                    <li>Contains an  <b>`&lt;h1&gt;`</b> element with the text "Person Table" as the header title.</li>
+                    <li>The <b>`propertyData`</b> variable should be applied as a style to the header.</li>
+                    <li>add some style as string to variable such as <b>`color:red` in ts file</b> </li>
+                  </ul>
+      
+                  <p>3.table.component:</p>
+                  <ul><li>
+                    Contains a <b>`&lt;div&gt;`</b> element with the tableData variable bound to its <b>`innerHtml`</b> property.  
+                  </li>
+                <li>
+                  The <b>`tableData`</b> variable is expected to contain the necessary HTML markup and data for the person table.
+                </li>
+                <li>
+                  you can add the person table as a string consists of <b>`name`</b> , <b>`age`</b> and <b>`email`</b> with 3 or more rows 
+                </li>
+              </ul>
+
+                  <p>
+                    Task is to implement the missing parts in the code and ensure that the final web page displays as follows:
+                  </p>
+                  <ul>
+                    <li>The <b>`app.component`</b> should display the <b>`title`</b> variable as an <b>`&lt;h2&gt;`</b> title in the center of the page.</li>
+                    <li>The <b>`header.component`</b> should display the text "Person Table" as an <b>`&lt;h1&gt;`</b> header.</li>
+                    <li>The <b>`table.component`</b> should display the HTML content and data stored in the <b>`tableData`</b> variable.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+          <div oncontextmenu="return false;">
+            <video id="play" src="assets/img/angular/property-binding.mp4"  controlsList="nodownload" width = "100%" controls></video>
+            <div class="text-center">
+                <button [ngClass]="(actButton==0.3)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(0.3)"> 0.3x </button> 
+                <button [ngClass]="(actButton==0.5)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(0.5)"> 0.5x </button> 
+                <button [ngClass]="(actButton==1.0)?'btn btn-primary':'btn btn-light'"  (click)="setVideoSpeed(1.0)"> 1.0x </button> 
+                <button [ngClass]="(actButton==1.5)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(1.5)"> 1.5x </button> 
+                <button [ngClass]="(actButton==2.0)?'btn btn-primary':'btn btn-light'" (click)="setVideoSpeed(2.0)"> 2.0x </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

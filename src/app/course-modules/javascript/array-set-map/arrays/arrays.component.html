@@ -1,0 +1,228 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Arrays</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Problems"
+      >Problems</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <p class="content-text">
+              In JavaScript, an array is a data structure that allows you to
+              store multiple values in a single variable. It is a container that
+              holds a fixed number of elements, and each element in the array
+              can be accessed using an index.
+           
+      </p>
+       
+        <div class="col d-flex justify-content-center">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="font-size: large; padding:12px">
+              <b>Simple Example</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209);font-size: large;">
+              <p>
+                In this example creating the array called cities that contains
+                these elements:
+                <b>'New York', 'London', 'Paris', 'Mumbai', 'Delhi'.</b>
+              </p>
+              <p ><b>
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi'];</b>
+              </p>
+              <p>
+                You can access individual elements in an array using their
+                index. The index of the first element is 0, the second element
+                is 1, and so on. Here's an example:
+              </p>
+              <li class="card-text"><b>console.log(cities[0]);</b></li>
+              <li class="card-text"><b>console.log(cities[2]);</b></li>
+              <li class="card-text"><b>console.log(cities[4]);</b></li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text"><b>'New York'</b></li>
+              <li class="card-text"><b>'Paris'</b></li>
+              <li class="card-text"><b>'Delhi'</b></li>
+              <br />
+              <p style="font-size: large; font-style: oblique">
+                In the above example, we use the square brackets
+                <b>[]</b> with the index to access specific elements in the
+                <b>cities</b> array.
+              </p>
+            </div>
+          </div>
+        </div>
+
+         <div class="content-text">
+              Arrays have several built-in functions or methods that can be used
+              to perform various operations on the array. Let's look at a few
+              commonly used array functions in JavaScript:
+          </div>
+        
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="font-size:large; padding:12px">
+              <b>push</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size:large">
+              <p>
+                Adds one or more elements to the end of an array.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi'];
+              </li>
+              <li class="card-text" style="font-weight: bold;">cities.push('Tokyo');</li>
+              <li class="card-text" style="font-weight: bold;">console.log(cities);</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight: bold;">
+                ['New York', 'London', 'Paris', 'Mumbai', 'Delhi', 'Tokyo']
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="font-size: large; padding: 12px;">
+              <b>pop</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                Removes the last element from an array and returns it.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi',
+                'Tokyo'];
+              </li>
+              <li class="card-text" style="font-weight: bold;">let lastCity = cities.pop();</li>
+              <li class="card-text" style="font-weight: bold;">console.log(lastCity);</li>
+              <li class="card-text" style="font-weight: bold;">console.log(cities);</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight: bold;">'Tokyo'</li>
+              <li class="card-text" style="font-weight: bold;">
+                ['New York', 'London', 'Paris', 'Mumbai', 'Delhi']
+              </li>
+            </div>
+          </div>
+        </div>
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 12px"
+          >
+            <div class="card-header; text-center" style="font-size: large; padding:12px">
+              <b>length</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                Returns the number of elements in an array.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi'];
+              </li>
+              <li class="card-text" style="font-weight: bold;">console.log(cities.length);</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight: bold;">5</p>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="font-size: large; padding:12px">
+              <b>indexOf</b>
+            </div>
+            <div class="card-body" style="background-color:rgb(229, 253, 253);font-size: large; ">
+              <p>
+                Returns the first index at which a given element can be found in
+                the array, or -1 if it is not present.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi'];
+              </li>
+              <li class="card-text" style="font-weight: bold;">console.log(cities.indexOf('London'));</li>
+              <li class="card-text" style="font-weight: bold;">console.log(cities.indexOf('Berlin'));</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight: bold;">1</li>
+              <li class="card-text" style="font-weight: bold;">-1</li>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header; text-center" style="font-size: large; padding:12px">
+              <b>slice</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209);font-size: large;">
+              <p>
+                Returns a new array containing a portion of the original array,
+                specified by the start and end indices.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi'];
+              </li>
+              <li class="card-text" style="font-weight: bold;">
+                let selectedCities = cities.slice(0, 3);
+              </li>
+              <li class="card-text" style="font-weight: bold;">console.log(selectedCities);</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight: bold;">['New York', 'London', 'Paris']</p>
+            </div>
+          </div>
+        </div>
+        <div class="content-text">
+          
+            Arrays in JavaScript are very versatile and provide many other
+            methods for manipulation and iteration, such as forEach, map,
+            filter, and more.
+        </div>
+     
+  </div>
+</div>

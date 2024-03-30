@@ -1,0 +1,148 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Assignment-1(Slideshow with indicators)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Code">Code</span>
+        <span class="global-tab-pill" id="two-a" [ngClass]="(elementId=='two-a')?'active':''" (click)="tabChange($event)"
+            data-hover="Output">Output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+                <li>Assignment one Bootstrap Slide show with indicators</li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-group">
+            <img src="assets/img/bootstrap/insports_code.png" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                alt="insports_code.png">
+        </div>
+    </div>
+    <div *ngIf="elementId=='two-a'">
+        <h1 class="text-center">Sports</h1>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators p-0">
+            <button type="button" 
+                    data-bs-target="#carouselExampleIndicators" 
+                    data-bs-slide-to="0" 
+                    aria-label="Slide 1" class="" >
+            </button>
+            <button type="button" 
+                    data-bs-target="#carouselExampleIndicators" 
+                    data-bs-slide-to="1" 
+                    aria-label="Slide 2" 
+                    class="active" 
+                    aria-current="true">
+            </button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item border text-center">
+            <div class="wrapper">
+                <div class="card-group ms-5 ps-5 me-5 pe-5">
+                <div class="card">
+                    <img src="assets/img/bootstrap/chess.jpg" class="card-img-top" alt="chess.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Chess</h5>
+                    <p class="card-text">
+                        <b>Chess</b> is a board game between two players. 
+                        It is sometimes called international chess or Western chess to 
+                        distinguish it from related games, such as xiangqi (Chinese chess) and shogi (Japanese chess).
+                    </p>
+                    <p>
+                        The current form of the game emerged in Spain and the rest of Southern Europe during the 
+                        second half of the 15th century after evolving from chaturanga, a similar but much older 
+                        game of Indian origin. Today, chess is one of the world's most popular games, played by 
+                        millions of people worldwide.
+                    </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/bootstrap/carroms.jpg" class="card-img-top" alt="carroms.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Carroms</h5>
+                    <p class="card-text">
+                        <b>Carroms</b> Carrom is a tabletop game of Indian origin 
+                        in which players flick discs, attempting to knock them to the corners of the board.
+                    </p>
+                    <p>
+                        The game is very popular in the Indian subcontinent, and is known by various names 
+                        in different languages. In South Asia, many clubs and cafés hold regular tournaments. 
+                        Carrom is very commonly played by families, including children, and at social functions. 
+                        Different standards and rules exist in different areas. It became very popular in the 
+                        United Kingdom and the Commonwealth during the early 20th century.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item border text-center active">
+            <div class="wrapper">
+                <div class="card-group ms-5 ps-5 me-5 pe-5">
+                <div class="card">
+                    <img src="assets/img/bootstrap/tabletennis.jpg" class="card-img-top" alt="tabletennis.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Table Tennis</h5>
+                    <p class="card-text">
+                        <b>Table Tennis</b> also known as ping-pong and whiff-whaff, 
+                        is a sport in which two or four players hit a lightweight ball, 
+                        also known as the ping-pong ball, back and forth across a table 
+                        using small solid rackets. It takes place on a hard table divided by a net.
+                    </p>
+                    <p>
+                        Except for the initial serve, the rules are generally as follows: Players 
+                        must allow a ball played toward them to bounce once on their side of the table 
+                        and must return it so that it bounces on the opposite side. A point is scored 
+                        when a player fails to return the ball within the rules. Play is fast and demands 
+                        quick reactions. Spinning the ball alters its trajectory and limits an opponent's 
+                        options, giving the hitter a great advantage.
+                    </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/bootstrap/billiards.jpg" class="card-img-top" alt="billiards.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Billiards</h5>
+                    <p class="card-text">
+                        <b>Billiards</b> English billiards, called simply billiards in the United Kingdom
+                        and in many former British colonies, is a cue sport that combines the aspects of carom billiards and pool. 
+                    </p>
+                    <p>
+                        Two cue balls (one white and one yellow) and a red object ball are used. Each player or team uses a different 
+                        cue ball. It is played on a billiards table with the same dimensions as one used for snooker and points are 
+                        scored for cannons and pocketing the balls.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <div class="container text-center mt-3">
+            <button class="btn btn-dark" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">PREV </button>
+            <button class="btn btn-dark" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">NEXT </button>
+          </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]=""></app-video-cmp>
+        </div>
+    </div>
+</div>

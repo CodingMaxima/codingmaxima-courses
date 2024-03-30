@@ -1,0 +1,160 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Character Occurence</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <pre>
+
+Program to find occurrence of each character in array using Hashmap.
+
+Example :
+
+If we have an array char array[] = {{ '{' }}‘p’,’s’,’y’,’s’,’y’{{ '}' }} and 
+the first character in the array is ‘p’ 
+then the number of occurrence of character is 1 and 
+the next character is ’s’. 
+So, the number of occurrence of character is 2 
+In the same way, we need to print the number of occurrence of every character in an array. 
+
+Sample 1 :
+Array = {{ '{' }}‘p’,’s’,’y’,’s’,’y’{{ '}' }}
+output : 
+The number of occurrence of character p is 1
+The number of occurrence of character s is 2
+The number of occurrence of character y is 2
+
+Sample 2 :
+Array = {{ '{' }}‘c’,’h’,’o’,’c’,’h’{{ '}' }}
+output : 
+The number of occurrence of character c is 2
+The number of occurrence of character h is 2
+The number of occurrence of character o is 1
+
+              </pre>
+
+          </div>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">string = {{ '{' }}‘p’,’s’,’y’,’s’,’y’{{ '}' }}</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The number of occurence of character p is 1<br>
+                The number of occurence of character s is 2<br>
+                The number of occurence of character y is 2</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">string = {{ '{' }}‘m’,’a’,’y’,’m’,’a’,’y’{{ '}' }}</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The number of occurence of character m is 2<br>
+                The number of occurence of character a is 2<br>
+                The number of occurence of character y is 2</p>
+
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">string = {{ '{' }}‘a’,’a’,’b’,’b’,’a’,’b’{{ '}' }}</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The number of occurence of character a is 3<br>
+                The number of occurence of character b is 3</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+    </div><!-- Ending of problem statement card body-->
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/corejava/hashmap/CharacterOccurrence.JPG" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">5</p>
+            <p class="card-text">p s y s y</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">p- 1 time</p>
+            <p style="margin-top: -20px;" class="card-text">s- 2 times</p>
+            <p style="margin-top: -20px;" class="card-text">y- 2 times</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">6</p>
+            <p class="card-text">m a y m a y</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">m- 2 times</p>
+            <p style="margin-top: -20px;" class="card-text">a- 2 times</p>
+            <p style="margin-top: -20px;" class="card-text">y- 2 times</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">6</p>
+            <p class="card-text">a a b b a b</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">a- 3 times</p>
+            <p style="margin-top: -20px;" class="card-text">b- 3 times</p>
+
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

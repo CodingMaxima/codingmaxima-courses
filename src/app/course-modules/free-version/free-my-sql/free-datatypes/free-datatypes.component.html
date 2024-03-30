@@ -1,0 +1,219 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Data Types in My-SQL</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div id="accordion">
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+
+                        <p>Data types are describes the type of data with sizes and values that can be stored in the
+                            variable.
+                        </p>
+
+                        <div class="text-center" style="font-size: x-large;">
+                            <button class="btn btn-primary">
+                                <h4>𝙳̷𝙰̷𝚃̷𝙰̷ 𝚃̷𝚈̷𝙿̷𝙴̷𝚂̷</h4>
+                            </button>
+                        </div>
+
+                        <p>In Reality, There Are A Lot Of Different MYSQL Data Types</p>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Numeric Data Types</button>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Data Type</th>
+                                    <th>Description</th>
+
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>INT</td>
+                                <td>It is used for integer values.Its range was -2147483648 to 2147483647.It
+                                    allows the maximum characheters of 255 in length.</td>
+                            </tr>
+                            <tr>
+                                <td>SMALLINT</td>
+                                <td>It is used for small integer values.Its range was -32768 to 32767.It allows
+                                    the maximum characheters of 255 in length. </td>
+                            </tr>
+                            <tr>
+                                <td>TINYINT</td>
+                                <td>It is used for very small integer values.Its range was -128 to 127.It allows
+                                    the maximum characheters of 255 in length. </td>
+                            </tr>
+                            <tr>
+                                <td>MEDIUMINT</td>
+                                <td>It is used for middle range integer values.Its range was -8388608 to
+                                    8388607.It allows the maximum characheters of 255 in length.</td>
+                            </tr>
+                            <tr>
+                                <td>BIGINT</td>
+                                <td>It is used for high length integer values.Its range was -9223372036854775808
+                                    to 9223372036854775807.It allows the maximum characheters of 255 in length.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DECIMAL</td>
+                                <td>It was used for fixed point Number.It has the maximum value size is 65 &
+                                    default vale is 10.The number of values after decimals are state with
+                                    <b>d</b> parameter.its max value is 30 & default value is 0
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FLOAT</td>
+                                <td>It is used for the floating-point values.It is determined by using <b>p</b>
+                                    parameter.Its values is in between 0-24</td>
+                            </tr>
+                            <tr>
+                                <td>DOUBLE</td>
+                                <td>It is also used for the floating-point values.It is determined by using
+                                    <b>p</b> parameter.Its values is in between 25-53
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BIT</td>
+                                <td>It is used for bit value types.The number of bits can be stated with size &
+                                    its range is in between 1-64.The default size value is 1</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="padding: 10px;" class="text-center">
+                        <button class="btn btn-info">String Data Types</button>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Description</th>
+
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>CHAR</td>
+                            <td>It has fixed length strings & contains numbers, letters and special
+                                characters.Its size range is in between 0-255. The default value is 1.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VARCHAR</td>
+                            <td>It has variable length strings & contains numbers, letters and special
+                                characters.Its size range is in between 0-65535.</td>
+                        </tr>
+                        <tr>
+                            <td>BINARY</td>
+                            <td>Equal to CHAR(), but stores binary byte strings. The size parameter
+                                states the column length in bytes. Default is 1</td>
+                        </tr>
+                        <tr>
+                            <td>VARBINARY</td>
+                            <td>Equal to VARCHAR(), but stores binary byte strings. The size parameter
+                                states the maximum column length in bytes.</td>
+                        </tr>
+                        <tr>
+                            <td>BOLB</td>
+                            <td>It is used for BLOBs (Binary Large Objects). It can hold data up to
+                                65,535 bytes.</td>
+                        </tr>
+                        <tr>
+                            <td>TINYBOLB</td>
+                            <td>It is used for BLOBs (Binary Large Objects). It can hold data up to 255
+                                bytes.</td>
+                        </tr>
+                        <tr>
+                            <td>MEDIUMBOLB</td>
+                            <td>It is used for BLOBs (Binary Large Objects). It can hold data up to
+                                16,777,215 bytes.</td>
+                        </tr>
+                        <tr>
+                            <td>LONGBOLB</td>
+                            <td>It is used for BLOBs (Binary Large Objects). It can hold data up to
+                                4,294,967,295 bytes.</td>
+                        </tr>
+                        <tr>
+                            <td>TEXT</td>
+                            <td>Holds a string.It allows the maximum characheters of 255 in length.</td>
+                        </tr>
+                        <tr>
+                            <td>TINYTEXT</td>
+                            <td>Holds a string.It allows the maximum characheters of 255 in length.</td>
+
+                        </tr>
+                        <tr>
+                            <td>MEDIUMTEXT</td>
+                            <td>Holds a string.It allows the maximum characheters of 16,777,215 in
+                                length.</td>
+                        </tr>
+                        <tr>
+                            <td>LONGTEXT</td>
+                            <td>Holds a string.It allows the maximum characheters of 4,294,967,295 in
+                                length.</td>
+                        </tr>
+                        <tr>
+                            <td>ENUM</td>
+                            <td>It is used when a string object having only one value & it can be chosen
+                                from a list of possible values. It contains 65535 values in an ENUM
+                                list. If you insert a value that is not in the list, a blank value will
+                                be inserted.</td>
+                        </tr>
+                    </table>
+
+                    <div style="padding: 10px;" class="text-center">
+                        <button class="btn btn-info">Date Data Types</button>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>DATE</td>
+                            <td>It was used for only date & Format: YYYY-MM-DD. The range is from
+                                '1000-01-01' to '9999-12-31'</td>
+                        </tr>
+                        <tr>
+                            <td>DATETIME</td>
+                            <td>It Was used for date and time combination & Format: YYYY-MM-DD hh:mm:ss. The
+                                range is from '1000-01-01 00:00:00' to '9999-12-31 23:59:59'. Adding DEFAULT
+                                and ON UPDATE in the column definition to get automatic initialization and
+                                it updates to the current date and time</td>
+                        </tr>
+                        <tr>
+                            <td>TIMESTAMP</td>
+                            <td>TIMESTAMP values are stored as the number of seconds since the Unix epoch
+                                ('1970-01-01 00:00:00' UTC) & Format: YYYY-MM-DD hh:mm:ss.
+                                The range is is between '1970-01-01 00:00:01' UTC -'2038-01-09 03:14:07'
+                                UTC. For Automatic initialization and updating to the current date and time
+                                can be stated using DEFAULT CURRENT_TIMESTAMP and ON UPDATE
+                                CURRENT_TIMESTAMP in the column definition
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TIME</td>
+                            <td>It is used only when we have to mention time & Format: hh:mm:ss. The range
+                                is in between '-838:59:59'-'838:59:59'</td>
+                        </tr>
+                        <tr>
+                            <td>YEAR</td>
+                            <td>It was in four-digit format & Values allowed in four-digit format: 1901 to
+                                2155, and 0000.
+                                MySQL 8.0 does not support year in two-digit format.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

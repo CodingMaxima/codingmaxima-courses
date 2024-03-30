@@ -1,0 +1,31 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Reverse of Number Program with Method</h3>
+
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation video">Animation video</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+ </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img class="program-img-fit" src="assets/img/corejava/methods/rev.JPG" alt="program">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body">
+      <app-video-cmp [url]="''"></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+    </div>
+  </div>
+
+</div>

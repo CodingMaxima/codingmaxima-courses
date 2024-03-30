@@ -1,0 +1,39 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Caching</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Introduction">Introduction</span>
+  
+    </div>
+    <div *ngIf="elementId=='one'">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+          <div class="text-center">
+            <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+              <button type="button" class="btn btn-lg btn-block">
+                Caching is a mechanism to enhance the performance of a system. It is a buffer memory that lies between the application and the database.</button>
+              <button type="button" class="btn btn-lg btn-block">
+                Hibernate caching acts as a layer between the actual database and your application
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                It reduces the time taken to obtain the required data — as it fetches from memory instead of directly hitting the database.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                It is very useful when you need to fetch the same kind of data multiple times.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                There are Two types of Caching in Hibernate. They are ...
+
+                <li class='card-text' style='font-size: medium;font-style: oblique'> <b>1. First-Level Caching</b></li>
+                <li class='card-text' style='font-size: medium;font-style: oblique'> <b>2. Second-Level Caching</b></li>
+
+              </button>
+  
+  
+            </div>
+          </div>
+  
+  
+  
+        </div>
+

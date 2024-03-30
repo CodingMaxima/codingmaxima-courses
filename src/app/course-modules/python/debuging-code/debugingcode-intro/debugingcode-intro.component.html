@@ -1,0 +1,136 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">File Handling Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            Debugging is an essential skill for programmers, 
+                            and Python provides several tools and techniques to help you debug your code.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            Here are some basic debugging techniques
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Print Statements:</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                One of the simplest and most common debugging techniques is to
+                                 add print statements in your code to display the values of
+                                  variables or to track the flow of execution. 
+                                  You can print variable values, messages, or checkpoints at different stages of your program to identify issues.
+                            </p>
+                            
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                               Here is an example:
+                            </p>
+                            <p
+                                style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;">
+                                def multiply(a, b): <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print("Entering multiply function") <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print("a =", a) <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print("b =", b) <br><br>
+                                    
+                                &nbsp;&nbsp;&nbsp;&nbsp;result = a * b <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print("Result =", result) <br><br>
+                                    
+                                &nbsp;&nbsp;&nbsp;&nbsp;return result <br><br>
+
+                                x = 5 <br>
+                                y = 3 <br>
+                                print("Calling multiply function") <br>
+                                product = multiply(x, y) <br>
+                                print("Product =", product) <br>
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                By printing relevant information, you can track the values of variables and understand how the program is executing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;">
+                            <b>
+                                Using the pdb Module
+                            </b>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Python comes with a built-in debugger called 'pdb', 
+                                which allows you to pause the execution of your program at a
+                                 specific point and interactively debug the code. 
+                                 You can set breakpoints, inspect variables, 
+                                 step through the code line by line, and perform other debugging actions.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                To use pdb, import the module and add the pdb.set_trace() 
+                                statement at the point where you want to start debugging. This will open a debugging prompt.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Here is an example:
+                            </p>
+                            <p
+                                style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;">
+                                import pdb <br>
+
+                                def multiply(a, b): <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;result = a * b <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;pdb.set_trace()  # Start debugging here <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return result <br><br>
+
+                                x = 5 <br>
+                                y = 3 <br>
+                                product = multiply(x, y) <br>
+                            </p>
+                            <p>
+                                When the pdb.set_trace() line is executed,
+                                 the program execution will pause,
+                                  and you can enter commands in the debugger prompt to inspect variables,
+                                   step through the code, or execute specific statements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>IDE Debugging Tools</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Integrated Development Environments (IDEs) like 
+                                <b>PyCharm</b>, <b>Visual Studio Code</b>, and <b>PyDev</b> provide powerful debugging tools.
+                                 They allow you to set breakpoints, inspect variables,
+                                  and step through the code while providing a more visual and interactive debugging experience.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                By setting breakpoints in your code,
+                                 you can run your program in debug mode,
+                                  and the IDE will stop the execution at the breakpoints,
+                                   allowing you to analyze the code and variables.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                These are some of the basic debugging techniques for beginners in Python. 
+                                As you gain more experience, you can explore advanced debugging tools and
+                                 techniques to efficiently troubleshoot and resolve issues in your code.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <h1>Animation video coming soon...</h1>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+<div class="card card-body">
+  <h3 class="global-component-heading"> List Tuples in different ways </h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            <p class='card-text' style='font-size: medium;font-style: oblique'>The program is to print the all the
+              positive elements tuple, negative elements tuple, all even numbers tuple, all odd numbers tuple, all the
+              elements of the tuple divisible by k element in the list </p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>Suppose taken an list of tuples as tuple
+              = [(3, 9, 15), (2, 4, 8), (-1, -3, -5)]</p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>From this list we have to write functions
+              for each requirement to get the result i.e., for getting the all positive numbers the result will be (3,
+              9, 15), (2, 4, 8)</p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>To get all the negative values which is
+              present in the tuple of list one function have to be declared and the result wll be (-1, -3, -5)</p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>To get all the odd values which is
+              present in the tuple of list one function have to be declared and the result wll be (3, 9, 15)</p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>To get all the even values which is
+              present in the tuple of list one function have to be declared and the result wll be (2, 4, 8)</p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>To get the tuple in which all the
+              elements are divisible by the give key value i.e., 3 have to write an function and the result will be (3,
+              9, 15)</p>
+          </button>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">tuple = [(8, 24, 32), (-1, -3, 5)]</p>
+              <p class="card-text">k = 8</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The all positive values in tuple : (8, 24, 32)</p>
+              <p class="card-text">The all negative values in tuple : ()</p>
+              <p class="card-text">The all even numbers in tuple : (8, 24, 32)</p>
+              <p class="card-text">The all odd numbers in tuple : (-1, -3, 5)</p>
+              <p class="card-text">The elements in the tuple divisible by given key elemnt is : (8, 24, 32)</p>
+
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">tuple = [(1, 5, 7), (-5, -10, -15), (2, 4, 5)]</p>
+              <p class="card-text">k = 6</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The all positive values in tuple :(1, 5, 7), (2, 4, 5)</p>
+              <p class="card-text">The all negative values in tuple : (-5, -10, -15)</p>
+              <p class="card-text">The all even numbers in tuple : ()</p>
+              <p class="card-text">The all odd numbers in tuple : (1, 5, 7)</p>
+              <p class="card-text">The elements in the tuple divisible by given key elemnt is : ()</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">tuple = [(-2, -4, 6), (5, 10, 15), (-12, -18, -10), (23, 34, 35), (75, 45, 55)]</p>
+              <p class="card-text">k = 5</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">The all positive values in tuple : (5, 10, 15), (23, 34, 35), (75, 45, 55)</p>
+              <p class="card-text">The all negative values in tuple : (-12, - 18, -10)</p>
+              <p class="card-text">The all even numbers in tuple :(-2, -4, 6), (-2, -4, 6) </p>
+              <p class="card-text">The all odd numbers in tuple : (75, 45, 55)</p>
+              <p class="card-text">The elements in the tuple divisible by given key elemnt is : (5, 10, 15), (75, 45,
+                55)</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/python/lists_tuples/tuple_operations.jpg" alt="program">
+    </div>
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/python/lists_tuples/tuple_operations_out.jpg" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">[(8, 24, 32), (-1, -3, 5)]</p>
+            <p class="card-text">k = 8</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">all positive : (8, 24, 32)</p>
+            <p class="card-text">all negative : ()</p>
+            <p class="card-text">all even : (8, 24, 32)</p>
+            <p class="card-text">all odd : (-1, -3, 5)</p>
+            <p class="card-text">all divisible by k element : (8, 24, 32)</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text"> [(1, 5, 7), (-5, -10, -15), (2, 4, 5)]</p>
+            <p class="card-text">k = 6 </p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">all positive : (1, 5, 7), (2, 4, 5)</p>
+            <p class="card-text">all negative : (-5, -10, -15)</p>
+            <p class="card-text">all even : ()</p>
+            <p class="card-text">all odd :(1, 5, 7)</p>
+            <p class="card-text">all divisible by k elements : ()</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">[(-2, -4, 6), (5, 10, 15), (-12, -18, -10), (23, 34, 35), (75, 45, 55)]</p>
+            <p class="card-text"> k = 5</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">all positive : (5, 10, 15), (23, 34, 35), (75, 45, 55)</p>
+            <p class="card-text">all negative : (-12, - 18, -10)</p>
+            <p class="card-text">all even : (-2, -4, 6), (-2, -4, 6)</p>
+            <p class="card-text">all odd : (75, 45, 55)</p>
+            <p class="card-text">all divisible by k elements : (5, 10, 15), (75, 45, 55)</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

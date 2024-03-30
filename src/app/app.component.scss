@@ -1,0 +1,227 @@
+@use 'sass:math';
+body {
+  overflow-x: hidden;
+}
+.main{
+  overflow: hidden;
+  .padding-top-bottom-16{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .menu-button-toggle{
+    border: 0.5px solid #767676;
+    font-size: 20px;
+    background: white;
+    color: black;
+    margin-left: 2px;
+    padding: 3px 13px;
+    border-radius: 4px;
+    transition: 0.5s ease;
+    &:hover{
+      border: 0.5px solid #767676;
+      font-size: 20px;
+      background: black;
+      color: white;
+      margin-left: 2px;
+      padding: 3px 13px;
+      border-radius: 4px;
+    }
+    &:focus{
+      border: 0.5px solid #767676;
+      font-size: 20px;
+      background: black;
+      color: white;
+      margin-left: 2px;
+      padding: 3px 13px;
+      border-radius: 4px;
+      box-shadow: inset 0px 0px 3px 1px rgb(255 255 255);
+    }
+  }
+  .visibility-hidden{
+    visibility: hidden;
+    transition:visibility 0ms!important;
+  }
+  a{
+    &.second-nav-links{
+      background: linear-gradient( to right, rgb(171 182 255), rgb(255 255 255) ), 
+                  linear-gradient( to right, #182dc2 -6.56%, #79a8cd 122.43% );
+      background-size: 94% 2px, 0px 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+      padding: 15px 15px 10px 15px;
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #282828;
+      text-decoration: none;
+      &.active{
+        background-size: 0 2px, 100% 3px;
+        cursor: pointer;
+        color: #000000;
+      }
+      &:hover{
+        background-size: 0 2px, 100% 3px;
+        cursor: pointer;
+        color: #000000;
+      }
+    }
+ }
+  .justify-content-center{
+    justify-content: center;
+  }
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  .list-group {
+    width: 15rem;
+  }
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+/*
+Blob button style start
+*/
+$cyan: #7000f9;
+$dark: #FFFFFF;
+$borderW: 2px;
+.blob-btn {
+    $numOfBlobs: 4;
+    z-index: 1;
+    position: relative;
+    margin-right:5px;
+    margin-top:10px;
+    padding: 3px 7px;
+    text-align: center;
+    color: $cyan;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius:15px;
+    
+    &:before {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: $borderW solid $cyan;
+      border-radius:15px;
+    }
+    
+    &:after {
+      content: "";
+      z-index: -2;
+      position: absolute;
+      left: $borderW*1.5;
+      top: $borderW*1.5;
+      width: 100%;
+      height: 100%;
+  
+      transition: all 0.3s 0.2s;
+      border-radius:15px;
+    }
+    
+    &.active {
+      color: $dark;
+      border-radius:15px;
+      
+      &:after {
+        transition: all 0.3s;
+        left: 0;
+        top: 0;
+        border-radius:15px;
+      }
+    }
+    
+    &__inner {
+      z-index: -1;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius:30px;
+      background:#ffffff;
+    }
+    
+    // additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
+    &__blobs {
+      position: relative;
+      display: block;
+      height: 100%;
+      filter: url('#goo');
+    }
+    
+    &__blob {
+      position: absolute;
+      top: $borderW;
+      width: math.div(100%, $numOfBlobs);
+      height: 100%;
+      background: $cyan;
+      border-radius: 100%;
+      transform: translate3d(0,150%,0) scale(1.7);
+      transition: transform 0.45s;
+      
+      @supports(filter: url('#goo')) {
+        transform: translate3d(0,150%,0) scale(1.4);
+      }
+      
+      @for $i from 1 through $numOfBlobs {
+        &:nth-child(#{$i}) {
+          left: ($i - 1) * (math.div(120%, $numOfBlobs));
+          transition-delay: ($i - 1) * 0.08s;
+        }
+      }
+      
+      .blob-btn.active & {
+        transform: translateZ(0) scale(1.7);
+        
+        @supports(filter: url('#goo')) {
+          transform: translateZ(0) scale(1.4);
+        }
+      }
+    }
+    
+}
+/*
+Blob button style end
+*/

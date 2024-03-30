@@ -1,0 +1,68 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Create Database</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation video">Animation video</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div id="accordion">
+      <div class="card">
+
+        <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+
+            <div class="card border-warning" style="border: 2px solid;">
+              <div class="card" style="margin: 5px;">
+                <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                  <p>
+                    The CREATE DATABASE statement is used to create a new SQL(Structure Query Language) database.
+                  </p>
+                  <pre>
+
+                      Syntax : CREATE DATABASE databasename;
+                                      
+                      E.g.: - CREATE DATABASE myDatabase;
+                    </pre>
+                </div>
+              </div>
+
+              <!-- Starting of examples-->
+              <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                  <div class="card-header text-center"><b>Example - 1</b></div>
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Query</h6>
+                    <p class="card-text">CREATE DATABASE myDatabase;</p>
+                    <h6 class="card-subtitle mb-2 text-muted">Result of Query</h6>
+                    <p class="card-text">DATABASE CREATED.</p>
+                  </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                  <div class="card-header text-center "><b>Example - 2</b></div>
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Query</h6>
+                    <p class="card-text">CREATE DATABASE bookingDatabase;</p>
+                    <h6 class="card-subtitle mb-2 text-muted">Result of Query</h6>
+                    <p class="card-text">DATABASE CREATED.</p>
+                  </div>
+                </div>
+              </div> <!-- Ending of examples-->
+            </div>
+          </div><!-- Ending of problem statement card body-->
+        </div>
+      </div> <!-- Ending of problem statement-->
+    </div>
+    <br />
+  
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp [url]=" "></app-video-cmp>              
+    </div>
+    
+  </div>
+</div>

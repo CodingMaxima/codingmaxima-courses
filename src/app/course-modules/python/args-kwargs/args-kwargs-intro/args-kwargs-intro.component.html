@@ -1,0 +1,122 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Args-Kwargs Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Example">Example</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">In any programming language some
+                            variables/parameters passed in the function.then these variables are defined as arguments to
+                            that functions</button>
+                        <button type="button" class="btn btn-lg btn-block">But in function defintion compulsory have to
+                            mention the type of argument and the number of arguments passed through that function.so
+                            that other than those numbers extra arguents are passed through that function it will gives
+                            the error.</button>
+                        <button type="button" class="btn btn-lg btn-block">To overcome these errors special argument
+                            keywords were introduced<b> (args, kwargs)</b></button>
+                        <button type="button" class="btn btn-lg btn-block">These keywords were used when there is no
+                            clarity of how many argments will be passed i.e, zero to n </button>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>args</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <li style='font-size: medium; font-style: oblique;'>These can be written as <b>*args</b>(single
+                                star) and also called as <b>Non-keyword arguments</b></li>
+                            <li style='font-size: medium; font-style: oblique;'>They allows to pass only non-keyword
+                                arguments to functions.</li>
+                            <li style='font-size: medium; font-style: oblique;'> * symbol should have to be placed
+                                before the parameter name to pass
+                                variable length arguments.</li>
+                            <li style='font-size: medium; font-style: oblique;'>The arguments are passed as tuple.
+                            </li>
+                        </div>
+
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>kwargs</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <li style='font-size: medium; font-style: oblique;'>These can be written as <b>*args</b>(double
+                                star) and also called as <b>Keyword arguments</b></li>
+                            <li style='font-size: medium; font-style: oblique;'>They allows to pass only keyword
+                                arguments to functions.</li>
+                            <li style='font-size: medium; font-style: oblique;'>** symbol should have to be placed
+                                before the parameter name for mentioning this type of argument.</li>
+                            <li style='font-size: medium; font-style: oblique;'> The arguments are passed as a
+                                dictionary. </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="example1" [ngClass]="(elementId2=='example1')?'active':''"
+                (click)="subTabChange($event)" data-hover="args Example">args Example</span>
+            <span class="tab-pill" id="example2" [ngClass]="(elementId2=='example2')?'active':''"
+                (click)="subTabChange($event)" data-hover="kwargs Example">kwargs Example</span>
+            <span class="tab-pill" id="example3" [ngClass]="(elementId2=='example3')?'active':''"
+                (click)="subTabChange($event)" data-hover="args and kwargs Usage">args and kwargs Usage</span>
+        </div>
+        <div *ngIf="elementId2=='example1'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/args-kwargs/args_example.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/args-kwargs/args_example_out.jpg" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='example2'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/args-kwargs/kwargs_example.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" style="width: 80%;" src="assets/img/python/args-kwargs/kwargs_example_out.jpg" alt="program">
+            </div>
+        </div>
+        <div *ngIf="elementId2=='example3'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/args-kwargs/flexible_logger.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/args-kwargs/flexible_logger_out.jpg" alt="program">
+            </div>
+            <div class="card-body border border-warning">
+                <p>
+                    In this example, the <b>log_message</b> function accepts variable positional arguments <b>(*args)</b> and keyword arguments <b>(**kwargs)</b>. 
+                    The positional arguments are combined into a single message string using <b>" ".join(str(arg) for arg in args)</b>. 
+                    The keyword arguments provide additional flexibility, such as specifying the log level, timestamp, user ID, and custom metadata. 
+                    These arguments are retrieved using <b>kwargs.get()</b> with default values.
+                </p>
+                <p>
+                    You can customize the implementation of the logging function according to your requirements.
+                     For example, instead of printing the log entry, you could write it to a log file,
+                      send it to a logging service, or perform other logging-related operations.
+                </p>
+                <p>
+                    Using <b>*args</b> and <b>**kwargs</b> in this scenario allows you to create a versatile logging
+                     function that can handle different log entries with varying levels, messages,
+                      and additional metadata in a flexible manner.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div>
+            Animation video coming soon ...
+        </div>
+    </div>
+</div>

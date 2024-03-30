@@ -1,0 +1,127 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">stopwatch</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">Project Description</div>
+      <div class="content-text">
+        The "Stopwatch" project is a web-based application that provides users
+        with a convenient and elegant way to measure elapsed time. The user
+        interface features a modern design with a dark background that is easy
+        on the eyes. The main focus of the interface is a large timer display at
+        the center, surrounded by control buttons for starting, stopping, and
+        resetting the timer.
+      </div>
+      <div class="content-heading">Features</div>
+
+      <div class="content-text">
+        <li>
+          <b>Timer Display:</b> The centerpiece of the application is a digital
+          timer display, presented in the format "minutes : seconds :
+          milliseconds." The display is large and prominent, ensuring easy
+          readability.
+        </li>
+
+        <li>
+          <b>Start Button:</b> The "Start" button is designed with a green
+          color, inviting users to initiate the timer. Upon clicking this
+          button, the timer starts counting up in milliseconds, seconds, and
+          minutes.
+        </li>
+
+        <li>
+          <b>Stop Button:</b> The "Stop" button, styled in red, enables users to
+          pause the timer's progress. Clicking the stop button will halt the
+          counting process, allowing users to resume from where they left off.
+        </li>
+
+        <li>
+          <b>Reset Button:</b> The blue-colored "Reset" button provides users
+          with the ability to reset the timer back to its initial state. Upon
+          clicking this button, the timer display is set to "00 : 00 : 00," and
+          all elapsed time data is cleared.
+        </li>
+
+        <li>
+          <b>Real-Time Updates:</b> The timer updates in real time, accurately
+          reflecting the passage of time down to milliseconds. This precision
+          ensures that users can keep track of even the smallest time intervals.
+        </li>
+
+        <li>
+          <b> User-Friendly Interface:</b> The overall design of the application
+          is user-friendly and responsive. The dark color scheme and clear
+          typography contribute to the readability and aesthetic appeal of the
+          interface.
+        </li>
+
+        <li>
+          <b>JavaScript Logic:</b> The JavaScript code is responsible for the
+          core functionality of the stopwatch. It manages the interval-based
+          timer updates, start, stop, and reset actions, as well as updating the
+          timer display with the most current time values.
+        </li>
+      </div>
+      <div class="content-heading">Implementation</div>
+
+      <div class="content-text">
+        <p>
+          The Stopwatch project is versatile and can be used in various
+          scenarios,
+        </p>
+
+        <p>
+          <li>
+            <b>Fitness:</b> Users can time their workouts, intervals, or rest
+            periods during exercise routines.
+          </li>
+          <li>
+            <b>Presentations:</b> Speakers can monitor the time they spend on
+            each segment of a presentation.
+          </li>
+          <li>
+            <b>Cooking:</b> Timing cooking tasks accurately to prevent
+            overcooking or undercooking.
+          </li>
+          <li>
+            <b>Games:</b>Implementing time-based challenges or puzzles in
+            interactive web games.
+          </li>
+          <li>
+            <b>Productivity:</b> Managing work intervals and breaks to enhance
+            productivity and time management.
+          </li>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

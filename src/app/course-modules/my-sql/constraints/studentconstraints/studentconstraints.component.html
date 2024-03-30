@@ -1,0 +1,446 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Constraints (STUDENT)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>create an constraints table of
+                                        student by using below
+                                        data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text"><b>roll_number - </b>make sure it should not be duplicate
+                                        and should
+                                        not be empty (hint:
+                                        use "PRIMARY KEY CONSTRAINT")</li>
+                                    <li class="card-text"><b>first_name - </b>it should not be empty (hint: use "NOT
+                                        NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>last_name - </b>it should not be empty (hint: use "NOT
+                                        NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>gender - </b>it should be either male or female (hint:
+                                        use "CHECK
+                                        CONSTRAINT")</li>
+                                    <li class="card-text"><b>age - </b>it should be in between greater than or equal
+                                        to 15 and less than
+                                        or equal to 50(hint: use "CHECK CONSTRAINT") </li>
+                                    <li class="card-text"><b>total_marks - </b>keep a fixed value for it. If
+                                        you doesn't want to
+                                        give an value for this particular column/for auto generating of the
+                                        value without giving
+                                        any manual values(hint: use "DEFAULT CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>college_name - </b>it should not be empty (hint: use
+                                        "NOT
+                                        NULL CONSTRAINT") </li>
+                                    <li class="card-text"><b>grade - </b>it should not be empty (hint: use "NOT
+                                        NULL CONSTRAINT")</li>
+                                    <li class="card-text"><b>branch - </b>it should not be empty (hint: use "NOT
+                                        NULL CONSTRAINT")
+                                    </li>
+                                    <li class="card-text"><b>current_semister - </b>keep a fixed value for it. If
+                                        you doesn't want to
+                                        give an value for this particular column/for auto generating of the
+                                        value without giving
+                                        any manual values(hint: use "DEFAULT CONSTRAINT")</li>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button style="padding: 10px;" class="btn btn-primary"
+                                (click)="answer()">{{buttonValue}}</button>
+                            <div style="padding: 10px;" *ngIf="toggleOn">
+                                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="description">
+                                        <p>CREATE TABLE student (</p>
+                                        <p style="margin-top: -20px;">roll_number int primary key, </p>
+                                        <p style="margin-top: -20px;"> first_name varchar(100) not null,</p>
+                                        <p style="margin-top: -20px;"> last_name varchar(100) not null,</p>
+                                        <p style="margin-top: -20px;"> gender varchar(20) CHECK(gender in
+                                            ('male','female')),</p>
+                                        <p style="margin-top: -20px;"> age int CHECK(age &gt;=15 AND age
+                                            &lt;=50),
+                                        </p>
+                                        <p style="margin-top: -20px;"> total_marks int default(0),</p>
+                                        <p style="margin-top: -20px;"> college_name varchar(100) not null,
+                                        </p>
+                                        <p style="margin-top: -20px;"> grade varchar(20) not null,</p>
+                                        <p style="margin-top: -20px;"> branch varchar(20) not null,</p>
+                                        <p style="margin-top: -20px;"> current_semister int default(1)</p>
+                                        <p style="margin-top: -20px;"> );</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">INSERT follwing Data into Table</button>
+                        </div>
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 1</li>
+                                    <li class="card-text">first_name = Naveen</li>
+                                    <li class="card-text">last_name = Kumar</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 17</li>
+                                    <li class="card-text">total_marks = 900</li>
+                                    <li class="card-text">college_name = Visit Engineering College</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = C.S.E</li>
+                                    <li class="card-text">current_semister = 6</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 2</li>
+                                    <li class="card-text">first_name = Preethi</li>
+                                    <li class="card-text">last_name = Soodh</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 16</li>
+                                    <li class="card-text">total_marks = 600</li>
+                                    <li class="card-text">college_name = St.josh college</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch =M.P.C</li>
+                                    <li class="card-text">current_semister = 3</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 3</li>
+                                    <li class="card-text">first_name = Sri</li>
+                                    <li class="card-text">last_name = Harsith</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 34</li>
+                                    <li class="card-text">total_marks = 700</li>
+                                    <li class="card-text">college_name = Andhra University</li>
+                                    <li class="card-text">grade = C</li>
+                                    <li class="card-text">branch = IT</li>
+                                    <li class="card-text">current_semister = 5</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 4</li>
+                                    <li class="card-text">first_name = Sandeep</li>
+                                    <li class="card-text">last_name = Kishan</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 19</li>
+                                    <li class="card-text">total_marks = 650</li>
+                                    <li class="card-text">college_name = Kite Engineering College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch = Civil</li>
+                                    <li class="card-text">current_semister = 3</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 5</li>
+                                    <li class="card-text">first_name = Krithika</li>
+                                    <li class="card-text">last_name = Sri</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">total_marks = 570</li>
+                                    <li class="card-text">college_name = Sri Ramulu Engineering College
+                                    </li>
+                                    <li class="card-text">grade = E</li>
+                                    <li class="card-text">branch = Aeronatics</li>
+                                    <li class="card-text">current_semister = 8</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 6</li>
+                                    <li class="card-text">first_name = Adhi</li>
+                                    <li class="card-text">last_name = Mehta</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 33</li>
+                                    <li class="card-text">total_marks = 850</li>
+                                    <li class="card-text">college_name = Sai Degree College</li>
+                                    <li class="card-text">grade = B</li>
+                                    <li class="card-text">branch = Computer Science</li>
+                                    <li class="card-text">current_semister = 4</li>
+                                    <li class="card-text">employee_type = full time</li>
+                                    <li class="card-text">joining_date = 2007-11-11</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 7</li>
+                                    <li class="card-text">first_name = Amelia</li>
+                                    <li class="card-text">last_name = Dyer</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 40</li>
+                                    <li class="card-text">total_marks = 510</li>
+                                    <li class="card-text">college_name = Venkateswara University</li>
+                                    <li class="card-text">grade = C </li>
+                                    <li class="card-text">branch = Msc.Maths</li>
+                                    <li class="card-text">current_semister = 3</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 8</li>
+                                    <li class="card-text">first_name = William</li>
+                                    <li class="card-text">last_name = Morris</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 23</li>
+                                    <li class="card-text">total_marks = 490</li>
+                                    <li class="card-text">college_name = Visit Engineering College</li>
+                                    <li class="card-text">grade = E</li>
+                                    <li class="card-text">branch = Bsc.Maths</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 9</li>
+                                    <li class="card-text">first_name = Judias</li>
+                                    <li class="card-text">last_name = Puneeth</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 25</li>
+                                    <li class="card-text">total_marks = 605</li>
+                                    <li class="card-text">college_name = Sri Ramulu Engineering College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch =M.Tech Computers</li>
+                                    <li class="card-text">current_semister = 3</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 10</li>
+                                    <li class="card-text">first_name = Rohit </li>
+                                    <li class="card-text">last_name = Kumar</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 20</li>
+                                    <li class="card-text">total_marks = 930</li>
+                                    <li class="card-text">college_name = Andhra University</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = civil</li>
+                                    <li class="card-text">current_semister = 7</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 11</li>
+                                    <li class="card-text">first_name = Amritha</li>
+                                    <li class="card-text"> last_name = Rao</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 26</li>
+                                    <li class="card-text"> total_marks = 945</li>
+                                    <li class="card-text">college_name = Sri Vasavi Engineering College</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = Chemistry</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 12</li>
+                                    <li class="card-text">first_name = Deepika</li>
+                                    <li class="card-text">last_name = Singh</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">total_marks = 650</li>
+                                    <li class="card-text">college_name = St.John College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch = E.C.E</li>
+                                    <li class="card-text">current_semister = 5</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 13</li>
+                                    <li class="card-text">first_name = Manjeeth</li>
+                                    <li class="card-text">last_name = Chillar</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 33</li>
+                                    <li class="card-text">total_marks = 770</li>
+                                    <li class="card-text">college_name = Kite Engineering College</li>
+                                    <li class="card-text">grade = C</li>
+                                    <li class="card-text">branch = Bsc. Physics</li>
+                                    <li class="card-text">current_semister = 3</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 14</li>
+                                    <li class="card-text">first_name = Serena</li>
+                                    <li class="card-text">last_name = Williams</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 43</li>
+                                    <li class="card-text">total_marks = 876</li>
+                                    <li class="card-text">college_name = Adithya College</li>
+                                    <li class="card-text">grade = B</li>
+                                    <li class="card-text">branch = B.com Computers</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 15</li>
+                                    <li class="card-text">first_name = Rick</li>
+                                    <li class="card-text">last_name = Grims </li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">total_marks = 564</li>
+                                    <li class="card-text">college_name = Malla Reddy Engineering College
+                                    </li>
+                                    <li class="card-text">grade = E</li>
+                                    <li class="card-text">branch = EEE</li>
+                                    <li class="card-text">current_semister = 7</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 16</li>
+                                    <li class="card-text">first_name = Krish</li>
+                                    <li class="card-text">last_name = kapoor</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 19</li>
+                                    <li class="card-text">total_marks = 640</li>
+                                    <li class="card-text">college_name = AKRJ Engineerig College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch = Petroleum Engineer</li>
+                                    <li class="card-text">current_semister = 2</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 17</li>
+                                    <li class="card-text">first_name = Sweety</li>
+                                    <li class="card-text">last_name = dutt</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 18</li>
+                                    <li class="card-text">total_marks = 980</li>
+                                    <li class="card-text">college_name = Sasi College</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = Bi.P.C</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 18</li>
+                                    <li class="card-text">first_name = Pihu</li>
+                                    <li class="card-text">last_name = Soodh</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 16</li>
+                                    <li class="card-text">total_marks = 855</li>
+                                    <li class="card-text">college_name = St.John College</li>
+                                    <li class="card-text">grade = B</li>
+                                    <li class="card-text">branch = M.P.C</li>
+                                    <li class="card-text">current_semister = 2</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 19</li>
+                                    <li class="card-text">first_name = Tarun</li>
+                                    <li class="card-text">last_name = Singh</li>
+                                    <li class="card-text">gender = male</li>
+                                    <li class="card-text">age = 43</li>
+                                    <li class="card-text">total_marks = 769</li>
+                                    <li class="card-text">college_name = Sri Vasavi Engineering College</li>
+                                    <li class="card-text">grade = C</li>
+                                    <li class="card-text">branch = Civil</li>
+                                    <li class="card-text">current_semister = 7</li>
+                                </div>
+                            </div>
+
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">roll_number = 20</li>
+                                    <li class="card-text">first_name = Nandini</li>
+                                    <li class="card-text">last_name = Dyer</li>
+                                    <li class="card-text">gender = female</li>
+                                    <li class="card-text">age = 35</li>
+                                    <li class="card-text">total_marks = 587</li>
+                                    <li class="card-text">college_name = sai Degree College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch = Bsc.Chemistry</li>
+                                    <li class="card-text">current_semister = 3</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- Ending of problem statement card body-->
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]=""></app-video-cmp>
+        </div>
+
+    </div>
+</div>

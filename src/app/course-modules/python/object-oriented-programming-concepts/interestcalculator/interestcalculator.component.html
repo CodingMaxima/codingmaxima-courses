@@ -1,0 +1,40 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Single Inheritance Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="introduction">introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+
+                <div class="article">
+                    <p>In this example, we have a parent class Calculator that represents a basic mathematical
+                        calculator. It includes methods for addition, subtraction, multiplication, and division. The
+                        child class ScientificCalculator extends Calculator to inherit the basic calculator
+                        functionality and adds additional methods for square root and exponentiation using the Math
+                        class.
+
+                        In the SingleInheritanceExample class, we create an instance of Calculator called calculator and
+                        use it to perform addition and subtraction operations. We also create an instance of
+                        ScientificCalculator called scientificCalculator and use it to calculate the square root and
+                        raise a number to a power.</p>
+                </div>
+
+                <img class="program-img-fit" src="assets/img/corejava/oops/one.jpg">
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            <img class="program-img-fit" src="assets/img/corejava/oops/c">
+            <img class="program-img-fit" src="assets/img/corejava/oops/scicalculat.jpg">
+            <img class="program-img-fit" src="assets/img/corejava/oops/si">
+        </div>
+    </div>
+
+</div>

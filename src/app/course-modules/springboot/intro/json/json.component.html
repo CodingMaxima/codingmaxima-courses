@@ -1,0 +1,140 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">JSON Object</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="JSON Introduction"> JSON Introduction</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            JSON is an acronym for JavaScript Object Notation.<br>
+                            It is a standard file format used Primarily
+                            <br>
+                            to Transmit data between<br>
+                            <b> Server and Web application</b> .</button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            JSON is language Independent and supports<br>
+                            data structures like
+                            <b>objects and arrays</b>.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            JSON is less secure in comparison to XML.
+                        </button>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="example-1" [ngClass]="(exampleId=='example-1')?'active':''" (click)="exampleChange($event)"
+            data-hover="Example 1">Example 1</span>
+        <span class="global-tab-pill" id="example-2" [ngClass]="(exampleId=='example-2')?'active':''" (click)="exampleChange($event)"
+            data-hover="Example 2">Example 2</span>
+        <span class="global-tab-pill" id="example-3" [ngClass]="(exampleId=='example-3')?'active':''" (click)="exampleChange($event)"
+            data-hover="Example 3">Example 3</span>
+        <span class="global-tab-pill" id="example-4" [ngClass]="(exampleId=='example-4')?'active':''" (click)="exampleChange($event)"
+            data-hover="Example 4">Example 4</span>
+
+    </div>
+    <div *ngIf="exampleId=='example-1'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img src="assets/img/springboot/example1.pojo.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 50%;"
+                        alt="html-headingsoutput.jpg">
+                <img src="assets/img/springboot/example1.json.jpg"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 50%;"
+                alt="html-headingsoutput.jpg">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="exampleId=='example-2'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <img src="assets/img/springboot/onetoOne.example1.Employee.pojo.png"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                        <div class="row">
+                            <img src="assets/img/springboot/onetoOne.example1.Laptop.pojo.png"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                        <div class="row">
+                            <img src="assets/img/springboot/employee.table.jpg"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                        <div class="row">
+                            <img src="assets/img/springboot/laptop.table.jpg"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/img/springboot/laptop-json.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                        alt="html-headingsoutput.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="exampleId=='example-3'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <img src="assets/img/springboot/ex-3/OnetoMany.example1.Apartment.pojo.png"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                        <div class="row">
+                            <img src="assets/img/springboot/ex-3/OnetoMany.example1.Flat.pojo.png"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                        <div class="row">
+                            <img src="assets/img/springboot/ex-3/apartment-table.jpg"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                        <div class="row">
+                            <img src="assets/img/springboot/ex-3/flat-table.jpg"
+                            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                            alt="html-headingsoutput.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/img/springboot/ex-3/flat-json.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+                        alt="html-headingsoutput.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="exampleId=='example-4'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img src="assets/img/springboot/ex-4/person-entity.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 50%;"
+                        alt="html-headingsoutput.jpg">
+                <img src="assets/img/springboot/ex-4/person-json.jpg"
+                        style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 50%;"
+                        alt="html-headingsoutput.jpg">
+            </div>
+        </div>
+    </div>
+</div>

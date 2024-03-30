@@ -1,0 +1,261 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Date - time</h3>
+
+  <div class="card border-warning mt-4" style="border: 2px solid">
+    <p class="content-text">
+      Dates and times are handled using the Date object, which is part of the
+      core JavaScript language. The Date object provides methods and properties
+      to work with dates, times, and time zones.
+    </p>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Creating Date Objects</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>You can create a Date object in several ways:</li>
+          <br />
+
+          <p style="font-weight: bold">
+            <u>Example for Current Date and Time:</u>
+          </p>
+          <p style="font-weight: bold">const currentDate = new Date();</p>
+          <br />
+          <p style="font-weight: bold">
+            <u>Example by Using a Specific Date and Time:</u>
+          </p>
+          <p style="font-weight: bold">
+            const specificDate = new Date("2023-09-21T12:00:00");
+          </p>
+          <br />
+          <p style="font-weight: bold">
+            <u
+              >Example by Using Timestamp (milliseconds since January 1, 1970,
+              UTC):</u
+            >
+          </p>
+          <p style="font-weight: bold">
+            const timestampDate = new Date(1632192000000);
+          </p>
+          <p>// 1632192000000 is a timestamp</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b> Getting Date and Time Components</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can extract various components of a <b>Date</b> object using its
+            methods:
+          </li>
+          <br />
+          <div style="font-weight: bold">
+            <li>const date = new Date();</li>
+            <li>const year = date.getFullYear();</li>
+            <li>
+              const month = date.getMonth(); // Month is 0-indexed (0 = January)
+            </li>
+            <li>const day = date.getDate();</li>
+            <li>const hours = date.getHours();</li>
+            <li>const minutes = date.getMinutes();</li>
+            <li>const seconds = date.getSeconds();</li>
+            <li>const milliseconds = date.getMilliseconds();</li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b> Setting Date and Time Components</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>You can also set individual components of a Date object:</li>
+          <br />
+          <div style="font-weight: bold">
+            <li>const date = new Date();</li>
+
+            <li>date.setFullYear(2023);</li>
+            <li>date.setMonth(8); // 8 = September</li>
+            <li>date.setDate(21);</li>
+            <li>date.setHours(12);</li>
+            <li>date.setMinutes(0);</li>
+            <li>date.setSeconds(0);</li>
+            <li>date.setMilliseconds(0);</li>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Formatting Dates</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            JavaScript doesn't provide built-in functions for formatting dates,
+            so you often need to create custom formatting functions or use
+            libraries like <b>moment.js</b> (although <b>moment.js</b> is now
+            considered legacy, and you might want to use <b>date-fns</b> or
+            <b>Luxon</b>).
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">function formatDate(date) {{ "{" }}</p>
+          <pre style="font-weight: bold">
+  const options ={{ "{" }}year:'numeric',month:'long',day:'numeric'{{
+              "}"
+            }};</pre
+          >
+          <pre style="font-weight: bold">
+  return date.toLocaleDateString('en-US', options);</pre
+          >
+          <p style="font-weight: bold">{{ "}" }}</p>
+
+          <p style="font-weight: bold">
+            const formattedDate = formatDate(new Date()); // "September 21,
+            2023"
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Working with Timezones</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            JavaScript's Date object uses the local time zone of the user's
+            device. To work with different time zones, you can use libraries
+            like <b>'luxon', 'date-fns-tz', or 'moment-timezone'</b>.
+          </li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Performing Date Arithmetic</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can perform date arithmetic by using the Date object's methods.
+            For example, to add or subtract days from a date:
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">const date = new Date();</p>
+          <p style="font-weight: bold">
+            date.setDate(date.getDate() + 7); // Add 7 days
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b> Comparing Dates</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can compare two Date objects using comparison operators (&lt;,
+            &gt;, &lt;=, &gt;=) or by converting them to timestamps and
+            comparing the timestamps.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">const date1 = new Date('2023-09-21');</p>
+          <p style="font-weight: bold">const date2 = new Date('2023-09-22');</p>
+
+          <p style="font-weight: bold">if (date1 &lt; date2) {{ "{" }}</p>
+          <pre style="font-weight: bold; font-size: large">
+  console.log('date1 is earlier than date2');</pre
+          >
+          <p style="font-weight: bold">{{ "}" }}</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b> Handling Time Intervals</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            To work with time intervals or timeouts, JavaScript provides
+            functions like <b>setTimeout</b> and <b>setInterval</b>. These
+            functions execute a callback function after a specified time
+            interval.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">setTimeout(() => {{ "{" }}</p>
+          <pre style="font-weight: bold; font-size: medium">
+  console.log('This will execute after 2000 milliseconds');</pre
+          >
+          <p style="font-weight: bold">{{ "}" }}, 2000);</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

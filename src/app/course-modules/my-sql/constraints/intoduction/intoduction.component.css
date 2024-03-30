@@ -1,0 +1,17 @@
+.code-dark-block{
+    display: table;
+    background-color: gray;
+    border:solid 3px red;
+    padding:5px;
+    font-size:20px;
+    color:#ffffff;
+    margin: 0 auto;
+}
+
+.code-dark-block li{
+    list-style: none;
+}
+
+.code-dark-block pre{
+    margin: 0px;
+}

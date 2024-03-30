@@ -1,0 +1,92 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Bootstrap Tabs</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Code">Code</span>
+        <span class="global-tab-pill" id="two-a" [ngClass]="(elementId=='two-a')?'active':''" (click)="tabChange($event)"
+            data-hover="Output">Output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+                <li>Intro</li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body">
+            <h1>Code</h1>
+            <div class="card-group">
+                <img src="assets/img/bootstrap/bootstrap_tabs_code.png" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="bootstrap_tabs_code.png">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two-a'">
+        <div class="">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="wonders-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#wonders" 
+                        type="button" 
+                        role="tab" 
+                        aria-controls="wonders" 
+                        aria-selected="true">Seven New Wonders Of The World
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="programming-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#programming" 
+                        type="button" 
+                        role="tab" 
+                        aria-controls="programming" 
+                        aria-selected="false">Programming Languages
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="scientists-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#scientists" 
+                        type="button" 
+                        role="tab" 
+                        aria-controls="scientists" 
+                        aria-selected="false">Computer Scientists
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="wonders" role="tabpanel" aria-labelledby="wonders-tab">
+                  <div class="">
+                    <img src="assets/img/bootstrap/bootstrap_tabs_output_wonders.png"
+                    alt="bootstrap_tabs_output_wonders.png" style="width: 85%;">
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="programming" role="tabpanel" aria-labelledby="programming-tab">
+                  <div class="">
+                    <img src="assets/img/bootstrap/bootstrap_tabs_output_programs.png"
+                    alt="bootstrap_tabs_output_programs.png" style="width: 85%;">
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="scientists" role="tabpanel" aria-labelledby="scientists-tab">
+                    <img src="assets/img/bootstrap/bootstrap_tabs_output_scientists.png"
+                    alt="bootstrap_tabs_output_scientists.png" style="width: 85%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,163 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Smaller Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            <p>To explain the concept of the smaller number between two given numbers, let's consider the numbers A and
+              B.</p>
+
+            <ol>
+              <li>
+                <p>First, we compare the numerical values of A and B. If A is less than B, then A is the smaller number.
+                  Conversely, if B is less than A, then B is the smaller number. <br>For example:</p>
+                <ul>
+                  <li>If A = 5 and B = 8, then 5 is the smaller number because it has a lesser value than 8.</li>
+                  <li>If A = 10 and B = 2, then 2 is the smaller number because it has a lesser value than 10.</li>
+                </ul>
+              </li>
+
+              <li>
+                <p>Another approach is to use the comparison operators. In most programming languages and mathematical
+                  notation, the "&lt;" symbol represents the "less than" operator. If A &lt; B is true, then A is
+                  smaller than B. If A &lt; B is false, then B is smaller than A.<br> For example:</p>
+                <ul>
+                  <li>If A = 5 and B = 8, then A &lt; B is true, indicating that 5 is the smaller number.</li>
+                  <li>If A = 10 and B = 2, then A &lt; B is false, indicating that 2 is the smaller number.</li>
+                </ul>
+              </li>
+              <li>
+                <p>It's important to consider the context of the numbers. If negative numbers are involved, a larger
+                  absolute value represents a smaller number. <br>For instance:</p>
+
+                <ul>
+                  <li>If A = -5 and B = -3, then -5 is the smaller number because it is further away from zero on the
+                    number line compared to -3.</li>
+                  <li>If A = -5 and B = 3, then -5 is still the smaller number because negative numbers are considered
+                    smaller than positive numbers.</li>
+                </ul>
+              </li>
+            </ol>
+          </button>
+            <button type="button" class="btn btn-lg btn-block">
+            <p>In summary, when comparing two numbers A and B, the smaller number is the one with the lesser value. This
+              can be determined by directly comparing their numerical values or using the "less than" comparison
+              operator. Keep in mind the context of negative numbers, where a larger absolute value represents a smaller
+              number.</p>
+          </button>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter First number</p>
+              <p style="margin-top: -20px;" class="card-text">60</p>
+              <p class="card-text">Enter Second number</p>
+              <p style="margin-top: -20px;" class="card-text">22</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">22 is lesser than 60</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter First number</p>
+              <p style="margin-top: -20px;" class="card-text">11</p>
+              <p class="card-text">Enter Second number</p>
+              <p style="margin-top: -20px;" class="card-text">85</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">11 is lesser than 85</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter First number</p>
+              <p style="margin-top: -20px;" class="card-text">35</p>
+              <p class="card-text">Enter Second number</p>
+              <p style="margin-top: -20px;" class="card-text">90</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">35 is lesser than 90</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit-python" src="assets/img/python/basic/smaller_number.jpg" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">60 22</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">22</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">11 85</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">11</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">35 90</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">35</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+
+    </div>
+  </div>
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

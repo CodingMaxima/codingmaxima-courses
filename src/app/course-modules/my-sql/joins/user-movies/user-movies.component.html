@@ -1,0 +1,18 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">User-Movies</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Example Queries">Examples Queries</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId2=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+            <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+        </div>
+    </div>
+</div>

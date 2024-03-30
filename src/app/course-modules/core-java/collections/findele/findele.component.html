@@ -1,0 +1,164 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Find Element in an ArrayList</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <p>
+              We need to find if an element exists in an arraylist or not.
+              we need to compare every number in an arraylist with the number which we want to find.
+              if we get matched with the number in an array then we can print like number found otherwise print number
+              not found.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter size of an arraylist</p>
+              <p style="margin-top: -20px;" class="card-text">5</p>
+              <p class="card-text">Enter elements of an arraylist</p>
+              <p style="margin-top: -20px;" class="card-text">11</p>
+              <p style="margin-top: -20px;" class="card-text">85</p>
+              <p style="margin-top: -20px;" class="card-text">22</p>
+              <p style="margin-top: -20px;" class="card-text">60</p>
+              <p style="margin-top: -20px;" class="card-text">5</p>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">85</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Number 85 is found in the arraylist</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter size of an arraylist</p>
+              <p style="margin-top: -20px;" class="card-text">4</p>
+              <p class="card-text">Enter elements of an arraylist</p>
+              <p style="margin-top: -20px;" class="card-text">1185</p>
+              <p style="margin-top: -20px;" class="card-text">13</p>
+              <p style="margin-top: -20px;" class="card-text">5</p>
+              <p style="margin-top: -20px;" class="card-text">20</p>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">13</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Number 20 is found in the arraylist</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter size of an arraylist</p>
+              <p style="margin-top: -20px;" class="card-text">6</p>
+              <p class="card-text">Enter elements of an arraylist</p>
+              <p style="margin-top: -20px;" class="card-text">1</p>
+              <p style="margin-top: -20px;" class="card-text">8</p>
+              <p style="margin-top: -20px;" class="card-text">2</p>
+              <p style="margin-top: -20px;" class="card-text">6</p>
+              <p style="margin-top: -20px;" class="card-text">51</p>
+              <p style="margin-top: -20px;" class="card-text">34</p>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">3</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Number 3 is not found in the arraylist</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+    </div><!-- Ending of problem statement card body-->
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/corejava/" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp [url]=""></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body"> <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>Testacse - 1</b></div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">5</p><br>
+            <p style="margin-top: -20px;" class="card-text">11</p>
+            <p style="margin-top: -20px;" class="card-text">85</p>
+            <p style="margin-top: -20px;" class="card-text">22</p>
+            <p style="margin-top: -20px;" class="card-text">60</p>
+            <p style="margin-top: -20px;" class="card-text">5</p><br>
+            <p style="margin-top: -20px;" class="card-text">85</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Found</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>Testcase - 2</b></div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">4</p><br>
+            <p style="margin-top: -20px;" class="card-text">1185</p>
+            <p style="margin-top: -20px;" class="card-text">13</p>
+            <p style="margin-top: -20px;" class="card-text">5</p>
+            <p style="margin-top: -20px;" class="card-text">20</p><br>
+            <p style="margin-top: -20px;" class="card-text">13</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Found</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>Testcase - 3</b></div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">6</p><br>
+            <p style="margin-top: -20px;" class="card-text">1</p>
+            <p style="margin-top: -20px;" class="card-text">8</p>
+            <p style="margin-top: -20px;" class="card-text">2</p>
+            <p style="margin-top: -20px;" class="card-text">6</p>
+            <p style="margin-top: -20px;" class="card-text">51</p>
+            <p style="margin-top: -20px;" class="card-text">34</p><br>
+            <p style="margin-top: -20px;" class="card-text">3</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Not found</p>
+          </div>
+        </div>
+      </div> <!-- Ending of examples-->
+    </div> <!-- Ending of test cases -->
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

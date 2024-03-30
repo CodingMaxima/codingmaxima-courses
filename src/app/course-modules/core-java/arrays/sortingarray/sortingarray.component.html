@@ -1,0 +1,159 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Sorting an Array </h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+            data-hover="Test Cases">Test Cases</span>
+        <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+            data-hover="Practice">Practice</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body content-box" style="font-family: 'Inter', sans-serif;">
+                        <p><b>Sorting an Array with Bubble Sort</b></p>
+
+                        <p>Consider an array of integers: [5, 2, 8, 1, 9]</p>
+
+                        <ol>
+                            <li>Bubble Sort starts by comparing the first two elements in the array (5 and 2). If they
+                                are in the wrong order, they are swapped.</li>
+                            <ul>
+                                <li>Array: [2, 5, 8, 1, 9]</li>
+                            </ul>
+
+                            <li>The comparison continues with the next pair of elements (5 and 8). Since they are
+                                already in the correct order, no swap is needed.</li>
+                            <ul>
+                                <li>Array: [2, 5, 8, 1, 9]</li>
+                            </ul>
+
+                            <li>The process continues until the largest element "9" "bubbles" up to the end of the
+                                array. Each pass compares adjacent elements and swaps them if necessary.</li>
+                            <ul>
+                                <li>Pass 1: [2, 5, 8, 1, 9]</li>
+                                <li>Pass 2: [2, 5, 1, 8, 9]</li>
+                                <li>Pass 3: [2, 1, 5, 8, 9]</li>
+                                <li>Pass 4: [1, 2, 5, 8, 9]</li>
+                            </ul>
+
+                            <li>The array is not fully sorted yet, so we repeat the process from the beginning until the
+                                array is sorted completely.</li>
+
+                            <li>The next pass would yield: [1, 2, 5, 8, 9]. Since no swaps are required, the algorithm
+                                recognizes that the array is sorted and terminates.</li>
+                        </ol>
+
+                        <p>Bubble Sort has an average time complexity of O(n^2), where n is the number of elements in
+                            the array. It is not the most efficient sorting algorithm for large datasets but is simple
+                            to understand and implement.</p>
+
+                        <p>There are several other sorting algorithms like Insertion Sort, Selection Sort, Merge Sort,
+                            Quick Sort, and many more, each with its own approach and performance characteristics. The
+                            choice of algorithm depends on the specific requirements of the application and the
+                            characteristics of the input data.</p>
+
+                    </div>
+                </div>
+
+                <!-- Starting of examples-->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Example - 1</b></div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                            <p class="card-text">Array = {{ '{' }}5, 2, 8, 1, 9{{ '}' }}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                            <p class="card-text">Sorting of an array is: 1 2 5 8 9</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center "><b>Example - 2</b></div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                            <p class="card-text">Array = {{ '{' }}45, 13, 11, 22, 65{{ '}' }}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                            <p class="card-text">Sorting of an array is: 11 13 22 45 65</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Example - 3</b></div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                            <p class="card-text">Array = {{ '{' }}99, 35, 5, 42, 28{{ '}' }}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                            <p class="card-text">Sorting of an array is: 5 28 35 42 99</p>
+                        </div>
+                    </div>
+                </div> <!-- Ending of examples-->
+            </div>
+        </div><!-- Ending of problem statement card body-->
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            <img class="program-img-fit" src="assets/img/corejava/arrays/bubblesortt.JPG" alt="program">
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='four'">
+        <div class="card-body">
+            <!-- Starting of test cases -->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                        <p class="card-text">5</p>
+                        <p class="card-text">11 22 4 85 7</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                        <p class="card-text">4 7 11 22 85</p>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                        <p class="card-text">5</p>
+                        <p class="card-text">11 13 45 22 65</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                        <p class="card-text">11 13 22 45 65</p>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                        <p class="card-text">5</p>
+                        <p class="card-text">24 22 56 22 22</p>
+                        <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                        <p class="card-text">22 22 22 24 56</p>
+                    </div>
+                </div>
+            </div> <!-- Ending of test cases -->
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='five'">
+        <div class="card-body">
+            <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+        </div>
+    </div>
+</div>

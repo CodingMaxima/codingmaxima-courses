@@ -1,0 +1,290 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Union(EMPLOYEE & STUDENT)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId2=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+
+                            </div>
+
+                            <div *ngIf="elementId=='question1'">
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the unique
+                                                last_name of the employees and the students from their
+                                                respective tables</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table and the student table have to find the unique
+                                                last_name of them
+                                            </p>
+
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerOne[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerOne">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerOne)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div> <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                <p style="padding: 10px;" class="btn-block">select last_name
+                                                    from employee union select last_name from student;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the all
+                                                last_name of the employees and the students from their
+                                                respective tables</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table and the student table have to find the all last_name
+                                                of them
+
+                                            </p>
+
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerTwo[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerTwo">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerTwo)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div> <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                <p style="padding: 10px;" class="btn-block">select last_name
+                                                    from employee union all select last_name from student; </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div><!--end of the card-->
+
+                            <div *ngIf="elementId=='question2'">
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the unique
+                                                age of the employees and the students from their
+                                                respective tables</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table and the student table have to find the unique age of
+                                                them
+
+                                            </p>
+
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerThree[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerThree">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerThree)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div> <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                <p style="padding: 10px;" class="btn-block">select age
+                                                    from employee union select age from student;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the all age
+                                                of the employees and the students from their respective
+                                                tables
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table and the student table have to find the all age of
+                                                them
+                                            </p>
+
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerFour[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerFour">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerFour)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div> <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                <p style="padding: 10px;" class="btn-block">select age
+                                                    from employee union all select age from student;
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div><!--end of the card-->
+
+                        </div>
+
+                        <div *ngIf="elementId=='question3'">
+                            <!-- Starting of card-->
+                            <div class="card-group">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> Print the unique
+                                            gender of the employees and the students from their
+                                            respective tables</p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee
+                                            table and the student table have to find the unique gender of
+                                            them
+                                        </p>
+
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerFive[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerFive">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerFive)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                            <p style="padding: 10px;" class="btn-block">select gender
+                                                from employee union select gender from student;
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> Print the all
+                                            first_name,last_name,gender
+                                            of the employees and the students from their respective tables
+                                        </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee
+                                            table and the student table have to find the all
+                                            first_name,last_name, gender of
+                                            them
+                                        </p>
+
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerSix[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerSix">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerSix)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                            <p style="padding: 10px;" class="btn-block">select
+                                                first_name,last_name,gender
+                                                from employee union all select first_name,last_name,gender
+                                                from student;</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div><!--end of the card-->
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- problem statment end-->
+
+    <div *ngIf="elementId2=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+$primary-color: #007bff;
+.font-styles{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading-color{
+  color: #007ACC;
+}
+.content-color{
+  color: #333333;
+}
+.using-postman-container {
+	font-family: Arial, sans-serif;
+  h1 {
+    color: $primary-color;
+  }
+  
+  ol {
+    list-style: decimal inside;
+    margin-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+}
+

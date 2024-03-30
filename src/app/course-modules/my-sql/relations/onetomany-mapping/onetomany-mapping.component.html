@@ -1,0 +1,855 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">ONE-TO-MANY Relation Mapping</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Example - 1">Example - 1</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Example - 2">Example - 2</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img class="img-center" src="assets/img/dbms/relations/onetomanyexample.jpg">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            Apartment by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>apartment_id - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b> apartment_name - </b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>no_flats - </b>It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                        <li class="card-text"><b>facing - </b>It should be either 'east','west','north','south'(hint:
+                            use "CHECK CONSTRAINT")</li>
+                        <li class="card-text"><b>no_floors - </b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                        <li class="card-text"><b>isLift - </b>It should be either present or not present & It should not
+                            be empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            Flat by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>flat_id - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b>owner_name - </b>It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        <li class="card-text"><b>no_bedrooms - </b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>facing - </b>IIt should be either 'east','west','north','south'(hint:
+                            use "CHECK CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>floor -</b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                        <li class="card-text"><b>isAvailable</b> It should be either present or not present & It should
+                            not
+                            be empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                        <li class="card-text"><b>apartment_id - </b>It is connection to the Apartment table
+                            apartment_id. (hint: use
+                            "FOREIGN KEY")
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button style="padding: 10px;" class="btn btn-primary" (click)="answer()">{{buttonValue}}</button><br>
+                <div style="padding: 10px;" *ngIf="toggleOn">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p> create table Apartment( </p>
+                                    <p style="margin-top: -20px;">apartment_id varchar(10) PRIMARY KEY,</p>
+                                    <p style="margin-top: -20px;">apartment_name varchar(40) NOT NULL, </p>
+                                    <p style="margin-top: -20px;"> no_flats int NOT NULL, </p>
+                                    <p style="margin-top: -20px;"> facing varchar(20) CHECK(facing
+                                        in('east','west','north','south')),</p>
+                                    <p style="margin-top: -20px;">no_floors int NOT NULL,</p>
+                                    <p style="margin-top: -20px;">isLift boolean NOT NULL</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p> create table Flat( </p>
+                                    <p style="margin-top: -20px;"> flat_id varchar(10) PRIMARY KEY,</p>
+                                    <p style="margin-top: -20px;"> owner_name varchar(40) NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> no_bedrooms int NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> facing varchar(20) CHECK(facing
+                                        in('east','west','north','south')),</p>
+                                    <p style="margin-top: -20px;"> isAvailable boolean NOT Null,</p>
+                                    <p style="margin-top: -20px;"> apartment_id varchar(20),</p>
+                                    <p style="margin-top: -20px;"> Foreign key(apartment_id) references
+                                        Apartment(apartment_id)</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Apartment Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">apartment_id = 1A</li>
+                        <li class="card-text">apartment_name = Santhi Nilayam</li>
+                        <li class="card-text">no_flats = 8</li>
+                        <li class="card-text">facing = east</li>
+                        <li class="card-text">no_floors = 2</li>
+                        <li class="card-text">isLift = False</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">apartment_id = 2A</li>
+                        <li class="card-text">apartment_name = Adithya</li>
+                        <li class="card-text">no_flats = 12</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">no_floors = 3</li>
+                        <li class="card-text">isLift = False</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">apartment_id = 3A</li>
+                        <li class="card-text">apartment_name = Blue Sky</li>
+                        <li class="card-text">no_flats = 12</li>
+                        <li class="card-text">facing = north</li>
+                        <li class="card-text">no_floors = 3</li>
+                        <li class="card-text">isLift = True</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">apartment_id = 4A</li>
+                        <li class="card-text">apartment_name = Divine rentals</li>
+                        <li class="card-text">no_flats = 16</li>
+                        <li class="card-text">facing = south</li>
+                        <li class="card-text">no_floors = 4</li>
+                        <li class="card-text">isLift = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">apartment_id = 5A</li>
+                        <li class="card-text">apartment_name = Sunshine</li>
+                        <li class="card-text">no_flats = 16</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">no_floors = 4</li>
+                        <li class="card-text">isLift = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Apartment Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">apartment_id = 6A</li>
+                        <li class="card-text">apartment_name = Green House</li>
+                        <li class="card-text">no_flats = 16</li>
+                        <li class="card-text">facing = east2</li>
+                        <li class="card-text">no_floors = 4</li>
+                        <li class="card-text">isLift = True</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Flat Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 1A-102</li>
+                        <li class="card-text">owner_name = Kranthi</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = east</li>
+                        <li class="card-text">floor = 1</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 1A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 1A-202</li>
+                        <li class="card-text">owner_name = Rishank</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = east</li>
+                        <li class="card-text">floor = 2</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 1A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 2A-101 </li>
+                        <li class="card-text">owner_name = Narendar</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">floor = 1</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 2A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 2A-202</li>
+                        <li class="card-text">owner_name = Swetha</li>
+                        <li class="card-text">no_bedrooms = 3</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">floor = 2</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 2A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 2A-303</li>
+                        <li class="card-text">owner_name = Santosh</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = south</li>
+                        <li class="card-text">floor = 3</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 2A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 3A-101</li>
+                        <li class="card-text">owner_name = Bhuvan</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = north</li>
+                        <li class="card-text">floor = 1</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 3A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 3A-202</li>
+                        <li class="card-text">owner_name = Prakash</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = east</li>
+                        <li class="card-text">floor = 2</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 3A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 3A-304</li>
+                        <li class="card-text">owner_name = Pratyusha</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = east</li>
+                        <li class="card-text">floor = 3</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 3A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 4A-102</li>
+                        <li class="card-text">owner_name = Bhargavi</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = south</li>
+                        <li class="card-text">floor = 1</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 4A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 4A-204</li>
+                        <li class="card-text">owner_name = Lokesh</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = south</li>
+                        <li class="card-text">floor = 2</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 4A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 4A-302</li>
+                        <li class="card-text">owner_name = Swaroop</li>
+                        <li class="card-text">no_bedrooms = 3</li>
+                        <li class="card-text">facing = north</li>
+                        <li class="card-text">floor = 3</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 4A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 4A-402</li>
+                        <li class="card-text">owner_name = Jashwanth</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">floor = 4</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 4A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 5A-102</li>
+                        <li class="card-text">owner_name = Vamsi</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">floor = 1</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 5A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 5A-202</li>
+                        <li class="card-text">owner_name = Irfan</li>
+                        <li class="card-text">no_bedrooms = 3</li>
+                        <li class="card-text">facing = south</li>
+                        <li class="card-text">floor = 2</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 5A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 5A-303</li>
+                        <li class="card-text">owner_name = Likitha</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = south</li>
+                        <li class="card-text">floor = 3</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 5A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 5A-404</li>
+                        <li class="card-text">owner_name = Sravya</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = east</li>
+                        <li class="card-text">floor = 4</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 5A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 6A-101</li>
+                        <li class="card-text">owner_name = Vinay</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = north</li>
+                        <li class="card-text">floor = 1</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 6A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = A-203</li>
+                        <li class="card-text">owner_name = Sruthi</li>
+                        <li class="card-text">no_bedrooms = 1</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">floor = 2</li>
+                        <li class="card-text">isAvailable = FALSE</li>
+                        <li class="card-text">apartment_id = 6A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 6A-302</li>
+                        <li class="card-text">owner_name = Mallesh</li>
+                        <li class="card-text">no_bedrooms = 2</li>
+                        <li class="card-text">facing = north</li>
+                        <li class="card-text">floor = 3</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 6A</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Flat Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">flat_id = 6A-404</li>
+                        <li class="card-text">owner_name = Kishore</li>
+                        <li class="card-text">no_bedrooms = 3</li>
+                        <li class="card-text">facing = west</li>
+                        <li class="card-text">floor = 4</li>
+                        <li class="card-text">isAvailable = TRUE</li>
+                        <li class="card-text">apartment_id = 6A</li>
+                    </div>
+                </div>
+            </div> <!--end of data-->
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img class="img-center" src="assets/img/dbms/relations/manytooneexample.jpg">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            employee by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>emp_id - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b> emp_name - </b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>gender - </b>It should be either 'male', 'female' (hint: use "CHECK
+                            NULL CONSTRAINT")</li>
+                        <li class="card-text"><b> salary - </b>It should be not less than 10000 and not more than
+                            120000(hint:
+                            use "CHECK CONSTRAINT")</li>
+                        <li class="card-text"><b>experience - </b> It should be minimum zero(hint: use "NOT
+                            check CONSTRAINT")</li>
+                        <li class="card-text"><b> des_id - </b>It is connection to the designation table
+                            des_id. (hint: use
+                            "FOREIGN KEY")</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            designation by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>des_id - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b>des_name - </b>It should not be empty (hint: use "NOT
+                            NULL ,UNIQUE CONSTRAINTs")
+                        <li class="card-text"><b>department - </b> They should be either 'Technical','Non Technical',
+                            'Finance', 'Support' any one of those(hint: use "CHECK
+                            CONSTRAINT")</li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button style="padding: 10px;" class="btn btn-primary" (click)="answer()">{{buttonValue}}</button><br>
+                <div style="padding: 10px;" *ngIf="toggleOn">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p> create table employee( </p>
+                                    <p style="margin-top: -20px;">emp_id int PRIMARY KEY,</p>
+                                    <p style="margin-top: -20px;">emp_name varchar(50) NOT NULL, </p>
+                                    <p style="margin-top: -20px;">gender varchar(10) CHECK(gender in('male', 'female')),
+                                    </p>
+                                    <p style="margin-top: -20px;">salary decimal(8,2) CHECK(salary &gt;=10000 AND salary
+                                        &lt;=120000),</p>
+                                    <p style="margin-top: -20px;">experience decimal(3,2) CHECK(experience >=0
+                                        ),</p>
+                                    <p style="margin-top: -20px;">des_id varchar(10),</p>
+                                    <p style="margin-top: -20px;">Foreign key(des_id) references
+                                        designation(des_id)</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p> create table designation( </p>
+                                    <p style="margin-top: -20px;"> des_id varchar(10) Primary key,</p>
+                                    <p style="margin-top: -20px;"> des_name varChar(100) NOT NULL unique,</p>
+                                    <p style="margin-top: -20px;"> department varchar(50) CHECK(department
+                                        in('Technical','Non Technical', 'Finance', 'Support'))</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Employee Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 1</li>
+                        <li class="card-text">emp_name = Edward Russell</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 100000</li>
+                        <li class="card-text">experience = 6</li>
+                        <li class="card-text">des_id = M111</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 2</li>
+                        <li class="card-text">emp_name = Neelima Chowdary</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 25000</li>
+                        <li class="card-text">experience = 1.5</li>
+                        <li class="card-text">des_id = P9900</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 3</li>
+                        <li class="card-text">emp_name = Shiva Kumar</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 40000</li>
+                        <li class="card-text">experience = 3</li>
+                        <li class="card-text">des_id = SE5555</li>
+                    </div>
+                </div>
+            </div><!--end of group-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 4</li>
+                        <li class="card-text">emp_name = Priya Soodh</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 60000</li>
+                        <li class="card-text">experience = 4.2</li>
+                        <li class="card-text">des_id = F1122</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 5</li>
+                        <li class="card-text">emp_name = Sai Ruchitha</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 42000</li>
+                        <li class="card-text">experience = 3.7</li>
+                        <li class="card-text">des_id = SE5599</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 6</li>
+                        <li class="card-text">emp_name = John Robert</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 34000</li>
+                        <li class="card-text">experience = 2</li>
+                        <li class="card-text">des_id = P9900</li>
+                    </div>
+                </div>
+            </div><!--end of group-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 7</li>
+                        <li class="card-text">emp_name = Sri Divya</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 75000</li>
+                        <li class="card-text">experience = 5</li>
+                        <li class="card-text">des_id = SL1234</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 8</li>
+                        <li class="card-text">emp_name = Swetha Kumari</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 55000</li>
+                        <li class="card-text">experience = 3</li>
+                        <li class="card-text">des_id = SE5599</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 9</li>
+                        <li class="card-text">emp_name = Sri Latha</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 90000</li>
+                        <li class="card-text">experience = 7</li>
+                        <li class="card-text">des_id = M111</li>
+                    </div>
+                </div>
+            </div><!--end of group-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 10</li>
+                        <li class="card-text">emp_name = Sandeep Dull</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 30000</li>
+                        <li class="card-text">experience = 1</li>
+                        <li class="card-text">des_id = SU9999</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 11</li>
+                        <li class="card-text">emp_name =Anup Kumar </li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 45000</li>
+                        <li class="card-text">experience = 2</li>
+                        <li class="card-text">des_id = SE5599</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 12</li>
+                        <li class="card-text">emp_name = Prasanth Roy</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 87000</li>
+                        <li class="card-text">experience = 6</li>
+                        <li class="card-text">des_id = SL1234</li>
+                    </div>
+                </div>
+            </div><!--end of group-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 13</li>
+                        <li class="card-text">emp_name = Tony Edward</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 49000</li>
+                        <li class="card-text">experience = 4</li>
+                        <li class="card-text">des_id = SE5555</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 14</li>
+                        <li class="card-text">emp_name = Brinda Kapoor</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 25000</li>
+                        <li class="card-text">experience = 1</li>
+                        <li class="card-text">des_id = SU9999</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 15</li>
+                        <li class="card-text">emp_name = Prachi Mehta</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 84000</li>
+                        <li class="card-text">experience = 5</li>
+                        <li class="card-text">des_id = F1122</li>
+                    </div>
+                </div>
+            </div><!--end of group-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 16</li>
+                        <li class="card-text">emp_name = Pardeep Narwal</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 98000</li>
+                        <li class="card-text">experience = 7.5 </li>
+                        <li class="card-text">des_id = M111</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 17</li>
+                        <li class="card-text">emp_name = Rajendra Kumar</li>
+                        <li class="card-text">gender = male</li>
+                        <li class="card-text">salary = 87000</li>
+                        <li class="card-text">experience = 6</li>
+                        <li class="card-text">des_id = F1122</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 18</li>
+                        <li class="card-text">emp_name = Smrithi Kour</li>
+                        <li class="card-text">gender = female</li>
+                        <li class="card-text">salary = 40000</li>
+                        <li class="card-text">experience = 2.10 </li>
+                        <li class="card-text">des_id = P9900</li>
+                    </div>
+                </div>
+            </div><!--end of group-->
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Designation Data into Table</button>
+            </div>
+            <!--starting of data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = M111</li>
+                        <li class="card-text">des_name = Manager</li>
+                        <li class="card-text">department = Non Technical</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = SE5599</li>
+                        <li class="card-text">des_name = Software Engineer</li>
+                        <li class="card-text">department = Technical</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = F1122</li>
+                        <li class="card-text">des_name = Cloud sales Finance Lead</li>
+                        <li class="card-text">department = Finance</li>
+                    </div>
+                </div>
+
+            </div><!--end of group-->
+
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = SE5555</li>
+                        <li class="card-text">des_name = Technical Support</li>
+                        <li class="card-text">department = Technical</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = SU9999</li>
+                        <li class="card-text">des_name = Voice Process</li>
+                        <li class="card-text">department = support</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = SL1234</li>
+                        <li class="card-text">des_name = Team Lead</li>
+                        <li class="card-text">department = Technical</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Designation Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">des_id = P9900</li>
+                        <li class="card-text">des_name = Payrole Analyst</li>
+                        <li class="card-text">department = Finance</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+        </div>
+    </div>
+
+
+</div>

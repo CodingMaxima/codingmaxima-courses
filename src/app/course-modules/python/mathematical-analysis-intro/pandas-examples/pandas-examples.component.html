@@ -1,0 +1,107 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Pandas Examples</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''"
+            (click)="tabChange($event)" data-hover="Examples">Examples</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Reading and Exploring Data</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import pandas as pd
+
+# Read a CSV file into a DataFrame
+data = pd.read_csv('data.csv')
+
+# Display the first few rows of the DataFrame
+print(data.head())
+
+# Get summary statistics of the DataFrame
+print(data.describe())
+
+# Count the occurrences of each value in a column
+print(data['category'].value_counts())
+
+# Filter rows based on a condition
+filtered_data = data[data['value'] > 100]
+
+# Group data by a column and calculate the average
+average_by_category = data.groupby('category')['value'].mean()
+print(average_by_category)                                
+</pre>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Data Cleaning and Transformation</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;overflow: hidden;">
+import pandas as pd
+
+# Remove duplicates from a DataFrame
+data.drop_duplicates(inplace=True)
+
+# Handle missing values by filling them with the mean
+data['age'].fillna(data['age'].mean(), inplace=True)
+
+# Convert data types of columns
+data['date'] = pd.to_datetime(data['date'])
+
+# Apply a function to a column
+data['category'] = data['category'].apply(lambda x: x.upper())
+
+# Create a new column based on existing columns
+data['total_sales'] = data['quantity'] * data['price']
+
+# Merge two DataFrames based on a common column
+merged_data = pd.merge(data1, data2, on='id', how='inner')                                
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Data Visualization</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Plot a line chart of a time series
+data.plot(x='date', y='value', kind='line')
+plt.xlabel('Date')
+plt.ylabel('Value')
+plt.title('Value over Time')
+plt.show()
+
+# Create a bar chart of categorical data
+data['category'].value_counts().plot(kind='bar')
+plt.xlabel('Category')
+plt.ylabel('Count')
+plt.title('Category Counts')
+plt.show()
+
+# Generate a scatter plot
+data.plot(x='age', y='income', kind='scatter')
+plt.xlabel('Age')
+plt.ylabel('Income')
+plt.title('Income vs Age')
+plt.show()                                                           
+</pre>
+<div style='font-size: medium; font-style: oblique;font-weight: 700;'>
+    These examples showcase just a fraction of what you can achieve with Pandas. 
+    The library provides extensive functionality for data manipulation, analysis,
+    cleaning, visualization, and more, making it a powerful tool for working with structured data in Python.
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

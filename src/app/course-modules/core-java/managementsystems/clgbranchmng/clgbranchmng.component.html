@@ -1,0 +1,337 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">College-Branch(Many-to-Many relation)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+      data-hover="Program">Program</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div
+            style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">More often than not, we come across a situation where
+              we need an application that involves
+              multiple real life entities as classes that interact with each other to form a object-relationship
+              management system. One such system is this Student Branch Management system. </button>
+
+            <br>
+            <button type="button" class="btn btn-lg btn-block">College Branch management system can be designed
+              using the following description..</button>
+            <button type="button" class="btn btn-lg btn-block">Write College and Branch classes which are expected
+              to be Plain Old Java Object (POJO)
+              classes with parameterized constructor and getters and setters for each field. Each class is also
+              expected to have a toString method
+              which will display all the fields of the object and their values in human readable format.</button>
+            <button type="button" class="btn btn-lg btn-block">Design one helper class for College namely
+              CollegeHelper and other helper class
+              for Branch namely BranchHelper respectively. These helper classes are expected to contain a collection
+              object such as an HashMap. </button>
+            <button type="button" class="btn btn-lg btn-block">The helper classes are also expected to contain other
+              methods
+              which can perform the following operations on the specified HashMap. </button>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">POJO/MODEL CLASSES</button>
+        </div>
+        <!-- Starting of Pojo Classes-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>College - Class</b></div>
+            <div class="card-body">
+              <li class="card-text">CollegeCode of type String.</li>
+              <li class="card-text">name of type String.</li>
+              <li class="card-text">List of branches of type Branch.</li>
+              <li class="card-text">List of extraFacilities of type String.</li>
+              <li class="card-text">isCoEducation of type Boolean.</li>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Branch - Class</b></div>
+            <div class="card-body">
+              <li class="card-text">branchCode of type String.</li>
+              <li class="card-text">name of type String.</li>
+              <li class="card-text">List of subjects of type String.</li>
+            </div>
+          </div>
+
+        </div> <!-- Ending of PojoClasses-->
+
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">College Helper Class Operations</button>
+        </div>
+
+        <!-- Student Helper class methods-->
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public boolean addCollege(College college)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The addCollege is a method which will let us add new college into the colleges HashMap.</li>
+              <li>This method accepts a college object and adds it to the colleges list if there is no
+                key present in the HashMap which is same as object collegeCode.</li>
+              <li>This method returns either true or false which is of type boolean based on the
+                situation i.e., whether the College object is added to the colleges map or not.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>public College getCollegeByCode(String collegeCode)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The getCollegeByCode is a method which accepts the collegeCode of type String.</li>
+              <li>This method returns College object whose key matches with the collegeCode.</li>
+            </div>
+          </div>
+        </div> <!-- first group-->
+
+        <!-- second group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public College deleteCollegeByCode(String collegeCode)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The deleteCollegeByCode is a method which accepts the collegeCode of type String.</li>
+              <li>This method returns College object whose key matches with the collegeCode which will be deleted
+                from the map.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;College&gt; getCollegesByBranch(Branch
+                branch)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>This is a method which accepts the branch object as a parameter.</li>
+              <li>An ArrayList namd allColleges is created with the values in colleges HashMap.</li>
+              <li>An ArrayLIst collegeWithBranch is created and the colleges containing the specified branch will be
+                added.</li>
+              <li>This method returns the list of colleges having the specified branch.</li>
+            </div>
+          </div>
+        </div> <!-- second group-->
+
+        <!-- third group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public College addBranchToCollege(String collegeCode, String
+                branchCode)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The addBranchToCollege is a method which accepts collegeCode of type String
+                and branchCode of type String as parameters.</li>
+              <li>This method is used to add a particular branch to the existing college.</li>
+              <li>In this the college with particular collegeCode is stored in the clg object</li>
+              <li>If there is an existing college with the collegeCode as key in the hashmap, then
+                <ul>
+                  <li>The branch with particular branchCode is stored in branch object.</li>
+                  <li>If the branch is not equal to null, then an ArrayList named clzBranchList is created with all
+                    the existing branches.</li>
+                  <li>If the current branch is not added to the college then only the branch will be added to the
+                    college.</li>
+                  <li>Then the colleges ArrayList will be updated.</li>
+                </ul>
+              </li>
+              <li>This method returns the College object.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public College addFacilitiesToCollege(String collegeCode,
+                String[] facilities)
+              </b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <ol>
+                <li>The addFacilitiesToCollege is a method which accepts collegeCode
+                  of type String and facilities of type String Array as parameters.</li>
+                <li>This method is used to add facilities to the existing college</li>
+                <li>In this the college with particular collegeCode is stored in the clg object.</li>
+                <li>If there is an existing college with the collegeCode as key in the hashmap, then
+                  <ul>
+                    <li>An List named facilityList of type String is created with extraFacilities of clg.</li>
+                    <li>If the clg does not have the facility the it will be added to the facilityList.</li>
+                    <li>The facilities of the clg will be updated.</li>
+                  </ul>
+                </li>
+                <li>This method returns the clg object.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- third group-->
+
+        <!-- fourth group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;College&gt; getCollegesWithFacility(String
+                facility) </b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>This is a method which accepts the branch object as a parameter.</li>
+              <li>An ArrayList named allColleges of type College is created with the values in colleges HashMap.
+              </li>
+              <li>An empry ArrayList named collegesWithFacility of type College is created.</li>
+              <li>If the college with specified facility is found in the allColleges list then
+                it will be added to the collegesWithFacility list.</li>
+              <li>This method returns the collegesWithFacility list.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;College&gt; getAllColleges() </b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The getAllColleges is a method which does not accept any parameters.</li>
+              <li>This method returns the list of colleges.</li>
+            </div>
+          </div>
+        </div> <!-- fourth group-->
+        <!-- End Student Helper class methods-->
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Branch Helper Class Methods</button>
+        </div>
+
+        <!-- Branch Helper class methods-->
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public boolean addBranch(Branch branch)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The addBranch is a method which accepts the branch object as a parameter.</li>
+              <li>This method adds the specified branch to the branches map if it is not present in the hashmap.
+              </li>
+              <li>This method returns either true or false which is of type Boolean.</li>
+              <li>If the branches map already consists of the specified branch then it returns false otherwise
+                it adds the branch to branches map along with its branchCode as its key and returns true.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>public Branch getBranchByCode(String branchCode)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The getBranchByCode is a method which accepts branchCode of type String as a parameter.</li>
+              <li>This method returns the Branch object from branches map whose key matches the branchCode.</li>
+
+            </div>
+          </div>
+        </div> <!-- first group-->
+
+        <!-- second group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Branch getBranchByName(String branchName)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The getBranchByName is a method which accepts branchname of type String as a parameter.</li>
+              <li>An ArrayList named allBranches is created with the values of branches map.</li>
+              <li>If the branchName is equal to the objects branchname then it returns that branch ootherwise it
+                returns null.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Branch deleteBranchByCode(String branchCode) </b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The deleteBranchByCode is a method which accepts branchCode of type String as a parameter.</li>
+              <li>This method deletes the specified branch from the branches map if it is present in the hashmap.
+              </li>
+              <li>This method returns the deleted branch object.</li>
+            </div>
+          </div>
+        </div> <!-- second group-->
+
+        <!-- third group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;String&gt; getAllSubjectsInBranch(String
+                branchCode) </b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The getAllSubjectsInBranch is a method which accepts branchCode of type String as a parameter.
+              </li>
+              <li>If the branches map contains the value with key as specified branchCode then it returns the
+                subjects of that branch.</li>
+              <li>If there is no value with the branchCode in the map then it returns null.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>public List&lt;Branch&gt; getAllBranchesBySubject(String
+                subject)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>The getAllBranchesBySubject is a method which accepts subject of type String as a parameter.</li>
+              <li>An ArrayList named allBranches is created with the values of branches hashmap.</li>
+              <li>An empty ArrayList branchwithGivenSubject is created.</li>
+              <li>If allBranches list contains an object with subject that matches the specified subject
+                then that branch object will be added to the branchwithGivenSubject ArrayList.</li>
+              <li>This method returns the branchWithGivenSubject ArrayList.
+              </li>
+            </div>
+          </div>
+        </div> <!-- third group-->
+
+        <!-- fourth group-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public List&lt;Branch&gt; getAllBranches() :</b></div>
+            <div style="background-color: rgb(255, 239, 209);" class="card-body">
+              <li>The getAllBranches is a method which does not accept any parameters.</li>
+              <li>This method returns the list of all the branches that are present in the branches map.</li>
+            </div>
+          </div>
+        </div>
+        <!--fourth group-->
+        <!-- End Branch Helper class methods-->
+
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="tabChange($event)"
+          data-hover="POJO(Model) Classes">POJO(Model) Classes</span>
+        <span class="tab-pill" id="helper" [ngClass]="(elementId2=='helper')?'active':''" (click)="tabChange($event)"
+          data-hover="Helper Classes">Helper Classes</span>
+        <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="tabChange($event)"
+          data-hover="Main(Testing) Class">Main(Testing) Class</span>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pojo'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">College POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/collegebranch/college.jpg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Branch POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/collegebranch/branch.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='helper'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">College Helper Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/collegebranch/collegehelper.jpg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Branch Helper Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/collegebranch/branchhelper.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div *ngIf="elementId2=='main'">
+        <img class="card-img-top" src="assets/img/corejava/managment/collegebranch/tester.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+</div>

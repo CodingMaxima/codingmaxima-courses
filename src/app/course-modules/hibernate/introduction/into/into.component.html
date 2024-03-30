@@ -1,0 +1,30 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Hibernate</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Introduction">Introduction</span>
+
+    </div>
+    <div *ngIf="elementId=='one'">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+          <div class="text-center">
+            <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+              <button type="button" class="btn btn-lg btn-block">
+                	Hibernate  was started in 2001 by Gavin King as an alternative to EJB2 style entity bean. </button>
+              <button type="button" class="btn btn-lg btn-block">
+                 It is a Java framework that simplifies the development of Java application to interact with the database.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                It   maps  Java classes to database tables and Java data types to SQL data types.</button>
+              <button type="button" class="btn btn-lg btn-block">
+                 It is an open source, lightweight, ORM (Object Relational Mapping) tool.
+              </button>
+                
+              </div>
+            </div>
+  
+  
+           
+              </div>
+            

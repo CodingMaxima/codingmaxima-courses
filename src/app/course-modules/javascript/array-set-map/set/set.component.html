@@ -1,0 +1,224 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Sets</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Problems"
+      >Problems</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <p class="content-text">
+              A Set is a built-in object that allows you to store unique values
+              of any type. It provides a way to store collections of values
+              without duplicates. Unlike arrays, Sets do not have indexes and
+              the elements are not stored in a specific order.
+          
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px 180px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Creating the set</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209);font-size: large;">
+              <p>let set = new Set();</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Adding Elements to a Set</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size:large">
+              <p>
+                For adding the elements to set use the add function to add
+                elements to the set. Each element is unique, so duplicates are
+                automatically removed.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight:bold;">let cities = new Set();</li>
+              <li class="card-text" style="font-weight:bold;">cities.add('New York');</li>
+              <li class="card-text" style="font-weight:bold;">cities.add('London');</li>
+              <li class="card-text" style="font-weight:bold;">cities.add('Paris');</li>
+              <li class="card-text" style="font-weight:bold;">cities.add('Mumbai');</li>
+              <li class="card-text" style="font-weight:bold;">cities.add('Delhi');</li>
+              <li class="card-text" style="font-weight:bold;">console.log(cities);</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight:bold;">
+                {{ "{" }}'New York', 'London', 'Paris', 'Mumbai', 'Delhi',
+                'Tokyo'{{ "}" }}
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Checking the Size of a Set</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size:large">
+              <p>
+                The size property returns the number of elements in the Set.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight:bold;">
+                let cities = (['New York', 'London', 'Paris', 'Mumbai',
+                'Delhi']);
+              </li>
+              <li class="card-text" style="font-weight:bold;">console.log(cities.size);</li>
+
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight:bold;">5</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b> Checking if an Element Exists in a Set </b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                The has function is used to check if a specific element exists
+                in the Set. It returns true if the element is present and false
+                otherwise.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight:bold;">
+                let cities = (['New York', 'London', 'Paris', 'Mumbai',
+                'Delhi']);
+              </li>
+              <li class="card-text" style="font-weight:bold;">console.log(cities.has('London'));</li>
+              <li class="card-text" style="font-weight:bold;">console.log(cities.has('Berlin'));</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight:bold;">true</li>
+              <li class="card-text" style="font-weight:bold;">false</li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Removing an Element from a Set</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size: large;">
+              <p>
+                The delete function is used to remove an element from the Set.
+                After deleting, has will return false for that element.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight:bold;">
+                let cities = (['New York', 'London', 'Paris', 'Mumbai',
+                'Delhi']);
+              </li>
+              <li class="card-text" style="font-weight:bold;">cities.delete('Delhi');</li>
+              <li class="card-text" style="font-weight:bold;">console.log(cities.has('Delhi'));</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight:bold;">false</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Iterating through a Set</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size: large;">
+              <p>
+                The forEach function is used to iterate through the elements of
+                the Set. It takes a callback function as an argument and
+                executes it for each element in the Set.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight:bold;">
+                let cities = (['New York', 'London', 'Paris', 'Mumbai',
+                'Delhi']);
+              </li>
+              <li class="card-text" style="font-weight:bold;">cities.forEach(function(city) {{ "{" }}</li>
+              <pre style="font-weight:bold;">   console.log(city);</pre>
+              <li style="font-weight:bold;">{{ "}" }});</li>
+              <br />
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Clearing a Set</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                The clear function is used to remove all elements from the Set,
+                making it empty.
+              </p>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight:bold;">
+                let cities = ['New York', 'London', 'Paris', 'Mumbai', 'Delhi'];
+              </li>
+              <li class="card-text" style="font-weight:bold;">cities.clear();</li>
+              <li class="card-text" style="font-weight:bold;">console.log(cities.size);</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight:bold;">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="content-text">
+            Sets in JavaScript provide a convenient way to store unique values
+            and perform operations such as adding, checking, removing, and
+            iterating through the elements. It's important to note that Sets
+            only allow unique values, so duplicates are automatically
+            eliminated.
+      </div>
+    </div>
+  </div>
+</div>

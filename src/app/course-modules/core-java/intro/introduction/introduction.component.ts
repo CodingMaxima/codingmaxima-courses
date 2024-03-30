@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-introduction',
+  templateUrl: './introduction.component.html',
+  styleUrls: ['./introduction.component.scss']
+})
+export class IntroductionComponent implements OnInit {
+
+  elementId:string;
+  
+  constructor() { 
+    this.elementId = "one";
+    
+  }
+  ngOnInit(): void {
+  }
+  tabChange(event:Event){
+    this.elementId = (event.target as Element).id;
+  }
+
+
+}

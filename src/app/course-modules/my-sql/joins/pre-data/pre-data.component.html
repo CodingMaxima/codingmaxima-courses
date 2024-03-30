@@ -1,0 +1,197 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Pre data for select</h3>
+    <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Employee Laptop">Employee Laptop </span>
+        <span class="tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Countries Capitals">Countries Capitals </span>
+        <span class="tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+            data-hover="Apartments Flats">Apartments Flats </span>
+        <span class="tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+            data-hover="Employee Designation">Employee Designation </span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="text-center">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p>CREATE TABLE employee ( </p>
+                    <p style="margin-top: -20px;"> emp_id int PRIMARY KEY,</p>
+                    <p style="margin-top: -20px;">emp_name varchar(255) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> salary decimal(10,2) CHECK(salary &gt;=5000 AND salary &lt;=100000),
+                    </p>
+                    <p style="margin-top: -20px;"> joining_date date DEFAULT(current_date)</p>
+                    <p style="margin-top: -20px;">);</p>
+                </div>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of employeeQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of employee insert queries-->
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p>create table laptop( </p>
+                    <p style="margin-top: -20px;"> lap_id int primary Key,</p>
+                    <p style="margin-top: -20px;"> lap_name varchar(30) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> lap_model varchar(30) NOT NULL, </p>
+                    <p style="margin-top: -20px;"> lap_warranty date NOT NULL,</p>
+                    <p style="margin-top: -20px;"> emp_id int,</p>
+                    <p style="margin-top: -20px;"> FOREIGN KEY (emp_id) REFERENCES employee(emp_id)</p>
+                    <p style="margin-top: -20px;"> );</p>
+                </div>
+            </div>
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of laptopQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of laptop insert queries-->
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="text-center">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p>create table country( </p>
+                    <p style="margin-top: -20px;"> country_name varchar(30) PRIMARY KEY,</p>
+                    <p style="margin-top: -20px;"> population bigint NOT NULL,</p>
+                    <p style="margin-top: -20px;"> largest_river varchar(20) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> main_crop varchar(10) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> isSeaShore boolean NOT NULL</p>
+                    <p style="margin-top: -20px;"> );</p>
+                </div>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of countryQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of country insert queries-->
+        </div>
+
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="description">
+                <p>create table capital( </p>
+                <p style="margin-top: -20px;"> capital_name varchar(20) PRIMARY KEY, </p>
+                <p style="margin-top: -20px;"> population bigint NOT NULL,</p>
+                <p style="margin-top: -20px;"> isSeaShore boolean NOT NULL,</p>
+                <p style="margin-top: -20px;"> area varchar(50) NOT NULL,</p>
+                <p style="margin-top: -20px;"> country_name varchar(30),</p>
+                <p style="margin-top: -20px;"> FOREIGN KEY (country_name) REFERENCES country(country_name)</p>
+                <p style="margin-top: -20px;"> );</p>
+            </div>
+        </div>
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="description">
+                <p *ngFor="let query of capitalQueries">
+                    {{query}}
+                </p>
+            </div>
+        </div><!--end of capital insert queries-->
+
+    </div><!--end of 2nd tab-->
+
+    <div *ngIf="elementId=='three'">
+        <div class="text-center">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p>create table Apartment( </p>
+                    <p style="margin-top: -20px;"> apartment_id varchar(10) PRIMARY KEY,</p>
+                    <p style="margin-top: -20px;"> apartment_name varchar(40) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> no_flats int NOT NULL,</p>
+                    <p style="margin-top: -20px;"> facing varchar(20) CHECK(facing in('east','west','north','south')),
+                    </p>
+                    <p style="margin-top: -20px;"> no_floors int NOT NULL,</p>
+                    <p style="margin-top: -20px;"> isLift boolean NOT NULL</p>
+                    <p style="margin-top: -20px;"> );</p>
+                </div>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of apartmentQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of apartment insert queries-->
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p> create table Flat( </p>
+                    <p style="margin-top: -20px;"> flat_id varchar(10) PRIMARY KEY,</p>
+                    <p style="margin-top: -20px;"> owner_name varchar(40) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> no_bedrooms int NOT NULL,</p>
+                    <p style="margin-top: -20px;"> facing varchar(20) CHECK(facing in('east','west','north','south')),</p>
+                    <p style="margin-top: -20px;"> floor int NOT NULL,</p>
+                    <p style="margin-top: -20px;"> isAvailable boolean NOT Null,</p>
+                    <p style="margin-top: -20px;"> apartment_id varchar(20),</p>
+                    <p style="margin-top: -20px;"> Foreign key(apartment_id) references Apartment(apartment_id)</p>
+                    <p style="margin-top: -20px;"> ); </p>
+                </div>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of flatQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of flat queries-->
+        </div>
+    </div><!--end of 3rd tab-->
+
+    <div *ngIf="elementId=='four'">
+        <div class="text-center">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p>create table designation( </p>
+                    <p style="margin-top: -20px;"> des_id varchar(10) Primary key,</p>
+                    <p style="margin-top: -20px;"> des_name varChar(100) NOT NULL unique,</p>
+                    <p style="margin-top: -20px;"> department varchar(50) CHECK(department in('Technical','Non Technical', 'Finance', 'Support'))</p>
+                    <p style="margin-top: -20px;"> );</p>
+                </div>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of designationQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of designation queries-->
+            
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p>create table employee( </p>
+                    <p style="margin-top: -20px;"> emp_id int PRIMARY KEY,</p>
+                    <p style="margin-top: -20px;"> emp_name varchar(50) NOT NULL,</p>
+                    <p style="margin-top: -20px;"> gender varchar(10) CHECK(gender in('male', 'female')),</p>
+                    <p style="margin-top: -20px;"> salary decimal(8,2) CHECK(salary >=10000 AND salary<=120000),</p>
+                    <p style="margin-top: -20px;"> experience decimal(3,2) CHECK(experience >=0 ),</p>
+                    <p style="margin-top: -20px;"> des_id varchar(10),</p>
+                    <p style="margin-top: -20px;"> Foreign key(des_id) references designation(des_id)</p>
+                    <p style="margin-top: -20px;"> );</p>
+                </div>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="description">
+                    <p *ngFor="let query of employeedesQueries">
+                        {{query}}
+                    </p>
+                </div>
+            </div><!--end of employeedes insert queries-->
+
+        </div>
+    </div><!--end of 4th tab-->
+
+</div>

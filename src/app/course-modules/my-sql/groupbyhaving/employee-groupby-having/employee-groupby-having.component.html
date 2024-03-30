@@ -1,0 +1,485 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">groupby-having(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId2=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-3</span>
+
+                            </div>
+
+                            <div *ngIf="elementId=='question1'">
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print how many
+                                                number of employee_type and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to find how many types of employee_type and their
+                                                count
+
+                                            </p>
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>employee_type</th>
+                                                    <th>count(*)</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>full time</td>
+                                                    <td>24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>part time</td>
+                                                    <td>5</td>
+                                                </tr>
+                                            </table>
+
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    employee_type,count(*) from employee group by
+                                                    (employee_type);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block">Print how many
+                                                number of genders and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to fint how many types of genders and their count
+
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>gender</th>
+                                                    <th>count(*)</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>male</td>
+                                                    <td>12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>female</td>
+                                                    <td>13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>unknown</td>
+                                                    <td>4</td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    gender,count(*) from employee group by (gender);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!--end of the card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print how many
+                                                number
+                                                of age and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to fint how many types of age and their
+                                                count
+
+                                            </p>
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerOne[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerOne">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerOne)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    age,count(*) from employee group by
+                                                    (age);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block">Print how many
+                                                number of
+                                                designation and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to fint how many types of designation and their
+                                                count
+
+                                            </p>
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerTwo[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerTwo">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerTwo)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    designation,count(*) from employee group by
+                                                    (designation);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> <!--end of the card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print how many
+                                                number
+                                                of salary and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to fint how many types of salaries and their
+                                                count
+
+                                            </p>
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerThree[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerThree">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerThree)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(2)">{{buttonValue[4]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    salary,count(*) from employee group by
+                                                    (salary);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block">Print how many
+                                                number of
+                                                joining_date and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to fint how many types of joining_dates and their
+                                                count
+
+                                            </p>
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerFour[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerFour">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerFour)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div> <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(5)">{{buttonValue[5]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[5]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    joining_date,count(*) from employee group by
+                                                    (joining_date);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> <!--end of the card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print how many
+                                                number
+                                                of
+                                                company names and their count from the table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to fint how many types of company names and their
+                                                count
+
+                                            </p>
+                                            <div style="overflow-x:auto;">
+                                                <table>
+                                                    <tr>
+                                                        <th *ngFor="let col of getSplitDataHeader(answerFive[0])">
+                                                            {{col}}
+                                                        </th>
+                                                    </tr>
+                                                    <tr *ngFor="let row of answerFive">
+                                                        <td *ngFor="let col of getSplitDataRows(row, answerFive)">
+                                                            {{col}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(6)">{{buttonValue[6]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[6]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    company_name,count(*) from employee group by
+                                                    (company_name);
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!--end of the card-->
+                            </div><!--end for the question1-->
+
+                            <div *ngIf="elementId=='question2'">
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the company
+                                                names of the employees who has the average salary is greater
+                                                than 70000 from the entire table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to find the company names of employees who has
+                                                the average salary is greater than 70000
+                                            </p>
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>company_name</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Infosys</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Intense Technologies</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td> Maxima Encode</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Tesla Technologies</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Vsoft Technologies</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Walking Tree Technologies</td>
+                                                </tr>
+
+                                            </table>
+
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    company_name from employee group by company_name having
+                                                    avg(salary) > 70000;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the
+                                                designation of the employees who has the average age is less
+                                                than 30 from the entire table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to find the designation of employees who has the
+                                                average age is less than 30
+                                            </p>
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>designation</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Software Engineer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> bench</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> trainee</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>H.R</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Associate Engineer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Jr.Engineer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Sr.Developer</td>
+                                                </tr>
+                                            </table> <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    designation from employee group by designation having
+                                                    avg(age) < 30;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end of the card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-center">
+                                            <p style="padding: 10px;" class="btn-block"> Print the company
+                                                names of the employees who's company_name count are greater
+                                                than 3 from the entire table</p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table have to find the company names of employees who has
+                                                the comapny_name count is greater than 3.
+                                            </p>
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>company_name</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Intel Technologies</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td> Synoric Technologies</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Wipro</td>
+                                                </tr>
+                                            </table>
+
+                                            <br>
+                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                            <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                <p style="padding: 10px;" class="btn-block">select
+                                                    company_name from employee group by company_name having
+                                                    count(company_name) > 3;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end of the card-->
+                            </div><!--End of question-2-->
+
+                        </div><!--end of the buttons card-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId2=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

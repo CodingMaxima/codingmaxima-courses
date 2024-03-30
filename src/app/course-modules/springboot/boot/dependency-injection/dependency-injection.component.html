@@ -1,0 +1,97 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Dependency Injection</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Intro">Intro</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Types">Types</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Example">Example</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <p>
+                    In a software application, classes often depend on other classes or services to perform various
+                    tasks.
+                    The traditional approach involves creating instances of dependent classes within the class that
+                    needs them.
+                    This can lead to tightly coupled code making it challenging to change or extend the application.
+                </p>
+                <p>
+                    Dependency Injection (DI) is a design pattern that focuses on making a class's dependencies explicit
+                    and
+                    providing them from external sources rather than creating them within the class itself.
+                    The primary goal of dependency injection is to achieve separation of concerns, improve testability
+                    and promote modular
+                    and maintainable code.
+                </p>
+                <p>
+                    In Java Spring Boot, Dependency Injection is achieved using the Inversion of Control (IoC)
+                    container, which is responsible for managing
+                    the lifecycle of objects and their dependencies.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <p>
+                    Spring Boot provides several ways to perform dependency injection.Among them there are 3 types that
+                    are most commonly used. They are
+                </p>
+                <p>
+                    <b>1.Constructor Injection : </b>
+                </p>
+                <ul>
+                    <li>It involves providing the dependencies of a class through its constructor.</li>
+                    <li>Dependencies are passed as parameters when creating an instance of a class.</li>
+                    <li>Dependencies are explicitly defined and cannot be changed after instantiation.</li>
+                </ul>
+                
+                <p>
+                    <b>2.Method Injection : </b>
+                </p>
+                <ul>
+                    <li>It involves providing the dependencies of a class through methods.</li>
+                    <li>Dependencies are passed as parameters to specific methods.</li>
+                    <li>Dependencies can be injected at different points in the objects lifecycle which enables flexibility.</li>
+                </ul>
+
+                <p>
+                    <b>3.Setter Injection : </b>
+                </p>
+                
+                <ul>
+                    <li>It involves providing the dependencies of a class through setter methods.</li>
+                    <li>Setters are defined in the class to allow external code to inject dependencies after the object
+                        has been created.</li>
+                    <li>It allows for changing dependencies after the object has been instantiated.</li>
+                </ul>
+                <p> <b>BENEFITS</b></p>
+                <p>
+                    <b>1.Decoupling: </b>DI helps in reducing the coupling between classes, making the code more modular
+                    and easier to maintain.
+                </p>
+                <p>
+                    <b>2.Testability: </b>By providing dependencies externally, it becomes easier to substitute real
+                    implementations with mock objects during testiny.
+                </p>
+                <p>
+                    <b>3.Flexibility: </b>DI makes it easier to change or extend the behavior of a sytem by replacing or
+                    modifying individual components without effecting rest of codebase.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <p>The following example helps to understand types of Dependency Injection.</p>
+                <img src="assets/img/springboot/spring_boot/DI-example.JPG">  
+            </div>
+        </div>
+    </div>
+</div>

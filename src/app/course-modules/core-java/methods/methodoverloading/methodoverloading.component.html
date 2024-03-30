@@ -1,0 +1,150 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Method Overloading</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Definition"
+      >Definition</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover=" changing the number"
+      >changing the number</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="changing the datatype"
+      >changing the datatype
+    </span>
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Not included "
+      >Not included
+    </span>
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <u><h5>Definition:</h5></u>
+          </p>
+          <li>
+            Method overloading is a feature of Java in which a class has more
+            than one method of the same name and their parameters are different.
+          </li>
+          <li>
+            Simply,
+
+            <b
+              >Same method in the same class with different
+              signatures(parameters)</b
+            >
+            is called method overloading.
+          </li>
+          <li>
+            In overloading, the method / function has a same name but different
+            signatures.
+          </li>
+          <li>
+            It is also known as Compile Time Polymorphism because the decision
+            of which method is to be called is made at compile time.
+          </li>
+        </button>
+        <img src="assets/img/corejava/methods/overloading1.JPG" />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <b
+              ><u>
+                <h5>Overloading by changing the number of parameters</h5>
+              </u></b
+            >
+          </p>
+          <li>
+            In below example the same method multiplication have different count
+            of parameters with same datatype.
+          </li>
+
+          <li>
+            First method has 4 parameters, second method has 3 parameters and
+            third method has only 2 parameters.
+          </li>
+        </button>
+        <img src="assets/img/corejava/methods/parameterscount.JPG" />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <b
+              ><u>
+                <h5>Overloading by changing the data type of parameters</h5>
+              </u></b
+            >
+          </p>
+          <p>
+            In below example same method has same number of parameters but
+            different datatypes.
+          </p>
+        </button>
+        <img src="assets/img/corejava/methods/parameterstype.JPG" />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <b
+              ><u>
+                <h5>Not included in Overloading</h5>
+              </u></b
+            >
+          </p>
+          <p>
+            In below example the method name and number of parameters and data
+            type also same. The variables names are different(we can give any
+            name to variables). So this will not comes under overloading these
+            are duplicate methods which cause compiler error.
+          </p>
+        </button>
+        <img src="assets/img/corejava/methods/overloading2.JPG" />
+
+        <br />
+
+        <button type="button" class="btn btn-lg btn-block">
+          In below example the method name and number of parameters and data
+          type also same. The return type of the methods are different. The
+          overloading describes only about method name and method signature not
+          return type of method. So the method name and signatures(count of
+          parametes or data type of parameters) are same which means duplicate
+          methods.
+        </button>
+        <img src="assets/img/corejava/methods/overloading3.JPG" />
+      </div>
+    </div>
+  </div>
+</div>

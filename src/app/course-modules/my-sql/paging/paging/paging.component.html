@@ -1,0 +1,62 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Pagination</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Examples">Examples</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-block">Pagination is used for dividing the large records
+                        into small parts.</button>
+                    <button type="button" class="btn btn-lg btn-block">In pagination <b>limit clause and off set clause
+                        </b> where used for differentiating the pages </button>
+                    <button type="button" class="btn btn-lg btn-block"><b>limit -</b> It is used for setting how many
+                        rows should have to be there in the page.</button>
+                    <button type="button" class="btn btn-lg btn-block"><b>offset -</b> It is used along with the limit
+                        clause to view a specific number of rows from where to start the rows.</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="text-center"><b>Limit</b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                            <li style='font-size: medium; font-style: oblique;'><b>Example:</b></li>
+                            <li style='font-size: medium; font-style: oblique;'>before applying the limit clause for the
+                                employee table the table appearence is like below image</li><br>
+                            <img src="assets/img/dbms/pagination/full.jpg" style="width: 100%;"><br>
+                            <li style='font-size: medium; font-style: oblique;'>After applying the limit clause for the
+                                employee table to show only 15 rows from the table</li><br>
+                            <p style='font-size: medium; font-style: inherit;'><b>Syntax:</b> select * from employee
+                                LIMIT 15;</p>
+                            <img src="assets/img/dbms/pagination/img1.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="text-center"><b>offset</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;'>offset is used along with the limit
+                                clause</p>
+                            <li style='font-size: medium; font-style: oblique;'><b>Example:</b></li>
+                            <li style='font-size: medium; font-style: oblique;'>before applying the offset clause for
+                                the
+                                employee table the table appearence is like below image</li><br>
+                            <img src="assets/img/dbms/pagination/full.jpg" style="width: 100%;"><br>
+                            <li style='font-size: medium; font-style: oblique;'>After applying the offest clause for the
+                                employee table to show the rows after 10 rows(i.e.,from starting the row at 11) to the
+                                end from the table</li><br>
+                            <p style='font-size: medium; font-style: inherit;'><b>Syntax:</b> select * from employee
+                                LIMIT 20 OFFSET 10;</p>
+                            <img src="assets/img/dbms/pagination/img2.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

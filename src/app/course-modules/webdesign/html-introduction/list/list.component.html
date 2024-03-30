@@ -1,0 +1,287 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Lists</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Lists">Lists</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Nested Lists">Nested Lists</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+            data-hover="Description Lists">Description Lists</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation Video">Animation Video</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="code" [ngClass]="(elementId2=='code')?'active':''" (click)="tabChange($event)"
+                data-hover="code and output">code and output</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        In <b>HTML</b>, lists are used to organize and display content in a structured manner. 
+                    </p>
+                    <p>
+                        They allow you to group related items together, making information more organized and easily digestible for website visitors.
+                    </p>
+                  </div>
+                  <div class="content-text">
+                    <p>
+                        There are different types of <strong>HTML Lists</strong>:
+                    </p>
+                    <p>
+                        <u><b>1.Unordered Lists (&lt;ul&gt;):</b></u>
+                    </p>
+                    <ul>
+                        <li>Unordered lists are used to present items in a bulleted format without any specific sequence or order.</li>
+                        <li>Each item within an unordered list is marked with a bullet point by default.</li>
+                        <li>They are created using the <code>&lt;ul&gt;</code> tag, and individual list items are denoted by<code>&lt;li&gt;</code> tags.</li>
+                    </ul>
+                    <div class="card-group">
+                        <div
+                            class="card border-primary"
+                            style="border: 2px solid; margin: 10px 150px"
+                        >
+                            <div
+                            class="card-header text-center"
+                            style="font-size: large; padding: 15px"
+                            >
+                            <b>Example</b>
+                            </div>
+                            <div
+                            class="card-body"
+                            style="background-color: rgb(216, 240, 246)"
+                            >
+                            <p>
+                                &lt;ul&gt;
+                            </p>
+                            <ul>
+                                    &lt;li&gt;Item 1&lt;/li&gt;<br>
+                                    &lt;li&gt;Item 2&lt;/li&gt;<br>
+                                    &lt;li&gt;Item 3&lt;/li&gt;<br>
+                            </ul>
+                            <p>
+                                &lt;/ul&gt;  
+                            </p>
+        
+                            </div>
+                        </div>
+                    </div>  
+                  </div>
+                  <div class="content-text">
+                    <p>
+                        <u><b>2.Ordered Lists (&lt;ol&gt;):</b></u>
+                    </p>
+                    <ul>
+                        <li>Ordered lists are used to present items in a numbered sequence.</li>
+                        <li>Each item in an ordered list is automatically numbered by default (1, 2, 3...).</li>
+                        <li>They are created using the <code>&lt;ol&gt;</code> tag, and like unordered lists, individual list items are represented by <code>&lt;li&gt;</code> tags.</li>
+                    </ul>
+                    <div class="card-group">
+                        <div
+                            class="card border-primary"
+                            style="border: 2px solid; margin: 10px 150px"
+                        >
+                            <div
+                            class="card-header text-center"
+                            style="font-size: large; padding: 15px"
+                            >
+                            <b>Example</b>
+                            </div>
+                            <div
+                            class="card-body"
+                            style="background-color: rgb(216, 240, 246)"
+                            >
+                            <p>
+                                &lt;ol&gt;
+                            </p>
+                            <ul>
+                                    &lt;li&gt;First Item&lt;/li&gt;<br>
+                                    &lt;li&gt;Second Item&lt;/li&gt;<br>
+                                    &lt;li&gt;Third Item&lt;/li&gt;<br>
+                            </ul>
+                            <p>
+                                &lt;/ol&gt;  
+                            </p>
+        
+                            </div>
+                        </div>
+                    </div>  
+                  </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='code'">
+            <div class="card-group">
+                <img src="assets/img/web-designing/html/lists/html-lists-code.jpg" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="html-lists-code.jpg">
+                <img src="assets/img/web-designing/html/lists/html-lists-output.jpg" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="html-lists-output.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="code" [ngClass]="(elementId2=='code')?'active':''" (click)="tabChange($event)"
+                data-hover="code and output">code and output</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        <u><b>Nested lists(&lt;ol&gt;):</b></u>
+                    </p>
+                    <ul>
+                        <li>Nested lists in HTML refer to the concept of placing one list inside another list. </li>
+                        <li>This allows for the creation of hierarchical structures, where a list item within a parent list can contain its own sublist.</li>
+                        <li>You can nest any type of list (unordered, ordered, or definition lists) within another list item.</li>
+                    </ul>  
+                  </div>
+                  <div class="card-group">
+                    <div
+                        class="card border-primary"
+                        style="border: 2px solid; margin: 10px 150px"
+                    >
+                        <div
+                        class="card-header text-center"
+                        style="font-size: large; padding: 15px"
+                        >
+                        <b>Example</b>
+                        </div>
+                        <div
+                        class="card-body"
+                        style="background-color: rgb(216, 240, 246)"
+                        >
+                        <p>
+                            <b>&lt;ul&gt;</b>
+                        </p>
+                        <ul>
+                                &lt;li&gt;Mani Item-1&lt;/li&gt;<br>
+                                <b>&lt;li&gt;</b>Mani Item-2
+                                <p>
+                                        &lt;ul&gt;
+                                </p>
+                                    <ul>
+                                        &lt;li&gt;Sub Item-1&lt;/li&gt;<br>
+                                        &lt;li&gt;Sub Item-2&lt;/li&gt;
+                                    </ul>
+                                <p>
+                                        &lt;/ul&gt;<br>
+                                        <b>&lt;/li&gt;</b>  
+                                </p>
+                                &lt;li&gt;Mani Item-3&lt;/li&gt;
+                        </ul>
+                        <p>
+                            <b>&lt;/ul&gt;</b>  
+                        </p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='code'">
+            <div class="card-group">
+                <img src="assets/img/web-designing/html/lists/html-nested-litsts-code.jpg" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                    alt="html-nested-litsts-code.jpg">
+                <img src="assets/img/web-designing/html/lists/html-nested-litsts-output.jpg" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                    alt="html-nested-litsts-output.jpg">
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="code" [ngClass]="(elementId2=='code')?'active':''" (click)="tabChange($event)"
+                data-hover="code and output">code and output</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="content-text">
+                    <p>
+                        <u><b>Description list(&lt;dl&gt;):</b></u>
+                    </p>
+                    <ul>
+                        <li>In HTML, the description list (&lt;dl&gt;) is a type of list used to display terms and their corresponding definitions or descriptions in a structured format.</li>
+                        <li>It's comprised of pairs of terms and their associated explanations or definitions.</li>
+                        <li>The &lt;dl&gt; element represents the description list container, and it consists of two types of child elements:
+                            <ul>
+                                <li>&lt;dt&gt; (Definition Term): This tag defines the term being described or explained.</li>
+                                <li>&lt;dd&gt; (Definition Description): This tag contains the description or definition of the term specified within the &lt;dt&gt; tag.</li>
+                            </ul>
+                        </li>
+                    </ul>  
+                  </div>
+                  <div class="card-group">
+                    <div
+                        class="card border-primary"
+                        style="border: 2px solid; margin: 10px 50px"
+                    >
+                        <div
+                        class="card-header text-center"
+                        style="font-size: large; padding: 15px"
+                        >
+                        <b>Example</b>
+                        </div>
+                        <div
+                        class="card-body"
+                        style="background-color: rgb(216, 240, 246)"
+                        >
+                        <p>
+                            <b>&lt;dl&gt;</b>
+                        </p>
+                        <ul>
+                                &lt;dt&gt;HTML&lt;/li&gt;<br>
+                                &lt;dd&gt;HyperText Markup Language - a markup language used for creating web pages.&lt;/dd&gt;<br>
+                                &lt;dt&gt;CSS&lt;/dt&gt;<br>
+                                &lt;dd&gt;Cascading Style Sheets - a style sheet language used for describing the presentation of a document written in HTML.&lt;/dd&gt;
+                        </ul>
+                        <p>
+                            <b>&lt;/dl&gt;</b>  
+                        </p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='code'">
+
+            <div class="card-group">
+                <img src="assets/img/web-designing/html/lists/html-description-list-code.jpg" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                    alt="html-description-list-code.jpg">
+            </div>
+            <div class="card-group">
+                <img src="assets/img/web-designing/html/lists/html-description-list-output.jpg" class="card"
+                    style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+                    alt="html-description-list-output.jpg">
+            </div>
+        </div>  
+    </div>
+    <div *ngIf="elementId=='four'">
+        <div class="tab-title tab-slide-effect">
+            <div class="card-body">
+                <app-video-cmp [url]="videoData"
+                [audioData]="audioData"
+                >
+            </app-video-cmp>
+            </div>
+        </div>
+    </div>
+</div>

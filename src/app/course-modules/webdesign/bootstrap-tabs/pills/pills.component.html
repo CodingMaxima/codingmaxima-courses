@@ -1,0 +1,92 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Bootstrap Pills</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Code">Code</span>
+        <span class="global-tab-pill" id="two-a" [ngClass]="(elementId=='two-a')?'active':''" (click)="tabChange($event)"
+            data-hover="Output">Output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+                <li>Intro</li>
+            </ul>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-group">
+            <img src="assets/img/bootstrap/bootstrap_pills_code.jpg" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="bootstrap_pills_code.jpg">
+        </div>
+    </div>
+    <div *ngIf="elementId=='two-a'" style="width: 70%;padding: 10px;margin: 0 auto;">
+        <div class="card-group">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#home" 
+                        type="button" 
+                        role="tab" 
+                        aria-controls="home" 
+                        aria-selected="true">Home
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#profile" 
+                        type="button" 
+                        role="tab" 
+                        aria-controls="profile" 
+                        aria-selected="false">Profile
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#contact" 
+                        type="button" 
+                        role="tab" 
+                        aria-controls="contact" 
+                        aria-selected="false">Contact
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    This is some placeholder content the <b>Home</b> tab's associated content. 
+                    Clicking another tab will toggle the visibility of this one for the next.
+                     The tab JavaScript swaps classes to control the content visibility and styling.
+                    You can use it with tabs, pills, and any other .nav-powered navigation.
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    This is some placeholder content the <b>Profile</b> tab's associated content. 
+                    Clicking another tab will toggle the visibility of this one for the next.
+                     The tab JavaScript swaps classes to control the content visibility and styling.
+                    You can use it with tabs, pills, and any other .nav-powered navigation.
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    This is some placeholder content the <b>Contact</b> tab's associated content. 
+                    Clicking another tab will toggle the visibility of this one for the next.
+                     The tab JavaScript swaps classes to control the content visibility and styling.
+                    You can use it with tabs, pills, and any other .nav-powered navigation.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]=""></app-video-cmp>
+        </div>
+    </div>
+</div>

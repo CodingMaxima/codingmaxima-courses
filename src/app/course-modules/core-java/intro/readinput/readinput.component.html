@@ -1,0 +1,185 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Reading Input from Console</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          The inputs given by the user through keybord can be read by using the
+          <b>Scanner class</b>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <b>Syntax:</b> Scanner variablename = new Scanner(System.in)
+        </button>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Integer</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-style: oblique"
+          >
+            <p>
+              Reading the integers values by giving the inputs externally is
+              possible by using the nextInt() method.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Double</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-style: oblique"
+          >
+            <p>
+              Reading the double values by giving the inputs externally is
+              possible by using the nextdouble() method.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Character</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253); font-style: oblique"
+          >
+            <p>
+              The character in the string can be read internally by using the
+              next() method followed by the charAt() method.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Word</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231); font-style: oblique"
+          >
+            <p>
+              The words in the string can be read internally by using the next()
+              method. this method reads the values only up to the white space
+              occurs(means once the space occurs).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Sentence</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(255, 239, 209); font-style: oblique"
+          >
+            <p>
+              The sentence in the string can be read internally by using the
+              nextLine() method. This method will reads the enter sentence
+              present in the line.
+            </p>
+
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    class="program-img-fit"
+                    src="assets/img/corejava/intro/reader_input2.jpg"
+                    alt="program"
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    class="program-img-fit"
+                    src="assets/img/corejava/intro/reader_input3.jpg"
+                    alt="program"
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <li>
+              From the above examples almost both are same but the small
+              difference is there in the first image sc.nextLine() is kept in
+              the 3rd line extra compare to the second image because from the
+              first image by keeping the extra sc.nextLine(); if there is any
+              code present before this sc.nextLine() first it will execute it
+              that so that it will break the sentence what the user enter in the
+              keyboard.
+            </li><br>
+            <li >
+              In the second image directly by keeping the sc.nextLine(); without
+              anything at the start it will print the entire sentence what the
+              user gives through the keyboard.
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/intro/reader_input.jpg"
+        alt="program"
+      />
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

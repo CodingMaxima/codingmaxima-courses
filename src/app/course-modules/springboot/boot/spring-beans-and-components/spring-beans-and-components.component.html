@@ -1,0 +1,88 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Beans and Components</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+        data-hover="Intro">Intro</span>
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+          data-hover="Beans">Beans</span>
+      <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+          data-hover="Components">Components</span>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <p>
+              In Java Spring Boot, a "Bean" and a "Component" are both used to define objects and their dependencies in the application context, but they have different meanings and uses.
+            </p>
+            <p>
+              A "Bean" is simply a Java object that is managed by the Spring framework. When you create a Bean in Spring Boot, you are essentially creating an object that Spring will manage and configure for you, based on the rules you define. Beans can be used to store state or provide functionality to other parts of the application.
+            </p>
+            <p>
+              A "Component" is a specific type of Bean that is used to declare a reusable class that can be injected into other parts of the application. Components are annotated with the "@Component" annotation, which tells Spring that the class should be managed as a Bean. Components are typically used to define services, repositories, or other classes that provide specific functionality to the application.
+            </p>
+            <p>
+              The main difference between a Bean and a Component is that a Bean is a generic term for any object that is managed by Spring, while a Component is a specific type of Bean that is used to define a reusable class with a specific purpose. In other words, all Components are Beans, but not all Beans are Components.
+            </p>
+            <p>
+              Another important difference is that Components can be further categorized into more specific types of beans, such as Controllers, Services, Repositories, or Configuration classes, each of which has its own specific purpose and annotation. These annotations help Spring to understand how to wire dependencies and create a well-structured application context.
+            </p>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="elementId=='one'">
+      <div class="card border-warning" style="border: 2px solid;">
+          <div class="card-body">
+              <p>
+                In Spring Boot, beans are objects that are managed by the Spring framework's inversion of control (IoC) container. The IoC container creates, initializes, configures, and manages beans, allowing them to be easily reused and maintained throughout your application.
+              </p>
+              <p>
+                To create a bean in Spring Boot, you can use the <b>`@Bean`</b> annotation. Here's an example: <br>
+              </p>
+              <img src="assets/img/springboot/bean-components/mybean-example.jpg"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 80%;"
+                alt="html-headingsoutput.jpg">
+              <br>
+              <br>
+              <p>
+                In this example, <b>`MyConfig`</b> is a configuration class that contains a method annotated with <b>`@Bean`</b>. This method creates and returns a new instance of <b>`MyBean`</b>, which will be managed by the IoC container.
+              </p>
+              <p>
+                You can also inject beans into other beans using the <b>`@Autowired`</b> annotation. Here's an example: <br>
+                <img src="assets/img/springboot/bean-components/mybean-autowired.jpg"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 80%;"
+                alt="html-headingsoutput.jpg"><br>
+              </p>
+              <p>
+                In this example, <b>`MyComponent`</b> is a component that depends on <b>`MyBean`</b>. The constructor of <b>`MyComponent`</b> is annotated with <b>`@Autowired`</b>, indicating that <b>`MyBean`</b> should be injected into the constructor when a new instance of <b>`MyComponent`</b> is created.
+              </p>
+              <p>
+                By default, Spring Boot will scan the <b>`@Component`</b> -annotated classes and automatically create and manage their instances. So in this example, <b>`MyComponent`</b> will be automatically created and initialized by the IoC container, and <b>`MyBean`</b> will be injected into it.
+              </p><br>
+          </div>
+      </div>
+  </div>
+  <div *ngIf="elementId=='two'">
+      <div class="card border-warning" style="border: 2px solid;">
+          <div class="card-body">
+            <img src="assets/img/springboot/bean-components/component-bean.jpg"
+              style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+              alt="html-headingsoutput.jpg">
+            <img src="assets/img/springboot/bean-components/controller-bean.jpg"
+              style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+              alt="html-headingsoutput.jpg">
+            <img src="assets/img/springboot/bean-components/get-mapping.jpg"
+              style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+              alt="html-headingsoutput.jpg">
+            <img src="assets/img/springboot/bean-components/post-mapping.jpg"
+              style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+              alt="html-headingsoutput.jpg">
+            <img src="assets/img/springboot/bean-components/request-mapping.jpg"
+              style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+              alt="html-headingsoutput.jpg">
+            <img src="assets/img/springboot/bean-components/request-param.jpg"
+              style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 100%;"
+              alt="html-headingsoutput.jpg">
+          </div>
+      </div>
+  </div>
+</div>

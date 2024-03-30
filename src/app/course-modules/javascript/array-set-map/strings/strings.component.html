@@ -1,0 +1,573 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Strings</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Problems"
+      >Problems</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <p class="content-text">
+              In JavaScript, a string is a sequence of characters enclosed
+              within single ('') or double ("") quotation marks. Strings are
+              used to represent and manipulate textual data. They can contain
+              letters, numbers, symbols, and whitespace.
+           </p>
+          <p class="content-text">
+              Strings in JavaScript are immutable, meaning once created, their
+              values cannot be changed. However, string methods return new
+              modified strings rather than modifying the original string itself.
+              </p><p class="content-text">
+              Overall, strings play a crucial role in JavaScript for storing and
+              manipulating textual data, and their versatility makes them widely
+              used in web development and other JavaScript applications.
+          </p>
+         <div class="content-heading">
+              Some key points in strings
+          </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Declaration and Assignment</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size: large;">
+              <p>
+                Strings can be declared and assigned to variables using the
+                <b>'var', 'let', or 'const' </b> keywords
+              </p>
+              <p><b>Examples:</b></p>
+              <p><b>var</b> message = "Hello, World!"; (using double quotes)</p>
+              <p><b>let</b> name = 'John'; (using single quotes)</p>
+              <p>
+                <b>const</b> city = `New York`; (using backticks (template
+                literals))
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>String Concatenation</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                Strings can be concatenated (combined) using the
+                <b>'+'</b> operator.
+              </p>
+              <p><b>Example:</b></p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">var greeting = "Hello";</li>
+              <li class="card-text" style="font-weight: bold;">var name = "John";</li>
+              <li class="card-text" style="font-weight: bold;">var message = greeting + " " + name;</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <p class="card-text" style="font-weight: bold;">"Hello John"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>String Length</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                The length property is used to determine the number of
+                characters in a string
+              </p>
+              <p><b>Example:</b></p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">var text = "Hello, World!";</li>
+              <li class="card-text" style="font-weight: bold;">var length = text.length;</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight: bold;">13</li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>Accessing Characters</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size: large;">
+              <p>
+                Individual characters in a string can be accessed using square
+                brackets and zero-based indexing
+              </p>
+              <p><b>Example:</b></p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">var text = "Hello";</li>
+              <li class="card-text" style="font-weight: bold;">var firstChar = text[0];</li>
+              <li class="card-text" style="font-weight: bold;">var lastChar = text[text.length - 1];</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight: bold;">"H"</li>
+              <li class="card-text" style="font-weight: bold;">"o"</li>
+            </div>
+          </div>
+        </div>
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header text-center" style="padding: 12px; font-size: large;">
+              <b>String Methods</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);font-size: large;">
+              <p>
+                JavaScript provides several built-in methods to manipulate
+                strings.
+                <li>
+                  <b>toUpperCase():</b> Converts the string to uppercase.
+                </li>
+                <li>
+                  <b>toLowerCase():</b> Converts the string to lowercase.
+                </li>
+                <li>
+                  <b>indexOf(substring):</b> Returns the index of the first
+                  occurrence of a substring.
+                </li>
+                <li >
+                  <b>substring(startIndex, endIndex):</b> Extracts a portion of
+                  the string between the given indices.
+                </li>
+                <li>
+                  <b>split(separator):</b> Splits the string into an array of
+                  substrings based on the specified separator.
+                </li>
+                <li>
+                  <b>replace(oldValue, newValue):</b> Replaces occurrences of a
+                  substring with a new value.
+                </li>
+                <li>
+                  <b>trim():</b> Removes leading and trailing whitespace from
+                  the string.
+                </li>
+              </p>
+              <p><b>Example:</b></p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">var text = " Hello, World! ";</li>
+              <li class="card-text" style="font-weight: bold;">var upperCaseText = text.toUpperCase();</li>
+              <li class="card-text" style="font-weight: bold;">var index = text.indexOf("World");</li>
+              <li class="card-text" style="font-weight: bold;">var trimmedText = text.trim();</li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight: bold;">" HELLO, WORLD! "</li>
+              <li class="card-text" style="font-weight: bold;">9</li>
+              <li class="card-text" style="font-weight: bold;">"Hello, World!"</li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 20px"
+          >
+            <div class="card-header; text-center" style="padding: 12px; font-size: large;">
+              <b>String Template Literals</b>
+            </div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);font-size: large;">
+              <p>
+                Template literals, introduced in ECMAScript 2015 (ES6), allow
+                embedding expressions within strings using backticks () instead
+                of quotes. They support multi-line strings and variable
+                interpolation using ${{ "{" }} {{ "}" }}`:
+              </p>
+              <p><b>Example:</b></p>
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text" style="font-weight: bold;">var name = "John";</li>
+              <li class="card-text" style="font-weight: bold;">
+                var greeting = `Hello, ${{ "{" }}name{{ "}" }}!`;
+              </li>
+              <br />
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text" style="font-weight: bold;">Hello, John!</li>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-heading">
+         String Methods
+        </div>
+        <div class="content-text">
+        
+            <p>
+              There are some commonly used string methods in JavaScript. Each
+              method performs a specific operation on strings, allowing you to
+              manipulate, search, and transform string data in various ways.
+            </p>
+
+            <p><b>1.Length-related Methods:</b></p>
+            <p><b>length: Returns the length of a string.</b></p>
+
+            <p>
+              <b>2.Case Conversion Methods:</b>
+              <li><b>toUpperCase():</b> Converts the string to uppercase.</li>
+              <li><b>toLowerCase():</b> Converts the string to lowercase.</li>
+            </p>
+            <p>
+              <b>3.Substring Extraction Methods:</b>
+              <li>
+                <b>charAt(index):</b> Returns the character at the specified
+                index.
+              </li>
+              <li>
+                <b>charCodeAt(index):</b> Returns the Unicode value of the
+                character at the specified index.
+              </li>
+              <li>
+                <b>substring(startIndex, endIndex): </b>Returns a new string
+                that contains a portion of the original string between the
+                specified indices.
+              </li>
+              <li>
+                <b>slice(startIndex, endIndex): </b>Returns a new string that
+                contains a portion of the original string between the specified
+                indices.
+              </li>
+              <li>
+                <b>substr(startIndex, length):</b> Returns a new string that
+                contains a specified number of characters from a starting index.
+              </li>
+            </p>
+
+            <p>
+              <b>4.Searching and Position Methods:</b>
+              <li>
+                <b>indexOf(substring, startIndex):</b> Returns the index of the
+                first occurrence of a substring within a string.
+              </li>
+              <li>
+                <b>lastIndexOf(substring, startIndex):</b> Returns the index of
+                the last occurrence of a substring within a string.
+              </li>
+              <li>
+                <b>startsWith(substring):</b> Checks if the string starts with
+                the specified substring.
+              </li>
+              <li>
+                <b>endsWith(substring): </b>Checks if the string ends with the
+                specified substring.
+              </li>
+              <li>
+                <b>includes(substring):</b> Checks if the string contains the
+                specified substring.
+              </li>
+            </p>
+
+            <p>
+              <b>5.String Modification Methods:</b>
+              <li>
+                <b>concat(string1, string2, ..., stringN):</b> Combines two or
+                more strings and returns a new string.
+              </li>
+              <li>
+                <b>replace(oldValue, newValue):</b> Replaces occurrences of a
+                substring with a new substring.
+              </li>
+              <li>
+                <b>trim():</b> Removes leading and trailing whitespace from a
+                string.
+              </li>
+              <li>
+                <b>trimStart(): </b>Removes leading whitespace from a string
+                (ES2019).
+              </li>
+              <li>
+                <b>trimEnd():</b> Removes trailing whitespace from a string
+                (ES2019).
+              </li>
+              <li>
+                <b>padStart(targetLength, paddingString):</b> Pads the start of
+                a string with another string until it reaches the specified
+                length (ES2017).
+              </li>
+              <li>
+                <b>padEnd(targetLength, paddingString): </b>Pads the end of a
+                string with another string until it reaches the specified length
+                (ES2017).
+              </li>
+            </p>
+            <p>
+              <b>6.String Splitting and Joining Methods:</b>
+              <li>
+                <b>split(separator):</b> Splits a string into an array of
+                substrings based on a specified separator.
+              </li>
+              <li>
+                <b> join(separator): </b>Joins the elements of an array into a
+                single string using a specified separator.
+              </li>
+            </p>
+            <p>
+              <b>7.String Character Iteration Methods:</b>
+              <li>
+                <b>forEach(callbackFn):</b> Executes a provided function once
+                for each character in the string.
+              </li>
+              <li>
+                <b>charAt(index): </b>Returns the character at the specified
+                index.
+              </li>
+              <li>
+                <b>charCodeAt(index):</b> Returns the Unicode value of the
+                character at the specified index.
+              </li>
+            </p>
+
+            <p>
+              <b>8.Regular Expression Methods:</b>
+              <li>
+                <b>match(regexp): </b>Searches the string for a match against a
+                regular expression and returns an array of matches.
+              </li>
+              <li>
+                <b>search(regexp):</b> Searches the string for a specified value
+                or regular expression and returns the index of the first
+                occurrence.
+              </li>
+              <li>
+                <b>replace(regexp, replacement):</b> Replaces matches in the
+                string with a specified value or the result of a function.
+              </li>
+              <li>
+                <b>split(regexp|separator):</b> Splits the string into an array
+                of substrings using a specified regular expression or separator.
+              </li>
+            </p>
+        
+</div>
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="padding: 12px; font-size: large;">
+                <b>Length-related Methods</b>
+              </div>
+         <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253);font-size: large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.length);</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">13</li>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="padding:12px; font-size: large;">
+                <b>Case Conversion Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231);font-size: large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.toUpperCase());</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.toLowerCase());</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">"CODING MAXIMA"</li>
+                <li class="card-text" style="font-weight: bold;">"coding maxima"</li>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="font-size: large; padding:12px">
+                <b>Substring Extraction Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231);font-size: large;"
+              >
+ <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.charAt(1));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.charCodeAt(1));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.substring(0, 6));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.slice(7, 13));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.substr(7, 6));</li><br/>
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">"o"</li>
+                <li class="card-text" style="font-weight: bold;">111</li>
+                <li class="card-text" style="font-weight: bold;">"Coding"</li>
+                <li class="card-text" style="font-weight: bold;">"Maxima"</li>
+                <li class="card-text" style="font-weight: bold;">"Maxima"</li>
+              </div>
+            </div>
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="font-size: large; padding:12px;">
+                <b>Searching and Position Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253);font-size: large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.indexOf("i"));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.lastIndexOf("i"));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.startsWith("Coding"));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.endsWith("Maxima"));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.includes("ing"));</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">1</li>
+                <li class="card-text" style="font-weight: bold;">11</li>
+                <li class="card-text" style="font-weight: bold;">true</li>
+                <li class="card-text" style="font-weight: bold;">true</li>
+                <li class="card-text" style="font-weight: bold;">true</li>
+              </div>
+            </div>
+          </div>
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="padding:12px; font-size: large;">
+                <b>String Modification Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253);font-size: large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text1 = "Coding";</li>
+                <li class="card-text" style="font-weight: bold;">var text2 = "Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text1.concat(" ", text2)); </li>
+                <li class="card-text" style="font-weight: bold;">console.log(text1.replace("Coding", "Programming"));</li>
+                <li class="card-text" style="font-weight: bold;">console.log("   Coding Maxima   ".trim());</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">"Coding Maxima"</li>
+                <li class="card-text" style="font-weight: bold;">"Programming Maxima"</li>
+                <li class="card-text" style="font-weight: bold;">"Coding Maxima"</li>
+                         </div>
+            </div>
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="padding:12px; font-size:large;">
+                <b>String Splitting and Joining Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231);font-size:large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">var words = text.split(" ");</li>
+                <li class="card-text" style="font-weight: bold;">console.log(words);</li>
+                <li class="card-text" style="font-weight: bold;">var joinedText = words.join("-");</li>
+                <li class="card-text" style="font-weight: bold;">console.log(joinedText);</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">["Coding", "Maxima"]</li>
+                <li class="card-text" style="font-weight: bold;">"Coding-Maxima"</li>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="font-size: large; padding:12px;">
+                <b>String Character Iteration Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231);font-size: large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">for (var i = 0; i < text.length; i++) {{'{'}}
+                  <pre>    console.log(text.charAt(i));</pre>
+                {{'}'}}</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.charAt(3));</li>   
+                <li class="card-text" style="font-weight: bold;">console.log(text.charCodeAt(3));</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">"i"</li>
+                <li class="card-text" style="font-weight: bold;">105</li>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 20px"
+            >
+              <div class="card-header text-center" style="padding: 12px; font-size: large;">
+                <b>Regular Expression Methods</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253);font-size: large;"
+              >
+                <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                <li class="card-text" style="font-weight: bold;">var text = "Coding Maxima";</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.match(/[A-Z]/g)); </li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.search(/Maxima/));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.replace(/Coding/, "Programming"));</li>
+                <li class="card-text" style="font-weight: bold;">console.log(text.split(" "));</li><br/>
+                <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                <li class="card-text" style="font-weight: bold;">["C", "M"]</li>
+                <li class="card-text" style="font-weight: bold;">7</li>
+                <li class="card-text" style="font-weight: bold;">"Programming Maxima"</li>
+                <li class="card-text" style="font-weight: bold;">["Coding", "Maxima"]</li>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+

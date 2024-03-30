@@ -1,0 +1,282 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Question-5</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <p class="block">
+        Here the problem is to print the -11 to 22 numbers using the "for" loop
+        and "while" loop.
+      </p>
+      <p class="block">
+        <li>
+          From the above given problem we have to print the numbers starting
+          from -11 to 22 numbers using the loops.
+        </li>
+        <br />
+        <li>
+          Here is the problems explanation using for loop
+          <br />
+          Step-1: Mainly we need initializer, condition, increment/ decrement
+          for running the for loop.<br />
+          First the initializer, the problem itself states that the initial
+          value have to be -11 so the initial value is -11.<br />
+          Second the condition, it should be taken according to the problem from
+          -11 to 22 so the numbers have to be increased from the -11 to 22 for
+          every iteration, then we can take the condition either &lt; / &lt;=
+          symbols<br />
+          Third for every time iterating the value the numbers have to be
+          increased So increament has to be done i.e., i++
+        </li>
+        <li>
+          Step-2: We have all thethe required parts for iteration i.e., initial
+          value as i = -11, condition as i &lt;= 22, increment i++.
+        </li>
+        <li>
+          Step-3: Now the iteration will be start with initial value -11. it
+          will check for the condition -11 &lt;= 22 . It was true. so the number
+          -11 will be increased to -10.
+        </li>
+        <li>
+          Step-4: Now the iteration will be start with initial value -10. it
+          will check for the condition -10 &lt;= 22 . It was true. so the number
+          -10 will be increased to -9.
+        </li>
+        <li>
+          Step-5: Now the iteration will be start with initial value -9. it
+          will check for the condition -9 &lt;= 22 . It was true. so the number
+          -9 will be increased to -8.
+        </li>
+        <li>
+          Step-6: Now the iteration will be start with initial value -8. it
+          will check for the condition -8 &lt;= 22 . It was true. so the number
+          -8 will be increased to -7.
+        </li>
+        <li>
+          Step-7: Now the iteration will be start with initial value -7. it
+          will check for the condition -7 &lt;= 22 . It was true. so the number
+          -7 will be increased to -6.
+        </li>
+        <li>
+          Step-8: Now the iteration will be start with initial value -6. it
+          will check for the condition -6 &lt;= 22 . It was true. so the number
+          -6 will be increased to -5.
+        </li>
+        <li>
+          Step-9: Now the iteration will be start with initial value -5. it
+          will check for the condition -5 &lt;= 22 . It was true. so the number
+          -5 will be increased to -4.
+        </li>
+        <li>
+          Step-10: Now the iteration will be start with initial value -4. it
+          will check for the condition -4 &lt;= 22 . It was true. so the number
+          -4 will be increased to -3.
+        </li>
+        <li>
+          Step-11: Now the iteration will be start with initial value -3. it
+          will check for the condition -3 &lt;= 22 . It was true. so the number
+          -3 will be increased to -2.
+        </li>
+
+        <li>
+          Step-12: Now the iteration will be start with initial value -2. it
+          will check for the condition -2 &lt;= 22 . It was true. so the number
+          -2 will be increased to -1.
+        </li>
+        <li>
+          Step-13: Now the iteration will be start with initial value -1. it
+          will check for the condition -1 &lt;= 22 . It was true. so the number
+          -1 will be increased to 0.
+        </li>
+        <li>
+          Step-14: Now the iteration will be start with initial value 0. it
+          will check for the condition 0 &lt;= 22 . It was true. so the number
+          0 will be increased to 1.
+        </li>
+        <li>
+          Step-15: Now the iteration will be start with initial value 1. it
+          will check for the condition 1 &lt;= 22 . It was true. so the number
+          1 will be increased to 2.
+        </li>
+        <li>
+          Step-16: Now the iteration will be start with initial value 2. it
+          will check for the condition 2 &lt;= 22 . It was true. so the number
+          2 will be increased to 3.
+        </li>
+        <li>
+          Step-17: Now the iteration will be start with initial value 3. it
+          will check for the condition 3 &lt;= 22 . It was true. so the number
+          3 will be increased to 4.
+        </li>
+        <li>
+          Step-18: Now the iteration will be start with initial value 4. it
+          will check for the condition 4 &lt;= 22 . It was true. so the number
+          4 will be increased to 5.
+        </li>
+        <li>
+          Step-19: Now the iteration will be start with initial value 5. it
+          will check for the condition 5 &lt;= 22 . It was true. so the number
+          5 will be increased to 6.
+        </li>
+        <li>
+          Step-20: Now the iteration will be start with initial value 6. it
+          will check for the condition 6 &lt;= 22 . It was true. so the number
+          6 will be increased to 7.
+        </li>
+        <li>
+          Step-21: Now the iteration will be start with initial value 7. it
+          will check for the condition 7 &lt;= 22 . It was true. so the number
+          7 will be increased to 8.
+        </li>
+        <li>
+          Step-22: Now the iteration will be start with initial value 8. it
+          will check for the condition 8 &lt;= 22 . It was true. so the number
+          8 will be increased to 9.
+        </li>
+        <li>
+          Step-23: Now the iteration will be start with initial value 9. it
+          will check for the condition 9 &lt;= 22 . It was true. so the number
+          9 will be increased to 10.
+        </li>
+
+        <li>
+          Step-24: Now the iteration will be start with initial value 10. it
+          will check for the condition 10 &lt;= 22 . It was true. so the number
+          10 will be increased to 11.
+        </li>
+        <li>
+          Step-25: Now the iteration will be start with initial value 11. it
+          will check for the condition 11 &lt;= 22 . It was true. so the number
+        11 will be increased to 12.
+        </li>
+        <li>
+          Step-26: Now the iteration will be start with initial value 12. it
+          will check for the condition 12 &lt;= 22 . It was true. so the number
+          12 will be increased to 13.
+        </li>
+        <li>
+          Step-27: Now the iteration will be start with initial value 13. it
+          will check for the condition 13 &lt;= 22 . It was true. so the number
+          13 will be increased to 14.
+        </li>
+        <li>
+          Step-28: Now the iteration will be start with initial value 14. it
+          will check for the condition 14 &lt;= 22 . It was true. so the number
+          14 will be increased to 15.
+        </li>
+        <li>
+          Step-29: Now the iteration will be start with initial value 15. it
+          will check for the condition 15 &lt;= 22 . It was true. so the number
+          15 will be increased to 16.
+        </li>
+        <li>
+          Step-30: Now the iteration will be start with initial value 16. it
+          will check for the condition 16 &lt;= 22 . It was true. so the number
+          16 will be increased to 17.
+        </li>
+        <li>
+          Step-31: Now the iteration will be start with initial value 17. it
+          will check for the condition 17 &lt;= 22 . It was true. so the number
+          17 will be increased to 18.
+        </li>
+        <li>
+          Step-32: Now the iteration will be start with initial value 18. it
+          will check for the condition 18 &lt;= 22 . It was true. so the number
+          18 will be increased to 19.
+        </li>
+        <li>
+          Step-33: Now the iteration will be start with initial value 19. it
+          will check for the condition 19 &lt;= 22 . It was true. so the number
+          19 will be increased to 20.
+        </li>
+        <li>
+          Step-34: Now the iteration will be start with initial value 20. it
+          will check for the condition 20 &lt;= 22 . It was true. so the number
+          20 will be increased to 21.
+        </li>
+        <li>
+          Step-35: Now the iteration will be start with initial value 21. it
+          will check for the condition 21 &lt;= 22 . It was true. so the number
+          21 will be increased to 22.
+        </li>
+        <li>
+          Step-36: Now the iteration will be start with initial value 22. it
+          will check for the condition 22 &lt;= 22 . It was true. so the number
+          22 will be increased to 23.
+        </li>
+        <li>
+          Step-37: Now the iteration will be start with initial value 23. it
+          will check for the condition 23 &lt;= 22 . It was false . so the loop will stop iterating.
+       
+        </li>
+
+      </p>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <div class="card-group">
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que5_using_for.jpg"
+            alt="program"
+          />
+        </div>
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que5_using_while.jpg"
+            alt="program"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp [audioData]="audioData" [url]="''"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

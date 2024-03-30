@@ -1,0 +1,280 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Control Statements</h3>
+  <div class="tab-title tab-slide-effect">
+    <span
+      class="tab-pill"
+      id="if-condition-type1"
+      [ngClass]="elementId == 'if-condition-type1' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="if Condition"
+      >if Condition</span
+    >
+    <span
+      class="tab-pill"
+      id="if-condition-type2"
+      [ngClass]="elementId == 'if-condition-type2' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="if else Condition"
+      >if else Condition</span
+    >
+    <span
+      class="tab-pill"
+      id="if-condition-type3"
+      [ngClass]="elementId == 'if-condition-type3' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="else if ladder"
+      >else if ladder</span
+    >
+    <span
+      class="tab-pill"
+      id="if-condition-type4"
+      [ngClass]="elementId == 'if-condition-type4' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="switch Condition"
+      >switch Condition</span
+    >
+    <span
+      class="tab-pill"
+      id="if-condition-type5"
+      [ngClass]="elementId == 'if-condition-type5' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Nested if Condition"
+      >Nested if Condition</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'if-condition-type1'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="if condition"
+        [ngClass]="elementId1 == 'if condition' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="if condition"
+        >if condition</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId1 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId1 == 'if condition'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            The if condition check the boolean condition if the boolean
+            condition was true then it allow to execute the if block.
+            <p>Example :</p>
+            <img src="assets/img/corejava/intro/if.JPG" />
+            <p>
+              In the above example the first condition is true because value(22)
+              is greater than 11 so that block is executed.
+            </p>
+            <p>
+              The second condition is false(22 is not greater than 85) so that
+              block is not executed.
+            </p>
+            <p>Example with all Datatypes :-</p>
+            <img src="assets/img/corejava/intro/ifdata.JPG" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId1 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData"
+        [audioData]="audioData"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'if-condition-type2'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="if condition"
+        [ngClass]="elementId1 == 'if condition' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="if else condition"
+        >if else condition</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId1 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId1 == 'if condition'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+          The simple if condition check the true block where as in if-else
+          condition it will check for both blocks(True & false).
+       
+        <p>
+          If condition is true, if block will executes otherwise(false) else
+          block will be executed.
+        </p>
+        <p>Example :-</p>
+        <img src="assets/img/corejava/intro/ifelse.JPG" />
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId1 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData1"
+        [audioData]="audioData1"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'if-condition-type3'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="if condition"
+        [ngClass]="elementId1 == 'if condition' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="else-if ladder"
+        >else-if ladder</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId1 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId1 == 'if condition'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+          The else-if ladder is the combination of multiple if-else conditions.
+        
+        <p>Example :-</p>
+        <img src="assets/img/corejava/intro/elseiflader.JPG" />
+        </button>
+        </div>
+      </div>
+    
+    </div>
+
+    <div *ngIf="elementId1 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData2"
+        [audioData]="audioData2"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'if-condition-type4'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="if condition"
+        [ngClass]="elementId1 == 'if condition' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="switch condition"
+        >switch condition</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId1 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId1 == 'if condition'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+          The switch case is used to write different conditions just like else,
+          else-if ladder.
+          <p>The difference is when condition is true we
+          have to use break otherwise it will check the all the case conditions.
+        </p>
+        <p>Example :-</p>
+        <img src="assets/img/corejava/intro/switch.JPG" />
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId1 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData3"
+        [audioData]="audioData3"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'if-condition-type5'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="if condition"
+        [ngClass]="elementId1 == 'if condition' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Nested if condition"
+        >Nested if condition</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId1 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId1 == 'if condition'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+          The nested if else statement is the if-else condition in another
+          if/else condition.
+        
+        <p>Example :-</p>
+        <img src="assets/img/corejava/intro/nested.JPG" />
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId1 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData4"
+        [audioData]="audioData4"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,847 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Aggregate Functions(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId2=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+                                <span class="tab-pill" id="question4" [ngClass]="(elementId=='question4')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+
+                            </div>
+
+                            <div *ngIf="elementId=='question1'">
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print minimum salary from employee
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the least salary of the employee
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>MIN(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>8000</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        MIN(salary)
+                                                        FROM EMPLOYEE;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print maximum salary from employee
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the highest salary of the employee
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>MAX(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>95000</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        MAX(salary)
+                                                        FROM EMPLOYEE;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print minimum age from employee
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the least age(compared to others smallest age
+                                                member) of the employee
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>MIN(age)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>22</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        MIN(age)
+                                                        FROM EMPLOYEE;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print maximum age from employee
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the highest age(compared to others the persons
+                                                with maximum age) of the employee
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>MAX(age)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>40</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        MAX(age)
+                                                        FROM EMPLOYEE;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+                            </div>
+
+                            <div *ngIf="elementId=='question2'">
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print how many male employees were their from the table
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the how many male employees are their
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>COUNT(gender)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>12</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        COUNT(gender) FROM EMPLOYEE where gender = 'male';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print how many employees are working as an software engineer
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the how many employees are working as an
+                                                software engineer
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>COUNT(designation)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        COUNT(designation)
+                                                        FROM EMPLOYEE WHERE designation = 'SOftware
+                                                        Engineer';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print how many employees were their with last_name as
+                                                "kapoor" from the table
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the how many employees with there last name as
+                                                kapoor
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>COUNT(last_name)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        COUNT(last_name) FROM EMPLOYEE where last_name =
+                                                        'Kapoor';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print how many employees with designation as "bench" and
+                                                also male employees
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the how many employees are on bench and also
+                                                male employees
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>COUNT(*)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        COUNT(*)
+                                                        FROM EMPLOYEE WHERE designation = 'bench' AND gender
+                                                        = 'male';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print how many employees who are with the above or equal to
+                                                35 years of age and are Sr.Managers or they with greater
+                                                than or eual to 80000 of salary
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find all the employees count who are with above or
+                                                equla to 35 years of age and their designation as Sr.Manager
+                                                or those whos salaries are above or equal to 80000
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>count(*)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                    <p style="padding: 10px;" class="btn-block">select
+                                                        count(*)from employee where age >=35 and
+                                                        designation = 'Sr.Manager' or salary >= 80000 ;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!-- ending of card-->
+
+                            </div>
+
+                            <div *ngIf="elementId=='question3'">
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print average salary of employees who are working as a
+                                                software engineers
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the average salary of all the employees who are
+                                                working as an Software Engineer designation
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>Avg(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>48200.000000</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        Avg(salary) FROM EMPLOYEE WHERE designation =
+                                                        'Software Engineer';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print average salary of employees who are only male
+                                                candidates from the entire table
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table
+                                                you
+                                                have to find the average salaries of only male employees
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>AVG(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>50083.333333</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        Avg(salary) FROM EMPLOYEE WHERE gender = 'male';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print average salary of employees who are female candidates
+                                                and as Sr.Manager from the entire table
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the average salaries of female employees and
+                                                also as Sr.Manager
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>AVG(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>76666.666667</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        AVG(salary) FROM EMPLOYEE WHERE gender = 'female'
+                                                        AND designation = 'Sr.Manager';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print average salary of employees who are working in "wipro"
+                                                Company
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the average salaries of employees working in
+                                                the wipro company
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>AVG(salary)</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>25600.000000</td>
+
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        AVG(salary) FROM EMPLOYEE WHERE company_name =
+                                                        'Wipro';
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print average salary of employees who's age was less than 30
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find average salaries of employees whos age was less
+                                                than 30
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>AVG(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>28687.500000</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        AVG(salary) FROM EMPLOYEE WHERE age < 30; </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print average salary of employees who's designations are
+                                                "Web Developer" or " Bench"
+                                                Company
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the average salaries of employees with
+                                                designation as " Web Developer" or "Bench"
+
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>AVG(salary)</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>34100.000000</td>
+
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(5)">{{buttonValue[5]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[5]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT
+                                                        AVG(salary) FROM EMPLOYEE WHERE designation =
+                                                        'bench' or designation = 'Web Developer';
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!-- ending of card-->
+
+                            </div>
+
+                            <div *ngIf="elementId=='question4'">
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print the sum of salaries of all employees from the table
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the all the employees total salary
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>SUM(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1457000.00</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT SUM(salary) FROM
+                                                        EMPLOYEE;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print the sum of salaries of employees who are only male from the table
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong> From the employee
+                                                table
+                                                you
+                                                have to find the total salaries of all the male employees
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>SUM(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>601000.00</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT SUM(salary) FROM
+                                                        EMPLOYEE WHERE gender = 'male';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print sum of salaries of employees who are working in the "Intel
+                                                Technologies" from the entire table
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the total of employees salary who are working in the "Intel
+                                                Technologies"
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>SUM(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>195000.00</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT SUM(salary) FROM
+                                                        EMPLOYEE WHERE company_name = 'Intel Technologies';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print the sum of the salaries of female employees and who are above age
+                                                greater than 30
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the total of salary of female employees and are above age
+                                                of 30
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>SUM(salary)</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>460000.00</td>
+
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT SUM(salary) FROM
+                                                        EMPLOYEE WHERE gender = 'female' AND age >30;
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- ending of card-->
+
+                                <!-- Starting of card-->
+                                <div class="card-group">
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print the sum of the salaries of the all the male employees and are on
+                                                bench and also age is less than 30
+                                            </p>
+                                            <p>
+                                                <u><strong>Descirption:-</strong></u>From the employee table
+                                                you
+                                                have to find the total of salaries of the male employees are of below
+                                                age 30 and also as a designation of bench
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>SUM(salary)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>93000.00</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT SUM(salary) FROM
+                                                        EMPLOYEE WHERE gender = 'male' and designation = 'bench' and age
+                                                        < 30; </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                        <div class="card-header text-center"><b>Question</b></div>
+                                        <div class="card-body text-left">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                Print sum of the salaries of the employees who are working in the
+                                                "Synoric Technologies" or working in the "Wipro"
+                                            </p>
+                                            <p>
+                                                <strong><u>Descirption:-</u></strong>From the employee table
+                                                you
+                                                have to find the total of the salaries of the employees who are working
+                                                in the Synoric Technologies or Wipro
+                                            </p>
+
+                                            <table class="table table-striped">
+                                                <tr>
+                                                    <th>SUM(salary)</th>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>326000.00</td>
+
+                                                </tr>
+                                            </table>
+
+                                            <div class="text-center">
+                                                <button style="padding: 10px;" class="btn btn-primary"
+                                                    (click)="answerChange(5)">{{buttonValue[5]}}</button>
+                                                <div style="padding: 10px;" *ngIf="toggleOn[5]">
+                                                    <p style="padding: 10px;" class="btn-block">SELECT SUM(salary) FROM
+                                                        EMPLOYEE WHERE company_name = 'Synoric Technologies' or
+                                                        company_name = 'Wipro';
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!-- ending of card-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId2=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,149 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Guess Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">Project Description</div>
+      <div class="content-text">
+        "Guess My Number!" is an interactive web-based game that challenges
+        players to guess a randomly generated number within a given range.
+        Created using HTML, CSS, and JavaScript, the game provides an engaging
+        and entertaining experience for players as they attempt to match the
+        secret number.
+      </div>
+      <div class="content-heading">Features</div>
+      <div class="content-text">
+        <li>
+          <b>Random Number Generation:</b> The game generates a secret number
+          between 1 and 20 (configurable) at the start of each round.
+        </li>
+
+        <li>
+          <b>User Input:</b> Players can enter their guessed number in an input
+          field and submit it to check if it matches the secret number.
+        </li>
+
+        <li>
+          <b>Message Display:</b> The game displays dynamic messages to inform
+          players about the outcome of their guess, whether it's too high, too
+          low, or correct.
+        </li>
+
+        <li>
+          <b>Score Tracking:</b> The game tracks the player's score, which
+          starts at 20 and decreases with each incorrect guess. The aim is to
+          guess the number with the highest possible score.
+        </li>
+
+        <li>
+          <b>Highscore:</b> The game keeps track of the player's highest score
+          (remaining attempts) achieved throughout multiple rounds.
+        </li>
+
+        <li>
+          <b>Background and Number Styling:</b> The background color and size of
+          the secret number element change when the player wins the game,
+          providing visual feedback.
+        </li>
+
+        <li>
+          <b>Restart Option:</b> Players can restart the game by clicking the
+          "Again!" button, resetting the score, the secret number, and the game
+          messages.
+        </li>
+      </div>
+      <div class="content-heading">Implementation</div>
+      <div class="content-text">
+        <li>
+          <b> HTML Structure:</b> The HTML layout consists of a header, main
+          content area, two sections for user input and game information, and an
+          input field and button for submitting guesses.
+        </li>
+
+        <li>
+          <b>CSS Styling:</b> CSS styles are applied to elements to create an
+          appealing design. The color scheme, font, and layout enhance the
+          visual experience.
+
+          <p>
+            <b>JavaScript Logic:</b> The JavaScript code handles the game's core
+            functionality.
+
+            <li>
+              The secret number is generated using Math.trunc(Math.random() *
+              20) + 1.
+            </li>
+            <li>
+              Functions are used to display messages, update the score, and
+              display the secret number.
+            </li>
+            <li>
+              The check function evaluates the user's guess and updates the
+              score, message, and secret number display accordingly.
+            </li>
+            <li>
+              The again function resets the game by generating a new secret
+              number, resetting the score, and clearing messages.
+            </li>
+          </p>
+        </li>
+
+        <li>
+          <b>Dynamic Message Display:</b> The displayMessage function changes
+          the message displayed to the player based on the outcome of their
+          guess.
+        </li>
+
+        <li>
+          <b>Score and Number Display:</b> The displayScore and displayNumber
+          functions update the displayed score and secret number.
+        </li>
+
+        <li>
+          <b>Button and Input Field Handling:</b> Event listeners are added to
+          the "Check!" and "Again!" buttons to trigger the corresponding
+          functions when clicked.
+        </li>
+
+        <li>
+          <b>Background and Number Styling:</b> The game updates the background
+          color and secret number size when the player wins.
+        </li>
+
+        <li>
+          <b>Game Restart:</b> The "Again!" button allows players to start a new
+          round with a fresh score and secret number.
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

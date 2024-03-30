@@ -1,0 +1,56 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Relation Mapping</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="INNER JOIN">INNER JOIN</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="LEFT JOIN">LEFT JOIN</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+            data-hover="RIGHT JOIN">RIGHT JOIN</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <img class="program-img-fit" src="assets/img/dbms/joins/inner_join.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <img class="program-img-fit" src="assets/img/dbms/joins/left_join.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <img class="program-img-fit" src="assets/img/dbms/joins/right_join.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

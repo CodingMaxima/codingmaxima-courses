@@ -1,0 +1,73 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Index</h3>
+
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <div class="text-center">
+                <button type="button" class="btn btn-lg btn-block">Indexes are used to fetch the data from database
+                    easily.But
+                    the users can't see the indexes they just used to speed up the queries. </button>
+                <button type="button" class="btn btn-lg btn-block">Indexes can be created and removed easily but
+                    they
+                    won't
+                    effect the data in database</button>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>Creating the index</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: medium; font-style: oblique;'> <b>Syntax:</b>
+                        <li style='font-size: medium; font-style: inherit;'> CREATE INDEX index</li>
+                        <li style='font-size: medium; font-style: inherit;'> ON TABLE column;</li>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'>Here in this synatx <b>index</b> is the name
+                        given to
+                        the index, <b>Table</b> is the table name of the index were it is created & <b>Column</b> Is
+                        the
+                        name of the column on the table which it is applied.</p>
+                    <p><b>Ex:-</b>create index status_index on employee(designation);</p>
+                </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>Removing the index</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: medium; font-style: oblique;'> For removing the index from the database use
+                        <b>DROP
+                            INDEX</b>
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Syntax: </b> ALTER TABLE EMPLOYEE DROP
+                        INDEX index-name;</p>
+                    <p><b>Ex:-</b>alter table employee drop index status_index;</p>
+                </div>
+            </div>
+        </div><!--end of the group-->
+
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>Altering the index</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: medium; font-style: oblique;'><b>Syntax: </b>
+                        <li style='font-size: medium; font-style: inherit;'> ALTER Table table_name</li>
+                        <li style='font-size: medium; font-style: inherit;'> add INDEX index_name(column name);</li>
+                    </p>
+                    <p><b> Ex:-</b>alter table employee add index status_index(employee_type);</p>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>showing the index</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: medium; font-style: oblique;'>For showing the indexs that are created on
+                        the table
+                        present in the table.</p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Syntax: </b> SHOW INDEXES FROM TABLE;
+                    </p>
+                    <p><b>EX:- </b>SHOW INDEXES FROM employee; </p>
+                </div>
+            </div>
+        </div><!--end of card group two-->
+
+
+    </div>
+</div>

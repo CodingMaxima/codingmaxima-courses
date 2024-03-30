@@ -1,0 +1,127 @@
+<div class="card card-body">
+  <h3 class="global-component-heading"> Exceptions Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">In programming, we concern about errors. If you write a
+              code then the first thing you see is error. For
+              example, when you don't declare a variable and try to use it then you will get error. In Java, we have
+              different types of errors & also we have two different things which are exceptions and errors.</button>
+            <button type="button" class="btn btn-lg btn-block"><b>Exception:</b>
+              When we try to open a file and it does not exist then it's an exception. You are asking input from the
+              user
+              and user is not giving the input then its an exception. When we divide a number by 0 then it’s an
+              exception.
+              Simply, Error is an unwanted or unexpected event that disturbs normal flow of the program.
+              We can handle the exceptions and are recoverable as well.</button>
+            <button type="button" class="btn btn-lg btn-block"><b>Error:</b>
+              We cannot handle the errors because JVM is not working properly then We cannot do or handle anything for
+              that.
+              In the same way if RAM is out of memory then also we cannot do anything.
+              Errors are unrecoverable.</button>
+            <img style="height: 700px; width: 700px;" class="program-img-fit" src="assets/img/corejava/Exception/Exceptions.jpg"><br>
+
+            <button type="button" class="btn btn-lg btn-block">If an abnormal situation which interepts the flow of the
+              program is an exception then for handling those errors is known as <b>Exception handling </b></button>
+            <button type="button" class="btn btn-lg btn-block">
+              <li>We have five keywords that are used to handle the exception.</li>
+              <li>The purpose of Exception Handling is to define the alternative way to control rest of the program
+                normally.</li>
+              <li><b>Try - </b>It is a block where an exception code present. we can't use try block alone and it must
+                be followed by either catch or finally.</li>
+              <li><b>catch - </b>This block will handle the exception. It should be preceded by try block. we can't use
+                catch block alone without try block.</li>
+              <li><b>Finally - </b>It is used to execute the necessary code of the program. It is executed whether an
+                exception is handled or not.</li>
+              <li><b>Throw - </b>It is used to throw an exception.</li>
+              <li><b>Throws - </b>It is used to declare exceptions. It will specify that there may occur an exception in
+                the method. It
+                doesn't throw an exception. It is always used with method signature.</li>
+            </button>
+            <button type="button" class="btn btn-lg btn-block">Generally exceptions are of 2types(Checked Exceptions and
+              Unchecked Exceptions)</button>
+          </div>
+          <div class="text-center" style="padding-top: 15px;">
+            <button class="btn btn-primary btn-lg">Checked & unchecked Exceptions</button>
+          </div>
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header"><b>Checked Exceptions</b></div>
+              <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                <p>Checked exceptions are the child classes of the Exception class. Compiler will force us to handle the
+                  exception. These exceptions occur during the compile time of the program.</p>
+                <p><b>Examples:</b> IO Exception, SQLException </p>
+              </div>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header"><b>Unchecked Exceptions</b></div>
+              <div class="card-body" style="background-color:  rgb(229, 253, 253);">
+                <p>Unchecked exception occurs at the time of execution. These are also called as Runtime Exceptions.
+                  Runtime exceptions are ignored at the time of compilation.</p>
+                <p> <b>Examples: </b>Arithmetic Exception, NullPointer Exception, Out Of Bounds Exception(ArrayIndex out
+                  Of
+                  Bounds, string Out Of Bounds), Number Format Exception.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="tab-title tab-slide-effect">
+      <span class="tab-pill" id="exceptionhandling" [ngClass]="(elementId2=='exceptionhandling')?'active':''"
+        (click)="subTabChange($event)" data-hover="ExceptionHandling-Example">ExceptionHandling-Example</span>
+      <span class="tab-pill" id="uncheckedexception" [ngClass]="(elementId2=='uncheckedexception')?'active':''"
+        (click)="subTabChange($event)" data-hover="Unchecked Examples">Unchecked Examples</span>
+    </div>
+    <div *ngIf="elementId2=='exceptionhandling'">
+      <div class="card-body border border-warning">
+        <img class="card-img-top" src="assets/img/corejava/exceptions/mul.JPG">
+      </div>
+    </div>
+    <div *ngIf="elementId2=='uncheckedexception'">
+      <div class="card-body border border-warning">
+        <div class="card-group">
+          <div class="card">
+            <h5 class="text-center card-title">ArrayIndexOutOfBoundsException</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/exceptions/array.JPG" alt="">
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="text-center card-title">ArithmeticException</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/exceptions/arth.JPG" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div class="card">
+            <h5 class="text-center card-title">NumberFormatException</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/exceptions/num.JPG" alt="">
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="text-center card-title">NullPointerException</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/exceptions/null.JPG" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

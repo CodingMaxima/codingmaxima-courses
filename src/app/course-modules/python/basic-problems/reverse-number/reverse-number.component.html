@@ -1,0 +1,154 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Reverse of Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+            <p>In computing, reversing a number means changing the order of its digits so that the original number is
+              flipped backwards. For example, if we reverse the number 123, we get 321.</p>
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <p>To reverse a number, we typically use a loop to extract each digit from the original number one by one,
+              and then combine these digits in reverse order to form the reversed number.</p>
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <h2>The Algorithm</h2>
+            <ol>
+              <li>Initialize a variable <code>reversedNumber</code> to 0.</li>
+              <li>While the input number is not 0, do the following:
+                <ol type="a">
+                  <li>Get the last digit of the input number by taking its modulus with 10 (i.e.,
+                    <code>number % 10</code>).</li>
+                  <li>Multiply the <code>reversedNumber</code> by 10 and add the last digit to it (i.e.,
+                    <code>reversedNumber = reversedNumber * 10 + digit</code>).</li>
+                  <li>Divide the input number by 10 and round it down to the nearest integer (i.e.,
+                    <code>number =(number / 10)</code>).</li>
+                </ol>
+              </li>
+              <li>After the loop finishes, the <code>reversedNumber</code> variable will contain the reversed number.
+              </li>
+            </ol>
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <p>For example, if we want to reverse the number 123, we can use the above algorithm as follows:</p>
+            <ol>
+              <li>Initialize <code>reversedNumber</code> to 0.</li>
+              <li>In the first iteration of the loop, we get the last digit of 123, which is 3. We multiply
+                <code>reversedNumber</code> by 10 and add 3 to it, so <code>reversedNumber</code> becomes 3.</li>
+              <li>In the second iteration of the loop, we get the next-to-last digit of 123, which is 2. We multiply
+                <code>reversedNumber</code> by 10 and add 2 to it, so <code>reversedNumber</code> becomes 32.</li>
+              <li>In the third iteration of the loop, we get the first digit of 123, which is 1. We multiply
+                <code>reversedNumber</code> by 10 and add 1 to it, so <code>reversedNumber</code> becomes 321.</li>
+              <li>The loop finishes because there are no more digits left in the input number. The
+                <code>reversedNumber</code> variable contains the reversed number, which is 321.</li>
+            </ol>
+          </button>
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">123456</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Reverse of a given number 123456 is 654321</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">123400</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Reverse of a given number 123400 is 4321</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Enter a number</p>
+              <p style="margin-top: -20px;" class="card-text">17652</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Reverse of a given number 17652 is 25671</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+    </div><!-- Ending of problem statement card body-->
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit-python" src="assets/img/python/basic/reverse_number.jpg" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">123456</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">654321</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">123400</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">4321</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">17652</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">25671</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+
+    </div>
+  </div>
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

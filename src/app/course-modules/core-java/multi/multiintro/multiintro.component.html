@@ -1,0 +1,69 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Multi Dimensional Array Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block"> Multi-dimensional arrays include 2D arrays and 3D arrays
+            i.e. Two dimensional arrays and three-dimensional arrays.</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style="background-color: rgb(255, 239, 209);">
+              <p>2D Arrays: Two Dimensional Arrays are also called as
+                Double dimensional arrays or Tabular arrays or Rectangular Arrays.</p>
+              <div class="list-dots">
+                <li> It is an array of one-dimensional arrays.</li>
+                <li> It represents the elements in the form of a matrix.</li>
+                <li> It will store the elements in the form of rows and columns.</li>
+              </div>
+              <br>
+              <p>Declaration: </p>
+              <li>datatype [ ][ ] arrayname = new datatype[rowsize ][columnsize ]</li>
+              <li>int [ ][ ] array = new int [2][2]; // rows = 2, columns = 2</li>
+              <li>array [0][0] = 1</li>
+              <li>array [0][1] = 5</li>
+              <li>array [1][0] = 2</li>
+              <li>array [1][1] = 6</li>
+              <br>
+              <img src="assets/img/corejava/multidimenstion/2dindex.jpg" width=90%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--end of intro-->
+  
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img src="assets/img/corejava/multidimenstion/2darray.JPG" width=90%>
+    </div>
+  </div><!--end of problem-->
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div><!--end of animation video-->
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,204 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Question-6</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <p class="block">
+        Here the problem is to print the n to m numbers using the "for" loop and
+        "while" loop.
+      </p>
+      <p class="block">
+        <li>
+          From the above given problem we have to print the numbers starting
+          from n to m numbers using the loops.
+        </li>
+        <li>Here Is the explanation of the problem using the for loop</li>
+        <li>
+          Step-1: In the problem we have to give the numbers to the variables n
+          and m. n is the starting value and m is the ending value. <br />
+          lets assume the n value as 1 and m value as 5.
+        </li>
+        <li>
+          Step-2: Now the loop will starts the iteration taking the starting
+          value n as the initializer and checks for the condition as n i.e., 1
+          is &lt;= m i.e., 5 . The condition is true so the n value will becomes
+          2 and the m value is 5.
+        </li>
+        <li>
+          Step-3: Now the loop will starts iteration by taking the n value as 2
+          and checks for the condition 2 is &lt;= 5. The condition is true so
+          the n value will becomes 3 and the m value is 5.
+        </li>
+        <li>
+          Step-4: Now the loop will starts iteration by taking the n value as 3
+          and checks for the condition 3 is &lt;= 5. The condition is true so
+          the n value will becomes 4 and the m value is 5.
+        </li>
+
+        <li>
+          Step-5: Now the loop will starts iteration by taking the n value as 4
+          and checks for the condition 4 is &lt;= 5. The condition is true so
+          the n value will becomes 5 and the m value is 5.
+        </li>
+
+        <li>
+          Step-6: Now the loop will starts iteration by taking the n value as 5
+          and checks for the condition 5 is &lt;= 5. The condition is true so
+          the n value will becomes 6 and the m value is 5.
+        </li>
+        <li>
+          Step-7: Now the loop will starts iteration by taking the n value as 6
+          and checks for the condition 6 is &lt;= 5. The condition is false so
+          the loop will stop iterating.
+        </li>
+      </p>
+      <div style="padding-top: 15px;" class="text-center">
+        <button class="btn btn-primary btn-lg">test Cases</button>
+      </div>
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Test Case-1</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231)">
+              <p class="card-subtitle mb-2 text-muted">Input</p>
+              <p class="card-text">n = 1; m = 10</p>
+              <p class="card-subtitle mb-2 text-muted">Output</p>
+              <p class="card-text">1 2 3 4 5 6 7 8 9 10</p>
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Test Case-2</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253)">
+              <p class="card-subtitle mb-2 text-muted">Input</p>
+              <p class="card-text">n = 50; m = 55</p>
+              <p class="card-subtitle mb-2 text-muted">Output</p>
+              <p class="card-text">50 51 52 53 54 55</p>
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Test Case-3</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231)">
+              <p class="card-subtitle mb-2 text-muted">Input</p>
+              <p class="card-text">n = -10; m = -2</p>
+              <p class="card-subtitle mb-2 text-muted">Output</p>
+              <p class="card-text">-10 -9 -8 -7 -6 -5 -4 -3 -2</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Test Case-4</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253)">
+              <p class="card-subtitle mb-2 text-muted">Input</p>
+              <p class="card-text">n = 13; m = 17</p>
+              <p class="card-subtitle mb-2 text-muted">Output</p>
+              <p class="card-text">13 14 15 16 17 </p>
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Test Case-5</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231)">
+              <p class="card-subtitle mb-2 text-muted">Input</p>
+              <p class="card-text">n = -20; m = -5</p>
+              <p class="card-subtitle mb-2 text-muted">Output</p>
+              <p class="card-text">-20 -19 -18 -17 -16 -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5</p>
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Test Case-6</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253)">
+              <p class="card-subtitle mb-2 text-muted">Input</p>
+              <p class="card-text">n = 100; m = 106</p>
+              <p class="card-subtitle mb-2 text-muted">Output</p>
+              <p class="card-text">100 101 102 103 104 105 106</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <div class="card-group">
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que6_using_for.jpg"
+            alt="program"
+          />
+        </div>
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que6_using_while.jpg"
+            alt="program"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp [audioData]="audioData" [url]="''"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

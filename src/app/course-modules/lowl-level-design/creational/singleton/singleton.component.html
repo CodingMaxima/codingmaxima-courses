@@ -1,0 +1,114 @@
+<div>
+  <div class="card card-body">
+    <!--<p>   another collapse start here </p>-->
+    <h3>Singleton Design Pattern</h3>
+    
+
+    <div id="accordion">
+      
+      <h4><button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#card1" aria-expanded="true"
+        aria-controls="ProblemStatement" >DB Connection Class</button></h4>
+      <div id = "card1" class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#dbclass" aria-expanded="true"
+              aria-controls="ProblemStatement">
+              Class Diagram
+            </button>
+          </h5>
+        </div>
+
+        <div id="dbclass" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+            <img src="assets/img/low-level-design/creational/Singleton_DBConnection.png" alt="Singleton_DBConnection">
+          </div>
+        </div>
+
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#dbcode" aria-expanded="true"
+              aria-controls="ProblemStatement">
+              Program
+            </button>
+          </h5>
+        </div>
+
+        <div id="dbcode" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+            <div class="card-group">
+              <div class="card">
+                <h5 class="text-center card-title">DB Connection Class</h5>
+                <div class="card-body">
+                  <img src="assets/img/low-level-design/creational/singleton_dbconnection_code.png"
+                    alt="Singleton_DBConnection_Code">
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="text-center card-title">DB Client Class</h5>
+                <div class="card-body">
+                  <img src="assets/img/low-level-design/creational/singleton_dbconnection_client.png"
+                    alt="Singleton_DBConnection_Client">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div> <!-- Ending of example 1-->
+
+    
+    <h4><button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#card2" aria-expanded="true"
+      aria-controls="ProblemStatement" >Logger Class</button></h4>
+      <div id="card2" class="card">
+        
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#loggerclass"
+              aria-expanded="false" aria-controls="ProblemStatement">
+              Class Diagram
+            </button>
+          </h5>
+        </div>
+
+        <div id="loggerclass" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+            <img src="assets/img/low-level-design/creational/Singleton_LoggerClass.png" alt="Singleton_DBConnection">
+          </div>
+        </div>
+
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#loggercode"
+              aria-expanded="false" aria-controls="ProblemStatement">
+              Program
+            </button>
+          </h5>
+        </div>
+
+        <div id="loggercode" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+            <div class="card-group">
+              <div class="card">
+                <h5 class="text-center card-title">Logger Class</h5>
+                <div class="card-body">
+                  <img src="assets/img/low-level-design/creational/singleton_logger_class.png"
+                    alt="Singleton_DBConnection_Code">
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="text-center card-title">Logger Client Class</h5>
+                <div class="card-body">
+                  <img src="assets/img/low-level-design/creational/singleton_logger_client.png"
+                    alt="Singleton_DBConnection_Client">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

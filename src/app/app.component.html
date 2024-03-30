@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Coding Maxima</title>
+
+<body>
+    <app-group-header (loadChaptersEvent)="loadChapters($event)"></app-group-header>
+  <div class="main">
+    <div class="d-flex" [class.toggled]="toggleSideBar" id="wrapper" data-aos="fade-up"
+      data-aos-offset="100" data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="list-group list-group-flush one">
+          <button class="btn btn-light nav-link" style="margin-top:5px" *ngFor="let chapter of chapters"
+            (click)="loadLessonNames(chapter)"
+            [ngStyle]="{'background-color':(selectedChapter==chapter.name)?'#1030B6':'#EFEFEF'}"
+            [style.color]="(selectedChapter==chapter.name)?'#ffffff':'#000000'">
+            {{chapter.name}}
+          </button>
+        </div>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <ng-container *ngIf="showToggleButton">
+                <button style="margin-right: 5px;margin-top: 5px;background: none;border: none;font-size: 26px;"
+                  id="menu-toggle" [ngClass]="(!toggleSideBar)?'fa fa-arrow-circle-left':'fa fa-bars'"
+                  (click)="onToggleSideBar()"></button>
+              </ng-container>
+              <button class="blob-btn" *ngFor="let lesson of lessons" (click)="loadLesson(lesson)"
+                [ngClass]="(selectedLesson==lesson.name)?'active':''">
+                {{lesson.name}}
+                <span class="blob-btn__inner">
+                  <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </button>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                    result="goo"></feColorMatrix>
+                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                </filter>
+              </defs>
+            </svg>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</body>

@@ -1,0 +1,25 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Groupby-having </h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <!-- first group -->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                            <li>group by function is used for grouping(combining) the rows in the table.They are used along with the aggregate functions </li>
+                            <li>having is used in place of WHERE clause along with the group by function</li>
+                        </div>
+                    </div>
+
+                </div> <!-- first group-->
+            </div>
+        </div>
+    </div>
+</div>

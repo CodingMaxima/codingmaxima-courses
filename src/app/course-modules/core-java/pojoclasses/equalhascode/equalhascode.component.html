@@ -1,0 +1,102 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">EQUALS AND HASHCODE METHODS INTRODUCTIONS</h3>
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <div class="text-center">
+                <div style=" font-size: medium; padding: 10px">
+                    <button type="button" class="btn btn-lg btn-block">The hashcode(), equals() methods are used for
+                        comparision between the objects by the object class</button>
+                   
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/corejava/equals&hashcode/coding.jpg">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/corejava/equals&hashcode/test_img1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class=" card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color:rgb(255, 239, 209);">
+                    <li>From the above images in the Coding class we wrote one private object and constructor for that
+                        object</li>
+                    <li>From the above images in the Testing class we took 2 objects like<b>(object1, object2)</b></li>
+                    <li>By printing these objects it gives 2 hashcode values differently in the output because in our
+                        <b>Coding class</b> there is no hashcode method.
+                    </li>
+                    <li>Whenever we are comparing the <b>object1,</b> <b>object2</b> with same content it results
+                        <b>false</b> because the objects are different.
+                    </li>
+                    <li>Whenever we are comparing the same object it results in <b>true</b> </li>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/corejava/equals&hashcode/codingmaxima.jpg">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/corejava/equals&hashcode/test_img2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class=" card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color:rgb(255, 239, 209);">
+                    <li>From the above images in the CodingMaxima class we wrote one private object and constructor for
+                        that
+                        object and only hashcode() method for that object.</li>
+                    <li>From the above images in the Testing class we took 2 objects like<b>(obj1, obj2)</b></li>
+                    <li>By printing these objects it gives same hashcode values in the output because in our
+                        <b>CodingMaxima class</b> there is an hashcode method.
+                    </li>
+                    <li>Whenever we are comparing the <b>obj1,</b> <b>obj2</b> with same content it results
+                        <b>false</b> because the objects are different and have same hashcode method but there is no
+                        equal method in <b>CodingMaxima class</b> .
+                    <li>Whenever we are comparing the same object it results in <b>true</b> </li>
+                </div>
+            </div>
+            <div class=" card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color:rgb(252, 227, 231);">
+                    <p class="card-text" style='font-size: medium;font-style: oblique'><b>NOTE:</b>By overridding the
+                        hashcode and equals method seperately there may cause some problems on code in future. by
+                        avoiding that problems they are overridden at a time because they shares the same fields for
+                        comparision purpose</p>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/corejava/equals&hashcode/codingmaxima2.jpg">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/corejava/equals&hashcode/test_img3.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class=" card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style="background-color:rgb(255, 239, 209);">
+                    <li>From the above images in the CodingMaxima class we wrote one private object and constructor for
+                        that
+                        object and only hashcode() method & equals() method for that object.</li>
+                    <li>From the above images in the Testing class we took 2 objects like<b>(obj1, obj2)</b></li>
+                    <li>By printing these objects it gives same hashcode values in the output because in our
+                        <b>CodingMaxima class</b> there is an hashcode() method as well as equals() method.
+                    </li>
+                    <li>Whenever we are comparing the <b>obj1,</b> <b>obj2</b> with same content it results
+                        <b>true</b> because the objects are different and have same hashcode method &
+                        equal method in <b>CodingMaxima class</b> .
+                    <li>Whenever we are comparing the same object it results in <b>true</b> </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

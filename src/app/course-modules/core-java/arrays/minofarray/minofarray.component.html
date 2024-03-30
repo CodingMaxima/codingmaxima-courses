@@ -1,0 +1,226 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Minimum Value of Array</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          <p>We need to find the minimum number in an array.</p>
+          <p>
+            Consider the below steps for better understanding that how we can
+            find the Minimum number.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          Example: int arr[] = {{ "{" }}1,4,2,5,7{{ "}" }}
+
+          <p></p>
+          Step 1: we can take the first element in an array and assigned it to
+          an variable min i.e min = arr[0] = 1, then we can compare 1 with
+          remaining elements in the array.
+          <p>1 &lt; 4 (first element is comparing with second element)</p>
+          <p>true</p>
+          <p>
+            Here, 1 is less than 4 so we will change the value in min to 1. So,
+            min = 1.
+          </p>
+          <p>
+            Step 2: compare the value in min i.e 1 with the next element in an
+            array i.e 2.
+          </p>
+          <p>1 &lt; 2 -----> true</p>
+          <p>
+            Here, 1 is less than 2 is correct. So no need of changing the min
+            value because it is the least number till now.
+          </p>
+          <p>min = 1.</p>
+          <p>
+            Step 3: compare the value in min value i.e 1 with the next element
+            in an array i.e 5.
+          </p>
+          <p>1 &lt; 5 -----> true</p>
+
+          <p>
+            Here, 1 is less than 5 is correct. So no need of changing the min
+            value because it is the least number till now.
+          </p>
+          <p>min = 1.</p>
+          <p>
+            Step 4: compare the value in min i.e 1 with the next element in an
+            array i.e 7.
+          </p>
+          <p>1 &lt; 7 -----> true</p>
+          <p>
+            Here, 1 is less than 7 so we will change the value in min to 1. So,
+            min = 1.
+          </p>
+          <p>
+            So, this is the end of an array and we found the number in min is 1.
+            So print the minimum number in the array is 1.
+          </p>
+        </button>
+      </div>
+
+      <!--starting of example-->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">
+              Array = {{ "{" }}4, 2, -15, 7, 1, -2, -10{{ "}" }}
+            </p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Minimum value in the array is: -15</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-2</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">
+              Array = {{ "{" }}11, 13, 45, 22, 65{{ "}" }}
+            </p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Minimum value in the array is: 11</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-3</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">
+              Array = {{ "{" }}24, 22, 56, 22, 22{{ "}" }}
+            </p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Minimum value in the array is: 22</p>
+          </div>
+        </div>
+      </div>
+      <!--Ending of example-->
+    </div>
+    <!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/arrays/min.JPG"
+        alt="program"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <!--starting of the test cases-->
+    <div class="card-body card-group">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-1</b></div>
+        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">5</p>
+          <p class="card-text">4 2 -15 7 1 -2 -10</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">-15</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-2</b></div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">5</p>
+          <p class="card-text">11 13 45 22 65</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">11</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-3</b></div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">5</p>
+          <p class="card-text">24 22 56 22 22</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">22</p>
+        </div>
+      </div>
+    </div>
+    <!--ending of the test cases-->
+  </div>
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

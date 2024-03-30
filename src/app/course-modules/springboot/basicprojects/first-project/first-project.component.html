@@ -1,0 +1,107 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Dependency Injection</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem-Statment">Problem-Statment</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Solution">Solution</span>   
+    </div>
+
+
+    <div style="padding-top: 15px;" class="text-center">
+        <button class="btn btn-primary btn-lg">Student Controller Class APIs</button>
+    </div>
+
+    <!-- first group -->
+    <div class="card-group">
+        
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>@RequestMapping(value="/student/add", method=RequestMethod.POST)</b></div>
+          <div style="background-color: rgb(229, 253, 253);" class="card-body">
+            <p><b>Signature : </b>public boolean addStudent(@RequestBody Student stu)</p>
+            <li>The addStudent is a method which accepts a Student object "stu" as request body.</li>
+            <li>Returns "true" if the Student object does not exist.</li>
+            <li>Returns "false" if the Student object already exists.</li>
+          </div>
+        </div>
+            
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>@RequestMapping(value="/student/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            
+              <p><b>Signature : </b>public Student getStudentById(@PathVariable int id)</p>
+              <li>The getStudentbyId is a method which accepts an integer "id" as path variable.</li>
+              <li>Returns Student object if exists.</li>
+              <li>Returns "null" if the Student object does not exist.</li>
+            </div>
+        </div>
+       
+    </div> <!-- first group-->
+
+
+    <!-- Second group -->
+    <div class="card-group">
+        
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>@GetMapping("/student/getAll")</b></div>
+          <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            <p><b>Signature : </b>public List&lt;Student&gt; getAllStudents()</p>
+            <li>The getAllStudents is a method which does not accept anything as parameter.</li>
+            <li>Returns List of all the existing Student objects.</li>
+          </div>
+        </div>
+            
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>@PutMapping("/student/updateName/&lbrace;id&rbrace;")</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+            
+              <p><b>Signature : </b>public Student updateNameById(@PathVariable int id, @RequestBody String name)</p>
+              <li>The updateNameById is a method which accepts "id" as path variable and "name" as request body.</li>
+              <li>Returns updated Student object if exists.</li>
+              <li>Returns "null" if the Student object does not exist.</li>
+            </div>
+        </div>
+       
+    </div> <!-- Second group-->
+
+
+    <!-- Third group -->
+    <div class="card-group">
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>@RequestMapping(value = "/student/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <p><b>Signature : </b>public boolean deleteStudent(@PathVariable int id)</p>
+              <li>The deleteStudent is a method which accepts integer "id" as path variable.</li>
+              <li>Returns "true" if the Student object with "id" already exists.</li>
+              <li>Returns "false" if the Student object does not exist.</li>
+          </div>
+        </div>
+    </div>
+    <!--Third group-->
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+            
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="model" [ngClass]="(elementId2=='model')?'active':''" (click)="tabChange2($event)"
+                  data-hover="Model Classes">Model Classes</span>
+                <span class="tab-pill" id="controller" [ngClass]="(elementId2=='controller')?'active':''" (click)="tabChange2($event)"
+                  data-hover=" Controller">Controller</span>
+                <span class="tab-pill" id="service" [ngClass]="(elementId2=='service')?'active':''" (click)="tabChange2($event)"
+                  data-hover="Service">Service</span>
+            </div>
+
+            <div *ngIf=""></div>
+
+        </div>
+    </div>
+</div>

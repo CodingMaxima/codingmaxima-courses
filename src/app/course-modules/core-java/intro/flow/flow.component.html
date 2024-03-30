@@ -1,0 +1,160 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Loops(Flow/Iteration) Statements</h3>
+
+  <div class="tab-title tab-slide-effect">
+    <span
+      class="tab-pill"
+      id="for-loop"
+      [ngClass]="elementId == 'for-loop' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="for loop"
+      >for loop</span
+    >
+    <span
+      class="tab-pill"
+      id="while-loop"
+      [ngClass]="elementId == 'while-loop' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="while loop"
+      >while loop</span
+    >
+    <span
+      class="tab-pill"
+      id="do-while-loop"
+      [ngClass]="elementId == 'do-while-loop' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="do-while loop"
+      >do-while loop</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'for-loop'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="intro"
+        [ngClass]="elementId2 == 'intro' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="for loop"
+        >for loop</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'intro'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            The for loop has three parts
+            Initilization-Condition-Operation(Increment/Decrement).
+
+            <p>Example :</p>
+            <img src="assets/img/corejava/intro/forloop.JPG" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData"
+        [audioData]="audioData"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'while-loop'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="intro"
+        [ngClass]="elementId2 == 'intro' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="while loop"
+        >while loop</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'intro'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            The while loop only has condition. This loop will repeats util
+            condition is false
+
+            <p>Example :-</p>
+            <img src="assets/img/corejava/intro/whileloop.JPG" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData1"
+        [audioData]="audioData1"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'do-while-loop'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="intro"
+        [ngClass]="elementId2 == 'intro' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="do-while loop"
+        >do-while loop</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'intro'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            The do-while execute the block then it checks the condition.
+            <p>Example :-</p>
+            <img src="assets/img/corejava/intro/do-while.JPG" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData2"
+        [audioData]="audioData2"
+        ></app-video-cmp>
+      </div>
+    </div>
+  </div>
+</div>

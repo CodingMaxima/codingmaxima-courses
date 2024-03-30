@@ -1,0 +1,172 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">NumPy Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Pros and Cons">Pros and Cons</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style="font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">
+              NumPy is a powerful library for numerical computing in Python. It provides efficient handling of large arrays
+              and matrices, along with a collection of mathematical functions to operate on these arrays.
+            </button>
+            <button type="button" class="btn btn-lg btn-block">
+              With NumPy, you can perform tasks such as numerical computations, data manipulation, and scientific computing
+              with ease.
+            </button>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center" style="font-size: 25px;"><b>Creating NumPy Arrays</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                NumPy arrays can be created using various methods. You can create 1-dimensional arrays, 2-dimensional arrays,
+                or arrays with a specific range of values.
+              </p>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                For example, you can create an array of zeros or ones, or even generate an array with a specific sequence of
+                numbers using the `arange()` function.
+              </p>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Here are a few examples of creating NumPy arrays:
+              </p>
+              <p style='font-size: medium; font-weight: 700;'>Creating a 1-dimensional array:</p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+</code></pre>
+              <p style='font-size: medium; font-weight: 700;'>Creating a 2-dimensional array:</p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+</code></pre>
+              <p style='font-size: medium; font-weight: 700;'>Creating an array with a specific range of values:</p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+arr = np.arange(1, 10)  # Generates numbers from 1 to 9
+</code></pre>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                These are just a few examples of creating NumPy arrays. NumPy provides many other functions and methods for
+                creating and manipulating arrays according to your needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center" style="font-size: 25px;"><b>Performing Mathematical Operations</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                One of the key strengths of NumPy is its ability to perform mathematical operations on arrays efficiently.
+                NumPy provides a wide range of mathematical functions, including basic arithmetic operations, trigonometric
+                functions, statistical functions, and linear algebra operations.
+              </p>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                For example, you can calculate the sum, mean, or standard deviation of an array, or perform element-wise
+                multiplication or exponentiation.
+              </p>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Here is an example of performing a mathematical operation on a NumPy array:
+              </p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+sum = np.sum(arr)
+</code></pre>
+              <p style='font-size: medium; font-weight: 700;'>Output:</p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+15
+</code></pre>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                NumPy provides a wide range of mathematical functions and operations that make it a powerful tool for
+                numerical computations and scientific computing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center" style="font-size: 25px;"><b>Data Manipulation</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                NumPy provides powerful tools for manipulating arrays, including indexing, slicing, reshaping, joining, and
+                splitting arrays. These operations allow you to extract specific elements from an array, modify its shape,
+                combine arrays, or split them into smaller arrays.
+              </p>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                For example, you can extract a sub-array from a larger array, reshape a 1-dimensional array into a
+                2-dimensional matrix, or concatenate multiple arrays together.
+              </p>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                Here is an example of array manipulation using NumPy:
+              </p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+sub_array = arr[2:4]  # Extract elements from index 2 to 4 (exclusive)
+reshaped_array = arr.reshape((2, 2))  # Reshape the array into a 2x2 matrix
+concatenated_array = np.concatenate((arr, sub_array))  # Concatenate two arrays
+</code></pre>
+              <p style='font-size: medium; font-weight: 700;'>Output:</p>
+              <pre style="margin:10px;border-radius:8px;padding:21px;background:#add9ff;color:black;font-weight:700;font-size:17px;"><code>
+sub_array: [3, 4]
+reshaped_array:
+[[1, 2]
+ [3, 4]]
+concatenated_array: [1, 2, 3, 4, 5, 3, 4]
+</code></pre>
+              <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                These are just a few examples of how you can manipulate arrays using NumPy. The library provides many more
+                functions and methods for advanced array manipulation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <h3 class="global-component-heading">Pros and Cons of NumPy</h3>
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center" style="font-size: 25px;"><b>Pros</b></div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+          <ul>
+            <li style="font-size: medium; font-weight: 700;">Efficient handling of large arrays and matrices.</li>
+            <li style="font-size: medium; font-weight: 700;">Extensive collection of mathematical functions for
+              numerical computations.</li>
+            <li style="font-size: medium; font-weight: 700;">Efficient and optimized algorithms for numerical operations
+              and linear algebra.</li>
+            <li style="font-size: medium; font-weight: 700;">Support for multidimensional arrays and advanced indexing
+              techniques.</li>
+            <li style="font-size: medium; font-weight: 700;">Integration with other libraries and tools in the Python
+              ecosystem, such as Pandas, Matplotlib, and SciPy.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center" style="font-size: 25px;"><b>Cons</b></div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+          <ul>
+            <li style="font-size: medium; font-weight: 700;">Steep learning curve for beginners.</li>
+            <li style="font-size: medium; font-weight: 700;">Can be memory-intensive for large arrays.</li>
+            <li style="font-size: medium; font-weight: 700;">Lack of built-in support for handling missing or
+              heterogeneous data.</li>
+            <li style="font-size: medium; font-weight: 700;">Limited support for string and text operations.</li>
+            <li style="font-size: medium; font-weight: 700;">Less intuitive syntax compared to regular Python
+              lists.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

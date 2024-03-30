@@ -1,0 +1,124 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Hashset Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Hashset Introduction">Hashset Introduction</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">
+              Hashset is implemented based on the hashtable data structure & does'nt allow duplicate values.</button>
+            <button type="button" class="btn btn-lg btn-block">If we try to add the object then the object will not add
+              into the hashset and the method “add” will return false & can insert null values into the
+              hashset.</button>
+            <button type="button" class="btn btn-lg btn-block">Objects are inserted into the hashset based on the
+              hashcode of the objects.</button>
+            <button type="button" class="btn btn-lg btn-block">We cannot iterate for loop through index in
+              hashset.</button>
+          </div>
+          <div style="padding-top: 15px;">
+            <button class="btn btn-primary btn-lg">hashset Example</button>
+          </div>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header"><b>For Creating Hashset:</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+              <p>HashSet&lt;String&gt; set = new HashSet ();</p>
+              <p>Here set can store strings only.</p>
+              <p>HashSet&lt;Integer&gt; set = new HashSet ();</p>
+              <p>Here set can store integers only.</p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header"><b>For finding the length(size) of an Hashset:</b></div>
+            <div class="card-body" style="background-color:  rgb(229, 253, 253);">
+              <h6 class="card-subtitle mb-2 text-muted">code</h6>
+              <li>Hashset &lt;String&gt; cars = new Hashset&lt;String&gt;();</li>
+              <li>fruits.add("apple");</li>
+              <li>fruits.add("mango");</li>
+              <li>fruits.add("guava");</li>
+              <li>System.out.println(fruits.size());</li><br>
+              <h6 class="card-subtitle mb-2 text-muted">output</h6>
+              <li>3</li>
+            </div>
+          </div>
+        </div><!--end of card group-->
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(255, 239, 209);">
+            <li class="text-center">For obtaining the value from the arraylist use get() method. </li>
+            <li class="text-center"><b>.get()</b></li>
+          </div>
+        </div>
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Adding & Checking the elements</button>
+        </div>
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For adding the elements in the
+                hashset use add() method</p>
+              <p class="card-text"><b>.add("element")</b></p>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For checking the elements in the
+                hashset use contains() method.</p>
+              <p class="card-text"><b>.contains("element");</b></p>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Removing And Sorting the elements</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(255, 239, 209);">
+              <p class='card-text' style='font-size: medium;font-style: oblique'>For removing the elements in the
+                hashset use remove() method, clear() method</p>
+              <p class="card-text"><b>remove()- </b>is used for the removing the selected elements from the hashset.</p>
+              <p class="card-text"><b>clear()- </b>is used for removing the entire elements from the hashset.</p>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Loops</button>
+        </div>
+        <div style=" font-size: medium; padding: 10px;">
+          <button type="button" class="btn btn-lg btn-block">For iterating the hashset is by using <b>for-each
+              loop</b></button>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231)">
+              <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+              <li class="card-text"> HashSet&lt;String&gt; fruits = new HashSet&lt;String&gt;();</li>
+              <li class="card-text">fruits.add("apple");</li>
+              <li class="card-text">fruits.add("banana");</li>
+              <li class="card-text"> fruits.add("guava");</li>
+              <li class="card-text">fruits.add("Mango");</li>
+              <li class="card-text">for (String i : fruits) {{'{'}}</li>
+              <pre>   System.out.println(i);</pre>
+              <li class="card-text">{{'}'}}</li><br>
+              <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+              <li class="card-text">apple</li>
+              <li class="card-text">guava</li>
+              <li class="card-text">mango</li>
+              <li class="card-text">banana</li>
+            </div>
+          </div>
+        </div>
+        <img src="assets\img\corejava\collections\hashset.JPG">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">City class</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <p>Create City class with following properties <br>
+        Create a tester class and create & print atleast 5 city objects in the tester class main method.</p>
+      <ol>
+        <li>name - The name of the city.(string type)</li>
+        <li>country - The country in which the city is located.(string type)</li>
+        <li>population - The total population in the city.(long type)</li>
+      </ol>
+    </div>
+
+  </div><!-- Ending of problem statement card body-->
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img src="assets/img/corejava/objectclass/city.jpg" alt="program">
+      <img src="assets/img/corejava/objectclass/citytester.jpg" alt="program">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+</div>

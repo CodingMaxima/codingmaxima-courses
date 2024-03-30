@@ -1,0 +1,394 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Java Features"
+      >Java Features</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="JVM"
+      >JVM</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="card-body">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            Java has some main important features
+          </button>
+        </div>
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center">
+              <b>Simple & secure</b>
+            </div>
+            <div
+              class="card-body"
+              style="
+                background-color: rgb(252, 227, 231);
+
+                font-style: oblique;
+              "
+            >
+              <li>
+                <b>Simple: </b>Java is easy to learn, understand, write, read &
+                its syntaxes are simple, clean,easy for understanding purpuse.
+              </li>
+              <br />
+              <li>
+                Java programs are easy for creation and implemention while
+                compared to other languages such as C, C++ because the complex
+                and confusion concepts in C and C++ like explicit pointers&
+                storage classes are not included in Java
+              </li>
+              <br />
+              <li>
+                <b>Secure :</b> In todays's generation security was the most
+                important for every application. In java the secure features
+                enable us to develop virus free, temper free system. Java
+                program always runs in Java runtime environment with almost null
+                interaction with system OS,so it is more secure.
+              </li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center">
+              <b>Platform Independent </b>
+            </div>
+            <div
+              class="card-body"
+              style="
+                background-color: rgb(229, 253, 253);
+
+                font-style: oblique;
+              "
+            >
+              <li>
+                Java is an platform independent language means suports the
+                WORA(Write Once And Run Anywhere) i.e., the programs written on
+                one system can be easily executed on the other operating
+                systems/ machine without any modifications.
+              </li>
+              <br />
+              <li>
+                Java source code is compiled using Java Compiler. The compiler
+                converts the source code into an intermediate code called the
+                byte code. The JVM (Java Virtual Machine) converts this byte
+                code into the machine-dependent form. The JVM can execute byte
+                code on any platform or operating system on which it is present.
+              </li>
+              <br />
+              <li>
+                Few examples of platform independent are Windows, Linux, Sun
+                Solaris, Mac/OS, etc.
+              </li>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Object Oriented</b></div>
+            <div
+              class="card-body"
+              style="background-color: rgb(229, 253, 253); font-style: oblique"
+            >
+              <li>
+                Object Oriented means one can organize the software as a
+                combination of different types of objects which has both data
+                and behavior
+              </li>
+              <br />
+              <li>
+                Java is an fully Object Oriented programming language & programs
+                are developed by using the Objects and classes
+              </li>
+              <br />
+              <li>
+                Oops has some basic important concepts such as Inheritance,
+                Polymorphism, Abstraction, Encapsulation
+              </li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>High Performance</b></div>
+            <div
+              class="card-body"
+              style="background-color: rgb(252, 227, 231); font-style: oblique"
+            >
+              <li>
+                JIT(Just In Time compiler) enables high performance in java. It
+                converts byte code into the machine code machine language and
+                then JVM(Java Virtual Machine) starts execution.The execution
+                speed is more comparitively to other languages.
+              </li>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Multi Threaded</b></div>
+            <div
+              class="card-body"
+              style="background-color: rgb(252, 227, 231); font-style: oblique"
+            >
+              <li>
+                A flow of execution is known as thread. JVM creates thread which
+                is called main thread. User can create multiple threads by
+                extending the thread class by implementing the runable
+                interface. More than one task perform simultaneously.
+              </li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center">
+              <b>Dynamic and extensable</b>
+            </div>
+            <div
+              class="card-body"
+              style="background-color: rgb(229, 253, 253); font-style: oblique"
+            >
+              <li>
+                During run time the program is in executable position by link up
+                with some class libraries, objects and methods
+              </li>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Distributed</b></div>
+            <div
+              class="card-body"
+              style="background-color: rgb(229, 253, 253); font-style: oblique"
+            >
+              <li>
+                It has the facility to share single unit to different users &
+                creating an network connection is easy by using this language
+              </li>
+            </div>
+          </div>
+
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Robust</b></div>
+            <div
+              class="card-body"
+              style="background-color: rgb(252, 227, 231); font-style: oblique"
+            >
+              <li>
+                Robust means it can handle both the run-time errors and complie
+                time errors as it checks the code during the compile and
+                runtime. If any runtime error occurs is identified by the JVM it
+                will not pass the program directly to the basic system. Instead,
+                it will immediately terminate the program & stop's it from
+                causing any harm to the system. Java has a strong memory
+                management system & also supports the concepts of garbage
+                collection and exception handling.
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="card-body">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            JVM(Java Virtual Machine) is an engine which provides runtime
+            environment to run Java Code or applications.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            JRE(Java Runtime Environment) is the implementation of Java Virtual
+            Machine (JVM), which converts the bytecode, interprets the code, and
+            executes it.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            Java applications are called WORA (Write Once Run Anywhere) means a
+            programmer can develop Java code on one system and can run it on
+            other systems without doing any modifications on the program because
+            of JVM.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            The compiler compiles the Java file into a Java .class file(contains
+            byte-code), then that .class file is input into the JVM, which loads
+            and executes the class file.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            The JVM Architecture was shown in the below image.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            The JVM Architecture was divided into 3 main subparts
+            <li>1.ClassLoader</li>
+            <li>2.Runtime Data Area</li>
+            <li>3.Execution Engine</li>
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <b>ClassLoader: </b>It was the subsystem of JVM helps in loading the
+            class files. Whenever we are running the program first it is loaded
+            by classloader.It has 3 major functions<b>
+              Loading , Linking, Initializing</b
+            >.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <p>
+              <b>Loading:</b> In this the classes will be loaded by this
+              component. BootStrap ClassLoader, Extension ClassLoader,
+              Application ClassLoader are help in achieving the loading of the
+              class files.</p>
+              <li>
+                <b>BootStrap ClassLoader: </b> It is responsible for loading
+                classes from the bootstrap classpath which are <b>rt.jar</b>.
+                Highest priority will be given to this loader compared to other
+                loaders.
+              </li>
+              <br />
+              <li>
+                <b>Extension ClassLoader :</b> It is responsible for loading
+                classes which are inside the ext folder (jre\lib).
+              </li>
+              <br />
+              <li>
+                <b>Application ClassLoader :</b> It is responsible for loading
+                Application Level Classpath, path mentioned Environment
+                Variable, etc.
+              </li><br>
+           
+            <p>
+              <b>Linking :</b> For linking the class files first it will verify
+              the class files, next prepare, resolve.</p>
+              <li>
+                <b>Verify :</b> Bytecode verifier will verifies whether the
+                generated bytecode is proper or not if the verification fails
+                then we will get the verification error.
+              </li>
+              <br />
+              <li>
+                <b>Prepare :</b> For all static variables memory will be
+                allocated and assigned with default values.
+              </li>
+              <br />
+              <li>
+                <b>Resolve :</b> All symbolic memory references are replaced
+                with the original references from Method Area.
+              </li><br>
+          
+            <p>
+              <b>Initialization: </b>In this all static variables will be
+              assigned with the original values & the static block will be
+              executed.
+            </p>
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <p><b>RunTime Data Area: </b>It contains the following</p>
+            <li>
+              Method Area: All the class-level data will be stored here
+              including static variables. As per JVM there is only one method
+              area & it acts like an Shared resourse.
+            </li>
+            <br />
+            <li>
+              Heap Area: The information of all the objects are stored in this.
+            </li>
+            <br />
+            <li>
+              Stack Area : It stores the local variables & their partial
+              results. Each thread has its own JVM stack which is created
+              simultaneously when the thread is created. A new frame is created
+              whenever a method is called and it is deleted when method
+              invocation process is completes.
+            </li>
+            <br />
+            <li>
+              PC Registers:It stores the address of the JVM instructions which
+              is currently executing. In Java, each thread has its separate PC
+              register.
+            </li>
+            <br />
+            <li>
+              Native Method stacks: It holds native method information. For
+              every thread a separate native method stack will be created.
+            </li>
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <p>
+              <b>Execution Engine: </b>The bytecode which is assigned to the
+              Runtime Data Area will be executed by the Execution Engine. The
+              Execution Engine reads the bytecode and executes it line by
+              line.It contains(Interpreter, JIT, Garbage collector)</p>
+              <li>
+                <b>Interpreter: </b>It interprets the bytecode line by line and
+                then executes. The disadvantage here is that when one method is
+                called multiple times then every time interpretation is
+                required.
+              </li>
+              <br />
+              <li>
+                <b>JIT(Just-In-Time Compiler) : </b>It is used to increase the
+                efficiency of an interpreter. It compiles the entire bytecode &
+                changes it to native code so whenever the interpreter sees
+                repeated method calls, JIT provides direct native code for that
+                part so re-interpretation is not required, thus efficiency is
+                improved.
+              </li>
+              <br />
+              <li>
+                <b>Garbage Collector: </b> It will destroys un-referenced
+                objects.
+              </li>
+          
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <b>Java Native Interface (JNI):</b> It is an interface which
+            interacting with the Native Method Libraries and provides the Native
+            Libraries required for the Execution Engine.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">
+            <b>Native Method Libraries: </b>This is a collection of the Native
+            Libraries which is required for the Execution Engine.
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

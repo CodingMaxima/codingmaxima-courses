@@ -1,0 +1,74 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Hibernate Dialect</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            Dialect is a class that acts as a bridge between Java JDBC types and SQL types </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            The Dialect specifies the type of database used in hibernate so that hibernate generate
+                            appropriate type of SQL statements.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">For connecting any hibernate application with
+                            the database, it is required to provide the configuration of SQL dialect.</button>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info"> List of SQL Dialects in Hibernate </button>
+
+                        </div>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>RDBMS</th>
+                                    <th>Dialects</th>
+
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>Oracle (any version)</td>
+                                <td>org.hibernate.dialect.OracleDialect</td>
+                            </tr>
+                            <tr>
+                                <td>Oracle9i</td>
+                                <td>org.hibernate.dialect.Oracle9iDialect</td>
+                            </tr>
+                            <tr>
+                                <td>MySQL</td>
+                                <td>org.hibernate.dialect.MySQLDialect </td>
+                            </tr>
+                            <tr>
+                                <td>DB2</td>
+                                <td>org.hibernate.dialect.DB2Dialect</td>
+                            </tr>
+                            <tr>
+                                <td>Sybase</td>
+                                <td>org.hibernate.dialect.SybaseDialect</td>
+                            </tr>
+                            <tr>
+                                <td>PostgreSQL</td>
+                                <td>org.hibernate.dialect.PostgreSQLDialect</td>
+                            </tr>
+                            <tr>
+                                <td>Pointbase</td>
+                                <td>org.hibernate.dialect.PointbaseDialect</td>
+                            </tr>
+                            <tr>
+                                <td>Firebird</td>
+                                <td>org.hibernate.dialect.FirebirdDialect</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

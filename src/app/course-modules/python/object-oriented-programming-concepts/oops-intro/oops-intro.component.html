@@ -1,0 +1,111 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Oops Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="problems">problems</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Videos">Animation Videos</span>
+
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block"> OOPS means Object Oriented Programming. It
+                            was an programming model which uses classes and objects in program & implements the real
+                            world systems in programming. The main aim is to bind the data and functions together so
+                            that no other parts of code can access this data.</button>
+                        <button type="button" class="btn btn-lg btn-block">In OOPs there are some main pillars were
+                            there<b> (class, object, encapsulation, inheritance, polymorphism, abstraction)</b></button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Class</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;'> It is an collection of objects. It is a
+                                logical set-up which has specific methods and attributes.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;'><b><u>Ex:- </u></b> If a student class
+                                were there their must be some attributes and methods like name, id, email, marks, branch
+                                college_name, etc..</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>object</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;'>It is an set-up which has both state and
+                                behavior.It was like an real world set-ups.In python everything was an object. They have
+                                both attributes and methods.</p>
+                            <p style='font-size: medium; font-style: oblique;'><b><u>EX:- </u></b> peacock, It was an
+                                object.</p>
+                            <p style='font-size: medium; font-style: oblique;'> It has state (color, age, name,species)
+                                and behavior (dancing, response, singing)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Encapsulation</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;'> It is one of the main concept in oops.
+                                It helps to wrap the data and methods into the single unit. It protects from the others
+                                classes to access the methods and attributes in the current class. We can't access the
+                                other functions data easily. so it is also called as data binding.</p>
+                            <p style='font-size: medium; font-style: oblique;'> <b><u>Ex:- </u></b> In the student
+                                class, there are some attributes and methods like name , marks, id etc.. Once we make
+                                the attribute as private we can't modify the data into other class. Once make the marks
+                                as private then others can’t be modified in the other class easily. In python private is
+                                declared with _ underscore or __underscore </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Inheritance</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;'>It is defined as obtaining the properties
+                                and behaviour of the parent class to the child class.The main purpose of using the
+                                inheritance is for code re-usability I.e., we no need to write the code again and again
+                                can use from the already existing code.</p>
+                            <p style='font-size: medium; font-style: oblique;'><b><U>Ex:- </U></b> From a country class
+                                , we are creating the a city class. Then we need
+                                to mention common attributes and methods again and again in the city class just need to
+                                add those attributes and methods which are specific to the city.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-group">
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Polymorphism</b></div>
+                            <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                <p style='font-size: medium; font-style: oblique;'>It is used to perform the single task
+                                    in different ways.</p>
+                                <p style='font-size: medium; font-style: oblique;'><b><u>Ex:- </u></b>The Teacher acts
+                                    as an teacher for students in class, acts as colleague/friend in staff room and
+                                    father/ husband in the home.</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                            <div class="card-header text-center"><b>Abstraction</b></div>
+                            <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                <p style='font-size: medium; font-style: oblique;'>It is an mechanism of hiding the
+                                    internal details and shows only the functionalities</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

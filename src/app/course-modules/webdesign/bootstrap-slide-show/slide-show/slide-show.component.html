@@ -1,0 +1,129 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Bootstrap Slide Show</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Code">Code</span>
+        <span class="global-tab-pill" id="two-a" [ngClass]="(elementId=='two-a')?'active':''" (click)="tabChange($event)"
+            data-hover="Output">Output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <ul>
+                <li>Intro</li>
+            </ul>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        
+        <div class="card-group">
+            <img src="assets/img/bootstrap/sports_code.png" class="card"
+            style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;"
+            alt="sports_code.png">
+        </div>
+    </div>
+    <div *ngIf="elementId=='two-a'">
+        <h1 class="text-center">Sports</h1>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item border text-center">
+            <div class="wrapper">
+                <div class="card-group ms-5 ps-5 me-5 pe-5">
+                <div class="card">
+                    <img src="assets/img/bootstrap/cricket.jpg" class="card-img-top" alt="cricket.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Cricket </h5>
+                    <p class="card-text">
+                        <b>Cricket</b> is a bat-and-ball game played between two teams of eleven players 
+                        on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at 
+                        each end, each comprising two bails balanced on three stumps
+                    </p>
+                    <p>
+                        The batting side scores runs by striking the ball bowled at one of the wickets with
+                        the bat and then running between the wickets, while the bowling and fielding side tries
+                        to prevent this (by preventing the ball from leaving the field, and getting the ball to 
+                        either wicket) and dismiss each batter (so they are "out").
+                    </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/bootstrap/tennis.jpg" class="card-img-top" alt="tennis.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Tennis</h5>
+                    <p class="card-text">
+                        <b>Tennis</b> is a racket sport that is played either individually against a single opponent
+                        (singles) or between two teams of two players each (doubles).
+                    </p>
+                    <p>
+                        Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered
+                        with felt over or around a net and into the opponent's court. The object of the game is to manoeuvre
+                        the ball in such a way that the opponent is not able to play a valid return. The player who is unable 
+                        to return the ball validly will not gain a point, while the opposite player will.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item border text-center active">
+            <div class="wrapper">
+                <div class="card-group ms-5 ps-5 me-5 pe-5">
+                <div class="card">
+                    <img src="assets/img/bootstrap/football.jpg" class="card-img-top" alt="football.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Football</h5>
+                    <p class="card-text">
+                        <b>Foot Ball</b> is a family of team sports that involve, to varying degrees,
+                        kicking a ball to score a goal. Unqualified, the word football normally means 
+                        the form of football that is the most popular where the word is used.
+                    </p>
+                    <p>
+                        Sports commonly called football include association football (known as soccer in North America, 
+                        Ireland and Australia); gridiron football (specifically American football or Canadian football); 
+                        Australian rules football; rugby union and rugby league; and Gaelic football.These various forms 
+                        of football share to varying extent common origins and are known as "football codes".
+                    </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/bootstrap/volleyball.jpg" class="card-img-top" alt="volleyball.jpg">
+                    <div class="card-body">
+                    <h5 class="card-title">Volley Ball</h5>
+                    <p class="card-text">
+                        <b>Volley Ball</b> Volleyball is a team sport in which two teams of six players are separated by a net. 
+                        Each team tries to score points by grounding a ball on the other team's court under organized rules.
+                    </p>
+                    <p>
+                        It has been a part of the official program of the Summer Olympic Games since Tokyo 1964. Beach volleyball 
+                        was introduced to the programme at the Atlanta 1996 Summer Olympics. The adapted version of volleyball at 
+                        the Summer Paralympic Games is sitting volleyball.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body">
+            <app-video-cmp [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+</div>

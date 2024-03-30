@@ -1,0 +1,50 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Relation Mapping</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="One-To-One Relation Mapping">One-To-One Relation Mapping</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="One-To-Many Relation Mapping">One-To-Many Relation Mapping</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+            data-hover="Many-To-Many Relation Mapping">Many-To-Many Relation Mapping</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <li> It’s a relationship where a record in one table is associated with exactly one record in another table.</li>
+                        <li> Foreign key of the table exactly associated with only one primary key of that table.</li>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <img class="program-img-fit" src="assets/img/dbms/relations/onetoone.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <img class="program-img-fit" src="assets/img/dbms/relations/onetomany.jpg">
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <img class="program-img-fit" src="assets/img/dbms/relations/manytoone.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img class="program-img-fit" src="assets/img/dbms/relations/manytomany.jpg">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,191 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Methods Examples</h3>
+
+  <div class="tab-title tab-slide-effect">
+    <span
+      class="tab-pill"
+      id="methodcalling-type1"
+      [ngClass]="elementId == 'methodcalling-type1' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Method Calling"
+      >Method Calling</span
+    >
+    <span
+      class="tab-pill"
+      id="methodcalling-type3"
+      [ngClass]="elementId == 'methodcalling-type3' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Method calling with parameters"
+      >Method calling with parameters</span
+    >
+    <span
+      class="tab-pill"
+      id="methodcalling-type2"
+      [ngClass]="elementId == 'methodcalling-type2' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Method calling with Return Type"
+      >Method calling with Return Type</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'methodcalling-type1'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="program"
+        [ngClass]="elementId2 == 'program' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Program"
+        >Program</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+      <span
+        class="global-tab-pill"
+        id="practice"
+        [ngClass]="elementId2 == 'practice' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Practice"
+        >Practice</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'program'">
+      <div class="card-body border-warning" style="border: 2px solid">
+        <img src="assets/img/corejava/methods/calling.JPG" alt="program" />
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData1"
+        [audioData]="audioData1"
+        ></app-video-cmp>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'practice'">
+      <div class="card-body">
+        <app-compiler-cmp
+          [problemId]="'addtion'"
+          [languageId]="'JAVA8'"
+        ></app-compiler-cmp>
+      </div>
+    </div>
+  </div>
+  <!-- Ending of problem statement-->
+
+  <div *ngIf="elementId == 'methodcalling-type3'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="program"
+        [ngClass]="elementId2 == 'program' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Program"
+        >Program</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+      <span
+        class="global-tab-pill"
+        id="practice"
+        [ngClass]="elementId2 == 'practice' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Practice"
+        >Practice</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'program'">
+      <div class="card-body border-warning" style="border: 2px solid">
+        <img src="assets/img/corejava/methods/param.JPG" alt="program" />
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp
+          [url]="videoData2"
+          [audioData]="audioData2"
+        ></app-video-cmp>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'practice'">
+      <div class="card-body">
+        <app-compiler-cmp
+          [problemId]="'addtion'"
+          [languageId]="'JAVA8'"
+        ></app-compiler-cmp>
+      </div>
+    </div>
+  </div>
+  <!-- Ending of problem statement-->
+
+  <div *ngIf="elementId == 'methodcalling-type2'">
+    <div class="global-tab-title global-tab-slide-effect">
+      <span
+        class="global-tab-pill"
+        id="program"
+        [ngClass]="elementId2 == 'program' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Program"
+        >Program</span
+      >
+      <span
+        class="global-tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+      <span
+        class="global-tab-pill"
+        id="practice"
+        [ngClass]="elementId2 == 'practice' ? 'active' : ''"
+        (click)="subTabChange($event)"
+        data-hover="Practice"
+        >Practice</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'program'">
+      <div class="card-body border-warning" style="border: 2px solid">
+        <img src="assets/img/corejava/methods/return.jpg" alt="program" />
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'animation'">
+      <div class="card-body">
+        <app-video-cmp 
+        [url]="videoData3"
+        [audioData]="audioData3"
+        ></app-video-cmp>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2 == 'practice'">
+      <div class="card-body">
+        <app-compiler-cmp
+          [problemId]="'addtion'"
+          [languageId]="'JAVA8'"
+        ></app-compiler-cmp>
+      </div>
+    </div>
+  </div>
+</div>

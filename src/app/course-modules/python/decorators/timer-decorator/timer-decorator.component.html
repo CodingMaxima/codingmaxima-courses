@@ -1,0 +1,20 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Timer Decorator</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation Video">Animation Video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body border border-warning">
+            <img class="program-img-fit" src="assets/img/python/decorators/timer_decorator.jpg" alt="program">
+        </div>
+        <div class="card-body border border-warning">
+            <img class="program-img-fit" src="assets/img/python/decorators/timer_decorator_out.jpg" alt="program">
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <h1>Animation Video Coming soon</h1>
+    </div>
+</div>

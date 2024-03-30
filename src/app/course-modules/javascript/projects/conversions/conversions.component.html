@@ -1,0 +1,123 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">centimeters/feet conversions</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">Project</div>
+      <img
+        style="margin: 0 auto; padding-top: 10px; height: auto; width: 100%"
+        src="assets/img/javascript/projects/cmfeet.gif"
+      />
+
+      <div class="content-heading mt-4">Project Description</div>
+      <div class="content-text">
+       The "Centimeter to Feet and Feet to Centimeter Converter" is a
+        web-based application designed to provide users with a seamless and
+        efficient way to convert length measurements between centimeters and
+        feet. This project offers a clean and user-friendly interface, making it
+        easy for users to input values in one unit and instantly see the
+        equivalent measurement in the other unit.
+      </div>
+      <div class="content-heading mt-4">Features</div>
+
+      <div class="content-text">
+        <li>
+          <b>Stylish Header:</b> The application starts with a centered and
+          visually appealing header that reads "Conversions Application-1,"
+          indicating its purpose and name.
+        </li>
+
+        <li>
+          <b>User-Friendly Interface:</b> The user interface is designed with
+          simplicity in mind. The centimeters and feet input fields are
+          accompanied by clear labels that provide information on the conversion
+          ratios (1 cm = 0.0328084 feet and 1 foot = 30.48 cm).
+        </li>
+
+        <li>
+          <b>Real-Time Conversion:</b> As users input values in either the
+          "Centimeters" or "Feet" field, the application performs real-time
+          conversion calculations using the specified conversion factors. The
+          converted value is immediately displayed in the corresponding input
+          field.
+        </li>
+
+        <li>
+          <b>Responsive Design: </b>The application's layout is responsive,
+          ensuring that it functions and looks great across various screen sizes
+          and devices, including desktops, tablets, and mobile phones.
+        </li>
+
+        <li>
+          <b>Conversion Logic:</b> The JavaScript code embedded in the project
+          handles the conversion process. When users input a value in the
+          "Centimeters" field, the code calculates the equivalent value in feet
+          and updates the "Feet" field accordingly. Likewise, when users input a
+          value in the "Feet" field, the code calculates the corresponding value
+          in centimeters and updates the "Centimeters" field.
+        </li>
+
+        <li>
+          <b>Decimal Precision:</b> The application ensures that the converted
+          values are presented with appropriate precision. Converted feet values
+          are displayed with two decimal places, while converted centimeters
+          values are displayed without decimal places to reflect their
+          whole-number nature.
+        </li>
+
+        <li>
+          <b>CSS Styling:</b> The CSS styles applied to the header enhance its
+          appearance. The font size, weight, and alignment contribute to a
+          professional and visually pleasing design.
+        </li>
+      </div>
+      <div class="content-heading">Implementation</div>
+      <div class="content-text">
+        <li>
+          This project is implemented using HTML, CSS, and JavaScript. HTML
+          provides the structure, including the input fields and header. CSS
+          enhances the visual appeal of the header, while JavaScript handles the
+          dynamic conversion logic in real-time.
+        </li>
+
+        <li>
+          The "Centimeter to Feet and Feet to Centimeter Converter" project
+          caters to users who frequently work with measurements in both metric
+          and imperial units. Whether used for educational purposes,
+          construction projects, or general conversions, this application
+          streamlines the process of converting lengths between centimeters and
+          feet, fostering a better understanding of these two measurement
+          systems.
+        </li>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

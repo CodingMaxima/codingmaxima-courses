@@ -1,0 +1,346 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">CSS Properties</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Basic CSS Properties">Basic CSS Properties</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Advanced CSS Properties">Advanced CSS Properties</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''"
+            (click)="tabChange($event)" data-hover="Practice">Practice</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="data">
+                <ul>
+               <li><b>CSS (Cascading Style Sheets)</b> properties are used to style and format the appearance of HTML elements on a webpage. </li>
+               <li>They allow you to control various aspects of how elements are displayed, such as their colors, sizes, positions, borders, and more.</li>
+               <p><b><u>Here are some common types of CSS properties:</u></b></p>
+               
+               <h4><u>1.Color and Background</u></h4>
+               </ul>  
+               <div class="course-col">
+                <table >
+                    <tr class="cell-highlight">
+                        <th class="property">Property</th>
+                        <th class="Description">Description</th>
+                        <th class="Values">Values</th>
+                      </tr>
+                    <tr>
+                      <td class="sub-heading">color</td>
+                      <td>Sets the color of a text</td>
+                      <td>RGB, hex, keyword</td>
+                    </tr>
+                    <tr>
+                        <td class="sub-heading">background-color</td>
+                        <td>Sets the background color of an element.</td>
+                        <td>hexadecimal value, rgb value, or as a named color.</td>
+                    </tr>
+                    <tr>
+                        <td class="sub-heading">background-image</td>
+                        <td>Sets one or multiple background images for an element.</td>
+                        <td>URL of the image location or named color.</td>
+                    </tr>
+                  </table>
+            </div> 
+            <h3><b><u>Example:</u></b></h3>
+           <img class="image" src="assets/img/web-designing/css/color&background.jpg">
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="data">
+            <ul>
+           <h4><u>2.Fonts and Text</u></h4>
+           </ul>
+           <div class="course-col">
+            <table >
+                <tr class="cell-highlight">
+                    <th class="property">Property</th>
+                    <th class="Description">Description</th>
+                    <th class="Values">Values</th>
+                  </tr>
+                <tr>
+                  <td class="sub-heading">font-family</td>
+                  <td>Specifies the font family for text</td>
+                  <td>family-name, generic-family, inherit</td>
+                </tr>
+                <tr>
+                    <td class="sub-heading">font-size</td>
+                    <td>Specifies the font size of text</td>
+                    <td>xx-small, x-small, small, medium, large, x-large, xx-large, smaller, larger, length, %, inherit</td>
+                </tr>
+                <tr>
+                    <td class="sub-heading">font-weight</td>
+                    <td>Specifies the weight of a font</td>
+                    <td>normal, bold, bolder, lighter,
+                        100, 200, 300, 400, 500, 600, 700, 800, 900, inherit
+                        Careful, many of these are not supported!</td>
+                </tr>
+                <tr>
+                    <td class="sub-heading">text-align</td>
+                    <td>Aligns the text in an element</td>
+                    <td>left, right, center, justify</td>
+                </tr>
+                <tr>
+                    <td class="sub-heading">text-decoration</td>
+                    <td>Adds decoration to text</td>
+                    <td>none, underline, overline, line-through</td>
+                </tr>
+              </table>
+        </div>  
+        <h3><b><u>Example:</u></b></h3>
+       <img class="image" src="assets/img/web-designing/css/fontandtext.jpg">
+    </div>  
+</div>
+<div class="card-body">
+    <div class="data">
+        <ul>
+       <h4><u>3.Box Model</u></h4>
+       </ul>
+       <div class="course-col">
+        <table >
+            <tr class="cell-highlight">
+                <th class="property">Property</th>
+                <th class="Description">Description</th>
+                <th class="Values">Values</th>
+              </tr>
+            <tr>
+              <td class="sub-heading">margin</td>
+              <td>Sets the space outside an element.</td>
+              <td>margin-top,margin-right,margin-bottom,margin-left</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">padding</td>
+                <td>Sets the space inside an element.</td>
+                <td>top, right, bottom, and/or left</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">border</td>
+                <td>Defines the border properties (width, style, color)</td>
+                <td>top, right, bottom, and/or left</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">width and height</td>
+                <td>Sets the width and height of an element</td>
+                <td>numeric value (like pixels, (r)em, percentages)</td>
+            </tr>
+          </table>
+    </div>  
+    <h3><b><u>Example:</u></b></h3>
+   <img class="image" src="assets/img/web-designing/css/boxmodel.jpg">
+</div>
+</div>
+<div class="card-body">
+    <div class="data">
+        <ul>
+       <h4><u>4.Layout</u></h4>
+       </ul>
+       <div class="course-col">
+        <table >
+            <tr class="cell-highlight">
+                <th class="property">Property</th>
+                <th class="Description">Description</th>
+                <th class="Values">Values</th>
+              </tr>
+            <tr>
+              <td class="sub-heading">display</td>
+              <td>Specifies how an element is displayed.</td>
+              <td>block,inline-block,none,flex,grid</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">position</td>
+                <td>Sets the positioning method of an element.</td>
+                <td>static,relative,fixed,absolute,sticky</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">float</td>
+                <td>Allows elements to float to the left or right.</td>
+                <td>right,left,none</td>
+            </tr>
+          </table>
+    </div>  
+    <h3><b><u>Example:</u></b></h3>
+   <img class="image" src="assets/img/web-designing/css/layout.jpg">
+</div>
+</div>
+
+        </div>
+    </div>
+
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="data">
+                <ul>
+               <li>Advanced CSS properties go beyond the basics and allow you to create more complex and sophisticated styles for your web pages.</li>
+               <p><b><u>Here are some advanced CSS properties:</u></b></p>
+               
+               <h4><u>1.Flexbox</u></h4>
+               </ul>  
+               <div class="course-col">
+                <table >
+                    <tr class="cell-highlight">
+                        <th class="property">Property</th>
+                        <th class="Description">Description</th>
+                        <th class="Values">Values</th>
+                      </tr>
+                    <tr>
+                        <td class="sub-heading">display-flex</td>
+                        <td>Enables a flex container.</td>
+                        <td><b>flex</b></td>
+                    </tr>
+                    <tr>
+                        <td class="sub-heading">flex-direction</td>
+                        <td>Specifies the direction of the main axis.</td>
+                        <td><b>row | row-reverse | column | column-reverse</b></td>
+                    </tr>
+                    <tr>
+                        <td class="sub-heading">justify-content</td>
+                        <td>Aligns items along the main axis.</td>
+                        <td><b>flex-start | flex-end | center | space-between | space-around | space-evenly</b></td>
+                    </tr>
+                    <tr>
+                        <td class="sub-heading">align-items</td>
+                        <td>Aligns items along the cross axis.</td>
+                        <td><b>flex-start | flex-end | center | baseline | stretch</b></td>
+                    </tr>
+                  </table>
+            </div> 
+            <h3><b><u>Example:</u></b></h3>
+           <img class="image" src="assets/img/web-designing/css/flexbox.jpg">
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="data">
+            <ul>
+           <h4><u>2.Grid Layout</u></h4>
+           </ul>
+           <div class="course-col">
+            <table >
+                <tr class="cell-highlight">
+                    <th class="property">Property</th>
+                    <th class="Description">Description</th>
+                    <th class="Values">Values</th>
+                  </tr>
+                <tr>
+                  <td class="sub-heading">display-grid</td>
+                  <td> Enables a grid container.</td>
+                  <td><b>grid</b></td>
+                </tr>
+                <tr>
+                    <td class="sub-heading">grid-template</td>
+                    <td>Defines the number and size of rows and columns.</td>
+                    <td><b>grid-template-rows and grid-template-columns</b></td>
+                </tr>
+                <tr>
+                    <td class="sub-heading">grid-gap</td>
+                    <td>Specifies the gap between grid items.</td>
+                    <td><b>grid-gap or gap</b></td>
+                </tr>
+              </table>
+        </div>  
+        <h3><b><u>Example:</u></b></h3>
+       <img class="image" src="assets/img/web-designing/css/gridlayout.jpg">
+    </div>  
+</div>
+<div class="card-body">
+    <div class="data">
+        <ul>
+       <h4><u>3.Box Border Model</u></h4>
+       </ul>
+       <div class="course-col">
+        <table >
+            <tr class="cell-highlight">
+                <th class="property">Property</th>
+                <th class="Description">Description</th>
+                <th class="Values">Values</th>
+              </tr>
+            <tr>
+              <td class="sub-heading">border</td>
+              <td>A shorthand property that combines <b>border-width</b>, <b>border-style</b>, and <b>border-color</b> in one declaration.</td>
+              <td><b>numeric value</b> (like pixels, percentages), <b>style name</b> or <b>as a named color</b>.</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">border-radius</td>
+                <td>Defines the radius of the border corners, creating rounded corners.</td>
+                <td><b>numeric value</b> (like pixels, percentages)</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">box-shadow</td>
+                <td>While not strictly a border property, box-shadow can be used to create a shadow effect, 
+                    simulating multiple borders or enhancing the appearance of the element.(width, color)</td>
+                <td><b>numeric value</b> (like pixels, percentages) or <b>as a named color</b>.</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">border-image</td>
+                <td>Allows you to use an image as the border, rather than a simple color or style.</td>
+                <td><b>Requiered image</b> or <b>as a named color</b>.</td>
+            </tr>
+            <tr>
+                <td class="sub-heading">box-shadow</td>
+                <td>The <b>box-shadow</b> property in CSS is used to add a shadow effect to an element. <br>
+                    <b><u>Syntax:</u></b> box-shadow: h-offset v-offset blur spread color inset;</td>
+                <td><b>h-offset</b>(horizontal offset) <br> <b>v-offset</b>(vertical offset) <b>blur</b>(numeric value) <b>spread</b>(numeric value) <b>color</b>(named of the color or color code)</td>
+            </tr>
+          </table>
+    </div>  
+    <h3><b><u>Example:</u></b></h3>
+   <img class="image" src="assets/img/web-designing/css/boxborder.jpg">
+</div>
+</div>
+<div class="card-body">
+    <div class="data">
+        <ul>
+       <h4><u>4.Selectors</u></h4>
+       </ul>
+       <div class="course-col">
+        <table >
+            <tr class="cell-highlight">
+                <th class="property">Property</th>
+                <th class="Description">Description</th>
+                <th class="Values">Values</th>
+              </tr>
+              <tr>
+                <td class="sub-heading">box-hover</td>
+                <td>the <b>:hover</b> pseudo-class is used to select and style an element when the user hovers over it with the mouse.</td>
+                <td><b>named of the color</b> or <b>color code</b></td>
+            </tr>
+            <tr>
+                <td class="sub-heading">nth-child(n)</td>
+                <td>The <b>:nth-child</b> pseudo-class is used to select and 
+                    style elements based on their position within a parent container. <br>
+                    <b><u>Syntax:</u></b> :nth-child(an+b); <br>
+                    <p><b>n</b> is the cycle size (e.g., every 2nd element, every 3rd element).</p>
+                    <p><b>a</b> is the multiplier.</p>
+                    <p><b>b</b>  is the offset or starting point.</p>
+                </td>
+                <td><b>even , odd or number value</b></td>
+            </tr>
+          </table>
+    </div>  
+    <h3><b><u>Example:</u></b></h3>
+   <img class="image" src="assets/img/web-designing/css/layout-nth-child.jpg">
+</div>
+</div>
+
+        </div>
+    </div>
+
+    
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="''"></app-video-cmp>
+        </div>
+    </div>
+    <div *ngIf="elementId == 'four'">
+        <div class="card-body">
+            
+	
+                
+        </div>
+      </div>
+</div>

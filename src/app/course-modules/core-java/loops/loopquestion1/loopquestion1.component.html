@@ -1,0 +1,140 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Question-1</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <p class="block">
+        Here the problem is to print the 1 to 10 numbers using the "for" loop
+        and "while" loop.
+      </p>
+
+      <p class="block">
+        <li>
+          From the above given problem we have to print the numbers starting
+          from 1 upto 10 numbers using the loops.
+        </li>
+        <br />
+        <li>Here is the problems explanation using for loop</li>
+        <br />
+        <li>
+          Step-1: for using the <b>'For Loop'</b> we have to 3 parts i.e.,
+          <b>initialization, condition, increment or decrement.</b><br />
+          So first for solving we have to initialize with some number. already
+          in the problem itself said that should have to print 1 to 10 numbers
+          so it should have to start from number 1 then the initialization
+          number will become 1.<br /><br />
+          secondly we need condition from the given problem have to print
+          numbers from 1-10. already it was started from 1 as initial point have
+          to end when it reaches 10 so we can take &lt;= symbol then the
+          condition will be like (i &lt; = 10).<br /><br />
+          third increament or decrement it was started from 1 so every time when
+          then condition becomes true i.e., when the numbers are less than 10
+          then it will increase the number every time upto the condition becomes
+          false .<br /><br />
+          Whenever the condition becomes false then the loop will stop iteration
+        </li>
+        <br />
+        <li>
+          Step-2: we got all the parts which we have to use for
+          <b> "FOR LOOP"</b> suppose we take variable as <b>i</b> then
+          initializer will be like <b>i = 1</b> condition is <b>i &lt;= 10</b>,
+          the increment value will be like <b>i++</b>
+        </li>
+        <br />
+        <li>
+          step-3: for the first iteration the value is 1 it will check the
+          condition i.e., 1 &lt;= 10 the condition is true so it will increase
+          the one number then the i will become 2.
+        </li>
+        <br />
+        <li>
+          step-4: the first condition became true so now the second iteration
+          will starts with initializer value as 2 it will check the condition
+          i.e., 2 &lt;= 10 the condition is true so it will increase the one
+          number then the i will become 3.
+        </li>
+        <br />
+        <li>
+          step-5: The second condition also became true so now the third
+          iteration will starts with initializer value as 3 it will check the
+          condition i.e., 3 &lt;= 10 the condition is true so it will increase
+          the one number then the i will become 4.
+        </li>
+        <br />
+        <li>
+          step-6: this iteration process will continues upto the condition
+          becomes false. whenever the i becomes 11 then the condition fails
+          because 11 is not less than or equal to 10. so the loop will stop
+          iterating and gives the result as <b>1 2 3 4 5 6 7 8 9 10</b>
+        </li>
+      </p>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <div class="card-group">
+        <div class="card border-primary" >
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que1_using_for.jpg"
+            alt="program"
+          />
+        </div>
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que1_using_while.jpg"
+            alt="program"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp [audioData]="audioData" [url]="''"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,198 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Employee - Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div
+                        style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">Design a Employee management system, using the
+                            following description. </button>
+
+                        <br>
+                        <button type="button" class="btn btn-lg btn-block">Write a Student class which is expected to be
+                            plain
+                            old Java objects (POJO classes) with getters and setters
+                            for each field. The class is also expected to have a toString method which will display
+                            all the fields of the object and their values in a human readable form.</button>
+                        <button type="button" class="btn btn-lg btn-block">Set up a Database to create Tables in your
+                            Database.</button>
+                        <button type="button" class="btn btn-lg btn-block">Design a Hibernate Configuration File Which
+                            is an XML
+                            File.
+                            This file contains the information regarding the database system you intend to use.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">Create a Mapping file that instructs
+                            Hibernate how to map
+                            the defined class or classes to the database tables.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">Create an Test/Application class with the
+                            main() method
+                            to run the application. We will use this application
+                            to save few Employee records and then we will apply CRUD operations on those records.
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Employee- Class</b></div>
+            <div class="card-body">
+                <li class="card-text"><b>Id</b> - make sure it should not be duplicate and should not be empty (hint: use "PRIMARY KEY CONSTRAINT").</li>
+                <li class="card-text"><B>name</B> - It should not be empty (hint: use "NOT NULL CONSTRAINT").</li>
+                <li class="card-text"><b>emailId</b> - it should not be duplicate (hint: use "Unique CONSTRAINT")</li>
+                <li class="card-text"><b>designation </b>- It should not be empty (hint: use "NOT NULL CONSTRAINT").</li>
+                <li class="card-text"><b>salary</b>- t should be in between greater than or equal to 12000 and less than or equal to 100000(hint: use "CHECK CONSTRAINT")</li>
+                <li class="card-text"><b>joining_date</b> - keep a fixed value for it. If you doesn't want to give an value for this particular column/for auto generating of the value without giving any manual values(hint: use "DEFAULT CONSTRAINT")</li>
+                <li class="card-text">With constructors, all getters and setters and toString methods </li>
+            </div>
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT follwing Data into Table</button>
+            </div>
+
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">id = 101</li>
+                        <li class="card-text">name = Jithendra </li>
+                        <li class="card-text">emailId = abc@gmail.com</li>
+                        <li class="card-text">designation = Developer</li>
+                        <li class="card-text">salary = 25000</li>
+                        <li class="card-text">joining_date = 2020-11-24.</li>
+
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data </b></div>
+                    <div class="card-body">
+                        <li class="card-text">id = 102</li>
+                        <li class="card-text">name = Gagan </li>
+                        <li class="card-text">emailId = def@gmail.com</li>
+                        <li class="card-text">designation = Senoir Developer</li>
+                        <li class="card-text">salary = 55000</li>
+                        <li class="card-text">joining_date = 2019-4-1.</li>
+
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">id = 103</li>
+                        <li class="card-text">name = Sushma </li>
+                        <li class="card-text">emailId = hgf@gmail.com</li>
+                        <li class="card-text">designation = Tester</li>
+                        <li class="card-text">salary = 35000</li>
+                        
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">id = 104</li>
+                        <li class="card-text">name = RekhaSri</li>
+                        <li class="card-text">emailId = RekhaSri@gmail.com</li>
+                        <li class="card-text">designation = Developer</li>
+                        <li class="card-text">salary = 45000</li>
+                        <li class="card-text">joining_date = 2019-12-12.</li>
+
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">id = 105</li>
+                        <li class="card-text">name = Sumana</li>
+                        <li class="card-text">emailId = Sumana1989@gmail.com</li>
+                        <li class="card-text">designation = Tester</li>
+                        <li class="card-text">salary = 50000</li>
+                        <li class="card-text">joining_date = 2019-12-01.</li>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        
+    </div>
+</div>
+<div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="subTabChange($event)"
+                data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+            <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="subTabChange($event)"
+                data-hover="Main(Testing)"> Main(Testing) Class</span>
+            <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+                (click)="subTabChange($event)" data-hover="Configuration file ">Configuration file</span>
+            <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''"
+                (click)="subTabChange($event)" data-hover="Pom.Xml file">Pom.Xml file</span>
+
+        </div>
+        <div class="card-group" *ngIf="elementId2=='pojo'">
+            <div class="card">
+                <h5 class="text-center card-title animate-charcter">Pojo Class</h5>
+                <div class="card-body">
+                    <img class="card-img-top" src="assets/img/hibernate/Constraints.example2.pojo.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="card-group" *ngIf="elementId2=='main'">
+            <div class="card">
+                <h5 class="text-center card-title animate-charcter">Main Class</h5>
+                <div class="card-body">
+                    <img class="card-img-top" src="assets/img/hibernate/Constraints.example2.main.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="card-group" *ngIf="elementId2=='configuration'">
+            <div class="card">
+                <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+                <div class="card-body">
+                    <img class="card-img-top" src="assets/img/hibernate/Constraints.example1.cfg.file.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="card-group" *ngIf="elementId2=='pom.xml'">
+            <div class="card">
+                <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+                <div class="card-body">
+                    <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+        <app-video-cmp [url]="''"></app-video-cmp>
+    </div>
+</div>

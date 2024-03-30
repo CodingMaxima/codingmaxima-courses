@@ -1,0 +1,201 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Trimorphic Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          A trimorphic number is a type of number that retains its own shape or
+          form when it is cubed. In other words, the last digits of the number's
+          cube are the same as the original number.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            <b>Example 1: </b><br />
+            let's consider the number 5. When 5 is cubed (5^3), the result is
+            125.<br />
+            If we look at the last digit of 125, it is 5, which is the same as
+            the original number.<br />
+            Therefore, 5 is a trimorphic number.
+          </p>
+        </button>
+
+        <button type="button" class="btn btn-lg btn-block">
+          <p><b>Example 2: </b></p>
+          <p>
+            let's take the number 4. When 4 is cubed (4^3), the result is 64.
+          </p>
+          <p>The last digit of 64 is 4, which matches the original number.</p>
+          <p>So, 4 is also a trimorphic number.</p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <p><b>Example 3: </b><br /></p>
+          <p>
+            lert,s we take the number 2 and cube it (2^3 = 8), the last digit of
+            8 is not 2. <br />
+            Hence, 2 is not a trimorphic number.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          Trimorphic numbers are relatively rare, and only a few exist within
+          the set of natural numbers. Some examples of trimorphic numbers
+          include 0, 1, 4, 5, and 6.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          It's worth noting that trimorphic numbers can be found in different
+          number systems, such as decimal, binary, or other bases. In each
+          system, the concept of trimorphic numbers remains the same: the
+          number's cube retains its original shape or ends with the same digits
+          as the original number.
+        </button>
+      </div>
+
+      <!--starting of example-->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter n value</p>
+            <p style="margin-top: -20px" class="card-text">25</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">25 is a trimorphic number</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-2</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter n value</p>
+            <p style="margin-top: -20px" class="card-text">24</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">24 is a trimorphic number</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-3</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter n value</p>
+            <p style="margin-top: -20px" class="card-text">10</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">10 is not a trimorphic number</p>
+          </div>
+        </div>
+      </div>
+      <!--Ending of example-->
+    </div>
+    <!-- Ending of problem statement card body-->
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body">
+      <app-video-cmp [url]="'weighted_sum_of_digits.m4v'"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+  <!--starting of the test cases-->
+  <div class="card-body card-group">
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px; font-size: large"
+    >
+      <div class="card-header text-center"><b>Test Case-1</b></div>
+      <div class="card-body" style="background-color: rgb(255, 239, 209)">
+        <p class="card-subtitle mb-2 text-muted">Input</p>
+        <p class="card-text">25</p>
+        <p class="card-subtitle mb-2 text-muted">Output</p>
+        <p class="card-text">Trimorphic Number</p>
+      </div>
+    </div>
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px;font-size: large"
+    >
+      <div class="card-header text-center"><b>Test Case-2</b></div>
+      <div
+        class="card-body"
+        style="background-color: rgb(229, 253, 253)"
+      >
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">24</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">Trimorphic Number</p></div>
+    </div>
+    <div
+      class="card border-primary"
+      style="border: 2px solid; margin: 10px;font-size: large"
+    >
+      <div class="card-header text-center"><b>Test Case-3</b></div>
+      <div
+        class="card-body"
+        style="background-color: rgb(252, 227, 231)"
+      >
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">10</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">Not an Trimorphic Number</p></div>
+    </div>
+  </div>  
+<!--ending of the test cases-->
+  </div>
+  
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,172 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">software Installation </h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Java Installation"> Java Installation</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Eclipse Installation">Eclipse Installation</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card border-warning text-center" style="border: 2px solid;">
+        <h4 style="padding:10px">Click here to download softwares.</h4>
+        <a style="padding:10px"
+          href="https://drive.google.com/file/d/1TGTe4TZjYxP9Nq-GEpN-ogNiP6WXF8nx/view?usp=sharing"
+          target="_blank"><button class="btn btn-primary">Download</button></a>
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/dbms/install/1.jpg">
+            <div class="card-body">
+              <h5 class="card-box">Click on Download button as shown in the image</h5>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/img/dbms/install/2.jpg">
+            <div class="card-body">
+              <ul>
+                <li>Next click on the <b>Download anyway </b>button in case if you got as shown in the above image
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/dbms/install/3.jpg">
+            <div class="card-body">
+              <ul>
+                <li>After downloading the file open it on the downloads folder</li>
+                <li>The file name was <b>softwares</b></li>
+                <li>Right click on the softwares file select <b>extract file</b></li>
+                <li>It will be shown as in the above image</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/img/dbms/install/4.jpg">
+            <div class="card-body">
+              <ul>
+                <li>Now after Clicking on <b>Extract file</b></li>
+                <li>Select the <b>Extract</b> button</li>
+                <li>It will be shown as in the above image</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/java/img_5.jpg">
+            <div class="card-body">
+              <ul>
+                <li>After finishing the extraction open the extracted file in downloads folder</li>
+                <li>Click on the <b>softwares</b></li>
+                <li>Click on <b>Java 11</b></li>
+                <li>Double Click on <b>jdk-11.0.15.1_windows-x64_bin</b></li>
+                <li>Click on <b>yes</b></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/java/img_6.jpg">
+            <div class="card-body">
+              <ul>
+                <li>Click on <b>Next</b></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/java/img_7.jpg">
+            <div class="card-body">
+              <ul>
+                <li>Click on <b>Next</b></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/java/img_8.jpg">
+            <div class="card-body">
+              <ul>
+                <li> In this above image you will see that it was installed successfully message.</li>
+                <li>Click on <b>close</b></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body">
+      <div class="card border-warning text-center" style="border: 2px solid;">
+
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/eclipse/img_1.jpg">
+            <div class="card-body">
+              <ul>
+                <li>Now for downloading the <b>Eclipse </b>go to the file explorer</li>
+                <li>open downloads</li>
+                <li>open <b>softwares file</b></li>
+                <li>click on <b>eclipse</b></li>
+                <li> double click on <b>eclipse-inst-jre-win64</b></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/eclipse/img_2.jpg">
+            <div class="card-body">
+              <ul>
+                <li>Eclipse Installer will be opened</li>
+                <li>select on <b>Eclipse IDE for java developers</b></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/eclipse/img_3.jpg">
+            <div class="card-body">
+              <ul>
+                <li>click on <b>INSTALL</b></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/eclipse/img_4.jpg">
+            <div class="card-body">
+              <ul>
+                <li>During the process of installation it will be shown as like this</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:10px" class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/corejava/installations/eclipse/img_5.jpg">
+            <div class="card-body">
+              <ul>
+                <li>After the completion of he installation click on <b>LAUNCH</b></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

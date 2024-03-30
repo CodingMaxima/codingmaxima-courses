@@ -1,0 +1,236 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Linked List</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem">Problem</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+            data-hover="Practice">Practice</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <li>LinkedList is an collection framework which contains manyobjects which are of same time and the
+                    elements are doubly linked to one another.</li>
+                <li>In linnked list they follow the insertion order ,accepts the duplicates & non synchronized </li>
+                <li> Linked list are used as lists, stack, queue</li>
+                <li> Linked list is good choice for the insertion and and deletion of the data.</li>
+                <li> There are some methods used in the linked list</li>
+                <li><b>Syntax: </b>LinkedList &lt;Type&gt; linkedList = new LinkedList&lt;&gt;();</li>
+                <li>In linked list every element is known as node and consists of three fields.
+                    previous(it will stores the address of the first element and it is null for starting
+                    element),data(It will stores the actual data), next(It will stores the ending element & it is null
+                    for the ending element)
+                </li>
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>Methods </th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td>addFirst()</td>
+                        <td>It will add the element at the starting of list.</td>
+                    </tr>
+                    <tr>
+                        <td>addLast()</td>
+                        <td>It will add the element at the starting of list.</td>
+                    </tr>
+                    <tr>
+                        <td>addAll()</td>
+                        <td>It will add all the elements of the list.</td>
+                    </tr>
+                    <tr>
+                        <td> removeFirst()</td>
+                        <td>It will remove the element at the starting of the list.</td>
+                    </tr>
+                    <tr>
+                        <td>removeLast()</td>
+                        <td>It will remove the element at the ending of the list.</td>
+                    </tr>
+                    <tr>
+                        <td>clear()</td>
+                        <td>It will remove all the elements from the list.</td>
+                    </tr>
+                    <tr>
+                        <td>getFirst()</td>
+                        <td>It will get the element at the starting of the list.</td>
+                    </tr>
+
+                    <tr>
+                        <td>getLast()</td>
+                        <td>It will get the element at the ending of the list.</td>
+                    </tr>
+                    <tr>
+                        <td>clone()</td>
+                        <td>It will make an copy of the linkedlist.</td>
+                    </tr>
+
+                    <tr>
+                        <td>size()</td>
+                        <td>It will show the length of the list.</td>
+                    </tr>
+
+                    <tr>
+                        <td>toArray()</td>
+                        <td>It will converts the entire elements into an array.</td>
+                    </tr>
+                    <tr>
+                        <td>set()</td>
+                        <td>It will change the current element with the new element</td>
+                    </tr>
+
+                </table>
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header"><b>Creating the linkedlist by using colours such as "red", "black",
+                                "blue", "green"</b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p class="card-text">import java.util.LinkedList;</p>
+                            <p class="card-text"> public class Colours {{'{'}}</p>
+                            <pre class="card-text">  public static void main(String[] args) {{'{'}}</pre>
+                            <pre
+                                class="card-text">      LinkedList&lt;String&gt; colours= new LinkedList&lt;&gt;();</pre>
+                            <pre class="card-text">      colours.add("Black");</pre>
+                            <pre class="card-text">      colours.add("Blue");</pre>
+                            <pre class="card-text">      colours.add("White");</pre>
+                            <pre class="card-text">      System.out.println("colours in LinkedList : " + colours)</pre>
+                            <pre class="card-text">   {{'}'}}</pre>
+                            <p class="card-text"> {{'}'}}</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p class="card-text">colours in LinkedList : [Black, Blue, White]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>For
+                                adding the element to the linked list</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p class="card-text">import java.util.LinkedList;</p>
+                            <p class="card-text"> public class Colours {{'{'}}</p>
+                            <pre class="card-text">  public static void main(String[] args) {{'{'}}</pre>
+                            <pre
+                                class="card-text">      LinkedList&lt;String&gt; colours= new LinkedList&lt;&gt;();</pre>
+                            <pre class="card-text">      colours.add("Black");</pre>
+                            <pre class="card-text">      colours.add("Blue");</pre>
+                            <pre class="card-text">      colours.add("White");</pre>
+                            <pre class="card-text">      System.out.println("colours in LinkedList : " + colours)</pre>
+                            <pre class="card-text">     colours.add(2, "Green");</pre>
+                            <pre
+                                class="card-text">     System.out.println("Updated the LinkedList by adding the new element: " + colours);</pre>
+                            <pre class="card-text">   {{'}'}}</pre>
+                            <p class="card-text"> {{'}'}}</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p class="card-text">colours in LinkedList : [Black, Blue, White]</p>
+                            <p class="card-text">Updated the LinkedList by adding the new element: [Black, Blue, Green,
+                                White]</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>For
+                                accessing the element in the linked list</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p class="card-text">import java.util.LinkedList;</p>
+                            <p class="card-text"> public class Colours {{'{'}}</p>
+                            <pre class="card-text">  public static void main(String[] args) {{'{'}}</pre>
+                            <pre
+                                class="card-text">      LinkedList&lt;String&gt; colours= new LinkedList&lt;&gt;();</pre>
+                            <pre class="card-text">      colours.add("Black");</pre>
+                            <pre class="card-text">      colours.add("Blue");</pre>
+                            <pre class="card-text">      colours.add("White");</pre>
+                            <pre class="card-text">      System.out.println("colours in LinkedList : " + colours)</pre>
+                            <pre class="card-text">      String str = colours.get(2);</pre>
+                            <pre class="card-text">      System.out.print("Element at index 2: " + str);</pre>
+                            <pre class="card-text">   {{'}'}}</pre>
+                            <p class="card-text"> {{'}'}}</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p class="card-text">colours in LinkedList : [Black, Blue, White]</p>
+                            <p class="card-text">Element at index 2: White</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>For
+                                removing the element to the linked list</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p class="card-text">import java.util.LinkedList;</p>
+                            <p class="card-text"> public class Colours {{'{'}}</p>
+                            <pre class="card-text">  public static void main(String[] args) {{'{'}}</pre>
+                            <pre
+                                class="card-text">      LinkedList&lt;String&gt; colours= new LinkedList&lt;&gt;();</pre>
+                            <pre class="card-text">      colours.add("Black");</pre>
+                            <pre class="card-text">      colours.add("Blue");</pre>
+                            <pre class="card-text">      colours.add("White");</pre>
+                            <pre class="card-text">      System.out.println("colours in LinkedList : " + colours)</pre>
+                            <pre class="card-text">      String str = colours.remove(0);</pre>
+                            <pre
+                                class="card-text">      System.out.println("Updated LinkedList after removing of the element: " + colours);</pre>
+
+                            <pre class="card-text">   {{'}'}}</pre>
+                            <p class="card-text"> {{'}'}}</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p class="card-text">colours in LinkedList : [Black, Blue, White]</p>
+                            <p class="card-text">Updated LinkedList after removing of the element: [Blue, White]</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>For
+                                changing the element in the linked list</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+                            <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                            <p class="card-text">import java.util.LinkedList;</p>
+                            <p class="card-text"> public class Colours {{'{'}}</p>
+                            <pre class="card-text">  public static void main(String[] args) {{'{'}}</pre>
+                            <pre
+                                class="card-text">      LinkedList&lt;String&gt; colours= new LinkedList&lt;&gt;();</pre>
+                            <pre class="card-text">      colours.add("Black");</pre>
+                            <pre class="card-text">      colours.add("Blue");</pre>
+                            <pre class="card-text">      colours.add("White");</pre>
+                            <pre class="card-text">      System.out.println("colours in LinkedList : " + colours)</pre>
+                            <pre class="card-text">      colours.set(2, "Green");</pre>
+                            <pre
+                                class="card-text">     System.out.println("Updated the LinkedList after changing the  element: " + colours);</pre>
+                            <pre class="card-text">   {{'}'}}</pre>
+                            <p class="card-text"> {{'}'}}</p>
+                            <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                            <p class="card-text">colours in LinkedList : [Black, Blue, White]</p>
+                            <p class="card-text">Updated the LinkedList after changing the element: [Black, Blue, Green]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            <img class="program-img-fit" src="assets/img/corejava/" alt="program">
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="''"></app-video-cmp>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='four'">
+        <div class="card-body">
+            <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+        </div>
+    </div>
+</div>

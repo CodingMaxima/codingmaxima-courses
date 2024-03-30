@@ -1,0 +1,356 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Update(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId2=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+                                <span class="tab-pill" id="question4" [ngClass]="(elementId=='question4')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+                                <span class="tab-pill" id="question5" [ngClass]="(elementId=='question5')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-5">Question-5</span>
+
+                            </div>
+
+                            <div *ngIf="elementId=='question1'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-1</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the employees from the table as designation = "Associate
+                                            Manager" in 5th id </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee table
+                                            update the 5th id of the employee with a new designation as
+                                            "Associate Manager"
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>designation</th>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Team Lead</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>designation</th>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Assosiate Manager</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update employee set
+                                                designation = 'Associate Manager' where id = 5;
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question1-->
+
+                            <div *ngIf="elementId=='question2'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-2</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the employees from the table as salary = 85000 and
+                                            company_name = "TCS"
+                                            in 23rd id </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee table
+                                            update the 23rd id of the employee with a new salary as
+                                            85000 and company name as "TCS"
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>company_name</th>
+                                            <th>salary</th>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>Synoric Technologies</td>
+                                            <td>75000</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>company_name</th>
+                                            <th>salary</th>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>Tcs</td>
+                                            <td>85000</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update employee set
+                                                company_name = 'Tcs',salary = 85000 where id = 23;
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question2-->
+
+                            <div *ngIf="elementId=='question3'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-3</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the employees from the table as designation is "junior
+                                            developer" and age is 23 and also salary is 25000
+                                            " in 7th id </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee table
+                                            update the 7th id of the employee with a new designation as
+                                            "junior developer" and age is 23 and also salary is 25000
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>designation</th>
+                                            <th>salary</th>
+                                            <th>age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>bench</td>
+                                            <td>15000</td>
+                                            <td>22</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>designation</th>
+                                            <th>salary</th>
+                                            <th>age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Jr.Developer</td>
+                                            <td>25000</td>
+                                            <td>23</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update employee set
+                                                designation = 'jr.Developer', salary = 25000, age = 23 where
+                                                id = 7;
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question3-->
+
+                            <div *ngIf="elementId=='question4'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-4</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the employees from the table as designation = "Automation
+                                            Tester" and salary is 40000 and primaryphonenumber is 99999999
+                                            in 28th id</p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee table
+                                            update the 28th id of the employee with a new designation as
+                                            "Automation
+                                            Tester" and salary is 40000 and primaryphonenumber is 99999999
+
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>designation</th>
+                                            <th>salary</th>
+                                            <th>primaryphonenumber</th>
+                                        </tr>
+                                        <tr>
+                                            <td>28</td>
+                                            <td>bench</td>
+                                            <td>25000</td>
+                                            <td>98882399</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+
+                                            <th>id</th>
+                                            <th>designation</th>
+                                            <th>salary</th>
+                                            <th>primaryphonenumber</th>
+                                        </tr>
+                                        <tr>
+                                            <td>28</td>
+                                            <td>Automation Tester</td>
+                                            <td>40000</td>
+                                            <td>99999999</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update employee set
+                                                salary = 40000, primaryphonenumber = 99999999,designation =
+                                                'Automation Tester' where id = 28;
+
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question4-->
+
+                            <div *ngIf="elementId=='question5'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-5</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">Print the updated data
+                                            of the employees from the table as age = 24 and salary = 45000
+                                            in ids 17,25,29 </p>
+                                        <p>
+                                            <strong><u>Descirption:-</u></strong> From the employee table
+                                            update the employee with a new age as 24 and salary as 45000 in ids
+                                            17,25,29
+
+                                        </p>
+                                    </div>
+                                    <p><b><u>Previous Data</u></b> </p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>age</th>
+                                            <th>salary</th>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>22</td>
+                                            <td>18000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>22</td>
+                                            <td>8000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>29</td>
+                                            <td>22</td>
+                                            <td>30000</td>
+                                        </tr>
+                                    </table> <br>
+
+                                    <p><b><u>After Updation Data</u></b></p>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>age</th>
+                                            <th>salary</th>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>24</td>
+                                            <td>45000</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>24</td>
+                                            <td>45000</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>29</td>
+                                            <td>24</td>
+                                            <td>45000</td>
+
+                                        </tr>
+
+                                    </table> <br>
+                                    <div class="card-body text-center">
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">update employee set
+                                                salary = 45000,age = 24 where id = 17 or id = 25 or id = 29;
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end for the question5-->
+
+                        </div><!--end of the buttons card-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId2=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

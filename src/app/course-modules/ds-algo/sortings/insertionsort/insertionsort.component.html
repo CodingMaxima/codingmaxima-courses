@@ -1,0 +1,147 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Insertion Sort</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Problem Statement">Problem Statement</span>
+      <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+        data-hover="Program">Program</span>
+      <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+        data-hover="Animation Video">Animation Video</span>
+      <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+        data-hover="Test Cases">Test Cases</span>
+      <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+        data-hover="Practice">Practice</span>
+    </div>
+  
+    <div *ngIf="elementId=='one'">
+      <div class="card-body">
+        <div class="card border-warning" style="border: 2px solid;">
+          <div class="card" style="margin: 5px;">
+            <div class="card-body content-box" style="font-family: 'Inter', sans-serif;">
+              <h1>Insertion Sort</h1>
+              <p>Company Tags
+                Accolite Amazon Microsoft OYO Rooms SamsungCarWale
+                
+                The task is to complete the insert() function which is used to implement Insertion Sort.
+                
+                </p>
+              
+              <div class="example">
+                <h2>Example 1</h2>
+                <p><strong>Input:</strong>n = 5,Arr[] = {{ '{' }}4, 1, 3, 9, 7{{ '}' }}</p>
+                <p><strong>Output:</strong> 1 3 4 7 9</p>
+                <p>
+                    
+                    </p>
+              </div>
+              
+              <div class="example">
+                <h2>Example 2</h2>
+                <p><strong>Input:</strong> n =10, Arr[] = {{ '{' }}10, 9, 8, 7, 6, 5, 4, 3, 2, 1{{ '}' }}</p>
+                <p><strong>Output:</strong> 1 2 3 4 5 6 7 8 9 10</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- Starting of examples-->
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Example - 1</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text"> Enter  number of element<br>
+                    n =  10
+                          Arr[] = {{ '{' }}10, 9, 8, 7, 6, 5, 4, 3, 2, 1{{ '}' }}
+                </p>
+
+                <!-- <p style="margin-top: -20px;" class="card-text">22</p> -->
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">1 2 3 4 5 6 7 8 9 10</p>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>Example - 2</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">Enter  number of element<br>
+                    n = 6, X = 13
+                  Arr[] = {{ '{' }}1 4 45 6 10 8{{ '}' }}
+
+                </p>
+                <!-- <p style="margin-top: -20px;" class="card-text">11</p> -->
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">1</p>
+              </div>
+            </div>
+  
+            <!-- <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>Example - 3</b></div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+                <p class="card-text">Enter a number</p>
+                <p style="margin-top: -20px;" class="card-text">85</p>
+                <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+                <p class="card-text">85 is odd number.</p>
+              </div>
+            </div> -->
+          </div> 
+        </div>
+      </div><!-- Ending of problem statement card body-->
+    </div>
+    <div *ngIf="elementId=='two'">
+      <div class="card-body border border-warning">
+        <img class="program-img-fit" src="assets/img/corejava/basic/evenodd.JPG" alt="program">
+      </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+      <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+        <app-video-cmp [url]="'even_odd.m4v'"></app-video-cmp>
+      </div>
+    </div>
+    <div *ngIf="elementId=='four'">
+      <div class="card-body">
+  
+        <!-- Starting of test cases -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">22</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Even</p>
+            </div>
+          </div>
+  
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">11</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Odd</p>
+            </div>
+          </div>
+  
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">85</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Odd</p>
+            </div>
+          </div>
+        </div> <!-- Ending of test cases -->
+  
+      </div>
+    </div>
+    <div *ngIf="elementId=='five'">
+      <div class="card-body">
+        <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+  
+      </div>
+    </div>
+  </div>

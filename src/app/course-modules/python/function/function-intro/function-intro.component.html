@@ -1,0 +1,87 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Function</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="examples">examples</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <p>Functions are of 2 types</p>
+                <P>1.<b> Standard library Functions:-</b>These functions are inbuild functions in python.
+                    <li>They are present inside the module & for using thes functions we must have to include the module
+                        along
+                        with the program.</li>
+                </P>
+                <p>2.<b> User Defined Functions:-</b>Means one can create their own function based on their requirments
+                </p>
+
+                <p>A python function is defined as the following<br>
+                    1. Every function begins with the 'def' keyword, followed by name of the function, and paranthesis
+                    that
+                    contain one or more arguments and a colon ':'<br>
+                    2. The definition of the function starts in the immediate next line, where all the instructions are
+                    written
+                    with a slight indent inwards. </p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="example" [ngClass]="(elementId2=='example')?'active':''"
+                (click)="tabChange($event)" data-hover="simple examples"> simple examples</span>
+            <span class="tab-pill" id="calling" [ngClass]="(elementId2=='calling')?'active':''"
+                (click)="tabChange($event)" data-hover="calling function"> calling function</span>
+            <span class="tab-pill" id="arguments" [ngClass]="(elementId2=='arguments')?'active':''"
+                (click)="tabChange($event)" data-hover="Arguments"> Arguments</span>
+            <span class="tab-pill" id="returntype" [ngClass]="(elementId2=='returntype')?'active':''"
+                (click)="tabChange($event)" data-hover="return type"> return type</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video"> Animation Video</span>
+        </div>
+        <div *ngIf="elementId2=='example'">
+            <div class="card-body border border-warning">
+                <img class="img-thumbnail" src="assets/img/python/functions/example.jpg" alt="program"><br>
+
+                <li><b>Def -</b> It is an keyword used for declaring the function.</li>
+                <li><b>python -</b> It is the function name given to function(we can give any name in this place).</li>
+                <li><b>() -</b>In this we give any argument value into the function.</li>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='calling'">
+            <div class="card-body border border-warning">
+                <p>For calling a function, have to declare the function name along with paranthesis</p><br>
+                <img class="img-thumbnail" src="assets/img/python/functions/calling_function_ex.jpg" alt="program"><br>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='arguments'">
+            <div class="card-body border border-warning">
+                <p>Arguments are defines as htey are placed after the function name inside the paranthesis</p>
+                <li>one can add as many arguments as they want but they have to be set apart with "comma"</li>
+                <li>If we call a function without argument , it uses the default value as its argument</li>
+                <li>There is an difference between parameter and argument</li>
+                <li><b>parameter - </b>It is an variable which is present inside the paranthesis in function definition.
+                </li>
+                <li><b>Argument -</b>It is the value which sent into the function when it is called</li>
+
+                <img class="img-thumbnail" src="assets/img/python/functions/arguments.jpg" alt="program"><br>
+
+            </div>
+        </div>
+        <div *ngIf="elementId2=='returntype'">
+            <div class="card-body border border-warning">
+                <p>The python function may or may not returns the value. if we want our function to return some value we
+                    have to mention return Statement</p><br>
+                <img class="img-thumbnail" src="assets/img/python/functions/return_ex.jpg" alt="program"><br>
+            </div>
+        </div>
+        <div *ngIf="elementId2=='animation'"></div>
+
+    </div>
+</div>

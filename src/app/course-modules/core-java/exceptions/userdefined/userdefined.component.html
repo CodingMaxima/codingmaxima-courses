@@ -1,0 +1,44 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">User-defined Exceptions </h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">user-defined exception are also known as custom exceptionmeans other than java in-build exceptions we can create our own exception class</button>
+            <button type="button" class="btn btn-lg btn-block">To define a user-defined exception, you can create a new class that extends either the Exception or RuntimeException class. The Exception class should be used for checked exceptions, while the RuntimeException class is used for unchecked exceptions. Here's an example:</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="card-body">
+        <div class="card-group">
+          <div class="card">
+            <h5 class="text-center card-title">user defined exception</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/exceptions/user.JPG" alt="">
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="text-center card-title">use of userdefined exception</h5>
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/exceptions/test.JPG" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

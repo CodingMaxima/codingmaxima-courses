@@ -1,0 +1,233 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Apartment-Flat(one-Many relation)- Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>User Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of User by using below data
+                        </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>user_id - </b>make sure it should not be duplicate and
+                                    should not be empty
+                                    (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>user_name - </b> It should not be empty (hint: use "NOT
+                                    NULL CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>email - </b>It should be unique and not empty (hint: use "NOT NULL
+                                    CONSTRAINT and "UNIQUE CONSTRAINT")</li>
+                                
+                                <li class="card-text"><b>favoriteMovies- </b> It contains the list of movie_id 
+                                    connecting user to Movie class.
+                                </li>
+                                
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center "><b>Movie Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of Movie by using below data </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>movie_id - </b>make sure it should not be duplicate and should
+                                    not be empty
+                                    (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>movie_name - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")</li>
+                                <li class="card-text"><b>genre - </b> It should not be empty (hint: use "NOT NULL CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>releaseYear - </b>It should be a four digit number
+                                    (hint: use "CHECK CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>rating - </b>It should be less than or equal to 5
+                                    (hint: use "CHECK CONSTRAINT")
+                                </li> 
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+            </div> <!-- Ending of examples-->
+
+        </div>
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">REST API Requests for User Class</button>
+        </div>
+        
+        <!-- first group -->
+        <div class="card-group">
+        
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value="/user/add", method=RequestMethod.POST)</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <p><b>Signature : </b>public boolean addUser(@RequestBody User user)</p>
+                <li>The addUser is a method which accepts an User object "user" as request body.</li>
+                <li>Returns "true" if the User object does not exist.</li>
+                <li>Returns "false" if the User object already exists.</li>
+              </div>
+            </div>
+            
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@RequestMapping(value="/user/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            
+                <p><b>Signature : </b>public User getUserById(@PathVariable int id)</p>
+                <li>The getUserById is a method which accepts an integer "id" as path variable.</li>
+                <li>Returns User object if exists.</li>
+                <li>Returns "null" if the User object does not exist.</li>
+              </div>
+            </div>
+        </div>
+        <!-- first group-->
+
+        <!-- Second group -->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@GetMapping("/user/getAll")</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <p><b>Signature : </b>public List&lt;User&gt; getAllusers()</p>
+                <li>The getAllusers is a method which does not accept anything as parameter.</li>
+                <li>Returns List of all the existing User objects.</li>
+              </div>
+            </div>
+          
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@PutMapping("/user/updateName/&lbrace;id&rbrace;")</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+          
+                <p><b>Signature : </b>public User updateNameById(@PathVariable int id,@RequestBody String name)</p>
+                <li>The updateNameById is a method which accepts "id" as path variable and "name" as request body.</li>
+                <li>Returns updated User object if it exists.</li>
+                <li>Returns "null" if the User object does not exist.</li>
+              </div>
+            </div>
+      
+        </div> 
+        <!-- Second group-->
+
+        <!-- Third group -->
+        <div class="card-group">
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value = "/user/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+                <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                  <p><b>Signature : </b>public boolean deleteUserById(@PathVariable int id)</p>
+                  <li>The deleteUserById is a method which accepts integer "id" as path variable.</li>
+                  <li>Returns "true" and deletes if the User object with "id" already exists.</li>
+                  <li>Returns "false" if the User object does not exist.</li>
+              </div>
+            </div>
+        </div>
+        <!--Third group-->
+
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">REST API Requests for Movie Class</button>
+        </div>    
+        <!-- first group -->
+        <div class="card-group">
+    
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value="/movie/add", method=RequestMethod.POST)</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <p><b>Signature : </b>public boolean addMovie(@RequestBody Movie mov)</p>
+                <li>The addMovie is a method which accepts an Movie object "mov" as request body.</li>
+                <li>Returns "true" if the Movie object does not exist.</li>
+                <li>Returns "false" if the Movie object already exists.</li>
+              </div>
+            </div>
+            
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@RequestMapping(value="/movie/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            
+                <p><b>Signature : </b>public Movie getMovieById(@PathVariable int id)</p>
+                <li>The getMovieById is a method which accepts an integer "id" as path variable.</li>
+                <li>Returns Movie object if exists.</li>
+                <li>Returns "null" if the Movie object does not exist.</li>
+              </div>
+            </div>
+        </div>
+        <!-- first group-->
+
+        <!-- Second group -->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@GetMapping("/movie/getAll")</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <p><b>Signature : </b>public List&lt;Movie&gt; getAllMovies()</p>
+                <li>The getAllMovies is a method which does not accept anything as parameter.</li>
+                <li>Returns List of all the existing Movie objects.</li>
+              </div>
+            </div>
+          
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>@PutMapping("/movie/updateName/&lbrace;id&rbrace;")</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+          
+                <p><b>Signature : </b>public Flat updateNameById(@PathVariable int id,@RequestBody String name)</p>
+                <li>The updateNameById is a method which accepts "id" as path variable and "name" as request body.</li>
+                <li>Returns updated Movie object if it exists.</li>
+                <li>Returns "null" if the Movie object does not exist.</li>
+              </div>
+            </div>
+      
+        </div> 
+        <!-- Second group-->
+
+        <!-- Third group -->
+        <div class="card-group">
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>@RequestMapping(value = "/movie/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+                <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                  <p><b>Signature : </b>public boolean deleteMovie(@PathVariable int id)</p>
+                  <li>The deleteMovie is a method which accepts integer "id" as path variable.</li>
+                  <li>Returns "true" if the Movie object with "id" already exists.</li>
+                  <li>Returns "false" if the Movie object does not exist.</li>
+              </div>
+            </div>
+    
+            <!-- <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center "><b>@RequestMapping(value="/flat/getByApartment/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+                <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              
+                  <p><b>Signature : </b>public List&lt;Flat&gt; getFlatByApartmentId(@PathVariable int id)</p>
+                  <li>The getFlatByApartmentId is a method which accepts an integer "id" as path variable.</li>
+                  <li>Returns List of Flat objects with apartment_id equal to "id".</li>
+                </div>
+            </div> -->
+        
+        </div>
+        <!--Third group-->
+    </div>
+  
+
+    <div *ngIf="elementId=='two'">          
+    </div>
+
+</div>

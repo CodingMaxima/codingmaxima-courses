@@ -1,0 +1,106 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">OOPS Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="introduction">introduction</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">OOPs means Object Oriented Programming
+                            Language</button>
+                        <button type="button" class="btn btn-lg btn-block">OOPs is a computer programming model which
+                            organize the software design around the data and objects rather than funcitons and
+                            logics.</button>
+                        <button type="button" class="btn btn-lg btn-block">By using the OOPs they helps in
+                            reusability,efficiency, maintainability, scalability in code.</button>
+                        <button type="button" class="btn btn-lg btn-block">There are main 4 concepts in OOPs
+                            (Encapsulation, Polymorphism, Inheritance, Abstraction)</button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header; text-center"><b>Encapsulation</b></div>
+                        <div class="card-body" style="background-color:rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;'><b>Encapsulation</b> is a mechanism of
+                                combining
+                                data and methods into the single unit.</p>
+                            <p style='font-size: medium; font-style: oblique;'> We can achieve Encapsulation with
+                                private data with public methods.</p>
+                            <p style='font-size: medium; font-style: oblique;'>It acts like protective wall which
+                                prevents the data from being accessed by the code outside of the wall & also it hides
+                                the data in class from other classes. so it is also called as<b> Data Hiding</b></p>
+                        </div>
+                    </div>
+                    <div class=" card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header; text-center"><b>Polymorphism</b></div>
+                        <div class="card-body" style="background-color:rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;'><b>Polymorphism</b> is a mechanism which
+                                allows
+                                to perform the single task in different ways.</p>
+                            <p style='font-size: medium; font-style: oblique;'>We can achieve polymorphism by using
+                                overloading and overriding.</p>
+                            <p style='font-size: medium; font-style: oblique;'>There are 2 types of polymorphisms</p>
+                            <p style='font-size: medium; font-style: oblique;'><b>Compile time polymorphism:</b> It is
+                                also called as overloading/ static binding. It states that class can have multiple
+                                methods with same but with different signatures i.e, number of parameters and types of
+                                parameters & each method stays as independent.</p>
+                            <p style='font-size: medium; font-style: oblique;'>Simple defined as same methods in same
+                                class with different signatures(parameters)</p>
+                            <p style='font-size: medium; font-style: oblique;'><b>Run time polymorphism:</b> It is also
+                                called as overriding/ dynamic binding. It states that the class and subclass can have
+                                exactly same methods .Whenever the method is called it is decided at the run time to
+                                execute which class method based on the object.</p>
+                            <p style='font-size: medium; font-style: oblique;'>simply defined as same methods in same
+                                signatures with different classes</p>
+                        </div>
+                    </div>
+                </div><!--end of one group-->
+                <div style="padding-top: 15px;" class="text-center">
+                    <button class="btn btn-primary btn-lg">Inheritance</button>
+                </div>
+                <div class="text-center" style=" font-size: medium; padding: 10px;">
+                    <button type="button" class="btn btn-lg btn-block">It is the mechanism of getting the properties and
+                        behaviour of the parent class to the child class.</button>
+                    <button type="button" class="btn btn-lg btn-block">It can be achieved by extending a class or by
+                        implementing an interface.</button>
+                    <button type="button" class="btn btn-lg btn-block">By using the inheritance the benifits are code
+                        reusability & allows the new functionalities to be introduced without effecting the existed
+                        derived
+                        class.</button>
+                    <button type="button" class="btn btn-lg btn-block">There are some types present in
+                        inheritance</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+
+                        <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                            <p style='font-size: medium; font-style: oblique;'><b>1).Single Inheriance:</b> It has
+                                single
+                                parent class and child class</p>
+                            <p style='font-size: medium; font-style: oblique;'><b>2).Multilevel Inheritance:</b> It
+                                means a class extends to another class that is already extended from another class
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;'><b>3).Hierarchical Inheritance:</b>
+                                It
+                                has single parent class and multiple child classes
+                            <p style='font-size: medium; font-style: oblique;'><b>4).Hybrid Inheritance:</b>It is an
+                                combination of both multilevel and hierarchical inheritance </p>
+                            <p style='font-size: medium; font-style: oblique;'><b>5).Multiple Inheritance</b> It
+                                has
+                                multiple parents with single child.But it doesn't exist in the java languague
+                                because in
+                                java every class is a child for object class when it take over more than one super
+                                class
+                                tehn the sub class will gets the confusion to acquire the properties of object class
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

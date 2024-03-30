@@ -1,0 +1,171 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Apartment-Flat</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Example Queries">Examples Queries</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId2=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+            <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+            <span class="tab-pill" id="question4" [ngClass]="(elementId=='question4')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+            <span class="tab-pill" id="question5" [ngClass]="(elementId=='question5')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-5">Question-5</span>
+        </div>
+
+        <div *ngIf="elementId=='question1'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-1</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print all the availbale flats in the apartment along with apartment details
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerOne[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerOne">
+                                <td *ngFor="let col of getSplitDataRows(row, answerOne)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from flat f inner join apartment a on f.apartment_id = a.apartment_id where f.isAvailable = true;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of  question1-->
+
+        <div *ngIf="elementId=='question2'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-2</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print all the east facing appartment details along with the flats
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerTwo[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerTwo">
+                                <td *ngFor="let col of getSplitDataRows(row, answerTwo)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from apartment a inner join flat f on a.apartment_id = f.apartment_id where a.facing = 'east';
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of  question2-->
+
+        <div *ngIf="elementId=='question3'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-3</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> print all the apartment and flats details based on bedrooms order by ascending order</p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerThree[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerThree">
+                                <td *ngFor="let col of getSplitDataRows(row, answerThree)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from flat f inner join apartment a on f.apartment_id = a.apartment_id order by f.no_bedrooms;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question3-->
+
+        <div *ngIf="elementId=='question4'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-4</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print 2 bedrooms available flats details where the apartment has lift facility.
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerFour[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerFour">
+                                <td *ngFor="let col of getSplitDataRows(row, answerFour)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from apartment a inner join flat f on f.apartment_id = a.apartment_id where f.isAvailable = true and f.no_bedrooms = 2 and a.isLift = true;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question4-->
+
+        <div *ngIf="elementId=='question5'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-5</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> print the west facing available flats which are in below 3rd floor order by floors.
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerFive[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerFive">
+                                <td *ngFor="let col of getSplitDataRows(row, answerFive)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from flat f inner join apartment a on f.apartment_id = a.apartment_id where f.facing = 'west' and f.isAvailable = true and f.floor &lt; 3 order by f.floor;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question5-->
+
+    </div>
+</div>

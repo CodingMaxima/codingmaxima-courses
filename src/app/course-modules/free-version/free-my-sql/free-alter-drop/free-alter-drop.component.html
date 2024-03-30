@@ -1,0 +1,609 @@
+<div class="card card-body">
+
+    <h3 class="global-component-heading">Alter & Drop</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+
+        <span class="global-tab-pill" id="alter" [ngClass]="(elementId=='alter')?'active':''" (click)="mainTab($event)"
+            data-hover="Alter table">Alter Table</span>
+        <span class="global-tab-pill" id="drop" [ngClass]="(elementId=='drop')?'active':''" (click)="mainTab($event)"
+            data-hover="drop table">Drop Table</span>
+
+    </div>
+    <div *ngIf="elementId=='alter'">
+
+
+        <div class="global-tab-title global-tab-slide-effect">
+            <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''"
+                (click)="mainTabSub($event)" data-hover="Introduction">Introduction</span>
+            <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''"
+                (click)="mainTabSub($event)" data-hover="Animation video">Animation video</span>
+        </div>
+
+        <div *ngIf="elementId2=='one'">
+            <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                <div id="accordion">
+                    <div class="tab-title tab-slide-effect">
+                        <span class="tab-pill" id="add column" [ngClass]="(elementId3=='add column')?'active':''"
+                            (click)="tabChange($event)" data-hover="Add Column">Add Column</span>
+                        <span class="tab-pill" id="delete column" [ngClass]="(elementId3=='delete column')?'active':''"
+                            (click)="tabChange($event)" data-hover="Delete Column">Delete
+                            Column</span>
+                        <span class="tab-pill" id="modify column" [ngClass]="(elementId3=='modify column')?'active':''"
+                            (click)="tabChange($event)" data-hover="Modify Column">Modify
+                            Column</span>
+                        <span class="tab-pill" id="renaming columns/tables names"
+                            [ngClass]="(elementId3=='renaming columns/tables names')?'active':''"
+                            (click)="tabChange($event)" data-hover="Renaming Columns/Tables Names">Renaming
+                            Columns/Tables
+                            Names</span>
+                    </div>
+
+                    <div *ngIf="elementId3=='add column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Adding single column
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For adding extra field to the already existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are adding an extra field to our existed
+                                        data fields that means we are altering the data field by
+                                        adding new field.<br>
+
+                                        In this example we are going to add an field with
+                                        marital_status of the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before adding the field they were like in the below image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/addempcolbef.jpg" />
+                                    <p>
+                                        After adding the field they were like in the below image.
+                                        along with the field name we have to mention which datatype
+                                        it was
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/addempcolaft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        The syntax : ALTER TABLE employee ADD maritalStatus
+                                        varchar(100);
+                                        <br>
+                                    </p>
+                                    <p>
+                                        For displaying the table descriping the syntax is<br>
+
+                                        DESCRIBE table_name;
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="elementId3=='add column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Adding multiple columns
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For adding more field to the already existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are adding an more field to our
+                                        existed data fields that means we are altering the
+                                        data
+                                        field by adding new field.<br>
+
+                                        In this example we are going to add an field with
+                                        aadharNumber and Address of the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before adding the fields they were like in the below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/addempmulti-col-bef.jpg" />
+                                    <p>
+                                        After adding the field they were like in the below
+                                        image.
+                                        along with the field name we have to mention which
+                                        datatype
+                                        it was
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/addempmulti-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        ALTER TABLE employee ADD aadharNumber long, add
+                                        address varchar(255);
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div *ngIf="elementId3=='delete column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Deleting single column
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For deleting the field present in the already existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are deleting the field to our
+                                        existed
+                                        data fields that means we are altering the data field by
+                                        deleting field.<br>
+
+                                        In this example we are going to delete an field with
+                                        address of the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before deleting the field they were like in the below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/dropemp-col-bef.jpg" />
+                                    <p>
+                                        After deleting the field they were like in the below
+                                        image.
+
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/dropemp-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        The syntax : Alter table employee drop address;
+                                        <br>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="elementId3=='delete column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        deleting multiple columns
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For deleting more fields in the existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are deleting more field to our
+                                        existed data fields that means we are altering the
+                                        data
+                                        field by deleting multiple fields.<br>
+
+                                        In this example we are going to add an field with
+                                        aadharNumber and maritalStatus of the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before deleting the fields they were like in the below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/delempmulti-col-bef.jpg" />
+                                    <p>
+                                        After adding the field they were like in the below
+                                        image.
+
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/delempmulti-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        ALTER TABLE employee DROP aadharNumber, DROP
+                                        maritalStatus;
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="elementId3=='modify column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Modifying single column
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For modifying the field present in the already existed
+                                        table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are modifying the field to our
+                                        existed
+                                        data fields that means we are altering the data field by
+                                        modifying field.<br>
+
+                                        In this example we are going to modify the field first_name
+                                        varchar(150) along with data types
+                                        of the employees in table.
+
+                                    </p>
+                                    <p>
+                                        Before modifying the field they were like in the below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/modifyemp-col-bef.jpg" />
+                                    <p>
+                                        After modifying the field they were like in the below
+                                        image.
+
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/modify-emp-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        The syntax : ALTER TABLE employee MODIFY COLUMN first_name
+                                        varchar(150);
+                                        <br>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="elementId3=='modify column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        modifying multiple columns
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For modifying more fields in the existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are modifying more field to our
+                                        existed data fields that means we are altering the
+                                        data
+                                        field by modifying multiple fields.<br>
+
+                                        In this example we are going to add an field with
+                                        last_name varchar(150) and company_name varchar(200) of
+                                        the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before modifying the fields they were like in the below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/modifyempmulti-col-bef.jpg" />
+                                    <p>
+                                        After modifying the field they were like in the below
+                                        image.
+
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/modifyempmulti-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        ALTER TABLE employee MODIFY COLUMN last_name
+                                        varchar(150),MODIFY COLUMN company_name varchar(200);
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div *ngIf="elementId3=='modify column'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Shifting columns from one position to another position
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For changing positions of fields in the existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are shuffling the field in our
+                                        existed data fields that means we are altering the
+                                        data
+                                        field by changing fields.<br>
+
+                                        In this example we are going to change the position of an field
+                                        companyname varchar(200) after designation;
+
+                                        of
+                                        the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before changing the fields they were like in the
+                                        below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/change-emp-pos-col-bef.jpg" />
+                                    <p>
+                                        After changing the field they were like in the
+                                        below
+                                        image.
+
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/change-emp-pos-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        ALTER TABLE employee MODIFY COLUMN companyname varchar(200)
+                                        after
+                                        designation;
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div *ngIf="elementId3=='renaming columns/tables names'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Renaming column
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+
+                                    <p>
+                                        For renaming the column field to the already existed table.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are naming the column field with other name
+                                        to
+                                        our existed
+                                        data fields that means we are altering the data field by
+                                        changing the column name field.<br>
+
+                                        In this example we are going to change the name to the field
+                                        primaryphone number
+                                        with firstNumber along with datatype as bigint of the employees
+                                        in table.
+
+                                    </p>
+                                    <p>
+                                        Before changing the field they were like in the below image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/rename-emp-col-bef.jpg" />
+                                    <p>
+                                        After changing the field they were like in the below image.
+                                        along with the field name we have to mention which datatype
+                                        it was
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/rename-emp-col-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        The syntax : ALTER TABLE employee CHANGE COLUMN
+                                        primaryphonenumber
+                                        firstNumber bigint;
+                                        <br>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="elementId3=='renaming columns/tables names'">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-bs-toggle="collapse"
+                                        data-bs-target="#ProblemStatement" aria-expanded="false"
+                                        aria-controls="ProblemStatement">
+                                        Renaming the table name
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    <p>
+                                        For changing the table name.
+                                    </p>
+                                    <p>Example : <br>
+                                        In this example we are going the change the old table name with
+                                        the
+                                        new name <br>
+
+                                        In this example we are going to change the table name as
+                                        employee_details
+                                    </p>
+                                    <p>
+                                        Before changing the table name they were like in the below
+                                        image.
+                                    </p>
+                                    <img src="assets/img/dbms/Alter&drop/employee/rename-emp-table-bef.jpg" />
+                                    <p>
+                                        After changing the table name they were like the below image
+                                    </p>
+                                    <p>
+                                        <img src="assets/img/dbms/Alter&drop/employee/rename-emp-table-aft.jpg" />
+
+                                    </p>
+                                    <p>
+                                        ALTER TABLE EMPLOYEE RENAME EMPLOYEE_DETAILS;
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="elementId2=='two'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp 
+                [url]="videoData"
+                [audioData]="audioData"
+                ></app-video-cmp>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div *ngIf="elementId=='drop'">
+        <div class="card card-body">
+            <div class="global-tab-title global-tab-slide-effect">
+                <span class="global-tab-pill" id="one" [ngClass]="(elementId3=='one')?'active':''"
+                    (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+                <span class="global-tab-pill" id="two" [ngClass]="(elementId3=='two')?'active':''"
+                    (click)="tabChange($event)" data-hover="Animation video">Animation video</span>
+            </div>
+
+            <div *ngIf="elementId3=='one'">
+
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#ProblemStatement"
+                                aria-expanded="false" aria-controls="ProblemStatement">
+                                <p>
+                                    Deleting employee_details table
+                                </p>
+
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                        <div class="card-body">
+
+                            <p>
+                                For Deleting the employee_details table from the database
+                            </p>
+                            <p>
+                                Before Deleting the table it was like as shown in the below image
+                            </p>
+                            <img src="assets/img/dbms/Alter&drop/employee/drop-emp-table-bef.jpg" />
+                            <p>
+                                after Deleting the table it will be as shown in the below image
+                            </p>
+                            <p>
+                                <img src="assets/img/dbms/Alter&drop/employee/drop-emp-table-aft.jpg" />
+
+                            </p>
+                            <p>
+                                The syntax : drop table employee_details;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="elementId3=='two'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                <app-video-cmp 
+                [url]="videoData1"
+                [audioData]="audioData1"
+                ></app-video-cmp>
+            </div>
+        </div>
+    </div>
+</div>

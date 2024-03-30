@@ -1,0 +1,159 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">
+    centimeters/feet/inches conversions
+  </h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">          
+              Project
+         </div>
+            <img style="margin: 0 auto; padding-top: 10px; height: auto; width: 100%;"
+              src="assets/img/javascript/projects/cmfeetinch.gif">
+         
+
+          <div class="content-heading mt-4">Project Description        
+          </div>
+          <div class="content-text">
+              This project is a web-based "Conversions Application-2" that
+              provides a user-friendly interface for converting measurements
+              between centimeters, feet, and inches. The application is built
+              using HTML, CSS, and JavaScript, and it offers a simple way for
+              users to perform unit conversions seamlessly.
+           </div>
+           <div class="content-heading">
+              Features          
+          </div>
+          <div class="content-text">
+            <li>
+              <b>Eye-Catching Header: </b>The app greets users with a catchy
+              custom header, which includes the title "Advance level conversions
+              project" This header sets the tone for an enjoyable learning
+              adventure.
+            </li>
+
+            <li>
+              <b>Measurement Conversion:</b> The primary function of the
+              application is to perform unit conversions between three
+              measurement units: centimeters, feet, and inches. Users can input
+              a value in any of these units, and the application instantly
+              displays the corresponding values in the other two units.
+            </li>
+
+            <li>
+              <b>Real-Time Updates:</b> As users input values in any of the
+              fields, the application dynamically updates the other fields with
+              the converted values. This real-time feature provides instant
+              feedback to users as they make changes.
+            </li>
+
+            <li>
+              <b>Responsive Design:</b> The application's layout is designed to
+              be responsive, ensuring that it functions smoothly across various
+              screen sizes and devices.
+            </li>
+
+            <li>
+              <b>User-Friendly Interface:</b>The interface is minimalistic,
+              featuring labeled input fields for each unit of measurement. Users
+              are prompted to enter values in any of the fields, and the
+              converted values are immediately displayed in the other fields.
+            </li>
+
+            <li>
+              <b>Validation:</b> The application includes input validation to
+              ensure that users only enter valid numerical values. In case of
+              non-numeric inputs, the user is alerted with a message indicating
+              the need for valid input.
+            </li>
+
+            <li>
+              <b>Convenient Conversion Factors:</b> For each unit conversion,
+              the application displays the conversion factors used, helping
+              users understand the relationship between the units.
+            </li>
+         </div>
+         <div class="content-heading">
+              Implementation
+          </div>
+         <div class="content-text">
+            <li>
+              <b> HTML Structure:</b> The HTML structure defines the layout of
+              the application. It includes input fields for centimeters, feet,
+              and inches, along with labels describing the purpose of each
+              input.
+            </li>
+
+            <li>
+              <b>CSS Styling:</b> CSS is used to style the layout, align
+              elements, and ensure a visually appealing interface. The
+              "measurments" class is applied to the input fields, providing
+              consistent width for a uniform appearance.
+            </li>
+
+            <li>
+              <b>JavaScript Logic:</b> JavaScript handles the conversion
+              calculations and real-time updates. The application listens for
+              "input" events on each input field and triggers conversion
+              calculations based on the entered values.
+            </li>
+
+            <li>
+              <b>Centimeters to Feet and Inches:</b> When the user enters a
+              value in centimeters, the application calculates and displays the
+              corresponding values in feet and inches using appropriate
+              conversion factors.
+            </li>
+
+            <li>
+              <b>Feet to Centimeters and Inches:</b> Similarly, when the user
+              enters a value in feet, the application calculates and displays
+              the equivalent values in centimeters and inches.
+            </li>
+
+            <li>
+              <b>Inches to Centimeters and Feet:</b> The application also
+              accommodates the conversion from inches, displaying values in
+              centimeters and feet.
+            </li>
+
+            <li>
+              <b>Validation and Alerts:</b> JavaScript includes validation
+              checks to ensure the input is a numeric value. If the input is not
+              a valid number, an alert is displayed, guiding the user to enter a
+              valid measurement.
+            </li>
+         
+    </div>
+  </div>
+</div>
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

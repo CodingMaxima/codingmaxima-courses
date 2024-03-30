@@ -1,0 +1,160 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">quiz app</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">Project Description</div>
+      <div class="content-text">
+        The "Quiz App" is an interactive web application designed to offer users
+        an engaging and educational quiz experience. Developed using HTML, CSS,
+        and JavaScript, this app challenges users with a series of
+        multiple-choice questions on various topics. With its user-friendly
+        interface, the app provides immediate feedback and a score summary at
+        the end of the quiz, allowing users to test their knowledge and learn
+        new facts.
+      </div>
+      <div class="content-heading">Features</div>
+
+      <div class="content-text">
+        <li>
+          <b>Dynamic Question Generation:</b> The app generates a random set of
+          multiple-choice questions from a predefined pool of questions. This
+          ensures that users get a unique quiz each time they take it.
+        </li>
+
+        <li>
+          <b>Question Presentation:</b> Questions are presented in a structured
+          format, with each question having a list of answer options to choose
+          from.
+        </li>
+
+        <li>
+          <b>Instant Feedback:</b> Upon submitting the quiz, users receive
+          immediate feedback on their performance. The app highlights correct
+          and incorrect answers for each question.
+        </li>
+
+        <li>
+          <b>Score Calculation:</b> The app calculates the user's score based on
+          the number of correct answers out of the total questions attempted.
+        </li>
+
+        <li>
+          <b>Retake Option:</b> Users have the option to retake the quiz,
+          generating a new set of questions, to challenge themselves and improve
+          their score.
+        </li>
+
+        <li>
+          <b>Responsive Design:</b> The app is designed to be responsive,
+          ensuring a seamless experience on various devices and screen sizes.
+        </li>
+
+        <li>
+          <b> Attractive Styling:</b> The user interface features an appealing
+          design with custom styles, including a header, question boxes,
+          buttons, and result displays.
+        </li>
+      </div>
+      <div class="content-heading">Implementation</div>
+
+      <div class="content-text">
+        <li>
+          <b>HTML Structure:</b>The HTML structure defines the layout of the
+          app. It includes a header with the project's title and a container for
+          quiz questions and options.
+        </li>
+
+        <li>
+          <b> CSS Styling:</b> CSS styles enhance the visual appeal of the app,
+          offering custom styling for the header, question boxes, buttons, and
+          result displays.
+        </li>
+
+        <li>
+          <b>JavaScript Logic:</b> JavaScript is responsible for dynamically
+          generating quiz questions, calculating scores, and managing user
+          interactions.
+        </li>
+
+        <li>
+          <b> Question Array:</b> An array named questions contains a variety of
+          questions, each with answer options and correct answers. This array
+          serves as the source for generating quizzes.
+        </li>
+
+        <li>
+          <b>Random Question Generation:</b> The app uses the getRandomQuestions
+          function to shuffle the questions array and select a subset of
+          questions for each quiz.
+        </li>
+
+        <li>
+          <b> Quiz Creation:</b> The createQuiz function populates the HTML form
+          with randomly selected questions and their answer options, providing
+          users with a dynamic quiz.
+        </li>
+
+        <li>
+          <b> Score Calculation:</b> The calculateScore function tallies the
+          user's correct answers and calculates their score.
+        </li>
+
+        <li>
+          <b> Validation: </b>The app ensures that users select an answer for
+          each question using the validateAnswers function.
+        </li>
+
+        <li>
+          <b>Result Display:</b> After submitting the quiz, the app displays the
+          user's score and provides motivational messages based on their
+          performance.
+        </li>
+
+        <li>
+          <b> Retake Option: </b>The retake button allows users to start a new
+          quiz, generating a fresh set of questions and options.
+        </li>
+
+        <li>
+          <b> Event Listeners:</b> The app uses event listeners to trigger
+          actions such as submitting the quiz and retaking it.
+        </li>
+
+        <li>
+          <b> Responsive Design:</b> The CSS styles are optimized for responsive
+          design, making the app accessible and usable on various devices.
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,557 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Country-Capital(one-one relation)- Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of Country by using below data
+                        </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>country_name - </b>make sure it should not be duplicate and
+                                    should not be empty (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>population - </b> It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>largest_river - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT") </li>
+                                <li class="card-text"><b>main_crop -</b> It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")</li>
+                                <li class="card-text"><b>isSeaShore - </b> Check whether it is present or notIt should
+                                    not be empty (hint: use "NOT NULL CONSTRAINT")
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center "><b>Capital Class</b></div>
+                    <div class="card-body">
+                        <p>create an constraints table of Capital by using below data </p>
+                        <ul>
+                            <li>Declare all class variables as private.</li>
+                            <li>Write Defalut and parameterized constructor.</li>
+                            <li>Write Setters and Getters for each private variable.</li>
+                            <li>Write toString() method for the class.</li>
+                        </ul>
+
+                        <ol>
+                            <div class="card-body">
+                                <li class="card-text"><b>capital_name - </b>make sure it should not be duplicate and
+                                    should not be empty (hint: use "PRIMARY KEY CONSTRAINT")</li>
+                                <li class="card-text"><b>population - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>isSeaShore - </b>Check whether it is present or not.It should
+                                    not be empty (hint: use "NOT NULL CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>area - </b>It should not be empty (hint: use "NOT NULL
+                                    CONSTRAINT")
+                                </li>
+                                <li class="card-text"><b>country_name - </b>It is connection to the Country table
+                                    country_name. (hint: use "FOREIGN KEY")
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+            </div> <!-- Ending of examples-->
+
+        </div>
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">INSERT following Country Data into Table</button>
+        </div>
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = India</li>
+                    <li class="card-text">population = 1415681359</li>
+                    <li class="card-text">largest_river = Ganga</li>
+                    <li class="card-text">main_crop = Rice</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = China</li>
+                    <li class="card-text">population = 1453932069</li>
+                    <li class="card-text">largest_river = Yangtze</li>
+                    <li class="card-text">main_crop = Rice</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Nepal</li>
+                    <li class="card-text">population = 30579216</li>
+                    <li class="card-text">largest_river = Koshi</li>
+                    <li class="card-text">main_crop = Tobacco</li>
+                    <li class="card-text">isSeaShore = False</li>
+                </div>
+            </div>
+        </div><!--End of data-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Japan</li>
+                    <li class="card-text">population = 125459537</li>
+                    <li class="card-text">largest_river = Shinano</li>
+                    <li class="card-text">main_crop = Rice</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Brazil</li>
+                    <li class="card-text">population = 216527662</li>
+                    <li class="card-text">largest_river = Amazon</li>
+                    <li class="card-text">main_crop = Soybean</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Indonesia</li>
+                    <li class="card-text">population = 281121689</li>
+                    <li class="card-text">largest_river = Kapuas</li>
+                    <li class="card-text">main_crop = Palm oil</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+        </div><!--End of data-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Egypt</li>
+                    <li class="card-text">population = 107407211</li>
+                    <li class="card-text">largest_river = Nile</li>
+                    <li class="card-text">main_crop = Wheat</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Butan</li>
+                    <li class="card-text">population = 793928</li>
+                    <li class="card-text">largest_river = Drangme Chhu</li>
+                    <li class="card-text">main_crop = Soya Beans</li>
+                    <li class="card-text">isSeaShore = False</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Saudi Arabia</li>
+                    <li class="card-text">population = 36238583</li>
+                    <li class="card-text">largest_river = Wadi al-Rummah</li>
+                    <li class="card-text">main_crop = watermelon</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+        </div><!--End of data-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Germany</li>
+                    <li class="card-text">population = 84488027</li>
+                    <li class="card-text">largest_river = Danube</li>
+                    <li class="card-text">main_crop = Barley</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Thailand</li>
+                    <li class="card-text">population = 70259783</li>
+                    <li class="card-text">largest_river = Chao Phraya</li>
+                    <li class="card-text">main_crop = Cassava</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Russia</li>
+                    <li class="card-text">population = 146098876</li>
+                    <li class="card-text">largest_river = Lena</li>
+                    <li class="card-text">main_crop = Potatoes</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+        </div><!--End of data-->
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Zimbabwe</li>
+                    <li class="card-text">population = 15430850</li>
+                    <li class="card-text">largest_river = Zambezi</li>
+                    <li class="card-text">main_crop = Corn</li>
+                    <li class="card-text">isSeaShore = False</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Canada</li>
+                    <li class="card-text">population = 38611350</li>
+                    <li class="card-text">largest_river = Yukon</li>
+                    <li class="card-text">main_crop = Maize</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Country Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">country_name = Sweden</li>
+                    <li class="card-text">population = 10264641</li>
+                    <li class="card-text">largest_river = Gota alv—Klaralven</li>
+                    <li class="card-text">main_crop = Cereals</li>
+                    <li class="card-text">isSeaShore = True</li>
+                </div>
+            </div>
+        </div><!--End of data-->
+
+        <div style="padding: 10px;" class="text-center">
+            <button class="btn btn-info">INSERT following Capital Data into Table</button>
+        </div>
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Delhi</li>
+                    <li class="card-text">population = 32941000</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 1483 sq.kms</li>
+                    <li class="card-text">country_name = India</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = beijing</li>
+                    <li class="card-text">population = 21766000</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 16,410.5 sq.kms</li>
+                    <li class="card-text">country_name = China</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Tokyo</li>
+                    <li class="card-text">population = 37194000</li>
+                    <li class="card-text">isSeaShore = True</li>
+                    <li class="card-text">area = 2,194 sq.kms</li>
+                    <li class="card-text">country_name = Japan</li>
+                </div>
+            </div>
+        </div><!--end of data-->
+
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Brasilia</li>
+                    <li class="card-text">population = 4728000</li>
+                    <li class="card-text">isSeaShore = True</li>
+                    <li class="card-text">area = 5,802 sq.kms</li>
+                    <li class="card-text">country_name = Brazil</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Jakarta</li>
+                    <li class="card-text">population = 11075000</li>
+                    <li class="card-text">isSeaShore = True</li>
+                    <li class="card-text">area = 661.5 sq.kms</li>
+                    <li class="card-text">country_name = Indonesia</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Cairo</li>
+                    <li class="card-text">population = 22183000</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 453 sq.kms</li>
+                    <li class="card-text">country_name = Egypt</li>
+                </div>
+            </div>
+        </div><!--end of data-->
+
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Riyadh</li>
+                    <li class="card-text">population = 9058394</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 1,973 sq.kms</li>
+                    <li class="card-text">country_name = Saudi Arabia</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Berlin</li>
+                    <li class="card-text">population = 3571000</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 891.8 sq.kms</li>
+                    <li class="card-text">country_name = Germany</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Bangkok</li>
+                    <li class="card-text">population = 10539000</li>
+                    <li class="card-text">isSeaShore = True</li>
+                    <li class="card-text">area = 1,568.7 sq.kms</li>
+                    <li class="card-text">country_name = Thailand</li>
+                </div>
+            </div>
+        </div><!--end of data-->
+
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Moscow</li>
+                    <li class="card-text">population = 12680000</li>
+                    <li class="card-text">isSeaShore = True</li>
+                    <li class="card-text">area = 2,511 sq.kms</li>
+                    <li class="card-text">country_name = Russia</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Islamabad</li>
+                    <li class="card-text">population = 1232000</li>
+                    <li class="card-text">isSeaShore = True</li>
+                    <li class="card-text">area = 906.5 sq.kms</li>
+                </div>
+            </div>
+
+
+        </div><!--end of data-->
+
+        <!-- Starting of Data-->
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Kabul</li>
+                    <li class="card-text">population = 6760500</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 1,023 sq.kms</li>
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Capital Data</b></div>
+                <div class="card-body">
+                    <li class="card-text">capital_name = Seoul</li>
+                    <li class="card-text">population = 9988000</li>
+                    <li class="card-text">isSeaShore = False</li>
+                    <li class="card-text">area = 605.2 sq.kms</li>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p>
+
+                        </p>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary"> Question - 1</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            Print all the country details along with capital details which are having seashore(inner
+                            Join) <br>
+
+                        </button>
+
+
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Question - 2</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            Print all the country and capital details where only the countries contains sea shore but
+                            not the capital contains seashore(left join)
+                        </button>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-primary"> Configuration Data</button>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                        <p>
+                            <b> Configuration config = new
+                                Configuration().configure().addAnnotatedClass(Pojo1.class).addAnnotatedClass(Pojo2.class);</b>
+                            <br>
+                            <b> StandardServiceRegistryBuilder reg = new
+                                StandardServiceRegistryBuilder().applySettings(config.getProperties());</b>
+                            <br>
+                            <b> SessionFactory sf = config.buildSessionFactory(reg.build());</b>
+                            <br>
+                            <b>Session session = sf.openSession();</b>
+                            <br>
+                            <b>Transaction tx = session.beginTransaction();</b>
+                            <br>
+                            <b>session.save(Objects);</b>
+                            <br>
+                            <b>tx.commit();</b>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- first group-->
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-body border border-warning">
+            <div class="tab-title tab-slide-effect">
+                <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''"
+                    (click)="subTabChange($event)" data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+                <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Main(Testing)"> Main(Testing) Class</span>
+                <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Configuration file ">Configuration file</span>
+                <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''"
+                    (click)="subTabChange($event)" data-hover="Pom.Xml file">Pom.Xml file</span>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='pojo'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Country POJO Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/onetoOne.example2.country.pojo.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Capital POJO Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/onetoOne.example2.capital.pojo.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='main'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Main Class</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/onetoOne.example2.test.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='configuration'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/example1.cfg.file.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group" *ngIf="elementId2=='pom.xml'">
+                <div class="card">
+                    <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+                    <div class="card-body">
+                        <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]="'student_branch_relation.m4v'"></app-video-cmp>
+        </div>
+    </div>
+
+
+</div>

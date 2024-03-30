@@ -1,0 +1,210 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Reverse Each Value in Array</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          iIn this program we are iterating the every element in an array and
+          then reversing that number and replacing that reversed number in the
+          same position.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          Consider the below example for better understanding.
+          <p>int a[] = {{ "{" }}12,45,67{{ "}" }}</p>
+          <p>The output will be : {{ "{" }}21,54,76{{ "}" }}</p>
+          <p>
+            Step 1: we can take the first number 12 and need to reverse the
+            number and replace the number in the same place.
+          </p>
+          <p>so a[0] = 12</p>
+          <p>after reverse the number.</p>
+          <p>a[0] = 21</p>
+          <p>
+            Step 2: we can take the next number 45 and need to reverse the
+            number and replace the number in the same place.
+          </p>
+          <p>so a[1] = 45</p>
+          <p>after reverse the number.</p>
+          <p>a[1] = 54</p>
+
+          <p>
+            Step 3: we can take the next number 67 and need to reverse the
+            number and replace the number in the same place.
+          </p>
+          <p>so a[2] = 67</p>
+          <p>after reverse the number.</p>
+          <p>a[2] = 76.</p>
+        </button>
+      </div>
+
+      <!--starting of example-->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Array = {{ "{" }}1, 6, 14, 85, 17{{ "}" }}</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">
+              The reverse of each element in the array is 1 6 41 58 71
+            </p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-2</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">
+              Array = {{ "{" }}15, 23, 45, 29, 43{{ "}" }}
+            </p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">
+              The reverse of each element in the array is 51 32 54 92 34
+            </p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-3</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">
+              Array = {{ "{" }}71, 73, 26, 89, 97{{ "}" }}
+            </p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">
+              The reverse of each element in the array is 17 37 62 98 79
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Ending of example-->
+    </div>
+    <!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/arrays/eachrev.JPG"
+        alt="program"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+    <!--starting of the test cases-->
+    <div class="card-body card-group">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-1</b></div>
+        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">5</p>
+          <p class="card-text">1 6 14 85 17</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">1 6 41 58 71</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-2</b></div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">5</p>
+          <p class="card-text">15 23 45 29 43</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">51 32 54 92 34</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-3</b></div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">5</p>
+          <p class="card-text">71 73 26 89 97</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">17 37 62 98 79</p>
+        </div>
+      </div>
+    </div>
+    <!--ending of the test cases-->
+  </div>
+
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

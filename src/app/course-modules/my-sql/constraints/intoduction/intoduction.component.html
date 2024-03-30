@@ -1,0 +1,154 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Constraints</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Introduction">Introduction</span>
+      <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+        data-hover="Animation Video">Animation Video</span>
+    </div>
+  
+    <div *ngIf="elementId=='one'">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+          <div class="text-center">
+           
+          </div>
+         
+          <!-- first group -->
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>NOT NULL</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <li>The NOT NULL constraint enforces a column to NOT accept NULL values.</li>
+                <li>Each row of the column must contain value. </li>
+                <li>You can not insert/update row with null values for that column when column set to NOT NULL</li>
+                <li>You can apply NOT NUL to the multiple columns in the table.</li><br>
+                <h4 class="text-center">EXAMPLE</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int NOT NULL,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50) NOT NULL,</pre></li>
+                    <li><pre>   Age int</pre></li>
+                    <li>);</li>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>UNIQUE</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <li>The UNIQUE constraint ensures that all values in a column are different from each other.</li>
+                <li>Which means no duplicate values are allowed.</li>
+                <li>You can apply UNIQUE to multiple columns in the table.</li><br>
+                <h4 class="text-center">EXAMPLE</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int NOT NULL UNIQUE,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50) UNIQUE,</pre></li>
+                    <li><pre>   Age int</pre></li>
+                    <li>);</li>
+                </div>
+                <br>
+                <h4 class="text-center">EXAMPLE - 2</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50),</pre></li>
+                    <li><pre>   Age int</pre></li>
+                    <li><pre>   UNIQUE (EMP_ID, EMAIL)</pre></li>
+                    <li>);</li>
+                </div>
+              </div>
+            </div>
+          </div> <!-- first group-->
+
+          <!-- second group -->
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>PRIMARY KEY</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <li>A combination of a NOT NULL and UNIQUE.</li>
+                <li>Only one PRIMARY KEY is allowed per table.</li>
+                <li>PRIMARY KEY can be added to single column or combination of multiple columns.</li><br>
+                <h4 class="text-center">EXAMPLE</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int PRIMARY KEY,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50) UNIQUE,</pre></li>
+                    <li><pre>   Age int</pre></li>
+                    <li>);</li>
+                </div>
+                <br>
+                <h4 class="text-center">EXAMPLE - 2</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50) NOT NULL UNIQUE,</pre></li>
+                    <li><pre>   Age int</pre></li>
+                    <li><pre>   PRIMARY KEY(EMP_ID)</pre></li>
+                    <li>);</li>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>FOREIGN KEY</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <li>A FOREIGN KEY is the one that is used to link two tables together via PRIMARY KEY.</li>
+                <li></li>
+              </div>
+            </div>
+          </div> <!--second group-->
+
+          <!-- third group -->
+          <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center"><b>CHECK</b></div>
+              <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                <li>CHECK constraint ensures that the values in a column satisfies a specific condition or not.</li>
+                <li>You can not insert/update row without satisfies the specified condition of the column.</li>
+                <li>You can apply CHECK to multiple columns in the table.</li><br>
+                <h4 class="text-center">EXAMPLE</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int PRIMARY KEY,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50) UNIQUE,</pre></li>
+                    <li><pre>   Age int CHECK (Age > 18)</pre></li>
+                    <li>);</li>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center "><b>DEFAULT</b></div>
+              <div style="background-color: rgb(252, 227, 231);" class="card-body">
+                <li>DEFAULT constraint provides the default value of the column.</li>
+                <li>If no value is provided to the column when you insert 
+                    row then the default value will be added to the cell.</li><br>
+                <h4 class="text-center">EXAMPLE</h4>
+                <div class="code-dark-block">
+                    <li>CREATE TABLE Employee (</li>
+                    <li><pre>   EMP_ID int PRIMARY KEY,</pre></li>
+                    <li><pre>   NAME varchar(100) NOT NULL,</pre></li>
+                    <li><pre>   EMAIL varchar(50) UNIQUE,</pre></li>
+                    <li><pre>   Age int</pre></li>
+                    <li><pre>   Joining_Date date DEFAULT GETDATE()</pre></li>
+                    <li>);</li>
+                </div>
+              </div>
+            </div>
+          </div> <!-- third group-->
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="elementId=='two'">
+
+    </div>
+</div>

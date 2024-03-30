@@ -1,0 +1,876 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Aggregate Functions(STUDENT)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId2=='one'">
+                    <div class="card-body">
+<div class="card border-warning" style="border: 2px solid;">
+                            <div class="card" style="margin: 5px;">
+                                <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                            
+                                    <div id="accordion">
+                                        <div class="tab-title tab-slide-effect">
+                                            <span class="tab-pill" id="question1"
+                                                [ngClass]="(elementId=='question1')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                            <span class="tab-pill" id="question2"
+                                                [ngClass]="(elementId=='question2')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                            <span class="tab-pill" id="question3"
+                                                [ngClass]="(elementId=='question3')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+                                            <span class="tab-pill" id="question4"
+                                                [ngClass]="(elementId=='question4')?'active':''"
+                                                (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+                                           
+
+                                        </div>
+
+                                        <div *ngIf="elementId=='question1'">
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print minimum age of the students from students table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the least age of the student
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>MIN(age)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>16</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    MIN(age)
+                                                                    FROM STUDENT;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print maximum age of the students from students table
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the student table
+                                                            you
+                                                            have to find the highest age of the student
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>MAX(age)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>43</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    MAX(age)
+                                                                    FROM STUDENT;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print minimum total_marks of the students from students table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the least total_marks of the student
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>MIN(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>490</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    MIN(total_marks)
+                                                                    FROM STUDENT;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print maximum total_marks of the students from students table
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the student table
+                                                            you
+                                                            have to find the highest total_marks of the student
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>MAX(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>988</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    MAX(total_marks)
+                                                                    FROM STUDENT;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print minimum total_marks of the students and maximum total_marks of the students from students table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the least total_marks of the student and also highest total_marks of the student
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>MIN(total_marks)</th>
+                                                                <th>MAX(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>490</td>
+                                                                <td>988</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT MIN(total_marks),max(total_marks) FROM STUDENT;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div><!-- ending of card-->
+                                        </div>
+
+                                        <div *ngIf="elementId=='question2'">
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print how many female students were there from the table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the how many female students are there
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>COUNT(gender)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>14</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    COUNT(gender) FROM STUDENT WHERE gender = 'female';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print how many students who are studying in St.John College
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the employee table
+                                                            you
+                                                            have to find the how many students are studying in the St.John College
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>COUNT(college_name)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT COUNT(college_name) FROM STUDENT where college_name = 'St.John College';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print how many students were their with last_name as
+                                                            "Dyer" from the table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the how many students with there last name as
+                                                            Dyer
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>COUNT(last_name)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    COUNT(last_name) FROM STUDENT WHERE last_name =
+                                                                    'Dyer';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print the students who are males and who are on 3rd semister
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the student table
+                                                            you
+                                                            have to find the who are males and are on the 3rd semister
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>COUNT(*)</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT COUNT(*) FROM STUDENT WHERE gender = 'male' and current_semister = 3;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print how many female students are studying in "Sai Degree College" or on age greater than 28
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find how many female students are studying in "Sai Degree College" or on age greater than 28
+                                                        </p>
+                                                        <p>
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>count(*)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>12</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT COUNT(*) FROM STUDENT WHERE gender = 'female' and college_name = 'Sai Degree College' or age >28;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div><!-- ending of card-->
+
+                                        </div>
+                                      
+                                        <div *ngIf="elementId=='question3'">
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print average total_marks of students who are studying in studying in the "Sri Ramulu Engineering College"
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the average total_marks of all the students who are
+                                                            studying in the "Sri Ramulu Engineering College"
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>Avg(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>647.6667</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT AVG(total_marks) FROM STUDENT WHERE college_name = 'Sri Ramulu Engineering College';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print average total_marks of students who are only male
+                                                            students from the entire table
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the student
+                                                            table
+                                                            you
+                                                            have to find the average total_marks of only male students
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>AVG(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>751.1250</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    Avg(total_marks) FROM STUDENT WHERE gender = 'male';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print average total_marks of students with the age above 23 and also studying Bsc.Maths
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the average otal_marks of students who are above age 23 and studying Bs.Maths
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>AVG(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>624.6667</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT AvG(total_marks) FROM STUDENT WHERE age > 23 AND branch = 'Bsc.Chemistry';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print average total_marks of students who are female students who are studying in the "Sai Degree College" or current on 4th semister
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the student table
+                                                            you
+                                                            have to find the average total_marks of female students who are studying in "Sai Degree College" or preset running on 4th semister 
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>AVG(total_marks)</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>739.0000</td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT AVG(total_marks) FROM STUDENT WHERE gender = 'female' AND college_name = 'Sai Degree College' Or current_semister = 4; 
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print average total_marks of students who's age was less than 30
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find average total_marks of students whos age was less
+                                                            than 30
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>AVG(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>748.1500</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT
+                                                                    AVG(total_marks) FROM STUDENT WHERE age < 30; </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print average total_marks of students who's branches are
+                                                            "M.P.C" or "Civil "
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the student table
+                                                            you
+                                                            have to find the average total_marks of students with branches
+                                                             as "M.P.C" or "Civil"
+
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>AVG(total_marks)</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>760.8000</td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(5)">{{buttonValue[5]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[5]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT AVG(total_marks) FROM STUDENT WHERE branch = 'Civil' or branch = 'M.P.C';
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div><!-- ending of card-->
+
+                                        </div>
+
+                                        <div *ngIf="elementId=='question4'">
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print the sum of total_marks of all students from the table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the all the students total_marks
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>SUM(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>22208</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(0)">{{buttonValue[0]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[0]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT SUM(total_marks) FROM STUDENT;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print the sum of total_marks of students who are studying only "Msc.Maths"
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong> From the student
+                                                            table
+                                                            you
+                                                            have to find the total total_marks of all the male students who are studying "Msc.Maths"
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>SUM(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3101</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(1)">{{buttonValue[1]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[1]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT SUM(total_marks) FROM STUDENT WHERE branch = 'Msc.Maths';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print sum of total_marks of students who are studying in the "Kite Engineering College" from the entire table
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the total of students total_marks who are studying in the "Kite Engineering College"
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>SUM(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2960</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(2)">{{buttonValue[2]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[2]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT SUM(total_marks) FROM STUDENT WHERE college_name = 'Kite ENgineering College';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print the sum of the total_marks of female students and who are above age greater than 27
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the student table
+                                                            you
+                                                            have to find the total of total_marks of female students and are above age of 27
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>SUM(total_marks)</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4193</td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(3)">{{buttonValue[3]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[3]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT SUM(Total_marks) FROM STUDENT WHERE gender = 'female' AND age >27;
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- ending of card-->
+
+                                            <!-- Starting of card-->
+                                            <div class="card-group">
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print the sum of the total_marks of the all the male students and are present on 4th semister and also age is greater than 17
+                                                        </p>
+                                                        <p>
+                                                            <u><strong>Descirption:-</strong></u>From the student table
+                                                            you
+                                                            have to find the total of total_marks of the male students are of above age 17 and are present on 4th semister
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>SUM(total_marks)</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2793</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(4)">{{buttonValue[4]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[4]">
+                                                                <p style="padding: 10px;" class="btn-block"> SELECT SUM(total_marks) FROM STUDENT WHERE gender = 'male' AND age>17 AND current_semister = 4;
+
+                                                                 </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border-primary"
+                                                    style="border: 2px solid; margin: 10px;">
+                                                    <div class="card-header text-center"><b>Question</b></div>
+                                                    <div class="card-body text-left">
+                                                        <p style="padding: 10px;" class="btn-block">
+                                                            Print sum of the total_marks of the students who are studying in the branches "Chemistry" or  "Bsc.Maths"
+                                                        </p>
+                                                        <p>
+                                                            <strong><u>Descirption:-</u></strong>From the employee table
+                                                            you
+                                                            have to find the total of the total_marks of the students who are  studying in the branches "Chemistry" or  "Bsc.Maths"
+                                                        </p>
+
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>SUM(total_marks)</th>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4049</td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <div class="text-center">
+                                                            <button style="padding: 10px;" class="btn btn-primary"
+                                                                (click)="answerChange(5)">{{buttonValue[5]}}</button>
+                                                            <div style="padding: 10px;" *ngIf="toggleOn[5]">
+                                                                <p style="padding: 10px;" class="btn-block">SELECT SUM(total_marks) FROM STUDENT WHERE branch = 'Chemistry' OR branch = 'Bsc.Maths';
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div><!-- ending of card-->
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- problem statment end-->
+                <div *ngIf="elementId2=='two'">
+                    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                        <app-video-cmp 
+                        [url]="videoData"
+                        [audioData]="audioData"
+                        ></app-video-cmp>
+                    </div>
+            
+                </div>
+            </div>
+
+    

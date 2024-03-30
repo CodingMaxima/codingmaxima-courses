@@ -1,0 +1,71 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Fetch</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <div class="card-group">
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Lazy Fetch </b></div>
+                <div class="card-body">
+                  <P>
+                    Lazy loading in Hibernate means fetching and loading the
+                    data, only when it is needed, from a persistent storage like a database. Lazy
+                    loading improves the performance of data fetching and significantly reduces
+                    the memory footprint.
+
+                  </P>
+                </div>
+              </div>
+
+              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Eager Fetch</b></div>
+                <div class="card-body">
+                  <P>
+                    Eager fetching tells Hibernate to get the related entities
+                    with the initial query. This can be very efficient because all entities are
+                    fetched with only one query. But in most cases it just creates a huge
+                    overhead because you select entities you don't need in your use case.
+                    You can prevent this with FetchType.
+
+                  </P>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="lazy" [ngClass]="(elementId2=='lazy')?'active':''" (click)="subtabChange($event)"
+          data-hover="LazyFetch">LazyFetch</span>
+        <span class="tab-pill" id="eager" [ngClass]="(elementId2=='eager')?'active':''" (click)="subtabChange($event)"
+          data-hover="EagerFetch">EagerFetch</span>
+      </div>
+
+      
+      <div *ngIf="elementId2=='lazy'">
+
+      </div>
+
+      <div *ngIf="elementId2=='eager'">
+
+      </div>
+      
+
+    </div>
+
+  </div>
+</div>

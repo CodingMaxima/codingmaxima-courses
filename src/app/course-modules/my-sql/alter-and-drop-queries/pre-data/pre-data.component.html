@@ -1,0 +1,94 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Pre-requisite data for alter & drop</h3>
+    <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="employee" [ngClass]="(elementId=='employee')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Employee Table">Employee Table
+                                </span>
+
+                                <span class="tab-pill" id="student" [ngClass]="(elementId=='student')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Student Table">Student Table
+                                </span>
+
+                                <span class="tab-pill" id="moives" [ngClass]="(elementId=='moives')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Movies Table">Movies Table
+                                </span>
+
+                            </div>
+                            <div *ngIf="elementId=='employee'">
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p>CREATE TABLE employee (</p>
+                                            <p style="margin-top: -20px;">id bigint, </p>
+                                            <p style="margin-top: -20px;">first_name varchar(100),</p>
+                                            <p style="margin-top: -20px;">middle_name varchar(100),</p>
+                                            <p style="margin-top: -20px;">last_name varchar(100),</p>
+                                            <p style="margin-top: -20px;">designation varchar(100),</p>
+                                            <p style="margin-top: -20px;">salary decimal(10,2), </p>
+                                            <p style="margin-top: -20px;">gender varchar(20), </p>
+                                            <p style="margin-top: -20px;">age int,</p>
+                                            <p style="margin-top: -20px;">isactive boolean,</p>
+                                            <p style="margin-top: -20px;">companyname varchar(100),</p>
+                                            <p style="margin-top: -20px;">primaryphonenumber bigint,</p>
+                                            <p style="margin-top: -20px;">secondaryphonenumber bigint</p>
+                                            <p style="margin-top: -20px;"> );</p>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of create -->
+                            </div><!--end of employee-->
+
+                            <div *ngIf="elementId=='student'">
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p>CREATE TABLE student (</p>
+                                            <p style="margin-top: -20px;">id long,</p>
+                                            <p style="margin-top: -20px;">first_name varchar(100),</p>
+                                            <p style="margin-top: -20px;">middle_name varchar(100),</p>
+                                            <p style="margin-top: -20px;">last_name varchar(100),</p>
+                                            <p style="margin-top: -20px;">gender varchar(100),</p>
+                                            <p style="margin-top: -20px;">age int,</p>
+                                            <p style="margin-top: -20px;">aadharNumber long,</p>
+                                            <p style="margin-top: -20px;">percentage decimal(4,2),</p>
+                                            <p style="margin-top: -20px;">collegeName varchar(100),</p>
+                                            <p style="margin-top: -20px;">grade varchar(5),</p>
+                                            <p style="margin-top: -20px;">branch varchar(10)</p>
+                                            <p style="margin-top: -20px;"> );</p>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of create -->
+                            </div><!--end of student-->
+
+                            <div *ngIf="elementId=='moives'">
+                                <div class="text-center">
+                                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="description">
+                                            <p>CREATE TABLE movies (</p>
+                                            <p style="margin-top: -20px;">  movieid bigint,</p>
+                                                        <p style="margin-top: -20px;">  moviename varchar(100),</p>
+                                                        <p style="margin-top: -20px;">  genre varchar(100),</p>
+                                                        <p style="margin-top: -20px;">  type varchar(100),</p>
+                                                        <p style="margin-top: -20px;">  actor varchar(100),</p>
+                                                        <p style="margin-top: -20px;">  language varchar(100),</p>
+                                                        <p style="margin-top: -20px;">  contry varchar(100),</p>
+                                                        <p style="margin-top: -20px;">  IMDBrating float(20),</p>
+                                                        <p style="margin-top: -20px;">  picturequality varchar (100),</p>
+                                                        <p style="margin-top: -20px;"> );</p>
+                                        </div>
+                                    </div>
+                                </div> <!-- end of create -->
+                            </div><!--end of student-->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

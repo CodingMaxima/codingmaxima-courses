@@ -1,0 +1,166 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Factorial of a number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">The factorial of a non-negative integer is a mathematical operation that calculates the product of all
+              positive integers less than or equal to that number. It is denoted by the exclamation mark
+              (<code>!</code>) following the number.
+            </button>
+              <button type="button" class="btn btn-lg btn-block">
+              For example, the factorial of 5 is written as 5!, and it is
+              calculated as:
+            <p>
+              5! = 5 × 4 × 3 × 2 × 1 = 120.
+            </p></button>
+            <button type="button" class="btn btn-lg btn-block">
+              In general, the factorial of a number <em>n</em>, denoted as <em>n!</em>, is the product of all positive
+              integers from 1 to <em>n</em>. The factorial function can be defined recursively as:
+           
+            <p>
+              n! = n × (n-1)!
+            </p>
+            <p>
+              with the base case being 0! = 1.
+            </p>
+            </button>
+            <button type="button" class="btn btn-lg btn-block">
+              It's important to note that factorials grow very rapidly as the input number increases. The factorial of
+              even moderately large numbers quickly becomes extremely large, which can lead to numerical overflow in
+              computer calculations. In such cases, specialized algorithms or approximation techniques are used to
+              handle factorials.
+              </button>
+          </div>
+      
+ <!--starting of example-->
+ <div class="card-group">
+  <div
+    class="card border-primary"
+    style="border: 2px solid; margin: 10px; font-size: large"
+  >
+    <div class="card-header text-center"><b>Example-1</b></div>
+    <div class="card-body" style="background-color: rgb(255, 239, 209)">
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">Enter a number</p>
+      <p style="margin-top: -20px" class="card-text">5</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">120</p>
+    </div>
+  </div>
+  <div
+    class="card border-primary"
+    style="border: 2px solid; margin: 10px;font-size: large"
+  >
+    <div class="card-header text-center"><b>Example-2</b></div>
+    <div
+      class="card-body"
+      style="background-color: rgb(229, 253, 253)"
+    >
+    <p class="card-subtitle mb-2 text-muted">Input</p>
+    <p class="card-text">Enter a number</p>
+    <p style="margin-top: -20px" class="card-text">4</p>
+    <p class="card-subtitle mb-2 text-muted">Output</p>
+    <p class="card-text">120</p></div>
+  </div>
+  <div
+    class="card border-primary"
+    style="border: 2px solid; margin: 10px;font-size: large"
+  >
+    <div class="card-header text-center"><b>Example-3</b></div>
+    <div
+      class="card-body"
+      style="background-color: rgb(252, 227, 231)"
+    >
+    <p class="card-subtitle mb-2 text-muted">Input</p>
+    <p class="card-text">Enter a number</p>
+    <p style="margin-top: -20px" class="card-text">6</p>
+    <p class="card-subtitle mb-2 text-muted">Output</p>
+    <p class="card-text">720</p></div>
+  </div>
+</div><!--Ending of example-->
+    </div><!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img class="program-img-fit" src="assets/img/corejava/basic/factorial.JPG" alt="program">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+
+ <!--starting of the test cases-->
+ <div class="card-body card-group">
+  <div
+    class="card border-primary"
+    style="border: 2px solid; margin: 10px; font-size: large"
+  >
+    <div class="card-header text-center"><b>Test Case-1</b></div>
+    <div class="card-body" style="background-color: rgb(255, 239, 209)">
+      <p class="card-subtitle mb-2 text-muted">Input</p>
+      <p class="card-text">5</p>
+      <p class="card-subtitle mb-2 text-muted">Output</p>
+      <p class="card-text">120</p>
+    </div>
+  </div>
+  <div
+    class="card border-primary"
+    style="border: 2px solid; margin: 10px;font-size: large"
+  >
+    <div class="card-header text-center"><b>Test Case-2</b></div>
+    <div
+      class="card-body"
+      style="background-color: rgb(229, 253, 253)"
+    >
+    <p class="card-subtitle mb-2 text-muted">Input</p>
+    <p class="card-text">4</p>
+    <p class="card-subtitle mb-2 text-muted">Output</p>
+    <p class="card-text">24</p></div>
+  </div>
+  <div
+    class="card border-primary"
+    style="border: 2px solid; margin: 10px;font-size: large"
+  >
+    <div class="card-header text-center"><b>Test Case-3</b></div>
+    <div
+      class="card-body"
+      style="background-color: rgb(252, 227, 231)"
+    >
+    <p class="card-subtitle mb-2 text-muted">Input</p>
+    <p class="card-text">6</p>
+    <p class="card-subtitle mb-2 text-muted">Output</p>
+    <p class="card-text">720</p></div>
+  </div>
+</div>  
+<!--ending of the test cases-->
+
+  
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+    </div>
+  </div>
+</div>

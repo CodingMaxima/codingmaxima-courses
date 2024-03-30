@@ -1,0 +1,37 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Dunder-Magic methods Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <!-- <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Problems">Problems</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span> -->
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <p type="button" class="btn btn-lg btn-block">Dunder/Magic Methods are the special methods
+                        Which contains 2 underscore symbols at the starting and the ending of the method.</p>
+                    <p type="button" class="btn btn-lg btn-block">"Dunder" is short for "double underscore,"</p>
+                    <p type="button" class="btn btn-lg btn-block">For an class these are the default
+                        methods.</p>
+                    <p type="button" class="btn btn-lg btn-block">In python every class which we creates is an
+                        child class for the object class. so in object class the dunder method will be present.</p>
+                    <p type="button" class="btn btn-lg btn-block">Whether we take/ or not the object class it was
+                        an parent class to the classes that we created.</p>
+                    <p type="button" class="btn btn-lg btn-block">The build-in classes in python contains many
+                        magic mthods .To see the build-in classes use <b>dir() </b> function then you will get all the
+                        magic methods present in python.</p>
+                    <p type="button" class="btn btn-lg btn-block">These are used for the operator overloading(
+                        provided additional functionality to the operators, the python indirectly calls the magic
+                        methods to provide an additional functionality to it).</p>
+                    <p type="button" class="btn btn-lg btn-block">Few Examples of magic methods are __iter__,
+                        __call__, __contains__, __repr__, __add__, __new__(), __init__, __len__ etc.....</p>
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>

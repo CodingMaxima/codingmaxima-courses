@@ -1,0 +1,188 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">HashMap Introduction</h3>
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <div class="text-center">
+                <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                    <button type="button" class="btn btn-lg btn-block">HashMap stores its value in the form of keys and
+                        value pairs & can be access them by using the index( considers key as index).</button>
+                    <button type="button" class="btn btn-lg btn-block">In HashMap it doesn't allows the duplicate keys
+                        they
+                        should be unique but HashMap allows duplicate values.</button>
+                    <button type="button" class="btn btn-lg btn-block">Keys should contains only one null key but values
+                        may
+                        contains n number of null values</button>
+                </div>
+                <div style="padding-top: 15px;">
+                    <button class="btn btn-primary btn-lg">HashMap Example</button>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header"><b>For creating an HashMap:</b></div>
+                    <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                        <p>HashMap&lt;Integer,String&gt; different = new HashMap&lt;&gt; ();</p>
+                        <p>Here, Integers,Strings are the object which can store Integer keys,String values.</p>
+                        <p>HashMap&lt;String,String&gt; diffstrings = new HashMap&lt;&gt; ();</p>
+                        <p>Here, strings,strings are the object which can store both String keys and values.</p>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header"><b>For finding the length(size) of an HashMap:</b></div>
+                    <div class="card-body" style="background-color:  rgb(229, 253, 253);">
+                        <h6 class="card-subtitle mb-2 text-muted">code</h6>
+                        <li>HashMap &lt;Integer, String&gt; fruits = new HashMap&lt;String&gt;();</li>
+                        <li> fruits.put(1,"apple");</li>
+                        <li>fruits.put(2,"mango");</li>
+                        <li>fruits.put(3,"guava");</li>
+                        <li>System.out.println(fruits.size());</li><br>
+                        <h6 class="card-subtitle mb-2 text-muted">output</h6>
+                        <li>3</li>
+                    </div>
+                </div>
+            </div><!--end of card group-->
+
+            <div style="padding-top: 15px;" class="text-center">
+                <button class="btn btn-primary btn-lg">Obtain values/elements</button>
+            </div>
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-body" style=" font-size: medium; padding: 10px;background-color:rgb(255, 239, 209);">
+                    <li class="text-center">For obtaining the value from the HashMap use get() method. In this method we
+                        access them by using
+                        index
+                    </li>
+                    <li class="text-center"><b>.get()</b></li>
+                </div>
+            </div>
+            <div style="padding-top: 15px;" class="text-center">
+                <button class="btn btn-primary btn-lg">Adding & Changing the elements</button>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+                        <p class='card-text' style='font-size: medium;font-style: oblique'>For adding the elements in
+                            the
+                            HashMap use add() method</p>
+                        <p class="card-text"><b>.put()</b></p>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+                        <p class='card-text' style='font-size: medium;font-style: oblique'>For changing the elements in
+                            the
+                            HashMap use set() method.By changing the
+                            elements use index along with the element</p>
+                        <p class="card-text"><b>.set(index, "element");</b></p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 15px;" class="text-center">
+                <button class="btn btn-primary btn-lg">Removing And Sorting the elements</button>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+                        <p class='card-text' style='font-size: medium;font-style: oblique'>For removing the elements in
+                            the
+                            HashMap use remove() method, clear() method</p>
+                        <p class="card-text"><b>remove()- </b>is used for the removing the selected elements from the
+                            HashMap by
+                            using index</p>
+                        <p class="card-text"><b>clear()- </b>is used for removing the entire elements from the HashMap
+                        </p>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+                        <p class='card-text' style='font-size: medium;font-style: oblique'>For sorting the elements in
+                            the
+                            HashMap use sort() method.</p>
+                        <p class="card-text"><b>.sort();</b></p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 15px;" class="text-center">
+                <button class="btn btn-primary btn-lg">Loops</button>
+            </div>
+            <div style=" font-size: medium; padding: 10px;">
+                <button type="button" class="btn btn-lg btn-block">For iterating the HashMap use for-each loop</button>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(229, 253, 253);">
+                        <p>For-each loop for getting the keys</p>
+                        <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                        <li class="card-text"> HashMap&lt;Integer,String&gt; fruits = new
+                            HashMap&lt;Integer,String&gt;();
+                        </li>
+                        <li class="card-text">fruits.put(1,"apple");</li>
+                        <li class="card-text">fruits.put(4,"banana");</li>
+                        <li class="card-text">fruits.put(2,"guava");</li>
+                        <li class="card-text">fruits.put(3,"Mango");</li>
+                        <li class="card-text"> for (Integer i : capitalCities.keySet()) {{'{'}}</li>
+                        <pre>   System.out.println(i);</pre>
+                        <li class="card-text">{{'}'}}</li><br>
+                        <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                        <li class="card-text">1</li>
+                        <li class="card-text">2</li>
+                        <li class="card-text">3</li>
+                        <li class="card-text">4</li>
+
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(252, 227, 231);">
+                        <p>For-each loop for getting values</p>
+                        <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                        <li class="card-text"> HashMap&lt;Integer,String&gt; fruits = new
+                            HashMap&lt;Integer,String&gt;();
+                        </li>
+                        <li class="card-text">fruits.put(1,"apple");</li>
+                        <li class="card-text">fruits.put(4,"banana");</li>
+                        <li class="card-text">fruits.put(2,"guava");</li>
+                        <li class="card-text">fruits.put(3,"Mango");</li>
+                        <li class="card-text"> for (String i : capitalCities.values()){{'{'}}</li>
+                        <pre>   System.out.println(i);</pre>
+                        <li class="card-text">{{'}'}}</li><br>
+                        <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                        <li class="card-text">apple</li>
+                        <li class="card-text">banana</li>
+                        <li class="card-text">guava</li>
+                        <li class="card-text">mango</li>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-body"
+                        style=" font-size: medium; padding: 10px;background-color:rgb(255, 239, 209);">
+                        <p>Printing both key and values together by using for-each loop</p>
+                        <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+                        <li class="card-text"> Map&lt;Integer,String&gt; fruits = new HashMap&lt;Integer,String&gt;();
+                        </li>
+                        <li class="card-text">fruits.put(1,"apple");</li>
+                        <li class="card-text">fruits.put(2,"banana");</li>
+                        <li class="card-text">fruits.put(3,"guava");</li>
+                        <li class="card-text">fruits.put(4,"Mango");</li>
+                        <li class="card-text">for (Map.Entry&lt;Integer,String&gt; entry : fruits.entrySet())
+                            {{'{'}}</li>
+                        <pre>  System.out.println("Key = " + entry.getKey() +
+                        ", Value = " + entry.getValue());</pre>
+                        <li class="card-text">{{'}'}}</li><br>
+                        <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+                        <li class="card-text">key = 1, value = apple</li>
+                        <li class="card-text">key = 2, value = banana</li>
+                        <li class="card-text">key = 3, value = guava</li>
+                        <li class="card-text">key = 4, value = Mango</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

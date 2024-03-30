@@ -1,0 +1,292 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Employee-Laptop</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Example Queries">Examples Queries</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId2=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+            <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+            <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+            <span class="tab-pill" id="question4" [ngClass]="(elementId=='question4')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+            <span class="tab-pill" id="question5" [ngClass]="(elementId=='question5')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-5">Question-5</span>
+            <span class="tab-pill" id="question6" [ngClass]="(elementId=='question6')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-6">Question-6</span>
+            <span class="tab-pill" id="Question7" [ngClass]="(elementId=='question7')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-7">Question-7</span>
+            <span class="tab-pill" id="question8" [ngClass]="(elementId=='question8')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-8">Question-8</span>
+            <span class="tab-pill" id="question9" [ngClass]="(elementId=='question9')?'active':''"
+                (click)="tabChange($event)" data-hover="Question-9">Question-9</span>
+        </div>
+
+        <div *ngIf="elementId=='question1'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-1</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> Print all the employees who has laptops along with
+                        laptops information(inner Join)</p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerOne[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerOne">
+                                <td *ngFor="let col of getSplitDataRows(row, answerOne)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from employee e inner join laptop l on
+                            e.emp_id = l.emp_id;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of first question1-->
+
+        <div *ngIf="elementId=='question2'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-2</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print all the employees along with laptops(left join)
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerTwo[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerTwo">
+                                <td *ngFor="let col of getSplitDataRows(row, answerTwo)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from employee e left join laptop l on
+                            e.emp_id = l.emp_id;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of  question2-->
+
+        <div *ngIf="elementId=='question3'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-3</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> Print the employees who has laptops and print all the
+                        laptop details(right join)</p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerThree[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerThree">
+                                <td *ngFor="let col of getSplitDataRows(row, answerThree)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from employee e right join laptop l on
+                            e.emp_id = l.emp_id;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question3-->
+
+        <div *ngIf="elementId=='question4'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-4</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print the employees who doesn't assigned any laptops
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerFour[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerFour">
+                                <td *ngFor="let col of getSplitDataRows(row, answerFour)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select e.* from employee e left join laptop l on
+                            e.emp_id = l.emp_id where l.emp_id is null;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question4-->
+
+        <div *ngIf="elementId=='question5'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-5</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> Print the laptops which are not assign to any employees
+                    </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerFive[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerFive">
+                                <td *ngFor="let col of getSplitDataRows(row, answerFive)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select l.* from employee e right join laptop l on
+                            e.emp_id = l.emp_id where l.emp_id is null;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question5-->
+
+        <div *ngIf="elementId=='question6'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-6</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print the employee details who are using expired
+                        warranty laptops along with laptop details </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerSix[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerSix">
+                                <td *ngFor="let col of getSplitDataRows(row, answerSix)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from employee e inner join laptop l on
+                            e.emp_id = l.emp_id where l.lap_warranty &lt;= curdate();</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question6-->
+
+        <div *ngIf="elementId=='question7'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-7</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block">Print the employee details who are using "Dell, Lenovo,
+                        Hp" laptops </p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerSeven[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerSeven">
+                                <td *ngFor="let col of getSplitDataRows(row, answerSeven)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select * from employee e inner join laptop l on
+                            e.emp_id = l.emp_id where l.lap_name in('Dell', 'Lenovo', 'HP');</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question7-->
+
+        <div *ngIf="elementId=='question8'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-8</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> Print all the laptop company names & the count of
+                        employees who are using them.</p>
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th *ngFor="let col of getSplitDataHeader(answerEight[0])">
+                                    {{col}}
+                                </th>
+                            </tr>
+                            <tr *ngFor="let row of answerEight">
+                                <td *ngFor="let col of getSplitDataRows(row, answerEight)">
+                                    {{col}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <br>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">select l.lap_name, count(e.emp_id) from employee e
+                            inner join laptop l on e.emp_id = l.emp_id group by l.lap_name;</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of question8-->
+
+        <div *ngIf="elementId=='question9'">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="card-header text-center"><b>Question-8</b></div>
+                <div class="card-body text-center">
+                    <p style="padding: 10px;" class="btn-block"> Extend 1 year extra warranty for the all Dell laptops
+                        which currently covers in warranty and was used by the employees</p>
+                        <p><b>NOTE:</b> This query works only when the safe modes were disabbled in MYSQL WORKBENCH</p>
+                    <button style="padding: 10px;" class="btn btn-primary"
+                        (click)="answerChange()">{{buttonValue}}</button>
+                    <div style="padding: 10px;" *ngIf="toggleOn">
+                        <p style="padding: 10px;" class="btn-block">update employee e inner join laptop l on e.emp_id =
+                            l.emp_id set l.lap_warranty = date_add(l.lap_warranty, interval 1 year) where l.lap_warranty
+                            > curdate() and l.name='Dell';
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end of question9-->
+
+    </div>
+</div>

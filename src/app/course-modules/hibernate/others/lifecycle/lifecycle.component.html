@@ -1,0 +1,87 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Hibernate Persistance Object Life Cycle</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill">Introduction</span>
+    </div>
+
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+
+            <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                <div class="text-center">
+                    <img class="program-img-fit" >
+
+                    <p>
+                        In hibernate we maintain the states of the objects throughout the object’s
+                     lifetime so that we ensure to maintain consistency of data on all platforms
+                     which includes database and front end application associated. These states in
+                     hibernate lifecycle are<br>
+                     The lifecycle of hibernate session can be divided into three states which are<br>
+                     1. Transient State<br>
+                     2. Persistent State<br>
+                     3. Detached State
+                     </p>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Transient State</b></div>
+                        <div class="card-body">
+
+                            
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>In this state, the data object is not in connection with the hibernate
+                                application. It is a standalone object not connected to the front end JAVA
+                                application and to hibernate as well.</li>
+
+                             <li class='card-text' style='font-size: medium;font-style: oblique'>We cannot do any change to this object until it gets connected to the backend
+                                database server. This object if is present in the database then we can invoke it
+                                using the get () or load () function.</li>
+
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>In case we want to create a new entity and do some changes to it
+                                    independently then we can create the entity out of the database and that
+                                    entity will be called transient. This entity can be published in the database
+                                    after creating the required connections.</li>
+
+                                <li class='card-text' style='font-size: medium;font-style: oblique'>The data in this state is saved in heap memory as it is not yet connected to
+                                    hibernate. Once a hibernate connection is established then this data is
+                                    committed into the database.</li>
+
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Persistent State</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>The newly created entity can be published into the database by creating a
+                                connection between the database and the front end via hibernate.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>Once we establish a session connection between hibernate and database
+                                then the object enters into the state called persistent state.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>We can achieve this using different functions like persist (), save(),
+                                saveOrUpdate(), Update().</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>We can also change the object which is present in the database after creating
+                                this connection. Please be aware that all the changes we do will be saved in
+                                the database only if this connection is active.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>Hibernate ensures that all the real-time changes get stored in the database
+                                when this connection is present. Here by object we mean row in the database.</li>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center"><b>Detached State</b></div>
+                        <div class="card-body">
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>Detached objects will be present in the database as it is as they were last
+                                saved when the session was active.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>As we disconnect the session from then onwards the changes will not be
+                                saved in the database.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>All changes which we do without the connection being established will
+                                not be recorded and saved in the backend.</li>
+                            <li class='card-text' style='font-size: medium;font-style: oblique'>Several functions like detach(), close(), clear(), evict() can be used to
+                                attain this state.</li>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>

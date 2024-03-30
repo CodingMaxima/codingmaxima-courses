@@ -1,0 +1,135 @@
+.tab-title{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    span{
+      padding: 10px 10px;
+      padding-top: 20px;
+      margin: 0px 5px;
+      cursor: pointer;
+    }
+    .tab-pill {
+      background: linear-gradient( to right, #b500d8, #f5e8fc ), 
+                linear-gradient( to right, #b500d8 -6.56%, #f5e8fc 122.43% );
+      background-size: 94% 2px, 0px 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+      padding: 15px 15px 10px 15px;
+      font-weight: 600;
+      font-size: 17px;
+      color: #282828;
+      &.active{
+        background-size: 0 2px, 100% 3px;
+        cursor: pointer;
+        color: #000000;
+      }
+    }
+  }
+  
+  .tab-slide-effect {
+  span {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px 0;
+    background: #ffffff;
+    box-shadow: inset 0 3px #ffffff;
+    transition: background 0.9s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+  }
+  span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5e8fc;
+    color: #b500d8;
+    content: attr(data-hover);
+    transform: rotateX(270deg);
+    transition: transform 0.7s;
+    transform-origin: 0 0;
+    pointer-events: none;
+    padding-top: 13px;
+    padding-left: 13px;
+    border-radius: 15px;
+  }
+  }
+  
+  .tab-pill.active{
+  background: #ffffff!important;
+  }
+  
+  .tab-slide-effect .tab-pill.active::before {
+  -webkit-transform: rotateX(10deg);	
+  -moz-transform: rotateX(10deg);
+  transform: rotateX(10deg);
+  }
+  
+  .animate-charcter
+  {
+    padding-top: 10px;
+     text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+    display: inline-block;
+        font-size: 25px;
+  }
+  
+  ol{
+    margin-left: 5px;
+    padding: 0;
+  }
+  ul{
+    margin-left: 10px;
+    padding:0;
+  }
+  
+  ol,ul {
+
+    display: table;
+  }
+
+ 
+  
+  .btn-block {
+    width: 90% !important;
+    margin-bottom: 10px;
+    font-weight: 600;
+    background-color: rgb(196, 233, 253);
+  }
+  
+  .btn-block:hover {
+    font-family: "Glacial Indifference";
+    background-color: #686868;
+    width: 100% !important;
+    font-weight: 600;
+    color: white;
+    border: solid 2px #8cf8f8 !important;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  

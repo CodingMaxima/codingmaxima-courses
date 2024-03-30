@@ -1,0 +1,75 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Different ways of printing Hashmap</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Problem Statement">Problem Statement</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+       
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <h2>1. Using <code>entrySet()</code> and a for-each loop:</h2>
+                        <pre><code>
+                        HashMap&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();
+                        // Add elements to the HashMap...
+                        
+                        for (Map.Entry&lt;String, Integer&gt; entry : hashMap.entrySet()) {{ '{' }}
+                          System.out.println(entry.getKey() + " => " + entry.getValue());
+                          {{ '}' }}
+                        </code></pre>
+                        
+                        <h2>2. Using <code>keySet()</code> and a for-each loop:</h2>
+                        <pre><code>
+                        HashMap&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();
+                        // Add elements to the HashMap...
+                        
+                        for (String key : hashMap.keySet()) {{ '{' }}
+                          System.out.println(key + " => " + hashMap.get(key));
+                          {{ '{' }}
+                        </code></pre>
+                        
+                        <h2>3. Using Java 8's <code>forEach</code> and lambda expression:</h2>
+                        <pre><code>
+                        HashMap&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();
+                        // Add elements to the HashMap...
+                        
+                        hashMap.forEach((key, value) =&gt; System.out.println(key + " => " + value));
+                        </code></pre>
+                        
+                        <h2>4. Using Java 8's Stream API:</h2>
+                        <pre><code>
+                        HashMap&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();
+                        // Add elements to the HashMap...
+                        
+                        hashMap.entrySet().stream()
+                          .forEach(entry =&gt; System.out.println(entry.getKey() + " => " + entry.getValue()));
+                        </code></pre>
+                        
+                        <h2>5. Using Iterator and <code>entrySet()</code>:</h2>
+                        <pre><code>
+                        HashMap&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();
+                        // Add elements to the HashMap...
+                        
+                        const iterator = hashMap.entrySet().iterator();
+                        while (iterator.hasNext()) {{ '{' }}
+                          const entry = iterator.next();
+                          System.out.println(entry.getKey() + " => " + entry.getValue());
+                          {{ '}' }}
+                        </code></pre>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- Ending of problem statement card body-->
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp [url]=""></app-video-cmp>
+        </div>
+    </div>
+</div>

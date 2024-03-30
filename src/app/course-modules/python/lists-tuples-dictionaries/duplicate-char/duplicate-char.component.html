@@ -1,0 +1,131 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Duplicate Characters(Dictionaries)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="text-center">
+          <button type="button" class="btn btn-lg btn-block">
+            <p class='card-text' style='font-size: medium;font-style: oblique'>The program is to print the number of
+              duplicate characters present in the string along with their count.</p>
+            <p class='card-text' style='font-size: medium;font-style: oblique'>Suppose we are taking the string as
+              "coding maxima" then in the result only the dupicate characters(which means the character repeated more
+              than 1 time) have to be printed such as m, i, a along
+              with their count i.e., m - 2 times, i-2 times, a-2 times</p>
+          </button>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">homeone</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">o occurs 2 times</p>
+              <p class="card-text">e occurs 2 times</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Rubberball</p>
+
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">b occurs 3 times</p>
+              <p class="card-text">l occurs 2 times</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">commit</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">m occurs 2 times</p>
+
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/python/lists_tuples/find_duplicate_characters.jpg" alt="program">
+    </div>
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/python/lists_tuples/find_duplicate_characters_out.jpg" alt="program">
+    </div>
+  </div>
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">homeone</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">o - 2 times</p>
+            <p class="card-text">e - 2times</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+
+            <p class="card-text">rubberball </p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">b - 3 times</p>
+            <p class="card-text">l - 2 times</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+
+            <p class="card-text">commit</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">m- 2 times</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

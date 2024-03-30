@@ -1,0 +1,203 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Perfect Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          A perfect number is a positive integer that is equal to the sum of its
+          proper divisors.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          Proper divisors of a number are the positive divisors excluding the
+          number itself. In other words, if you add up all the factors of a
+          perfect number (except the number itself), the result will be equal to
+          the number.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <p><b>Example 1:</b></p>
+          <p>
+            let's consider the number 6. The factors of 6 are 1, 2, 3, and 6.
+            The proper divisors of 6 are 1, 2, and 3.<br />
+            If we add up the proper divisors (1 + 2 + 3), we get 6, which is
+            equal to the original number. Therefore, 6 is a perfect number.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <p><b>Example 2:</b></p>
+          <p>
+            let's consider the number 10. The factors of 6 are 1, 2, 5, and 10.
+            The proper divisors of 10 are 1, 2, and 5. <br />
+            If we add up the proper divisors (1 + 2 + 5), we get 8, which is not
+            equal to the original number. Therefore, 10 is a not perfect number.
+          </p>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          Perfect numbers have been studied for thousands of years and have
+          fascinated mathematicians. As of now, only a few perfect numbers are
+          known, and they are all even. It has been conjectured but not proven
+          that all perfect numbers are even. The search for larger perfect
+          numbers is an ongoing area of research in number theory.
+        </button>
+      </div>
+
+      <!--starting of example-->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">6</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Given number 6 is a perfect number</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-2</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">10</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Given number 10 is not a perfect number</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Example-3</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">Enter a number</p>
+            <p style="margin-top: -20px" class="card-text">28</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">Given number 28 is a perfect number</p>
+          </div>
+        </div>
+      </div>
+      <!--Ending of example-->
+    </div>
+    <!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/perfect.JPG"
+        alt="program"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+    <!--starting of the test cases-->
+    <div class="card-body card-group">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-1</b></div>
+        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">6</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">Perfect Number</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-2</b></div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">10</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">Not a Perfect Number</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Test Case-3</b></div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">28</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">Perfect Number</p>
+        </div>
+      </div>
+    </div>
+    <!--ending of the test cases-->
+  </div>
+
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

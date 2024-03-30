@@ -1,0 +1,271 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Student - Example</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+      <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+        data-hover="Problem Statement">Problem Statement</span>
+      <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+        data-hover="Program">Program</span>
+      <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+        data-hover="Animation Video">Animation Video</span>
+  
+    </div>
+  
+    <div *ngIf="elementId=='one'">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+          <div class="text-center">
+            <div
+              style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+              <button type="button" class="btn btn-lg btn-block">Design a  Student management system, using the
+                following description. </button>
+  
+              <br>
+              <button type="button" class="btn btn-lg btn-block">Write a Student class which is expected to be plain
+                old Java objects (POJO classes) with getters and setters
+                for each field. The class is also expected to have a toString method which will display
+                all the fields of the object and their values in a human readable form.</button>
+              <button type="button" class="btn btn-lg btn-block">Set up a Database to create Tables in your
+                Database.</button>
+              <button type="button" class="btn btn-lg btn-block">Design a Hibernate Configuration File Which is an XML
+                File.
+                This file contains the information regarding the database system you intend to use.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">Create a Mapping file that instructs Hibernate how to map
+                the defined class or classes to the database tables.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">Create an Test/Application class with the main() method
+                to run the application. We will use this application
+                to save few Student records and then we will apply CRUD operations on those records.
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center "><b>Student - Class</b></div>
+        <div class="card-body">
+          <li class="card-text">Integer -  ID</li>
+          <li class="card-text">String -  name,</li>
+          <li class="card-text">String - gender,</li>
+          <li class="card-text">Double - marks,</li>
+          <li class="card-text">String - phone number,</li>
+          <li class="card-text">With constructors, all getters and setters and toString methods </li>
+        </div>
+        <div style="padding: 10px;" class="text-center">
+          <button class="btn btn-info">INSERT follwing Data into Table</button>
+        </div>
+  
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+              <li class="card-text">id = 1</li>
+              <li class="card-text">name = Bharathi </li>
+              <li class="card-text">gender = female</li>
+              <li class="card-text">marks = 40</li>
+              <li class="card-text">phone_number = 2243588678</li>
+
+  
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 2</li>
+                <li class="card-text">name = Sandeep </li>
+                <li class="card-text">gender = male</li>
+                <li class="card-text">marks = 46</li>
+                <li class="card-text">phone_number = 5576899345</li>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 3</li>
+                <li class="card-text">name = Sujit </li>
+                <li class="card-text">gender = male</li>
+                <li class="card-text">marks = 85</li>
+                <li class="card-text">phone_number = 8856140934</li>
+  
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 4</li>
+                <li class="card-text">name = Sushma </li>
+                <li class="card-text">gender = female</li>
+                <li class="card-text">marks = 45</li>
+                <li class="card-text">phone_number = 7705615260</li>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>City Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 5</li>
+                <li class="card-text">name = Yamini </li>
+                <li class="card-text">gender = female</li>
+                <li class="card-text">marks = 52</li>
+                <li class="card-text">phone_number = 9008908125</li>
+  
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 6</li>
+                <li class="card-text">name = Navya </li>
+                <li class="card-text">gender = female</li>
+                <li class="card-text">marks = 22</li>
+                <li class="card-text">phone_number = 9989957789</li>
+  
+            </div>
+          </div>
+  
+        </div>
+  
+  
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 7</li>
+                <li class="card-text">name = Raju </li>
+                <li class="card-text">gender = male</li>
+                <li class="card-text">marks = 38</li>
+                <li class="card-text">phone_number = 1123577896</li>
+  
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student Data</b></div>
+            <div class="card-body">
+                <li class="card-text">id = 8</li>
+                <li class="card-text">name = Naresh </li>
+                <li class="card-text">gender = male</li>
+                <li class="card-text">marks = 62</li>
+                <li class="card-text">phone_number = 5534566789</li>
+  
+            </div>
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card border-warning" style="border: 2px solid;">
+          <div class="card" style="margin: 5px;">
+            <div class="card-body" style="font-family: 'Inter', sans-serif;">
+              <p>
+  
+              </p>
+              <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-primary"> Update Student phone number by Id</button>
+              </div>
+  
+              <button style="padding: 10px;" class="btn btn-lg btn-block">
+                In this we need to Update the data of  phone number in a  row by Id from the table. <br>
+  
+              </button>
+  
+  
+  
+              <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-primary">Update Student Name by Id</button>
+              </div>
+  
+              <button style="padding: 10px;" class="btn btn-lg btn-block">
+                In this we need to Update the data of   Student Name  in a  row by Id from the table.
+              </button>
+              <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">Select the All Student Details  who Scored the Marks between 30 to 50(both Inclusive) and ADD 10 marks to each student Then Check the Updation</button>
+              </div>
+  
+  
+              <button style="padding: 10px;" class="btn btn-lg btn-block">
+                Here First we need to get the student  details who got the Marks between 30 to 50(both Inclusive) then
+                     <p> ADD each Student 10 marks </p> 
+                     <p> After that check the Updated details. </p> 
+
+              </button>
+             
+  
+              
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="subTabChange($event)"
+        data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+      <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="subTabChange($event)"
+        data-hover="Main(Testing)"> Main(Testing) Class</span>
+      <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+        (click)="subTabChange($event)" data-hover="Configuration file ">Configuration file</span>
+      <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''" (click)="subTabChange($event)"
+        data-hover="Pom.Xml file">Pom.Xml file</span>
+  
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pojo'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Pojo Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example2.pojo.png" alt="">
+          </div>
+        </div>
+       
+      </div>
+      <div class="card-group" *ngIf="elementId2=='main'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Main Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example2.main.png" alt="">
+          </div>
+        </div>
+        
+      </div>
+      <div class="card-group" *ngIf="elementId2=='configuration'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example2.cfg.file.png" alt="">
+          </div>
+        </div>
+        
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pom.xml'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+          </div>
+        </div>
+        
+      </div>
+  
+  
+    </div>
+  </div>
+  
+  <div *ngIf="elementId=='three'">
+    <div class="card-body">
+      <app-video-cmp [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+  
+  
+  

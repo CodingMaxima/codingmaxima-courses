@@ -1,0 +1,196 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Arrays Introduction</h3>
+
+  <div class="card-body border-warning" style="border: 2px solid">
+    <div class="text-center">
+      <button type="button" class="btn btn-lg btn-block">
+        Arrays are the Collection of similar type of data value./ sequence of
+        objects which are of the same data type.
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        Arrays are used when there is a need to use many variables of the same
+        type as a list & used to store a collection of data and it is more
+        useful to think of an array as a collection of variables of the same
+        type.
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        All the values(elements) are stored with one single variable name
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        The data stored in the array are based on the index.
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        Representation of array <b>"[]"</b>
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        For storing the values in the array the formula for index is
+        <b>length - 1</b>
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        BY using arrays it will increase code readability and we can easily
+        access the data from array by using array index.
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        <b>NOTE:- Array index is always start from 0.</b>
+      </button>
+
+      <div style="padding-top: 15px">
+        <button class="btn btn-primary btn-lg">Example & types</button>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center" style="padding: 12px;">
+          <b>Simple Example for array</b>
+        </div>
+        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+          <pre>
+                int a = 1;
+                int b = 12;
+                int c = 21;
+                int d = 17;
+          </pre>
+          <br />
+          <p>
+            by using arrays instead of creating the multiple vaariables like
+            above we can use single variable for storing the n number of
+            elements
+          </p>
+          <p>int numbers[3] ={{ "{" }}1, 2, 3, 4{{ "}" }};</p>
+        </div>
+      </div>
+    </div> 
+    <div class="text-center">
+      <button type="button" class="btn btn-lg btn-block">
+        There are 3ways to declare an array
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        1st way is declaraion, instantiation(object creation),initailization
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        2nd way is dynamic approach
+      </button>
+      <button type="button" class="btn btn-lg btn-block">
+        3rd way is static approach
+      </button>
+    </div>
+    <div class="card-group">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center" style="padding: 12px;">
+          <b>dynamic approach for array</b>
+        </div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+          <li>
+            Java does not provide any direct way to take array input. But we can
+            take array input by using the method of the Scanner class.
+          </li><br>
+          <li>
+            To take input of an array, we must ask the user about the length of
+            the array. After that, we use a Java for loop to take the input from
+            the user and the same for loop is also used for retrieving the
+            elements from the array.
+          </li><br>
+          <li>
+            dynamic data assignment is reading the array values from the user
+            input. When we declare the array with the size all values in the
+            array will by default initilizing with zero for integers.
+          </li>
+          <br />
+          <img
+            src="assets/img/corejava/arrays/dynamic.jpg"
+            style="width: 100%"
+          />
+          <img src="assets/img/corejava/arrays/read.JPG" style="width: 100%" />
+          <img
+            src="assets/img/corejava/arrays/output.JPG"
+            style="width: 100%"
+          />
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center" style="padding: 12px;">
+          <b>static approach for array</b>
+        </div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231)">
+          <li>
+            Static arrays have their size or length determined when the array is
+            created or allocated.
+          </li><br>
+          <li>
+            For this reason, they may also be referred to as fixed-length arrays
+            or fixed arrays.
+          </li><br>
+          <li>
+            static data assignment -> declares an array with size of 5(type int)
+          </li><br>
+          <li>int myIntArray1[5] = {{ "{" }}1, 3, 4, 5, 10{{ "}" }};</li>
+<br>
+          <li>
+            In this declaration, we know the exact values that should go in the
+            list. On the right hand side we have a pair of curly braces with
+            each of the value of the array separated by commas and in the order
+            that we want them to appear in the list.
+          </li>
+          <br />
+          <img
+            src="assets/img/corejava/arrays/static.jpg"
+            style="width: 100%"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="text-center" style="padding-top: 15px">
+      <button class="btn btn-primary btn-lg">obtain/change</button>
+    </div>
+    <div class="card-group">
+      <div
+        class="card border-primary"
+        style="
+          border: 2px solid;
+          margin: 10px;
+          font-size: large;
+        "
+      >
+        <div class="card-header text-center" style="padding-top: 12px;"><b> Example-1</b></div>
+        <div class="card-body" style="background-color: rgb(252, 227, 231)">
+          <p>For finding the length of the array</p>
+          <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+          <li class="card-text">int[] a ={{ "{" }}1, 2, 3, 4, 5{{ "}" }}</li>
+          <li class="card-text">system.out.println(a.length)</li>
+          <br />
+          <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+          <p class="card-text">5</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="
+          border: 2px solid;
+          margin: 10px;
+          font-size: large;
+        "
+      >
+        <div class="card-header text-center" style="padding-top: 12px;"><b> Example-2</b></div>
+        <div class="card-body" style="background-color: rgb(229, 253, 253)">
+          <p>For changing the values of the array</p>
+          <h6 class="card-subtitle mb-2 text-muted"><b>code</b></h6>
+          <li class="card-text">int[] a = {{ "{" }}1, 2, 3, 4, 5{{ "}" }}</li>
+          <li class="card-text">a[1] = 25</li>
+          <li class="card-text">system.out.println(a[1])</li>
+          <br />
+          <h6 class="card-subtitle mb-2 text-muted"><b>output</b></h6>
+          <p class="card-text">25</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

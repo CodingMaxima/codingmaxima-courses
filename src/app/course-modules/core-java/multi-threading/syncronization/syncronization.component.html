@@ -1,0 +1,147 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Synchronization</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="text-center">
+        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+          <button type="button" class="btn btn-lg btn-block">If the multiple threads trys to operate simultaneously on
+            same object then there might be an chance of data inconsistency problems. so to control this type of
+            problems <b> Synchronization keyword </b> was introduced.</button>
+          <button type="button" class="btn btn-lg btn-block">The disadvantage by using synchronization was it increases
+            the waiting time of threads and creates the performance problems. So if it is manditary then only prefer
+            this synchronization technique.</button>
+          <button type="button" class="btn btn-lg btn-block">Synchronization is applicable only for methods and blocks
+            but not for classes and variables.</button>
+          <button type="button" class="btn btn-lg btn-block">Internally this concept was implemented by using the lock
+            system. It means in java every object has an unique lock. Whenever we are using <b>Synchronized </b> keyword
+            then this lock system will start.</button>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>Synchronized - Method</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>If any method is declared as
+              <b>Synchronized</b> then it is known as Synchronized method.
+            </li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>By declaring the method as synchronized
+              on the particular object it will lock that object once the thread got the lock then it is allowed to
+              execute any synchronized method on that object. once execution of that method completes then automatically
+              thread releases the lock.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>While the thread executing the
+              synchronized method on the object then the remaining threads are not allowed to execute any synchronized
+              methods simultaneously on the same object . But remaining threads are allow to execute non synchronized
+              methods simultaneoulsy.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'><b>syntax: synchronized public void
+                methodName() {{'{'}} {{'}'}}</b></li>
+          </div>
+        </div>
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>Syncronized - Block</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>In any method there is only requirement
+              for some particular lines of code needs synchronization then <b>Synchronization block</b> will be used.
+            </li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'>The main advantage of using this it
+              reduces the waiting time of the threads and increases the performance of the system.</li>
+            <p> synchronized (object reference)</p>
+            <p>{{'{'}}</p>
+            <pre>   // Insert code here</pre>
+            <p> {{'}'}}</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>Static - Syncronized</b></div>
+          <div class="card-body">
+            <li class='card-text' style='font-size: medium;font-style: oblique'>In the Synchronized method/block if we
+              declare as static then the lock is applicable to that class only instead of an object / methods & only one
+              thread
+              will access that class at a time.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'> For suppose we have more that one
+              object then 2 seperate threads willacquire he lock and enters into the synchronized block /method with
+              separate locks for each object
+              at the same time. For avoiding this we are using static synchronization.</li>
+            <li class='card-text' style='font-size: medium;font-style: oblique'><b>synchronized static return type class
+                name{{'{'}} {{'}'}}</b></li>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div><!-- Ending of problem statement card body-->
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="first" [ngClass]="(elementId2=='first')?'active':''" (click)="subTabChange($event)"
+          data-hover="Syncronized - Method">Syncronized - Method</span>
+        <span class="tab-pill" id="second" [ngClass]="(elementId2=='second')?'active':''" (click)="subTabChange($event)"
+          data-hover="Syncronized - Block">Syncronized - Block</span>
+        <span class="tab-pill" id="third" [ngClass]="(elementId2=='third')?'active':''" (click)="subTabChange($event)"
+          data-hover="Syncronized - Class">Static - Syncronized</span>
+      </div>
+      <div *ngIf="elementId2=='first'">
+        <div class=" text-center">
+          <button type="button" class="btn btn-lg btn-block">Write an program based on the synchronized method. The
+            example is of booking the bus tickets. Book an bus ticket which contains 10 seats each seat has to be
+            allocated
+            to the one user only. But there are 11 users who wants to buy the ticket. even though the 11 users book the
+            ticket at a time 10 seats has to be issued to ten users and for the reaminng users there should be an
+            message
+            have to get like " the tickets are unavailable"</button>
+        </div>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/threads/sync-methods-img1.jpg">
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/corejava/threads/sync-methods-img2.jpg">
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/img/corejava/threads/sync-methods-img3.jpg" width=80%>
+      </div>
+    </div>
+
+    <div *ngIf="elementId2=='second'">
+      <div class="card-body border border-warning">
+
+      </div>
+    </div>
+
+    <div *ngIf="elementId2=='third'">
+      <div class="card-body border border-warning">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp [url]="''"></app-video-cmp>
+    </div>
+  </div>
+</div>

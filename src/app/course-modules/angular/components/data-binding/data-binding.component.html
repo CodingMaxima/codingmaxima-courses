@@ -1,0 +1,108 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Data Binding Introduction</h3>
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <div class="text-center">
+                <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                    <button type="button" class="btn btn-lg btn-block">
+                        Data binding in Angular is a powerful feature that allows you to establish a
+                         connection between the data in your application and the user interface (UI).
+                    </button>
+                    <button type="button" class="btn btn-lg btn-block">
+                        It enables you to automatically synchronize data between the components of your application and the HTML templates,
+                         providing a seamless and efficient way to handle dynamic data.
+                    </button>
+                </div>
+            </div>
+    
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                  <div class="card-header text-center" style="font-size: 25px;"><b>1.Interpolation (` <i>{{'{'}}{{'{'}} {{'}'}}{{'}'}}</i> `): </b></div>
+                  <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Interpolation is a one-way binding method that allows you to embed expressions in the text content of HTML elements or attributes.
+                         
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        These expressions are evaluated and replaced with their corresponding values. It's commonly used to display dynamic data in the UI.
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Example:
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;"><code>
+&lt;h1&gt;Welcome, {{'{'}}{{'{'}} username {{'}'}}{{'}'}}!&lt;/h1&gt;
+                    </code></pre>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        In this example, the <b><i>`username`</i></b> variable's value will be dynamically displayed in the <b><i>&lt;h1&gt;</i></b> element.
+                    </p>
+                  </div>
+                </div>
+      
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                  <div class="card-header text-center" style="font-size: 25px;"><b>2.Property binding ( <i>`[ ]`</i> ):</b></div>
+                  <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Property binding allows you to bind the value of a component property to an HTML element's property.
+                        
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        This enables you to update the property's value in the component, and the change will automatically reflect in the UI.
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Example:
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;"><code>
+&lt;input [value]="message"&gt;
+      </code></pre>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Here, the <b><i>`value`</i></b> property of the <b><i>&lt;input&gt;</i></b> element is bound to the message property of the component. Any changes made to the message property will be reflected in the input field.
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                  <div class="card-header text-center" style="font-size: 25px;"><b>3.Event binding ( <i>`( )`</i> ):</b></div>
+                  <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Event binding enables you to respond to user actions, such as button clicks or keystrokes,
+                         by binding the component's methods to the corresponding event in the HTML template. When the event occurs, the bound method is executed.
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Example:
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;"><code>
+&lt;button (click)="handleClick()"&gt;Click me&lt;/button&gt;
+                    </code></pre>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        In this case, the <b><i>`handleClick()`</i></b> method of the component will be invoked when the user clicks the button.
+                    </p>
+                  </div>
+                </div>
+      
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                  <div class="card-header text-center" style="font-size: 25px;"><b>4.Two-way binding ( <i>`[( )]`</i> ):</b></div>
+                  <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Property binding allows you to bind the value of a component property to an HTML element's property.
+                        
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Two-way binding combines both property binding and event binding, allowing you to establish a two-way communication between the component and the UI.
+                         It ensures that any changes made to the property in the component or the input value in the UI are automatically synchronized
+                    </p>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Example:
+                    </p>
+                    <pre style="margin: 10px;border-radius: 8px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;padding-left: 25px;"><code>
+&lt;input [(ngModel)]="username"&gt;
+      </code></pre>
+                    <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                        Here, the <b><i>`ngModel`</i></b> directive is used for two-way binding. The <b><i>`username`</i></b> property of the component will be updated with the input value, and any changes to the <b><i>`username`</i></b> property will update the input value.    
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

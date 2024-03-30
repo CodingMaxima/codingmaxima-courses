@@ -1,0 +1,38 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">DeadLock</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Example-1">Example-1</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Example-2">Example-2</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="text-center">
+        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+          <button type="button" class="btn btn-lg btn-block">Dead Lock means it is a situation where the thread has to
+            wait long time but the waiting will never ends.</button>
+          <button type="button" class="btn btn-lg btn-block">The actual cause for this situation is synchronized
+            keyword. While using this keyword have to take some special cares because there is no solution for dead lock
+            but there are so many prevention techniques are there.</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- Ending of problem statement card body-->
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+
+
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+
+  </div>
+
+</div>

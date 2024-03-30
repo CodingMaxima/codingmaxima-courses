@@ -1,0 +1,500 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Function</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Introduction"
+      >Introduction</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="examples"
+      >examples</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-text">
+        Functions in JavaScript are fundamental building blocks of code that
+        allow you to encapsulate a block of code, give it a name, and reuse it
+        throughout your program. Functions can take input (parameters), perform
+        operations on that input, and return a result. Understanding functions
+        is crucial for effective JavaScript programming.
+      </div>
+      <div class="content-heading">Function Declaration and Syntax</div>
+   
+    <div class="content-text">
+      There are two main ways to define functions in JavaScript: function
+      declarations and function expressions.
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center padding:12px"
+          style="font-size: large"
+        >
+          <b>Function declaration </b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            function functionName(parameters) {{ "{" }}
+          </p>
+
+          <pre style="font-weight: bold">  return result;</pre>
+          <p style="font-weight: bold">{{ "}" }};</p>
+          <p>
+            <li>
+              <b>functionName:</b> The name of the function, which is used to
+              call it later.
+            </li>
+            <li>
+              <b>parameters:</b> A comma-separated list of input values
+              (arguments) that the function accepts. These are optional.
+            </li>
+            <li>
+              <b>{{ "{" }} {{ "}" }}:</b> Enclose the function's body within
+              curly braces {{ "{" }} {{ "}" }}.
+            </li>
+            <li>
+              <b>return:</b> An optional keyword used to return a value from the
+              function. If omitted, the function returns undefined.
+            </li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center padding:12px"
+          style="font-size: large"
+        >
+          <b>Function Expression</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            const functionName = function(parameters) {{ "{" }}
+          </p>
+          <pre style="font-weight: bold">  return result;</pre>
+          <p style="font-weight: bold">{{ "}" }};</p>
+          <p>
+            <li>
+              <b>functionName:</b> A variable that stores the anonymous
+              function. It can be named or anonymous.
+            </li>
+            <li>
+              <b>parameters:</b> Like in function declarations, these are
+              optional.
+            </li>
+            <li>
+              <b>return:</b> Similar to function declarations, you can return a
+              value from a function expression.
+            </li>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Calling Functions </b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            Once you've defined a function, you can call it by using its name
+            followed by parentheses, and you can pass values (arguments) to it
+            if it accepts parameters.
+          </li>
+          <br />
+          <p>
+            <b><u>Example code:</u></b>
+          </p>
+          <p>
+            <b>const result = functionName(argument1, argument2);</b>
+          </p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Parameters and Arguments</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            Parameters are the placeholders for values that a function will
+            accept, while arguments are the actual values passed when calling a
+            function.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">function add(a, b) {{ "{" }}</p>
+          <pre style="font-weight: bold">  return a + b;</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">const sum = add(2, 3);</p>
+          <li>
+            In the above example code a and b are parameters, and 2 and 3 are
+            arguments.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Return Statement</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            Functions often use the return statement to send a value back to the
+            caller. When a return statement is executed, the function stops
+            executing, and control is returned to the caller.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example Code:</u></p>
+          <p style="font-weight: bold">function multiply(a, b) {{ "{" }}</p>
+          <pre style="font-weight: bold">  return a * b;</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">const product = multiply(4, 5);</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Arrow Functions</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li style="fontstyle: oblique">
+            ES6 introduced arrow functions, which provide a more concise syntax
+            for defining functions, especially for simple one-liners.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">const add = (a, b) => a + b;</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b> Function Scope</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            JavaScript functions have their own scope. Variables declared inside
+            a function are only accessible within that function (unless
+            explicitly exposed via closures).
+          </li>
+          <br />
+
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">function greet() {{ "{" }}</p>
+          <pre style="font-weight: bold">
+  const message = 'Hello, World!';
+              </pre
+          >
+          <pre style="font-weight: bold">
+  console.log(message); // This works.
+              </pre
+          >
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">console.log(message);</p>
+
+          <li>
+            The second console would result in an error because 'message' is not
+            defined in this scope.
+          </li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Function Hoisting</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            In JavaScript, function declarations are hoisted to the top of their
+            containing scope, meaning you can call a function before it's
+            declared in your code.
+          </li>
+          <br />
+          <p style="font-weight: bold">Example code:</p>
+          <p style="font-weight: bold">sayHello();</p>
+          <p style="font-weight: bold">function sayHello() {{ "{" }}</p>
+          <pre style="font-weight: bold">  console.log('Hello!');</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <li>
+            From the above code <b>sayHello()</b> will works even though the
+            function is declared later in the code.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Callback Functions and Higher-Order Functions</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            JavaScript allows you to pass functions as arguments to other
+            functions. Functions that accept other functions as arguments are
+            called higher-order functions, and the functions passed as arguments
+            are often referred to as callback functions.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">function execute(callback) {{ "{" }}</p>
+          <pre style="font-weight: bold">  callback();</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">function greet() {{ "{" }}</p>
+          <pre style="font-weight: bold">  console.log('Hello!');</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">execute(greet);</p>
+          <li>
+            From the above example code <b>execute(greet);</b> line calls the
+            greet function as a callback.
+          </li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Function as Objects</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            In JavaScript, functions are first-class objects, which means you
+            can treat them like any other object. You can assign them to
+            variables, pass them as arguments, and return them from other
+            functions.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">const sayHello = function() {{ "{" }}</p>
+          <pre style="font-weight: bold">
+  console.log('Hello!');
+            </pre
+          >
+          <p style="font-weight: bold">{{ "}" }};</p>
+          <p style="font-weight: bold">
+            sayHello(); // Call the function through the variable.
+          </p>
+          <p style="font-weight: bold">const anotherFunction = sayHello;</p>
+          <p style="font-weight: bold">anotherFunction();</p>
+          <li>In the 5th line Assign the function to another variable.</li>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Closures</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            A closure is a function that has access to its own scope, the outer
+            function's scope, and the global scope. This allows you to create
+            private variables and encapsulate functionality.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">function outer() {{ "{" }}</p>
+          <pre style="font-weight: bold">
+  const message = 'Hello, ';
+             </pre
+          >
+          <pre style="font-weight: bold">
+  function inner(name) {{ "{" }}
+            </pre
+          >
+          <pre style="font-weight: bold">    console.log(message + name);</pre>
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <pre style="font-weight: bold">  return inner;</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">const sayHello = outer();</p>
+          <p style="font-weight: bold">sayHello('Alice');</p>
+          <li>The above code gives the result as Hello, Alice</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>IIFE (Immediately Invoked Function Expression)</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            An IIFE is a function that is executed immediately after it's
+            defined. It's a common pattern for creating a private scope and
+            avoiding variable pollution in the global scope.
+          </li>
+          <br />
+          <P style="font-weight: bold"><u>Example code:</u></P>
+          <P style="font-weight: bold">(function() {{ "{" }}</P>
+          <P style="font-weight: bold">
+            // This code is executed immediately.</P
+          >
+          <P style="font-weight: bold">{{ "}" }})();</P>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center padding:12px"
+          style="font-size: large"
+        >
+          <b>Function Methods</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            JavaScript provides several built-in methods that you can use with
+            functions, such as bind, call, and apply, for manipulating the
+            context in which a function is executed.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">const obj = {{ "{" }}</p>
+          <pre style="font-weight: bold">  value: 42,</pre>
+          <p style="font-weight: bold">{{ "}" }};</p>
+          <p style="font-weight: bold">function getValue() {{ "{" }}</p>
+          <pre style="font-weight: bold">  console.log(this.value);</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">
+            const boundFunction = getValue.bind(obj);
+          </p>
+          <p style="font-weight: bold">boundFunction(); // Outputs 42</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Recursion</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            A function can call itself, which is known as recursion. Recursion
+            is often used for solving problems that can be broken down into
+            smaller, similar sub-problems.
+          </li>
+          <br />
+          <p style="font-weight: bold"><u>Example code:</u></p>
+          <p style="font-weight: bold">function factorial(n) {{ "{" }}</p>
+          <pre style="font-weight: bold">  if (n &lt;= 1) {{ "{" }}</pre>
+          <pre style="font-weight: bold">    return 1;</pre>
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <pre style="font-weight: bold">  return n * factorial(n - 1);</pre>
+          <pre style="font-weight: bold">{{ "}" }}</pre>
+          <pre style="font-weight: bold">
+const result = factorial(5); // Calculates 5!</pre
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div *ngIf="elementId == 'two'"></div>
+
+  <div *ngIf="elementId == 'three'"></div>
+</div>

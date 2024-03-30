@@ -1,0 +1,158 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">
+    coversions advance
+  </h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">
+              Project</div>
+        
+            <img style="margin: 0 auto; padding-top: 10px; height: auto; width: 100%;"
+              src="assets/img/javascript/projects/conversion.gif">
+
+          <div class="content-heading mt-4">
+              Project Description
+            </div>
+            <p class="content-text">
+              The "Conversions Application-3" is a versatile web-based utility
+              that enables users to perform various unit conversions in the
+              areas of height, temperature, and weight. Developed using HTML,
+              CSS, and JavaScript, this application allows users to input values
+              in one unit and instantly view the converted values in other
+              compatible units. With a user-friendly interface and real-time
+              conversion capabilities, the application provides a convenient
+              solution for users looking to perform quick and accurate unit
+              conversions.
+            </p>
+          <div class="content-heading">
+              Features
+          </div>
+          <p class="content-text">
+            <li>
+              <b>Unit Conversion Options:</b> The application offers three types
+              of unit conversions: height (cms, feet, inches), temperature
+              (Fahrenheit, Celsius), and weight (kilograms, pounds).
+            </li>
+
+            <li>
+              <b>Interactive Buttons:</b> Users can switch between different
+              conversion categories using dedicated buttons. The active button
+              is visually highlighted to indicate the selected category.
+            </li>
+
+            <li>
+              <b>Dynamic Conversion:</b> As users input values in one unit, the
+              application dynamically calculates and displays the corresponding
+              converted values in other units for immediate reference.
+            </li>
+
+            <li>
+              <b>Real-time Updates:</b> Conversion calculations are performed
+              instantly as users type, providing a seamless and responsive user
+              experience.
+            </li>
+
+            <li>
+              <b>Visibility Control:</b> Depending on the selected conversion
+              category, only the relevant input fields and conversion results
+              are displayed, ensuring a clutter-free interface.
+            </li>
+
+            <li>
+              <b>Clear Placeholder Information:</b> Each input field is equipped
+              with a placeholder that provides clear information about the
+              conversion relationships between different units.
+            </li>
+          </p>
+          <div class="content-heading">
+            Implementation
+          </div>
+
+         <div class="content-text">
+            <li>
+              <b>HTML Structure:</b> The HTML layout comprises a header with the
+              application title, buttons for different conversion categories,
+              and separate blocks for each conversion type.
+            </li>
+
+            <li>
+              <b>CSS Styling:</b> CSS styles enhance the visual appeal of the
+              application, including button styling, spacing, and visibility
+              settings for conversion blocks.
+            </li>
+
+            <p>
+              <b>JavaScript Logic:</b> JavaScript is utilized to power the
+              dynamic conversion calculations and user interaction.
+
+              <li>
+                Functions for each conversion type (heightConversions,
+                degreeConversions, weightConversions) handle the conversion
+                logic based on user input.
+              </li>
+              <li>
+                Event listeners are attached to the input fields to detect
+                changes in value and trigger conversion calculations.
+              </li>
+              <li>
+                Placeholders provide users with conversion ratios and
+                relationships, aiding in input.
+              </li>
+              <li>
+                Dynamic Conversion: As users input values, corresponding
+                conversions are calculated and displayed in real-time within the
+                visible conversion block.
+              </li>
+            </p>
+
+            <li>
+              <b>Button Interactivity:</b> Clicking on a conversion category
+              button triggers the associated conversion function, updating the
+              active button and displaying the relevant conversion block.
+            </li>
+
+            <li>
+              <b>Visibility Control:</b> Depending on the active conversion
+              category, the corresponding conversion block is displayed, while
+              others are hidden to ensure a focused user experience.
+            </li>
+
+            <li>
+              <b>Default Conversion:</b> The heightConversions function is set
+              as the default when the page loads, initializing the application
+              with height conversion options.
+            </li>
+          </div>
+        </div>
+      </div>
+   
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

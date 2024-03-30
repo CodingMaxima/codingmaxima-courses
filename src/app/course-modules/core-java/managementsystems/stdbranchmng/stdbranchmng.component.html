@@ -1,0 +1,253 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Student-Branch(one-one relation)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+      data-hover="Program">Program</span>
+    
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div
+            style="font-size: larger; background-color: rgb(254, 254, 254) ; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">More often than not, we come across a situation where we
+              need an application that involves
+              multiple real life entities as classes that interact with each other to form a object-relationship
+              management system. One such system is this Student Branch Management system. </button>
+
+            <br>
+            <button type="button" class="btn btn-lg btn-block">Design a a student branch management system, using the
+              following description.</button>
+            <button type="button" class="btn btn-lg btn-block">Write Student and Branch classes are expected to be plain
+              old Java objects (POJO classes) with getters and setters
+              for each field. Each class is also expected to have a toString method which will display
+              all the fields of the object and their values in a human readable form.</button>
+            <button type="button" class="btn btn-lg btn-block">Also design two helper classes, one for the student, and
+              the other for branch class namely
+              studentHelper, and branchHelper, respectively. These helper classes are expected to contain
+              a collection object such as an arrayList of type student or branch and also other methods which
+              can perform the following operations on the said arrayList. </button>
+          </div>
+        </div>
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">POJO/MODEL CLASSES</button>
+        </div>
+        <!-- Starting of Pojo Classes-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Student - Class</b></div>
+            <div class="card-body">
+              <li class="card-text">Integer - ID</li>
+              <li class="card-text">String - name,</li>
+              <li class="card-text">Branch - object</li>
+              <li class="card-text">With constructors, all getters and setters and toString methods </li>
+            </div>
+          </div>
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Branch - Class</b></div>
+            <div class="card-body">
+              <li class="card-text">Integer - branch ID</li>
+              <li class="card-text">String - branch name,</li>
+              <li class="card-text">Integer - maximum capacity</li>
+              <li class="card-text">With constructors, all getters and setters and toString methods </li>
+            </div>
+          </div>
+
+        </div> <!-- Ending of PojoClasses-->
+
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Student Helper Class Operations</button>
+        </div>
+
+        <!-- Student Helper class methods-->
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Student getStudent(int id)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>A getStudent method which accepts an integer “id” as a parameter.</li>
+              <li>Returns a student object with a matching ID if it exists in the students arrayList.</li>
+              <li>Returns “null” if no student object is present with given id in the arrayList.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>pubic boolean addStudent(Student s)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>An addStudent method which will let us add students into the student list.</li>
+              <li>This method accepts a student object, and adds into the other list based on the id.</li>
+              <li>This method returns a Boolean true or false, based on whether or not the student object is added in
+                the list.</li>
+              <li>If we are trying to add student object with ID(4) but the arrayList already has a student object with
+                the same ID(4)
+                then the method must not replace the student object, but instead returns false.</li>
+            </div>
+          </div>
+        </div> <!-- first group-->
+
+        <!-- second group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic boolean deleteStudent(int id)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>A deleteStudent method accepts a student ID as a parameter and attempts to delete a student object
+                with the matching ID from the arrayList.</li>
+              <li>This method similar to addStudent also returns a Boolean value true upon successful deletion.</li>
+              <li> If there is no matching student object found in the arrayList, this method returns false.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic List&lt;Student&gt; getStudentsByBranch(Branch branch)</b>
+            </div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>Another variation of the getStudent method is the getStudentsByBranch method.</li>
+              <li>Which accepts a branch object and returns a list of all the students which belong to that branch.</li>
+            </div>
+          </div>
+        </div> <!-- second group-->
+
+        <!-- third group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic void replaceStudent(Student s1, Student s2)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>Another method present in this class is called replaceStudent.</li>
+              <li>This method accepts two student objects s1 and s2. We attempt to delete student s1 from the list and
+                add student s2 into the list.</li>
+              <li>This method does not return anything.</li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic List&lt;Student&gt; getAllStudents()</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>The third variation of the getStudents method is the getAllStudents method.</li>
+              <li>Which returns the list of all students present in the arrayList. </li>
+            </div>
+          </div>
+        </div>
+        <!-- third group-->
+        <!-- End Student Helper class methods-->
+
+        <div style="padding-top: 15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Branch Helper Class Methods</button>
+        </div>
+
+        <!-- Student Helper class methods-->
+        <!-- first group -->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>public Branch getBranch(int id)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>A getBranch method which accept an an integer ID as parameter.</li>
+              <li>Then returns a branch object with a matching ID.</li>
+              <li>If there exists no branch object with the given ID, then this method returns null. </li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>pubic boolean addBranch(Branch b)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>And addBranch method Lexus add a branch object into the branch arraylist and returns True if the
+                addition was successful</li>
+              <li>If there already exists a branch with the same name, the addition is unsuccessful and the method
+                returns false. </li>
+
+            </div>
+          </div>
+        </div> <!-- first group-->
+
+        <!-- second group-->
+        <div class="card-group">
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic boolean deleteBranch(int id)</b></div>
+            <div style="background-color: rgb(229, 253, 253);" class="card-body">
+              <li>A deleteBranch method deletes a branch from the list based on a given ID and returns true upon a
+                successful deletion.</li>
+              <li>This method returns false if there exists no branch with the given ID in the list. </li>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic void increaseCapacity(int capacity, Branch branch)</b></div>
+            <div style="background-color: rgb(252, 227, 231);" class="card-body">
+              <li>Another void method in the BranchHelper class is increase capacity which has two parametes the new
+                capacity and branch.</li>
+              <li>This method will increase the capacity of the given branch.</li>
+            </div>
+          </div>
+        </div> <!-- second group-->
+
+        <!-- third group-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>pubic List&lt;Student&gt; getAllBranches()</b></div>
+            <div style="background-color: rgb(255, 239, 209);" class="card-body">
+              <li>Another variation of the getBranch method is the getAllBranches method.</li>
+              <li>Which returns the list of all branches present in the arrayList. </li>
+            </div>
+          </div>
+        </div>
+        <!-- third group-->
+        <!-- End Branch Helper class methods-->
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="tabChange($event)"
+          data-hover="POJO(Model) Classes">POJO(Model) Classes</span>
+        <span class="tab-pill" id="helper" [ngClass]="(elementId2=='helper')?'active':''" (click)="tabChange($event)"
+          data-hover="Helper Classes">Helper Classes</span>
+        <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="tabChange($event)"
+          data-hover="Main(Testing) Class">Main(Testing) Class</span>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pojo'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Student POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/studentbranch/student.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Branch POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/studentbranch/branch.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='helper'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Student Helper Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/studentbranch/studenthelper.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Branch Helper Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/corejava/managment/studentbranch/branchhelper.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div *ngIf="elementId2=='main'">
+        <img class="card-img-top" src="assets/img/corejava/managment/studentbranch/tester.png" alt="">
+      </div>
+
+    </div>
+  </div>
+</div>

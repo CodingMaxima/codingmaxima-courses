@@ -1,0 +1,49 @@
+<div class="card card-body">
+  <h3 class="global-component-heading"> MutiThreading Introduction</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill">Introduction</span>
+  </div>
+  <div class="card border-warning" style="border: 2px solid;">
+    <div class="card-body">
+      <div class="text-center">
+        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+          <button type="button" class="btn btn-lg btn-block">
+            Multithreading is a concept that allows concurrent
+            execution of two or more parts of a program for maximum utilization of CPU.
+            The MutiThreading increases the performance of the application/program.
+            Each thread executes small unit of the program. So threads are light-weight processes within a process.
+          </button>
+
+          <button type="button" class="btn btn-lg btn-block">
+            In Java by default there is one main thread which executes the main method of the program.
+          </button>
+          <button type="button" class="btn btn-lg btn-block">THe important applications of multithreading are to develop
+            multimedia graphics, animations, videogames, web servers and applicaiton servers etc...</button>
+          <button type="button" class="btn btn-lg btn-block">Java has great support for multithreaded applications.
+            We can create Threads in java by 2 ways.
+            <li>Thread Class</li>
+            <li>Runnable Interface</li>
+          </button>
+
+          <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="thread" [ngClass]="(elementId2=='thread')?'active':''"
+              (click)="subTabChange($event)" data-hover="Thread Class">Thread Class</span>
+            <span class="tab-pill" id="runnable" [ngClass]="(elementId2=='runnable')?'active':''"
+              (click)="subTabChange($event)" data-hover="Runnable Interface">Runnable Interface</span>
+          </div>
+          <div *ngIf="elementId2=='thread'">
+            <div class="card-body border border-warning">
+              <img class="img-center" src="assets/img/corejava/threads/thread1.jpg">
+            </div>
+          </div>
+
+          <div *ngIf="elementId2=='runnable'">
+            <div class="card-body border border-warning">
+              <img class="img-center" src="assets/img/corejava/threads/thread2.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

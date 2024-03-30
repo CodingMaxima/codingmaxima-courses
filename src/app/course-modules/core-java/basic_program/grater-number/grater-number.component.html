@@ -1,0 +1,252 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Greater Number</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          <p>
+            To explain the concept of the greater number between two given
+            numbers, let's consider the numbers A and B.
+          </p>
+
+          <ol>
+            <li>
+              <p>
+                We compare the numerical values of A and B. If A is greater than
+                B, then A is the greater number. Conversely, if B is greater
+                than A, then B is the greater number. For example:
+              </p>
+              <ul>
+                <li>
+                  If A = 5 and B = 8, then 8 is the greater number because it
+                  has a higher value than 5.
+                </li>
+                <li>
+                  If A = 10 and B = 2, then 10 is the greater number because it
+                  has a higher value than 2.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>
+                Another approach is to use comparison operators. In most
+                programming languages and mathematical notation, the "&gt;"
+                symbol represents the "greater than" operator. If A &gt; B is
+                true, then A is the greater number. If A &gt; B is false, then B
+                is the greater number. For example:
+              </p>
+              <ul>
+                <li>
+                  If A = 5 and B = 8, then A &gt; B is false, indicating that 8
+                  is the greater number.
+                </li>
+                <li>
+                  If A = 10 and B = 2, then A &gt; B is true, indicating that 10
+                  is the greater number.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>
+                It's essential to consider the context of the numbers. If
+                negative numbers are involved, a smaller absolute value
+                represents a greater number. For instance:
+              </p>
+              <ul>
+                <li>
+                  If A = -5 and B = -3, then -3 is the greater number because it
+                  is closer to zero on the number line compared to -5.
+                </li>
+                <li>
+                  If A = -5 and B = 3, then 3 is the greater number because
+                  positive numbers are considered greater than negative numbers.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          In summary, when comparing two numbers A and B, the greater number is
+          the one with the higher value. This can be determined by directly
+          comparing their numerical values or using the "greater than"
+          comparison operator. Keep in mind the context of negative numbers,
+          where a smaller absolute value represents a greater number.
+        </button>
+      </div>
+    
+ <!-- Starting of examples-->
+    <div class="card-group">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px; font-size: large"
+      >
+        <div class="card-header text-center"><b>Example-1</b></div>
+        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">Enter First number</p>
+          <p style="margin-top: -20px" class="card-text">22</p>
+          <p class="card-text">Enter Second number</p>
+          <p style="margin-top: -20px" class="card-text">85</p>
+
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">85 is greater than 22</p>
+        </div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px;font-size: large"
+      >
+        <div class="card-header text-center"><b>Example-2</b></div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253)"
+        >
+        <p class="card-subtitle mb-2 text-muted">Input</p>
+        <p class="card-text">Enter First number</p>
+        <p style="margin-top: -20px" class="card-text">50</p>
+        <p  class="card-text">Enter Second number</p>
+        <p style="margin-top: -20px" class="card-text">65</p>
+
+        <p class="card-subtitle mb-2 text-muted">Output</p>
+        <p class="card-text">65 is greater than 50</p></div>
+      </div>
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 10px;font-size: large"
+      >
+        <div class="card-header text-center"><b>Example-3</b></div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231)"
+        >
+        <p class="card-subtitle mb-2 text-muted">Input</p>
+        <p class="card-text">Enter First number</p>
+        <p style="margin-top: -20px" class="card-text">25</p>
+        <p  class="card-text">Enter Second number</p>
+        <p style="margin-top: -20px" class="card-text">70</p>
+        <p class="card-subtitle mb-2 text-muted">Output</p>
+        <p class="card-text">70 is greater than 25</p></div>
+      </div>
+    </div>
+    </div>
+    <!-- Ending of examples-->
+  </div>
+  <!-- Ending of problem statement card body-->
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/graternumber.JPG"
+        alt="program"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div
+      class="card-body"
+    >
+      <app-video-cmp [url]="videoData" [audioData]="audioData"></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">22, 85</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">85</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px;font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-2</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253)"
+          >
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">50, 65</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">65</p></div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px;font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-3</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231)"
+          >
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">25, 70</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">70</p></div>
+        </div>
+      </div>  
+      <!-- Ending of test cases -->
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

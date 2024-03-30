@@ -1,0 +1,99 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Reading-file</h3>
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <div class="text-center">
+                <button type="button" class="btn btn-lg btn-block">There are many ways for reading the file.</button>
+                <button type="button" class="btn btn-lg btn-block">There are few methods for reading the file</button>
+            </div>
+            <div class="text center">
+                <p><b>Test class file</b></p>
+                <img src="assets/img/corejava/filehandling/reading_file/testfile.jpg" style="width: 100%;">
+            </div>
+        </div>
+    </div><br>
+    <div class="global-tab-title global-tab-slide-effect">
+        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <span class="global-tab-pill" id="approach1" [ngClass]="(elementId=='approach1')?'active':''"
+                (click)="tabChange($event)" data-hover="Approach-1">Approach-1</span>
+            <span class="global-tab-pill" id="approach2" [ngClass]="(elementId=='approach2')?'active':''"
+                (click)="tabChange($event)" data-hover="Approach-2">Approach-2</span>
+            <span class="global-tab-pill" id="approach3" [ngClass]="(elementId=='approach3')?'active':''"
+                (click)="tabChange($event)" data-hover="Approach-3">Approach-3</span>
+            <span class="global-tab-pill" id="approach4" [ngClass]="(elementId=='approach4')?'active':''"
+                (click)="tabChange($event)" data-hover="Approach-4">Approach-4</span>
+            <span class="global-tab-pill" id="approach5" [ngClass]="(elementId=='approach5')?'active':''"
+                (click)="tabChange($event)" data-hover="Approach-5">Approach-5</span>
+        </div>
+    </div>
+    <div *ngIf="elementId == 'approach1'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p style='font-size: medium; font-style: oblique;'><b>By using BufferedReader class method</b>
+                        </p>
+
+                        <img src="assets/img/corejava/filehandling/reading_file/approach_1.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId == 'approach2'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p style='font-size: medium; font-style: oblique;'><b>By using file reader class method</b>
+                        </p>
+
+                        <img src="assets/img/corejava/filehandling/reading_file/approach_2.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId == 'approach3'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p style='font-size: medium; font-style: oblique;'><b>By using Scanner class method</b>
+                        </p>
+
+                        <img src="assets/img/corejava/filehandling/reading_file/approach_3.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId == 'approach4'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p style='font-size: medium; font-style: oblique;'><b>By using file in list method</b>
+                        </p>
+
+                        <img src="assets/img/corejava/filehandling/reading_file/approach_4.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId == 'approach5'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p style='font-size: medium; font-style: oblique;'><b>By using textfile as string method</b>
+                        </p>
+
+                        <img src="assets/img/corejava/filehandling/reading_file/approach_5.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

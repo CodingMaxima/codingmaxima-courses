@@ -1,0 +1,148 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Quiz application advance</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">Project Description</div>
+      <p class="content-text">
+        The "Quiz Project version-3" is a dynamic web-based quiz application
+        that offers an engaging platform for users to test their knowledge
+        across a diverse range of topics. Designed using a combination of HTML,
+        CSS, and JavaScript, the project aims to provide an interactive learning
+        experience through an intuitive user interface and carefully crafted
+        features.
+      </p>
+      <div class="content-heading">Features</div>
+      <p class="content-text">
+        <li>
+          <b>Eye-Catching Header: </b>The app greets users with a catchy custom
+          header, which includes the title "Quiz project" This header sets the
+          tone for an enjoyable learning adventure.
+        </li>
+
+        <li>
+          <b>Dynamic Question Generation:</b> The application randomly selects a
+          set of questions from a predefined array, ensuring that each quiz
+          session presents a unique combination of questions to users.
+        </li>
+
+        <li>
+          <b>Interactive User Interface: </b>With a visually appealing and
+          user-friendly design, the interface seamlessly guides users through
+          the quiz-taking process.
+        </li>
+
+        <li>
+          <b>Multiple-Choice Questions:</b> The quiz consists of multiple-choice
+          questions, each with a set of options. Users are required to select
+          the correct option for each question.
+        </li>
+
+        <li>
+          <b>Validation and Interactivity:</b> The project incorporates
+          validation mechanisms to ensure that users answer all questions before
+          submitting. The "Submit" button remains disabled until all questions
+          have been answered, promoting full engagement.
+        </li>
+
+        <li>
+          <b>Result Presentation:</b> After submitting their answers, users
+          receive immediate feedback through a well-crafted result message. The
+          application calculates the number of correct answers and provides
+          encouraging messages based on performance.
+        </li>
+
+        <li>
+          <b>Retake and Regenerate:</b> Users have the option to retake the
+          quiz, allowing them to challenge themselves with a new set of randomly
+          chosen questions. The "Regenerate" button enables users to replace the
+          current set of questions without losing their progress.
+        </li>
+
+        <li>
+          <b>Responsive Design:</b> The project's responsive design ensures that
+          the application functions seamlessly across a range of devices and
+          screen sizes, enhancing accessibility and user experience.
+        </li>
+
+        <li>
+          <b>Custom Header and Branding:</b> The custom header includes the
+          project title and logo, establishing a unique and recognizable
+          identity for the quiz application.
+        </li>
+
+        <li>
+          <b>Bootstrap Integration:</b> The project leverages the Bootstrap CSS
+          framework to enhance the styling of buttons and headers, contributing
+          to a polished visual appearance.
+        </li>
+      </p>
+      <div class="content-heading">Implementation</div>
+      <p class="content-text">
+        <li>
+          <b> HTML and CSS:</b> The project's front-end is implemented using
+          HTML for structure and CSS for styling. The custom header, central box
+          for questions, and responsive layout are crafted using these
+          technologies.
+        </li>
+
+        <li>
+          <b>JavaScript:</b> JavaScript is employed to drive the application's
+          dynamic features. It handles the generation of questions, options, and
+          result messages. Event listeners enable interactivity, including
+          question selection validation and result display.
+        </li>
+
+        <li>
+          <b>Question Array:</b> The predefined array of question objects serves
+          as the foundation of the quiz. Each object contains the question,
+          options, and correct answer.
+        </li>
+
+        <li>
+          <b>Question Generation:</b> JavaScript's randomization capabilities
+          are harnessed to generate a random selection of questions for each
+          quiz session. This diversity enhances the application's educational
+          value.
+        </li>
+
+        <li>
+          <b> Result Calculation: </b>JavaScript computes the user's score by
+          comparing selected answers to the correct ones, providing a
+          quantifiable measure of performance.
+        </li>
+
+        <li>
+          <b>Retake and Regenerate:</b> The project's core functionality
+          includes options for users to retake the quiz or regenerate questions.
+          These options offer variety and encourage continued engagement.
+        </li>
+      </p>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp [url]="''"></app-video-cmp>
+    </div>
+  </div>
+</div>

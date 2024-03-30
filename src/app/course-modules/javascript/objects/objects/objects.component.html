@@ -1,0 +1,509 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Objects</h3>
+
+  <div class="card border-warning mt-4" style="border: 3px solid">
+    <p class="content-text">
+      In JavaScript, objects are fundamental data structures that play a main
+      role in organizing and manipulating data. They are a collection of
+      key-value pairs, where each key (also called a property) maps to a value.
+      They are a key part of the language's design and are used to represent and
+      manage data in a structured and flexible manner. Objects in JavaScript are
+      a cornerstone of its object-oriented programming (OOP) capabilities,
+      allowing you to model real-world entities and their properties.
+    </p>
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Object Basics</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: lagre"
+        >
+          <li>
+            In JavaScript, an object is a collection of key-value pairs. The
+            keys (also known as properties) are strings or Symbols, and the
+            values can be of any data type, including other objects, functions,
+            primitive data types (like numbers and strings), and even arrays.
+          </li>
+          <br />
+          <p>
+            <b><u>Example for creating a simple object:</u></b>
+          </p>
+          <p style="font-weight: bold">const person = {{ "{" }}</p>
+          <pre style="font-weight: bold">  name: "John",</pre>
+          <pre style="font-weight: bold">  age: 30</pre>
+          <P style="font-weight: bold">{{ "}" }};</P><br />
+          <li>
+            In this example, <b>'person'</b> is an object with two properties:
+            <b>'name'</b> and <b>'age'</b>. The <b>'name'</b> property has a
+            string value, and the <b>'age'</b> property has a numeric value.
+          </li>
+        </div>
+      </div>
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Accessing Object Properties</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: lagre"
+        >
+          <p>
+            For accessing the object properties 2 ways are there
+            <b>dot notation</b> or <b>bracket notation</b>
+          </p>
+          <li>
+            <b><u>Dot Notation Example:</u></b>
+          </li>
+          <br />
+          <p style="font-weight: bold">console.log(person.name);</p>
+          <p style="font-weight: bold">console.log(person.age);</p>
+          <br />
+          <li>
+            <b><u>Bracket Notation Example</u></b>
+          </li>
+          <br />
+          <p style="font-weight: bold">console.log(person['name']);</p>
+          <p style="font-weight: bold">console.log(person['age']);</p>
+          <br />
+          <li>
+            Bracket notation is useful when the property name is dynamic or
+            contains special characters.
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Adding and Modifying Properties</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            You can add new properties to an object or modify existing ones at
+            any time.
+          </li>
+          <br />
+          <p>
+            <b><u>Example:</u></b>
+          </p>
+          <p style="font-weight: bold">person.gender = "Male";</p>
+          <p style="font-weight: bold">person.age = 31;</p>
+          <br />
+          <p style="font-weight: bold">console.log(person.gender);</p>
+          <p style="font-weight: bold">console.log(person.age);</p>
+          <br />
+          <li>
+            In the above example based on the first line and second line the
+            output will be modified and gives the modified result.
+          </li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Deleting Properties</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            To remove a property from an object, you can use the delete
+            operator.
+          </li>
+          <br />
+
+          <p>
+            <b><u>Example code</u></b>
+          </p>
+          <p style="font-weight: bold">delete person.age;</p>
+          <p style="font-weight: bold">console.log(person.age);</p>
+          <br />
+          <li>
+            Based on the above code by deleting the <b>preson.age</b> property
+            in the result it gives <b>undefined</b> because there is no age
+            property left in the object.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-flex justify-content-center">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 20px 100px"
+      >
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Methods</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(244, 250, 208); font-size: large"
+        >
+          <li>
+            In JavaScript, objects can also contain functions, which are known
+            as methods when they are associated with an object. Methods can be
+            used to perform actions or calculations related to the object's
+            data.
+          </li>
+          <p>
+            <b><u>Example Code:</u></b>
+          </p>
+          <p style="font-weight: bold">const person = {{ "{" }}</p>
+          <pre style="font-weight: bold">  name: "John",</pre>
+          <pre style="font-weight: bold">  age: 30,</pre>
+          <pre style="font-weight: bold">  greet: function() {{ "{" }}</pre>
+          <pre style="font-weight: bold">
+     console.log(`Hello, my name is ${{ "{" }}this.name{{ "}" }} and I am ${{
+              "{"
+            }}this.age{{ "}" }} years old.`);</pre
+          >
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <P>{{ "}" }};</P>
+
+          <p style="font-weight: bold">person.greet();</p>
+          <p>
+            <b><u>output:</u></b>
+          </p>
+
+          <p style="font-weight: bold">
+            "Hello, my name is John and I am 30 years old."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Enumerating Object Properties</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can loop through an object's properties using
+            <b>for...in</b> or <b>Object.keys(),</b> <b>Object.values(),</b> and
+            <b>Object.entries()</b> methods.
+          </li>
+          <p>
+            <b><u>Example Code:</u></b>
+          </p>
+          <p style="font-weight: bold">for (const key in person) {{ "{" }}</p>
+          <pre style="font-weight: bold">console.log(key, person[key]);</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">const keys = Object.keys(person);</p>
+          <p style="font-weight: bold">console.log(keys);</p>
+        </div>
+      </div>
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Object Constructors and Classes</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            JavaScript also supports the concept of constructor functions and
+            classes for creating objects with similar structures and behaviors.
+            This allows you to create multiple instances of objects with the
+            same properties and methods.
+          </li>
+          <p>
+            <b><u>Constructor Function Example:</u></b>
+          </p>
+          <p style="font-weight: bold">function Person(name, age) {{ "{" }}</p>
+          <pre style="font-weight: bold">  this.name = name;</pre>
+          <pre style="font-weight: bold">  this.age = age;</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+
+          <p style="font-weight: bold">const john = new Person("John", 30);</p>
+          <p style="font-weight: bold">
+            const alice = new Person("Alice", 25);
+          </p>
+          <br />
+          <p>
+            <b><u>ES6 Class Example:</u></b>
+          </p>
+          <p style="font-weight: bold">class Person {{ "{" }}</p>
+          <pre style="font-weight: bold">
+  constructor(name, age) {{ "{" }}</pre
+          >
+          <pre style="font-weight: bold">    this.name = name;</pre>
+          <pre style="font-weight: bold">    this.age = age;</pre>
+          <pre style="font-weight: bold">  {{ "}" }}</pre>
+          <pre style="font-weight: bold">{{ "}" }}</pre>
+          <p style="font-weight: bold">const john = new Person("John", 30);</p>
+          <p style="font-weight: bold">
+            const alice = new Person("Alice", 25);
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-flex justify-content-center">
+      <div
+        class="card border-primary"
+        style="border: 2px solid; margin: 20px 100px"
+      >
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Prototypes and Inheritance</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(238, 247, 198); font-size: large"
+        >
+          <li>
+            JavaScript uses a prototype-based inheritance model. Objects can
+            inherit properties and methods from other objects through their
+            prototype chain. This allows for the creation of complex object
+            hierarchies and the reuse of code.
+          </li>
+          <p>
+            <b><u>Example Code:</u></b>
+          </p>
+          <p style="font-weight: bold">function Person(name, age) {{ "{" }}</p>
+          <pre style="font-weight: bold">  this.name = name;</pre>
+          <pre style="font-weight: bold">  this.age = age;</pre>
+          <p style="font-weight: bold">{{ "}" }}</p>
+          <p style="font-weight: bold">
+            Person.prototype.greet = function() {{ "{" }}
+          </p>
+          <pre style="font-weight: bold">
+  console.log(`Hello, my name is ${{ "{" }}this.name{{ "}" }} and I am ${{
+              "{"
+            }}this.age{{ "}" }} years old.`);</pre
+          >
+          <p style="font-weight: bold">{{ "}" }};</p>
+
+          <p style="font-weight: bold">const john = new Person("John", 30);</p>
+          <p style="font-weight: bold">john.greet();</p>
+          <p>
+            <b><u>Output:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            "Hello, my name is John and I am 30 years old."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Object Destructuring</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <li>
+            You can easily extract object properties and assign them to
+            variables using object destructuring:
+          </li>
+          <p>
+            <b><u>Example Code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            const {{ "{" }} name, age {{ "}" }} = person;
+          </p>
+          <p style="font-weight: bold">console.log(name, age);</p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Object Cloning</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            To create a copy of an object, you can use various techniques, such
+            as the spread operator <b>( '{{ "{" }} ... {{ "}" }}'')</b>,
+            <b>Object.assign(),</b> or the <b>'JSON.parse()'</b> and
+            <b>'JSON.stringify()'</b> methods.
+          </li>
+          <p>
+            <b><u>Example Code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            const copyPerson = {{ "{" }}...person {{ "}" }};
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Object Serialization and Deserialization</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(229, 253, 253); font-size: large"
+        >
+          <li>
+            You can convert an object to a JSON string and vice versa using
+            JSON.stringify() and JSON.parse():
+          </li>
+          <p>
+            <b><u>Example Code:</u></b>
+          </p>
+          <p style="font-weight: bold">
+            const personJSON = JSON.stringify(person);
+          </p>
+          <p style="font-weight: bold">
+            const personCopy = JSON.parse(personJSON);
+          </p>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 20px">
+        <div
+          class="card-header text-center"
+          style="font-size: large; padding: 12px"
+        >
+          <b>Object Methods and Utility Functions</b>
+        </div>
+        <div
+          class="card-body"
+          style="background-color: rgb(252, 227, 231); font-size: large"
+        >
+          <p>
+            JavaScript provides several built-in object methods and utility
+            functions for working with objects, including:
+          </p>
+          <li><b>Object.keys(obj):</b> Returns an array of object keys.</li>
+          <li><b>Object.values(obj):</b> Returns an array of object values.</li>
+          <li>
+            <b>Object.entries(obj):</b> Returns an array of key-value pairs.
+          </li>
+          <li>
+            <b>Object.hasOwnProperty(key):</b> Checks if an object has a
+            specific property.
+          </li>
+          <li>
+            <b>Object.freeze(obj):</b> Prevents modifications to an object.
+          </li>
+          <li>
+            <b>Object.seal(obj):</b> Prevents adding or deleting properties but
+            allows property value changes.
+          </li>
+          <li>
+            <b>Object.assign(target, ...sources):</b> Copies properties from one
+            or more source objects to a target object.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b> </b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231)"
+          ></div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b></b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b> </b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253)"
+          ></div>
+        </div>
+
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px"
+        >
+          <div
+            class="card-header text-center"
+            style="font-size: large; padding: 12px"
+          >
+            <b></b>
+          </div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231)"
+          ></div>
+        </div>
+      </div> -->
+  </div>
+</div>

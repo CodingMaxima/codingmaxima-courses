@@ -1,0 +1,849 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">ONE-TO-ONE Relation Mapping</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Example - 1">Example - 1</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Example - 2">Example - 2</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img class="img-center" src="assets/img/dbms/relations/onetooneexampleone.jpg">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            employee by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>emp_id - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b>emp_name - </b> it should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>salary - </b>it should be in between greater than or
+                            equal to 5000 and less
+                            than or equal to 100000(hint: use "CHECK CONSTRAINT") </li>
+                        <li class="card-text"><b>emp_joining_date - </b>keep a fixed value for it. If you
+                            doesn't want to give an
+                            value for this particular column/for auto generating of the value
+                            without giving any
+                            manual values(hint: use "DEFAULT CONSTRAINT")</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            laptop by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>lap_id - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b>lap_name - </b>It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        <li class="card-text"><b>lap_model - </b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>lap_warranty - </b>It is warranty end date. It should not be empty
+                            (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>emp_id - </b>It is connection to the employee table emp_id. (hint: use
+                            "FOREIGN KEY")
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button style="padding: 10px;" class="btn btn-primary" (click)="answer()">{{buttonValue}}</button><br>
+                <div style="padding: 10px;" *ngIf="toggleOn">
+                    <div class="card-group">
+                        <div class="card">
+
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p>CREATE TABLE Employee (</p>
+                                    <p style="margin-top: -20px;">emp_id int PRIMARY KEY,</p>
+                                    <p style="margin-top: -20px;"> emp_name varchar(255) NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> salary decimal(10,2) CHECK(salary
+                                        &gt;=5000 AND
+                                        salary
+                                        &lt;=100000), </p>
+                                    <p style="margin-top: -20px;"> joining_date date
+                                        DEFAULT(current_date)</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p>create table Laptop (</p>
+                                    <p style="margin-top: -20px;"> lap_id int primary Key,</p>
+                                    <p style="margin-top: -20px;"> lap_name varchar(30) NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> lap_model varchar(30) NOT NULL, </p>
+                                    <p style="margin-top: -20px;"> lap_warranty date NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> emp_id int,</p>
+                                    <p style="margin-top: -20px;"> FOREIGN KEY (emp_id) REFERENCES employee(emp_id)</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Employee Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 1</li>
+                        <li class="card-text">emp_name = Rajendra Kumar</li>
+                        <li class="card-text">salary = 90000</li>
+                        <li class="card-text">joining_date = 2012-05-02</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 2</li>
+                        <li class="card-text">emp_name = Sandeep DUll</li>
+                        <li class="card-text">salary = 40000</li>
+                        <li class="card-text">joining_date = 2019-01-01</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 3</li>
+                        <li class="card-text">emp_name = Neelima Chowdary</li>
+                        <li class="card-text">salary = 90000</li>
+                        <li class="card-text">joining_date = 2015-12-01</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 4</li>
+                        <li class="card-text">emp_name = Shiv Kumar</li>
+                        <li class="card-text">salary = 25000</li>
+                        <li class="card-text">joining_date = 2022-11-11</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 5</li>
+                        <li class="card-text">emp_name = Pooja Kapoor</li>
+                        <li class="card-text">salary = 70000</li>
+                        <li class="card-text">joining_date = 2019-10-11</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 6</li>
+                        <li class="card-text">emp_name = Brinda Mehta</li>
+                        <li class="card-text">salary = 85000</li>
+                        <li class="card-text">joining_date = 2012-01-05</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 7</li>
+                        <li class="card-text">emp_name = John Robert</li>
+                        <li class="card-text">salary = 30000</li>
+                        <li class="card-text">joining_date = 2021-02-12</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 8</li>
+                        <li class="card-text">emp_name = Sri Harsha</li>
+                        <li class="card-text">salary = 60000</li>
+                        <li class="card-text">joining_date = 2017-09-21</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 9</li>
+                        <li class="card-text">emp_name = Hari Kiran</li>
+                        <li class="card-text">salary = 50000</li>
+                        <li class="card-text">joining_date = 2014-09-11</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 10</li>
+                        <li class="card-text">emp_name = Sri Divya</li>
+                        <li class="card-text">salary = 50000</li>
+                        <li class="card-text">joining_date = 2019-10-01</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 11</li>
+                        <li class="card-text">emp_name = Thomas Edward</li>
+                        <li class="card-text">salary = 85000</li>
+                        <li class="card-text">joining_date = 2016-02-03</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 12</li>
+                        <li class="card-text">emp_name = Swetha Kapoor</li>
+                        <li class="card-text">salary = 30000</li>
+                        <li class="card-text">joining_date = 2022-05-01</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 13</li>
+                        <li class="card-text">emp_name = Mohan Krishna</li>
+                        <li class="card-text">salary = 50000</li>
+                        <li class="card-text">joining_date = 2018-04-23</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 14</li>
+                        <li class="card-text">emp_name = Smrithi Kour</li>
+                        <li class="card-text">salary = 95000</li>
+                        <li class="card-text">joining_date = 2010-03-02</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Employee Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">emp_id = 15</li>
+                        <li class="card-text">emp_name = Tony Edward</li>
+                        <li class="card-text">salary = 20000</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Laptop Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 1</li>
+                        <li class="card-text">lap_name = Dell</li>
+                        <li class="card-text">lap_model = XPS15</li>
+                        <li class="card-text">lap_warranty = 2024-10-02</li>
+                        <li class="card-text">emp_id = 10</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 2</li>
+                        <li class="card-text">lap_name = Lenovo</li>
+                        <li class="card-text">lap_model = ThinkPad X12</li>
+                        <li class="card-text">lap_warranty = 2027-07-07</li>
+                        <li class="card-text">emp_id = 9</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 3</li>
+                        <li class="card-text">lap_name = MSI</li>
+                        <li class="card-text">lap_model = GS66 Stealth</li>
+                        <li class="card-text">lap_warranty = 2018-10-12</li>
+                        <li class="card-text">emp_id = 8</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 4</li>
+                        <li class="card-text">lap_name = Samsung</li>
+                        <li class="card-text">lap_model = Book 360</li>
+                        <li class="card-text">lap_warranty = 2030-02-02</li>
+                        <li class="card-text">emp_id = 13</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 5</li>
+                        <li class="card-text">lap_name = Apple</li>
+                        <li class="card-text">lap_model = Macbook Air</li>
+                        <li class="card-text">lap_warranty = 2025-04-05</li>
+                        <li class="card-text">emp_id = 15</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 6</li>
+                        <li class="card-text">lap_name = HP</li>
+                        <li class="card-text">lap_model = Spectre x360 13.5</li>
+                        <li class="card-text">lap_warranty = 2016-04-22</li>
+                        <li class="card-text">emp_id = 6</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 7</li>
+                        <li class="card-text">lap_name = Acer</li>
+                        <li class="card-text">lap_model = ConceptD 7 Ezel</li>
+                        <li class="card-text">lap_warranty = 2023-12-01</li>
+                        <li class="card-text">emp_id = 5</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 8</li>
+                        <li class="card-text">lap_name = Fujitsu</li>
+                        <li class="card-text">lap_model = UH-X 4ZR1K06212</li>
+                        <li class="card-text">lap_warranty = 2018-02-21</li>
+                        <li class="card-text">emp_id = 3</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 9</li>
+                        <li class="card-text">lap_name = LG</li>
+                        <li class="card-text">lap_model = gram 17</li>
+                        <li class="card-text">lap_warranty = 22-12-12</li>
+                        <li class="card-text">emp_id = 2</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 10</li>
+                        <li class="card-text">lap_name = Microsoft</li>
+                        <li class="card-text">lap_model = Surface Pro 8</li>
+                        <li class="card-text">lap_warranty = 2027-01-18</li>
+                        <li class="card-text">emp_id = 1</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 11</li>
+                        <li class="card-text">lap_name = Dell</li>
+                        <li class="card-text">lap_model = XPS17</li>
+                        <li class="card-text">lap_warranty = 2017-08-16</li>
+                    </div>
+                </div>
+            </div> <!-- Ending of Data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 12</li>
+                        <li class="card-text">lap_name = Asus</li>
+                        <li class="card-text">lap_model = ZenBook Pro 16X</li>
+                        <li class="card-text">lap_warranty = 2015-07-10</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Laptop Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">lap_id = 13</li>
+                        <li class="card-text">lap_name = Razer</li>
+                        <li class="card-text">lap_model = Book 14</li>
+                        <li class="card-text">lap_warranty = 2024-12-22</li>
+                    </div>
+                </div>
+
+
+            </div> <!-- Ending of Data-->
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <img class="img-center" src="assets/img/dbms/relations/onetooneexampletwo.jpg">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            Country by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>country_name -</b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b>population - </b> It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>largest_river - </b>It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT") </li>
+                        <li class="card-text"><b>main_crop - </b>It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                        <li class="card-text"><b>isSeaShore -</b> Check whether it is present or notIt should not be
+                            empty (hint: use "NOT
+                            NULL CONSTRAINT")</li>
+                    </div>
+                </div>
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create an constraints table of
+                            Capital by using below
+                            data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text"><b>capital_name - </b>make sure it should not be duplicate and should
+                            not be empty (hint:
+                            use "PRIMARY KEY CONSTRAINT")</li>
+                        <li class="card-text"><b>population - </b>It should not be empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        <li class="card-text"><b>isSeaShore - </b> Check whether it is present or not.It should not be
+                            empty (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>area - </b>It should not be empty
+                            (hint: use "NOT
+                            NULL CONSTRAINT")
+                        </li>
+                        <li class="card-text"><b>country_name - </b>It is connection to the Country table country_name.
+                            (hint: use
+                            "FOREIGN KEY")
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button style="padding: 10px;" class="btn btn-primary" (click)="answer()">{{buttonValue}}</button><br>
+                <div style="padding: 10px;" *ngIf="toggleOn">
+                    <div class="card-group">
+                        <div class="card">
+
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p>create table Country(</p>
+                                    <p style="margin-top: -20px;">country_name varchar(30) PRIMARY KEY,</p>
+                                    <p style="margin-top: -20px;">population bigint NOT NULL,</p>
+                                    <p style="margin-top: -20px;">largest_river varchar(20) NOT NULL,</p>
+                                    <p style="margin-top: -20px;">main_crop varchar(10) NOT NULL,)</p>
+                                    <p style="margin-top: -20px;">isSeaShore boolean NOT NULL</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <div class="description">
+                                    <p>create table Capital( </p>
+                                    <p style="margin-top: -20px;"> capital_name varchar(20) PRIMARY KEY, </p>
+                                    <p style="margin-top: -20px;"> population bigint NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> isSeaShore boolean NOT NULL, </p>
+                                    <p style="margin-top: -20px;"> area varchar(50) NOT NULL,</p>
+                                    <p style="margin-top: -20px;"> country_name varchar(30),</p>
+                                    <p style="margin-top: -20px;"> FOREIGN KEY (country_name) REFERENCES
+                                        country(country_name)</p>
+                                    <p style="margin-top: -20px;"> );</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Country Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = India</li>
+                        <li class="card-text">population = 1415681359</li>
+                        <li class="card-text">largest_river = Ganga</li>
+                        <li class="card-text">main_crop = Rice</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = China</li>
+                        <li class="card-text">population = 1453932069</li>
+                        <li class="card-text">largest_river = Yangtze</li>
+                        <li class="card-text">main_crop = Rice</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Nepal</li>
+                        <li class="card-text">population = 30579216</li>
+                        <li class="card-text">largest_river = Koshi</li>
+                        <li class="card-text">main_crop = Tobacco</li>
+                        <li class="card-text">isSeaShore = False</li>
+                    </div>
+                </div>
+            </div><!--End of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Japan</li>
+                        <li class="card-text">population = 125459537</li>
+                        <li class="card-text">largest_river = Shinano</li>
+                        <li class="card-text">main_crop = Rice</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Brazil</li>
+                        <li class="card-text">population = 216527662</li>
+                        <li class="card-text">largest_river = Amazon</li>
+                        <li class="card-text">main_crop = Soybean</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Indonesia</li>
+                        <li class="card-text">population = 281121689</li>
+                        <li class="card-text">largest_river = Kapuas</li>
+                        <li class="card-text">main_crop = Palm oil</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+            </div><!--End of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Egypt</li>
+                        <li class="card-text">population = 107407211</li>
+                        <li class="card-text">largest_river = Nile</li>
+                        <li class="card-text">main_crop = Wheat</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Butan</li>
+                        <li class="card-text">population = 793928</li>
+                        <li class="card-text">largest_river = Drangme Chhu</li>
+                        <li class="card-text">main_crop = Soya Beans</li>
+                        <li class="card-text">isSeaShore = False</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Saudi Arabia</li>
+                        <li class="card-text">population = 36238583</li>
+                        <li class="card-text">largest_river = Wadi al-Rummah</li>
+                        <li class="card-text">main_crop = watermelon</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+            </div><!--End of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Germany</li>
+                        <li class="card-text">population = 84488027</li>
+                        <li class="card-text">largest_river = Danube</li>
+                        <li class="card-text">main_crop = Barley</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Thailand</li>
+                        <li class="card-text">population = 70259783</li>
+                        <li class="card-text">largest_river = Chao Phraya</li>
+                        <li class="card-text">main_crop = Cassava</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Russia</li>
+                        <li class="card-text">population = 146098876</li>
+                        <li class="card-text">largest_river = Lena</li>
+                        <li class="card-text">main_crop = Potatoes</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+            </div><!--End of data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Zimbabwe</li>
+                        <li class="card-text">population = 15430850</li>
+                        <li class="card-text">largest_river = Zambezi</li>
+                        <li class="card-text">main_crop = Corn</li>
+                        <li class="card-text">isSeaShore = False</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Canada</li>
+                        <li class="card-text">population = 38611350</li>
+                        <li class="card-text">largest_river = Yukon</li>
+                        <li class="card-text">main_crop = Maize</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Country Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">country_name = Sweden</li>
+                        <li class="card-text">population = 10264641</li>
+                        <li class="card-text">largest_river = Gota alv—Klaralven</li>
+                        <li class="card-text">main_crop = Cereals</li>
+                        <li class="card-text">isSeaShore = True</li>
+                    </div>
+                </div>
+            </div><!--End of data-->
+
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Capital Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Delhi</li>
+                        <li class="card-text">population = 32941000</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 1483 sq.kms</li>
+                        <li class="card-text">country_name = India</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = beijing</li>
+                        <li class="card-text">population = 21766000</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 16,410.5 sq.kms</li>
+                        <li class="card-text">country_name = China</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Tokyo</li>
+                        <li class="card-text">population = 37194000</li>
+                        <li class="card-text">isSeaShore = True</li>
+                        <li class="card-text">area = 2,194 sq.kms</li>
+                        <li class="card-text">country_name = Japan</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Brasilia</li>
+                        <li class="card-text">population = 4728000</li>
+                        <li class="card-text">isSeaShore = True</li>
+                        <li class="card-text">area = 5,802 sq.kms</li>
+                        <li class="card-text">country_name = Brazil</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Jakarta</li>
+                        <li class="card-text">population = 11075000</li>
+                        <li class="card-text">isSeaShore = True</li>
+                        <li class="card-text">area = 661.5 sq.kms</li>
+                        <li class="card-text">country_name = Indonesia</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Cairo</li>
+                        <li class="card-text">population = 22183000</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 453 sq.kms</li>
+                        <li class="card-text">country_name = Egypt</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Riyadh</li>
+                        <li class="card-text">population = 9058394</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 1,973 sq.kms</li>
+                        <li class="card-text">country_name = Saudi Arabia</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Berlin</li>
+                        <li class="card-text">population = 3571000</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 891.8 sq.kms</li>
+                        <li class="card-text">country_name = Germany</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Bangkok</li>
+                        <li class="card-text">population = 10539000</li>
+                        <li class="card-text">isSeaShore = True</li>
+                        <li class="card-text">area = 1,568.7 sq.kms</li>
+                        <li class="card-text">country_name = Thailand</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Moscow</li>
+                        <li class="card-text">population = 12680000</li>
+                        <li class="card-text">isSeaShore = True</li>
+                        <li class="card-text">area = 2,511 sq.kms</li>
+                        <li class="card-text">country_name = Russia</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Islamabad</li>
+                        <li class="card-text">population = 1232000</li>
+                        <li class="card-text">isSeaShore = True</li>
+                        <li class="card-text">area = 906.5 sq.kms</li>
+                    </div>
+                </div>
+
+
+            </div><!--end of data-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Kabul</li>
+                        <li class="card-text">population = 6760500</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 1,023 sq.kms</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Capital Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">capital_name = Seoul</li>
+                        <li class="card-text">population = 9988000</li>
+                        <li class="card-text">isSeaShore = False</li>
+                        <li class="card-text">area = 605.2 sq.kms</li>
+                    </div>
+                </div>
+            </div><!--end of data-->
+        </div>
+    </div>
+</div>

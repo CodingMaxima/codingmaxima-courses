@@ -1,0 +1,163 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Question-4</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <p class="block">
+        Here the problem is to print the -10 to 0 numbers using the "for" loop
+        and "while" loop.
+      </p>
+      <p class="block">
+        <li>
+          From the above given problem we have to print the numbers starting
+          from -10 to 0 numbers using the loops.
+        </li>
+        <br />
+        <li>
+          Here is the problems explanation using for loop
+          <br />
+          Step-1: Mainly we need initializer, condition, increment/ decrement
+          for running the for loop.<br />
+          First the initializer, the problem itself stated that the initial value
+          should have to be print from -10. Sp the initial value is -10.<br />
+          Second the condition it should be taken according to the problem from
+          -10 to 0 numbers so the numbers have to be increased for every
+          iteration so &lt; / &lt;= symbols can be taken.<br />
+          Third every time for obtaining the value the numbers have to be
+          increased so increment have to be done . i.e., i++ .
+        </li>
+        <li>
+          Step-2: we have all the required parts for iteration i.e., initial
+          value as i = -10, condition as i &lt;= 0, increment i++.
+        </li>
+        <li>
+          Step-3: Now the iteration will be start with initial value -10. it
+          will check for the condition -10 &lt;= 0 . It was true. so the number
+          -10 will be increased to -9.
+        </li>
+        <li>
+          Step-4: Now the iteration will be start with initial value -9. it will
+          check for the condition -9 &lt;= 0 . It was true. so the number -9
+          will be increased to -8.
+        </li>
+        <li>
+          Step-5: Now the iteration will be start with initial value -8. it will
+          check for the condition -8 &lt;= 0 . It was true. so the number -8
+          will be increased to -7.
+        </li>
+        <li>
+          Step-6: Now the iteration will be start with initial value -7. it will
+          check for the condition -7 &lt;= 0 . It was true. so the number -7
+          will be increased to -6.
+        </li>
+        <li>
+          Step-7: Now the iteration will be start with initial value -6. it will
+          check for the condition -6 &lt;= 0 . It was true. so the number -6
+          will be increased to -5.
+        </li>
+        <li>
+          Step-8: Now the iteration will be start with initial value -5. it will
+          check for the condition -5 &lt;= 0 . It was true. so the number -5
+          will be increased to -4.
+        </li>
+        <li>
+          Step-9: Now the iteration will be start with initial value -4. it will
+          check for the condition -4 &lt;= 0 . It was true. so the number -4
+          will be increased to -3.
+        </li>
+        <li>
+          Step-10: Now the iteration will be start with initial value -3. it
+          will check for the condition -3 &lt;= 0 . It was true. so the number
+          -3 will be increased to -2.
+        </li>
+        <li>
+          Step-11: Now the iteration will be start with initial value -2. it
+          will check for the condition -2 &lt;= 0 . It was true. so the number
+          -2 will be increased to -1.
+        </li>
+        <li>
+          Step-12: Now the iteration will be start with initial value -1. it
+          will check for the condition -1 &lt;= 0 . It was true. so the number
+          -1 will be increased to 0.
+        </li>
+        <li>
+          Step-13: Now the iteration will be start with initial value 0. it will
+          check for the condition 0 &lt;= 0 . It was true. so the number 0 will
+          be increased to 1.
+        </li>
+        <li>
+          Step-14: Now the iteration will be start with initial value 1. it will
+          check for the condition 1 &lt;= 0 . It was false. So the loop will
+          stop iterating.
+        </li>
+      </p>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <div class="card-group">
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que4_using_for.jpg"
+            alt="program"
+          />
+        </div>
+        <div class="card border-primary">
+          <img
+            class="program-img-fit"
+            src="assets/img/corejava/loops/que4_using_while.jpg"
+            alt="program"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp [audioData]="audioData" [url]="''"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

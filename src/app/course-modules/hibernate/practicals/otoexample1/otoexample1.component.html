@@ -1,0 +1,542 @@
+<div class="card card-body">
+  <h3 class="global-component-heading"> Employee-Laptop(one-one relation)- Example</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>Employee Class</b></div>
+          <div class="card-body">
+            <p>create a Employee Class by using below data
+            </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+
+            <ol>
+              <div class="card-body">
+                <li class="card-text"><b>emp_id - </b>make sure it should not be duplicate and should
+                  not be empty (hint:
+                  use "PRIMARY KEY CONSTRAINT")</li>
+                <li class="card-text"><b>emp_name - </b> it should not be empty (hint: use "NOT
+                  NULL CONSTRAINT")
+                </li>
+                <li class="card-text"><b>salary - </b>it should be in between greater than or
+                  equal to 5000 and less
+                  than or equal to 100000(hint: use "CHECK CONSTRAINT") </li>
+                <li class="card-text"><b>emp_joining_date - </b>keep a fixed value for it. If you
+                  doesn't want to give an
+                  value for this particular column/for auto generating of the value
+                  without giving any
+                  manual values(hint: use "DEFAULT CONSTRAINT")</li>
+              </div>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>Laptop Class</b></div>
+          <div class="card-body">
+            <p>create a Laptop Class by using below data </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+
+            <ol>
+              <div class="card-body">
+                <li class="card-text"><b>lap_id - </b>make sure it should not be duplicate and should
+                  not be empty (hint:
+                  use "PRIMARY KEY CONSTRAINT")</li>
+                <li class="card-text"><b>lap_name - </b>It should not be empty (hint: use "NOT
+                  NULL CONSTRAINT")
+                <li class="card-text"><b>lap_model - </b> It should not be empty (hint: use "NOT
+                  NULL CONSTRAINT")
+                </li>
+                <li class="card-text"><b>lap_warranty - </b>It is warranty end date. It should not be empty
+                  (hint: use "NOT
+                  NULL CONSTRAINT")
+                </li>
+                <li class="card-text"><b>emp_id - </b>It is connection to the employee table emp_id. (hint: use
+                  "FOREIGN KEY")
+                </li>
+              </div>
+            </ol>
+          </div>
+        </div>
+      </div> <!-- Ending of examples-->
+
+    </div>
+    <div style="padding: 10px;" class="text-center">
+      <button class="btn btn-info">INSERT following Employee Data into Table</button>
+    </div>
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 1</li>
+          <li class="card-text">emp_name = Rajendra Kumar</li>
+          <li class="card-text">salary = 90000</li>
+          <li class="card-text">joining_date = 2012-05-02</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 2</li>
+          <li class="card-text">emp_name = Sandeep DUll</li>
+          <li class="card-text">salary = 40000</li>
+          <li class="card-text">joining_date = 2019-01-01</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 3</li>
+          <li class="card-text">emp_name = Neelima Chowdary</li>
+          <li class="card-text">salary = 90000</li>
+          <li class="card-text">joining_date = 2015-12-01</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 4</li>
+          <li class="card-text">emp_name = Shiv Kumar</li>
+          <li class="card-text">salary = 25000</li>
+          <li class="card-text">joining_date = 2022-11-11</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 5</li>
+          <li class="card-text">emp_name = Pooja Kapoor</li>
+          <li class="card-text">salary = 70000</li>
+          <li class="card-text">joining_date = 2019-10-11</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 6</li>
+          <li class="card-text">emp_name = Brinda Mehta</li>
+          <li class="card-text">salary = 85000</li>
+          <li class="card-text">joining_date = 2012-01-05</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 7</li>
+          <li class="card-text">emp_name = John Robert</li>
+          <li class="card-text">salary = 30000</li>
+          <li class="card-text">joining_date = 2021-02-12</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 8</li>
+          <li class="card-text">emp_name = Sri Harsha</li>
+          <li class="card-text">salary = 60000</li>
+          <li class="card-text">joining_date = 2017-09-21</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 9</li>
+          <li class="card-text">emp_name = Hari Kiran</li>
+          <li class="card-text">salary = 50000</li>
+          <li class="card-text">joining_date = 2014-09-11</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 10</li>
+          <li class="card-text">emp_name = Sri Divya</li>
+          <li class="card-text">salary = 50000</li>
+          <li class="card-text">joining_date = 2019-10-01</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 11</li>
+          <li class="card-text">emp_name = Thomas Edward</li>
+          <li class="card-text">salary = 85000</li>
+          <li class="card-text">joining_date = 2016-02-03</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 12</li>
+          <li class="card-text">emp_name = Swetha Kapoor</li>
+          <li class="card-text">salary = 30000</li>
+          <li class="card-text">joining_date = 2022-05-01</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 13</li>
+          <li class="card-text">emp_name = Mohan Krishna</li>
+          <li class="card-text">salary = 50000</li>
+          <li class="card-text">joining_date = 2018-04-23</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 14</li>
+          <li class="card-text">emp_name = Smrithi Kour</li>
+          <li class="card-text">salary = 95000</li>
+          <li class="card-text">joining_date = 2010-03-02</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Employee Data</b></div>
+        <div class="card-body">
+          <li class="card-text">emp_id = 15</li>
+          <li class="card-text">emp_name = Tony Edward</li>
+          <li class="card-text">salary = 20000</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+
+    <div style="padding: 10px;" class="text-center">
+      <button class="btn btn-info">INSERT following Laptop Data into Table</button>
+    </div>
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 1</li>
+          <li class="card-text">lap_name = Dell</li>
+          <li class="card-text">lap_model = XPS15</li>
+          <li class="card-text">lap_warranty = 2024-10-02</li>
+          <li class="card-text">emp_id = 10</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 2</li>
+          <li class="card-text">lap_name = Lenovo</li>
+          <li class="card-text">lap_model = ThinkPad X12</li>
+          <li class="card-text">lap_warranty = 2027-07-07</li>
+          <li class="card-text">emp_id = 9</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 3</li>
+          <li class="card-text">lap_name = MSI</li>
+          <li class="card-text">lap_model = GS66 Stealth</li>
+          <li class="card-text">lap_warranty = 2018-10-12</li>
+          <li class="card-text">emp_id = 8</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 4</li>
+          <li class="card-text">lap_name = Samsung</li>
+          <li class="card-text">lap_model = Book 360</li>
+          <li class="card-text">lap_warranty = 2030-02-02</li>
+          <li class="card-text">emp_id = 13</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 5</li>
+          <li class="card-text">lap_name = Apple</li>
+          <li class="card-text">lap_model = Macbook Air</li>
+          <li class="card-text">lap_warranty = 2025-04-05</li>
+          <li class="card-text">emp_id = 15</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 6</li>
+          <li class="card-text">lap_name = HP</li>
+          <li class="card-text">lap_model = Spectre x360 13.5</li>
+          <li class="card-text">lap_warranty = 2016-04-22</li>
+          <li class="card-text">emp_id = 6</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 7</li>
+          <li class="card-text">lap_name = Acer</li>
+          <li class="card-text">lap_model = ConceptD 7 Ezel</li>
+          <li class="card-text">lap_warranty = 2023-12-01</li>
+          <li class="card-text">emp_id = 5</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 8</li>
+          <li class="card-text">lap_name = Fujitsu</li>
+          <li class="card-text">lap_model = UH-X 4ZR1K06212</li>
+          <li class="card-text">lap_warranty = 2018-02-21</li>
+          <li class="card-text">emp_id = 3</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 9</li>
+          <li class="card-text">lap_name = LG</li>
+          <li class="card-text">lap_model = gram 17</li>
+          <li class="card-text">lap_warranty = 22-12-12</li>
+          <li class="card-text">emp_id = 2</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 10</li>
+          <li class="card-text">lap_name = Microsoft</li>
+          <li class="card-text">lap_model = Surface Pro 8</li>
+          <li class="card-text">lap_warranty = 2027-01-18</li>
+          <li class="card-text">emp_id = 1</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 11</li>
+          <li class="card-text">lap_name = Dell</li>
+          <li class="card-text">lap_model = XPS17</li>
+          <li class="card-text">lap_warranty = 2017-08-16</li>
+        </div>
+      </div>
+    </div> <!-- Ending of Data-->
+    <!-- Starting of Data-->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 12</li>
+          <li class="card-text">lap_name = Asus</li>
+          <li class="card-text">lap_model = ZenBook Pro 16X</li>
+          <li class="card-text">lap_warranty = 2015-07-10</li>
+        </div>
+      </div>
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>Laptop Data</b></div>
+        <div class="card-body">
+          <li class="card-text">lap_id = 13</li>
+          <li class="card-text">lap_name = Razer</li>
+          <li class="card-text">lap_model = Book 14</li>
+          <li class="card-text">lap_warranty = 2024-12-22</li>
+        </div>
+      </div>
+
+
+    </div> <!-- Ending of Data-->
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <p>
+
+            </p>
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-primary"> Question - 1</button>
+            </div>
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              Print all the employees who has laptops along with laptops information(inner Join) <br>
+
+            </button>
+
+
+
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-primary">Question - 2</button>
+            </div>
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              Print all the employees along with laptops(left join)
+            </button>
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-info">Question - 3</button>
+            </div>
+
+
+            <button style="padding: 10px;" class="btn btn-lg btn-block">
+              Print the employees who has laptops and print all the laptop details(right join)
+            </button>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div style="padding: 10px;" class="text-center">
+        <button class="btn btn-primary"> Configuration Data</button>
+      </div>
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div style="background-color: rgb(229, 253, 253);" class="card-body">
+            <p>
+              <b> Configuration config = new
+                Configuration().configure().addAnnotatedClass(Pojo1.class).addAnnotatedClass(Pojo2.class);</b>
+              <br>
+              <b> StandardServiceRegistryBuilder reg = new
+                StandardServiceRegistryBuilder().applySettings(config.getProperties());</b>
+              <br>
+              <b> SessionFactory sf = config.buildSessionFactory(reg.build());</b>
+              <br>
+              <b>Session session = sf.openSession();</b>
+              <br>
+              <b>Transaction tx = session.beginTransaction();</b>
+              <br>
+              <b>session.save(Objects);</b>
+              <br>
+              <b>tx.commit();</b>
+
+            </p>
+          </div>
+        </div>
+
+      </div> <!-- first group-->
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="subTabChange($event)"
+          data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+        <span class="tab-pill" id="main" [ngClass]="(elementId2=='main')?'active':''" (click)="subTabChange($event)"
+          data-hover="Main(Testing)"> Main(Testing) Class</span>
+        <span class="tab-pill" id="configuration" [ngClass]="(elementId2=='configuration')?'active':''"
+          (click)="subTabChange($event)" data-hover="Configuration file ">Configuration file</span>
+        <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''"
+          (click)="subTabChange($event)" data-hover="Pom.Xml file">Pom.Xml file</span>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pojo'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Employee POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/onetoOne.example1.employee.pojo.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Laptop POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/onetoOne.example1.laptop.pojo.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='main'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Main Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/onetoOne.example1.test.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='configuration'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Configuration file</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example1.cfg.file.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pom.xml'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp [url]="'student_branch_relation.m4v'"></app-video-cmp>
+    </div>
+  </div>
+
+
+</div>

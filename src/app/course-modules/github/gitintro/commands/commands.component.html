@@ -1,0 +1,101 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">GIT Commands</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="container mt-5">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>git init</td>
+                                <td>Initializes a new Git repository.</td>
+                                <td><code>git init</code></td>
+                            </tr>
+                            <tr>
+                                <td>git clone</td>
+                                <td>Creates a copy of a remote repository on your local machine.</td>
+                                <td><code>git clone https://github.com/example/repo.git</code></td>
+                            </tr>
+                            <tr>
+                                <td>git add</td>
+                                <td>Adds changes to the staging area.</td>
+                                <td><code>git add filename.txt</code></td>
+                            </tr>
+                            <tr>
+                                <td>git commit</td>
+                                <td>Records changes to the repository with a commit message.</td>
+                                <td><code>git commit -m "Added a new feature"</code></td>
+                            </tr>
+                            <tr>
+                                <td>git status</td>
+                                <td>Shows the status of changes (untracked, modified, or staged).</td>
+                                <td><code>git status</code></td>
+                            </tr>
+                            <tr>
+                                <td>git pull</td>
+                                <td>Fetches changes from a remote repository and merges them into the current branch.</td>
+                                <td><code>git pull origin master</code></td>
+                            </tr>
+                            <tr>
+                                <td>git push</td>
+                                <td>Pushes local changes to a remote repository.</td>
+                                <td><code>git push origin master</code></td>
+                            </tr>
+                            <tr>
+                                <td>git branch</td>
+                                <td>Lists, creates, or deletes branches.</td>
+                                <td><code>git branch</code> (list branches)<br><code>git branch feature-branch</code> (create
+                                    branch)<br><code>git branch -d feature-branch</code> (delete branch)</td>
+                            </tr>
+                            <tr>
+                                <td>git checkout</td>
+                                <td>Switches to a different branch.</td>
+                                <td><code>git checkout feature-branch</code></td>
+                            </tr>
+                            <tr>
+                                <td>git merge</td>
+                                <td>Combines changes from different branches.</td>
+                                <td><code>git merge feature-branch</code></td>
+                            </tr>
+                            <tr>
+                                <td>git log</td>
+                                <td>Shows a log of commits.</td>
+                                <td><code>git log</code></td>
+                            </tr>
+                            <tr>
+                                <td>git remote</td>
+                                <td>Manages remote repositories.</td>
+                                <td><code>git remote add origin https://github.com/example/repo.git</code><br><code>git remote -v</code>
+                                    (view remotes)</td>
+                            </tr>
+                            <tr>
+                                <td>git fetch</td>
+                                <td>Downloads objects and refs from a remote repository.</td>
+                                <td><code>git fetch origin</code><br><code>git fetch --all</code> (fetch from all remotes)</td>
+                            </tr>
+                            <tr>
+                                <td>git reset</td>
+                                <td>Resets the current branch to a specific commit.</td>
+                                <td><code>git reset --hard commit-hash</code></td>
+                            </tr>
+                            <tr>
+                                <td>git diff</td>
+                                <td>Shows changes between commits, commit and working tree, etc.</td>
+                                <td><code>git diff</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>

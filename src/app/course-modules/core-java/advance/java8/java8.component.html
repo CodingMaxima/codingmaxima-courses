@@ -1,0 +1,206 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Java 8 Features</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Functional Interface">Functional Interface</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Lambda Expression">Practice Problems</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <button>FunctionalInterface</button>
+                <div class="card-body">
+                    <li> Functional interface is an interface with only one abstract method i.e., the interface
+                        implementation will only represents one behaviour</li>
+                    <li>It can be define with the help of <b> @FunctionalInterface annotation</b></li>
+                    <li>In short it is also called as SAM interface(Single Abstract Method)</li>
+                    <li> It provides the users with the fundamental programming approach & it is not used alone, It
+                        should
+                        be used along with lambda expression and method references inorder to make the code for more
+                        readability, clear, straight forward.</li>
+                    <li> Functional Interface can have any no of default methods. <b> Ex: Runnable, Action Listner,
+                            Comparable etc.., </b></li>
+                </div>
+            </div>
+
+             <div class="card border-warning" style="border: 2px solid;">
+                <button> Lambda Expression</button>
+                <div class="card-body">
+                    <li> These are primarly used to define the inline implementation of the functional interface.</li>
+                    <li>They provides the clear way to represent one method interface using this expression</li>
+                    <li>Very useful for the class libraries & helps to iterate , filter & extract the data from the
+                        collection.</li>
+                    <li> It saves the lot of code because by using this expression we no need to write the method again
+                        and agian for implementation. can write just implementation code.</li>
+                    <li>It is treated as a fumction so the compiler does'nt create .calss files</li>
+                    <li><b>Syntax: (argument - list)-&gt;{{'{'}}body {{'}'}}</b></li>
+                    <li> here Argument list -- can be empty/non empty </li>
+                    <li>Arrow symbol-- also called as predicate used to link the arguments-list & body of expression.
+                    </li>
+                    <li>body -- contains the statements and expressions for lambda expression</li>
+                </div>
+
+                
+            </div>
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <button> Stream API</button>
+                <div class="card-body">
+                    <li>A stream is a sequence of objects that supports the vaarious methods which can be pipelined to
+                        produce the desired results.</li>
+                    <li>These are present in "java.util.stream".</li>
+                    <li>Collection interface has been extended with stream() and parallelStream() default methods to get
+                        the
+                        Stream for sequential and parallel execution.</li>
+                    <li> Stream API are used to filter items of a collection based on a defined condition.</li>
+                </div>
+            </div>
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <button>Method References</button>
+                <div class="card-body">
+                    <li>Method References are used to refer the method of the functional interface.</li>
+                    <li>It is an easy form of lambda Expression whenever each time using this expression just to refer
+                        an method inplace of using this expression method reference can be used.</li>
+
+                </div>
+            </div>
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <button> Default Method & Static Method in Interface</button>
+                <div class="card-body">
+                    <li>Default methods and static methods are declared by using the default and static keywords at the
+                        beginning of the method signature & they provides the method signatures.</li>
+                    <li>Default methods are non-abstract methods by adding default methods it will be helpful for the
+                        developers to add new methods to the interfaces without affecting the classes that implement in
+                        these interfaces</li>
+                    <li>One can add n number of default methods, static methods and abstract methods in the interface.
+                    </li>
+                    <li>Static method interface is used to increase the degrees of cohesion by putting together related
+                        methods in one single place without having to create an object.</li>
+                </div>
+
+            </div>
+
+             <div class="card border-warning" style="border: 2px solid;">
+                <button>Optional class</button>
+                <div class="card-body">
+                    <li> The public final class "optional" is used to handle the null pointer Exception in Java & it is
+                        present in "java.util package".</li>
+                    <li>Can give the other code /values for executing using optional.</li>
+                    <li> It reduces the number of null checks required to avoid the null pointer Exception</li>
+                    <li> BY using this optional class help the applicaitons from crashing & terminating unexpectedly.
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+           
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            
+        </div>
+    </div>
+    <div *ngIf="elementId=='four'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            
+        </div>
+    </div>
+    <div *ngIf="elementId=='five'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            
+        </div>
+    </div>
+    <div *ngIf="elementId=='six'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+           
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='seven'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+            <span class="tab-pill" id="practice" [ngClass]="(elementId2=='practice')?'active':''"
+                (click)="tabChange($event)" data-hover="Practice">Practice</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card-body">
+                    <li> It is a function used to iterate over a collections(list, set, map) And stream</li>
+                    <li> It is used to perform a given action on each element of the collections </li>
+                    <li>It is used in <b>Iterable Interface</b>(available for the collection classes except map)</li>
+                    <li>SO for mapping the data <b>Map Interface </b>(operations done for all map classes) is used</li>
+                    <li>For ordered operations <b> Stream Interface</b> is used</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

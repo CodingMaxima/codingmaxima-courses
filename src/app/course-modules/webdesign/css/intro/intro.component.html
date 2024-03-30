@@ -1,0 +1,269 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">CSS(Cascading Style Sheets)</h3>
+    <div id="accordion">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-header" id="headingOne">
+                <h5 class="title">
+                        CSS Introduction
+                </h5>
+            </div>
+            <div id="CSS_Introduction" class="collapse show" aria-labelledby="headingOne">
+                <div class="card-body">
+                    <div class="data">
+                         <ul>
+                        <li><b>CSS</b> stands for cascading style sheets. It was first developed in 1997, as a way for Web developers to
+                            define the look and feel of their Web pages.</li>
+                        <li>It was intended to allow developers to separate content
+                            from design and layout so that HTML could perform more of the function without worry about the design
+                            and layout.</li>
+                        
+                        <h4><u>Syntax</u></h4>
+                       
+                        <b><u>A CSS rule has two main Parts:</u></b> a selector and one or more declarations.
+                        <li><b>Selector</b> isnormally the HTML element you want to style and each declaration consists of a property
+                            and value.</li>
+                        <li><b>The property</b> is the style attribute we want to use and each property has a value
+                            associated with it.</li>
+                        </ul>
+                        <img class="image" src="assets/img/web-designing/css/css properties.png">
+                    </div>
+                    <div class="headings">
+                        <h3><u>Inserting CSS</u></h3>
+                    </div>
+                    <div class="data">
+                      <p>  
+                            We can use style sheets in three different ways in out HTML document. <br>
+                            There are <span><b>external style sheet</b>, <b>internal style sheet</b> and <b>inline style.</b></span>
+                        </p>
+                    <div class="inserting-css">
+                       <h4><u>1.External Style Sheet</u></h4>
+                    </div>
+                       <ul>
+                            <li>we want to apply the same style to many pages, we use external style sheet. With an
+                            external style sheet, you can change the look of an entire Web site by changing one style
+                            sheet file.</li>
+                            <li>Each page must link to the style sheet using the <link> tag. The <link> tag goes inside the head section.</li>
+                            <b><u>Example:</u></b>
+                            <div class="style"
+                                    style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                    <ul>
+                                        <code>&lt;head&gt;</code>
+                                    
+                                    <ul>
+                                        &lt;link rel="stylesheet" type="text/css" href="mystyle.css" /&gt;
+                                    </ul>
+                                    
+                                        <code>&lt;/head&gt;</code>
+                                    </ul>
+                                    
+                            </div><br>
+                        </ul>
+                        <div class="inserting-css">
+                            <h4><u>2.Internal Style Sheet</u></h4>
+                         </div>
+                            <ul>
+                                 <li>we want a unique style to a single document, an internal style sheet should be used.</li>
+                                 <li>You define internal styles in the head section of an HTML page, by using the <code>&lt;style&gt;</code> tag.</li>
+                                 <b><u>Example:</u></b>
+                                 <div class="style"
+                                         style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                         <ul>
+                                             <code>&lt;head&gt;</code>
+                                         
+                                            <ul>
+                                                <b>&lt;style type="text/css" &gt;</b><br>
+                                                hr&#123;
+                                                    <ul>color:red;</ul>
+                                                &#125; <br>
+                                                p&#123;
+                                                    <ul>margin‐left:20px;</ul>
+                                                &#125; <br>
+                                                body&#123;
+                                                    <ul>background‐image:url("images/back40.gif");</ul>
+                                                &#125; <br>
+                                                <b>&lt;/style&gt;</b>
+                                                
+                                            </ul>
+                                         
+                                             <code>&lt;/head&gt;</code>
+                                         </ul>    
+                                 </div><br>
+                             </ul>
+                             <div class="inserting-css">
+                                <h4><u>3.Inline Styles</u></h4>
+                             </div>
+                                <ul>
+                                     <li>we want a unique style to a single element, an inline style sheet should be used. An inline style loses many of the advantages of style sheets by mixing content with presentation</li>
+                                     <li>To use inline
+                                        styles you use the style attribute in the relevant tag. The <b>style attribute</b> can contain any CSS property. </li>
+                                     <b><u>Example:</u></b>
+                                     <div class="style"
+                                             style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                             <ul>
+                                                 &lt;p style="color:yellow;margin‐left:20px"&gt;This is a paragraph.&lt;/p&gt;
+                                             </ul>    
+                                     </div><br>
+                                 </ul>
+                    </div>
+                    <div class="headings">
+                        <h3><u>CSS Selectors</u></h3>
+                    </div>
+                    <div class="data"> 
+                        <div class="inserting-css">
+                        <h4><u>The Type Selectors</u></h4>
+                        </div>
+                        <ul>
+                                <li>These selectors are nothing but html tags below is example for applying styles to all h1 tags</li>
+                                <b><u>Example:</u></b>
+                                <div class="style"
+                                        style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                        <code>h1&#123;</code><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;border:2px solid black; <br>
+                                        <code>&#125;</code>
+                                        
+                                </div><br>
+                            </ul>
+                            <div class="inserting-css">
+                                <h4><u>The Universal Selectors</u></h4>
+                            </div>
+                                <ul>
+                                    <li>Rather than selecting elements of a specific type, the universal selector quite simply matches the name of any element type</li>
+                                    <b><u>Example:</u></b>
+                                    <div class="style"
+                                            style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                            <code>
+                                                * &#123; </code><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;color: yellow <br>
+                                            <code>&#125; </code>
+                                            
+                                    </div><br>
+                                </ul>
+                                <div class="inserting-css">
+                                    <h4><u>The Class Selectors</u></h4>
+                                </div>
+                                    <ul>
+                                        <li>We can define style rules based on the class attribute of the elements. All the elements having that class will be formatted according to the defined rule</li>
+                                        <b><u>Example:</u></b>
+                                        <div class="style"
+                                                style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                <code>
+                                                    .blue &#123;</code><br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;color: blue; <br>
+                                                <code> &#125; </code>                                              
+                                        </div><br>
+                                        <ul>
+                                            <li>This class <i>blue</i> can be applied to any html tag using the <i>class</i> attribute</li>
+                                            <li>The name of class can be anything , when we specify <i>dot</i> infront of the name it becomes name of the class. here <i>blue is name of the class</i></li>
+                                        </ul>
+                                        <div class="style"
+                                                style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                <code>&lt;h1 class=</code>"blue"<code>&gt;</code>This is color blue<code>&lt;/h1&gt;</code>                                              
+                                        </div><br>
+                                        <ul>
+                                            <li>and output is shown as below</li>
+                                        </ul>
+                                        <div class="style"
+                                                style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                <h1 style="color:blue">This is color blue</h1>                                              
+                                        </div><br>
+                                    </ul>
+                                    <div class="inserting-css">
+                                        <h4><u>The Universal Selectors</u></h4>
+                                    </div>
+                                        <ul>
+                                            <li>Rather than selecting elements of a specific type, the universal selector quite simply matches the name of any element type</li>
+                                            <b><u>Example:</u></b>
+                                            <div class="style"
+                                                    style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                    <code>
+                                                        * &#123; </code><br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;color: yellow <br>
+                                                    <code>&#125; </code>
+                                                    
+                                            </div><br>
+                                        </ul>
+                                        <div class="inserting-css">
+                                            <h4><u>The Id Selectors</u></h4>
+                                        </div>
+                                            <ul>
+                                                <li>We can define style rules based on the id attribute of the elements. All the elements having that id will be formatted according to the defined rule</li>
+                                                <b><u>Example:</u></b>
+                                                <div class="style"
+                                                        style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                        <code>
+                                                            #colorBrown &#123;</code><br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;color: brown; <br>
+                                                        <code> &#125; </code>                                              
+                                                </div><br>
+                                                <ul>
+                                                    <li>This id <i>colorbrown</i> can be applied to any html tag using the <i>id</i> attribute</li>
+                                                    <li>The name of <i>id</i> can be anything , when we specify <i>hash</i> infront of the name it becomes name of the id. here <i>colorbrown</i> is name of the id</li>
+                                                </ul>
+                                                <div class="style"
+                                                        style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                        <code>&lt;h1 id=</code>"colorBrown"<code>&gt;</code>This is color brown<code>&lt;/h1&gt;</code>                                             
+                                                </div><br>
+                                                <ul>
+                                                    <li>and output is shown as below</li>
+                                                </ul>
+                                                <div class="style"
+                                                        style="border: 1px solid rgb(243, 164, 7);padding: 25px;margin-left: 6%;margin-right: 16%;margin-top: 15px;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                                                        <h1 style="color:brown">This is color brown</h1>                                             
+                                                </div><br>
+                                            </ul>
+                            
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#CSS_Selectors"
+                        aria-expanded="false" aria-controls="CSS_Selectors">
+                        CSS Selectors
+                    </button>
+                </h5>
+            </div>
+            <div id="CSS_Selectors" class="collapse" aria-labelledby="headingOne">
+                <div class="card-body">
+                    
+                   
+    
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#CSS_In_browser"
+                        aria-expanded="false" aria-controls="CSS_In_browser">
+                        How to see CSS code in browser
+                    </button>
+                </h5>
+            </div>
+            <div id="CSS_In_browser" class="collapse" aria-labelledby="headingOne">
+                <div class="card-body">
+                    <ul>
+                        <li>We can go to any website and see the css code in the browser</li>
+                        <li>We will be learning about the code in later classes</li>
+                        <li>steps to view code in the browser</li>
+                        <ul>
+                            <li>Right click on the browser and select <b><i>Inspect</i></b> or press <code><b><i>F12</i></b></code> from key board</li>
+                            <li>Open the <b><i>Elements</i></b> tab </li>
+                            <li>on the right side you can see the styles which are applied to the selected element</li>
+                            <li>In the below image you can see that h1 tag is selected and you can see the css code that is applied to it</li>
+                        </ul>
+                    </ul>
+                    <div class="card-body">
+                        <div class="card-group">
+                            <img src="assets/img/web-designing/intro/css_code_in_browser.jpg" class="card" style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 30%;" alt="css_code_in_browser.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

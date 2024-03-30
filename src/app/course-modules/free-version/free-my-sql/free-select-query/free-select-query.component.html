@@ -1,0 +1,604 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Select Statments(EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId2=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId2=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId2=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Simple Select Query</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the simple select we just need to retrive the entire data of the table. <br>
+                            Syntax :- select * from table_name;
+                        </button>
+
+                        <p style="padding: 10px;" class="btn-block">
+                            select * from employee;
+                        </p>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Select with where condition</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the second style of select query if we use where condition means will
+                            retrive(select) the data based on some conditions.<br>
+                            Syntax :- select * from table_name where your_codition
+                        </button>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Select employee data with conditons</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">
+                            Question :- select employees who's id is 1
+                            <br>
+                            Query :- select * from employee where id=1;
+                            <br>
+                        </p>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the third style of select query if we can only retrive(select) few coloums
+                            instad of all columns<br>
+                            Syntax :- select 1st_column, 2nd_column from table_name<br>
+                            Syntax :- select 1st_column, 2nd_column from table_name where your_codition
+                        </button>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Select only few columns with and without where
+                                condition</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">
+                            Question :- select only id and first name from the employee table.
+                            <br>
+                            Query :- select id, first_name from employee;
+                        </p>
+
+                        <div id="accordion">
+                            <div class="tab-title tab-slide-effect">
+                                <span class="tab-pill" id="question1" [ngClass]="(elementId=='question1')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-1">Question-1</span>
+                                <span class="tab-pill" id="question2" [ngClass]="(elementId=='question2')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-2">Question-2</span>
+                                <span class="tab-pill" id="question3" [ngClass]="(elementId=='question3')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-3">Question-3</span>
+                                <span class="tab-pill" id="question4" [ngClass]="(elementId=='question4')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-4">Question-4</span>
+                                <span class="tab-pill" id="question5" [ngClass]="(elementId=='question5')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-5">Question-5</span>
+                                <span class="tab-pill" id="question6" [ngClass]="(elementId=='question6')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-6">Question-6</span>
+                                <span class="tab-pill" id="question7" [ngClass]="(elementId=='question7')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-7">Question-7</span>
+                                <span class="tab-pill" id="question8" [ngClass]="(elementId=='question8')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-8">Question-8</span>
+                                <span class="tab-pill" id="question9" [ngClass]="(elementId=='question9')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-9">Question-9</span>
+                                <span class="tab-pill" id="question10" [ngClass]="(elementId=='question10')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-10">Question-10</span>
+                                <span class="tab-pill" id="question11" [ngClass]="(elementId=='question11')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-11">Question-11</span>
+                                <span class="tab-pill" id="question12" [ngClass]="(elementId=='question12')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-12">Question-12</span>
+                                <span class="tab-pill" id="question13" [ngClass]="(elementId=='question13')?'active':''"
+                                    (click)="tabChange($event)" data-hover="Question-13">Question-13</span>
+                            </div>
+
+                            <div *ngIf="elementId=='question1'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-1</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select complete
+                                            employee
+                                            table.</p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerOne[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerOne">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerOne)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select * from
+                                                employee
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end of first question1-->
+
+                            <div *ngIf="elementId=='question2'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-2</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select id, first_name ,
+                                            second_name, last_name, designation & salary from employee table.
+                                        </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerTwo[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerTwo">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerTwo)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select
+                                                id,first_name,middle_name,last_name,designation,salary from
+                                                employee ;</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question2-->
+
+                            <div *ngIf="elementId=='question3'">
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-3</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select different
+                                            companynames of employees in employee table.</p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerThree[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerThree">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerThree)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select distinct
+                                                companyname from employee;</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question3-->
+
+                            <div *ngIf="elementId=='question4'">
+
+                            </div><!--end of first question4-->
+
+                            <div *ngIf="elementId=='question4'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-4</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select the active
+                                            persons with id, first name, middle name, last name in the
+                                            employee table.</p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerFour[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerFour">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerFour)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select
+                                                id,first_name, middle_name,last_name from employee where
+                                                isactive = true;</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question4-->
+
+                            <div *ngIf="elementId=='question5'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-5</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select all the
+                                            employees who are working in the ‘wipro’ company in employee
+                                            table.</p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerFive[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerFive">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerFive)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div> <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select * from
+                                                employee where companyname = 'wipro';</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question5-->
+
+                            <div *ngIf="elementId=='question6'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-6</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select all the
+                                            employee details who are working in ‘Infosys’ and
+                                            active(present) in that company in employee table. </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerSix[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerSix">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerSix)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select *
+                                                from employee where companyname = 'Infosys' and
+                                                isactive = true; </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question6-->
+
+                            <div *ngIf="elementId=='question7'">
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-7</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">select the
+                                            employees
+                                            who are working as a software engineer along with
+                                            their id,
+                                            first name, middle name , last name and salary in
+                                            employee
+                                            table .</p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerSeven[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerSeven">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerSeven)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select
+                                                id,first_name,middle_name,last_name,salary from
+                                                employee
+                                                where designation = 'Software Engineer';</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question7-->
+
+                            <div *ngIf="elementId=='question8'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-8</b></div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">select the
+                                            female employees with their salary, primary phone
+                                            number, secondary phone number in employee table.
+                                        </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerEight[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerEight">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerEight)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">select
+                                                salary, primaryphonenumber, secondaryphonenumber
+                                                from employee where gender = 'Female'; </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question8-->
+
+                            <div *ngIf="elementId=='question9'">
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Question-9</b>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block"> select
+                                            the
+                                            all employees who are not working in ‘Wipro’
+                                            company
+                                            in employee table. </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerNine[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerNine">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerNine)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                select *
+                                                from employee where not companyname =
+                                                'wipro';
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end of first question9-->
+
+                            <div *ngIf="elementId=='question10'">
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center">
+                                        <b>Question-10</b>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">
+                                            select
+                                            all the employees who are not male and
+                                            salary is
+                                            30000 or 40000 in employee table. </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerTen[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerTen">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerTen)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                select * from employee where not gender
+                                                =
+                                                'male' and ( salary = 30000 or salary =
+                                                40000);</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end of first question10-->
+
+                            <div *ngIf="elementId=='question11'">
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center">
+                                        <b>Question-11</b>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">
+                                            select
+                                            the
+                                            id and designation of the employees with
+                                            last
+                                            name =
+                                            ‘kapoor’ or companyname = ‘Infosys’ in
+                                            employee
+                                            table. </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerEleven[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerEleven">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerEleven)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                select
+                                                id,designation from employee where
+                                                last_name
+                                                =
+                                                'kapoor' or companyname = 'infosys';</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--end of first question11-->
+
+                            <div *ngIf="elementId=='question12'">
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center">
+                                        <b>Question-12</b>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">
+                                            select
+                                            the employees who's last name was ‘Sri’
+                                            along
+                                            with designation, age , gender, primary
+                                            phone
+                                            number and companyname in empolyee table.
+                                        </p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerTwelve[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerTwelve">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerTwelve)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                select designation, age, gender,
+                                                primaryphonenumber,companyname from
+                                                employee
+                                                where first_name = 'sri';
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end of first question12-->
+
+                            <div *ngIf="elementId=='question13'">
+
+                                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center">
+                                        <b>Question-13</b>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <p style="padding: 10px;" class="btn-block">
+                                            select
+                                            the employees whose salary is greater than
+                                            50000
+                                            along with their id, first name, middle
+                                            name,
+                                            last name and salary in employee table</p>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <th *ngFor="let col of getSplitDataHeader(answerThirteen[0])">
+                                                        {{col}}
+                                                    </th>
+                                                </tr>
+                                                <tr *ngFor="let row of answerThirteen">
+                                                    <td *ngFor="let col of getSplitDataRows(row, answerThirteen)">
+                                                        {{col}}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <br>
+                                        <button style="padding: 10px;" class="btn btn-primary"
+                                            (click)="answerChange()">{{buttonValue}}</button>
+                                        <div style="padding: 10px;" *ngIf="toggleOn">
+                                            <p style="padding: 10px;" class="btn-block">
+                                                select id,
+                                                first_name,middle_name,last_name,salary
+                                                from
+                                                employee where salary > 50000;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end of first question13-->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- Ending of problem statement card body-->
+    </div>
+    <div *ngIf="elementId2=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

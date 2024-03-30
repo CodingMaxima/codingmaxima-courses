@@ -1,0 +1,213 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">File Handling Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <!-- <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Program">Program</span> -->
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''"
+            (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            File handling is an essential aspect of programming as it allows us to interact with
+                            external files stored on our computer.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">In Python, file handling is straightforward
+                            and offers various operations to
+                            read, write, and manipulate files.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            Whether you want to process text files, log data, or work with structured data in CSV
+                            format,
+                            Python provides convenient tools for file handling.
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Opening a File</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>To begin working with a
+                                file,
+                                you need to open it. Python's open() function is used to open a file,
+                                and it takes two arguments: the file name (or path) and the mode.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                The mode determines how the file is opened and whether it is read, written, or both.
+                                Some common modes include:
+                            </p>
+                            <ul style='font-size: medium; font-style: oblique;font-weight: 500;'>
+                                <li>'r': Read mode. Opens the file for reading (default mode).</li>
+                                <li>'w': Write mode. Opens the file for writing. If the file already exists, it will be
+                                    overwritten.</li>
+                                <li>'a': Append mode. Opens the file for appending data at the end. If the file does not
+                                    exist, it will be created.</li>
+                                <li>
+                                    The 'r+' mode allows you to open a file for both reading and writing.
+                                     It positions the file cursor at the beginning of the file, and you can read, write, or modify its contents.
+                                </li>
+                                <li>
+                                    The 'rb' mode is used for working with binary files,
+                                     such as image files or binary data files. It is often used in conjunction with other modes.
+                                </li>
+                                <li>
+                                    The 'x' mode is used to create a new file for writing.
+                                     It raises an error if the file already exists, preventing accidental overwriting.
+                                </li>
+                                <li>
+                                    The 't' mode is the default mode for working with text files.
+                                     It is often used in conjunction with other modes.
+                                    For example, 'rt' is the same as 'r', and 'w+t' is the same as 'w'.
+                                </li>
+                                <li>
+                                    The 'a+' and 'w+' modes allow both reading and writing,
+                                     similar to 'r+'. However, they also enable automatic buffering, which improves performance.
+                                </li>
+                            </ul>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Here's an example of opening a file in read mode:
+                            </p>
+                            <p
+                                style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+                                file = open("example.txt", "r")
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;">
+                            <b>
+                                Reading from a File
+                            </b>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Once you have opened a file, you can read its contents.
+                                Python provides several methods to read from a file, such as:
+                            </p>
+                            <ul>
+                                <li>read(): Reads the entire file content as a string.</li>
+                                <li>readline(): Reads a single line from the file.</li>
+                                <li>readlines(): Reads all lines from the file and returns them as a list.</li>
+                            </ul>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Here's an example of reading the contents of a file:
+                            </p>
+                            <p
+                                style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+                                file = open("example.txt", "r") <br>
+                                content = file.read() <br>
+                                print(content) <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Writing to a File</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                To write data to a file, you need to open it in write or append mode.
+                                Writing to a file allows you to store information, generate reports,
+                                or save program output. You can use the write() method to write data to a file.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                The mode determines how the file is opened and whether it is read, written, or both.
+                                Some common modes include:
+                            </p>
+
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Here's an example of writing to a file:
+                            </p>
+                            <p
+                                style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+                                file = open("output.txt", "w") <br>
+                                file.write("This is some sample text.") <br>
+                                file.close() <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Closing a File</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                After you have finished working with a file, it's important to close it.
+                                Closing a file ensures that all the data is saved and the system resources
+                                associated with the file are released. You can close a file using the close() method.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Here's an example of closing to a file:
+                            </p>
+                            <p
+                                style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+                                file.close()
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Alternatively, you can use the with statement to automatically close the file when you
+                                are done:
+                            </p>
+                            <p style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+                                with open("example.txt", "r") as file: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;content = file.read() <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print(content) <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Handling Exceptions</b></div>
+                        <div class="card-body" style="background-color: rgb(255, 239, 209)">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                When working with files, it's crucial to handle potential errors that may occur,
+                                such as a file not being found or a file being read-only.
+                                Python's exception handling mechanism allows you to catch and handle these errors
+                                gracefully.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Here's an example
+                            </p>
+                            <p style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+                                try: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;file = open("example.txt", "r") <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;content = file.read() <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print(content) <br>
+
+                                except FileNotFoundError: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print("File not found.") <br>
+
+                                except IOError: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print("Error reading the file.") <br>
+
+                                finally: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;file.close() <br>
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Exception handling ensures that even if an error occurs, your program won't crash,
+                                 and you can provide appropriate feedback or take necessary actions.
+                            </p>
+                            <p>
+                                This introduction covers the basics of file handling in Python.
+                                 By understanding these concepts and exploring further,
+                                  you can work with files effectively and accomplish a wide range of tasks,
+                                   from reading and writing to more advanced file manipulations and data processing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <h1>Animation video coming soon...</h1>
+    </div>
+</div>

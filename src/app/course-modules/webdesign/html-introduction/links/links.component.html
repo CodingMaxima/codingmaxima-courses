@@ -1,0 +1,200 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Links And Buttons</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Links">Links</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Buttons">Buttons</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='four')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="content-text">
+                <p>
+                    In <b>HTML</b>, links are created using the &lt;a&gt; (anchor) element. 
+                </p>
+                <p>
+                    They allow you to navigate from one webpage to another or to different sections within the same page.
+                </p>
+                <p>
+                    <b>Here's the basic structure of an HTML link:</b>
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 25px;width:45%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;a href="URL"&gt;Link Text&lt;/a&gt;</code>
+                </div><br>
+                <p>
+                    <b>Explanation of the components:</b>
+                    <li><strong>&lt;a&gt;</strong>: This is the anchor element used to create a link.</li>
+                    <li><strong>href="URL"</strong>: The <strong>href</strong> attribute specifies the URL (Uniform Resource Locator) of the destination. It can be a web address, a path to a file, or an identifier within the same page.</li>
+                    <li><strong>Link Text</strong>: This is the visible text or content of the link that users will see and click on.</li>
+
+                </p>
+            </div>
+              <div class="content-text">
+                <p>
+                    <strong><u>External Link :</u></strong>
+                </p>
+                <p>
+                    Creating a link to an external website:
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:80%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;</code>
+                </div><br>
+              </div>
+              <div class="content-text">
+                <p>
+                    <strong><u>Internal Link :</u></strong>
+                </p>
+                <p>
+                    Linking to another page within the same website:
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:50%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;a href="about.html"&gt;About Us&lt;/a&gt;</code>
+                </div><br>
+              </div>
+              <div class="content-text">
+                <p>
+                    <strong><u>Linking to a Section within the Same Page :</u></strong>
+                </p>
+                <p>
+                    Creating a link to a specific section within the same page using an anchor ID:
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:60%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;a href="#section-id"&gt;Go to Section&lt;/a&gt;<br>
+                    <p>
+                        &lt;section id="section-id"&gt;<br>
+
+                        &lt;/section&gt;
+                    </p></code>
+                </div><br>
+              </div>
+              <div class="content-text">
+                <p>
+                    <strong><u>Linking to an Email Address :</u></strong>
+                </p>
+                <p>
+                    Creating a link to send an email:
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:60%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;mailto:email@example.com"&gt;Send Email&lt;/a&gt;</code>
+                </div><br>
+              </div>
+              <div class="content-text">
+                <p>
+                    <strong><u>Linking to a File :</u></strong>
+                </p>
+                <p>
+                    Linking to a downloadable file (e.g., PDF, image, etc.):
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:60%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;path/to/your/file.pdf"&gt;Download PDF&lt;/a&gt;</code>
+                </div><br>
+              </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="content-text">
+                <p>
+                    In <b>HTML</b>, buttons are interactive elements that allow users to trigger an action when clicked or activated. 
+                </p>
+                <p>
+                    They enable users to interact with web pages, submit forms, or perform specific tasks when interacting with a website or application.
+                </p>
+            </div>
+            <div class="content-text">
+                <p>
+                    <b>There are different types of buttons in HTML, such as:</b>
+                </p>
+                <p>
+                    <b>1.</b><u><b>&lt;button&gt;</b>element:</u>
+                </p>
+                <p>
+                    The &lt;button&gt; element is a versatile way to create a button. It can contain text, images, or other HTML elements and can be styled using CSS. 
+                </p>
+                <p>
+                    It can contain text, images, or other HTML elements and can be styled using CSS. 
+                </p>
+                <p>
+                    <b>For example:</b> 
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:50%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;button&gt;Click me&lt;/button&gt;</code>
+                </div><br>
+                <p>
+                    <b>2.</b><u><b>&lt;input&gt;</b>element with type="button":</u>
+                </p>
+                <p>
+                    This creates a button using the &lt;input&gt; element and specifies the type as "button".
+                </p>
+                <p>
+                    It is a self-closing tag and does not contain any inner content.
+                </p>
+                <p>
+                    <b>For example:</b> 
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:50%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;input type="button" value="Click me"&gt;</code>
+                </div><br>
+                <p>
+                    <b>3.</b><u><b>&lt;input&gt;</b>element with type="submit":</u>
+                </p>
+                <p>
+                    This type of input element creates a button that submits a form when clicked.
+                </p>
+                <p>
+                    It's commonly used within HTML forms to trigger form submission. 
+                </p>
+                <p>
+                    <b>For example:</b> 
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:50%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;form action="/submit" method="post"&gt;<br>
+                        <ul>&lt;input type="submit" value="Submit"&gt;</ul>
+                        &lt;/form"&gt;
+                    </code>
+                </div><br>
+                <p>
+                    <b>4.</b><u><b>&lt;input&gt;</b>element with type="reset":</u>
+                </p>
+                <p>
+                    This input element creates a button that resets the form to its initial state.
+                </p>
+                <p>
+                    Clicking this button clears all the form fields. 
+                </p>
+                <p>
+                    <b>For example:</b> 
+                </p>
+                <div
+                    style="border: 1px solid rgb(243, 164, 7);padding: 5px;width:50%;margin-left: 6%;border-radius: 15px;background-color: rgb(239, 245, 246)">
+                    <code>&lt;form id="myForm"&gt;<br>
+                        <ul>&lt;input type="reset" value="Reset"&gt;</ul>
+                        &lt;/form"&gt;
+                    </code>
+                </div><br>
+            </div>
+        </div>
+
+</div>
+<div *ngIf="elementId=='three'">
+    <div class="tab-title tab-slide-effect">
+        <div class="card-body">
+            <app-video-cmp [url]="">
+        </app-video-cmp>
+        </div>
+    </div>
+</div>

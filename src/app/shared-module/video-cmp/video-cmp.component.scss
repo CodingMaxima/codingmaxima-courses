@@ -1,0 +1,102 @@
+.cmpbody {
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #8989ba 0%, #a7a6cb 52%, #a7a6cb 100%);
+}
+
+.spdbtn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: inset 0 13px 25px rgba(255, 255, 255, 0.5), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 13px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 10px 1rem;
+    padding: 1.5rem 1.5rem;
+    position: relative;
+    transition: all ease .3s;
+}
+
+.spdbtn:before {
+    background: linear-gradient(rgb(254, 250, 250) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    content: '';
+    height: 60px;
+    left: 4%;
+    position: absolute;
+    top: 1px;
+    transition: all ease .3s;
+    width: 92%;
+}
+
+.spdbtn:hover {
+    box-shadow: inset 0 13px 25px rgba(255, 255, 255, 0.8), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 13px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.activespeed {
+    background: #0036f9;
+    border-color: #0e00ff;
+    color: #ffffff;
+}
+
+.inactivespeed {
+    background: #6da7fd;
+    border-color: #464158;
+    border-width: 2px;
+    color: #090909;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.lanbtn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    border: 1px solid #ccc;
+    border-radius: 125px;
+    box-shadow: inset 0 13px 25px rgba(255, 255, 255, 0.5), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 13px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 10px 1rem;
+    padding: 1.1rem 2rem;
+    position: relative;
+    transition: all ease .3s;
+}
+
+.lanbtn:before {
+    background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: '';
+    height: 50px;
+    left: 4%;
+    position: absolute;
+    top: 1px;
+    transition: all ease .3s;
+    width: 92%;
+}
+
+.lanbtn:hover {
+    box-shadow: inset 0 13px 25px rgba(255, 255, 255, 0.8), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 13px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.confirm {
+    background: #ff0146;
+    border-color: #b63636;
+    color: #fff;
+}
+
+.cancel {
+    background: #fcb4b4;
+    border-color: #880202;
+    color: #1e0000;
+}

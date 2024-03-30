@@ -1,0 +1,222 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Question-7</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <p class="block">
+        Here the problem is to print the n even numbers using loops.
+      </p>
+      <p class="block">
+        <li>
+          From the above given problem we have to print the n even numbers using
+          the loops.
+        </li>
+        <li>Here Is the explanation of the problem using the for loop</li>
+        <li>
+          lets take n value as 3. Here the n value represents the number of even
+          numbers which we want to print.
+        </li>
+        <li>
+          for tracking how many even numbers which we required have be printed
+          lets take the count variable initial it with 0.
+        </li>
+        <li>
+          Step-1: Lets iterate the for loop with the initializer value as 1
+          because the numbers starts from one, by taking the condition as count
+          variable is &lt; n variable because every time count variable will
+          increase whenever the condition becomes true until it reaches equal
+          with the n variable and in each iteration i value will be incremented
+          by 1
+        </li>
+        <li>
+          Step-2: Inside the for loop if condition has to be written (i % 2 ==
+          0). by this condition if i value is divisible by 2 and gives the
+          remainder 0 then the condition becomes true. and increases the count
+        </li>
+        <li>
+          Step-3: now iterate the loop i value is 1 and count value is 0 the n
+          value is 3. 0 is less than 3 the condition was true . now the
+          condition enters into the next condition 1 % 2 == 0 . this condition
+          fails so loop will stop iteration. now i value will increased to 2
+        </li>
+        <li>
+          Step-4: Now the i value is 2 , count is 0, n value is 3. 0 is less
+          than 3 the condition was true . Now it enters into the condition 2 % 2
+          == 0 . This condition was true the count value beomes 1.now i value
+          becomes 3
+        </li>
+        <li>
+          Step-5: Now the i value is 3, count is 1, n value is 3. 1 is less than
+          3 the condition was true. Now it enters into the next conditon 3 % 2
+          == 0. This condition was false the count value remains same as 1. now
+          i value becomes 4.
+        </li>
+        <li>
+          Step-6: Now the i value is 4 , count is 1, n value is 3. 1 is less
+          than 3 the condition was true. Now it enters into the next condition 4
+          % 2 == 0. This condition was true so the count will be increased to 2.
+          now the i value becomes 5.
+        </li>
+        <li>
+          Step-7: Now the i value is 5 , count is 2, n value is 3. 2 is less
+          than 3 the condition was true. Now it enters into the next condition 5
+          % 2 == 0. This condition was false so the count value remains same as
+          2. Now the i value becomes 6.
+        </li>
+        <li>
+          Step-8: Now the i value is 6, count is 2, n value is 3. 2 is less than
+          3 the condition was true. Now it enters into the next condition 6 % 2
+          == 0. This condition was true so the count will be increased to 3. now
+          the i value becomes 7.
+        </li>
+        <li>
+          Step-9: Now the i value is 7, count is 3, n value is 3. 3 is less than
+          3 the condition is false so the loop will terminates and program ends
+          here.
+        </li>
+      </p>
+
+      <div style="padding-top: 15px" class="text-center">
+        <button class="btn btn-primary btn-lg">test Cases</button>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-1</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">n = 10</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">2 4 6 8 10 12 14 16 18 20</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-2</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">n = 6</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">2 4 6 8 10 12</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-3</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">n = 30</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">
+              2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46
+              48 50 52 54 56 58 60
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-4</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">n = 9</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">2 4 6 8 10 12 14 16 18</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-5</b></div>
+          <div class="card-body" style="background-color: rgb(252, 227, 231)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">n = 17</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">
+              2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34
+            </p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-6</b></div>
+          <div class="card-body" style="background-color: rgb(229, 253, 253)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">n = 13</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">2 4 6 8 10 12 14 16 18 20 22 24 26</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/loops/que7_using_for.jpg"
+        alt="program"
+      />
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="card-body">
+      <app-video-cmp [audioData]="audioData" [url]="''"></app-video-cmp>
+    </div>
+  </div>
+  <div *ngIf="elementId == 'four'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="card card-body">
+    <h3 class="global-component-heading"> Interceptors </h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill">Interceptors in Hibernate</span>
+    </div>
+  
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+  
+            <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                <div class="text-center">
+  
+                    <p>
+                        As you have learnt that in Hibernate, an
+                        object will be created and persisted. Once the object has been changed, it
+                        must be saved back to the database. This process continues until the next
+                        time the object is needed, and it will be loaded from the persistent store.
+                        Thus an object passes through different stages in its life cycle and Interceptor
+                        Interface provides methods, which can be called at different stages to
+                        perform some required tasks. These methods are callbacks from the session
+                        to the application, allowing the application to inspect and/or manipulate
+                        properties of a persistent object before it is saved, updated, deleted or
+                        loaded. Following is the list of all the methods available within the
+                        Interceptor interface
+  
+                    </p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr.No.</th>
+                                <th>Method & Description</th>
+
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>findDirty()<br>
+                                This method is be called when the flush() method is called on a Session
+                                object</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>instantiate()<br>
+                                This method is called when a persisted class is instantiated. </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>isUnsaved()<br>
+                                This method is called when an object is passed to the saveOrUpdate()
+                                method/
+                                 </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>onDelete()<br>
+                                This method is called before an object is deleted.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>onFlushDirty()<br>
+                                This method is called when Hibernate detects that an object is dirty (i.e.
+                                have been changed) during a flush i.e. update operation.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>onLoad()<br>
+                                This method is called before an object is initialized.
+                    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>onSave()<br>
+                                This method is called before an object is saved.
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>postFlush()<br>
+                                This method is called after a flush has occurred and an object has been
+                                updated in memory.
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>preFlush()<br>
+                                This method is called before a flush</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

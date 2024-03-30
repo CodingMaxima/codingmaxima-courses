@@ -1,0 +1,223 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Swap of Two Numbers</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Program"
+      >Program</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation Video</span
+    >
+    <span
+      class="global-tab-pill"
+      id="four"
+      [ngClass]="elementId == 'four' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Test Cases"
+      >Test Cases</span
+    >
+    <span
+      class="global-tab-pill"
+      id="five"
+      [ngClass]="elementId == 'five' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Practice"
+      >Practice</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning" style="border: 2px solid">
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-block">
+          Swapping two numbers with variables involves exchanging their values
+          so that the original value of one variable is stored in the other, and
+          vice versa. This can be achieved by using a temporary variable as a
+          placeholder to temporarily hold the value of one variable while the
+          swap is being performed.
+        </button>
+        <button type="button" class="btn btn-lg btn-block">
+          <b>Swap Explanation:</b>
+          <ol>
+            <li>
+              Initially, we have two variables, let's call them
+              <code>a</code> and <code>b</code>, each containing their
+              respective values.
+            </li>
+            <li>
+              To preserve the original value of <code>a</code>, we assign it to
+              a temporary variable, let's call it <code>temp</code>. This step
+              ensures that the value of <code>a</code> is not lost during the
+              swapping process.
+            </li>
+            <pre><code>temp = a;</code></pre>
+            <li>
+              We assign the value of <code>b</code> to <code>a</code>,
+              effectively swapping the value of <code>b</code> into
+              <code>a</code>.
+            </li>
+            <pre><code>a = b;</code></pre>
+            <li>
+              Finally, we assign the value stored in <code>temp</code> (which
+              was the original value of <code>a</code>) back to <code>b</code>,
+              completing the swap.
+            </li>
+            <pre><code>b = temp;</code></pre>
+            <li>
+              After these steps, the values of the variables <code>a</code> and
+              <code>b</code> have been successfully swapped.
+            </li>
+          </ol>
+        </button>
+
+        <button type="button" class="btn btn-lg btn-block">
+          It's important to note that this swapping technique works for
+          variables of any type, not just numbers. The same logic can be applied
+          to swap values between variables of different types, such as strings,
+          booleans, or other data types.
+        </button>
+    </div>
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Example-1</b></div>
+            <div class="card-body" style="background-color: rgb(255, 239, 209)">
+              <p class="card-subtitle mb-2 text-muted">Before Swap</p>
+              <p class="card-text">Enter a value</p>
+              <p style="margin-top: -20px" class="card-text">60</p>
+              <p class="card-text">Enter b value</p>
+              <p style="margin-top: -20px" class="card-text">22</p>
+              <p class="card-subtitle mb-2 text-muted">After Swap</p>
+              <p class="card-text">a value: 22<br />b value: 60</p>
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Example-2</b></div>
+            <div class="card-body" style="background-color: rgb(229, 253, 253)">
+              <p class="card-subtitle mb-2 text-muted">Before Swap</p>
+              <p class="card-text">Enter a value</p>
+              <p style="margin-top: -20px" class="card-text">18</p>
+              <p class="card-text">Enter b value</p>
+              <p style="margin-top: -20px" class="card-text">45</p>
+              <p class="card-subtitle mb-2 text-muted">After Swap</p>
+              <p class="card-text">a value: 45<br />b value: 18</p>
+            </div>
+          </div>
+          <div
+            class="card border-primary"
+            style="border: 2px solid; margin: 10px; font-size: large"
+          >
+            <div class="card-header text-center"><b>Example-3</b></div>
+            <div class="card-body" style="background-color: rgb(252, 227, 231)">
+              <p class="card-subtitle mb-2 text-muted">Before Swap</p>
+              <p class="card-text">Enter a value</p>
+              <p style="margin-top: -20px" class="card-text">99</p>
+              <p class="card-text">Enter b value</p>
+              <p style="margin-top: -20px" class="card-text">50</p>
+              <p class="card-subtitle mb-2 text-muted">After Swap</p>
+              <p class="card-text">a value: 50<br />b value: 99</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ending of examples-->
+      
+    </div>
+  </div><!-- Ending of problem statement card body-->
+
+  <div *ngIf="elementId == 'two'">
+    <div class="card-body border-warning" style="border: 2px solid">
+      <img
+        class="program-img-fit"
+        src="assets/img/corejava/basic/swaptwonumbers.JPG"
+        alt="program"
+      />
+    </div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div
+      class="card-body"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'four'">
+ <!-- Starting of test cases -->
+    <div class="card-body card-group">
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px; font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-1</b></div>
+          <div class="card-body" style="background-color: rgb(255, 239, 209)">
+            <p class="card-subtitle mb-2 text-muted">Input</p>
+            <p class="card-text">60 22</p>
+            <p class="card-subtitle mb-2 text-muted">Output</p>
+            <p class="card-text">22 60</p>
+          </div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px;font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-2</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(229, 253, 253)"
+          >
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">18 45</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">45 18</p></div>
+        </div>
+        <div
+          class="card border-primary"
+          style="border: 2px solid; margin: 10px;font-size: large"
+        >
+          <div class="card-header text-center"><b>Test Case-3</b></div>
+          <div
+            class="card-body"
+            style="background-color: rgb(252, 227, 231)"
+          >
+          <p class="card-subtitle mb-2 text-muted">Input</p>
+          <p class="card-text">99 50</p>
+          <p class="card-subtitle mb-2 text-muted">Output</p>
+          <p class="card-text">50 99</p></div>
+        </div>
+      </div>  <!--end of test cases-->
+  
+  </div>
+  <div *ngIf="elementId == 'five'">
+    <div class="card-body">
+      <app-compiler-cmp
+        [problemId]="'addtion'"
+        [languageId]="'JAVA8'"
+      ></app-compiler-cmp>
+    </div>
+  </div>
+</div>

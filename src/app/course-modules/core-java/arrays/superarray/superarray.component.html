@@ -1,0 +1,151 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Super Array or Not</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+    <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="tabChange($event)"
+      data-hover="Animation Video">Animation Video</span>
+    <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="tabChange($event)"
+      data-hover="Test Cases">Test Cases</span>
+    <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="tabChange($event)"
+      data-hover="Practice">Practice</span>
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card border-warning" style="border: 2px solid;">
+        <div class="card" style="margin: 5px;">
+          <div class="card-body" style="font-family: 'Inter', sans-serif;">
+            <pre>
+ri this program we are finding that the given array is super array r not by reading the inputs (mention the size of the inputs) and by taking any random number.
+if the addition of any two numbers in the array is equal to the random number then print the array is super array or not an super array.
+
+INPUT:
+size -- 5
+enter random number -- 14
+values in the array
+2 3 6 8 9
+here if we add any two numbers then the answer should be equal to the random number 14 then print super array else not a super array.
+2+3 = 5   --false
+2+6 = 8   --false
+2+8 = 10  --false
+2+9 = 11  --false
+3+6 = 9   --false
+3+8 = 11  --false
+3+9 = 12  --false
+6+8 = 14  --true
+break the loop and print it is a super array.
+
+OUTPUT:
+SUPER ARRAY
+              </pre>
+
+          </div>
+        </div>
+
+        <!-- Starting of examples-->
+        <div class="card-group">
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 1</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Array = {{ '{' }}2, 4, 2, 5, 6, 10, 4{{ '}' }}</p>
+              <p style="margin-top: -20px;" class="card-text">Number = 15</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Array is a super array</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center "><b>Example - 2</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Array = {{ '{' }}15, 22, 15, 29, 22, 29{{ '}' }}</p>
+              <p style="margin-top: -20px;" class="card-text">Number = 30</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Array is a super array</p>
+            </div>
+          </div>
+
+          <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+            <div class="card-header text-center"><b>Example - 3</b></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+              <p class="card-text">Array = {{ '{' }}71, 71, 22, 22, 22, 22, 22, 85{{ '}' }}</p>
+              <p style="margin-top: -20px;" class="card-text">Number = 30</p>
+              <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+              <p class="card-text">Array is not a super array</p>
+            </div>
+          </div>
+        </div> <!-- Ending of examples-->
+      </div>
+    </div><!-- Ending of problem statement card body-->
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <img class="program-img-fit" src="assets/img/corejava/arrays/super.JPG" alt="program">
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='three'">
+    <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='four'">
+    <div class="card-body">
+      <!-- Starting of test cases -->
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 1</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">7</p>
+            <p class="card-text">2 4 2 5 6 10 4</p>
+            <p class="card-text">15</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Super Array</p>
+
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 2</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">6</p>
+            <p class="card-text">15 22 15 29 22 29</p>
+            <p class="card-text">30</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text">Super Array</p>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center font-weight-bold">TestCase - 3</div>
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Input</h6>
+            <p class="card-text">8</p>
+            <p class="card-text">71 71 22 22 22 22 22 85</p>
+            <p class="card-text">30</p>
+            <h6 class="card-subtitle mb-2 text-muted">Output</h6>
+            <p class="card-text"> Not a Super Array</p>
+          </div>
+        </div>
+      </div> <!-- Ending of test cases -->
+    </div>
+  </div>
+
+  <div *ngIf="elementId=='five'">
+    <div class="card-body">
+      <app-compiler-cmp [problemId]="'addtion'" [languageId]="'JAVA8'"></app-compiler-cmp>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,441 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Operators</h3>
+    <div class="card border-warning" style="border: 2px solid;">
+    <p>
+        Operators in Python are special symbols or keywords used to perform specific operations on one or more values (operands). 
+        They enable various computations, comparisons, and manipulations within a program. <br><b>Python supports several types of operators:</b>
+    </p>
+    </div>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Arithmetic">Arithmetic</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="Assignment">Assignment</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+            data-hover="Comparision">Comparision</span>
+        <span class="global-tab-pill" id="four" [ngClass]="(elementId=='four')?'active':''" (click)="mainTab($event)"
+            data-hover="Logical">Logical</span>
+        <span class="global-tab-pill" id="five" [ngClass]="(elementId=='five')?'active':''" (click)="mainTab($event)"
+            data-hover="Identity">Identity</span>
+        <span class="global-tab-pill" id="six" [ngClass]="(elementId=='six')?'active':''" (click)="mainTab($event)"
+            data-hover="Membership">Membership</span>
+    </div>
+    <div class="card border-warning" style="border: 2px solid;">
+    <div *ngIf="elementId=='one'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        </div>
+        <div *ngIf="elementId2=='introduction'">
+                <section>
+                    <div class="arithmetic">
+                        <p>
+                            <b>Arithmetic Operators</b> in Python revolves around their functionality in performing various 
+                            mathematical operations on numeric values. These operators abide by standard mathematical rules.
+                        </p>
+                    </div>
+                </section>
+                <section class="operations">
+                    <div class="row">
+                        <div class="course-col">
+                            <h3>1.Addition (+)</h3>
+                            <ul>
+                                <li>Adds two operands together.</li>
+                                <li>If both operands are numbers, it performs addition.</li>
+                                <li>f one or both operands are strings, it concatenates them.</li>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>2.Subtraction (-)</h3>
+                            <ul>
+                                <li>Subtracts the right operand from the left operand.</li>
+                                <li>If used with numeric values, it performs subtraction.</li>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>3.Multiplication (*)</h3>
+                            <ul>
+                                <li>Multiplies two operands.</li>
+                                <li>When used with numbers, it performs multiplication.</li>
+                                <li>If used with strings and a numeric value (e.g., 'a' * 3), it repeats the string the specified number of times.</li>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>4.Division (/)</h3>
+                            <ul>
+                                <li>Divides the left operand by the right operand.</li>
+                                <li>Always returns a floating-point number, even if the division has no remainder.</li>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>5.Modulo (%)</h3>
+                            <ul>
+                                <li>Returns the remainder of the division of the left operand by the right operand.</li>
+                                <li>Useful for determining divisibility or extracting remainders.</li>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>6.Exponential (**)</h3>
+                            <ul>
+                                <li>Raises the left operand to the power of the right operand.</li>
+                                <li>Computes exponential values.</li>
+                            </ul>
+                        </div>
+                        <div class="course-col1">
+                            <h3>7.Floor Division (//)</h3>
+                            <ul>
+                                <li>Returns the quotient of the division, rounded down to the nearest whole number.</li>
+                                <li>Ignores the decimal part of the result.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <img class="img-thumbnail" src="assets/img/python/operators/arithmetic.jpg" />               
+        </div>
+
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/operators/arithmetic_prblm.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card-body">
+                <section>
+                    <div class="arithmetic">
+                        <p>
+                            <b>Assignment operators</b> in Python are used to assign values to variables. 
+                            They provide a shorthand way to perform an operation on a variable and assign the result back to the same variable. 
+                            The basic assignment operator in Python is the equals sign =.
+                        </p>
+                    </div>
+                </section>
+                <section class="assignment-operations">
+                    <div class="row1">
+                        <div class="course-col">
+                            <h3>1.Basic Assignment (=)</h3>
+                            <ul>
+                                Assigns the value on the right-hand side to the variable on the left-hand side. <br>
+                                <b>Example:</b> x = 5 assigns the value 5 to the variable x.
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>2.Compound Assignment Operators</h3>
+                            <ul>
+                                These operators combine arithmetic or bitwise operations with assignment. <br>
+                                They perform an operation between the left-hand side variable and the right-hand side value, and then assign the result to the left-hand side variable.<br>
+
+                                <b>For example:</b><br>
+                                    += adds the right operand to the left operand and assigns the result to the left operand.<br>
+                                    -= subtracts the right operand from the left operand and assigns the result to the left operand.<br>
+                                    *= multiplies the left operand by the right operand and assigns the result to the left operand.<br>
+                                    /= divides the left operand by the right operand and assigns the result to the left operand.<br>
+                                    %= performs modulo and assigns the remainder to the left operand. <br>
+                                    //= performs floor division and assigns the quotient to the left operand. <br>
+                                    **= raises the left operand to the power of the right operand and assigns the result to the left operand.<br>
+                                    &=, |= perform bitwise AND and OR operations, respectively, and assign the result to the left operand.<br>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <img class="img-thumbnail" src="assets/img/python/operators/assignment.JPG" />
+
+            </div><!-- Ending of problem statement card body-->
+        </div>
+
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/operators/assignment_prblm.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='three'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card-body">
+                <section>
+                    <div class="arithmetic">
+                        <p>
+                            <b>Comparison Operators</b> in Python are used to compare two values or operands. 
+                            These operators evaluate the relationship between the operands and return a 
+                            Boolean value (True or False) based on the comparison result.
+                        </p>
+                    </div>
+                </section>
+                <section class="comparision-operations">
+                    <div class="row1">
+                        <div class="course-col">
+                            <h3>Equal to (==)</h3>
+                            <ul>
+                                Checks if the left operand is equal to the right operand.<br>
+                                Example: 5 == 5 evaluates to True.
+                            </ul>
+                            <h3>Not equal to (!=)</h3>
+                            <ul>
+                                Checks if the left operand is not equal to the right operand.<br>
+                                <b>Example:</b> 5 != 3 evaluates to True.
+                            </ul>
+                            <h3>Greater than (>)</h3>
+                            <ul>
+                                Checks if the left operand is greater than the right operand.<br>
+                                <b>Example:</b> 7 > 4 evaluates to True.
+                            </ul>
+                            <h3>Less than (<)</h3>
+                            <ul>
+                                Checks if the left operand is less than the right operand.<br>
+                                <b>Example:</b> 2 < 6 evaluates to True.
+                            </ul>
+                            <h3>Greater than or equal to (>=)</h3>
+                            <ul>
+                                Checks if the left operand is greater than or equal to the right operand.<br>
+                                <b>Example:</b> 10 >= 10 evaluates to True.
+                            </ul>
+                            <h3>Less than or equal to (<=)</h3>
+                            <ul>
+                                Checks if the left operand is less than or equal to the right operand.<br>
+                                <b>Example:</b> 3 <= 5 evaluates to True.
+                            </ul>
+                        </div>   
+                    </div>
+                </section>
+
+                <img class="img-thumbnail" src="assets/img/python/operators/comparision.JPG" />
+
+            </div>
+            <!-- Ending of problem statement card body-->
+        </div>
+
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/operators/comparision_prblm.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='four'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card-body">
+                <section>
+                    <div class="arithmetic">
+                        <p>
+                            <b>Logical Operators</b> in Python are used to perform logical operations on Boolean values (True or False) or expressions. 
+                            These operators allow you to combine multiple conditions and evaluate them to produce a single Boolean result.
+                        </p>
+                    </div>
+                </section>
+                <section class="assignment-operations">
+                    <div class="row1">
+                        <div class="course-col">
+                            <h3>1.Logical AND (and)</h3>
+                            <ul>
+                                Returns 'True' if both operands or expressions on either side of the operator are 'True'.<br>
+                                If any operand is 'False', the result is 'False'.<br>
+                                <b>Example:</b> 'True and True' evaluates to 'True', while 'True and False' evaluates to 'False'.
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>2.Logical OR (or)</h3>
+                            <ul>
+                                Returns 'True' if at least one of the operands or expressions on either side of the operator is 'True'.<br>
+                                If both operands are 'False', the result is 'False'. <br>
+                                <b>Example:</b> 'True or False' evaluates to 'True', while 'False or False' evaluates to 'False'.
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>3.Logical NOT (not)</h3>
+                            <ul>
+                                Reverses the logical state of its operand<br>
+                                If the operand is 'True', not makes it 'False'. If the operand is 'False', 'not' makes it 'True'. <br>
+                                <b>Example:</b>'not True' evaluates to 'False', while 'not False' evaluates to 'True'.
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <img class="img-thumbnail" src="assets/img/python/operators/logical.JPG" />
+
+            </div><!-- Ending of problem statement card body-->
+        </div>
+
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/operators/logical_prblm.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='five'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card-body">
+                <section>
+                    <div class="arithmetic">
+                        <p>
+                            <b>Identity Operators</b> are used to compare the memory locations of two objects to determine 
+                            if they are referencing the same object in memory. 
+                            These operators are used with objects such as variables, lists, dictionaries, etc.
+                        </p>
+                    </div>
+                </section>
+                <section class="assignment-operations">
+                    <div class="row1">
+                        <div class="course-col">
+                            <h3>1.is Operator</h3>
+                            <ul>
+                                The 'is' operator checks if two operands refer to the same object in memory.<br>
+                                It returns 'True' if the operands point to the same object, otherwise 'False.'<br>
+                                <b>Example:</b> <br>
+                                <ul>
+                                    x = [1, 2, 3]<br>
+                                    y = [1, 2, 3]<br>
+                                    z = x<br>
+                                    <br>
+                                    print(x is y)  # Output: False (Different memory locations)<br>
+                                    print(x is z)  # Output: True (Both x and z point to the same object)
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>2.is not Operator</h3>
+                            <ul>
+                                The 'is not' operator checks if two operands do not refer to the same object in memory.<br>
+                                It returns 'True' if the operands do not point to the same object, otherwise 'False'.<br>
+                                <b>Example:</b> <br>
+                                <ul>
+                                    a = "Hello"<br>
+                                    b = "Hello"<br>
+                                    <br>
+                                    print(a is not b)  # Output: True (Different memory locations even though the values are the same)
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <img class="img-thumbnail" src="assets/img/python/operators/identity.jpg" />
+
+            </div><!-- Ending of problem statement card body-->
+        </div>
+
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/operators/identity_prblm.jpg" alt="program">
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='six'">
+        <div class="tab-title tab-slide-effect">
+            <span class="tab-pill" id="introduction" [ngClass]="(elementId2=='introduction')?'active':''"
+                (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="tab-pill" id="problem" [ngClass]="(elementId2=='problem')?'active':''"
+                (click)="tabChange($event)" data-hover="Problem">Problem</span>
+            <span class="tab-pill" id="animation" [ngClass]="(elementId2=='animation')?'active':''"
+                (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+        </div>
+
+        <div *ngIf="elementId2=='introduction'">
+            <div class="card-body">
+                <section>
+                    <div class="arithmetic">
+                        <p>
+                            <b>Membership Operators</b> in Python are used to test whether a value or variable is present within a sequence or collection. 
+                            These operators determine if a specified element belongs to a certain data structure like a string, list, tuple, set, or dictionary.
+                        </p>
+                    </div>
+                </section>
+                <section class="assignment-operations">
+                    <div class="row1">
+                        <div class="course-col">
+                            <h3>1.in Operator</h3>
+                            <ul>
+                                The 'in' operator checks if a value or variable exists in a sequence.<br>
+                                It returns 'True' if the value is found in the sequence, otherwise 'False'.<br>
+                                <b>Example:</b> <br>
+                                <ul>
+                                    my_list = [1, 2, 3, 4, 5]<br>
+                                    print(3 in my_list)  # Output: True (3 is present in the list)<br>
+                                    print(6 in my_list)  # Output: False (6 is not present in the list)
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="course-col">
+                            <h3>2.not in Operator</h3>
+                            <ul>
+                                The 'not in' operator checks if a value or variable does not exist in a sequence.<br>
+                                It returns 'True' if the value is not found in the sequence, otherwise 'False'.<br>
+                                <b>Example:</b> <br>
+                                <ul>
+                                    my_tuple = (10, 20, 30)<br>
+                                    print(15 not in my_tuple)  # Output: True (15 is not present in the tuple) <br>
+                                    print(20 not in my_tuple)  # Output: False (20 is present in the tuple)
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <img class="img-thumbnail" src="assets/img/python/operators/membership.jpg" />
+
+            </div><!-- Ending of problem statement card body-->
+        </div>
+
+
+        <div *ngIf="elementId2=='problem'">
+            <div class="card-body border border-warning">
+                <img class="program-img-fit" src="assets/img/python/operators/membership_prblm.jpg" alt="program">
+            </div>
+        </div>
+  </div>
+</div>
+
+
+
+</div>

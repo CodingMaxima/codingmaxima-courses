@@ -1,0 +1,304 @@
+<div class="card card-body">
+  <h3 class="global-component-heading"> Employee-Laptop(one-one relation)- Example</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Problem Statement">Problem Statement</span>
+    <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+      data-hover="Program">Program</span>
+  </div>
+
+  <div *ngIf="elementId=='one'">
+    <div class="card-body">
+      <div class="card-group">
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center"><b>Employee Class</b></div>
+          <div class="card-body">
+            <p>create a Employee Class by using below data
+            </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+
+            <ol>
+              <div class="card-body">
+                <li class="card-text"><b>emp_id - </b>make sure it should not be duplicate and should
+                  not be empty (hint:
+                  use "PRIMARY KEY CONSTRAINT")</li>
+                <li class="card-text"><b>emp_name - </b> it should not be empty (hint: use "NOT
+                  NULL CONSTRAINT")
+                </li>
+                <li class="card-text"><b>salary - </b>it should be in between greater than or
+                  equal to 5000 and less
+                  than or equal to 100000(hint: use "CHECK CONSTRAINT") </li>
+                <li class="card-text"><b>emp_joining_date - </b>keep a fixed value for it. If you
+                  doesn't want to give an
+                  value for this particular column/for auto generating of the value
+                  without giving any
+                  manual values(hint: use "DEFAULT CONSTRAINT")</li>
+              </div>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>Laptop Class</b></div>
+          <div class="card-body">
+            <p>create a Laptop Class by using below data </p>
+            <ul>
+              <li>Declare all class variables as private.</li>
+              <li>Write Defalut and parameterized constructor.</li>
+              <li>Write Setters and Getters for each private variable.</li>
+              <li>Write toString() method for the class.</li>
+            </ul>
+
+            <ol>
+              <div class="card-body">
+                <li class="card-text"><b>lap_id - </b>make sure it should not be duplicate and should
+                  not be empty (hint:
+                  use "PRIMARY KEY CONSTRAINT")</li>
+                <li class="card-text"><b>lap_name - </b>It should not be empty (hint: use "NOT
+                  NULL CONSTRAINT")
+                <li class="card-text"><b>lap_model - </b> It should not be empty (hint: use "NOT
+                  NULL CONSTRAINT")
+                </li>
+                <li class="card-text"><b>lap_warranty - </b>It is warranty end date. It should not be empty
+                  (hint: use "NOT
+                  NULL CONSTRAINT")
+                </li>
+                <li class="card-text"><b>emp_id - </b>It is connection to the employee table emp_id. (hint: use
+                  "FOREIGN KEY")
+                </li>
+              </div>
+            </ol>
+          </div>
+        </div>
+      </div> <!-- Ending of examples-->
+
+    </div>
+    <div style="padding: 10px;" class="text-center">
+      <button class="btn btn-info">Implement Following REST API Requests</button>
+    </div>
+
+    <div style="padding: 10px;" class="text-center">
+      <button class="btn btn-info">REST API Requests for Employee Class</button>
+    </div>
+
+    <!-- first group -->
+    <div class="card-group">
+        
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>@RequestMapping(value="/employee/add", method=RequestMethod.POST)</b></div>
+        <div style="background-color: rgb(229, 253, 253);" class="card-body">
+          <p><b>Signature : </b>public boolean addEmployee(@RequestBody Employee emp)</p>
+          <li>The addEmployee is a method which accepts an Employee object "emp" as request body.</li>
+          <li>Returns "true" if the Employee object does not exist.</li>
+          <li>Returns "false" if the Employee object already exists.</li>
+        </div>
+      </div>
+          
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+          <div class="card-header text-center "><b>@RequestMapping(value="/employee/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+          <div style="background-color: rgb(252, 227, 231);" class="card-body">
+            <p><b>Signature : </b>public Employee getEmployeeeById(@PathVariable int id)</p>
+            <li>The getEmployeeeById is a method which accepts an integer "id" as path variable.</li>
+            <li>Returns Employee object if exists.</li>
+            <li>Returns "null" if the Employee object does not exist.</li>
+          </div>
+      </div>
+     
+    </div> <!-- first group-->
+
+    <!-- Second group -->
+    <div class="card-group">
+        
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>@GetMapping("/employee/getAll")</b></div>
+        <div style="background-color: rgb(252, 227, 231);" class="card-body">
+          <p><b>Signature : </b>public List&lt;Employee&gt; getAllEmployees()</p>
+          <li>The getAllEmployees is a method which does not accept anything as parameter.</li>
+          <li>Returns List of all the existing Employee objects.</li>
+        </div>
+      </div>
+        
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center "><b>@PutMapping("/employee/updateName/&lbrace;id&rbrace;")</b></div>
+        <div style="background-color: rgb(229, 253, 253);" class="card-body">
+        
+          <p><b>Signature : </b>public Employee updateNameById(@PathVariable int id,@RequestBody String name)</p>
+          <li>The updateNameById is a method which accepts "id" as path variable and "name" as request body.</li>
+          <li>Returns updated Employee object if it exists.</li>
+          <li>Returns "null" if the Employee object does not exist.</li>
+
+        </div>
+      </div>
+   
+    </div> <!-- Second group-->
+
+    <!-- Third group -->
+    <div class="card-group">
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>@RequestMapping(value = "/employee/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+          <div style="background-color: rgb(229, 253, 253);" class="card-body">
+            <p><b>Signature : </b>public boolean deleteEmployee(@PathVariable int id)</p>
+            <li>The deleteEmployee is a method which accepts integer "id" as path variable.</li>
+            <li>Returns "true" and deletes if the Employee object with "id" already exists.</li>
+            <li>Returns "false" if the Employee object does not exist.</li>
+        </div>
+      </div>
+    </div>
+  <!--Third group-->
+
+
+    <div style="padding: 10px;" class="text-center">
+      <button class="btn btn-info">REST API Requests for Laptop Class</button>
+    </div>
+
+    <!-- first group -->
+    <div class="card-group">
+        
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>@RequestMapping(value="/laptop/add", method=RequestMethod.POST)</b></div>
+        <div style="background-color: rgb(229, 253, 253);" class="card-body">
+          <p><b>Signature : </b>public boolean addLaptop(@RequestBody Laptop lap)</p>
+          <li>The addLaptop is a method which accepts an Laptop object "lap" as request body.</li>
+          <li>Returns "true" if the Laptop object does not exist.</li>
+          <li>Returns "false" if the Laptop object already exists.</li>
+        </div>
+      </div>
+      
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center "><b>@RequestMapping(value="/laptop/get/&lbrace;id&rbrace;", method=RequestMethod.GET)</b></div>
+        <div style="background-color: rgb(252, 227, 231);" class="card-body">
+      
+          <p><b>Signature : </b>public Laptop getLaptopById(@PathVariable int id)</p>
+          <li>The getLaptopById is a method which accepts an integer "id" as path variable.</li>
+          <li>Returns Laptop object if exists.</li>
+          <li>Returns "null" if the Laptop object does not exist.</li>
+        </div>
+      </div>
+    </div> <!-- first group-->
+
+    <!-- Second group -->
+    <div class="card-group">
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>@GetMapping("/laptop/getAll")</b></div>
+          <div style="background-color: rgb(252, 227, 231);" class="card-body">
+          <p><b>Signature : </b>public List&lt;Laptop&gt; getAllLaptops()</p>
+          <li>The getAllLaptops is a method which does not accept anything as parameter.</li>
+          <li>Returns List of all the existing Laptop objects.</li>
+        </div>
+      </div>
+    
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center "><b>@PutMapping("/laptop/updateName/&lbrace;id&rbrace;")</b></div>
+        <div style="background-color: rgb(229, 253, 253);" class="card-body">
+    
+          <p><b>Signature : </b>public Laptop updateModelById(@PathVariable int id,@RequestBody String name)</p>
+          <li>The updateModelById is a method which accepts "id" as path variable and "name" as request body.</li>
+          <li>Returns updated Laptop object if it exists.</li>
+          <li>Returns "null" if the Laptop object does not exist.</li>
+        </div>
+      </div>
+
+    </div> <!-- Second group-->
+
+    <!-- Third group -->
+    <div class="card-group">
+
+      <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+        <div class="card-header text-center"><b>@RequestMapping(value = "/laptop/delete/&lbrace;code&rbrace;", method = RequestMethod.DELETE)</b></div>
+          <div style="background-color: rgb(229, 253, 253);" class="card-body">
+            <p><b>Signature : </b>public boolean deleteLaptop(@PathVariable int id)</p>
+            <li>The deleteLaptop is a method which accepts integer "id" as path variable.</li>
+            <li>Returns "true" and deletes if the Laptop object with "id" already exists.</li>
+            <li>Returns "false" if the Laptop object does not exist.</li>
+        </div>
+      </div>
+  </div>
+  <!--Third group-->
+
+
+  </div>
+
+  <div *ngIf="elementId=='two'">
+    <div class="card-body border border-warning">
+      <div class="tab-title tab-slide-effect">
+        <span class="tab-pill" id="pojo" [ngClass]="(elementId2=='pojo')?'active':''" (click)="subTabChange($event)"
+          data-hover="POJO(Model) Classes">POJO(Model) Class</span>
+        <span class="tab-pill" id="controller" [ngClass]="(elementId2=='controller')?'active':''"
+          (click)="subTabChange($event)" data-hover="Controller"> Controller</span>
+        <span class="tab-pill" id="service" [ngClass]="(elementId2=='service')?'active':''"
+          (click)="subTabChange($event)" data-hover="service">Service</span>
+        <span class="tab-pill" id="repository" [ngClass]="(elementId2=='repository')?'active':''"
+          (click)="subTabChange($event)" data-hover="Repository">Repository</span>
+        <span class="tab-pill" id="properties" [ngClass]="(elementId2=='properties')?'active':''"
+          (click)="subTabChange($event)" data-hover="Properties">Properties</span>
+        <span class="tab-pill" id="pom.xml" [ngClass]="(elementId2=='pom.xml')?'active':''"
+          (click)="subTabChange($event)" data-hover="Pom.Xml file">Pom.Xml file</span>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pojo'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Employee POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/onetoOne.example1.employee.pojo.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Laptop POJO Class</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/onetoOne.example1.laptop.pojo.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='controller'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Controller</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="card-group" *ngIf="elementId2=='service'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Service</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='repository'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Repository</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='properties'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">Properties</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-group" *ngIf="elementId2=='pom.xml'">
+        <div class="card">
+          <h5 class="text-center card-title animate-charcter">POM.XML file</h5>
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/hibernate/example1.pom.file.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

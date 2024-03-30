@@ -1,0 +1,111 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Hibernate Configuration</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+      data-hover="Introduction">Introduction</span>
+
+  </div>
+  <div *ngIf="elementId=='one'">
+    <div class="card border-warning" style="border: 2px solid;">
+      <div class="card-body">
+        <div class="text-center">
+          <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+            <button type="button" class="btn btn-lg btn-block">
+              Hibernate Configuration File (cfg file) is used to establish connection to the database server. </button>
+            <button type="button" class="btn btn-lg btn-block">
+              This file contains the mapping information that provides different functionalities to Java classes.
+            </button>
+            <button type="button" class="btn btn-lg btn-block">It is an XML file and the Standard name for this file is
+              hibernate. cfg. xml.</button>
+            <div style="padding: 10px;" class="text-center">
+              <button class="btn btn-info">Hibernate Properties</button>
+
+            </div>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+
+                </tr>
+              </thead>
+              <tr>
+                <td>hibernate.dialect</td>
+                <td>This property makes Hibernate generate the appropriate SQL for the chosen database.</td>
+              </tr>
+              <tr>
+                <td>
+                  hibernate.connection.driver_class</td>
+                <td>It represents the JDBC driver class. </td>
+              </tr>
+              <tr>
+                <td>hibernate.connection.url</td>
+                <td>It represents the JDBC URL. </td>
+              </tr>
+              <tr>
+                <td>hibernate.connection.username</td>
+                <td>It represents the database username.</td>
+              </tr>
+              <tr>
+                <td>hibernate.connection.password</td>
+                <td>It represents the database password.
+                </td>
+              </tr>
+              <tr>
+                <td>hibernate.hbm2ddl.auto</td>
+                <td>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> It automatically generates a
+                    schema in the database with the creation of SessionFactory.</li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> If you want to create a new
+                    schema then</li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> <b>hibernate.hbm2ddl.auto =
+                      create.</b></li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> If you want to update schema then
+                  </li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> <b>hibernate.hbm2ddl.auto =
+                      update.</b></li>
+
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>hibernate.show_sql</td>
+                <td>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> It is used to display the
+                    executed SQL statements to console.</li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> If you want to show sql commands
+                    then</li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'> <b>hibernate.show_sql = true.</b>
+                  </li>
+                  <li class='card-text' style='font-size: medium;font-style: oblique'>By default it is false.</li>
+
+
+
+                </td>
+              </tr>
+
+
+            </table>
+          </div>
+
+
+        </div>
+        <div style="padding:15px;" class="text-center">
+          <button class="btn btn-primary btn-lg">Example</button>
+
+        </div>
+      </div>
+
+
+
+      <img src="assets/img/hibernate/example1.cfg.file.png" style="width: 100%;">
+      <!--"assets/img/codingmaximahibernate/example1.cfg.file.png" -->
+
+
+    </div>
+  </div>
+
+
+
+</div>

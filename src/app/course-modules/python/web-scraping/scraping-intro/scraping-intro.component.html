@@ -1,0 +1,138 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Web Scraping Introduction</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''"
+            (click)="tabChange($event)" data-hover="Pros and Cons">Pros and Cons</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            Web scraping is a technique used to extract data from websites using automated methods.
+                            Python provides powerful libraries and tools for web scraping tasks.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            Here is an introduction to web scraping in Python.
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>What is Web Scraping?</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Web scraping is the process of extracting data from websites by automatically navigating through web pages,
+                                retrieving specific information, and saving it for further analysis or use.
+                                With Python, you can write code to interact with websites, parse HTML content, and extract the desired data.
+                            </p>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Web scraping is widely used for various purposes, such as:
+                            </p>
+                            <ul>
+                                <li>Gathering data from e-commerce websites for price comparison or market research.</li>
+                                <li>Collecting real estate listings for analysis or monitoring.</li>
+                                <li>Extracting social media data for sentiment analysis or trend identification.</li>
+                                <li>Aggregating news articles or blog posts for content analysis or data mining.</li>
+                            </ul>
+                            <p style='font-size: medium; font-style: oblique;font-weight: 700;'>
+                                Python provides libraries like BeautifulSoup and Scrapy that simplify web scraping tasks and offer
+                                powerful features to handle HTML parsing, data extraction, and web navigation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;">
+                            <b>
+                                Uses and Applications
+                            </b>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <h5>Data Collection:</h5>
+                            <ul>
+                                <li>Web scraping allows you to gather data from various online sources, such as e-commerce websites, social media platforms, news websites, and government databases.</li>
+                                <li>This data can be used for research, market analysis, price comparison, sentiment analysis, and more.</li>    
+                            </ul>
+                            <h5>Content Aggregation:</h5>
+                            <ul>
+                                <li>Web scraping is often employed to aggregate content from different websites and create comprehensive directories, search engines, or comparison websites. </li>    
+                                <li>This can be useful for gathering information on products, events, jobs, or any other type of content available on the web.</li>
+                            </ul>
+                            <h5>Monitoring and Tracking:</h5>
+                            <ul>
+                                <li>Web scraping enables you to monitor websites for changes in data.</li>
+                                <li>For example, you can track prices of products on an e-commerce site, monitor stock availability, or analyze user reviews and ratings.</li>
+                                <li>This information can help businesses make informed decisions and stay competitive.</li>
+                            </ul>
+                            <h5>Market Research:</h5>
+                            <ul>
+                                <li>Scraping data from social media platforms and online forums can provide valuable insights into consumer opinions, trends, and preferences.</li>
+                                <li>This information can be used for market research, brand monitoring, sentiment analysis, and identifying customer needs and preferences.</li>
+                            </ul>
+                            <h5>Lead Generation:</h5>
+                            <ul>
+                                <li>Web scraping can assist in lead generation by extracting contact information from websites, directories, or social media platforms</li>
+                                <li>This data can be used to build marketing lists, generate sales leads, or for recruitment purposes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;">
+                            <b>
+                                Pros and Cons of Web Scraping
+                            </b>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <h5>Pros:</h5>
+                            <ul>
+                                <li>Automation: Web scraping automates the data extraction process, saving time and effort compared to manual methods.</li>
+                                <li>Data Collection: Web scraping allows you to gather data from various online sources, such as e-commerce websites, social media platforms, news websites, and government databases.</li>
+                                <li>Content Aggregation: Web scraping is often employed to aggregate content from different websites and create comprehensive directories, search engines, or comparison websites.</li>
+                            </ul>
+                            <h5>Cons:</h5>
+                            <ul>
+                                <li>Legal and Ethical Considerations: Web scraping should be done in compliance with website terms of service and legal regulations. Unauthorized scraping or excessive requests can lead to legal issues or website blocking.</li>
+                                <li>Data Quality and Reliability: Websites may change their structure or content, which can break scraping scripts. Data obtained from web scraping may also require cleaning and validation.</li>
+                                <li>Rate Limiting and IP Blocking: Websites may implement measures to limit or block scraping activities to protect their resources. Scraping too aggressively or from a single IP address can result in restrictions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center" style="font-size: 25px;"><b>Pros</b></div>
+              <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                <ul>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Automation:</b> Web scraping automates the data extraction process, saving time and effort compared to manual data collection methods.</li>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Data Accuracy:</b> With web scraping, you can ensure consistent and accurate data retrieval by specifying the exact information you need.</li>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Scalability:</b> Web scraping can handle large volumes of data from multiple sources, making it suitable for projects that require extensive data collection.</li>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Real-time Data:</b> Web scraping allows you to extract and analyze up-to-date information from websites, providing valuable insights in real-time.</li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+              <div class="card-header text-center" style="font-size: 25px;"><b>Cons</b></div>
+              <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                <ul>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Legal and Ethical Concerns:</b> Web scraping may infringe on website terms of service or violate copyright laws. It is essential to understand the legal implications and ensure compliance with the website's policies.</li>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Website Structure Changes:</b> Websites frequently update their structure, which can break the scraping code. Regular maintenance is required to adapt the scraping code to changes in the target website.</li>
+                  <li style="font-size: medium; font-weight: 600;"> <b>IP Blocking:</b> Websites may employ measures to detect and block web scraping activities. IP blocking, CAPTCHAs, and other anti-scraping techniques can hinder the scraping process.</li>
+                  <li style="font-size: medium; font-weight: 600;"> <b>Data Quality and Reliability:</b> The accuracy and reliability of scraped data depend on the website's structure and data formatting. Some websites may intentionally obfuscate or limit the availability of data.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

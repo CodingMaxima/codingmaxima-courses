@@ -1,0 +1,104 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Web Scraping Examples</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''"
+            (click)="tabChange($event)" data-hover="Examples">Examples</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Scraping Data from a Single Web Page:</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;overflow: hidden;">
+import requests
+from bs4 import BeautifulSoup
+
+# Send a GET request to the web page
+response = requests.get('https://www.example.com')
+
+# Create a BeautifulSoup object to parse the HTML content
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Extract specific data from the page
+title = soup.title.text
+paragraph = soup.find('p').text
+
+# Print the extracted data
+print('Title:', title)
+print('Paragraph:', paragraph)                                                            
+</pre>
+                        </div>
+                    </div>
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Scraping Data from Multiple Pages:</b></div>
+                        <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;overflow: hidden;">
+import requests
+from bs4 import BeautifulSoup
+
+# Send a GET request to the web page
+response = requests.get('https://www.example.com')
+
+# Create a BeautifulSoup object to parse the HTML content
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Find all links on the page
+links = soup.find_all('a')
+
+# Extract data from each link
+for link in links:
+    href = link['href']
+    text = link.text
+
+    # Print the extracted data
+    print('Link:', href)
+    print('Text:', text)                                                            
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div class="card-header text-center" style="font-size: 25px;"><b>Scraping Data from a Table:</b></div>
+                        <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                            
+                            <pre style="margin: 10px;border-radius: 8px;padding: 21px;background: #add9ff;color: black;font-weight: 700;font-size: 17px;">
+import requests
+from bs4 import BeautifulSoup
+
+# Send a GET request to the web page
+response = requests.get('https://www.example.com/table')
+
+# Create a BeautifulSoup object to parse the HTML content
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Find the table on the page
+table = soup.find('table')
+
+# Extract data from each row of the table
+rows = table.find_all('tr')
+for row in rows:
+    cells = row.find_all('td')
+
+    # Extract data from each cell
+    for cell in cells:
+        data = cell.text
+
+        # Print the extracted data
+        print('Data:', data)                                                                                         
+</pre>
+<div style='font-size: medium; font-style: oblique;font-weight: 700;'>
+    Remember to install the required libraries ( <b>`requests   `</b> and  <b>`beautifulsoup4  `</b>) using pip before running these examples.
+     These examples demonstrate the basics of web scraping, but the techniques can be further expanded and customized 
+     based on the structure of the target website and the specific data you want to extract.
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

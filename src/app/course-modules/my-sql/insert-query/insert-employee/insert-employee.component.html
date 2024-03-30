@@ -1,0 +1,377 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Insert Data (EMPLOYEE)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p>
+                            The INSERT INTO statement is used to insert new records in a table.
+                            It is possible to write the INSERT INTO statement in two ways.
+                        </p>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Insert Query Type-1</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the first style of insert query we have to follow the same order of the table
+                            columns. <br>
+                            Syntax : INSERT INTO table_name VALUES (1st_columnvalue, 2nd_columnvalue,
+                            3rd_columnvalue, ... nth_columnvalue);</button>
+
+                        <p style="padding: 10px;" class="btn-block">Query-1 - insert into employee
+                            values(1, 'Poornima', 'Rani', 'San', "SoftwareEngineer", 50000, 'Female', 26, 1,
+                            "CodingMaxima", 1234567890, 111213145);
+                            <br>
+                            Query-2 - insert into employee
+                            values(2, 'James', 'Paul', 'Moody', "Tester", 25000, 'Male', 28, 1,
+                            "delivery-fast-abc", 1234567899, 111213645);
+                            <br>
+                            Query-3 - insert into employee
+                            values(3,v'Rajendra', 'Kumar', 'Mallina', "CEO", 80000,'Male', 26, 1,
+                            "CodingMaxima", 1234567990, 111213185);
+                            <br>
+                            Query-4 - insert into employee
+                            values(4, 'John', 'Lenin', 'Forty', "HR", 60000, 'Male', 24, 1,
+                            "abc-solution-fast", 12345997990, 100213185);
+                        </p>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Insert Query Type-2</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the second style of insert query if we want insert only few column values
+                            then we have to metion column names and values in the same order. <br>
+                            Syntax : INSERT INTO table_name (1st_column, 2nd_column, 3rd_column, ...
+                            nth_column) VALUES (1st_columnvalue, 2nd_columnvalue, 3rd_columnvalue, ...
+                            nth_columnvalue);
+                        </button>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Insert data without middlename</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">insert into employee(id, first_name,
+                            last_name, designation, salary, gender, age, isactive, companyname,
+                            primaryphonenumber, secondaryphonenumber)
+                            values(1, 'Mary', 'James', 'Software Developer', 50000, 'Female', 26, 1, 'CODING
+                            MAXIMA', 1234567890, 111213145);
+                            <br>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Insert data without middlename and
+                                secondaryphonenumber</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">insert into employee(id, first_name,
+                            last_name, designation, salary, gender, age, isactive, companyname,
+                            primaryphonenumber)
+                            values(2, 'Rajendra', 'Mallina', 'CEO', 140000, 'M', 19, 1, 'coding MAXIMA',
+                            1234567990);
+                            <br>
+
+                        </p>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">INSERT follwing Data into Table</button>
+                        </div>
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 1</li>
+                                    <li class="card-text">first_name = Rajendra</li>
+                                    <li class="card-text">middle_name = Kumar</li>
+                                    <li class="card-text">last_name = Mallina</li>
+                                    <li class="card-text">designation = CEO</li>
+                                    <li class="card-text">salary = 1000000</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 26</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Maxima Encode</li>
+                                    <li class="card-text">primaryphonenumber = 3453534</li>
+                                    <li class="card-text">secondaryphonenumber = 4589762</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 2</li>
+                                    <li class="card-text">first_name = Edward </li>
+                                    <li class="card-text">middle_name = Russell</li>
+                                    <li class="card-text">last_name = Ayrton</li>
+                                    <li class="card-text">designation = Software Engineer</li>
+                                    <li class="card-text">salary = 100000</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 26</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Intel Technologies</li>
+                                    <li class="card-text">primaryphonenumber = 1234567</li>
+                                    <li class="card-text">secondaryphonenumber = 1234566</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 3</li>
+                                    <li class="card-text">first_name = Neelima</li>
+                                    <li class="card-text">middle_name = Chowdary</li>
+                                    <li class="card-text">last_name = Gutta</li>
+                                    <li class="card-text">designation = Trainee</li>
+                                    <li class="card-text">salary = 25000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Divis</li>
+                                    <li class="card-text">primaryphonenumber = 6362474</li>
+                                    <li class="card-text">secondaryphonenumber = 6238645</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 4</li>
+                                    <li class="card-text">first_name = Shiva </li>
+                                    <li class="card-text">middle_name = Kumar</li>
+                                    <li class="card-text">last_name = Selvanan</li>
+                                    <li class="card-text">designation = Manager</li>
+                                    <li class="card-text">salary = 200000</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 30</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Vsoft Technologies</li>
+                                    <li class="card-text">primaryphonenumber = 5555344</li>
+                                    <li class="card-text">secondaryphonenumber = 5324213</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 5</li>
+                                    <li class="card-text">first_name = Priya</li>
+                                    <li class="card-text">middle_name = Soodh</li>
+                                    <li class="card-text">last_name = Kapoor</li>
+                                    <li class="card-text">designation = Actress</li>
+                                    <li class="card-text">salary = 700000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 32</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Tseries </li>
+                                    <li class="card-text">primaryphonenumber = 7326364</li>
+                                    <li class="card-text">secondaryphonenumber = 7123456</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 6</li>
+                                    <li class="card-text">first_name = Sai</li>
+                                    <li class="card-text">middle_name = Ruchitha</li>
+                                    <li class="card-text">last_name = Atmakuri</li>
+                                    <li class="card-text">designation = Junior Software Engineer</li>
+                                    <li class="card-text">salary = 30000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 24</li>
+                                    <li class="card-text">isactive = false</li>
+                                    <li class="card-text">companyname = Tcs</li>
+                                    <li class="card-text">primaryphonenumber = 23456756</li>
+                                    <li class="card-text">secondaryphonenumber = 2345665</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 7</li>
+                                    <li class="card-text">first_name = John</li>
+                                    <li class="card-text">middle_name = Robert</li>
+                                    <li class="card-text">last_name = Mortimer</li>
+                                    <li class="card-text">designation = Web Developer</li>
+                                    <li class="card-text">salary = 60000</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 25</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Intense Tehnologies</li>
+                                    <li class="card-text">primaryphonenumber = 3456723</li>
+                                    <li class="card-text">secondaryphonenumber = 3456764</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 8</li>
+                                    <li class="card-text">first_name = Sri</li>
+                                    <li class="card-text">middle_name = Divya</li>
+                                    <li class="card-text">last_name = Kothapalli</li>
+                                    <li class="card-text">designation = Team Lead</li>
+                                    <li class="card-text">salary = 70000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 28</li>
+                                    <li class="card-text">isactive = false</li>
+                                    <li class="card-text">companyname = Synoric</li>
+                                    <li class="card-text">primaryphonenumber = 1874567</li>
+                                    <li class="card-text">secondaryphonenumber = 1876487</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 9</li>
+                                    <li class="card-text">first_name = Swetha</li>
+                                    <li class="card-text">middle_name = Kumari</li>
+                                    <li class="card-text">last_name = Pasala</li>
+                                    <li class="card-text">designation = Software Engineer</li>
+                                    <li class="card-text">salary = 20000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">isactive = false</li>
+                                    <li class="card-text">companyname = Wipro</li>
+                                    <li class="card-text">primaryphonenumber = 3456743</li>
+                                    <li class="card-text">secondaryphonenumber = 3456234</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 10</li>
+                                    <li class="card-text">first_name = Sri</li>
+                                    <li class="card-text">middle_name = Latha</li>
+                                    <li class="card-text">last_name = Basani</li>
+                                    <li class="card-text">designation = Team Lead</li>
+                                    <li class="card-text">salary = 80000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 28</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Synoric</li>
+                                    <li class="card-text">primaryphonenumber = 1874521</li>
+                                    <li class="card-text">secondaryphonenumber = 1876475</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 11</li>
+                                    <li class="card-text">first_name = Thomas</li>
+                                    <li class="card-text">middle_name = Edward</li>
+                                    <li class="card-text">last_name = collcutt</li>
+                                    <li class="card-text">designation = Sr.Manager</li>
+                                    <li class="card-text">salary = 10000</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 25</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Infosys</li>
+                                    <li class="card-text">primaryphonenumber = 2345679</li>
+                                    <li class="card-text">secondaryphonenumber = 2345345
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 12
+                                    </li>
+                                    <li class="card-text">first_name = smrithi</li>
+                                    <li class="card-text">middle_name = kour</li>
+                                    <li class="card-text">last_name = Kothapalli</li>
+                                    <li class="card-text">designation = web developer</li>
+                                    <li class="card-text">salary = 30000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Wipro</li>
+                                    <li class="card-text">primaryphonenumber = 1872267</li>
+                                    <li class="card-text">secondaryphonenumber = 1873387</li>
+                                </div>
+                            </div>
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 13</li>
+                                    <li class="card-text">first_name = Satya</li>
+                                    <li class="card-text">middle_name = krishna</li>
+                                    <li class="card-text">last_name = Basani</li>
+                                    <li class="card-text">designation = Software Engineer</li>
+                                    <li class="card-text">salary = 70000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 26</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Synoric</li>
+                                    <li class="card-text">primaryphonenumber = 1875521</li>
+                                    <li class="card-text">secondaryphonenumber = 1346475</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 14</li>
+                                    <li class="card-text">first_name = Tony</li>
+                                    <li class="card-text">middle_name = Edward</li>
+                                    <li class="card-text">last_name = collcutt</li>
+                                    <li class="card-text">designation = Manager</li>
+                                    <li class="card-text">salary = 900000</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 25</li>
+                                    <li class="card-text">isactive = false</li>
+                                    <li class="card-text">companyname = Infosys</li>
+                                    <li class="card-text">primaryphonenumber = 2345679</li>
+                                    <li class="card-text">secondaryphonenumber = 2655345
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Employee Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 15
+                                    </li>
+                                    <li class="card-text">first_name = Swetha</li>
+                                    <li class="card-text">middle_name = Sri</li>
+                                    <li class="card-text">last_name = kapoor</li>
+                                    <li class="card-text">designation = web developer</li>
+                                    <li class="card-text">salary = 40000</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 23</li>
+                                    <li class="card-text">isactive = true</li>
+                                    <li class="card-text">companyname = Wipro</li>
+                                    <li class="card-text">primaryphonenumber = 8772267</li>
+                                    <li class="card-text">secondaryphonenumber = 8756489</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+                    </div>
+                </div>
+            </div>
+        </div><!-- Ending of problem statement card body-->
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+</div>

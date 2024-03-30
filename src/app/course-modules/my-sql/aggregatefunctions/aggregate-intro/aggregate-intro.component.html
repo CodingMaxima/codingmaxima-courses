@@ -1,0 +1,35 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Aggregate Functions</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <!-- first group -->
+                <div class="card-group">
+                    <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                        <div style="background-color: rgb(229, 253, 253);" class="card-body">
+                            <li>Aggregate functions are used to perform calculations on multiple values and gives a
+                                single value as result.</li>
+                            <li>In aggregate funcitons they perform tasks by ingnoring null values</li>
+                            <li>The aggregate functions are used along with the WHERE clause</li>
+                            <li>The aggregate functions in MYSQL are <b>(MIN, MAX, AVG, COUNT, SUM)</b></li>
+                            <li><b>MIN:</b> It is used to find the minimum(lowest) values present in the table columns.
+                            </li>
+                            <li><b>MAX:</b> It is used to find the maximum(highest) values present in the table columns.
+                            </li>
+                            <li><b>AVG:</b> It is used to find the Average values present in the table columns.</li>
+                            <li><b>SUM:</b> It is used to find the sum of the values present in the table colomns.</li>
+                            <li><b>COUNT:</b> It is used to count the values present in the table rows.</li>
+                        </div>
+                    </div>
+
+                </div> <!-- first group-->
+            </div>
+        </div>
+    </div>
+</div>

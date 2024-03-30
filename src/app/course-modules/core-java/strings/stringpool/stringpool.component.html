@@ -1,0 +1,85 @@
+<div class="card card-body">
+      <h3 class="global-component-heading">String Pool Memory</h3>
+      <div class="global-tab-title global-tab-slide-effect">
+            <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''"
+                  (click)="tabChange($event)" data-hover="Introduction">Introduction</span>
+            <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''"
+                  (click)="tabChange($event)" data-hover="Animation Video">Animation Video</span>
+      </div>
+
+      <div *ngIf="elementId=='one'">
+            <div class="card border-warning" style="border: 2px solid;">
+                  <div class="card-body">
+
+                        <div class="text-center">
+                              <button type="button" class="btn btn-lg btn-block">String Pool means it is an storage area
+                                    in Java heap where string literals stores & also known as String pool memory/string
+                                    pool constant/string intern pool. By default, it is empty and privately maintained
+                                    by the Java String class. </button>
+                              <button type="button" class="btn btn-lg btn-block"> By default it is empty and privately
+                                    maintained by the Java String class like an object allocation. </button>
+                              <button type="button" class="btn btn-lg btn-block">Whenever we create a string the string
+                                    object occupies some space in the heap memory. Creating a number of strings may
+                                    increase the cost and memory too which may reduce the performance also. So the JVM
+                                    performs some steps during the initialization of the string literals that increase
+                                    the performance and decrease the memory load. To decrease the number of String
+                                    objects created in the JVM the String class keeps a pool of strings.</button>
+                              <button type="button" class="btn btn-lg btn-block">Whenever the string literal was created
+                                    the JVM first checks for the string literal if it is already present in the string
+                                    pool memory it will returns a reference. If the literal was not present then a new
+                                    string object will takes place in the String pool </button>
+                              <button type="button" class="btn btn-lg btn-block"> The strings are created in 2 ways
+                                    <li>1.String variablename = "String literal";</li>
+                                    <li>2.By using new keyword - String variablename = new string("string literal");
+                                    </li>
+                              </button>
+                        </div>
+
+                        <div class="card-group">
+                              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Example-1</b></div>
+                                    <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                                          <p style='font-size: medium; font-style: oblique;'> String s1 = "Maxima"; </p>
+
+                                          <p style='font-size: medium; font-style: oblique;'> String s2 = "Encode"; </p>
+
+                                          <p style='font-size: medium; font-style: oblique;'> String s3 = "maima"; </p>
+
+                                          <p style='font-size: medium; font-style: oblique;'>From the above examples s1,
+                                                s2, s3 3 strings were created and they were stored in the string pool.
+                                                The s1, s2 will execute properly in s3 there is already the value
+                                                assigned already in s1 so instead of taking it as new object in dtring
+                                                pool it returns the referencr of the pooled instance (s1).
+                                          </p>
+
+                                    </div>
+                              </div>
+
+                              <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                    <div class="card-header text-center"><b>Example-2</b></div>
+                                    <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                                          <p style='font-size: medium; font-style: oblique;'>String str = new
+                                                String("Coding Maxima"); </p>
+                                          <p style='font-size: medium; font-style: oblique;'> In the above example
+                                                whenever the string object is created using the new keyword It will
+                                                check that the string literal is already present in the string pool or
+                                                not. If yes, then only one string will be created in the string . If no,
+                                                then it will be first created in the string pool memory then later in
+                                                the heap memory so in total 2 string objects will be created.
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div *ngIf="elementId=='two'">
+            <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+                  <app-video-cmp 
+                  [url]="videoData"
+                  [audioData]="audioData"
+                  ></app-video-cmp>
+            </div>
+      </div>
+</div>

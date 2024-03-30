@@ -1,0 +1,265 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Tables</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="mainTab($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="mainTab($event)"
+            data-hover="code and output">code and output</span>
+        <span class="global-tab-pill" id="three" [ngClass]="(elementId=='three')?'active':''" (click)="mainTab($event)"
+            data-hover="Animation Video">Animation Video</span>
+    </div>
+
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="content-text">
+                <ul>
+                    <li>HTML tables allow web developers to arrange data into rows and columns.</li>
+                    <li>style tag which is present in the head will be discussed in CSS</li>
+                    <li>The HTML tables are created using the <code>&lt;table&gt;</code> tag </li>
+                    <li>Table heading can be defined using <code>&lt;th&gt;</code> tag</li>
+                    <li>Table rows can be defined using <code>&lt;tr&gt;</code> tag </li>
+                    <li><code>&lt;td&gt;</code> tag is used to create data cells. </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="elementId=='two'">
+        <div class="card-group">
+            <img src="assets/img/web-designing/html/tables/html-table-code.jpg" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="html-table-code.jpg">
+            <img src="assets/img/web-designing/html/tables/html-table-output.jpg" class="card"
+                style="border: 1px solid rgb(243, 179, 141);padding: 5px;width: 40%;" alt="html-table-output.jpg">
+        </div>
+    </div>
+    <div *ngIf="elementId=='three'">
+        <div class="card-body">
+            <app-video-cmp [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+    </div>
+</div>
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <div class="tab-title tab-slide-effect">
+                    <span class="tab-pill" id="assignment1" [ngClass]="(elementId2=='assignment1')?'active':''"
+                        (click)="tabChange($event)" data-hover="Assignment-1">Assignment-1</span>
+                    <span class="tab-pill" id="assignment2" [ngClass]="(elementId2=='assignment2')?'active':''"
+                        (click)="tabChange($event)" data-hover="Assignment-2">Assignment-2</span>
+                </div>
+            </h5>
+        </div>
+
+        <div *ngIf="elementId2=='assignment1'">
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Data into Table</button>
+            </div>
+
+            <!-- Starting of Data-->
+            <div class="col d-flex justify-content-center">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create the columns with the following data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text">product id </li>
+                        <li class="card-text">product name</li>
+                        <li class="card-text">product quality</li>
+                        <li class="card-text">product quantity</li>
+                    </div>
+                </div>
+
+            </div><!--end for the data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Products Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">product id = 1</li>
+                        <li class="card-text">product name = rice</li>
+                        <li class="card-text">product quality = good</li>
+                        <li class="card-text">product quantity = 200 kgs</li>
+
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>product Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">product id = 2</li>
+                        <li class="card-text">product name = wheat</li>
+                        <li class="card-text">product quality = good</li>
+                        <li class="card-text">product quantity = 100 kgs</li>
+                    </div>
+                </div>
+            </div><!--end of the card-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Products Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">product id = 3</li>
+                        <li class="card-text">product name = sugar</li>
+                        <li class="card-text">product quality = good</li>
+                        <li class="card-text">product quantity = 300 kgs</li>
+
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>product Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">product id = 4</li>
+                        <li class="card-text">product name = sunflower oil</li>
+                        <li class="card-text">product quality = good</li>
+                        <li class="card-text">product quantity = 100 liters</li>
+                    </div>
+                </div>
+            </div><!--end of the card-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Products Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">product id = 5</li>
+                        <li class="card-text">product name = jaggery</li>
+                        <li class="card-text">product quality = good</li>
+                        <li class="card-text">product quantity = 100 kgs</li>
+
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>product Data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">product id = 6</li>
+                        <li class="card-text">product name = tea powder</li>
+                        <li class="card-text">product quality = good</li>
+                        <li class="card-text">product quantity = 150 kgs</li>
+                    </div>
+                </div>
+            </div><!--end of the card-->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#output"
+                            aria-expanded="false" aria-controls="output">
+                            output
+                        </button>
+                    </h5>
+                </div>
+                <div id="output" class="collapse" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <img src="assets/img/web-designing/html/tables/products.jpg" alt="output">
+                    </div>
+                </div>
+            </div>
+        </div><!--end for the assignment1-->
+
+        <div *ngIf="elementId2=='assignment2'">
+            <div style="padding: 10px;" class="text-center">
+                <button class="btn btn-info">INSERT following Data into Table</button>
+            </div>
+            <!-- Starting of Data-->
+
+            <div class="col d-flex justify-content-center">
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>create the columns with the following data</b>
+                    </div>
+                    <div class="card-body">
+                        <li class="card-text">team </li>
+                        <li class="card-text">year</li>
+                        <li class="card-text">venue</li>
+
+                    </div>
+                </div>
+
+            </div><!--end of the data-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>T20 winners data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">team = England</li>
+                        <li class="card-text">year = 2022</li>
+                        <li class="card-text">venue = Australia</li>
+
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>T20 winners data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">team = Australia</li>
+                        <li class="card-text">year = 2021</li>
+                        <li class="card-text">venue = Oman & UAE</li>
+
+                    </div>
+                </div>
+            </div><!--end of the card-->
+
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>T20 winners data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">team = West Indies</li>
+                        <li class="card-text">year = 2016</li>
+                        <li class="card-text">venue = India</li>
+
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>T20 winners data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">team = Srilanka</li>
+                        <li class="card-text">year = 2014</li>
+                        <li class="card-text">venue = Bangladesh</li>
+                    </div>
+                </div>
+            </div><!--end of the card-->
+            <!-- Starting of Data-->
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>T20 winners data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">team = West Indies</li>
+                        <li class="card-text">year = 2012</li>
+                        <li class="card-text">venue = Srilanka</li>
+                    </div>
+                </div>
+
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>T20 winners data</b></div>
+                    <div class="card-body">
+                        <li class="card-text">team = England</li>
+                        <li class="card-text">year = 2010</li>
+                        <li class="card-text">venue = England</li>
+                    </div>
+                </div>
+            </div><!--end of the card-->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#output"
+                            aria-expanded="false" aria-controls="output">
+                            output
+                        </button>
+                    </h5>
+                </div>
+                <div id="output" class="collapse" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        <img src="assets/img/web-designing/html/tables/t20_table.jpg">
+                    </div>
+                </div>
+            </div>
+        </div><!--end for the assignment2-->
+
+    </div>
+</div>

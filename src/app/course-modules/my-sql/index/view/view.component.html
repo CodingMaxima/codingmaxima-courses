@@ -1,0 +1,73 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">View</h3>
+
+    <div class="card border-warning" style="border: 2px solid;">
+        <div class="card-body">
+            <div class="text-center">
+                <button type="button" class="btn btn-lg btn-block">A view is a virtual table and it contains rows,
+                    columns like an real table</button>
+                <button type="button" class="btn btn-lg btn-block">A view wiill always shows the up to date data. When
+                    the user uses the query every time the database engine recreates it. </button>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>Creating the view</b></div>
+                <div class="card-body" style="background-color: rgb(252, 227, 231);">
+                    <p style='font-size: medium; font-style: oblique;'><b>Syntax:</b><br>
+                        <li style='font-size: medium; font-style: inherit;'>CREATE VIEW view_name AS</li>
+                        <li style='font-size: medium; font-style: inherit;'> SELECT column1, column2, ...</li>
+                        <li style='font-size: medium; font-style: inherit;'> FROM table_name</li>
+                        <li style='font-size: medium; font-style: inherit;'> WHERE condition;</li>
+                    </p>
+                    <p><b>Example Query:</b>
+                        <li>CREATE VIEW ChemistryStudents AS</li>
+                        <li> SELECT first_name, last_name,college_name</li>
+                        <li>FROM student</li>
+                        <li>WHERE branch = 'Bsc.Chemistry';</li>
+                    </p>
+
+                    <p><b>For viewing them</b> select * from Chemistrystudents;</p>
+                    <img src="assets/img/dbms/view/createview1.jpg" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>Updating the view</b></div>
+                <div class="card-body" style="background-color: rgb(229, 253, 253);">
+                    <p style='font-size: medium; font-style: oblique;'>For updating the view use <b>CREATE OR REPLACE
+                            VIEW</b></p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Syntax:</b><br>
+                        <li style='font-size: medium; font-style: inherit;'> CREATE OR REPLACE VIEW view_name AS</li>
+                        <li style='font-size: medium; font-style: inherit;'>SELECT column1, column2, ...</li>
+                        <li style='font-size: medium; font-style: inherit;'>FROM table_name</li>
+                        <li style='font-size: medium; font-style: inherit;'>WHERE condition;</li>
+                    </p>
+                    <p><b>In this if the view is already created then it will update the changes or else it will create
+                            the view. If we are modifying anything in already existed view replace and create should
+                            have to be mentioned compulsoryly.</b></p>
+                    <p><b>Example Query:</b>
+                        <li> CREATE OR REPLACE VIEW ChemistryStudents AS</li>
+                        <li>SELECT first_name, last_name,college_name,total_marks</li>
+                        <li>FROM student</li>
+                        <li>WHERE branch = 'Bsc.Chemistry';</li>
+                    </p>
+                    <p><b>For viewing them</b> select * from Chemistrystudents;</p>
+                    <img src="assets/img/dbms/view/view2.jpg" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                <div class="text-center"><b>Droping the view</b></div>
+                <div class="card-body" style="background-color: rgb(255, 239, 209);">
+                    <p style='font-size: medium; font-style: oblique;'>Use <b>DROP VIEW</b></p>
+                    <p style='font-size: medium; font-style: oblique;'><b>Syntax: </b>DROP VIEW view_name;</p>
+                    <p> <b>Example:-</b>Drop VIEW Chemistrystudents;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

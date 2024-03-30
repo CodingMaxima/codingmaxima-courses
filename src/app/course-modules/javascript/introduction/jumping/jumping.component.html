@@ -1,0 +1,117 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Control Statements(Jumping)</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="break Statement"
+      >break Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="continue Statement"
+      >continue Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="return Statement"
+      >return Statement</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+              It will terminates the current loop or switch statement and
+              continues with the next statement.
+            </p>
+          </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+        <p class="content-text">
+              It skips the current iteration of a loop and continues with the
+              next iteration.</p>
+          
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+  <div *ngIf="elementId == 'three'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning mt-4" style="border: 2px solid">
+       <p class="content-text">
+              If the funciton is existed and optionally returns a value to the
+              caller.</p>
+           
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'animation'"></div>
+  </div>
+</div>

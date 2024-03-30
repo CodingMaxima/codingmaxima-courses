@@ -1,0 +1,640 @@
+<div class="card card-body">
+  <h3 class="global-component-heading">Arrays sets maps</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="Arrays"
+      >Arrays</span
+    >
+    <span
+      class="global-tab-pill"
+      id="three"
+      [ngClass]="elementId == 'three' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="maps"
+      >maps</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="mainTab($event)"
+      data-hover="sets"
+      >sets</span
+    >
+  </div>
+
+  <div *ngIf="elementId == 'one'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="card-body">
+          <div class="text-center">
+            <div style="font-size: medium; padding: 10px">
+              <button type="button" class="btn btn-lg btn-block">
+                In Javascript Array is an single variable which stores the
+                different values in it.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                There are two ways for declaring the array<br />
+                <p>
+                  by using the string literal (let array1 = ["coding",
+                  "maxima"])this method was mostly recomended for use
+                </p>
+                <p>
+                  by using the new keyword(let array2 = new array("Maxima",
+                  "encode"))
+                </p>
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                Inside the array we can store objects, functions, arrays.
+              </button>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b> Accessing the values</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  The values in the array can be by using the index which starts
+                  from 0 and continues so on....
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>indexOf() :</b> It searches the value of an array and
+                  returns the result.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>includes() :</b> It will check for the particular item
+                  present in the array and returns the values.
+                </li>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b>adding the elements to the array</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For adding the values to the array there are some methods are
+                  there push(), unshift().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>push() :</b> It is used to add the value at the end of the
+                  array.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>unshift() :</b>It is used to add the value at the starting
+                  of the array.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b> changing the value in array</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253)"
+              >
+                <p style="font-size: large; font-style: oblique">
+                  For changing the array we can use it by index, or by using
+                  splice().
+                </p>
+                <li style="font-size: large; font-style: oblique">
+                  <b>splice() : </b>It will remove/ replace existing value
+                  and/or adds new values
+                </li>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b>Remove an value for the array</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For removing the element in the array can use pop(), splice(),
+                  shift().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>pop() : </b> It is used the remove the last element in the
+                  array.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>shift() :</b> It is used to remove the first value present
+                  in the array.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b> Finding the length of an array</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231)"
+              >
+                <p style="font-size: large; font-style: oblique">
+                  For finding the length of an array <b>length</b> property has
+                  to be used.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: lare; padding: 15px"
+              >
+                <b>joining the arrays</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For joining the two or more arrays can use the concat(),
+                  join()
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>join() :</b> It is used to join all the values present in
+                  the array.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>concat() :</b> It creates an new array by combining the
+                  present arrays
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px 180px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b>sorting the arrays</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(243, 238, 183)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For sorting can use sort(), reverse().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>sort() :</b> It is used sort the values in the array
+                  alphabetically and in ascending order..
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>reverse() :</b> It will reverse the values present the
+                  arrays.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>splice() :</b> It is used to remove the value which selecte
+                  part of array and returns the new array.
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/arrays-sets-map/array_ex1.jpg"
+          alt="program"
+        /><br />
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/arrays-sets-map/array_ex2.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'two'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="card-body">
+          <div class="text-center">
+            <div style="font-size: medium; padding: 10px">
+              <button type="button" class="btn btn-lg btn-block">
+                Sets are used to whenever we want unique values(without
+                duplicates).
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                Like arrays sets also holds any data types in one set.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                For creating the the we can use 2 ways
+                <li>passing an array to new set</li>
+                <li>create a new set & use add() to add variables/values</li>
+              </button>
+            </div>
+          </div>
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b> Accessing the values</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For accessing the values there are some methods like value(),
+                  has().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>has() :</b> It is used to check the element is presetnt in
+                  the set or not.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>values() :</b> It is used to iterate all the values present
+                  in the set.
+                </li>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b>Adding the values</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For adding the values add() method is used
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>add() :</b> It is used to add values to the set.
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="padding: 15px; font-size: large"
+              >
+                <b> Removing the values</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For removing the values from the set can use delete(),
+                  clear().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>delete() :</b>It removes the particular value from the set.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>clear() :</b>It removes the entire values from the set.
+                </li>
+              </div>
+            </div>
+
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="padding: 15px; font-size: large"
+              >
+                <b>finding the arrays</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231)"
+              >
+                <p style="font-size: large; font-style: oblique">
+                  For finding the length of an array size property has to be
+                  used.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px 180px"
+            >
+              <div class="card-header text-center">
+                <b>iterating through loops</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(242, 237, 170)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For sets can be iterated by using the for of (), forEach().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>forEach() : </b>It is used to call the function for each
+                  value.
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/arrays-sets-map/sets_ex1.jpg"
+          alt="program"
+        /><br />
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/arrays-sets-map/sets_ex2.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="elementId == 'three'">
+    <div class="tab-title tab-slide-effect">
+      <span
+        class="tab-pill"
+        id="introduction"
+        [ngClass]="elementId2 == 'introduction' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Introduction"
+        >Introduction</span
+      >
+      <span
+        class="tab-pill"
+        id="problem"
+        [ngClass]="elementId2 == 'problem' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Problem"
+        >Problem</span
+      >
+      <span
+        class="tab-pill"
+        id="animation"
+        [ngClass]="elementId2 == 'animation' ? 'active' : ''"
+        (click)="tabChange($event)"
+        data-hover="Animation Video"
+        >Animation Video</span
+      >
+    </div>
+
+    <div *ngIf="elementId2 == 'introduction'">
+      <div class="card border-warning" style="border: 2px solid">
+        <div class="card-body">
+          <div class="text-center">
+            <div style="font-size: medium; padding: 10px">
+              <button type="button" class="btn btn-lg btn-block">
+                Map is a collection of values where each value is stored as a
+                Key, value pair.
+              </button>
+              <button type="button" class="btn btn-lg btn-block">
+                In map the keys can be null and they should not be
+                duplicate,values can be duplicate and accepts null values also.
+              </button>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="font-size: large; padding: 15px"
+              >
+                <b>adding the elements to the array</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(229, 253, 253)"
+              >
+                <li style="font-size: medium; font-style: oblique">
+                  For adding the values to the map there are some methods are
+                  there set().
+                </li>
+                <li style="font-size: medium; font-style: oblique">
+                  <b>set() :</b> It is used to add the value to the set.
+                </li>
+              </div>
+            </div>
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px"
+            >
+              <div
+                class="card-header text-center"
+                style="padding: 15px; font-size: large"
+              >
+                <b> Accessing the values</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(252, 227, 231)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For accessing the values we have some methods like has(),
+                  get().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>has() :</b> It is used to check the value is present in the
+                  data.
+                </li>
+
+                <li style="font-size: large; font-style: oblique">
+                  <b>get() :</b> It will gives the values, keys according to the
+                  requirement.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div
+              class="card border-primary"
+              style="border: 2px solid; margin: 10px 180px"
+            >
+              <div
+                class="card-header text-center"
+                style="padding: 15px; font-size: large"
+              >
+                <b> Removing the values</b>
+              </div>
+              <div
+                class="card-body"
+                style="background-color: rgb(245, 250, 173)"
+              >
+                <li style="font-size: large; font-style: oblique">
+                  For removing the values from the set can use delete(),
+                  clear().
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>delete() :</b>It removes the particular value from the set.
+                </li>
+                <li style="font-size: large; font-style: oblique">
+                  <b>clear() :</b>It removes the entire values from the set.
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="elementId2 == 'problem'">
+      <div class="card-body border border-warning">
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/arrays-sets-map/map_ex1.jpg"
+          alt="program"
+        /><br />
+        <img
+          class="program-img-fit"
+          src="assets/img/javascript/arrays-sets-map/map_ex2.jpg"
+          alt="program"
+        />
+      </div>
+    </div>
+  </div>
+</div>

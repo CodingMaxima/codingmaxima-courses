@@ -1,0 +1,28 @@
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.pcolumn {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+/* Clear floats after image containers */
+.prow::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+
+.pcolumn {
+  flex: 33.33%;
+  padding: 5px;
+}
+.pcolumn img {
+  box-shadow:
+    0 0 0 5px hsl(0, 0%, 80%),
+    0 0 0 10px hsl(0, 0%, 90%);
+  padding-left: 10px;
+  margin-left: 10px;
+  height: 30vw;
+  width: 100%;
+}

@@ -1,0 +1,115 @@
+<div class="card card-body my-3">
+  <h3 class="global-component-heading">Kilograms-Pounds Conversions</h3>
+  <div class="global-tab-title global-tab-slide-effect">
+    <span
+      class="global-tab-pill"
+      id="one"
+      [ngClass]="elementId == 'one' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Problem Statement"
+      >Problem Statement</span
+    >
+    <span
+      class="global-tab-pill"
+      id="two"
+      [ngClass]="elementId == 'two' ? 'active' : ''"
+      (click)="tabChange($event)"
+      data-hover="Animation Video"
+      >Animation video</span
+    >
+  </div>
+  <div *ngIf="elementId == 'one'">
+    <div class="card border-warning mt-4" style="border: 2px solid">
+      <div class="content-heading mt-4">Project</div>
+      <img
+        style="margin: 0 auto; padding-top: 10px; height: auto; width: 100%"
+        src="assets/img/javascript/projects/kilopounds.gif"
+      />
+  
+    <div class="content-heading mt-4">Project Description</div>
+    <div class="content-text">
+      This project is a simple web-based tool for converting between kilograms
+      and pounds. It allows users to enter a value in either kilograms or
+      pounds, and it instantly provides the converted value in the other unit.
+      The main goal of this project is to provide a straightforward and
+      user-friendly way to perform these common weight conversions.
+    </div>
+    <div class="content-heading">Features</div>
+
+    <div class="content-text">
+      <li>
+        <b>Bi-Directional Conversion: </b>Users can convert from kilograms to
+        pounds and vice versa by simply entering a value in one input field.
+      </li>
+
+      <li>
+        <b>Real-Time Conversion:</b> The conversion happens in real-time as the
+        user types, providing immediate results without the need for any buttons
+        or additional user actions.
+      </li>
+
+      <li>
+        <b>Clean and Responsive Design:</b> The web page has a clean and
+        responsive design, making it accessible and usable on various devices
+        and screen sizes.
+      </li>
+
+      <li>
+        <b>Clear Labels: </b>Clear labels and placeholders help users understand
+        which input field corresponds to kilograms and which corresponds to
+        pounds.
+      </li>
+    </div>
+    <div class="content-heading">Implementation</div>
+
+    <div class="content-text">
+      <li>
+        <b>HTML Structure:</b> The project's HTML structure consists of a header
+        section with a logo and title, followed by a conversion box containing
+        two input fields, one for kilograms and one for pounds.
+      </li>
+
+      <li>
+        <b>Styling:</b> The project uses CSS, including Bootstrap for styling.
+        It has a custom header with a background color and a logo, and the
+        conversion box has a distinctive background color, padding, and
+        border-radius for a visually appealing interface.
+      </li>
+
+      <li>
+        <b>JavaScript for Conversion:</b> JavaScript is used to handle the
+        conversion logic. Event listeners are added to both input fields
+        (inputKilograms and inputPound) to detect changes in their values. When
+        a value is entered in one field, the corresponding conversion is
+        calculated and displayed in the other field in real-time. If a field is
+        empty, the opposite field is cleared as well.
+      </li>
+
+      <li>
+        <b>isEmpty Function:</b> An isEmpty function is defined to check whether
+        a value is empty or not. This function is used to handle cases when
+        input fields are cleared.
+      </li>
+
+      <li>
+        <b>Bi-Directional Conversion Logic:</b> The conversion logic is
+        straightforward. To convert from kilograms to pounds, the entered value
+        is multiplied by 2.20462, and to convert from pounds to kilograms, the
+        value is multiplied by 0.453592. The result is displayed with two
+        decimal places for precision.
+      </li>
+    </div>
+  </div>
+</div>
+  <div *ngIf="elementId == 'two'">
+    <div
+      class="card-body w-75 mx-auto border"
+      style="background-color: #77a6d1; border-radius: 10px"
+    >
+      <app-video-cmp 
+      [url]="videoData"
+      [audioData]="audioData"
+      ></app-video-cmp>
+    </div>
+  </div>
+</div>

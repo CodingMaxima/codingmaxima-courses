@@ -1,0 +1,129 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">REST APIs</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card border-warning" style="border: 2px solid;">
+            <div class="card-body">
+                <div class="text-center">
+                    <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                        <button type="button" class="btn btn-lg btn-block">
+                            REST API (also known as RESTful API) is an interface <br>
+                            that Two computer systems use to<br>
+                            <b>Exchange information securely over the Internet.</b></button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            REST application are used for developing and designing networked applications.
+                        </button>
+                        <button type="button" class="btn btn-lg btn-block">
+                            It generates the HTTP request that performs CRUD operations <br>
+                            on the data.Usually, it returns data in <br>
+                            JSON or XML format.
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 15px;" class="text-center">
+                <button class="btn btn-primary btn-lg">Rest API Web Services</button>
+            </div>
+            <div class="card-group">
+                <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                    <div class="card-header text-center"><b>Introduction</b></div>
+                    <div class="text-center">
+
+                        <div style=" font-size: medium; padding: 10px; border: 1px solid rgb(4, 16, 243);">
+                            <button type="button" class="btn btn-lg btn-block">
+                                Restful Web Services is a stateless client-server architecture <br>
+                                where web services are resources and <br>
+                                can be identified by their URLs.</button>
+                            <button type="button" class="btn btn-lg btn-block">
+                                The following are the most commonly used Methods.
+                            </button>
+                            <div style="padding: 10px;" class="text-center">
+                                <button class="btn btn-info">Restful Web Services</button>
+
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'> By
+                                            The HTTP GET method is used to <br>
+                                            <b>Read or Retrieve</b><br>
+                                            a representation of a resource.<br>
+                                            This method does not require any Request Body.
+                                        </li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        POST</td>
+                                    <td>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'> The
+                                            POST Method is most often utilized to create new resources. <br>
+                                            This method contains the Request Body. POST is neither Safe nor
+                                            Idempotent.
+                                        </li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PUT</td>
+                                    <td>
+
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'> PUT
+                                            request is used to Update the Existing resource. <br>
+                                            This method contains a Request Body
+                                            PUT can also be used to<br>
+                                            <b>Create a resource</b> in the case where the resource ID is chosen by
+                                            the client instead of by the server.
+                                        </li>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>DELETE</td>
+                                    <td>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>
+                                            Delete request is used to delete the existing resource. <br>
+                                            This method does not contain any Request Body. </li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PATCH</td>
+                                    <td>
+                                        <li class='card-text' style='font-size: medium;font-style: oblique'>
+                                            It is used to modify capabilities. The PATCH request only needs to
+                                            contain the changes to the resource, not the complete resource. </li>
+                                    </td>
+                                </tr>
+
+
+
+
+
+                            </table>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

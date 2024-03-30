@@ -1,0 +1,355 @@
+<div class="card card-body">
+    <h3 class="global-component-heading">Insert data (STUDENT)</h3>
+    <div class="global-tab-title global-tab-slide-effect">
+        <span class="global-tab-pill" id="one" [ngClass]="(elementId=='one')?'active':''" (click)="tabChange($event)"
+            data-hover="Introduction">Introduction</span>
+        <span class="global-tab-pill" id="two" [ngClass]="(elementId=='two')?'active':''" (click)="tabChange($event)"
+            data-hover="Animation video">Animation video</span>
+    </div>
+    <div *ngIf="elementId=='one'">
+        <div class="card-body">
+
+            <div class="card border-warning" style="border: 2px solid;">
+                <div class="card" style="margin: 5px;">
+                    <div class="card-body" style="font-family: 'Inter', sans-serif;">
+                        <p>
+                            The INSERT INTO statement is used to insert new records in a table.
+                            It is possible to write the INSERT INTO statement in two ways.
+                        </p>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Insert Query Type-1</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the first style of insert query we have to follow the same order of the table columns.
+                            <br>
+                            Syntax : INSERT INTO table_name VALUES (1st_columnvalue, 2nd_columnvalue, 3rd_columnvalue,
+                            ... nth_columnvalue);</button>
+
+                        <p style="padding: 10px;" class="btn-block">
+                            insert into student
+                            values(1,'John','Christopher','Deep','Male',18,123456789101,'KVMP1234',78,'SASI','C+','EEE');
+                        </p>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-primary">Insert Query Type-2</button>
+                        </div>
+
+                        <button style="padding: 10px;" class="btn btn-lg btn-block">
+                            In the second style of insert query if we want insert only few column values then we have to
+                            metion column names and values in the same order. <br>
+                            Syntax : INSERT INTO table_name (1st_column, 2nd_column, 3rd_column, ... nth_column) VALUES
+                            (1st_columnvalue, 2nd_columnvalue, 3rd_columnvalue, ... nth_columnvalue);
+                        </button>
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Insert data without middlename</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">
+                        <p style="padding: 10px;" class="btn-block">insert into
+                            student(id,first_name,last_name,gender,age,aadharNumber,Passport,percentage,collegeName,grade,branch)
+                            values(4,'Venkateswari','Parimi','Female',19,123456789101,'KVMP1234',85,'VASAVI','B','ECE');
+
+                            <br>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Insert data without middlename and passport</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">insert into
+                            student(id,first_name,last_name,gender,age,aadharNumber,percentage,collegeName,grade,branch)
+                            values(2,'Rajendra','Mallina','M',19,098765432112,75,'SASI','C','MECH');
+
+                            <br>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">Insert data without middlename, LastName and passport</button>
+                        </div>
+                        <p style="padding: 10px;" class="btn-block">insert into
+                            student(id,first_name,gender,age,aadharNumber,percentage,collegeName,grade,branch)
+                            values(5,'Swetha','Female',20,12344568980,34,'SASI','F','CIVIL');
+                            <br>
+
+                        </p>
+
+                        <div style="padding: 10px;" class="text-center">
+                            <button class="btn btn-info">INSERT follwing Data into Table</button>
+                        </div>
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 1</li>
+                                    <li class="card-text">first_name = Heera </li>
+                                    <li class="card-text">middle_name = Chowdary</li>
+                                    <li class="card-text">last_name = Mullapudi</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 20</li>
+                                    <li class="card-text">aadharNumber = 134569845665</li>
+                                    <li class="card-text">percentage = 80.5%</li>
+                                    <li class="card-text">collegeName = Sasi Engineering College</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = CSE</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 2</li>
+                                    <li class="card-text">first_name = Naveen</li>
+                                    <li class="card-text">middle_name = Kumar</li>
+                                    <li class="card-text">last_name = Elaganti</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 137669845622</li>
+                                    <li class="card-text">percentage = 65.5%</li>
+                                    <li class="card-text">collegeName = Sri Ramulu Engineering College</li>
+                                    <li class="card-text">grade = C</li>
+                                    <li class="card-text">branch = ECE</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 3</li>
+                                    <li class="card-text">first_name = Preethi</li>
+                                    <li class="card-text">middle_name = Soodh</li>
+                                    <li class="card-text">last_name = Kapoor</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134569849845</li>
+                                    <li class="card-text">percentage = 75%</li>
+                                    <li class="card-text">collegeName = Sasi Engineering College</li>
+                                    <li class="card-text">grade = B</li>
+                                    <li class="card-text">branch = CSE</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 4</li>
+                                    <li class="card-text">first_name = Sandeep</li>
+                                    <li class="card-text">middle_name = kishan</li>
+                                    <li class="card-text">last_name = Dull</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">aadharNumber = 123487698456</li>
+                                    <li class="card-text">percentage = 55.30%</li>
+                                    <li class="card-text">collegeName = Sasi Engineering College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch = ECE</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 5</li>
+                                    <li class="card-text">first_name = Krithika</li>
+                                    <li class="card-text">middle_name = Sri</li>
+                                    <li class="card-text">last_name = Mehtha</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134569842341</li>
+                                    <li class="card-text">percentage = 45%</li>
+                                    <li class="card-text">collegeName = Gayatri College</li>
+                                    <li class="card-text">grade = F</li>
+                                    <li class="card-text">branch = IT</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 6</li>
+                                    <li class="card-text">first_name = Amelia</li>
+                                    <li class="card-text">middle_name = Dyer</li>
+                                    <li class="card-text">last_name = Doss</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">aadharNumber = 134569845612</li>
+                                    <li class="card-text">percentage = 95%</li>
+                                    <li class="card-text">collegeName = St.Marry Engineering College</li>
+                                    <li class="card-text">grade = O</li>
+                                    <li class="card-text">branch = Civil</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 7</li>
+                                    <li class="card-text">first_name = William</li>
+                                    <li class="card-text">middle_name = Morris</li>
+                                    <li class="card-text">last_name = Dyer</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134587468456</li>
+                                    <li class="card-text">percentage = 60%</li>
+                                    <li class="card-text">collegeName = visit Engineering College</li>
+                                    <li class="card-text">grade = D</li>
+                                    <li class="card-text">branch = Civil</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 8</li>
+                                    <li class="card-text">first_name = Judias</li>
+                                    <li class="card-text">middle_name = Buenoano</li>
+                                    <li class="card-text">last_name = Puneeth</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134569882764</li>
+                                    <li class="card-text">percentage = 75.67%</li>
+                                    <li class="card-text">collegeName = Kite Engineering College</li>
+                                    <li class="card-text">grade = B</li>
+                                    <li class="card-text">branch = Pharma</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 9</li>
+                                    <li class="card-text">first_name = Deepak</li>
+                                    <li class="card-text">middle_name = Nivas</li>
+                                    <li class="card-text">last_name = Hooda</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">aadharNumber = 134598768456</li>
+                                    <li class="card-text">percentage = 88%</li>
+                                    <li class="card-text">collegeName = Visit Engineering College</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = Pharma</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 10</li>
+                                    <li class="card-text">first_name = Naveen</li>
+                                    <li class="card-text">middle_name = Kumar</li>
+                                    <li class="card-text">last_name = Mehtha</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134587768456</li>
+                                    <li class="card-text">percentage = 49%</li>
+                                    <li class="card-text">collegeName = visit Engineering College</li>
+                                    <li class="card-text">grade = F</li>
+                                    <li class="card-text">branch = Civil</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 11</li>
+                                    <li class="card-text">first_name = Amritha</li>
+                                    <li class="card-text">middle_name = Rao</li>
+                                    <li class="card-text">last_name = Dyer</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">aadharNumber = 133569882764</li>
+                                    <li class="card-text">percentage = 67%</li>
+                                    <li class="card-text">collegeName = Kite Engineering College</li>
+                                    <li class="card-text">grade = C</li>
+                                    <li class="card-text">branch = Pharma</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 12</li>
+                                    <li class="card-text">first_name = Deepak</li>
+                                    <li class="card-text">middle_name = kumar</li>
+                                    <li class="card-text">last_name = Dull</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134888768456</li>
+                                    <li class="card-text">percentage = 88%</li>
+                                    <li class="card-text">collegeName = Sasi Engineering College</li>
+                                    <li class="card-text">grade = A</li>
+                                    <li class="card-text">branch = Civil</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+
+                        <!-- Starting of Data-->
+                        <div class="card-group">
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 13</li>
+                                    <li class="card-text">first_name = Serena</li>
+                                    <li class="card-text">middle_name = William </li>
+                                    <li class="card-text">last_name = singh</li>
+                                    <li class="card-text">gender = Female</li>
+                                    <li class="card-text">age = 21</li>
+                                    <li class="card-text">aadharNumber = 134587468444</li>
+                                    <li class="card-text">percentage = 77%</li>
+                                    <li class="card-text">collegeName = Sri Venkateswara Engineering College</li>
+                                    <li class="card-text">grade = B</li>
+                                    <li class="card-text">branch = Civil</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 14</li>
+                                    <li class="card-text">first_name = Rick</li>
+                                    <li class="card-text">middle_name = Grims</li>
+                                    <li class="card-text">last_name = Dutth</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">aadharNumber = 134569882264</li>
+                                    <li class="card-text">percentage = 52.40%</li>
+                                    <li class="card-text">collegeName = Malla Reddy Engineering College</li>
+                                    <li class="card-text">grade = C</li>
+                                    <li class="card-text">branch = Mech</li>
+                                </div>
+                            </div>
+                            <div class="card border-primary" style="border: 2px solid; margin: 10px;">
+                                <div class="card-header text-center"><b>Student Data</b></div>
+                                <div class="card-body">
+                                    <li class="card-text">id = 15</li>
+                                    <li class="card-text">first_name = Prince</li>
+                                    <li class="card-text">middle_name = Eugene</li>
+                                    <li class="card-text">last_name = Carl</li>
+                                    <li class="card-text">gender = Male</li>
+                                    <li class="card-text">age = 22</li>
+                                    <li class="card-text">aadharNumber = 134598767676</li>
+                                    <li class="card-text">percentage = 92%</li>
+                                    <li class="card-text">collegeName = AKRJ Engineering College</li>
+                                    <li class="card-text">grade = O</li>
+                                    <li class="card-text">branch = Pharma</li>
+                                </div>
+                            </div>
+
+                        </div> <!-- Ending of Data-->
+                    </div>
+                </div>
+            </div>
+        </div><!-- Ending of problem statement card body-->
+    </div>
+    <div *ngIf="elementId=='two'">
+        <div class="card-body w-75 mx-auto border" style="background-color: #77a6d1;border-radius: 10px;">
+            <app-video-cmp 
+            [url]="videoData"
+            [audioData]="audioData"
+            ></app-video-cmp>
+        </div>
+
+    </div>
+
+</div>
